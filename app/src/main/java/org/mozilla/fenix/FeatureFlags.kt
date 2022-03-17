@@ -56,10 +56,9 @@ object FeatureFlags {
     /**
      * Show Pocket recommended stories on home.
      */
+    @Suppress("UNUSED_PARAMETER")
     fun isPocketRecommendationsFeatureEnabled(context: Context): Boolean {
-        val langTag = LocaleManager.getCurrentLocale(context)
-            ?.toLanguageTag() ?: getSystemDefault().toLanguageTag()
-        return listOf("en-US", "en-CA").contains(langTag)
+        return false
     }
 
     /**
