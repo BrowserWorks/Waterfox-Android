@@ -127,8 +127,8 @@ open class FenixApplication : LocaleAwareApplication(), Provider {
         initializeGlean()
 
         setupInMainProcessOnly()
-
-        downloadWallpapers()
+        // WATERFOX
+        // downloadWallpapers()
         // DO NOT MOVE ANYTHING BELOW THIS stop CALL.
         PerfStartup.applicationOnCreate.stopAndAccumulate(completeMethodDurationTimerId)
     }
