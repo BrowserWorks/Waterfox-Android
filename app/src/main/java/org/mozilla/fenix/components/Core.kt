@@ -238,7 +238,7 @@ class Core(
                 RegionMiddleware(context, locationService),
                 SearchMiddleware(
                     context,
-                    additionalBundledSearchEngineIds = listOf("reddit", "youtube"),
+                    additionalBundledSearchEngineIds = listOf("startpage"),
                     migration = SearchMigration(context)
                 ),
                 RecordingDevicesMiddleware(context),

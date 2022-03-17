@@ -1,0 +1,11 @@
+{
+  "default": {
+    "searchDefault": "Bing",
+    "searchOrder": ["Bing", "Startpage"],
+    "visibleDefaultEngines": [
+      "bing", "startpage"
+    ]
+  },
+  "regionOverrides": {},
+  "locales": {}
+}
