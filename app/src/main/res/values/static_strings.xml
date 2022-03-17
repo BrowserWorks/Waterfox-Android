@@ -4,7 +4,7 @@
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources>
     <!-- Name of the application -->
-    <string name="app_name" translatable="false">Firefox Fenix</string>
+    <string name="app_name" translatable="false">Waterfox</string>
 
     <!-- Preference for developers -->
     <string name="preference_leakcanary" translatable="false">LeakCanary</string>
@@ -55,7 +55,7 @@
     <string name="link_text_view_type_announcement" translatable="false">link</string>
 
     <!-- Name of the application for about page -->
-    <string name="daylight_app_name" translatable="false">Firefox Daylight</string>
+    <string name="daylight_app_name" translatable="false">Waterfox</string>
 
     <!-- Secret debug info strings -->
     <string name="debug_info_region_home" translatable="false">Home region</string>

@@ -34,7 +34,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.mozilla"
+        applicationId "net.waterfox.android"
         minSdkVersion Config.minSdkVersion
         targetSdkVersion Config.targetSdkVersion
         versionCode 1
@@ -102,38 +102,38 @@ android {
         debug {
             shrinkResources false
             minifyEnabled false
-            applicationIdSuffix ".fenix.debug"
+            applicationIdSuffix ".debug"
             resValue "bool", "IS_DEBUG", "true"
             pseudoLocalesEnabled true
         }
-        nightly releaseTemplate >> {
-            applicationIdSuffix ".fenix"
-            buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
-            def deepLinkSchemeValue = "fenix-nightly"
-            buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
-            manifestPlaceholders = ["deepLinkScheme": deepLinkSchemeValue]
-        }
-        beta releaseTemplate >> {
-            buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
-            applicationIdSuffix ".firefox_beta"
-            def deepLinkSchemeValue = "fenix-beta"
-            buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
-            manifestPlaceholders = [
-                    // This release type is meant to replace Firefox (Beta channel) and therefore needs to inherit
-                    // its sharedUserId for all eternity. See:
-                    // https://searchfox.org/mozilla-central/search?q=moz_android_shared_id&case=false&regexp=false&path=
-                    // Shipping an app update without sharedUserId can have
-                    // fatal consequences. For example see:
-                    //  - https://issuetracker.google.com/issues/36924841
-                    //  - https://issuetracker.google.com/issues/36905922
-                    "sharedUserId": "org.mozilla.firefox.sharedID",
-                    "deepLinkScheme": deepLinkSchemeValue
-            ]
-        }
+        // nightly releaseTemplate >> {
+        //     applicationIdSuffix ".fenix"
+        //     buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
+        //     def deepLinkSchemeValue = "fenix-nightly"
+        //     buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
+        //     manifestPlaceholders = ["deepLinkScheme": deepLinkSchemeValue]
+        // }
+        // beta releaseTemplate >> {
+        //     buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
+        //     applicationIdSuffix ".firefox_beta"
+        //     def deepLinkSchemeValue = "fenix-beta"
+        //     buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
+        //     manifestPlaceholders = [
+        //             // This release type is meant to replace Firefox (Beta channel) and therefore needs to inherit
+        //             // its sharedUserId for all eternity. See:
+        //             // https://searchfox.org/mozilla-central/search?q=moz_android_shared_id&case=false&regexp=false&path=
+        //             // Shipping an app update without sharedUserId can have
+        //             // fatal consequences. For example see:
+        //             //  - https://issuetracker.google.com/issues/36924841
+        //             //  - https://issuetracker.google.com/issues/36905922
+        //             "sharedUserId": "org.mozilla.firefox.sharedID",
+        //             "deepLinkScheme": deepLinkSchemeValue
+        //     ]
+        // }
         release releaseTemplate >> {
             buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
-            applicationIdSuffix ".firefox"
-            def deepLinkSchemeValue = "fenix"
+            applicationIdSuffix ".release"
+            def deepLinkSchemeValue = "waterfox"
             buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
             manifestPlaceholders = [
                     // This release type is meant to replace Firefox (Release channel) and therefore needs to inherit
@@ -143,7 +143,7 @@ android {
                     // fatal consequences. For example see:
                     //  - https://issuetracker.google.com/issues/36924841
                     //  - https://issuetracker.google.com/issues/36905922
-                    "sharedUserId": "org.mozilla.firefox.sharedID",
+                    "sharedUserId": "org.waterfox.android.sharedID",
                     "deepLinkScheme": deepLinkSchemeValue
             ]
         }
