@@ -134,11 +134,11 @@
             android:key="@string/pref_key_notifications"
             app:iconSpaceReserved="false"
             android:title="@string/preferences_notifications" />
-
-        <androidx.preference.Preference
+        <!-- WATERFOX -->
+        <!-- <androidx.preference.Preference
             android:key="@string/pref_key_data_choices"
             app:iconSpaceReserved="false"
-            android:title="@string/preferences_data_collection" />
+            android:title="@string/preferences_data_collection" /> -->
 
     </androidx.preference.PreferenceCategory>
 

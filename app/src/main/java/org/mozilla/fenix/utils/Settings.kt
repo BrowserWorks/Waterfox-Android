@@ -229,32 +229,18 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
-    val isCrashReportingEnabled: Boolean
-        get() = isCrashReportEnabledInBuild &&
-            preferences.getBoolean(
-                appContext.getPreferenceKey(R.string.pref_key_crash_reporter),
-                true
-            )
+    // WATERFOX
+    val isCrashReportingEnabled = false
 
     val isRemoteDebuggingEnabled by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_remote_debugging),
         default = false
     )
 
-    val isTelemetryEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_telemetry),
-        default = true
-    )
-
-    val isMarketingTelemetryEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_marketing_telemetry),
-        default = true
-    )
-
-    var isExperimentationEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_experimentation),
-        default = true
-    )
+    // WATERFOX
+    val isTelemetryEnabled = false
+    val isMarketingTelemetryEnabled = false
+    var isExperimentationEnabled = false
 
     var isOverrideTPPopupsForPerformanceTest = false
 
