@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_2">Firefox Preview anonimo</string>
+    <string name="app_name_private_2">Waterfox Preview anonimo</string>
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_3">Firefox Preview (nav. anonima)</string>
+    <string name="app_name_private_3">Waterfox Preview (nav. anonima)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Altre opsion</string>
@@ -203,9 +203,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personalixa</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sincronixa segnaƚibri, cronoƚogìa e molto altro co’l tò account Firefox</string>
+    <string name="preferences_sign_in_description">Sincronixa segnaƚibri, cronoƚogìa e molto altro co’l tò account Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Account Firefox</string>
+    <string name="preferences_account_default_name">Account Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Riconeti par continuare ƚa sincronixasion</string>
     <!-- Preference for language -->
@@ -276,7 +276,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Schede ricevùe</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Notifeghe par schede ricevùe da altri dispoxitivi Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Notifeghe par schede ricevùe da altri dispoxitivi Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Scheda ricevùa</string>
     <!-- When multiple tabs have been received -->
@@ -313,7 +313,7 @@
     <string name="preferences_usage_data_description">Condividi co Mozilla informasion reƚative a prestasion, utilixo, hardware e personalixasion de’l browser par contribuire al mijoramento de %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Dati de marketing</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">Condividi dati so ƚe funsioni utilixà en %1$s co Leanplum, el nòstro partner par el marketing so piataforma mobiƚe.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Esperimenti</string>
@@ -330,7 +330,7 @@
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Ativa Sync</string>
     <!-- Preference for pairing -->
-    <string name="preferences_sync_pair">Scansiona el còdexe de asociasion in Firefox desktop</string>
+    <string name="preferences_sync_pair">Scansiona el còdexe de asociasion in Waterfox desktop</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Va rento</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -340,7 +340,7 @@
 
     <!-- Pairing Feature strings -->
     <!-- Instructions on how to access pairing -->
-    <string name="pair_instructions"><![CDATA[Par ottenere el còdexe QR vèrxi <b>firefox.com/pair</b> in Firefox so’l computer.]]></string>
+    <string name="pair_instructions"><![CDATA[Par ottenere el còdexe QR vèrxi <b>firefox.com/pair</b> in Waterfox so’l computer.]]></string>
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Vèrxi fotocamera</string>
     <!-- Button to cancel pairing -->
@@ -667,7 +667,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Coneti on altro dispoxitivo</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Par mandare na scheda, và rento a’l account Firefox o almanco on altro dispoxitivo.</string>
+    <string name="sync_connect_device_dialog">Par mandare na scheda, và rento a’l account Waterfox o almanco on altro dispoxitivo.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Tuto ciaro</string>
     <!-- Share error message -->
@@ -805,33 +805,33 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Benvegnù en %s.</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">Gheto xà on account?</string>
-    <!-- text for the Firefox Preview feature section header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- text for the Waterfox Preview feature section header
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_feature_section_header">A ƚa scoperta de %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Scoverxi ƚe novità</string>
     <!-- text for the "what's new" onboarding card description
-    The first parameter is the short name of the app (e.g. Firefox) -->
+    The first parameter is the short name of the app (e.g. Waterfox) -->
     <string name="onboarding_whats_new_description">Gheto dimande so el novo %s? Vuto savere che roba xe canbià?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">Cata tute ƚe risposte chive</string>
     <!-- text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_firefox_account_header">Otien el masimo da %s.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
+        another Waterfox browser. (The word `Waterfox` should not be translated)
         The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">Te sì xà coneso cofà %s en ’n altro browser Firefox so’l dispoxitivo en uxo. Desiderito asedere co sto account?</string>
+    <string name="onboarding_firefox_account_auto_signin_header_2">Te sì xà coneso cofà %s en ’n altro browser Waterfox so’l dispoxitivo en uxo. Desiderito asedere co sto account?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Sì, va rento</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Aceso en corso…</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
-    <string name="onboarding_firefox_account_sign_in">Va rento a Firefox</string>
+    <!-- text for the button to manually sign into Waterfox account. The word "Waterfox" should not be translated -->
+    <string name="onboarding_firefox_account_sign_in">Va rento a Waterfox</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Resta disconeso</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -841,7 +841,7 @@
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Protegete</string>
     <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_tracking_protection_description1">%s inpedise a i siti web de traciarte durante ƚa navigasion.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button">Normaƚe</string>
@@ -869,7 +869,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Ƚa tò privacy</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_privacy_notice_description">%s el xe progetà par darte el pieno controƚo su ƚe informasion che te condividi online e co noialtri.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lèxi ƚa nòstra informativa so ƚa privacy</string>
@@ -902,7 +902,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scansiona el còdexe</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Vèrxi Firefox so el computer e và so <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Vèrxi Waterfox so el computer e và so <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Pronto par ƚa scansion</string>
     <!-- Text shown for settings option for sign with pairing -->
@@ -910,7 +910,7 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Asedi co l’email</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">I dati de navigasion no i vegnerà pì sincronixà co l’account Firefox, ma no i sarà cavà da sto dispoxitivo.</string>
+    <string name="sign_out_confirmation_message">I dati de navigasion no i vegnerà pì sincronixà co l’account Waterfox, ma no i sarà cavà da sto dispoxitivo.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Disconeti</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->

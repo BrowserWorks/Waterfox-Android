@@ -50,7 +50,7 @@
     <string name="recently_saved_menu_item_remove">Fjarlægja</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s er framleitt af Mozilla.</string>
+    <string name="about_content">%1$s er framleitt af the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -69,8 +69,8 @@
     <string name="cfr_neg_button_text">Nei takk</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Þú getur stillt Firefox til að opna tengla sjálfvirkt í forritum.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Þú getur stillt Waterfox til að opna tengla sjálfvirkt í forritum.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">Þú getur stillt %1$s til að opna tengla sjálfvirkt í forritum.</string>
     <!-- Text for the positive action button -->
@@ -98,7 +98,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">Loka sjálfvirkt eftir einn mánuð?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
@@ -249,14 +249,14 @@
     <string name="search_engine_suggestions_description">Leita beint úr veffangastikunni</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Hvað er nýtt í Firefox</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Hvað er nýtt í Waterfox</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">Hvað er nýtt í %1$s</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Nú er auðveldara að halda áfram þar sem frá var horfið.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Persónuleg Firefox upphafssíða</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Persónuleg Waterfox upphafssíða</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">Persónuleg %1$s upphafssíða</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -271,12 +271,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Skoðaðu nýjustu leitirnar þínar af upphafssíðunni þinni og flipum.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Sérsniðin Firefox-upphafssíða þín gerir það nú auðveldara að halda áfram þar sem frá var horfið. Finndu nýlega flipa, bókamerki og leitarniðurstöður.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Sérsniðin Waterfox-upphafssíða þín gerir það nú auðveldara að halda áfram þar sem frá var horfið. Finndu nýlega flipa, bókamerki og leitarniðurstöður.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Opna nýjan Firefox-flipa</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Opna nýjan Waterfox-flipa</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Opna nýjan %1$s-flipa</string>
     <!-- Text preview for smaller sized widgets -->
@@ -346,12 +346,12 @@
     <string name="errorpage_httpsonly_message_summary">Hins vegar er líka mögulegt að árás hafi verið gerð. Ef þú heldur áfram á vefsvæðið ættir þú ekki að setja inn neinar viðkvæmar upplýsingar. Ef þú heldur áfram verður slökkt tímabundið á HTTPS-eingöngu-ham fyrir vefsvæðið.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Aðgengileiki</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Sérsniðinn netþjónn fyrir Firefox miðlarareikning</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Sérsniðinn netþjónn fyrir Waterfox miðlarareikning</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Sérsniðinn samstillingarþjónn</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox reikningi / samstillingarþjóni hefur verið breytt. Slekk á forritinu til að innleiða breytingar…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox reikningi / samstillingarþjóni hefur verið breytt. Slekk á forritinu til að innleiða breytingar…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Reikningur</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -365,9 +365,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Sérsníða</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Samstilla bókamerki, feril og fleira með Firefox reikningnum þínum</string>
+    <string name="preferences_sign_in_description">Samstilla bókamerki, feril og fleira með Waterfox reikningnum þínum</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox reikningur</string>
+    <string name="preferences_account_default_name">Waterfox reikningur</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Tengjast aftur til að halda áfram með samstillingu</string>
     <!-- Preference for language -->
@@ -449,13 +449,13 @@
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_label" tools:ignore="UnusedResources">Ýttu á merkið til að skipta um bakgrunn</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Skiptu um bakgrunn með því að smella á táknmynd Firefox-heimasíðunnar</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Skiptu um bakgrunn með því að smella á táknmynd Waterfox-heimasíðunnar</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">Flettu í gegnum og uppfærðu mynd án þess að fara af upphafssíðunni.</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox merki - breyta bakgrunni, hnappur</string>
+    <string name="wallpaper_logo_content_description">Waterfox merki - breyta bakgrunni, hnappur</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -507,7 +507,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Mótteknir flipar</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Tilkynningar um flipa sem berast frá öðrum Firefox tækjum.</string>
+    <string name="fxa_received_tab_channel_description">Tilkynningar um flipa sem berast frá öðrum Waterfox tækjum.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tók á móti flipa</string>
     <!-- %s is the device name -->
@@ -674,9 +674,9 @@
     <string name="studies_remove">Fjarlægja</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Virkt</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox kann að setja upp og keyra rannsóknir af og til.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox kann að setja upp og keyra rannsóknir af og til.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s kann að setja upp og keyra rannsóknir af og til.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Frekari upplýsingar</string>
@@ -1037,7 +1037,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Tengja annað tæki</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Skráðu þig inn á Firefox í að minnsta kosti einu öðru tæki til að senda flipa.</string>
+    <string name="sync_connect_device_dialog">Skráðu þig inn á Waterfox í að minnsta kosti einu öðru tæki til að senda flipa.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Ég skil!</string>
     <!-- Share error message -->
@@ -1169,53 +1169,53 @@
     <string name="deleting_browsing_data_in_progress">Eyði vafragögnum…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview heitir nú Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview heitir nú Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">
- · Firefox Nightly er uppfærður á hverju kvöldi og er með virkni sem verið er að prófa sig áfram með.
+ · Waterfox Nightly er uppfærður á hverju kvöldi og er með virkni sem verið er að prófa sig áfram með.
  · Hins vegar gæti hann verið óstöðugari fyrir vikið. Sæktu betu útgáfu af vafranum ef þú vilt stöðugri vafra.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Sækja Firefox fyrir Android, beta útgáfu</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Sækja Waterfox fyrir Android, beta útgáfu</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly er kominn á nýjan stað</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly er kominn á nýjan stað</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">
  · Þetta forrit mun ekki lengur fá öryggisuppfærslur. Hættu að nota þetta forrit og skiptu yfir í nýja Nightly.
- · \n\nÞú ættir að búa til Firefox reikning til að búa til bókamerki, innskráningu og sögu í annað forrit.</string>
+ · \n\nÞú ættir að búa til Waterfox reikning til að búa til bókamerki, innskráningu og sögu í annað forrit.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Skiptu yfir í nýja Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly er kominn á nýjan stað</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly er kominn á nýjan stað</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">
  · Þetta forrit mun ekki lengur fá öryggisuppfærslur. Sæktu nýja Nightly og hættu að nota þetta forrit.
- · \n\nÞú ættir að búa til Firefox reikning til að búa til bókamerki, innskráningu og sögu í annað forrit.</string>
+ · \n\nÞú ættir að búa til Waterfox reikning til að búa til bókamerki, innskráningu og sögu í annað forrit.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Sæktu nýja Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Velkomin í %s!</string>
 
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Samstilla Firefox á milli tækja</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Samstilla Waterfox á milli tækja</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Samstilla %1$s á milli tækja</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Komdu með bókamerki, feril og lykilorð yfir í %1$s á þessu tæki.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Skráðu þig</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Kveikt er á samstillingu</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Sívökul friðhelgi</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox kemur sjálfkrafa í veg fyrir að fyrirtæki fylgi þér í laumi um vefinn.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox kemur sjálfkrafa í veg fyrir að fyrirtæki fylgi þér í laumi um vefinn.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s kemur sjálfkrafa í veg fyrir að fyrirtæki fylgi þér í laumi um vefinn.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1234,7 +1234,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Persónuvernd þín</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Við hönnuðum %s til að gefa þér stjórn yfir því hverju þú deilir á netinu og því sem þú deilir með okkur.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lestu persónuverndartilkynningu okkar</string>
@@ -1268,16 +1268,16 @@
     <string name="sync_scan_code">Skanna QR kóða</string>
 
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Opnaðu Firefox á tölvunni þinni og farðu inná <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Opnaðu Waterfox á tölvunni þinni og farðu inná <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Tilbúið til skönnunar</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Skráðu þig inn með myndavélinni þinni</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Nota tölvupóst í staðinn</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Enginn reikningur? <u>Búðu til einn slíkan</u> til að samstilla Firefox á milli tækja.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Enginn reikningur? <u>Búðu til einn slíkan</u> til að samstilla Waterfox á milli tækja.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s mun hætta að samstilla reikninginn þinn en mun ekki eyða neinum vafragögnum á þessu tæki.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Aftengja</string>
@@ -1440,9 +1440,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Aldrei vista</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Sjálfvirk útfylling í %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Fylltu út og vistaðu notendanöfn og lykilorð á vefsvæðum meðan þú notar %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Sjálfvirk útfylling í öðrum forritum</string>
@@ -1730,15 +1730,15 @@
     <string name="synced_tabs_connect_another_device">Tengja annað tæki.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Auðkenndu þig aftur.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Virkjaðu samstillingu flipa.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Þú ert ekki með neina Firefox flipa opna á hinum tækjunum þínum.</string>
+    <string name="synced_tabs_no_tabs">Þú ert ekki með neina Waterfox flipa opna á hinum tækjunum þínum.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">Þú ert ekki með neina %1$s-flipa opna á hinum tækjunum þínum.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Skoða lista yfir flipa frá öðrum tækjum.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Skráðu þig inn til að samstilla</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1791,7 +1791,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Loka sjálfvirkt eftir einn mánuð?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">KVEIKJA Á SJÁLFVIRKRI LOKUN</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
@@ -1799,7 +1799,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Hjálpaðu til við að bæta Firefox</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Hjálpaðu til við að bæta Waterfox</string>
 
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Af hverju slökktirðu á óvirkum flipum?</string>
@@ -1818,7 +1818,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Loka</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Stilltu tengla frá vefsvæðum, tölvupósti og skilaboðum til að opna sjálfkrafa í Firefox.</string>
+    <string name="default_browser_experiment_card_text">Stilltu tengla frá vefsvæðum, tölvupósti og skilaboðum til að opna sjálfkrafa í Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Fjarlægja</string>
@@ -1842,7 +1842,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Keyrt með Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Hluti af Firefox-fjölskyldunni. %s</string>
+    <string name="pocket_stories_feature_caption">Hluti af Waterfox-fjölskyldunni. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Frekari upplýsingar</string>
 

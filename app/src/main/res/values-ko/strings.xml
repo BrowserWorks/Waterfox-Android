@@ -74,8 +74,8 @@
     <string name="cfr_neg_button_text">아니요</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">앱에서 링크를 자동으로 열도록 Firefox를 설정할 수 있습니다.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">앱에서 링크를 자동으로 열도록 Waterfox를 설정할 수 있습니다.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">앱에서 링크를 자동으로 열도록 %1$s를 설정할 수 있습니다.</string>
     <!-- Text for the positive action button -->
@@ -105,7 +105,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">한 달 후 자동 닫기를 하시겠습니까?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
@@ -258,14 +258,14 @@
     <string name="search_engine_suggestions_description">주소 표시줄에서 직접 검색</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Firefox의 새 기능</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Waterfox의 새 기능</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">%1$s의 새 기능</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">이제 이전에 사용하던 부분을 쉽게 찾을 수 있습니다.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">개인화된 Firefox 홈페이지</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">개인화된 Waterfox 홈페이지</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">개인화된 %1$s 홈페이지</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -279,12 +279,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">홈페이지와 탭에서 최근 검색을 다시 방문하세요.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">이제 개인화된 Firefox 홈페이지에서 이전에 사용하던 부분을 쉽게 찾을 수 있습니다. 최근 탭, 북마크 및 검색 결과를 찾으세요.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">이제 개인화된 Waterfox 홈페이지에서 이전에 사용하던 부분을 쉽게 찾을 수 있습니다. 최근 탭, 북마크 및 검색 결과를 찾으세요.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">새 Firefox 탭 열기</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">새 Waterfox 탭 열기</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">새 %1$s 탭 열기</string>
     <!-- Text preview for smaller sized widgets -->
@@ -354,12 +354,12 @@
     <string name="errorpage_httpsonly_message_summary">그러나, 공격자가 연루되었을 가능성도 있습니다. 웹 사이트를 방문하는 경우, 민감한 정보는 입력하지 않아야 합니다. 계속 진행하면, 사이트에 대해 HTTPS 전용 모드가 일시적으로 꺼집니다.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">접근성</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">사용자 지정 Firefox 계정 서버</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">사용자 지정 Waterfox 계정 서버</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">사용자 지정 동기화 서버</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox 계정/동기화 서버가 변경되었습니다. 변경 사항을 적용하기 위해 애플리케이션을 종료하는 중…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox 계정/동기화 서버가 변경되었습니다. 변경 사항을 적용하기 위해 애플리케이션을 종료하는 중…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">계정</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -373,9 +373,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">사용자 지정</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Firefox 계정으로 북마크, 기록 등을 동기화하세요</string>
+    <string name="preferences_sign_in_description">Waterfox 계정으로 북마크, 기록 등을 동기화하세요</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox 계정</string>
+    <string name="preferences_account_default_name">Waterfox 계정</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">다시 연결하여 동기화를 계속하세요</string>
     <!-- Preference for language -->
@@ -459,13 +459,13 @@
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_label" tools:ignore="UnusedResources">배경 화면을 변경하려면 로고를 누르세요</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Firefox 홈페이지 로고를 눌러 배경 화면 변경</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox 홈페이지 로고를 눌러 배경 화면 변경</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">홈페이지를 떠나지 않고 이미지를 순환하고 업데이트합니다.</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox 로고 - 배경 화면 변경, 버튼</string>
+    <string name="wallpaper_logo_content_description">Waterfox 로고 - 배경 화면 변경, 버튼</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -517,7 +517,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">받은 탭</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">다른 Firefox 기기에서 받은 탭에 대한 알림입니다.</string>
+    <string name="fxa_received_tab_channel_description">다른 Waterfox 기기에서 받은 탭에 대한 알림입니다.</string>
 
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">전송 받은 탭</string>
@@ -687,9 +687,9 @@
     <string name="studies_remove">삭제</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">활성화</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox는 때때로 연구를 설치하고 실행할 수 있습니다.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox는 때때로 연구를 설치하고 실행할 수 있습니다.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s는 때때로 연구를 설치하고 실행할 수 있습니다.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">더 알아보기</string>
@@ -1075,7 +1075,7 @@
     <string name="sync_connect_device">다른 기기에 연결</string>
 
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">탭을 보내려면 하나 이상의 다른 기기에서 Firefox에 로그인하세요.</string>
+    <string name="sync_connect_device_dialog">탭을 보내려면 하나 이상의 다른 기기에서 Waterfox에 로그인하세요.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">확인</string>
 
@@ -1217,50 +1217,50 @@
     <string name="deleting_browsing_data_in_progress">탐색 데이터 삭제 중…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview는 이제 Firefox Nightly입니다</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview는 이제 Waterfox Nightly입니다</string>
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly는 매일 밤 업데이트되며 실험적인 새로운 기능을 제공합니다.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly는 매일 밤 업데이트되며 실험적인 새로운 기능을 제공합니다.
         단, 안정성이 떨어질 수 있습니다. 보다 안정적인 환경을 위해 Beta 브라우저를 다운로드하세요.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Android용 Firefox Beta 받기</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Android용 Waterfox Beta 받기</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly가 이동했습니다</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly가 이동했습니다</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">이 앱은 더 이상 보안 업데이트를 받지 않습니다. 이 앱 사용을 중단하고 새로운 Nightly로 전환하세요.
-        \n\n북마크, 로그인 및 기록을 다른 앱으로 전송하려면, Firefox 계정을 만드세요.</string>
+        \n\n북마크, 로그인 및 기록을 다른 앱으로 전송하려면, Waterfox 계정을 만드세요.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">새로운 Nightly로 전환</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly가 이동했습니다</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly가 이동했습니다</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">이 앱은 더 이상 보안 업데이트를 받지 않습니다. 새로운 Nightly를 받고 이 앱 사용을 중단하세요.
-        \n\n북마크, 로그인 및 기록을 다른 앱으로 전송하려면, Firefox 계정을 만드세요.</string>
+        \n\n북마크, 로그인 및 기록을 다른 앱으로 전송하려면, Waterfox 계정을 만드세요.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">새로운 Nightly 받기</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s에 오신걸 환영합니다!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">기기 간에 Firefox 동기화</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">기기 간에 Waterfox 동기화</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">기기 간에 %1$s 동기화</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">이 기기의 %1$s에 북마크, 기록 및 비밀번호를 가져오세요.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">가입하기</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">동기화 켜짐</string>
 
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">상시 개인 정보 보호</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox는 회사가 웹에서 사용자를 몰래 따라 다니는 것을 자동으로 중지합니다.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox는 회사가 웹에서 사용자를 몰래 따라 다니는 것을 자동으로 중지합니다.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s는 회사가 웹에서 사용자를 몰래 따라 다니는 것을 자동으로 중지합니다.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1278,7 +1278,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">개인 정보 보호</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">우리는 %s가 무엇을 온라인에서 공유하고 우리와 공유할지 사용자가 제어할 수 있게 만들었습니다.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">개인정보처리방침 읽기</string>
@@ -1311,16 +1311,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">코드 스캔</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[컴퓨터에서 Firefox를 열고 <b>https://firefox.com/pair</b>로 이동하세요]]></string>
+    <string name="sign_in_instructions"><![CDATA[컴퓨터에서 Waterfox를 열고 <b>https://firefox.com/pair</b>로 이동하세요]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">스캔 준비</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">카메라로 로그인</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">대신 이메일 사용</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[계정이 없습니까? 기기 간에 Firefox를 동기화하려면 <u>하나를 만드세요</u>.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[계정이 없습니까? 기기 간에 Waterfox를 동기화하려면 <u>하나를 만드세요</u>.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s가 계정과의 동기화를 중단하지만 이 기기의 사용자 탐색 데이터는 삭제하지 않습니다.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">연결 끊기</string>
@@ -1486,9 +1486,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">저장 안 함</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s에서 자동 채우기</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s 앱을 사용하는 동안 웹사이트에서 사용자 이름과 비밀번호를 채우고 저장합니다.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">다른 앱에서 자동 채우기</string>
@@ -1782,16 +1782,16 @@
     <string name="synced_tabs_connect_another_device">다른 기기를 연결하세요.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">다시 인증하세요.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">탭 동기화를 활성화하세요.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">다른 기기의 Firefox에서 열린 탭이 없습니다.</string>
+    <string name="synced_tabs_no_tabs">다른 기기의 Waterfox에서 열린 탭이 없습니다.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">다른 기기의 %1$s에서 열린 탭이 없습니다.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">다른 기기의 탭 목록을 봅니다.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Sync에 로그인</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1845,7 +1845,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">한 달 후 자동 닫기를 하시겠습니까?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">자동 닫기 켜기</string>
 
@@ -1854,7 +1854,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Firefox 개선에 도움주기</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Waterfox 개선에 도움주기</string>
 
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">비활성 탭 기능을 사용 안하시는 이유는 무엇입니까?</string>
@@ -1872,7 +1872,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">닫기</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Firefox에서 자동으로 열리도록 웹 사이트, 이메일 및 메시지의 링크를 설정합니다.</string>
+    <string name="default_browser_experiment_card_text">Waterfox에서 자동으로 열리도록 웹 사이트, 이메일 및 메시지의 링크를 설정합니다.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">삭제</string>
@@ -1896,7 +1896,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">포켓 제공</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox 제품군의 일부입니다. %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox 제품군의 일부입니다. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">더 알아보기</string>
 

@@ -51,7 +51,7 @@
     <string name="recently_saved_menu_item_remove">Mboguete</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s ojapókuri Mozilla.</string>
+    <string name="about_content">%1$s ojapókuri the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -71,8 +71,8 @@
     <string name="cfr_neg_button_text">Nahániri, aguyje</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Embohekokuaa Firefox ombojuruja hag̃ua ijehegui juajuha tembipuru’ípe.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Embohekokuaa Waterfox ombojuruja hag̃ua ijehegui juajuha tembipuru’ípe.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">Embohekokuaa %1$s ombojuruja hag̃ua ijehegui juajuha tembipuru’ípe.</string>
     <!-- Text for the positive action button -->
@@ -102,7 +102,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">¿Omboty ijehegui peteĩ jasy rire?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox ombotykuaa tendayke ehecha’ỹakuri jasy ohasaramóvape.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox ombotykuaa tendayke ehecha’ỹakuri jasy ohasaramóvape.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s ombotykuaa tendayke ehecha’ỹva jasy ohasaramovévape.</string>
@@ -258,14 +258,14 @@
     <string name="search_engine_suggestions_description">Eheka kundaharape renda guive</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Firefox mba’epyahu</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Waterfox mba’epyahu</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">%1$s mba’epyahu</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Ko’ág̃a ndahasyive eku’ejeývo eheja haguégui.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Firefox kuatiarogue ñepyrũgua mboavapyre</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Waterfox kuatiarogue ñepyrũgua mboavapyre</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">%1$s kuatiarogue ñepyrũgua mboavapyre</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -280,12 +280,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ehecha eheka ramovéva kuatiarogue ñepyrũ ha tendayke guive.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Nde kuatiarogue ñepyrũgua mboavapyre Firefox pegua nombohasyive eñepyrũjeývo eheja haguégui. Ejuhu ne rendayke, techaukaha ha ehekaramovéva.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Nde kuatiarogue ñepyrũgua mboavapyre Waterfox pegua nombohasyive eñepyrũjeývo eheja haguégui. Ejuhu ne rendayke, techaukaha ha ehekaramovéva.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Embojuruja Firefox rendayke pyahu</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Embojuruja Waterfox rendayke pyahu</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Embojuruja tendayke pyahu %1$s mba’e</string>
     <!-- Text preview for smaller sized widgets -->
@@ -335,8 +335,8 @@
     <string name="preferences_add_private_browsing_shortcut">Embojuaju jeike pya’eha tendayke ñemiguáre</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Jeikekuaaha</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Mohendahavusu Firefox Account momba’etepyre</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Mohendahavusu Account momba’etepyre</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Mohendahavusu Sync momba’etepyre</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
@@ -354,9 +354,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Ñemomba’ete</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Embojuehe techaukaha, tembiasakue ha mba’ete Firefox pegua ndive</string>
+    <string name="preferences_sign_in_description">Embojuehe techaukaha, tembiasakue ha mba’ete Waterfox pegua ndive</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox Account</string>
+    <string name="preferences_account_default_name">Account</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Eikejey eñepyrũjey hag̃ua ñembojuehe</string>
     <!-- Preference for language -->
@@ -440,13 +440,13 @@
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_label" tools:ignore="UnusedResources">Eikutu ta’ãnga’i emoambue hag̃ua mba’erechaha rugua</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Emoambue mba’erechaha rugua opokóvo Firefox kuatiarogue ñepyrũ ra’ãnga’i</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Emoambue mba’erechaha rugua opokóvo Waterfox kuatiarogue ñepyrũ ra’ãnga’i</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">Eku’e ha embohekopyahu ta’ãnga esẽ’ỹre kuatiarogue ñepyrũgui.</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox ra’ãnga’i - emoambue mba’erechaha rugua, votõ</string>
+    <string name="wallpaper_logo_content_description">Waterfox ra’ãnga’i - emoambue mba’erechaha rugua, votõ</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -500,7 +500,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Tendayke g̃uahẽmbyre</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Tendayke marandu’i g̃uahẽmbyre ambue Firefox mba’e’oka guive.</string>
+    <string name="fxa_received_tab_channel_description">Tendayke marandu’i g̃uahẽmbyre ambue Waterfox mba’e’oka guive.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tendayke g̃uahẽmbyre</string>
     <!-- %s is the device name -->
@@ -671,9 +671,9 @@
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Myandy</string>
 
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox ikatu omohenda ha omongu’e kuaara’ã ndahetajeýi.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox ikatu omohenda ha omongu’e kuaara’ã ndahetajeýi.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s ikatu omohenda ha omongu’e kuaara’ã sapy’apy’a.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Kuaave</string>
@@ -1044,7 +1044,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Embojuaju ambue mba’e’oka</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Emondo hag̃ua tendayke, eñepyrũ tembiapo Firefox-pe ambue mba’e’okápe.</string>
+    <string name="sync_connect_device_dialog">Emondo hag̃ua tendayke, eñepyrũ tembiapo Waterfox-pe ambue mba’e’okápe.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Kumbypyre</string>
     <!-- Share error message -->
@@ -1178,49 +1178,49 @@
     <string name="deleting_browsing_data_in_progress">Oguepahína kundahára mba’ekuaarã…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview ko’ág̃a ha’e Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview ko’ág̃a ha’e Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly hekopyahu opaite pyharekue ha oreko tembiapoite pyahu ñeha’ãmby.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly hekopyahu opaite pyharekue ha oreko tembiapoite pyahu ñeha’ãmby.
         Upéicharõ jepe, ikatu sa’ive hekopyta. Emboguejy ore kundaha beta emba’apo porãve hag̃ua.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Eguereko Firefox Android Beta peg̃uarã</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Eguereko Waterfox Android Beta peg̃uarã</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly ovákuri</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly ovákuri</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Ko tembipuru’i ndahekopyahuvéima tekorosãrã. Ndoipuruvéima ko tembipuru’i ha ováma Nightly pyahúpe.
-        \n\nEmbohasa hag̃ua techaukaha, emoñepyrũ tembiapo ha tembiasakue ambue tembipuru’ípe, emoheñói Firefox mba’ete pyahúpe.</string>
+        \n\nEmbohasa hag̃ua techaukaha, emoñepyrũ tembiapo ha tembiasakue ambue tembipuru’ípe, emoheñói Waterfox mba’ete pyahúpe.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Eva Nightly pyahúpe</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly ovákuri</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly ovákuri</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Ko tembipuru’i ndahekopyahuvéima tekorosãrã. Emboguejy Nightly pyahu ha anive eipuru ko tembipuru’i.
-        \n\nEmbohasa hag̃ua techaukaha, emoñepyrũ tembiapo ha tembiasakue ambue tembipuru’ípe, emoheñói Firefox mba’ete pyahu.</string>
+        \n\nEmbohasa hag̃ua techaukaha, emoñepyrũ tembiapo ha tembiasakue ambue tembipuru’ípe, emoheñói Waterfox mba’ete pyahu.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Ereko Nightly pyahu</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">¡Eg̃uahẽporãite %s-pe!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Embojuehe Firefox mba’e’oka pa’ũme</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Embojuehe Waterfox mba’e’oka pa’ũme</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Embojuehe %1$s mba’e’oka ndive</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Egueru techaukaha, tembiasakue ha ñe’ẽñemi %1$s-pe ko mba’e’okápe.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Eñemboheraguapy</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync oñemyandýma</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Tekoñemi hendymeme</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox ojoko ijehegui umi atyguasúpe ani ohapykueho ñanduti rupive kañyhápe.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox ojoko ijehegui umi atyguasúpe ani ohapykueho ñanduti rupive kañyhápe.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s ojoko ijehegui umi atyguasúpe ani ohapykueho ñanduti rupive kañyhápe.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1239,7 +1239,7 @@
     <string name="onboarding_privacy_notice_header">Ne ñemigua</string>
 
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Rojapo %s eñangareko hag̃ua emoherakuãva ñandutípe rehe ha emoherakuãva orendive avei.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Emoñe’ẽ ore marandu’i ñemigua</string>
@@ -1272,16 +1272,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Emoha’ãnga ayvu</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Ne mohendahápe, eike Firefox-pe ha eho <b>https://firefox.com/pair</b>-pe]]></string>
+    <string name="sign_in_instructions"><![CDATA[Ne mohendahápe, eike Waterfox-pe ha eho <b>https://firefox.com/pair</b>-pe]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ikatúma emoha’ãnga</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Eñepyrũ tembiapo ne ra’ãngamýi ndive</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Eipuru ñandutiveve</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[¿Ndererekói mba’ete? <u>Emoheñói</u> embojuehe hag̃ua Firefox mba’e’oka ndive.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[¿Ndererekói mba’ete? <u>Emoheñói</u> embojuehe hag̃ua Waterfox mba’e’oka ndive.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s nombojuehemo’ãvéima ne mba’ete ndive, hákatu nomboguemo’ãi ne kundaha mba’ekuaarã ko mba’e’okápe.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Ñesẽte</string>
@@ -1452,9 +1452,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Aníke eñongatu</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Emyenyhẽjey %1$s-pe</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Emoĩmba ha eñongatu puruhára réra ha ñe’ẽñemi ñanduti rendápe eipuru aja %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Emyanyhẽjey ambue apps-pe</string>
@@ -1747,16 +1747,16 @@
     <string name="synced_tabs_connect_another_device">Emoinge ambue mba’e’oka.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Ikatúpiko emoneĩjey.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Embojuruja tendayke ñembojuehe.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Ndererekói tendayke ijurujáva Firefox-pe ambue ne mba’e’okápe.</string>
+    <string name="synced_tabs_no_tabs">Ndererekói tendayke ijurujáva Waterfox-pe ambue ne mba’e’okápe.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">Ndererekói tendayke ijurujáva %1$s-pe ambue ne mba’e’okápe.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Ehecha tendayke rysýi ambue ne mba’e’okápe.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Eñepyrũ tembiapo embojuehe hag̃ua</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1807,7 +1807,7 @@
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">¿Omboty ijehegui peteĩ jasy rire?</string>
 
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox ombotykuaa tendayke ehecha’ỹakuri jasy ohasaramóvape.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox ombotykuaa tendayke ehecha’ỹakuri jasy ohasaramóvape.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">EMYANDY ÑEMBOTY IJEHEGUÍVA</string>
 
@@ -1816,7 +1816,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Eipytyvõ Firefox iporãvévo</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Eipytyvõ Waterfox iporãvévo</string>
 
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">¿Mba’ére emboty tendayke ojepuru’ỹva?</string>
@@ -1834,7 +1834,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Mboty</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Emboheko ñanduti renda juajuha, ñanduti veve ha ñe’ẽmondo ijuruja hag̃ua ijehegui Firefox-pe.</string>
+    <string name="default_browser_experiment_card_text">Emboheko ñanduti renda juajuha, ñanduti veve ha ñe’ẽmondo ijuruja hag̃ua ijehegui Waterfox-pe.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Mboguete</string>
@@ -1858,7 +1858,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Pocket omoheñoipyre.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox reheguaite. %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox reheguaite. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Kuaave</string>
 </resources>

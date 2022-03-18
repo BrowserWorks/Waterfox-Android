@@ -21,6 +21,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="What's new in Firefox Preview" />
+        tools:text="What's new in Waterfox Preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

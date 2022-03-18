@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_2">Firefox Preview Príobháideach</string>
+    <string name="app_name_private_2">Waterfox Preview Príobháideach</string>
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_3">Firefox Preview (Príobháideach)</string>
+    <string name="app_name_private_3">Waterfox Preview (Príobháideach)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Tuilleadh roghanna</string>
@@ -210,9 +210,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Saincheap</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sioncronaigh leabharmharcanna, stair, agus tuilleadh le do chuntas Firefox</string>
+    <string name="preferences_sign_in_description">Sioncronaigh leabharmharcanna, stair, agus tuilleadh le do chuntas Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Cuntas Firefox</string>
+    <string name="preferences_account_default_name">Cuntas Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Athcheangail chun sioncronú a thosú arís</string>
     <!-- Preference for language -->
@@ -283,7 +283,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Cluaisíní faighte</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Fógraí maidir le cluaisíní a fhaigheann tú ó Firefox ar ghléasanna eile.</string>
+    <string name="fxa_received_tab_channel_description">Fógraí maidir le cluaisíní a fhaigheann tú ó Waterfox ar ghléasanna eile.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Cluaisín Faighte</string>
     <!-- When multiple tabs have been received -->
@@ -320,7 +320,7 @@
     <string name="preferences_usage_data_description">Seolann sé faisnéis maidir le feidhmíocht, úsáid, crua-earraí, agus saincheapadh an bhrabhsálaí chuig Mozilla chun cabhrú linn feabhas a chur ar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Sonraí margaíochta</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">Seolann sé seo sonraí faoi na gnéithe a úsáideann tú in %1$s le Leanplum, comhlacht margaíochta.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Turgnaimh</string>
@@ -338,7 +338,7 @@
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Cuir Sync ar siúl</string>
     <!-- Preference for pairing -->
-    <string name="preferences_sync_pair">Scan cód péireála i bhFirefox ar an deasc</string>
+    <string name="preferences_sync_pair">Scan cód péireála i bhWaterfox ar an deasc</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Logáil isteach</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -348,7 +348,7 @@
 
     <!-- Pairing Feature strings -->
     <!-- Instructions on how to access pairing -->
-    <string name="pair_instructions"><![CDATA[Tabhair cuairt ar <b>firefox.com/pair</b> i bhFirefox ar do ríomhaire chun cód QR a fháil.]]></string>
+    <string name="pair_instructions"><![CDATA[Tabhair cuairt ar <b>firefox.com/pair</b> i bhWaterfox ar do ríomhaire chun cód QR a fháil.]]></string>
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Oscail an Ceamara</string>
     <!-- Button to cancel pairing -->
@@ -680,7 +680,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Ceangail gléas eile</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Chun cluaisín a sheoladh, logáil isteach i bhFirefox ar ghléas amháin eile ar a laghad.</string>
+    <string name="sync_connect_device_dialog">Chun cluaisín a sheoladh, logáil isteach i bhWaterfox ar ghléas amháin eile ar a laghad.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Tuigim</string>
     <!-- Share error message -->
@@ -819,34 +819,34 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Fáilte go dtí %s!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">An bhfuil cuntas agat cheana?</string>
 
-    <!-- text for the Firefox Preview feature section header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- text for the Waterfox Preview feature section header
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_feature_section_header">Dul in aitheantas ar %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Gach rud nua</string>
     <!-- text for the "what's new" onboarding card description
-    The first parameter is the short name of the app (e.g. Firefox) -->
+    The first parameter is the short name of the app (e.g. Waterfox) -->
     <string name="onboarding_whats_new_description">An bhfuil ceisteanna agat maidir leis an leagan athdheartha de %s? Ar mhaith leat fáil amach céard atá nua ann?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">Faigh freagraí anseo</string>
     <!-- text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_firefox_account_header">Bain an tairbhe is mó as %s.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
+        another Waterfox browser. (The word `Waterfox` should not be translated)
         The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">Tá tú logáilte isteach mar %s i mbrabhsálaí Firefox eile ar an ngléas seo. An bhfuil fonn ort logáil isteach leis an gcuntas seo?</string>
+    <string name="onboarding_firefox_account_auto_signin_header_2">Tá tú logáilte isteach mar %s i mbrabhsálaí Waterfox eile ar an ngléas seo. An bhfuil fonn ort logáil isteach leis an gcuntas seo?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Tá, lógáil isteach mé</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Do do logáil isteach…</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
-    <string name="onboarding_firefox_account_sign_in">Logáil isteach i bhFirefox</string>
+    <!-- text for the button to manually sign into Waterfox account. The word "Waterfox" should not be translated -->
+    <string name="onboarding_firefox_account_sign_in">Logáil isteach i bhWaterfox</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Ná logáil isteach</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -856,7 +856,7 @@
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Cosain do phríobháideachas</string>
     <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_tracking_protection_description1">Cabhraíonn %s leat cosc a chur ar shuímh a leanann do ghníomhaíocht ar líne.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button">Caighdeánach</string>
@@ -884,7 +884,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Príobháideachas</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_privacy_notice_description">Dhearamar %s sa chaoi go mbeidh tusa i gceannas ar na rudaí a chomhroinneann tú ar líne, agus ar na sonraí a chomhroinneann tú linne.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Léigh ár bhfógra príobháideachais</string>
@@ -917,7 +917,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scan an cód</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Oscail Firefox ar do ríomhaire agus tabhair cuairt ar <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Oscail Waterfox ar do ríomhaire agus tabhair cuairt ar <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Réidh le scanadh</string>
     <!-- Text shown for settings option for sign with pairing -->
@@ -926,7 +926,7 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Logáil isteach le seoladh ríomhphoist</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">Stopfaidh Firefox ag sioncronú le do chuntas, ach ní scriosfaidh sé aon sonraí brabhsála ar an ngléas seo.</string>
+    <string name="sign_out_confirmation_message">Stopfaidh Waterfox ag sioncronú le do chuntas, ach ní scriosfaidh sé aon sonraí brabhsála ar an ngléas seo.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Dícheangail</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->

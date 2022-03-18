@@ -49,7 +49,7 @@
     <string name="tab_tray_multiselect_selected_content_description">Ôbrane</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s produkuje Mozilla.</string>
+    <string name="about_content">%1$s produkuje the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -75,8 +75,8 @@
     <string name="cfr_neg_button_text">Niy, dziynkuja</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string name="open_in_app_cfr_info_message">Możesz nastawić aplikacyjo Firefox, coby autōmatycznie ôtwiyrała linki w aplikacyjach. </string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">Możesz nastawić aplikacyjo Waterfox, coby autōmatycznie ôtwiyrała linki w aplikacyjach. </string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Idź do sztalōnkōw</string>
     <!-- Text for the negative action button -->
@@ -225,8 +225,8 @@
     <string name="search_engine_suggestions_description">Szukej zaroz na posku z adresōm</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description">Ôdewrzij nowo karta Firefoxa</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string name="search_widget_content_description">Ôdewrzij nowo karta Waterfoxa</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Szukej</string>
     <!-- Text preview for larger sized widgets -->
@@ -286,14 +286,14 @@
     <string name="preferences_add_private_browsing_shortcut">Przidej skrōt do prywatnego przeglōndanio</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Dostympność</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Włosny serwer kōnta Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Włosny serwer kōnta Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Włosny serwer do synchrōnizacyje</string>
 
 
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Serwer kōnta Firefox/synchrōnizacyje je zmiyniōny. Zawiyranie aplikacyje, coby przidać zmiany…</string>
+    <string name="toast_override_fxa_sync_server_done">Serwer kōnta Waterfox/synchrōnizacyje je zmiyniōny. Zawiyranie aplikacyje, coby przidać zmiany…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Kōnto</string>
     <!-- Preference shown on banner to sign into account -->
@@ -309,9 +309,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Przipasuj</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Synchrōnizuj zokłodki, historyjo i inksze ze swojim kōntym Firefox</string>
+    <string name="preferences_sign_in_description">Synchrōnizuj zokłodki, historyjo i inksze ze swojim kōntym Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Kōnto Firefox</string>
+    <string name="preferences_account_default_name">Kōnto Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Połōncz sie zaś, coby durch synchrōnizować</string>
     <!-- Preference for language -->
@@ -425,7 +425,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Przijynte karty</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Powiadōmiynia ô kartach przijyntych z inkszych maszin z aplikacyjōm Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Powiadōmiynia ô kartach przijyntych z inkszych maszin z aplikacyjōm Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Karta je przijynto</string>
     <!-- When multiple tabs have been received -->
@@ -463,7 +463,7 @@
     <string name="preferences_usage_data_description">Udostympnio Mozilli dane ô przeglōndarce: sprowności, używaniu, sprzyńcie i sztalōnkach, coby my mogli polepszać aplikacyjo %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketingowe dane</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">Udostympnio dane ô funkcyjach, kerych używosz we aplikacyji %1$s, firmie Leanplum (naszymu dostowcy mobilnego marketingu).</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">Udostympnio bazowe dane ô używaniu firmie Leanplum (naszymu dostowcy mobilnego marketingu)</string>
@@ -486,7 +486,7 @@
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Załōncz synchronizacyjo</string>
     <!-- Preference for pairing -->
-    <string name="preferences_sync_pair">Skanuj kod porowanio we Firefoxie na kōmputrze</string>
+    <string name="preferences_sync_pair">Skanuj kod porowanio we Waterfoxie na kōmputrze</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Wloguj sie</string>
     <!-- Preference for reconnecting to FxA sync -->

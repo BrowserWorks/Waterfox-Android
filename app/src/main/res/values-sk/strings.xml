@@ -50,7 +50,7 @@
     <string name="recently_saved_menu_item_remove">Odstrániť</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s vyvíja Mozilla.</string>
+    <string name="about_content">%1$s vyvíja the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -69,8 +69,8 @@
     <string name="cfr_neg_button_text">Nie, ďakujem</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Firefox môžete nastaviť tak, aby automaticky otváral odkazy v tejto aplikácii.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Waterfox môžete nastaviť tak, aby automaticky otváral odkazy v tejto aplikácii.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">%1$s môžete nastaviť tak, aby automaticky otváral odkazy v tejto aplikácii.</string>
     <!-- Text for the positive action button -->
@@ -100,7 +100,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">Automaticky zavrieť po jednom mesiaci?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox môže zavrieť karty, ktoré ste za posledný mesiac nevideli.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox môže zavrieť karty, ktoré ste za posledný mesiac nevideli.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s môže zavrieť karty, ktoré ste za posledný mesiac nevideli.</string>
@@ -258,14 +258,14 @@
     <string name="search_engine_suggestions_description">Vyhľadať na webe priamo z panela s adresou</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Čo je nové vo Firefoxe</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Čo je nové vo Waterfoxe</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">Novinky v aplikácii %1$s</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Teraz je jednoduchšie pokračovať tam, kde ste prestali.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Prispôsobená domovská stránka Firefoxu</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Prispôsobená domovská stránka Waterfoxu</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">Prispôsobená domovská stránka %1$su</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -279,12 +279,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Zopakujte svoje najnovšie vyhľadávania z domovskej stránky a kariet.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Vaša prispôsobená domovská stránka Firefoxu teraz uľahčuje pokračovať tam, kde ste prestali. Nájdite svoje najnovšie karty, záložky a výsledky vyhľadávania.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Vaša prispôsobená domovská stránka Waterfoxu teraz uľahčuje pokračovať tam, kde ste prestali. Nájdite svoje najnovšie karty, záložky a výsledky vyhľadávania.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Otvoriť novú kartu vo Firefoxe</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Otvoriť novú kartu vo Waterfoxe</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Otvoriť novú kartu %1$su</string>
     <!-- Text preview for smaller sized widgets -->
@@ -355,12 +355,12 @@
     <string name="errorpage_httpsonly_message_summary">Je však tiež možné, že ide o útočníka. Ak budete pokračovať na webovú stránku, nemali by ste zadávať žiadne citlivé informácie. Ak budete pokračovať, režim Len HTTPS sa pre túto stránku dočasne vypne.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Zjednodušenie ovládania</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Vlastný server pre účet Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Vlastný server pre účet Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Vlastný server pre synchronizáciu</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Server pre účet Firefox alebo synchronizáciu bol zmenený. Pre použitie zmien sa teraz aplikácia ukončí…</string>
+    <string name="toast_override_fxa_sync_server_done">Server pre účet Waterfox alebo synchronizáciu bol zmenený. Pre použitie zmien sa teraz aplikácia ukončí…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Účet</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -374,9 +374,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Prispôsobenie</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">S účtom Firefox môžete synchronizovať záložky, históriu prehliadania a omnoho viac</string>
+    <string name="preferences_sign_in_description">S účtom Waterfox môžete synchronizovať záložky, históriu prehliadania a omnoho viac</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Účet Firefox</string>
+    <string name="preferences_account_default_name">Účet Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Pre spustenie synchronizácie sa znova pripojte</string>
     <!-- Preference for language -->
@@ -461,13 +461,13 @@
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_label" tools:ignore="UnusedResources">Zmeniť tapetu ťuknutím na logo</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Tapetu domovskej stránky zmeniť ťuknutím na logo Firefoxu</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Tapetu domovskej stránky zmeniť ťuknutím na logo Waterfoxu</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">Umožní prechádzať a aktualizovať obrázky bez opustenia domovskej stránky.</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo Firefoxu - zmena tapety, tlačidlo</string>
+    <string name="wallpaper_logo_content_description">Logo Waterfoxu - zmena tapety, tlačidlo</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -520,7 +520,7 @@
     <string name="fxa_received_tab_channel_name">Prijaté karty</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Upozornenia na prijaté karty z iných zariadení s Firefoxom.</string>
+    <string name="fxa_received_tab_channel_description">Upozornenia na prijaté karty z iných zariadení s Waterfoxom.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Prijatá karta</string>
     <!-- %s is the device name -->
@@ -687,9 +687,9 @@
     <string name="studies_remove">Odstrániť</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktívna</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox môže občas inštalovať a spúšťať štúdie.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox môže občas inštalovať a spúšťať štúdie.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s môže občas inštalovať a spúšťať štúdie.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Ďalšie informácie</string>
@@ -1054,7 +1054,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Pripojiť ďalšie zariadenie</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Ak chcete odoslať kartu, prihláste sa do Firefoxu na aspoň jednom ďalšom zariadení.</string>
+    <string name="sync_connect_device_dialog">Ak chcete odoslať kartu, prihláste sa do Waterfoxu na aspoň jednom ďalšom zariadení.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Rozumiem</string>
 
@@ -1186,49 +1186,49 @@
     <string name="deleting_browsing_data_in_progress">Odstraňujem súkromné údaje…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview je odteraz Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview je odteraz Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly je aktualizovaný každý deň a obsahuje experimentálne funkcie.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly je aktualizovaný každý deň a obsahuje experimentálne funkcie.
         Môže však byť menej stabilný. Ak chcete stabilnejší prehliadač, stiahnite si beta verziu.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Prevezmite si Firefox pre Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Prevezmite si Waterfox pre Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly sa presunul</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly sa presunul</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Táto aplikácia už nebude dostávať bezpečnostné aktualizácie. Prevezmite si nový Nightly a prestaňte používať túto aplikáciu.
-        \n\nAk si chcete presunúť svoje záložky, prihlasovacie údaje a históriu do inej aplikácie, vytvorte si účet Firefox.</string>
+        \n\nAk si chcete presunúť svoje záložky, prihlasovacie údaje a históriu do inej aplikácie, vytvorte si účet Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Prejdite na nový Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly sa presunul</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly sa presunul</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Táto aplikácia už nebude dostávať bezpečnostné aktualizácie. Prevezmite si nový Nightly a prestaňte používať túto aplikáciu.
-        \n\nAk si chcete presunúť svoje záložky, prihlasovacie údaje a históriu do inej aplikácie, vytvorte si účet Firefox.</string>
+        \n\nAk si chcete presunúť svoje záložky, prihlasovacie údaje a históriu do inej aplikácie, vytvorte si účet Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Prevezmite si Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Víta vás %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Synchronizácia Firefoxu medzi zariadeniami</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Synchronizácia Waterfoxu medzi zariadeniami</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Synchronizácia %1$su medzi zariadeniami</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Preneste si svoje záložky, históriu a heslá do %1$su aj na toto zariadenie.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Prihlásiť sa</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Synchronizácia je zapnutá</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Vždy zabezpečené súkromie</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox automaticky zabraňuje spoločnostiam tajne vás sledovať pri prehliadaní webu.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox automaticky zabraňuje spoločnostiam tajne vás sledovať pri prehliadaní webu.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s automaticky zabraňuje spoločnostiam tajne vás sledovať pri prehliadaní webu.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1246,7 +1246,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Vaše súkromie</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s vám dáva kontrolu nad tým, čo zdieľate na internete a čo zdieľate s nami.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Prečítajte si naše zásady ochrany súkromia</string>
@@ -1280,16 +1280,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Naskenovať kód</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Spustite Firefox na svojom počítači a navštívte stránku <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Spustite Waterfox na svojom počítači a navštívte stránku <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Skenovanie je pripravené</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Prihláste sa pomocou fotoaparátu</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Použiť radšej e-mailovú adresu</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Ešte nemáte účet? <u>Vytvorte si ho</u> a synchronizujte svoj Firefox medzi zariadeniami.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Ešte nemáte účet? <u>Vytvorte si ho</u> a synchronizujte svoj Waterfox medzi zariadeniami.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">Aplikácia %s sa už viac nebude synchronizovať s vašim účtom, ale neodstráni z toho zariadenia žiadne z údajov prehliadania.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Odpojiť</string>
@@ -1451,9 +1451,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Pred uložením sa opýtať</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Neukladať</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Automatické dopĺňanie v aplikácii %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Vypĺňa používateľské mená a heslá na stránkach počas používania aplikácie %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Automatické dopĺňanie v iných aplikáciách</string>
@@ -1737,16 +1737,16 @@
     <string name="synced_tabs_connect_another_device">Pripojiť ďalšie zariadenie.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Prosím, znova overte totožnosť.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Prosím, zapnite synchronizovanie kariet.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Vo Firefoxe na svojich ďalších zariadeniach nemáte otvorené žiadne karty.</string>
+    <string name="synced_tabs_no_tabs">Vo Waterfoxe na svojich ďalších zariadeniach nemáte otvorené žiadne karty.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">Vo %1$se na svojich ďalších zariadeniach nemáte otvorené žiadne karty.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Zobraziť zoznam kariet z ostatných zariadení.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Prihlásiť sa a synchronizovať</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1796,7 +1796,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automaticky zavrieť po jednom mesiaci?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox môže zavrieť karty, ktoré ste za posledný mesiac nevideli.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox môže zavrieť karty, ktoré ste za posledný mesiac nevideli.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ZAPNÚŤ AUTOMATICKÉ ZATVÁRANIE</string>
 
@@ -1805,7 +1805,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Pomôžte zlepšiť Firefox</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Pomôžte zlepšiť Waterfox</string>
 
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Prečo ste deaktivovali neaktívne karty?</string>
@@ -1823,7 +1823,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Zavrieť</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Nastavte si automatické otváranie webových stránok, e-mailov a správ vo Firefoxe.</string>
+    <string name="default_browser_experiment_card_text">Nastavte si automatické otváranie webových stránok, e-mailov a správ vo Waterfoxe.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Odstrániť</string>
@@ -1847,7 +1847,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Službu poskytuje Pocket</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Súčasť rodiny Firefoxu. %s</string>
+    <string name="pocket_stories_feature_caption">Súčasť rodiny Waterfoxu. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Ďalšie informácie</string>
 

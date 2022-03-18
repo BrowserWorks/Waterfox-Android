@@ -30,7 +30,7 @@
         android:maxLines="1"
         android:ellipsize="end"
         android:textColor="@color/fx_mobile_text_color_oncolor_primary"
-        tools:text="Download Firefox - Free Web Browser"
+        tools:text="Download Waterfox - Free Web Browser"
         app:layout_constraintStart_toEndOf="@id/share_tab_favicon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

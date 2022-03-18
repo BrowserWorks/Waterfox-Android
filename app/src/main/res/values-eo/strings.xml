@@ -45,7 +45,7 @@
     <string name="recently_saved_show_all">Montri ĉiujn</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s estas kreita de Mozilla.</string>
+    <string name="about_content">%1$s estas kreita de the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -62,8 +62,8 @@
     <string name="cfr_neg_button_text">Ne, dankon</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Vi povas igi Firefox aŭtomate malfermi ligilojn en programoj.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Vi povas igi Waterfox aŭtomate malfermi ligilojn en programoj.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Iri al agordoj</string>
     <!-- Text for the negative action button -->
@@ -202,8 +202,8 @@
     <string name="search_engine_suggestions_description">Serĉi rekte el la adresa strio</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Malfermi novan langeton de Firefox</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Malfermi novan langeton de Waterfox</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Serĉi</string>
     <!-- Text preview for larger sized widgets -->
@@ -251,12 +251,12 @@
     <string name="preferences_add_private_browsing_shortcut">Aldoni privatan retuman ŝparvojon</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Alirebleco</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Personecigita servilo de konto de Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Personecigita servilo de konto de Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Personecigita servilo de spegulado</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">La serviloj de Konto de Firefox Account/Spegulado estis ŝanĝitaj. La programo nun finiĝos por apliki la ŝanĝojn…</string>
+    <string name="toast_override_fxa_sync_server_done">La serviloj de Konto de Account/Spegulado estis ŝanĝitaj. La programo nun finiĝos por apliki la ŝanĝojn…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Konto</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -268,9 +268,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personecigi</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Spegulu legosignojn, historion kaj aliajn aferojn per via konto de Firefox</string>
+    <string name="preferences_sign_in_description">Spegulu legosignojn, historion kaj aliajn aferojn per via konto de Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Konto de Firefox</string>
+    <string name="preferences_account_default_name">Konto de Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Rekonektiĝu por daŭrigi la speguladon</string>
     <!-- Preference for language -->
@@ -380,7 +380,7 @@
     <string name="fxa_received_tab_channel_name">Ricevitaj langetoj</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Sciigoj por langetoj ricevitaj el aliaj aparatoj Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Sciigoj por langetoj ricevitaj el aliaj aparatoj Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Langeto ricevita</string>
     <!-- %s is the device name -->
@@ -849,7 +849,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Konekti alian aparaton</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Por sendi langeton, komencu seancon en Firefox en almenaŭ unu alia aparato.</string>
+    <string name="sync_connect_device_dialog">Por sendi langeton, komencu seancon en Waterfox en almenaŭ unu alia aparato.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Mi komprenis</string>
     <!-- Share error message -->
@@ -970,45 +970,45 @@
     <string name="deleting_browsing_data_in_progress">Retumaj datumoj forigataj…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview estas ekde nun Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview estas ekde nun Waterfox Nightly</string>
 
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly estas ĝisdatigita ĉiu vespere kaj enhavas novajn eksperimentajn trajtojn.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly estas ĝisdatigita ĉiu vespere kaj enhavas novajn eksperimentajn trajtojn.
         Ĝi povas tamen esti malpli stabila. Elŝutu nian retumilon Beta por pli stabila sperto.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Ricevi Firefox por Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Ricevi Waterfox por Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly translokiĝis</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly translokiĝis</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Tiu ĉi programo ne plu ricevos sekurecajn ĝisdatigojn. Bonvolu ne plu uzi tiun ĉi programon kaj ŝanĝi ĝin per la nova Nightly.
-        \n\nPor transmeti viajn legosignojn, legitimilojn kaj historion al alia programo, kreu konton de Firefox.</string>
+        \n\nPor transmeti viajn legosignojn, legitimilojn kaj historion al alia programo, kreu konton de Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Ŝanĝi al la nova Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly translokiĝis</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly translokiĝis</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Tiu ĉi programo ne plu ricevos sekurecajn ĝisdatigojn. Ricevu la novan Nightly kaj ne plu uzu tiun ĉi programon.
-        \n\nPor transmeti viajn legosignojn, legitimilojn kaj historion al alia programo, kreu konton de Firefox.</string>
+        \n\nPor transmeti viajn legosignojn, legitimilojn kaj historion al alia programo, kreu konton de Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Ricevi la novan Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Bonvenon al %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Speguli Firefox inter aparatoj</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Speguli Waterfox inter aparatoj</string>
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registriĝi</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Spegulado estas ŝaltita</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Privateco ĉiam aktiva</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox aŭtomate evitas ke entreprenoj sekrete sekvu vin tra la teksaĵo.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox aŭtomate evitas ke entreprenoj sekrete sekvu vin tra la teksaĵo.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Norma</string>
     <!-- text for standard blocking option button description -->
@@ -1025,7 +1025,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Via privateco</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Ni kreis %s por doni al vi la eblon plene regi kion vi dividas en la reto kaj kion vi dividas kun ni.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Legu nian rimarkon pri privateco</string>
@@ -1059,16 +1059,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Skani la kodon</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[En via komputilo malfermu Firefox kaj vizitu <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[En via komputilo malfermu Waterfox kaj vizitu <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Preta skani</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Komencu seancon per via filmilo</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Anstataŭe uzi retpoŝton</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Ĉu vi ne havas konton? <u>Kreu ĝin</u> por speguli Firefox inter aparatoj.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Ĉu vi ne havas konton? <u>Kreu ĝin</u> por speguli Waterfox inter aparatoj.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ne plu spegulos vian konton, sed ĝi ne forigos iun ajn el viaj retumaj datumoj en tiu ĉi aparato.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Malkonekti</string>
@@ -1477,13 +1477,13 @@
 
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Bonvolu legitimiĝu denove.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Bonvolu aktivigi speguladon de langetoj.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">Vi ne havas iun ajn langeton malfermita en viaj aliaj aparatoj.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Vidi liston de langetoj el viaj aliaj aparatoj.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Komenci seancon por speguli</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1519,7 +1519,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Fermi</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Aŭtomate malfermi ligilon en retejoj, retpoŝtoj kaj mesaĝoj per Firefox.</string>
+    <string name="default_browser_experiment_card_text">Aŭtomate malfermi ligilon en retejoj, retpoŝtoj kaj mesaĝoj per Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Forigi</string>

@@ -59,7 +59,7 @@
     <string name="recently_saved_show_all_content_description">ສະແດງປຸ່ມບຸກມາກທີ່ໄດ້ບັນທຶກໄວ້ທັງໝົດ</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s ແມ່ນຜະລິດຂື້ນໂດຍ Mozilla.</string>
+    <string name="about_content">%1$s ແມ່ນຜະລິດຂື້ນໂດຍ the Waterfox project.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -77,8 +77,8 @@
     <string name="cfr_neg_button_text">ບໍ່, ຂອບໃຈ</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string name="open_in_app_cfr_info_message">ທ່ານສາມາດຕັ້ງໃຫ້ Firefox ເປີດລີ້ງນີ້ໃນແອັບໂດຍອັດຕະໂນມັດ.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">ທ່ານສາມາດຕັ້ງໃຫ້ Waterfox ເປີດລີ້ງນີ້ໃນແອັບໂດຍອັດຕະໂນມັດ.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">ໄປທີ່ການຕັ້ງຄ່າ</string>
     <!-- Text for the negative action button -->
@@ -246,8 +246,8 @@
     <string name="search_engine_suggestions_description">ຄົ້ນຫາໂດຍກົງຈາກແທັບທີ່ຢູ່</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description">ເປີດແທັບ Firefox ໃໝ່</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string name="search_widget_content_description">ເປີດແທັບ Waterfox ໃໝ່</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">ຄົ້ນຫາ</string>
     <!-- Text preview for larger sized widgets -->
@@ -308,12 +308,12 @@
     <string name="preferences_add_private_browsing_shortcut">ເພີ່ມທາງລັດການທ່ອງເວັບແບບສ່ວນຕົວ</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ສິ່ງອຳນວຍຄວາມສະດວກ</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">ດັດແກ້ບັນຊີເຊີເວີ Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">ດັດແກ້ບັນຊີເຊີເວີ Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">ກຳຫນົດເຊີເວີ Sync</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">ບັນຊີ/Sync ຂອງ Firefox ໄດ້ຮັບການດັດແກ້ແລ້ວ. ອອກຈາກແອັບພລິເຄຊັນເພື່ອນຳໃຊ້ການດັດແກ້…</string>
+    <string name="toast_override_fxa_sync_server_done">ບັນຊີ/Sync ຂອງ Waterfox ໄດ້ຮັບການດັດແກ້ແລ້ວ. ອອກຈາກແອັບພລິເຄຊັນເພື່ອນຳໃຊ້ການດັດແກ້…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">ບັນຊີ</string>
     <!-- Preference shown on banner to sign into account -->
@@ -329,9 +329,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">ການປັບແຕ່ງ</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sync ບຸກມາກ, ປະຫວັດ, ແລະ ອື່ນໆດ້ວຍບັນຊີ Firefox ຂອງທ່ານ</string>
+    <string name="preferences_sign_in_description">Sync ບຸກມາກ, ປະຫວັດ, ແລະ ອື່ນໆດ້ວຍບັນຊີ Waterfox ຂອງທ່ານ</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">ບັນຊີ Firefox</string>
+    <string name="preferences_account_default_name">ບັນຊີ Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">ເຊື່ອມຕໍຄືນເພື່ອເລີ່ມ sync ຄືນໃຫມ່</string>
     <!-- Preference for language -->
@@ -457,7 +457,7 @@
     <string name="fxa_received_tab_channel_name">ແຖບທີ່ໄດ້ຮັບ</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">ການແຈ້ງເຕືອນສຳລັບແທັບທີ່ໄດ້ຮັບຈາກ Firefox ໃນເຄື່ອງອື່ນ.</string>
+    <string name="fxa_received_tab_channel_description">ການແຈ້ງເຕືອນສຳລັບແທັບທີ່ໄດ້ຮັບຈາກ Waterfox ໃນເຄື່ອງອື່ນ.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">ແທັບທີ່ໄດ້ຮັບ</string>
     <!-- When multiple tabs have been received -->
@@ -492,7 +492,7 @@
     <string name="preferences_usage_data_description">ແບ່ງປັນຂໍ້ມູນປະສິດທິພາບ, ການໃຊ້ງານ, ຮາດແວ ແລະ ການປັບແຕ່ງໃນບຣາວເຊີຂອງທ່ານກັບ Mozilla ເພື່ອຊ່ວຍພວກເຮົາສ້າງ %1$s ໃຫ້ດີຂື້ນກ່ວາເກົ່າ</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">ຂໍ້ມູນດ້ານການຕະຫຼາດ</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">ແບ່ງປັນຂໍ້ມູນກ່ຽວກັບຟິວເຈີທີ່ທ່ານໃຊ້ຢູ່ໃນ %1$s ກັບ Leanplum ຊຶ່ງເປັນຜູ້ໃຫ້ບໍລິການດ້ານການຕະລາດມືຖືຂອງພວກເຮົາ.</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">ແບ່ງປັນການນຳໃຊ້ຂໍ້ມູນພື້ນຖານດ້ວຍ Adjust ຜູ້ໃຫ້ສະຫນອງດ້ານການຕະຫຼາດໂທລະສັບຂອງພວກເຮົາ</string>
@@ -517,7 +517,7 @@
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">ເປີດ Sync</string>
     <!-- Preference for pairing -->
-    <string name="preferences_sync_pair">ສະແກນລະຫັດການຈັບຄູ່ໃນ Firefox ເດັສກທັອບ</string>
+    <string name="preferences_sync_pair">ສະແກນລະຫັດການຈັບຄູ່ໃນ Waterfox ເດັສກທັອບ</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">ເຂົ້າສູ່ລະບົບ</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -660,8 +660,8 @@
     <string name="studies_remove">ລຶບ</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">​ເປີດໃຊ້ງານ</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string name="studies_description">Firefox ອາດຈະຕິດຕັ້ງ ແລະ ເອີ້ນນຳໃຊ້ການສຶກສາເປັນບາງຄັ້ງ.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string name="studies_description">Waterfox ອາດຈະຕິດຕັ້ງ ແລະ ເອີ້ນນຳໃຊ້ການສຶກສາເປັນບາງຄັ້ງ.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
     <!-- Dialog message shown after removing a study -->
@@ -1077,7 +1077,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">ເຊື່ອມຕໍ່ກັບອຸປະກອນອື່ນ</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">ລົງຊື່ເຂົ້າໃຊ້ Firefox ຢ່າງນ້ອຍໃນ 1 ເຄື່ອງເພື່ອສົ່ງແທັບ</string>
+    <string name="sync_connect_device_dialog">ລົງຊື່ເຂົ້າໃຊ້ Waterfox ຢ່າງນ້ອຍໃນ 1 ເຄື່ອງເພື່ອສົ່ງແທັບ</string>
 
     <!-- Share error message -->
     <string name="share_error_snackbar">ບໍ່ສາມາດແບ່ງປັນກັບແອັບນີ້ໄດ້</string>
@@ -1237,59 +1237,59 @@
     <string name="deleting_browsing_data_in_progress">ກຳລັງລຶບຂໍ້ມູນການທ່ອງເວັບ…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header">Firefox Preview ຕອນນີ້ໄດ້ກາຍມາເປັນ Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header">Waterfox Preview ຕອນນີ້ໄດ້ກາຍມາເປັນ Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
-    <string name="tip_firefox_preview_moved_description">Firefox Nightly ໄດ້ຮັບການອັບເດດທຸກໆມື້ ແລະ ມີຟິວເຈີໃຫມ່ໆໃຫ້ທົດລອງ.
+    <string name="tip_firefox_preview_moved_description">Waterfox Nightly ໄດ້ຮັບການອັບເດດທຸກໆມື້ ແລະ ມີຟິວເຈີໃຫມ່ໆໃຫ້ທົດລອງ.
         ແນວໃດກໍຕາມມັນອາດຈະຍັງບໍ່ທັນສະຖຽນປານ. ດາວໂຫລດເວີຊັນທົດລອງເພື່ອໃຫ້ມີຄວາມສະຖຽນຫລາຍຂື້ນ.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_button_2">ຕິດຕັ້ງ Firefox ສຳລັບ Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2">ຕິດຕັ້ງ Waterfox ສຳລັບ Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header_preview_installed"></string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_installed">ແອັບນີ້ຈະບໍ່ໄດ້ຮັບການອັບເດດທາງດ້ານຄວາມປອດໄພອີກຕໍ່ໄປ. ຢຸດນຳໃຊ້ແອັບນີ້ ແລະ ປ່ຽນໄປໃຊ້ລຸ້ນໃຫມ່ Nightly ແທ່ນ.
-        \n\n ສ້າງບັນຊີ Firefox ເພື່ອໂອນບຸກມາກ, ການລັອກອິນ ແລະ ປະຫວັດການນຳໃຊ້ຂອງທ່ານໄປຫາແອັບອື່ນ.</string>
+        \n\n ສ້າງບັນຊີ Waterfox ເພື່ອໂອນບຸກມາກ, ການລັອກອິນ ແລະ ປະຫວັດການນຳໃຊ້ຂອງທ່ານໄປຫາແອັບອື່ນ.</string>
     <!-- text for firefox preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_installed">ປ່ຽນໄປໃຊ້ລຸ້ນໃຫມ່ Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header_preview_not_installed">Firefox Nightly ໄດ້ຍ້າຍໄປແລ້ວ</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header_preview_not_installed">Waterfox Nightly ໄດ້ຍ້າຍໄປແລ້ວ</string>
 
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_not_installed">ແອັບນີ້ຈະບໍ່ໄດ້ຮັບການອັບເດດທາງດ້ານຄວາມປອດໄພອີກຕໍ່ໄປ. ຕິດຕັ້ງ Nightly ຕົວໃຫມ່ ແລະ ຢຸດນຳໃຊ້ແອັບນີ້.
-        \n\nສ້າງບັນຊີ Firefox ເພື່ອໂອນບຸກມາກ, ການລັອກອິນ ແລະ ປະຫວັດການນຳໃຊ້ຂອງທ່ານໄປຫາແອັບອື່ນ.</string>
+        \n\nສ້າງບັນຊີ Waterfox ເພື່ອໂອນບຸກມາກ, ການລັອກອິນ ແລະ ປະຫວັດການນຳໃຊ້ຂອງທ່ານໄປຫາແອັບອື່ນ.</string>
     <!-- text for firefox preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_not_installed">ຕິດຕັ້ງ Nightly ຕົວໃຫມ່</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">ຍິນດີຕ້ອນຮັບສູ່ %s!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">ມີບັນຊີຢູ່ແລ້ວບໍ່?</string>
 
     <!-- text for the "What's New" onboarding card header -->
     <string moz:removedIn="94" name="onboarding_whats_new_header1" tools:ignore="UnusedResources">ເບິ່ງວ່າມີຫຍັງໃຫມ່</string>
     <!-- text for the "what's new" onboarding card description
-    The first parameter is the short name of the app (e.g. Firefox) -->
+    The first parameter is the short name of the app (e.g. Waterfox) -->
     <string moz:removedIn="94" name="onboarding_whats_new_description" tools:ignore="UnusedResources">ມີຄຳຖາມກ່ຽວກັບການອອກແບບ %s ຄືນໃຫມ່ບໍ່? ຕ້ອງການຢາກຮູ້ຈັກວ່າມີຫຍັງປ່ຽນແປງແດ່ບໍ່?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string moz:removedIn="94" name="onboarding_whats_new_description_linktext" tools:ignore="UnusedResources">ພົບຄຳຕອບໄດ້ທີ່ນີ້</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sync Firefox ລະຫວ່າງອຸປະກອນ</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account -->
-    <string name="onboarding_manual_sign_in_description">ນຳເອົ່າບຸກມາກ, ປະຫວັດ ແລະ ລະຫັດຜ່ານເຂົ້າໄປ Firefox ໃນອຸປະກອນນີ້</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sync Waterfox ລະຫວ່າງອຸປະກອນ</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account -->
+    <string name="onboarding_manual_sign_in_description">ນຳເອົ່າບຸກມາກ, ປະຫວັດ ແລະ ລະຫັດຜ່ານເຂົ້າໄປ Waterfox ໃນອຸປະກອນນີ້</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
+        another Waterfox browser. (The word `Waterfox` should not be translated)
         The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_3">ທ່ານໄດ້ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍຊື່ %s ໃນບຣາວເຊີ Firefox ອື່ນໃນອຸປະກອນນີ້. ທ່ານຕ້ອງການຈະລົງຊື່ເຂົ້າໃຊ້ດ້ວຍບັນຊີນີ້ຫລືບໍ?</string>
+    <string name="onboarding_firefox_account_auto_signin_header_3">ທ່ານໄດ້ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍຊື່ %s ໃນບຣາວເຊີ Waterfox ອື່ນໃນອຸປະກອນນີ້. ທ່ານຕ້ອງການຈະລົງຊື່ເຂົ້າໃຊ້ດ້ວຍບັນຊີນີ້ຫລືບໍ?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">ຖືກຕ້ອງ, ໃຫ້ຂ້ອຍເຂົ້າສູ່ລະບົບ</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">ກຳລັງລົງຊື່ເຂົ້າໃຊ້…</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">ລົງ​ທະ​ບຽນ</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">ລົງຊື່ອອກຈາກລະບົບຕໍ່ໄປ</string>
@@ -1350,7 +1350,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">ສະແກນລະຫັດ</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[ໃນຄອມພິວເຕີຂອງທ່ານເປີດ Firefox ແລະ ເຂົ້າໄປທີ່ <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[ໃນຄອມພິວເຕີຂອງທ່ານເປີດ Waterfox ແລະ ເຂົ້າໄປທີ່ <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">ກຽມພ້ອມທີ່ຈະສະແກນ</string>
     <!-- Text shown for settings option for sign with pairing -->
@@ -1359,8 +1359,8 @@
     <string name="sign_in_with_email">ໃຊ້ອີເມວແທນ</string>
 
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">Firefox ຈະຢຸດການ Sync ກັບບັນຊີຂອງທ່ານ ແຕວ່າຈະບໍ່ລຶບຂໍ້ມູນປະຫວັດການຄົ້ນຫາຂອງທ່ານໃນອຸປະກອນນີ້.</string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="sign_out_confirmation_message">Waterfox ຈະຢຸດການ Sync ກັບບັນຊີຂອງທ່ານ ແຕວ່າຈະບໍ່ລຶບຂໍ້ມູນປະຫວັດການຄົ້ນຫາຂອງທ່ານໃນອຸປະກອນນີ້.</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ຈະຢຸດການ Sync ກັບບັນຊີຂອງທ່ານ ແຕວ່າຈະບໍ່ລຶບຂໍ້ມູນປະຫວັດການຄົ້ນຫາຂອງທ່ານໃນອຸປະກອນນີ້.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">ຕັດການເຊື່ອມຕໍ່</string>
@@ -1777,13 +1777,13 @@
     <string name="synced_tabs_connect_another_device">ເຊື່ອມຕໍ່ອຸປະກອນອື່ນ.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">ກະລຸນາຮັບຮອງຄວາມຖືກຕ້ອງອີກຄັ້ງຫນຶ່ງ.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">ກະລຸນາເປີດນຳໃຊ້ການ sync ແທັບ</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">ທ່ານບໍ່ໄດ້ເປີດຈັກແທັບຢູ່ Firefox ໃນອຸປະກອນອື່ນໆຂອງທ່ານ.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">ທ່ານບໍ່ໄດ້ເປີດຈັກແທັບຢູ່ Waterfox ໃນອຸປະກອນອື່ນໆຂອງທ່ານ.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">ເບິງລາຍຊື່ແທັບຈາກອຸປະກອນອື່ນໆຂອງທ່ານ</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">ເຂົ້າສູ່ລະບົບເພື່ອ Sync</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">ບໍ່ມີແທັບທີ່ເປີດຢູ່</string>
