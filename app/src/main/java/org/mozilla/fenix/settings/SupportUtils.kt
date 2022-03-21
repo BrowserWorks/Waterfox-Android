@@ -41,14 +41,14 @@ object SupportUtils {
         HELP("faq-android"),
         PRIVATE_BROWSING_MYTHS("common-myths-about-private-browsing"),
         YOUR_RIGHTS("your-rights"),
-        TRACKING_PROTECTION("tracking-protection-firefox-android"),
-        WHATS_NEW("whats-new-firefox-preview"),
-        OPT_OUT_STUDIES("how-opt-out-studies-firefox-android"),
+        TRACKING_PROTECTION("tracking-protection-waterfox-android"),
+        WHATS_NEW("whats-new-waterfox-android"),
+        OPT_OUT_STUDIES("how-opt-out-studies-waterfox-android"),
         SEND_TABS("send-tab-preview"),
-        SET_AS_DEFAULT_BROWSER("set-firefox-preview-default"),
-        SEARCH_SUGGESTION("how-search-firefox-preview"),
+        SET_AS_DEFAULT_BROWSER("set-firefox-waterfox-android-default"),
+        SEARCH_SUGGESTION("how-search-waterfox-android"),
         CUSTOM_SEARCH_ENGINES("custom-search-engines"),
-        SYNC_SETUP("how-set-firefox-sync-firefox-android"),
+        SYNC_SETUP("how-set-sync-waterfox-android"),
         QR_CAMERA_ACCESS("qr-camera-access"),
         SMARTBLOCK("smartblock-enhanced-tracking-protection"),
         SPONSOR_PRIVACY("sponsor-privacy"),
@@ -56,8 +56,8 @@ object SupportUtils {
     }
 
     enum class MozillaPage(internal val path: String) {
-        PRIVATE_NOTICE("privacy/firefox/"),
-        MANIFESTO("about/manifesto/")
+        PRIVATE_NOTICE("policies/privacy"),
+        MANIFESTO("")
     }
 
     /**
@@ -71,9 +71,9 @@ object SupportUtils {
         val escapedTopic = getEncodedTopicUTF8(topic.topicStr)
         // Remove the whitespace so a search is not triggered:
         val appVersion = context.appVersionName?.replace(" ", "")
-        val osTarget = "Android"
+        val osTarget = "android"
         val langTag = getLanguageTag(locale)
-        return "https://support.mozilla.org/1/mobile/$appVersion/$osTarget/$langTag/$escapedTopic"
+        return "https://www.waterfox.net/docs/support/$osTarget/$escapedTopic"
     }
 
     /**
@@ -82,8 +82,8 @@ object SupportUtils {
      */
     fun getGenericSumoURLForTopic(topic: SumoTopic, locale: Locale = Locale.getDefault()): String {
         val escapedTopic = getEncodedTopicUTF8(topic.topicStr)
-        val langTag = getLanguageTag(locale)
-        return "https://support.mozilla.org/$langTag/kb/$escapedTopic"
+        val osTarget = "android"
+        return "https://www.waterfox.net/docs/support/$osTarget/$escapedTopic"
     }
 
     fun getFirefoxAccountSumoUrl(): String {
@@ -93,7 +93,7 @@ object SupportUtils {
     fun getMozillaPageUrl(page: MozillaPage, locale: Locale = Locale.getDefault()): String {
         val path = page.path
         val langTag = getLanguageTag(locale)
-        return "https://www.mozilla.org/$langTag/$path"
+        return "https://www.waterfox.net/docs/$path"
     }
 
     fun getWhatsNewUrl(context: Context) = getSumoURLForTopic(context, SumoTopic.WHATS_NEW)
