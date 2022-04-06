@@ -103,3 +103,8 @@ test_artifacts/
 
 # Web extensions: manifest.json files are generated
 manifest.json
+
+# Experimenter generated files
+.experimenter.*
+*.orig
+*.rej
