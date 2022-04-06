@@ -20,13 +20,13 @@
     <color name="fx_mobile_layer_color_accent_opaque">#423262</color>
     <color name="fx_mobile_layer_color_scrim">@color/photonDarkGrey90A95</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_start">@color/photonViolet70</color>
+    <color name="fx_mobile_layer_color_gradient_start">@color/photonTeal70</color>
     <!-- Tooltip -->
     <color name="fx_mobile_layer_color_gradient_end">@color/photonViolet40</color>
 
     <!-- Action -->
     <!-- Primary button, Snackbar, Floating action button, Chip selected -->
-    <color name="fx_mobile_action_color_primary">@color/photonViolet60</color>
+    <color name="fx_mobile_action_color_primary">@color/photonTeal60</color>
     <!-- Secondary button -->
     <color name="fx_mobile_action_color_secondary">@color/photonLightGrey05</color>
     <!-- Filter -->
@@ -127,7 +127,7 @@
     <color name="fx_mobile_border_color_warning" tools:ignore="UnusedResources">@color/photonRed40</color>
 
     <!-- Normal theme colors for dark mode -->
-    <color name="accent_normal_theme">@color/photonViolet50</color>
+    <color name="accent_normal_theme">@color/photonTeal50</color>
     <color name="accent_high_contrast_normal_theme">@color/photonViolet40</color>
     <color name="neutral_normal_theme">@color/photonGrey20</color>
     <color name="neutral_faded_normal_theme">#1FFBFBFE</color>
@@ -139,7 +139,7 @@
     <color name="onboarding_illustration_selected_normal_theme">@color/accent_normal_theme</color>
     <color name="onboarding_illustration_deselected_normal_theme">#99FBFBFE</color>
     <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/accent_normal_theme</color>
-    <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/photonViolet50</color>
+    <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/photonTeal50</color>
     <color name="search_suggestion_indicator_icon_color_normal_theme">@color/photonGreen60</color>
     <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/photonBlue40</color>
 

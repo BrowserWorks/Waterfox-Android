@@ -20,7 +20,7 @@
     <color name="fx_mobile_layer_color_accent_opaque">#EAE4F9</color>
     <color name="fx_mobile_layer_color_scrim">@color/photonDarkGrey30A95</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_layer_color_gradient_start">@color/photonViolet70</color>
+    <color name="fx_mobile_layer_color_gradient_start">@color/photonTeal70</color>
     <!-- Tooltip -->
     <color name="fx_mobile_layer_color_gradient_end">@color/photonViolet40</color>
 
@@ -62,7 +62,7 @@
     <!-- Warning text on Secondary button -->
     <color name="fx_mobile_text_color_warning_button" tools:ignore="UnusedResources">@color/photonRed70</color>
     <!-- Small heading, Text link -->
-    <color name="fx_mobile_text_color_accent">@color/photonViolet70</color>
+    <color name="fx_mobile_text_color_accent">@color/photonTeal70</color>
     <!-- Small heading, Text link -->
     <color name="fx_mobile_text_color_accent_disabled" tools:ignore="UnusedResources">@color/photonViolet70A80</color>
     <!-- Text Inverted/On Color -->
@@ -98,7 +98,7 @@
     <color name="fx_mobile_icon_color_warning" tools:ignore="UnusedResources">@color/photonRed70</color>
     <!-- Warning icon on Secondary button -->
     <color name="fx_mobile_icon_color_warning_button" tools:ignore="UnusedResources">@color/photonRed70</color>
-    <color name="fx_mobile_icon_color_accent_violet">@color/photonViolet60</color>
+    <color name="fx_mobile_icon_color_accent_violet">@color/photonTeal60</color>
     <color name="fx_mobile_icon_color_accent_blue">@color/photonBlue60</color>
     <color name="fx_mobile_icon_color_accent_pink">@color/photonPink60</color>
     <color name="fx_mobile_icon_color_accent_green">@color/photonGreen60</color>
@@ -108,7 +108,7 @@
     <!-- Action Secondary Icon -->
     <color name="fx_mobile_icon_color_action_secondary">@color/photonDarkGrey90</color>
     <!-- Reader, ETP Shield -->
-    <color name="fx_mobile_icon_color_gradient_start">@color/photonViolet50</color>
+    <color name="fx_mobile_icon_color_gradient_start">@color/photonTeal50</color>
     <!-- Reader, ETP Shield -->
     <color name="fx_mobile_icon_color_gradient_end">@color/photonBlue60</color>
 
@@ -138,7 +138,7 @@
     <!-- Homescreen background, Toolbar -->
     <color name="fx_mobile_private_layer_color_4_start">@color/photonPurple70</color>
     <!-- Homescreen background, Toolbar -->
-    <color name="fx_mobile_private_layer_color_4_center">@color/photonViolet80</color>
+    <color name="fx_mobile_private_layer_color_4_center">@color/photonTeal80</color>
     <!-- Homescreen background, Toolbar -->
     <color name="fx_mobile_private_layer_color_4_end">@color/photonInk05</color>
     <!-- App Bar Top (edit), Text Cursor, Selected Tab Check -->
@@ -149,13 +149,13 @@
     <color name="fx_mobile_private_layer_color_accent_opaque" tools:ignore="UnusedResources">#423262</color>
     <color name="fx_mobile_private_layer_color_scrim">@color/photonDarkGrey90A95</color>
     <!-- Tooltip -->
-    <color name="fx_mobile_private_layer_color_gradient_start" tools:ignore="UnusedResources">@color/photonViolet70</color>
+    <color name="fx_mobile_private_layer_color_gradient_start" tools:ignore="UnusedResources">@color/photonTeal70</color>
     <!-- Tooltip -->
     <color name="fx_mobile_private_layer_color_gradient_end" tools:ignore="UnusedResources">@color/photonViolet40</color>
 
     <!-- Action -->
     <!-- Primary button, Snackbar, Floating action button, Chip selected -->
-    <color name="fx_mobile_private_action_color_primary">@color/photonViolet60</color>
+    <color name="fx_mobile_private_action_color_primary">@color/photonTeal60</color>
     <!-- Secondary button -->
     <color name="fx_mobile_private_action_color_secondary" tools:ignore="UnusedResources">@color/photonLightGrey05</color>
     <!-- Filter -->
@@ -257,14 +257,14 @@
     <color name="dark_grey_90_gradient_end">#0015141A</color>
 
     <!-- Private theme color palette -->
-    <color name="accent_private_theme">@color/photonViolet50</color>
+    <color name="accent_private_theme">@color/photonTeal50</color>
     <color name="accent_high_contrast_private_theme">#AA71FF</color>
     <color name="neutral_private_theme">@color/photonGrey20</color>
     <color name="neutral_faded_private_theme">#1FFBFBFE</color>
     <color name="sync_disconnected_icon_fill_private_theme">@color/photonYellow70</color>
     <color name="sync_disconnected_background_private_theme">#5B5846</color>
     <color name="onboarding_illustration_deselected_private_theme">#99FBFBFE</color>
-    <color name="prompt_login_edit_text_cursor_color_private_theme">@color/photonViolet50</color>
+    <color name="prompt_login_edit_text_cursor_color_private_theme">@color/photonTeal50</color>
 
     <!-- Normal theme colors for light mode -->
     <color name="accent_normal_theme">@color/photonInk20</color>
@@ -274,9 +274,9 @@
     <color name="fill_link_from_clipboard_normal_theme">@color/photonInk20</color>
     <color name="sync_disconnected_icon_fill_normal_theme">@color/photonYellow70</color>
     <color name="sync_disconnected_background_normal_theme">#FFFDE2</color>
-    <color name="onboarding_illustration_selected_normal_theme">@color/photonViolet70</color>
+    <color name="onboarding_illustration_selected_normal_theme">@color/photonTeal70</color>
     <color name="onboarding_illustration_deselected_normal_theme">@color/photonDarkGrey90A60</color>
-    <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/photonViolet70</color>
+    <color name="add_on_private_browsing_exterior_circle_background_normal_theme">@color/photonTeal70</color>
     <color name="prompt_login_edit_text_cursor_color_normal_theme">@color/photonInk20</color>
     <color name="search_suggestion_indicator_icon_color_normal_theme">@color/photonGreen70</color>
     <color name="search_suggestion_indicator_icon_bookmark_color_normal_theme">@color/photonBlue50</color>
@@ -315,7 +315,7 @@
     <color name="ic_launcher_background">#FDFDFD</color>
 
     <!-- Private Browsing Mode Persistent Notification -->
-    <color name="pbm_notification_color">@color/photonViolet70</color>
+    <color name="pbm_notification_color">@color/photonTeal70</color>
 
     <!-- Static Shortcut Background Color -->
     <color name="static_shortcut_background">#F5F5F5</color>
