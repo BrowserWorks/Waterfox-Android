@@ -75,6 +75,11 @@ internal object AppStoreReducer {
                 recentTabs = state.recentTabs.filterOutTab(action.recentTab)
             )
         }
+        is AppAction.RecentSyncedTabStateChange -> {
+            state.copy(
+                recentSyncedTabState = action.state
+            )
+        }
         is AppAction.RecentBookmarksChange -> state.copy(recentBookmarks = action.recentBookmarks)
         is AppAction.RemoveRecentBookmark -> {
             state.copy(recentBookmarks = state.recentBookmarks.filterNot { it.url == action.recentBookmark.url })
@@ -89,7 +94,7 @@ internal object AppStoreReducer {
         )
         is AppAction.DisbandSearchGroupAction -> state.copy(
             recentHistory = state.recentHistory.filterNot {
-                it is RecentlyVisitedItem.RecentHistoryGroup && (
+                it is RecentHistoryGroup && (
                     it.title.equals(action.searchTerm, true) ||
                         it.title.equals(state.recentSearchGroup?.searchTerm, true)
                     )
@@ -168,6 +173,11 @@ internal object AppStoreReducer {
 
             state.copy(pocketStoriesCategories = updatedCategories)
         }
+        is AppAction.AddPendingDeletionSet ->
+            state.copy(pendingDeletionHistoryItems = state.pendingDeletionHistoryItems + action.historyItems)
+
+        is AppAction.UndoPendingDeletionSet ->
+            state.copy(pendingDeletionHistoryItems = state.pendingDeletionHistoryItems - action.historyItems)
     }
 }
 

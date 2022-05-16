@@ -998,11 +998,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
-    var fxaHasSyncedItems by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_fxa_has_synced_items),
-        default = false
-    )
-
     var lastPlacesStorageMaintenance by longPreference(
         appContext.getPreferenceKey(R.string.pref_key_last_maintenance),
         default = 0
@@ -1276,9 +1271,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     /**
      * Indicates if the Unified Search feature should be visible.
      */
-    var showUnifiedSearchFeature by featureFlagPreference(
+    var showUnifiedSearchFeature by lazyFeatureFlagPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_show_unified_search),
-        default = false,
+        default = { FxNimbus.features.unifiedSearch.value(appContext).enabled },
         featureFlag = FeatureFlags.unifiedSearchFeature
     )
 

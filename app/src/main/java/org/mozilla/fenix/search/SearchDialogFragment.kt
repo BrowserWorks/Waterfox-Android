@@ -31,6 +31,7 @@ import androidx.constraintlayout.widget.ConstraintProperties.BOTTOM
 import androidx.constraintlayout.widget.ConstraintProperties.PARENT_ID
 import androidx.constraintlayout.widget.ConstraintProperties.TOP
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
@@ -39,12 +40,17 @@ import androidx.navigation.fragment.navArgs
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import mozilla.components.browser.state.search.SearchEngine
+import mozilla.components.browser.state.state.searchEngines
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.concept.engine.EngineSession
+import mozilla.components.concept.menu.candidate.DrawableMenuIcon
+import mozilla.components.concept.menu.candidate.TextMenuCandidate
 import mozilla.components.concept.storage.HistoryStorage
 import mozilla.components.feature.qr.QrFeature
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
+import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.coroutines.Dispatchers
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
@@ -59,9 +65,10 @@ import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import mozilla.components.ui.autocomplete.InlineAutocompleteEditText
 import org.mozilla.fenix.BrowserDirection
+import org.mozilla.fenix.GleanMetrics.Awesomebar
+import org.mozilla.fenix.GleanMetrics.VoiceSearch
 import org.mozilla.fenix.HomeActivity
 import org.mozilla.fenix.R
-import org.mozilla.fenix.components.metrics.Event
 import org.mozilla.fenix.components.toolbar.ToolbarPosition
 import org.mozilla.fenix.databinding.FragmentSearchDialogBinding
 import org.mozilla.fenix.databinding.SearchSuggestionsHintBinding
@@ -72,6 +79,8 @@ import org.mozilla.fenix.ext.settings
 import org.mozilla.fenix.search.awesomebar.AwesomeBarView
 import org.mozilla.fenix.search.awesomebar.toSearchProviderState
 import org.mozilla.fenix.search.toolbar.IncreasedTapAreaActionDecorator
+import org.mozilla.fenix.search.toolbar.SearchSelectorMenu
+import org.mozilla.fenix.search.toolbar.SearchSelectorToolbarAction
 import org.mozilla.fenix.search.toolbar.ToolbarView
 import org.mozilla.fenix.settings.SupportUtils
 import org.mozilla.fenix.widget.VoiceSearchActivity
@@ -83,17 +92,26 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
     private var _binding: FragmentSearchDialogBinding? = null
     private val binding get() = _binding!!
 
-    private var voiceSearchButtonAlreadyAdded: Boolean = false
-    private var qrButtonAlreadyAdded = false
     private lateinit var interactor: SearchDialogInteractor
     private lateinit var store: SearchDialogFragmentStore
     private lateinit var toolbarView: ToolbarView
     private lateinit var inlineAutocompleteEditText: InlineAutocompleteEditText
     private lateinit var awesomeBarView: AwesomeBarView
 
+    private val searchSelectorMenu by lazy {
+        SearchSelectorMenu(
+            context = requireContext(),
+            interactor = interactor
+        )
+    }
+
     private val qrFeature = ViewBoundFeatureWrapper<QrFeature>()
     private val speechIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+
     private var dialogHandledAction = false
+    private var qrButtonAlreadyAdded = false
+    private var searchSelectorAlreadyAdded = false
+    private var voiceSearchButtonAlreadyAdded = false
 
     override fun onStart() {
         super.onStart()
@@ -143,8 +161,6 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         _binding = FragmentSearchDialogBinding.inflate(inflater, container, false)
         val activity = requireActivity() as HomeActivity
         val isPrivate = activity.browsingModeManager.mode.isPrivate
-
-        requireComponents.analytics.metrics.track(Event.InteractWithSearchURLArea)
 
         store = SearchDialogFragmentStore(
             createInitialSearchFragmentState(
@@ -241,6 +257,8 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
                 .ifChanged()
                 .collect { search ->
                     store.dispatch(SearchFragmentAction.UpdateSearchState(search))
+
+                    updateSearchSelectorMenu(search.searchEngines)
                 }
         }
 
@@ -299,7 +317,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         }
 
         binding.fillLinkFromClipboard.setOnClickListener {
-            requireComponents.analytics.metrics.track(Event.ClipboardSuggestionClicked)
+            Awesomebar.clipboardSuggestionClicked.record(NoExtras())
             val clipboardUrl = requireContext().components.clipboardHandler.extractURL() ?: ""
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -372,9 +390,12 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
             updateToolbarContentDescription(it.searchEngineSource)
             toolbarView.update(it)
             awesomeBarView.update(it)
+
             if (showUnifiedSearchFeature) {
+                addSearchSelector()
                 addQrButton(it)
             }
+
             addVoiceSearchButton(it)
         }
     }
@@ -643,6 +664,43 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         }
     }
 
+    /**
+     * Updates the search selector menu with the given list of available search engines.
+     *
+     * @param searchEngines List of [SearchEngine] to display.
+     */
+    private fun updateSearchSelectorMenu(searchEngines: List<SearchEngine>) {
+        searchSelectorMenu.menuController.submitList(
+            searchSelectorMenu.menuItems() +
+                searchEngines
+                    .reversed()
+                    .map {
+                        TextMenuCandidate(
+                            text = it.name,
+                            start = DrawableMenuIcon(
+                                drawable = it.icon.toDrawable(resources)
+                            )
+                        ) {
+                            interactor.onMenuItemTapped(SearchSelectorMenu.Item.SearchEngine(it))
+                        }
+                    }
+        )
+    }
+
+    private fun addSearchSelector() {
+        if (searchSelectorAlreadyAdded) return
+
+        toolbarView.view.addEditActionStart(
+            SearchSelectorToolbarAction(
+                store = store,
+                menu = searchSelectorMenu,
+                viewLifecycleOwner = viewLifecycleOwner
+            )
+        )
+
+        searchSelectorAlreadyAdded = true
+    }
+
     private fun addVoiceSearchButton(searchFragmentState: SearchFragmentState) {
         if (voiceSearchButtonAlreadyAdded) return
         val searchEngine = searchFragmentState.searchEngineSource.searchEngine
@@ -676,7 +734,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         // around such a small edge case, we make the button have no functionality in this case.
         if (!isSpeechAvailable()) { return }
 
-        requireComponents.analytics.metrics.track(Event.VoiceSearchTapped)
+        VoiceSearch.tapped.record(NoExtras())
         speechIntent.apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_PROMPT, requireContext().getString(R.string.voice_search_explainer))
@@ -700,7 +758,8 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
             val qrAction = BrowserToolbar.Button(
                 AppCompatResources.getDrawable(requireContext(), R.drawable.ic_qr)!!,
                 requireContext().getString(R.string.search_scan_button),
-                listener = ::launchQr
+                autoHide = { true },
+                listener = ::launchQr,
             )
             toolbarView.view.run {
                 addEditActionEnd(IncreasedTapAreaActionDecorator(qrAction))

@@ -5,10 +5,8 @@
 package org.mozilla.fenix
 
 import android.content.Context
-import android.os.StrictMode
 import mozilla.components.support.locale.LocaleManager
 import mozilla.components.support.locale.LocaleManager.getSystemDefault
-import org.mozilla.fenix.ext.components
 
 /**
  * A single source for setting feature flags that are mostly based on build type.
@@ -89,15 +87,9 @@ object FeatureFlags {
     const val historyImprovementFeatures = true
 
     /**
-     * Enables themed wallpapers feature.
+     * Separates history into local and synced from other sources.
      */
-    fun isThemedWallpapersFeatureEnabled(context: Context): Boolean {
-        return context.components.strictMode.resetAfter(StrictMode.allowThreadDiskReads()) {
-            val langTag = LocaleManager.getCurrentLocale(context)
-                ?.toLanguageTag() ?: getSystemDefault().toLanguageTag()
-            listOf("en-US", "es-US").contains(langTag)
-        }
-    }
+    val showSyncedHistory = Config.channel.isDebug
 
     /**
      * Enables the Task Continuity enhancements.
@@ -112,6 +104,5 @@ object FeatureFlags {
     /**
      * Enables receiving from the messaging framework.
      */
-    @Suppress("MayBeConst")
-    val messagingFeature = false
+    const val messagingFeature = true
 }

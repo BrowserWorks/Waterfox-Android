@@ -2,15 +2,17 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@file:Suppress("DEPRECATION")
+
 package org.mozilla.fenix.ui
 
 import android.view.View
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.core.net.toUri
 import androidx.test.espresso.IdlingRegistry
+import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
-import androidx.test.rule.GrantPermissionRule
 import androidx.test.uiautomator.UiDevice
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.engine.mediasession.MediaSession
@@ -85,12 +87,6 @@ class SmokeTest {
         IntentReceiverActivity::class.java, true, false
     )
 
-    @get:Rule
-    var mGrantPermissions = GrantPermissionRule.grant(
-        android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
-        android.Manifest.permission.READ_EXTERNAL_STORAGE
-    )
-
     @Rule
     @JvmField
     val retryTestRule = RetryTestRule(3)
@@ -142,7 +138,6 @@ class SmokeTest {
         featureSettingsHelper.resetAllFeatureFlags()
     }
 
-    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/24381")
     // Verifies the first run onboarding screen
     @Test
     fun firstRunScreenTest() {
@@ -380,6 +375,7 @@ class SmokeTest {
     }
 
     @Test
+    // Device or AVD requires a Google Services Android OS installation with Play Store installed
     // Verifies the Open in app button when an app is installed
     fun mainMenuOpenInAppTest() {
         val playStoreUrl = "play.google.com/store/apps/details?id=org.mozilla.fenix"
@@ -537,7 +533,9 @@ class SmokeTest {
         }
     }
 
+    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/25034")
     @Test
+    @SdkSuppress(minSdkVersion = 29)
     // Verifies that you can go to System settings and change app's permissions from inside the app
     fun redirectToAppPermissionsSystemSettingsTest() {
         homeScreen {
@@ -554,9 +552,12 @@ class SmokeTest {
             verifyBlockedByAndroid()
             clickGoToSettingsButton()
             openAppSystemPermissionsSettings()
-            switchAppPermissionSystemSetting("Camera")
-            switchAppPermissionSystemSetting("Location")
-            switchAppPermissionSystemSetting("Microphone")
+            switchAppPermissionSystemSetting("Camera", "Allow")
+            mDevice.pressBack()
+            switchAppPermissionSystemSetting("Location", "Allow")
+            mDevice.pressBack()
+            switchAppPermissionSystemSetting("Microphone", "Allow")
+            mDevice.pressBack()
             mDevice.pressBack()
             mDevice.pressBack()
             verifyUnblockedByAndroid()
@@ -793,13 +794,9 @@ class SmokeTest {
             createBookmark(website.url)
         }.openThreeDotMenu {
         }.openBookmarks {
-            bookmarksListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.bookmark_list), 1)
-            IdlingRegistry.getInstance().register(bookmarksListIdlingResource!!)
             verifyBookmarkTitle("Test_Page_1")
             createFolder("My Folder")
             verifyFolderTitle("My Folder")
-            IdlingRegistry.getInstance().unregister(bookmarksListIdlingResource!!)
         }.openThreeDotMenu("Test_Page_1") {
         }.clickEdit {
             clickParentFolderSelector()
@@ -807,11 +804,7 @@ class SmokeTest {
             navigateUp()
             saveEditBookmark()
             createFolder("My Folder 2")
-            bookmarksListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.bookmark_list), 1)
-            IdlingRegistry.getInstance().register(bookmarksListIdlingResource!!)
             verifyFolderTitle("My Folder 2")
-            IdlingRegistry.getInstance().unregister(bookmarksListIdlingResource!!)
         }.openThreeDotMenu("My Folder 2") {
         }.clickEdit {
             clickParentFolderSelector()
@@ -1065,7 +1058,7 @@ class SmokeTest {
             assertPlaybackState(browserStore, MediaSession.PlaybackState.PLAYING)
         }.openNotificationShade {
             verifySystemNotificationExists(audioTestPage.title)
-            clickSystemNotificationControlButton("Pause")
+            clickMediaNotificationControlButton("Pause")
             verifyMediaSystemNotificationButtonState("Play")
         }
 
@@ -1112,10 +1105,12 @@ class SmokeTest {
         homeScreen {
         }.openThreeDotMenu {
         }.openSettings {
-            verifyDefaultBrowserIsDisaled()
+            verifyDefaultBrowserIsDisabled()
             clickDefaultBrowserSwitch()
             verifyAndroidDefaultAppsMenuAppears()
         }
+        // Dismiss the request
+        mDevice.pressBack()
     }
 
     @Test

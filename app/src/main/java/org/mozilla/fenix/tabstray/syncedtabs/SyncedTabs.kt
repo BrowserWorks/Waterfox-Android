@@ -8,14 +8,11 @@ package org.mozilla.fenix.tabstray.syncedtabs
 
 import android.content.res.Configuration
 import androidx.annotation.VisibleForTesting
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -37,9 +34,6 @@ import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.ui.graphics.PathEffect
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
@@ -50,10 +44,11 @@ import androidx.compose.ui.unit.sp
 import mozilla.components.browser.storage.sync.TabEntry
 import mozilla.components.feature.syncedtabs.view.SyncedTabsView
 import org.mozilla.fenix.R
-import org.mozilla.fenix.compose.Favicon
 import org.mozilla.fenix.compose.PrimaryText
 import org.mozilla.fenix.compose.SecondaryText
+import org.mozilla.fenix.compose.ext.dashedBorder
 import org.mozilla.fenix.compose.list.ExpandableListHeader
+import org.mozilla.fenix.compose.list.FaviconListItem
 import org.mozilla.fenix.theme.FirefoxTheme
 import org.mozilla.fenix.theme.Theme
 import mozilla.components.browser.storage.sync.Tab as SyncTab
@@ -67,6 +62,7 @@ private const val EXPANDED_BY_DEFAULT = true
  * @param taskContinuityEnabled Indicates whether the Task Continuity enhancements should be visible for users.
  * @param onTabClick The lambda for handling clicks on synced tabs.
  */
+@SuppressWarnings("LongMethod")
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SyncedTabsList(
@@ -75,7 +71,8 @@ fun SyncedTabsList(
     onTabClick: (SyncTab) -> Unit,
 ) {
     val listState = rememberLazyListState()
-    val expandedState = remember(syncedTabs) { syncedTabs.map { EXPANDED_BY_DEFAULT }.toMutableStateList() }
+    val expandedState =
+        remember(syncedTabs) { syncedTabs.map { EXPANDED_BY_DEFAULT }.toMutableStateList() }
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -99,12 +96,12 @@ fun SyncedTabsList(
                         if (sectionExpanded) {
                             if (syncedTabItem.tabs.isNotEmpty()) {
                                 items(syncedTabItem.tabs) { syncedTab ->
-                                    SyncedTabsTabItem(
-                                        tabTitleText = syncedTab.displayTitle,
+                                    FaviconListItem(
+                                        label = syncedTab.displayTitle,
+                                        description = syncedTab.displayURL,
                                         url = syncedTab.displayURL,
-                                    ) {
-                                        onTabClick(syncedTab.tab)
-                                    }
+                                        onClick = { onTabClick(syncedTab.tab) },
+                                    )
                                 }
                             } else {
                                 item { SyncedTabsNoTabsItem() }
@@ -120,6 +117,9 @@ fun SyncedTabsList(
                             )
                         }
                     }
+                    else -> {
+                        // no-op
+                    }
                 }
             }
         } else {
@@ -132,12 +132,15 @@ fun SyncedTabsList(
                     )
                     is SyncedTabsListItem.NoTabs -> SyncedTabsNoTabsItem()
                     is SyncedTabsListItem.Tab -> {
-                        SyncedTabsTabItem(
-                            tabTitleText = syncedTabItem.displayTitle,
+                        FaviconListItem(
+                            label = syncedTabItem.displayTitle,
+                            description = syncedTabItem.displayURL,
                             url = syncedTabItem.displayURL,
-                        ) {
-                            onTabClick(syncedTabItem.tab)
-                        }
+                            onClick = { onTabClick(syncedTabItem.tab) },
+                        )
+                    }
+                    else -> {
+                        // no-op
                     }
                 }
             }
@@ -182,77 +185,27 @@ fun SyncedTabsSectionHeader(
 }
 
 /**
- * Synced tab list item UI
- *
- * @param tabTitleText The tab's display text.
- * @param url The tab's URL.
- * @param onClick The click handler when this synced tab is clicked.
- */
-@Composable
-fun SyncedTabsTabItem(tabTitleText: String, url: String, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .clickable(
-                onClickLabel = tabTitleText,
-                onClick = onClick
-            )
-            .padding(horizontal = 16.dp, vertical = 10.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Favicon(
-            url = url,
-            size = 24.dp,
-        )
-
-        Spacer(modifier = Modifier.width(32.dp))
-
-        Column {
-            PrimaryText(
-                text = tabTitleText,
-                modifier = Modifier.fillMaxWidth(),
-                fontSize = 16.sp,
-                maxLines = 1,
-            )
-
-            SecondaryText(
-                text = url,
-                modifier = Modifier.fillMaxWidth(),
-                fontSize = 12.sp,
-                maxLines = 1,
-            )
-        }
-    }
-}
-
-/**
  * Error UI to show if there is one of the errors outlined in [SyncedTabsView.ErrorType].
  *
  * @param errorText The text to be displayed to the user.
  * @param errorButton Optional class to set up and handle any clicks in the Error UI.
  */
 @Composable
-fun SyncedTabsErrorItem(errorText: String, errorButton: SyncedTabsListItem.ErrorButton? = null) {
+fun SyncedTabsErrorItem(
+    errorText: String,
+    errorButton: SyncedTabsListItem.ErrorButton? = null
+) {
     Box(
         Modifier
-            .padding(all = 16.dp)
+            .padding(all = 8.dp)
             .height(IntrinsicSize.Min)
-    ) {
-        val dashColor = FirefoxTheme.colors.borderPrimary
-
-        Canvas(Modifier.fillMaxSize()) {
-            drawRoundRect(
-                color = dashColor,
-                style = Stroke(
-                    width = 2.dp.toPx(),
-                    pathEffect = PathEffect.dashPathEffect(floatArrayOf(4.dp.toPx(), 4.dp.toPx()), 0f)
-                ),
-                cornerRadius = CornerRadius(
-                    x = 8.dp.toPx(),
-                    y = 8.dp.toPx()
-                ),
+            .dashedBorder(
+                color = FirefoxTheme.colors.borderPrimary,
+                cornerRadius = 8.dp,
+                dashHeight = 2.dp,
+                dashWidth = 4.dp
             )
-        }
-
+    ) {
         Column(
             Modifier
                 .padding(all = 16.dp)
@@ -280,10 +233,15 @@ fun SyncedTabsErrorItem(errorText: String, errorButton: SyncedTabsListItem.Error
  * @param onClick The lambda called when the button is clicked.
  */
 @Composable
-fun SyncedTabsErrorButton(buttonText: String, onClick: () -> Unit) {
+fun SyncedTabsErrorButton(
+    buttonText: String,
+    onClick: () -> Unit
+) {
     Button(
         onClick = onClick,
-        modifier = Modifier.clip(RoundedCornerShape(size = 4.dp)),
+        modifier = Modifier
+            .clip(RoundedCornerShape(size = 4.dp))
+            .fillMaxWidth(),
         elevation = ButtonDefaults.elevation(defaultElevation = 0.dp, pressedElevation = 0.dp),
         colors = ButtonDefaults.outlinedButtonColors(backgroundColor = FirefoxTheme.colors.actionPrimary),
     ) {
@@ -337,7 +295,12 @@ private fun SyncedTabsListItemsPreview() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            SyncedTabsTabItem(tabTitleText = "Mozilla", url = "www.mozilla.org") { println("Clicked tab") }
+            FaviconListItem(
+                label = "Mozilla",
+                description = "www.mozilla.org",
+                url = "www.mozilla.org",
+                onClick = {},
+            )
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -387,7 +350,8 @@ private fun SyncedTabsListPreview() {
 /**
  * Helper function to create a List of [SyncedTabsListItem] for previewing.
  */
-@VisibleForTesting internal fun getFakeSyncedTabList(): List<SyncedTabsListItem> = listOf(
+@VisibleForTesting
+internal fun getFakeSyncedTabList(): List<SyncedTabsListItem> = listOf(
     SyncedTabsListItem.DeviceSection(
         displayName = "Device 1",
         tabs = listOf(
@@ -403,12 +367,13 @@ private fun SyncedTabsListPreview() {
 /**
  * Helper function to create a [SyncedTabsListItem.Tab] for previewing.
  */
-private fun generateFakeTab(tabName: String, tabUrl: String): SyncedTabsListItem.Tab = SyncedTabsListItem.Tab(
-    tabName.ifEmpty { tabUrl },
-    tabUrl,
-    SyncTab(
-        history = listOf(TabEntry(tabName, tabUrl, null)),
-        active = 0,
-        lastUsed = 0L,
+private fun generateFakeTab(tabName: String, tabUrl: String): SyncedTabsListItem.Tab =
+    SyncedTabsListItem.Tab(
+        tabName.ifEmpty { tabUrl },
+        tabUrl,
+        SyncTab(
+            history = listOf(TabEntry(tabName, tabUrl, null)),
+            active = 0,
+            lastUsed = 0L,
+        )
     )
-)
