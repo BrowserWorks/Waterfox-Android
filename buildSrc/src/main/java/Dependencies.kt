@@ -14,14 +14,14 @@ object Versions {
     const val android_gradle_plugin = "7.0.0"
     const val android_lint_api = "30.0.0"
 
-    const val sentry = "5.7.3"
-    const val leakcanary = "2.8.1"
+    const val sentry = "5.7.4"
+    const val leakcanary = "2.9.1"
     const val osslicenses_plugin = "0.10.4"
-    const val detekt = "1.19.0"
-    const val jna = "5.8.0"
+    const val detekt = "1.20.0"
+    const val jna = "5.11.0"
 
     const val androidx_compose = "1.1.1"
-    const val androidx_appcompat = "1.3.0"
+    const val androidx_appcompat = "1.3.1"
     const val androidx_benchmark = "1.0.0"
     const val androidx_biometric = "1.1.0"
     const val androidx_coordinator_layout = "1.1.0"
@@ -29,13 +29,13 @@ object Versions {
     const val androidx_preference = "1.1.1"
     const val androidx_legacy = "1.0.0"
     const val androidx_annotation = "1.1.0"
-    const val androidx_lifecycle = "2.4.0"
-    const val androidx_fragment = "1.3.4"
-    const val androidx_navigation = "2.3.3"
+    const val androidx_lifecycle = "2.4.1"
+    const val androidx_fragment = "1.3.6"
+    const val androidx_navigation = "2.3.5"
     const val androidx_recyclerview = "1.2.1"
     const val androidx_core = "1.3.2"
     const val androidx_paging = "3.1.1"
-    const val androidx_transition = "1.4.0"
+    const val androidx_transition = "1.4.1"
     const val androidx_work = "2.7.1"
     const val androidx_datastore = "1.0.0"
     const val google_material = "1.2.1"
@@ -43,21 +43,21 @@ object Versions {
 
     const val mozilla_android_components = AndroidComponents.VERSION
 
-    const val adjust = "4.18.3"
-    const val installreferrer = "1.0"
+    const val adjust = "4.30.0"
+    const val installreferrer = "2.2"
 
     const val junit = "5.5.2"
-    const val mockk = "1.12.0"
+    const val mockk = "1.12.4"
 
-    const val mockwebserver = "4.9.0"
+    const val mockwebserver = "4.9.3"
     const val uiautomator = "2.2.0"
     const val robolectric = "4.8.1"
 
-    const val google_ads_id_version = "16.0.0"
+    const val google_ads_id_version = "18.0.1"
 
-    const val google_play_store_version = "1.8.0"
+    const val google_play_store_version = "1.10.3"
 
-    const val protobuf = "3.11.4" // keep in sync with the version used in AS.
+    const val protobuf = "3.20.1" // keep in sync with the version used in AS.
 }
 
 @Suppress("unused")
