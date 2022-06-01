@@ -107,5 +107,6 @@ manifest.json
 
 # Experimenter generated files
 .experimenter.*
+.experimenter.yaml
 *.orig
 *.rej
