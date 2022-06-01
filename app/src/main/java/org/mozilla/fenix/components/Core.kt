@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
 import android.os.StrictMode
+import android.util.Log
 import androidx.core.content.ContextCompat
 import mozilla.components.browser.engine.gecko.GeckoEngine
 import mozilla.components.browser.engine.gecko.fetch.GeckoViewFetchClient
@@ -142,6 +143,14 @@ class Core(
             if (Config.channel.isNightlyOrDebug || Config.channel.isBeta) {
                 WebCompatReporterFeature.install(it, "fenix")
             }
+
+            it.installWebExtension("uBlock0@raymondhill.net", "resource://android/assets/extensions/ublock/",
+                onSuccess = {
+                    Log.d("uBlock", "Installed uBlock: ${it.id}")
+                },
+                onError = { ext, throwable ->
+                    Log.e("uBlock", "Failed to install uBlock: $ext", throwable)
+                })
         }
     }
 
