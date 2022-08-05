@@ -260,8 +260,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Үй беті және беттерден соңғы іздеулеріңізді қайта қараңыз.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Сіздің жекелендірілген Firefox үй беті енді тоқтаған жерден жалғастыруды жеңілдетеді. Соңғы беттерді, бетбелгілерді және іздеу нәтижелерін табыңыз.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Сіздің жекелендірілген Waterfox үй беті енді тоқтаған жерден жалғастыруды жеңілдетеді. Соңғы беттерді, бетбелгілерді және іздеу нәтижелерін табыңыз.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -332,12 +332,12 @@
     <string name="errorpage_httpsonly_message_summary">Дегенмен, шабуылдаушы араласқан болуы да мүмкін. Веб-сайтқа өтуді жалғастырсаңыз, ешқандай құпия ақпаратты енгізбеуіңіз керек. Жалғастырсаңыз, сайт үшін тек-HTTPS режимі уақытша сөндіріледі.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Қолжетерлілік</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Таңдауыңызша Firefox тіркелгісі сервері</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Таңдауыңызша Waterfox тіркелгісі сервері</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Таңдауыңызша синхрондау сервері</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox тіркелгісі/синхрондау сервері өзгертілген. Өзгерістерді іске асыру үшін қолданба жұмысын аяқтау…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox тіркелгісі/синхрондау сервері өзгертілген. Өзгерістерді іске асыру үшін қолданба жұмысын аяқтау…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Тіркелгі</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -351,11 +351,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Баптау</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Firefox тіркелгісімен бетбелгілер, шолу тарихы және т.б. синхрондау</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Waterfox тіркелгісімен бетбелгілер, шолу тарихы және т.б. синхрондау</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Беттер, бетбелгілер, парольдерді синхрондау және т.б. үшін кіріңіз.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox тіркелгісі</string>
+    <string name="preferences_account_default_name">Waterfox тіркелгісі</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Синхрондауды жалғастыру үшін қайта байланысыңыз</string>
     <!-- Preference for language -->
@@ -436,11 +436,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Қарап шығу</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Firefox басты бетінің логотипін түрту арқылы тұсқағазды өзгертіңіз</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox басты бетінің логотипін түрту арқылы тұсқағазды өзгертіңіз</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox логотипі - тұсқағазды, батырманы өзгерту</string>
+    <string name="wallpaper_logo_content_description">Waterfox логотипі - тұсқағазды, батырманы өзгерту</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -491,7 +491,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Алынған беттер</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Басқа Firefox құрылғыларынан алынған беттер туралы хабарландырулар.</string>
+    <string name="fxa_received_tab_channel_description">Басқа Waterfox құрылғыларынан алынған беттер туралы хабарландырулар.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Бет алынды</string>
     <!-- %s is the device name -->
@@ -658,7 +658,7 @@
     <string name="studies_remove">Өшіру</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Белсенді</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s кейде зерттеулерді орнатып, орындай алады.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Көбірек білу</string>
@@ -780,7 +780,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Кіру</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Немесе синхрондауды бастау үшін Firefox тіркелгісін жасаңыз</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Немесе синхрондауды бастау үшін Waterfox тіркелгісін жасаңыз</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1031,7 +1031,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Басқа құрылғыны байланыстыру</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Бетті жіберу үшін, кемінде бір басқа құрылғыдан Firefox-қа кіріңіз.</string>
+    <string name="sync_connect_device_dialog">Бетті жіберу үшін, кемінде бір басқа құрылғыдан Waterfox-қа кіріңіз.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Түсіндім</string>
     <!-- Share error message -->
@@ -1182,13 +1182,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s өніміне қош келдіңіз!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Firefox-ты құрылғылар арасында синхрондау</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Waterfox-ты құрылғылар арасында синхрондау</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Осы құрылғыдағы %1$s ішіне бетбелгілер, шолу тарихын және парольдерді әкелу.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Тіркелу</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Синхрондау іске қосулы</string>
@@ -1212,7 +1212,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Сіздің жекелігіңіз</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Біз %s өнімін сіз желіде және бізбен немен бөлісетіңізді басқаруды өз қолыңызға беретіндей етіп жасадық.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Біздің жекелік ескертуімізді оқыңыз</string>
@@ -1245,16 +1245,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Кодты сканерлеу</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Компьютеріңізде Firefox ашып, <b>https://firefox.com/pair</b> адресіне өтіңіз]]></string>
+    <string name="sign_in_instructions"><![CDATA[Компьютеріңізде Waterfox ашып, <b>https://firefox.com/pair</b> адресіне өтіңіз]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Сканерлеуге дайын</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Камерамен кіріңіз</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Оның орнына эл. поштаны пайдалану</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Тіркелгіңіз жоқ па? Firefox-ты құрылғылар арасында синхрондау үшін, <u>тіркелгі жасаңыз</u>.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Тіркелгіңіз жоқ па? Waterfox-ты құрылғылар арасында синхрондау үшін, <u>тіркелгі жасаңыз</u>.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%sтіркелгіңізбен синхрондауды тоқтатады, бірақ, бұл құрылғыда барлық шолу деректері қалады.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Байланысты үзу</string>
@@ -1420,9 +1420,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Ешқашан сақтамау</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s ішінде автотолтыру</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s қолдану кезінде веб-сайттарда пайдаланушы аттары мен парольдерін толтыру және сақтау.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Басқа қолданбаларда автотолтыру</string>
@@ -1756,13 +1756,13 @@
     <string name="synced_tabs_connect_another_device">Басқа құрылғыны байланыстыру.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Қайта аутентификациялаңыз.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Беттер синхрондауын іске қосыңыз.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Сізде басқа құрылғыларыңызда Firefox-та ашық беттер жоқ.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Сізде басқа құрылғыларыңызда Waterfox-та ашық беттер жоқ.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Басқа құрылғыларыңыздан беттер тізімін қарау.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Синхрондау үшін кіру</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1814,7 +1814,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Бір айдан кейін автожабу керек пе?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox соңғы айда қаралмаған беттерді жаба алады.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox соңғы айда қаралмаған беттерді жаба алады.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">АВТОЖАБУДЫ ІСКЕ ҚОСУ</string>
 
@@ -1822,7 +1822,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Автожабу іске қосылған</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Веб-сайттар, эл. пошта хаттары және хабарламалардан сілтемелерді Firefox-та автоматты түрде ашылатындай етіп баптау.</string>
+    <string name="default_browser_experiment_card_text">Веб-сайттар, эл. пошта хаттары және хабарламалардан сілтемелерді Waterfox-та автоматты түрде ашылатындай етіп баптау.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Өшіру</string>
@@ -1846,7 +1846,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Pocket негізінде.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox отбасының бөлігі. %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox отбасының бөлігі. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Көбірек білу</string>
 
@@ -1857,5 +1857,5 @@
     <string name="experiments_snackbar">Деректерді жіберу үшін телеметрияны іске қосу.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Баптауларға өту</string>
-    <string name="firefox_suggest_header">Firefox ұсынысы</string>
+    <string name="firefox_suggest_header">Waterfox ұсынысы</string>
 </resources>

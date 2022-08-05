@@ -205,7 +205,7 @@
     <string name="preferences_add_private_browsing_shortcut">ಖಾಸಗಿ ಬ್ರೌಸಿಂಗ್ ಶಾರ್ಟ್‌ಕಟ್ ಸೇರಿಸಿ</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ನಿಲುಕಣೆ</string>
-    <!-- Preference to override the Firefox Account server -->
+    <!-- Preference to override the Waterfox Account server -->
     <string name="preferences_override_fxa_server">ಕಸ್ಟಮ್ ಫೈರ್‌ಫಾಕ್ಸ್ ಖಾತೆ ಸರ್ವರ್</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">ಕಸ್ಟಮ್ ಸಿಂಕ್ ಸರ್ವರ್</string>
@@ -331,7 +331,7 @@
     <string name="preferences_usage_data_description">%1$s ಅನ್ನು ಉತ್ತಮಗೊಳಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನ ಕಾರ್ಯಕ್ಷಮತೆ, ಬಳಕೆ, ಯಂತ್ರಾಂಶ ಮತ್ತು ಗ್ರಾಹಕೀಕರಣ ಡೇಟಾವನ್ನು ಮೊಜಿಲ್ಲಾದೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">ಮಾರುಕಟ್ಟೆ ದತ್ತಾಂಶ</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">ನಮ್ಮ ಮೊಬೈಲ್ ಮಾರ್ಕೆಟಿಂಗ್ ಮಾರಾಟಗಾರರಾದ ಲೀನ್‌ಪ್ಲಮ್‌ನೊಂದಿಗೆ %1$s ನಲ್ಲಿ ನೀವು ಯಾವ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸುತ್ತೀರಿ ಎಂಬುದರ ಕುರಿತು ಡೇಟಾವನ್ನು ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">ಪ್ರಯೋಗಗಳು</string>
@@ -869,15 +869,15 @@
     <string name="deleting_browsing_data_in_progress">ಬ್ರೌಸಿಂಗ್ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತಿದೆ…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header">ಫೈರ್ಫಾಕ್ಸ್ ಪೂರ್ವವೀಕ್ಷಣೆ ಈಗ ಫೈರ್ಫಾಕ್ಸ್ ನೈಟ್ಲಿ ಆಗಿದೆ</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description">ಫೈರ್ಫಾಕ್ಸ್ ನೈಟ್ಲಿ ಪ್ರತಿ ರಾತ್ರಿಯೂ ನವೀಕರಿಸಲ್ಪಡುತ್ತದೆ ಮತ್ತು ಪ್ರಾಯೋಗಿಕ ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಹೊಂದಿದೆ.
         ಆದಾಗ್ಯೂ, ಇದು ಕಡಿಮೆ ಸ್ಥಿರವಾಗಿರಬಹುದು. ಹೆಚ್ಚು ಸ್ಥಿರ ಅನುಭವಕ್ಕಾಗಿ ನಮ್ಮ ಬೀಟಾ ಬ್ರೌಸರ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_button_2">ಆಂಡ್ರಾಯ್ಡ್ ಬೀಟಾಕ್ಕಾಗಿ ಫೈರ್‌ಫಾಕ್ಸ್ ಪಡೆಯಿರಿ</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header_preview_installed">ಫೈರ್ಫಾಕ್ಸ್ ನೈಟ್ಲಿ ಸರಿಸಲಾಗಿದೆ</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_installed">ಈ ಅಪ್ಲಿಕೇಶನ್ ಇನ್ನು ಮುಂದೆ ಭದ್ರತಾ ನವೀಕರಣಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ. ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ ಮತ್ತು ಹೊಸ ನೈಟ್‌ಲಿಗೆ ಬದಲಾಯಿಸಿ.
@@ -885,7 +885,7 @@
     <!-- text for firefox preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_installed">ಹೊಸ ನೈಟ್ಲಿಗೆ ಬದಲಿಸಿ</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header_preview_not_installed">ಫೈರ್ಫಾಕ್ಸ್ ನೈಟ್ಲಿ ಸರಿಸಲಾಗಿದೆ</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_not_installed">ಈ ಅಪ್ಲಿಕೇಶನ್ ಇನ್ನು ಮುಂದೆ ಭದ್ರತಾ ನವೀಕರಣಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ. ಹೊಸ ನೈಟ್ಲಿ ಪಡೆಯಿರಿ ಮತ್ತು ಈ ಅಪ್ಲಿಕೇಶನ್ ಬಳಸುವುದನ್ನು ನಿಲ್ಲಿಸಿ.
@@ -895,14 +895,14 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%sಗೆ ಸುಸ್ವಾಗತ!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">ಈಗಾಗಲೇ ಖಾತೆಯನ್ನು ಹೊಂದಿದ್ದೀರಾ?</string>
     <!-- text for the "What's New" onboarding card header -->
     <string moz:removedIn="94" name="onboarding_whats_new_header1" tools:ignore="UnusedResources">ಹೊಸತೇನಿದೆಯೆಂದು ನೋಡಿ</string>
     <!-- text for the "what's new" onboarding card description
-    The first parameter is the short name of the app (e.g. Firefox) -->
+    The first parameter is the short name of the app (e.g. Waterfox) -->
     <string moz:removedIn="94" name="onboarding_whats_new_description" tools:ignore="UnusedResources">ಮರುವಿನ್ಯಾಸಗೊಳಿಸಲಾದ %s ಬಗ್ಗೆ ಪ್ರಶ್ನೆಗಳಿವೆಯೇ? ಏನನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ ಎಂದು ತಿಳಿಯಲು ಬಯಸುವಿರಾ?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string moz:removedIn="94" name="onboarding_whats_new_description_linktext" tools:ignore="UnusedResources">ಉತ್ತರಗಳನ್ನು ಇಲ್ಲಿ ಪಡೆಯಿರಿ</string>
@@ -973,8 +973,8 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">ಬದಲಿಗೆ ಇಮೇಲ್ ಬಳಸಿ</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">Firefox ನಿಮ್ಮ ಖಾತೆಯೊಂದಿಗೆ ಸಿಂಕ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುವುದು, ಆದರೆ ಈ ಸಾಧನದಿಂದ ನಿಮ್ಮ ಯಾವುದೇ ಜಾಲಾಟದ ಡೇಟಾವನ್ನು ಅಳಿಸುವುದಿಲ್ಲ.</string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="sign_out_confirmation_message">Waterfox ನಿಮ್ಮ ಖಾತೆಯೊಂದಿಗೆ ಸಿಂಕ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುವುದು, ಆದರೆ ಈ ಸಾಧನದಿಂದ ನಿಮ್ಮ ಯಾವುದೇ ಜಾಲಾಟದ ಡೇಟಾವನ್ನು ಅಳಿಸುವುದಿಲ್ಲ.</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ನಿಮ್ಮ ಖಾತೆಯೊಂದಿಗೆ ಸಿಂಕ್ ಮಾಡುವುದನ್ನು ನಿಲ್ಲಿಸುವುದು, ಆದರೆ ಈ ಸಾಧನದಿಂದ ನಿಮ್ಮ ಯಾವುದೇ ಜಾಲಾಟದ ಡೇಟಾವನ್ನು ಅಳಿಸುವುದಿಲ್ಲ.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಿ</string>
@@ -1354,13 +1354,13 @@
     <string name="synced_tabs_connect_another_device">ಮತ್ತೊಂದು ಸಾಧನಕ್ಕೆ ಸಂಪರ್ಕವನ್ನು ಸಾಧಿಸಿ.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">ದಯವಿಟ್ಟು ಮರು-ಧೃಡೀಕರಿಸಿ.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">ದಯವಿಟ್ಟು ಟ್ಯಾಬ್ ಸಿಂಕ್ ಸಕ್ರಿಯಗೊಳಿಸಿ.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">ನಿಮ್ಮ ಇತರ ಸಾಧನಗಳಲ್ಲಿನ ಫೈರ್‌ಫಾಕ್ಸ್‌ನಲ್ಲಿ ಯಾವುದೇ ಟ್ಯಾಬ್‌ಗಳು ತೆರೆದಿಲ್ಲ.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">ನಿಮ್ಮ ಇತರೆ ಸಾಧನಗಳಲ್ಲಿನ ಟ್ಯಾಬ್‌ಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಿ.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">ಸಿಂಕ್ ಮಾಡಲು ಸೈನ್ ಇನ್ ಆಗಿ</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->

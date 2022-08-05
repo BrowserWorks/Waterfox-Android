@@ -267,8 +267,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Palaa viimeisimpiin hakuihin etusivultasi ja välilehdiltäsi.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Sinulle mukautetun Firefox-kotisivun avulla on helpompi jatkaa siitä, mihin jäit. Löydä viimeisimmät välilehdet, kirjanmerkit ja hakutulokset.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Sinulle mukautetun Waterfox-kotisivun avulla on helpompi jatkaa siitä, mihin jäit. Löydä viimeisimmät välilehdet, kirjanmerkit ja hakutulokset.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -341,12 +341,12 @@
     <string name="errorpage_httpsonly_message_summary">On kuitenkin myös mahdollista, että hyökkäävä taho on läsnä. Jos jatkat verkkosivustolle, älä anna arkaluonteisia tietoja. Jos jatkat, &quot;Vain HTTPS&quot;-tila poistetaan väliaikaisesti käytöstä sivustolta.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Saavutettavuus</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Mukautettu Firefox-tilin palvelin</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Mukautettu Waterfox-tilin palvelin</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Mukautettu synkronointipalvelin</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox-tilin tai synkronoinnin palvelinta muutettu. Lopetetaan sovellus, jotta muutokset tulevat voimaan…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox-tilin tai synkronoinnin palvelinta muutettu. Lopetetaan sovellus, jotta muutokset tulevat voimaan…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Tili</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -360,11 +360,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Mukauta</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Synkronoi kirjanmerkit, historia ja paljon muuta Firefox-tilillä</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Synkronoi kirjanmerkit, historia ja paljon muuta Waterfox-tilillä</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Kirjaudu sisään synkronoidaksesi välilehtesi, kirjanmerkkisi, salasanasi ja muita tietoja.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox-tili</string>
+    <string name="preferences_account_default_name">Waterfox-tili</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Yhdistä uudelleen jatkaaksesi synkronointia</string>
     <!-- Preference for language -->
@@ -452,7 +452,7 @@
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox-logo - vaihda taustakuva, painike</string>
+    <string name="wallpaper_logo_content_description">Waterfox-logo - vaihda taustakuva, painike</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -504,7 +504,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Vastaanotetut välilehdet</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Ilmoitukset muista Firefox-laitteista vastaanotetuista välilehdistä.</string>
+    <string name="fxa_received_tab_channel_description">Ilmoitukset muista Waterfox-laitteista vastaanotetuista välilehdistä.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Välilehti vastaanotettu</string>
     <!-- %s is the device name -->
@@ -675,7 +675,7 @@
     <string name="studies_remove">Poista</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Käynnissä</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s saattaa asentaa ja suorittaa tutkimuksia silloin tällöin.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Lue lisää</string>
@@ -801,7 +801,7 @@
     <string name="history_sign_in_button">Kirjaudu sisään</string>
 
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Tai luo Firefox-tili aloittaaksesi synkronoinnin</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Tai luo Waterfox-tili aloittaaksesi synkronoinnin</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1211,13 +1211,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Tervetuloa %siin!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Synkronoi Firefox laitteidesi välillä</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Synkronoi Waterfox laitteidesi välillä</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Tuo kirjanmerkit, historia ja salasanat %1$siin tässä laitteessa.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Rekisteröidy</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync on käytössä</string>
@@ -1240,7 +1240,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Yksityisyytesi</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Olemme suunnitelleet %sin siten, että voit hallita mitä jaat verkossa ja mitä jaat kanssamme.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lue yksityisyyskäytäntömme</string>
@@ -1273,16 +1273,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Skannaa koodi</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Avaa Firefox tietokoneellasi ja siirry sivulle <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Avaa Waterfox tietokoneellasi ja siirry sivulle <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Valmiina skannaamaan</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Kirjaudu sisään kamerallasi</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Käytä sähköpostia</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Vailla tiliä? <u>Luo tili</u> synkronoidaksesi Firefox laitteiden välillä.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Vailla tiliä? <u>Luo tili</u> synkronoidaksesi Waterfox laitteiden välillä.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s lopettaa synkronoinnin tilisi kanssa, mutta ei poista selaustietojasi tältä laitteelta.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Katkaise yhteys</string>
@@ -1447,9 +1447,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Älä tallenna koskaan</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Täytä automaattisesti sovelluksessa %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Täytä ja tallenna käyttäjätunnukset ja salasanat verkkosivuilla, kun käytät sovellusta %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Automaattinen täyttö muissa sovelluksissa</string>
@@ -1783,13 +1783,13 @@
     <string name="synced_tabs_connect_another_device">Yhdistä toinen laite.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Tunnistaudu uudelleen.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Ota välilehtien synkronointi käyttöön.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">Sinulla ei ole muilla laitteilla avoimia välilehtiä Firefoxissa.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Katso välilehtilistaus muilta laitteiltasi.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Kirjaudu sisään synkronoidaksesi</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1841,7 +1841,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Suljetaanko automaattisesti kuukauden kuluttua?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox voi sulkea välilehdet, joita et ole katsonut viimeisen kuukauden aikana.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox voi sulkea välilehdet, joita et ole katsonut viimeisen kuukauden aikana.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">KÄYTÄ AUTOMAATTISTA SULKEMISTA</string>
 
@@ -1873,7 +1873,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Taustavoimana Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Osa Firefox-perhettä. %s</string>
+    <string name="pocket_stories_feature_caption">Osa Waterfox-perhettä. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Lue lisää</string>
 
@@ -1884,5 +1884,5 @@
     <string name="experiments_snackbar">Ota telemetria käyttöön tietojen lähettämiseksi.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Siirry asetuksiin</string>
-    <string name="firefox_suggest_header">Firefox-ehdotukset</string>
+    <string name="firefox_suggest_header">Waterfox-ehdotukset</string>
 </resources>

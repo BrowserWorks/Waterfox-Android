@@ -265,8 +265,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Anjangan deui sungsian panungtung ti tepas tab.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Tepas Firefox pribadi kiwari mantuan anjeun nyokot ti anu ditinggalkeun. Néangan tab anu can lila, markah, jeung hasil nyungsi.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Tepas Waterfox pribadi kiwari mantuan anjeun nyokot ti anu ditinggalkeun. Néangan tab anu can lila, markah, jeung hasil nyungsi.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -337,12 +337,12 @@
     <string name="errorpage_httpsonly_message_summary">Nanging, bisa waé aya panyerang kalibet. Upama diteruskeun asup kana raramatlokana, anjeun ulah ngasupkeun émbaran sénsitip. Upama diteruskeun, mode Ngan-HTTPS bakal dipareuman samentawis pikeun éta loka.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Aksésibilitas</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Serper Firefox Account biasa</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Serper Waterfox Account biasa</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Serper Sync kustom</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Serper Firefox Account/Sync geus dirobah. Kaluar ti aplikasi pikeun nerapkeun parobahan…</string>
+    <string name="toast_override_fxa_sync_server_done">Serper Waterfox Account/Sync geus dirobah. Kaluar ti aplikasi pikeun nerapkeun parobahan…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Akun</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -356,9 +356,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Sesuaikeun</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Singkronkeun markah, jujutan, jeung nu lianna maké Firefox Account anjeun</string>
+    <string name="preferences_sign_in_description">Singkronkeun markah, jujutan, jeung nu lianna maké Waterfox Account anjeun</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Akun Firefox</string>
+    <string name="preferences_account_default_name">Akun Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Sambungkeun deui pikeun neruskeun nyingkronkeun</string>
     <!-- Preference for language -->
@@ -444,10 +444,10 @@
     <string name="wallpaper_updated_snackbar_action">Témbong</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Ganti latar ku cara noél logo tepas Firefox</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Ganti latar ku cara noél logo tepas Waterfox</string>
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo Firefox - ganti latar, tombol</string>
+    <string name="wallpaper_logo_content_description">Logo Waterfox - ganti latar, tombol</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -501,7 +501,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Tab nu katampa</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Iber pikeun tab anu katampa ti séjén piranti Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Iber pikeun tab anu katampa ti séjén piranti Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tab Katampa</string>
     <!-- %s is the device name -->
@@ -671,7 +671,7 @@
     <string name="studies_remove">Piceun</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktip</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s bisa masang jeung ngajalankeun studi iraha baé.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Lenyepan</string>
@@ -1038,7 +1038,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Sambungkeun parangkat séjén</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Pikeun ngirim tab, asup ka Firefox sahanteuna sakali di piranti nu séjén.</string>
+    <string name="sync_connect_device_dialog">Pikeun ngirim tab, asup ka Waterfox sahanteuna sakali di piranti nu séjén.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Ngarti</string>
     <!-- Share error message -->
@@ -1185,13 +1185,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Wilujeng sumping di %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Singkronkeun Firefox sakur parabot</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Singkronkeun Waterfox sakur parabot</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Bawa markah, jujutan, jeung kecap sandi ka %1$s di ieu parabot.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Daptar</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Singkronna hurung</string>
@@ -1215,7 +1215,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Salindungan anjeun</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Kami geus ngarancang %s sangkan anjeun bisa ngatur naon anu dibagikeun onlén jeung naon anu dibagikeun ka kami.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Maca wawaran salindungan kami</string>
@@ -1248,16 +1248,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Pinday sandi</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Dina komputer anjeun buka Firefox terus buka <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Dina komputer anjeun buka Waterfox terus buka <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Siap mindai</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Asup maké kaméra anjeun</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Maké surél wéh</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Teu boga akun? <u>Jieun</u> pikeun nyingkronkeun Firefox dina sakabéh parabot.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Teu boga akun? <u>Jieun</u> pikeun nyingkronkeun Waterfox dina sakabéh parabot.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s bakal eureun nyingkronkeun jeung akun anjeun, ngan moal mupus sakur data langlangan anjeun dina ieu parangkat.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Pegatkeun</string>
@@ -1425,10 +1425,10 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Naros keur neundeun</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Ulah diteundeun</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Otoeusi dina %1$s</string>
 
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Eusian jeung simpen sandiasma jeung kecap sandi dina raramatloka nalika maké %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Otoeusi di séjén aplikasi</string>
@@ -1766,13 +1766,13 @@
     <string name="synced_tabs_connect_another_device">Sambungkeun séjén paranti.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Mangga oténtikasi ulang.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Mangga hurungkeun singkronan tab.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Anjeun teu miboga tab anu muka dina Firefox di séjén paranti anjeun.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Anjeun teu miboga tab anu muka dina Waterfox di séjén paranti anjeun.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Témbongkeun béréndélan tab ti séjén paranti anjeun.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Asup pikeun nyingkronkeun</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1830,7 +1830,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Oto-tutup sanggeus sabulan?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox bisa nutup tab anu ku anjeun teu dibuka leuwih ti sabulan.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox bisa nutup tab anu ku anjeun teu dibuka leuwih ti sabulan.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">HURUNGKEUN OTO-TUTUP</string>
 
@@ -1838,7 +1838,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Nutup otomatis dihurungkeun</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Setél tutumbu ti raramatloka, surélék, jeung surat pikeun muka otomatis dina Firefox.</string>
+    <string name="default_browser_experiment_card_text">Setél tutumbu ti raramatloka, surélék, jeung surat pikeun muka otomatis dina Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Piceun</string>
@@ -1862,7 +1862,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Ditanagaan ku Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Bagéan ti kulawarga Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Bagéan ti kulawarga Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Lenyepan</string>
 

@@ -68,8 +68,8 @@
     <string name="cfr_neg_button_text">Ket, trugarez</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Gallout a rit lakaat Firefox da zigeriñ an ereoù ent emgefreek en arloadoù all.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Gallout a rit lakaat Waterfox da zigeriñ an ereoù ent emgefreek en arloadoù all.</string>
     <!-- Text for the info message. The first parameter is the name of the application.-->
     <string name="open_in_app_cfr_info_message_2">Gallout a rit lakaat %1$s da zigeriñ an ereoù ent emgefreek en arloadoù all.</string>
     <!-- Text for the positive action button -->
@@ -99,7 +99,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">Em-serriñ goude ur miz?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox a c’hall serriñ ivinelloù n’ho peus ket gwelet er miz diwezhañ.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox a c’hall serriñ ivinelloù n’ho peus ket gwelet er miz diwezhañ.</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs.
         The first parameter is the name of the application.-->
     <string name="tab_tray_inactive_auto_close_body_2">%1$s a c’hall serriñ ivinelloù n’ho peus ket gwelet er miz diwezhañ.</string>
@@ -248,14 +248,14 @@
     <string name="search_engine_suggestions_description">Klask war-eeun eus ar varrenn chomlec’h</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Petra zo nevez e Firefox</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Petra zo nevez e Waterfox</string>
     <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_title_3">Petra zo nevez e %1$s</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Aesoc’h eo adstagañ lec’h m’ho peus paouezet.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Pajenn degemer Firefox personelaet</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Pajenn degemer Waterfox personelaet</string>
     <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
     <string name="onboarding_home_screen_section_home_title_3">Pajenn degemer %1$s personelaet</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
@@ -270,12 +270,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Adweladennit ho klaskoù nevesañ diwar ho pajenn degemer hag ivinelloù.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Gant ho pajenn Firefox personelaet eo aesoc’h da adstagañ lec’h m’ho peus paouezet. Klaskit e-touez hoc’h ivinelloù nevez, sinedoù ha disoc’hoù enklask.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Gant ho pajenn Waterfox personelaet eo aesoc’h da adstagañ lec’h m’ho peus paouezet. Klaskit e-touez hoc’h ivinelloù nevez, sinedoù ha disoc’hoù enklask.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Digeriñ un ivinell Firefox nevez</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Digeriñ un ivinell Waterfox nevez</string>
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Digeriñ en un ivinell %1$s nevez</string>
     <!-- Text preview for smaller sized widgets -->
@@ -343,12 +343,12 @@
     <string name="errorpage_httpsonly_message_summary">Posupl eo ivez e vefec’h taget, avat. Ma kendalc’hit war al lec’hienn e rankfec’h chom hep lakaat titouroù kizidik. Ma kendalc’hit e vo ivez diweredekaet ar mod HTTPS-hepken war al lec’hienn pad ur mare.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Haezadusted</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Dafariad kont Firefox personelaet</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Dafariad kont Waterfox personelaet</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Dafariad Sync personelaet</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Dafariad kont Firefox/Sync kemmet. Kuitaet e vo an arload evit arloañ ar cʼhemmoù…</string>
+    <string name="toast_override_fxa_sync_server_done">Dafariad kont Waterfox/Sync kemmet. Kuitaet e vo an arload evit arloañ ar cʼhemmoù…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Kont</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -362,9 +362,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personelaat</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Goubredit sinedoù, ar roll istor, ha muiocʼh cʼhoazh gant ho kont Firefox</string>
+    <string name="preferences_sign_in_description">Goubredit sinedoù, ar roll istor, ha muiocʼh cʼhoazh gant ho kont Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Kont Firefox</string>
+    <string name="preferences_account_default_name">Kont Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Adkennaskit evit kendercʼhel gant ar goubredañ</string>
     <!-- Preference for language -->
@@ -447,12 +447,12 @@
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_label" tools:ignore="UnusedResources">Stokit war an arlun evit kemmañ an drekleur</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Kemmit an drekleur en ur stekiñ ouzh arlun pajenn degemer Firefox</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Kemmit an drekleur en ur stekiñ ouzh arlun pajenn degemer Waterfox</string>
     <!-- Description for switch which toggles the "tap-to-switch" behavior on home screen logo -->
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">Sellit hag hizivait ar skeudenn hep kuitaat ar bajenn degemer.</string>
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Arlun Firefox - kemmañ an drekleur, afell</string>
+    <string name="wallpaper_logo_content_description">Arlun Waterfox - kemmañ an drekleur, afell</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -506,7 +506,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Ivinelloù degemeret</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Rebuzadur evit an ivinelloù degemeret eus trevnadoù Firefox all.</string>
+    <string name="fxa_received_tab_channel_description">Rebuzadur evit an ivinelloù degemeret eus trevnadoù Waterfox all.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Ivinell degemeret</string>
     <!-- %s is the device name -->
@@ -671,9 +671,9 @@
     <string name="studies_remove">Dilemel</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Oberiant</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox a c’hall staliañ ha kas studiadennoù bep an amzer.</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox a c’hall staliañ ha kas studiadennoù bep an amzer.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s a c’hall staliañ hag erounit studiadennoù ur wech an amzer.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Gouzout hiroc’h</string>
@@ -1034,7 +1034,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Kennaskañ un trevnad all</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Evit kas un ivinell, kennaskit ouzh Firefox war un trevnad all dʼan nebeutañ.</string>
+    <string name="sync_connect_device_dialog">Evit kas un ivinell, kennaskit ouzh Waterfox war un trevnad all dʼan nebeutañ.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Komprenet am eus!</string>
     <!-- Share error message -->
@@ -1167,52 +1167,52 @@
     <string name="deleting_browsing_data_in_progress">O tilemel ar roadennoù merdeiñ…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview a teu da vezañ Firefox Nighlty</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview a teu da vezañ Waterfox Nighlty</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">
-        Bep noz ez eo hizivaet Firefox Nightly evit kinnig keweriusterioù arnodel.
+        Bep noz ez eo hizivaet Waterfox Nightly evit kinnig keweriusterioù arnodel.
         N’eo ket ken stabil avat. Pellgargit ar merdeer beta evit kaout un arload stabiloc’h.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Tapit Firefox evit Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Tapit Waterfox evit Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Fiñvet eo Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Fiñvet eo Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">
         Ne vo ket degemeret hizivadennoù surentez gant an arload-mañ. Paouezit d’e implij ha tremenit war an Nightly nevez.
-        \n\nEvit treuzkas ho sinedoù, titouroù kennaskañ ha roll istor etrezek un arload all, krouit ur gont Firefox.</string>
+        \n\nEvit treuzkas ho sinedoù, titouroù kennaskañ ha roll istor etrezek un arload all, krouit ur gont Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Tremenit d’an Nightly nevez</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Fiñvet eo Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Fiñvet eo Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">
         Ne vo ket degemeret hizivadennoù surentez gant an arload-mañ. Paouezit d’e implij ha tremenit war an Nightly nevez.
-        \n\nEvit treuzkas ho sinedoù, titouroù kennaskañ ha roll istor etrezek un arload all, krouit ur gont Firefox.</string>
+        \n\nEvit treuzkas ho sinedoù, titouroù kennaskañ ha roll istor etrezek un arload all, krouit ur gont Waterfox.</string>
 
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Tapout an Nightly nevez</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Donemat war %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Goubredañ Firefox etre an trevnadoù</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Goubredañ Waterfox etre an trevnadoù</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Goubredañ %1$s etre an trevnadoù</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Degasit sinedoù, ur roll-istor ha gerioù-tremen evit %1$s war an trevnad-mañ.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">En em rollañ</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Enaouet eo Sync</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Prevezded gweredekaet bepred</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox a harz en un doare emgefreek ouzh an embregerezhioù d’ho heuliañ dre guzh war ar web.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox a harz en un doare emgefreek ouzh an embregerezhioù d’ho heuliañ dre guzh war ar web.</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
     <string name="onboarding_tracking_protection_description_4">%1$s a harz en un doare emgefreek ouzh an embregerezhioù d’ho heuliañ dre guzh war ar web.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -1230,7 +1230,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Ho puhez prevez</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Savet hon eus %s evit ma c’hallfec’h reoliñ ar pezh a rannit enlinenn hag ar pezh a rannit ganeomp.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lennit hon evezhiadenn a-get buhez prevez</string>
@@ -1264,15 +1264,15 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">C’hwilerviñ ar boneg</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[War hoc’h urzhiataer, digorit Firefox ha kit war <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[War hoc’h urzhiataer, digorit Waterfox ha kit war <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Prest da c’hwilerviñ</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Kennaskit gant ho kamera</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Ober gant ur chomlec’h postel kentoc’h</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Kont ebet? <u>Krouit unan</u> evit goubredañ Firefox etre an trevnadoù.]]></string>
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Kont ebet? <u>Krouit unan</u> evit goubredañ Waterfox etre an trevnadoù.]]></string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Digennaskañ</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -1433,9 +1433,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Na enrollañ biken</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Leuniañ emgefreek e %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description"> Leuniañ hag enrollañ an anvioù implijer ha gerioù-tremen el lec’hiennoù en ur implijout %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Leuniañ emgefreek en arloadoù all</string>
@@ -1723,16 +1723,16 @@
     <string name="synced_tabs_connect_another_device">Kennaskañ un trevnad all.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Adkennaskit mar plij ganeoc’h.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Gweredekait goubredañ an ivinelloù mar plij.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">N’ho peus ivinell digor ebet e Firefox war ho trevnadoù all.</string>
+    <string name="synced_tabs_no_tabs">N’ho peus ivinell digor ebet e Waterfox war ho trevnadoù all.</string>
     <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">N’ho peus ivinell digor ebet e %1$s war ho trevnadoù all.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Gwelout ur roll ivinelloù eus ho trevnadoù all.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Kennaskañ evit goubredañ</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1785,7 +1785,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Serriñ emgefreek goude ur miz?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox a c’hall serriñ ivinelloù n’ho peus ket gwelet er miz diwezhañ.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox a c’hall serriñ ivinelloù n’ho peus ket gwelet er miz diwezhañ.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">GWEREDEKAAT AR SERRIÑ EMGEFREEK</string>
 
@@ -1794,7 +1794,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Sikourit da wellaat Firefox</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Sikourit da wellaat Waterfox</string>
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Perak ho peus diweredekaet an ivinelloù dioberiant?</string>
     <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
@@ -1811,7 +1811,7 @@
     <string moz:RemovedIn="99" name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Serriñ</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Digeriñ liammoù al lec’hiennoù, posteloù ha kemennadennoù e Firefox en un doare emgefreek.</string>
+    <string name="default_browser_experiment_card_text">Digeriñ liammoù al lec’hiennoù, posteloù ha kemennadennoù e Waterfox en un doare emgefreek.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Dilemel</string>
@@ -1835,7 +1835,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Galloudekaet gant Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Ezel eus familh Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Ezel eus familh Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Gouzout hiroc’h</string>
 

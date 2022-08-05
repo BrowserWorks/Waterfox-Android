@@ -186,12 +186,12 @@
 
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Dàj gā gātū\'</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Servidor nagi\'iaj man\'ânt riña kuentâ Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Servidor nagi\'iaj man\'ânt riña kuentâ Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Servidor nagi\'iaj man\'ânt riña Sync</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Ngà  nadunâ servidor nikāj kuentâ Firefox ngà Sync. Naran riña aplikasiûn da\' natà\' sa nadunâ hua…</string>
+    <string name="toast_override_fxa_sync_server_done">Ngà  nadunâ servidor nikāj kuentâ Waterfox ngà Sync. Naran riña aplikasiûn da\' natà\' sa nadunâ hua…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Kuênta</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -202,9 +202,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Nādunō\' dàj huin ruhuô\'</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Nāgi\'aj nūgua\'àn nej markadô, nej sa ni\'iājt nī doj ngà si kuentât Firefox</string>
+    <string name="preferences_sign_in_description">Nāgi\'aj nūgua\'àn nej markadô, nej sa ni\'iājt nī doj ngà si kuentât Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Si kuendâ Firefox</string>
+    <string name="preferences_account_default_name">Si kuendâ Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Nātū nākà ñû da\' gānahuij nāgi\'iaj nūguàn\'anj</string>
     <!-- Preference for language -->
@@ -280,7 +280,7 @@
     <string name="fxa_received_tab_channel_name">Nej rakïj ñanj nahuin rā\'ât</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Si nūguàn\' nej rakïj ñanj nahuin ra\'a riña a\'ngô nej aga\' Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Si nūguàn\' nej rakïj ñanj nahuin ra\'a riña a\'ngô nej aga\' Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Nahuin rā\'a rakïj ñanj</string>
     <!-- %s is the device name -->
@@ -725,36 +725,36 @@
     <string name="deleting_browsing_data_in_progress">Hīaj nadure\'ej nej si datô riña sā nana\'uî\'t…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview huin Firefox Nightly hīaj</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview huin Waterfox Nightly hīaj</string>
 
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Nahuin nākà Firefox Nightly daran\' nìïn nī huā sa gārahuê\' nākàa nika.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Nahuin nākà Waterfox Nightly daran\' nìïn nī huā sa gārahuê\' nākàa nika.
         Sanī, ga\'ue sī gi\'iaj sun hue\'ej. Nādūnïnj sa nana\'ui\' gù\'nàj beta da\' gā hīa ruhuât doj.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Nādūnïnj Firefox guendâ Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Nādūnïnj Waterfox guendâ Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Ngà nasiki\' Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Ngà nasiki\' Waterfox Nightly</string>
 
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Sī nahuin ra\'a aplikasiûn nan sa nahuin nākà dūgumî sò\' ngà\'. Dūnâj aplikasiûn nan nī nādūnā ngà Nightly nākàa.
-        \n\nDa\' gānāchīn nej sa arâj sun nīchrà\'t doj, riña ayi\'ì sēsiûn nī sa gini\'iājt riña a\'ngô aplikasiûn, da\'uît gīrīt \'ngō si kuentât Firefox.</string>
+        \n\nDa\' gānāchīn nej sa arâj sun nīchrà\'t doj, riña ayi\'ì sēsiûn nī sa gini\'iājt riña a\'ngô aplikasiûn, da\'uît gīrīt \'ngō si kuentât Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Nādūnā ngà Nightly nākàa</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Ngà nasiki\' Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Ngà nasiki\' Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Sī nahuin ra\'a aplikasiûn nan sa nahuin nākà dūgumî sò\' ngà\'. Sī garâj sunt aplikasiûn nan ngà\' nī nādūnïnj Nightly nākàa.
-        \n\nDa\' gānāchīn nej sa arâj sun nīchrà\'t doj, riña ayi\'ì sēsiûn nī sa gini\'iājt riña a\'ngô aplikasiûn, da\'uît gīrīt \'ngō si kuentât Firefox.</string>
+        \n\nDa\' gānāchīn nej sa arâj sun nīchrà\'t doj, riña ayi\'ì sēsiûn nī sa gini\'iājt riña a\'ngô aplikasiûn, da\'uît gīrīt \'ngō si kuentât Waterfox.</string>
 
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Nādūnïnj Nightly nākàa</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Guruhuât gunumânt riña %s</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Ngà nanûn Sync</string>
@@ -796,14 +796,14 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Gānārī ñadu\'ua da\'nga\' kôdigo</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Gānā\'nïn Firefox riña si āgâ\'t nī gātū riña <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Gānā\'nïn Waterfox riña si āgâ\'t nī gātū riña <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ngà huā chrunj da\' gānārij ñadu\'ua</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Gāyì\'ì sēsiûn ngà si kamarât</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Gārāsun si kōrreôt si lūgaj</string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">Dūnâj %s si nāgi\'iaj nūguàn\'anj si kuentât, sanī si dure\'ej nej datô râj sunt ngà aché nunt riña aga\' nan.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Gāhuī riña internet</string>
@@ -1137,13 +1137,13 @@
     <string name="synced_tabs_connect_another_device">Gātū ngà a\'ngô aga\'a.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Gi\'iaj sunūj u, nādigân ñû si huê hīat huin.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Gi\'iaj sunūj u, nāchrūn sa nāgi\'iaj nūguàn\'ànt nej rakïj ñanj.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Nitāj à\'ngō rakïj ñanj huā nî\'nïnj riña Firefox riña a\'ngô nej si āgâ\'t.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Nitāj à\'ngō rakïj ñanj huā nî\'nïnj riña Waterfox riña a\'ngô nej si āgâ\'t.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Gīni\'iāj \'ngō dukuán rakïj ñanj nīkāj a\'ngô nej si āgâ\'t.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Gāyi\'ì sēsiûn riña sync</string>
 
     <!-- Top Sites -->

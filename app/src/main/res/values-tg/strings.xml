@@ -269,8 +269,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ҷустуҷӯҳои охирини худро тавассути саҳифаи асосӣ ва варақаҳо боздид намоед.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Акнун саҳифаи асосии шахсишудаи шумо дар браузери Firefox бозгашти шуморо ба сомонаҳои охирин осон мекунад. Варақаҳо, хатбаракҳо ва натиҷаҳои ҷустуҷӯи охиринро ба даст оред.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Акнун саҳифаи асосии шахсишудаи шумо дар браузери Waterfox бозгашти шуморо ба сомонаҳои охирин осон мекунад. Варақаҳо, хатбаракҳо ва натиҷаҳои ҷустуҷӯи охиринро ба даст оред.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -341,12 +341,12 @@
     <string name="errorpage_httpsonly_message_summary">Бо вуҷуди ин, инчунин мумкин аст, ки ҳамлакунанда дахолат мекунад. Агар шумо кори худро бо сомона идома диҳед, шумо набояд ягон маълумоти ҳассоси шахсиро ворид намоед. Агар шумо идома диҳед, реҷаи «Танҳо HTTPS» барои сомона муваққатан ғайрифаъол мешавад.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Қобилияти дастрасӣ</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Сервери ҳисоби фармоишии Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Сервери ҳисоби фармоишии Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Сервери ҳамоҳангсозии фармоишӣ</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Сервери ҳисоб/ҳамоҳангсозии Firefox тағйир ёфт. Барои татбиқ кардани тағйирот барнома бояд хомӯш карда шавад…</string>
+    <string name="toast_override_fxa_sync_server_done">Сервери ҳисоб/ҳамоҳангсозии Waterfox тағйир ёфт. Барои татбиқ кардани тағйирот барнома бояд хомӯш карда шавад…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Ҳисоб</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -360,11 +360,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Фармоишдиҳӣ</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Ба воситаи ҳисоби Firefox-и худ хатбаракҳо, таърих ва чизҳои дигарро ҳамоҳанг кунед.</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Ба воситаи ҳисоби Waterfox-и худ хатбаракҳо, таърих ва чизҳои дигарро ҳамоҳанг кунед.</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Барои ҳамоҳангсозии варақаҳо, хатбаракҳо, ниҳонвожаҳо ва чизҳои дигар, ворид шавед.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Ҳисоби Firefox</string>
+    <string name="preferences_account_default_name">Ҳисоби Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Барои барқарор кардани ҳамоҳангсозӣ аз нав пайваст шавед</string>
     <!-- Preference for language -->
@@ -444,11 +444,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Намоиш</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Тасвири заминаро бо зеркунии тамғаи саҳифаи асосии «Firefox» иваз намоед</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Тасвири заминаро бо зеркунии тамғаи саҳифаи асосии «Waterfox» иваз намоед</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Тамғаи «Firefox» - иваз кардани тасвири замина, тугма</string>
+    <string name="wallpaper_logo_content_description">Тамғаи «Waterfox» - иваз кардани тасвири замина, тугма</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -501,7 +501,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Варақаҳо аз дастгоҳҳои дигар</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Огоҳиномаҳо дар бораи варақаҳое, ки аз дигар дастгоҳҳои Firefox гирифта шудаанд.</string>
+    <string name="fxa_received_tab_channel_description">Огоҳиномаҳо дар бораи варақаҳое, ки аз дигар дастгоҳҳои Waterfox гирифта шудаанд.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Варақаи қабулшуда</string>
     <!-- %s is the device name -->
@@ -670,7 +670,7 @@
     <string name="studies_remove">Тоза кардан</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Фаъол</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">Баъзе вақт %1$s метавонад омӯзишҳоро насб ва иҷро намояд.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Маълумоти бештар</string>
@@ -792,7 +792,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Ворид шудан</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Ё барои оғози ҳамоҳангсозӣ, ҳисоби Firefox-ро эҷод кунед</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Ё барои оғози ҳамоҳангсозӣ, ҳисоби Waterfox-ро эҷод кунед</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1046,7 +1046,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Пайваст кардани дастгоҳи дигар</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Барои фиристодани варақа, ақаллан дар дастгоҳи дигар ба Firefox ворид шавед.</string>
+    <string name="sync_connect_device_dialog">Барои фиристодани варақа, ақаллан дар дастгоҳи дигар ба Waterfox ворид шавед.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Фаҳмо</string>
 
@@ -1202,13 +1202,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Хуш омадед ба %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Firefox-ро байни дастгоҳҳо ҳамоҳанг кунед</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Waterfox-ро байни дастгоҳҳо ҳамоҳанг кунед</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Хатбаракҳо, таърих ва ниҳонвожаҳоро ба %1$s дар ин дастгоҳ интиқол диҳед.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Бақайдгирӣ</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Ҳамоҳангсозӣ фаъол аст</string>
@@ -1231,7 +1231,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Махфияти шумо</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Мо %s-ро ҳамин тавр тарҳрезӣ кардаем, ки шумо тавонед он чизҳоеро, ки дар онлайн ва бо мо мубодила мекунед, идора намоед.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Огоҳиномаи махфияти моро хонед</string>
@@ -1264,16 +1264,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Рамзро скан кунед</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Дар компютери худ Firefox-ро кушоед ва ба <b>https://firefox.com/pair</b> гузаред]]></string>
+    <string name="sign_in_instructions"><![CDATA[Дар компютери худ Waterfox-ро кушоед ва ба <b>https://firefox.com/pair</b> гузаред]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Барои сканкунӣ омода аст</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Ворид шудан ба воситаи камера</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Ба ҷояш почтаи электрониро истифода баред</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Ҳисоб надоред? Барои ҳамоҳангсозӣ кардани Firefox байни дастгоҳҳо, <u>ҳисоберо эҷод намоед</u>.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Ҳисоб надоред? Барои ҳамоҳангсозӣ кардани Waterfox байни дастгоҳҳо, <u>ҳисоберо эҷод намоед</u>.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ҳамоҳангсозиро бо ҳисоби шумо қатъ мекунад, аммо ягон маълумоти тамошокунии шуморо дар ин дастгоҳ нест намекунад.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Қатъ кардани пайваст</string>
@@ -1435,9 +1435,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Бо пешниҳоди нигоҳдорӣ</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Ҳеҷ гоҳ нигоҳ дошта нашавад</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Пуркунии худкор дар %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Ҳангоми истифодаи %1$s номи корбарон ва ниҳонвожаҳоро дар сомонаҳо пур кунед ва нигоҳ доред.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Пуркунии худкор дар барномаҳои дигар</string>
@@ -1771,13 +1771,13 @@
 
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Лутфан, санҷиши ҳаққониятро аз нав такрор кунед</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Лутфан ҳамоҳангсозии варақаҳоро фаъол кунед.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Шумо дар дастгоҳҳои дигари худ дар Firefox ягон варақаи кушодашуда надоред.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Шумо дар дастгоҳҳои дигари худ дар Waterfox ягон варақаи кушодашуда надоред.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Дидани рӯйхати варақаҳо аз дастгоҳҳои дигар.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Барои ҳамоҳангсозӣ ворид шавед</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">Ягон варақаи кушодашуда нест</string>
@@ -1829,7 +1829,7 @@
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Пас аз як моҳ ба таври худкор пӯшида шавад?</string>
 
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox метавонад варақаҳоеро, ки шумо дар давоми як моҳи охир надидаед, пӯшонад.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox метавонад варақаҳоеро, ки шумо дар давоми як моҳи охир надидаед, пӯшонад.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ФАЪОЛ КАРДАНИ ПӮШИШИ ХУДКОР</string>
 
@@ -1837,7 +1837,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">«Пӯшидани худкор» фаъол шуд</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Пайванҳоеро, танзим кунед, ки онҳо аз сомонаҳо, почтаи электронӣ ва паёмҳо дар браузери Firefox ба таври худкор кушода шаванд.</string>
+    <string name="default_browser_experiment_card_text">Пайванҳоеро, танзим кунед, ки онҳо аз сомонаҳо, почтаи электронӣ ва паёмҳо дар браузери Waterfox ба таври худкор кушода шаванд.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Тоза кардан</string>
@@ -1861,7 +1861,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Дар асоси Pocket кор мекунад.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Қисми оилаи Firefox.%s</string>
+    <string name="pocket_stories_feature_caption">Қисми оилаи Waterfox.%s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Маълумоти бештар</string>
 
@@ -1872,5 +1872,5 @@
     <string name="experiments_snackbar">Барои фиристодани маълумот дурисанҷро фаъол созед.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Гузариш ба танзимот</string>
-    <string name="firefox_suggest_header">Пешниҳоди Firefox</string>
+    <string name="firefox_suggest_header">Пешниҳоди Waterfox</string>
 </resources>

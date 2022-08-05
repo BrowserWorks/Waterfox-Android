@@ -59,7 +59,7 @@
     <string name="cfr_neg_button_text">نا سوپاس</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
     <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">دەتوانیت وا لە فایەرفۆکس بکەیت کە خۆاکارانە بەستەرەکان لەناو بەرنامەکان بکاتەوە.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">بڕۆ بۆ ڕێکخستن</string>
@@ -177,7 +177,7 @@
     <string name="search_engine_suggestions_description">ڕاستەوخۆ گەڕان بکە لە توڵی ناونیشانەوە</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
     <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">بازدەرێکی نوێی فایەرفۆکس بکەرەوە</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">گەڕان</string>
@@ -228,7 +228,7 @@
     <string name="preferences_add_private_browsing_shortcut">قەدبڕێ وێبگەڕانی تایبەتی زیاد بکە</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">دەستپێگەیشتن</string>
-    <!-- Preference to override the Firefox Account server -->
+    <!-- Preference to override the Waterfox Account server -->
     <string name="preferences_override_fxa_server">ڕاژەی خوازراو بۆ هەژماری فایەرفۆکس</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">ڕاژەی خوازراو بۆ هاوکاتگەری</string>
@@ -245,7 +245,7 @@
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">نیشانەکراوەکان، مێژووی کار، وزیاتر لەگەڵ هەژماری فایەرفۆکس</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">هەژماری Firefox</string>
+    <string name="preferences_account_default_name">هەژماری Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">دووبارە پەیوەندی بکەرەوە بۆ هێنانەوەی هاوکاتگەری</string>
     <!-- Preference for language -->
@@ -907,34 +907,34 @@
     <string name="deleting_browsing_data_in_progress">سڕینەوەی زانیارییەکانی گەڕان…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview ئێستا بووە بە Firefox Nightly</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview ئێستا بووە بە Waterfox Nightly</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">فایەرفۆکسی بێتا بەدەست بێنە بۆ ئەندرۆید</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">فایەرفۆکسی شەوانەیی(nightly) لێرە گوازرایەوە</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">بچۆ وەشانی نوێی شەوانەیی (Nightly)</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">فایەرفۆکسی شەوانەیی(nightly) لێرە گوازرایەوە</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">شەوانەیی (Nightly) نوێ بەدەست بهێنە</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">بەخێربێی بۆ %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
     <string name="onboarding_account_sign_in_header_1">فایەرفۆکس هاوکاتگەری پێبکە لە نێوان ئامێرەکان</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">خۆتۆمارکردن</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">هاوکاتگەری کارایە</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">هەموو-کات لەسەر تایبەتیی</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
     <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">فایەرفۆکس خۆکارانە کۆمپانیاکان ڕادەگرێت لەوەی چاودێریت بکەن لەسەر وێب.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">ئاسایی (بنەڕەتیی)</string>
@@ -952,7 +952,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">تایبەتێتی بکەرەوە</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">ئێمە %s داڕشتووە بەشێوەیەک بتوانیت کۆنتڕۆڵی ئەوە بکەیت چی لەسەرهێڵ بڵاوبکەیتەوە یان چی لەگەڵ ئێمە بڵاوبکەیتەوە.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">تێبینییەکانی تایبەتێتی بخوێنەوە</string>
@@ -993,7 +993,7 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">دەتوانیت پۆستی ئەلیکترۆنی بەکارببەیت</string>
 
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
     <string name="sign_in_create_account_text"><![CDATA[هەژمارت نیە؟ <u> دانەیەک درووست بکە</u> بۆ هاوکاتگەری پێکردن لەنێوان ئامێرەکان.]]></string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">دەرچوون</string>
@@ -1311,13 +1311,13 @@
     <string name="synced_tabs_connect_another_device">ئامێریکی تر ببەستەوە</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">تکایە دووبارە ڕێپێدان ئەنجام بدەرەوە</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">تکایە هاوکاتگەری بازدەر پێبکە.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">هیچ بازدەرێکی کراوەت نیە لە ئامێرەکانی تری فایەرفۆکس.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">لیستەی بازدەرەکان پیشان بدە لە ئامێرەکانی ترەوە.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">بۆ هاوکاتکردن بچۆژوورەوە</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">بازدەری کراوە نیە</string>

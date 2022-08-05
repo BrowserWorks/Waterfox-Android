@@ -258,8 +258,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">კვლავ მოინახულეთ ბოლოს მოძიებულები, საწყისი გვერდიდან და ჩანართებიდან.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Firefox-ის მორგებული საწყისი გვერდით, შეძლებთ მარტივად განაგრძოთ იქიდან, სადაც შეჩერდით. იპოვეთ ბოლოს გახსნილი ჩანართები, სანიშნები და მოძიებული გვერდები.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Waterfox-ის მორგებული საწყისი გვერდით, შეძლებთ მარტივად განაგრძოთ იქიდან, სადაც შეჩერდით. იპოვეთ ბოლოს გახსნილი ჩანართები, სანიშნები და მოძიებული გვერდები.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -332,12 +332,12 @@
     <string name="errorpage_httpsonly_message_summary">თუმცა, შესაძლოა შემტევის ხელიც ერიოს. თუ მაინც გადახვალთ, საიტის ველებში ნუ შეიყვანთ პირად მონაცემებს. ამასთანავე, მხოლოდ-HTTPS-რეჟიმი დროებით გამოირთვება ამ საიტისთვის.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ხელმისაწვდომობა</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Firefox-ანგარიშის მითითებული სერვერი</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Waterfox-ანგარიშის მითითებული სერვერი</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">დასინქრონების მითითებული სერვერი</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">შეცვალა Firefox-ანგარიშის/სინქრონიზაციის სერვერი. პროგრამის დატოვება ცვლილებების ასასახად…</string>
+    <string name="toast_override_fxa_sync_server_done">შეცვალა Waterfox-ანგარიშის/სინქრონიზაციის სერვერი. პროგრამის დატოვება ცვლილებების ასასახად…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">ანგარიში</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -351,11 +351,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">მორგება</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">დაასინქრონეთ სანიშნები, პაროლები და ა. შ. თქვენი Firefox-ანგარიშით</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">დაასინქრონეთ სანიშნები, პაროლები და ა. შ. თქვენი Waterfox-ანგარიშით</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">შედით ანგარიშზე, რომ დაასინქრონოთ თქვენი ჩანართები, სანიშნები, პაროლები და სხვ.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox-ანგარიში</string>
+    <string name="preferences_account_default_name">Waterfox-ანგარიში</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">ხელახლა დაკავშირება სინქრონიზაციის აღსადგენად</string>
     <!-- Preference for language -->
@@ -437,11 +437,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">ნახვა</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">შეცვალეთ ფონი Firefox-ის საწყისი გვერდის ნიშანზე შეხებით</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">შეცვალეთ ფონი Waterfox-ის საწყისი გვერდის ნიშანზე შეხებით</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox-ლოგო – შეცვალეთ ფონი, ღილაკი</string>
+    <string name="wallpaper_logo_content_description">Waterfox-ლოგო – შეცვალეთ ფონი, ღილაკი</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -494,7 +494,7 @@
     <string name="fxa_received_tab_channel_name">მიღებული ჩანართები</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">შეტყობინებები ჩანართებისთვის მიღებული სხვა Firefox-მოწყობილობებიდან.</string>
+    <string name="fxa_received_tab_channel_description">შეტყობინებები ჩანართებისთვის მიღებული სხვა Waterfox-მოწყობილობებიდან.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">მიღებული ჩანართი</string>
     <!-- %s is the device name -->
@@ -664,7 +664,7 @@
     <string name="studies_remove">მოცილება</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">მოქმედი</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s დროდადრო დააყენებს და ჩაატარებს კვლევებს.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ვრცლად</string>
@@ -785,7 +785,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">შესვლა</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>ან შექმენით Firefox-ანგარიში სინქრონიზაციისთვის</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>ან შექმენით Waterfox-ანგარიში სინქრონიზაციისთვის</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1037,7 +1037,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">სხვა მოწყობილობის დაკავშირება</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">ჩანართის გასაგზავნად, შედით Firefox-ში, სულ მცირე, კიდევ ერთი სხვა მოწყობილობიდან.</string>
+    <string name="sync_connect_device_dialog">ჩანართის გასაგზავნად, შედით Waterfox-ში, სულ მცირე, კიდევ ერთი სხვა მოწყობილობიდან.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">გასაგებია</string>
     <!-- Share error message -->
@@ -1177,13 +1177,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">მოგესალმებათ %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">დაასინქრონეთ Firefox მოწყობილობებს შორის</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">დაასინქრონეთ Waterfox მოწყობილობებს შორის</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">გადმოიტანს სანიშნებს, ისტორიასა და პაროლებს, ამ მოწყობილობის %1$s-ზე.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">ანგარიშის შექმნა</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">სინქრონიზაცია ჩართულია</string>
@@ -1207,7 +1207,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">თქვენი პირადულობა</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s შექმნილია ისე, რომ თავად წყვეტდეთ რას გააზიარებთ ინტერნეტში და რას გაგვიზიარებთ ჩვენ.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">გაეცანით პირადულობის განაცხადს</string>
@@ -1241,16 +1241,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">კოდის წაკითხვა</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[ჩართეთ კომპიუტერში Firefox და გახსენით გვერდი <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[ჩართეთ კომპიუტერში Waterfox და გახსენით გვერდი <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">მზადაა წასაკითხად</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">შედით კამერის დახმარებით</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">ელფოსტის გამოყენება სანაცვლოდ</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[არ გაქვთ ანგარიში? <u>შექმენით</u> და დაასინქრონეთ Firefox მოწყობილობებზე.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[არ გაქვთ ანგარიში? <u>შექმენით</u> და დაასინქრონეთ Waterfox მოწყობილობებზე.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s შეწყვეტს დასინქრონებას თქვენი ანგარიშით, მაგრამ არ წაშლის მონაცემებს ამ მოწყობილობაზე.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">გამოთიშვა</string>
@@ -1414,9 +1414,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">შეკითხვა შენახვისას</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">არასოდეს შეინახოს</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s თვითშევსება</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">შეავსეთ ან შეინახეთ სახელები და პაროლები საიტებზე, როცა %1$s გამოიყენება.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">თვითშევსება სხვა პროგრამებში</string>
@@ -1755,14 +1755,14 @@
     <string name="synced_tabs_connect_another_device">სხვა მოწყობილობის დაკავშირება</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">გთხოვთ, ხელახლა შეხვიდეთ.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">გთხოვთ, ჩართოთ ჩანართების სინქრონიზაცია.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">თქვენ არ გაქვთ, Firefox-ის გახსნილი ჩანართები, სხვა მოწყობილობებზე.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">თქვენ არ გაქვთ, Waterfox-ის გახსნილი ჩანართები, სხვა მოწყობილობებზე.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">იხილეთ ჩანართების სია თქვენი სხვა მოწყობილობებიდან.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">სინქრონიზაციაში შესვლა</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1814,14 +1814,14 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">დაიხუროს ერთ თვეში?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox დახურავს ჩანართებს, რომლებიც არ გინახავთ წინა თვეში.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox დახურავს ჩანართებს, რომლებიც არ გინახავთ წინა თვეში.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ᲗᲕᲘᲗᲓᲐᲮᲣᲠᲕᲘᲡ ᲩᲐᲠᲗᲕᲐ</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">თვითდახურვა ჩართულია</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">მითითება რომ ბმულები ვებსაიტებიდან, ელფოსტიდან და შეტყობინებებიდან, გაიხსნას პირდაპირ Firefox-ში.</string>
+    <string name="default_browser_experiment_card_text">მითითება რომ ბმულები ვებსაიტებიდან, ელფოსტიდან და შეტყობინებებიდან, გაიხსნას პირდაპირ Waterfox-ში.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">მოცილება</string>
@@ -1845,7 +1845,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">უზრუნველყოფს Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox ოჯახის ნაწილი. %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox ოჯახის ნაწილი. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">ვრცლად</string>
 
@@ -1856,5 +1856,5 @@
     <string name="experiments_snackbar">ჩართეთ გაზომვები მონაცემთა გასაგზავნად.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">პარამეტრებზე გადასვლა</string>
-    <string name="firefox_suggest_header">Firefox-შეთავაზება</string>
+    <string name="firefox_suggest_header">Waterfox-შეთავაზება</string>
 </resources>

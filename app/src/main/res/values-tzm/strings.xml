@@ -82,8 +82,8 @@
     <string name="search_engine_suggestions_title">Rzu %s</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description">Rẓem Aseksel amaynu n Firefox</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string name="search_widget_content_description">Rẓem Aseksel amaynu n Waterfox</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Rzu</string>
     <!-- Text preview for larger sized widgets -->
@@ -116,7 +116,7 @@
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Asgum</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Amiḍan Firefox</string>
+    <string name="preferences_account_default_name">Amiḍan Waterfox</string>
     <!-- Preference for language -->
     <string name="preferences_language">Tutlayt</string>
     <!-- Preference for account settings -->
@@ -390,7 +390,7 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Ansuf ɣer %s!</string>
     <!-- text for the private browsing onbording card button, that launches settings -->
     <string name="onboarding_private_browsing_button">Rẓem tisɣal</string>

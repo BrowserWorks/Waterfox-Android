@@ -270,8 +270,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">ホームページとタブから最近の検索を確認できます。</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">個人に合わせた Firefox ホームページにより、前回のページから簡単に再開できるようになりました。最近のタブ、ブックマーク、検索結果を見つけられます。</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">個人に合わせた Waterfox ホームページにより、前回のページから簡単に再開できるようになりました。最近のタブ、ブックマーク、検索結果を見つけられます。</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -343,12 +343,12 @@
     <string name="errorpage_httpsonly_message_summary">ただし、攻撃者が関与している可能性もあります。ウェブサイトにアクセスする場合は機密情報を入力しないでください。続行すると、サイトの HTTPS-Only モードが一時的にオフになります。</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">アクセシビリティ</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">カスタム Firefox アカウントサーバー</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">カスタム Waterfox アカウントサーバー</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">カスタム Sync サーバー</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox アカウント/Sync サーバーが変更されました。変更を適用するためにアプリケーションを終了しています…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox アカウント/Sync サーバーが変更されました。変更を適用するためにアプリケーションを終了しています…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">アカウント</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -362,11 +362,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">カスタマイズ</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">ブックマーク、履歴などを Firefox アカウントと同期します</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">ブックマーク、履歴などを Waterfox アカウントと同期します</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">ログインしてタブやブックマーク、パスワードなどを同期しましょう。</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox アカウント</string>
+    <string name="preferences_account_default_name">Waterfox アカウント</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">再接続して同期を再開</string>
     <!-- Preference for language -->
@@ -449,11 +449,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">表示</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Firefox ホームページのロゴをタップして壁紙を変更する</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox ホームページのロゴをタップして壁紙を変更する</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox ロゴ - 壁紙変更ボタンです</string>
+    <string name="wallpaper_logo_content_description">Waterfox ロゴ - 壁紙変更ボタンです</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -505,7 +505,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">受信したタブ</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">他の Firefox 端末から受信したタブの通知。</string>
+    <string name="fxa_received_tab_channel_description">他の Waterfox 端末から受信したタブの通知。</string>
 
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">受信したタブ</string>
@@ -676,7 +676,7 @@
     <string name="studies_remove">削除</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">有効</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s が調査をインストールして実行することがあります。</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">詳細情報</string>
@@ -801,7 +801,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">ログイン</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>または Firefox アカウントを作成して同期を開始します</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>または Waterfox アカウントを作成して同期を開始します</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1057,7 +1057,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">別の端末を接続</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">タブを送信するには、少なくとも 1 台の他の端末で Firefox にログインしてください。</string>
+    <string name="sync_connect_device_dialog">タブを送信するには、少なくとも 1 台の他の端末で Waterfox にログインしてください。</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">OK</string>
 
@@ -1202,13 +1202,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s へようこそ！</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">端末間で Firefox を同期</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">端末間で Waterfox を同期</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">この端末の %1$s とブックマーク、履歴、パスワードを同期します。</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">アカウント登録</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync が有効です</string>
@@ -1231,7 +1231,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">あなたのプライバシー</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s は、あなたがオンラインで共有するものと、私たちと共有するものをコントロールできるように設計されています。</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">個人情報保護方針を読む</string>
@@ -1264,16 +1264,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">QR コードのスキャン</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[コンピューターの Firefox で <b>https://firefox.com/pair</b> を開いてください]]></string>
+    <string name="sign_in_instructions"><![CDATA[コンピューターの Waterfox で <b>https://firefox.com/pair</b> を開いてください]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">スキャンの準備ができました</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">カメラを使ってログイン</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">代わりにメールアドレスを使う</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[アカウントをお持ちでない方は、<u>アカウントを作成</u>して Firefox を端末間で同期しましょう。]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[アカウントをお持ちでない方は、<u>アカウントを作成</u>して Waterfox を端末間で同期しましょう。]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s はあなたのアカウントとの同期を中止しますが、この端末上の閲覧履歴は削除されません。</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">接続を解除</string>
@@ -1437,9 +1437,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">保存しない</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s で自動入力する</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s の使用中、ウェブサイトにユーザー名とパスワードを入力して保存します。</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">他のアプリで自動入力する</string>
@@ -1779,13 +1779,13 @@
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">再認証してください。</string>
 
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">タブの同期を有効にしてください。</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">他の端末の Firefox で開いているタブはありません。</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">他の端末の Waterfox で開いているタブはありません。</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">他の端末のタブの一覧を表示できます。</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Sync にログイン</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1837,7 +1837,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">1 か月後に自動的に閉じますか？</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox は 1 か月以上表示していないタブを閉じることができます。</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox は 1 か月以上表示していないタブを閉じることができます。</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">自動的に閉じる</string>
 
@@ -1845,7 +1845,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">自動的に閉じる機能が有効です</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">ウェブサイトやメール、メッセージのリンクを自動的に Firefox で開きます。</string>
+    <string name="default_browser_experiment_card_text">ウェブサイトやメール、メッセージのリンクを自動的に Waterfox で開きます。</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">削除</string>
@@ -1869,7 +1869,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Powered by Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox ファミリーの一員です。 %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox ファミリーの一員です。 %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">詳細情報</string>
 
@@ -1880,5 +1880,5 @@
     <string name="experiments_snackbar">データを送信するにはテレメトリーを有効にしてください。</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">設定を開く</string>
-    <string name="firefox_suggest_header">Firefox Suggest</string>
+    <string name="firefox_suggest_header">Waterfox Suggest</string>
 </resources>

@@ -187,9 +187,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Fərdiləşdir</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Firefox hesabınız ilə əlfəcin, tarixçə və daha çoxunu sinxronlaşdırın</string>
+    <string name="preferences_sign_in_description">Waterfox hesabınız ilə əlfəcin, tarixçə və daha çoxunu sinxronlaşdırın</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox Hesabı</string>
+    <string name="preferences_account_default_name">Waterfox Hesabı</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Sinxronlaşdırmaya qayıtmaq üçün təkrar qoşul</string>
     <!-- Preference for language -->
@@ -258,7 +258,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Alınan vərəqlər</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Digər Firefox cihazlarından alınan vərəqlər üçün bildirişlər.</string>
+    <string name="fxa_received_tab_channel_description">Digər Waterfox cihazlarından alınan vərəqlər üçün bildirişlər.</string>
 
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Vərəq alındı</string>
@@ -697,17 +697,17 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s üçün Xoş Gəldiniz!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">Artıq hesabınız var?</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Yenilikləri gör</string>
     <!-- text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_firefox_account_header">%s səyyahınızdan daha çox şey əldə edin.</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
-    <string name="onboarding_firefox_account_sign_in">Firefox-a daxil ol</string>
+    <!-- text for the button to manually sign into Waterfox account. The word "Waterfox" should not be translated -->
+    <string name="onboarding_firefox_account_sign_in">Waterfox-a daxil ol</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync aktivdir</string>
     <!-- text for the private browsing onbording card button, that launches settings -->

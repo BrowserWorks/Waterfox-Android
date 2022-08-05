@@ -273,12 +273,12 @@
     <string name="errorpage_httpsonly_title">సురక్షిత సైటు అందుబాటులో లేదు</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ప్రాప్యత</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">అభిమత Firefox ఖాతా సర్వరు</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">అభిమత Waterfox ఖాతా సర్వరు</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">అభిమత సింక్ సర్వరు</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox ఖాతా/సింక్ సర్వరు మార్చబడింది. మార్పులను వర్తింపజేయడానికి అనువర్తనం నుండి నిష్క్రమిస్తున్నాం…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox ఖాతా/సింక్ సర్వరు మార్చబడింది. మార్పులను వర్తింపజేయడానికి అనువర్తనం నుండి నిష్క్రమిస్తున్నాం…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">ఖాతా</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -292,9 +292,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">అభిమతీకరణ</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">మీ Firefox ఖాతాతో ఇష్టాంశాలను, సంకేతపదాలను, ఇంకా మరెన్నిటినో సింక్ చేసుకోండి</string>
+    <string name="preferences_sign_in_description">మీ Waterfox ఖాతాతో ఇష్టాంశాలను, సంకేతపదాలను, ఇంకా మరెన్నిటినో సింక్ చేసుకోండి</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox ఖాతా</string>
+    <string name="preferences_account_default_name">Waterfox ఖాతా</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">సింక్ చేయడాన్ని కొనసాగించడానికి అనుసంధానించండి</string>
     <!-- Preference for language -->
@@ -407,7 +407,7 @@
     <string name="fxa_received_tab_channel_name">అందుకన్న ట్యాబులు</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">ఇతర Firefox పరికరాల నుంచి వచ్చిన ట్యాబుల గమనింపులు.</string>
+    <string name="fxa_received_tab_channel_description">ఇతర Waterfox పరికరాల నుంచి వచ్చిన ట్యాబుల గమనింపులు.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">ట్యాబు వచ్చింది</string>
     <!-- %s is the device name -->
@@ -901,7 +901,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">మరొక పరికరాన్ని అనుసంధానించు</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">ట్యాబును పంపడానికి, కనీసం మరొక పరికరంలో Firefox లోనికి ప్రవేశించండి.</string>
+    <string name="sync_connect_device_dialog">ట్యాబును పంపడానికి, కనీసం మరొక పరికరంలో Waterfox లోనికి ప్రవేశించండి.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">అర్థమైంది</string>
     <!-- Share error message -->
@@ -1036,35 +1036,35 @@
     <string name="delete_history_group_prompt_allow">తొలగించు</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview ఇప్పుడు Firefox Nightly అయింది</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview ఇప్పుడు Waterfox Nightly అయింది</string>
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox నైట్లీ ప్రతి రాత్రీ కొత్త ప్రయోగాత్మక సౌలభ్యాలతో తాజాకరించబడుతుంది.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox నైట్లీ ప్రతి రాత్రీ కొత్త ప్రయోగాత్మక సౌలభ్యాలతో తాజాకరించబడుతుంది.
         అయితే, ఇదంత స్థిరంగా ఉండకపోవచ్చు. మరి కొతం సుస్థిరమైన అనుభవం కోసం మా బీటా విహారిణిని దించుకోండి.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">ఆండ్రాయిడ్ కోసం Firefox బీటాను పొందండి</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">ఆండ్రాయిడ్ కోసం Waterfox బీటాను పొందండి</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox నైట్లీ తరలించబడింది</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox నైట్లీ తరలించబడింది</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">ఈ అనువర్తనానికి ఇకపై భద్రతా తాజాకరణలు రావు. ఈ అనువర్తనాన్ని వాడటం మానివేసి, కొత్త నైట్లీకి మారండి.
-        \n\nమీ ఇష్టాంశాలను, ప్రవేశాలను, చరిత్రను మరో అనువర్తనానికి బదిలీ చేయడానికి, ఒక Firefox ఖాతాను సృష్టించుకోండి.</string>
+        \n\nమీ ఇష్టాంశాలను, ప్రవేశాలను, చరిత్రను మరో అనువర్తనానికి బదిలీ చేయడానికి, ఒక Waterfox ఖాతాను సృష్టించుకోండి.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">కొత్త నైట్లీకి మారండి</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox నైట్లీ తరలించబడింది</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox నైట్లీ తరలించబడింది</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">ఈ అనువర్తనానికి ఇకపై భద్రతా తాజాకరణలు రావు. కొత్త నైట్లీని తెచ్చుకొని, ఈ అనువర్తనాన్ని వాడటం మానివేయండి.
-        \n\nమీ ఇష్టాంశాలను, ప్రవేశాలను, చరిత్రను మరో అనువర్తనానికి బదిలీ చేయడానికి, ఒక Firefox ఖాతాను సృష్టించుకోండి.</string>
+        \n\nమీ ఇష్టాంశాలను, ప్రవేశాలను, చరిత్రను మరో అనువర్తనానికి బదిలీ చేయడానికి, ఒక Waterfox ఖాతాను సృష్టించుకోండి.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">కొత్త నైట్లీని పొందండి</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%sకి స్వాగతం!</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">నమోదవ్వండి</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">సింక్ చేతనంగా ఉంది</string>
@@ -1109,16 +1109,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">కోడును స్కాను చేయండి</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[మీ కంప్యూటర్‌లో Firefox తెరిచి <b>https://firefox.com/pair</b>కు వెళ్లండి]]></string>
+    <string name="sign_in_instructions"><![CDATA[మీ కంప్యూటర్‌లో Waterfox తెరిచి <b>https://firefox.com/pair</b>కు వెళ్లండి]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">స్కాన్ చేయడానికి సిద్ధంగా ఉంది</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">మీ కెమెరాతో ప్రవేశించండి</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">లేదా ఈమెయిలు వాడండి</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
     <string name="sign_in_create_account_text"><![CDATA[ఖాతా లేదా? Firefoxను పరికరాల మధ్య సమకాలీకరించడానికి <u>ఒక ఖాతాను సృష్టించుకోండి</u>.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s మీ ఖాతాను సింక్రనించడం ఆపివేస్తుంది, కానీ ఈ పరికరంలోని మీ విహరణ డేటాను తొలగించదు.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">అనుసంధానం తెంచు</string>
@@ -1554,13 +1554,13 @@
     <string name="synced_tabs_connect_another_device">మరొక పరికరాన్ని అనుసంధానించండి.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">దయచేసి పునరధీకరణ చేయండి.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">దయచేసి ట్యాబు సింకింగును చేతనం చేయండి.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">మీ ఇతర పరికరాల్లో తెరిచివున్న Firefox ట్యాబులు ఏమీ లేవు.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">మీ ఇతర పరికరాల్లో తెరిచివున్న Waterfox ట్యాబులు ఏమీ లేవు.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">మీ ఇతర పరికరాల నుండి ట్యాబుల జాబితాను చూడండి.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">సింక్ చేయడానికి ప్రవేశించండి</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->

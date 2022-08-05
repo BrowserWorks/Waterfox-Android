@@ -262,8 +262,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ailedrych ar eich chwilio diweddaraf o’ch tudalen cartref a’ch tabiau.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Mae eich cartref personoledig Firefox bellach yn ei gwneud hi’n haws i fynd yn ôl i le wnaethoch chi adael. Dewch o hyd i’ch tabiau, nodau tudalen a’ch canlyniadau chwilio diweddar.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Mae eich cartref personoledig Waterfox bellach yn ei gwneud hi’n haws i fynd yn ôl i le wnaethoch chi adael. Dewch o hyd i’ch tabiau, nodau tudalen a’ch canlyniadau chwilio diweddar.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -335,12 +335,12 @@
     <string name="errorpage_httpsonly_message_summary">Fodd bynnag, mae hefyd yn bosibl bod ymosodwr wrthi. Os byddwch yn parhau i’r wefan, peidiwch â rhoi unrhyw wybodaeth sensitif. Os byddwch yn parhau, bydd modd HTTPS-yn-Unig yn cael ei ddiffodd dros dro ar gyfer y wefan.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Hygyrchedd</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Gweinydd Cyfrif Cyfaddas Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Gweinydd Cyfrif Cyfaddas Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Gweinydd Sync Cyfaddas</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Mae Cyfrif Firefox/gweinydd Sync wedi’i addasu. Yn gadael y rhaglen i osod y newidiadau…</string>
+    <string name="toast_override_fxa_sync_server_done">Mae Cyfrif Waterfox/gweinydd Sync wedi’i addasu. Yn gadael y rhaglen i osod y newidiadau…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Cyfrif</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -354,11 +354,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Cyfaddasu</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Cydweddu nodau tudalen, hanes, a mwy gyda’ch Cyfrif Firefox</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Cydweddu nodau tudalen, hanes, a mwy gyda’ch Cyfrif Waterfox</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Mewngofnodwch i gydweddu tabiau, nodau tudalen, cyfrineiriau, a rhagor.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Cyfrif Firefox</string>
+    <string name="preferences_account_default_name">Cyfrif Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Ailgysylltu i ailddechrau cydweddu</string>
     <!-- Preference for language -->
@@ -441,11 +441,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Golwg</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Newidiwch y papur wal trwy dapio logo tudalen hafan Firefox</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Newidiwch y papur wal trwy dapio logo tudalen hafan Waterfox</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo Firefox - newid y papur wal, pwyso’r botwm</string>
+    <string name="wallpaper_logo_content_description">Logo Waterfox - newid y papur wal, pwyso’r botwm</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -497,7 +497,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Tabiau derbyniwyd</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Hysbysiadau am dabiau a dderbyniwyd o ddyfeisiau Firefox eraill.</string>
+    <string name="fxa_received_tab_channel_description">Hysbysiadau am dabiau a dderbyniwyd o ddyfeisiau Waterfox eraill.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tab wedi’i Dderbyn</string>
     <!-- %s is the device name -->
@@ -665,7 +665,7 @@
     <string name="studies_remove">Tynnu</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Gweithredol</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">Gall %1$s osod a rhedeg astudiaethau o bryd i’w gilydd.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Dysgu rhagor</string>
@@ -788,7 +788,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Mewngofnodi</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Neu creu cyfrif Firefox i ddechrau cydweddu</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Neu creu cyfrif Waterfox i ddechrau cydweddu</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1040,7 +1040,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Cysylltu dyfais arall</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">I anfon tab, mewngofnodwch i Firefox ar o leiaf un ddyfais arall.</string>
+    <string name="sync_connect_device_dialog">I anfon tab, mewngofnodwch i Waterfox ar o leiaf un ddyfais arall.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Iawn</string>
     <!-- Share error message -->
@@ -1190,13 +1190,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Croeso i %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Cydweddu Firefox rhwng dyfeisiau</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Cydweddu Waterfox rhwng dyfeisiau</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Dewch â nodau tudalen, hanes, a chyfrineiriau i %1$s ar y ddyfais hon.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Ymuno</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Mae Sync ymlaen</string>
@@ -1220,7 +1220,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Eich preifatrwydd</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Rydym wedi cynllunio %s i roi rheolaeth i chi dros yr hyn rydych chi’n ei rannu ar-lein a’r hyn rydych chi’n ei rannu gyda ni.
     </string>
     <!-- Text for the button to read the privacy notice -->
@@ -1254,16 +1254,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Sganiwch y cod</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Ar eich cyfrifiadur, agorwch Firefox ac ewch i <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Ar eich cyfrifiadur, agorwch Waterfox ac ewch i <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Yn barod i sganio</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Mewngofnodi gyda’ch camera</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Defnyddiwch e-bost yn lle hynny</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Dim cyfrif? <u>Crëwch un</u> i gydweddu Firefox rhwng dyfeisiau.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Dim cyfrif? <u>Crëwch un</u> i gydweddu Waterfox rhwng dyfeisiau.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">Bydd %s yn peidio â chydweddu eich cyfrif ond ni fydd yn dileu eich data pori ar y ddyfais hon.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Datgysylltu</string>
@@ -1425,9 +1425,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Gofyn i gadw</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Byth cadw</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Awtolanw yn %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Llenwi ac chadw enwau defnyddwyr a chyfrineiriau mewn gwefannau tra’n defnyddio %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Awtolanw mewn apiau eraill</string>
@@ -1762,14 +1762,14 @@
     <string name="synced_tabs_connect_another_device">Cysylltu dyfais arall</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Ail-ddilyswch, os gwelwch yn dda.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Galluogwch gydweddu tabiau.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Nid oes gennych unrhyw dabiau ar agor yn Firefox ar eich dyfeisiau eraill.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Nid oes gennych unrhyw dabiau ar agor yn Waterfox ar eich dyfeisiau eraill.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Gweld rhestr o dabiau o’ch dyfeisiau eraill.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Mewngofnodi i gydweddu</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1821,7 +1821,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Autogau ar ôl mis?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Gall Firefox gau tabiau nad ydych wedi edrych arnyn nhw dros y mis diwethaf.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Gall Waterfox gau tabiau nad ydych wedi edrych arnyn nhw dros y mis diwethaf.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TROI AWTOGAU YMLAEN</string>
 
@@ -1829,7 +1829,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Autogau wedi’i alluogi</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Gosod dolenni o wefannau, e-byst, a negeseuon i agor yn awtomatig yn Firefox.</string>
+    <string name="default_browser_experiment_card_text">Gosod dolenni o wefannau, e-byst, a negeseuon i agor yn awtomatig yn Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Tynnu</string>
@@ -1853,7 +1853,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Wedi’i bweru gan Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Rhan o deulu Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Rhan o deulu Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Dysgu rhagor</string>
 
@@ -1864,5 +1864,5 @@
     <string name="experiments_snackbar">Galluogi telemetreg i anfon data.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Mynd i gosodiadau</string>
-    <string name="firefox_suggest_header">Awgrymiadau Firefox</string>
+    <string name="firefox_suggest_header">Awgrymiadau Waterfox</string>
 </resources>

@@ -265,8 +265,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Xem lại các tìm kiếm mới nhất của bạn từ trang chủ và các thẻ của bạn.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Trang chủ Firefox được cá nhân hóa của bạn giờ đây giúp bạn tiếp tục lại nơi bạn đã dừng lại dễ dàng hơn. Tìm các thẻ, dấu trang và kết quả tìm kiếm gần đây của bạn.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Trang chủ Waterfox được cá nhân hóa của bạn giờ đây giúp bạn tiếp tục lại nơi bạn đã dừng lại dễ dàng hơn. Tìm các thẻ, dấu trang và kết quả tìm kiếm gần đây của bạn.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -337,12 +337,12 @@
     <string name="errorpage_httpsonly_message_summary">Tuy nhiên, cũng có thể có kẻ tấn công tham gia. Nếu bạn tiếp tục vào trang web, bạn không nên nhập bất kỳ thông tin nhạy cảm nào. Nếu bạn tiếp tục, chế độ chỉ HTTPS sẽ tạm thời bị tắt cho trang web.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Khả năng truy cập</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Tùy chỉnh máy chủ tài khoản Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Tùy chỉnh máy chủ tài khoản Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Tùy chỉnh máy chủ đồng bộ hóa</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Tài khoản máy chủ Firefox/đồng bộ hóa đã thay đổi. Thoát ứng dụng để áp dụng thay đổi…</string>
+    <string name="toast_override_fxa_sync_server_done">Tài khoản máy chủ Waterfox/đồng bộ hóa đã thay đổi. Thoát ứng dụng để áp dụng thay đổi…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Tài khoản</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -356,11 +356,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Tùy biến</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Đồng bộ hóa dấu trang, lịch sử và hơn thế nữa với tài khoản Firefox của bạn</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Đồng bộ hóa dấu trang, lịch sử và hơn thế nữa với tài khoản Waterfox của bạn</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Đăng nhập để đồng bộ các thẻ, dấu trang, mật khẩu, v.v.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Tài khoản Firefox</string>
+    <string name="preferences_account_default_name">Tài khoản Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Kết nối lại để tiếp tục đồng bộ hóa</string>
     <!-- Preference for language -->
@@ -442,11 +442,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Hiển thị</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Thay đổi hình nền bằng cách nhấn vào biểu trưng trang chủ của Firefox</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Thay đổi hình nền bằng cách nhấn vào biểu trưng trang chủ của Waterfox</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo Firefox - thay đổi hình nền, nút</string>
+    <string name="wallpaper_logo_content_description">Logo Waterfox - thay đổi hình nền, nút</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -498,7 +498,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Các thẻ đã nhận</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Thông báo các thẻ nhận được từ các thiết bị Firefox khác.</string>
+    <string name="fxa_received_tab_channel_description">Thông báo các thẻ nhận được từ các thiết bị Waterfox khác.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Thẻ đã nhận</string>
 
@@ -666,7 +666,7 @@
     <string name="studies_remove">Xóa</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Hoạt động</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s có thể cài đặt và chạy các nghiên cứu theo thời gian.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Tìm hiểu thêm</string>
@@ -788,7 +788,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Đăng nhập</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Hoặc tạo tài khoản Firefox để bắt đầu đồng bộ hóa</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Hoặc tạo tài khoản Waterfox để bắt đầu đồng bộ hóa</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1039,7 +1039,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Kết nối thiết bị khác</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Để gửi một thẻ, đăng nhập vào Firefox trên ít nhất một thiết bị khác.</string>
+    <string name="sync_connect_device_dialog">Để gửi một thẻ, đăng nhập vào Waterfox trên ít nhất một thiết bị khác.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Đã hiểu</string>
     <!-- Share error message -->
@@ -1188,13 +1188,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Chào mừng đến với %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Đồng bộ hóa Firefox giữa các thiết bị</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Đồng bộ hóa Waterfox giữa các thiết bị</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Mang dấu trang, lịch sử và mật khẩu vào %1$s trên thiết bị này.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Đăng ký</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Đồng bộ hóa được bật</string>
@@ -1217,7 +1217,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Quyền riêng tư của bạn</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Chúng tôi đã thiết kế %s để cung cấp cho bạn quyền kiểm soát những gì bạn chia sẻ trực tuyến và những gì bạn chia sẻ với chúng tôi.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Đọc thông báo bảo mật của chúng tôi</string>
@@ -1251,16 +1251,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Quét mã</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Trên máy tính của bạn, hãy mở Firefox và truy cập <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Trên máy tính của bạn, hãy mở Waterfox và truy cập <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Sẵn sàng để quét</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Đăng nhập bằng máy ảnh của bạn</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Sử dụng email thay thế</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Không có tài khoản? <u>Tạo một cái</u> để đồng bộ hóa Firefox giữa các thiết bị.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Không có tài khoản? <u>Tạo một cái</u> để đồng bộ hóa Waterfox giữa các thiết bị.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s sẽ ngừng đồng bộ hóa với tài khoản của bạn, nhưng sẽ không xóa bất kỳ dữ liệu duyệt web nào của bạn trên thiết bị này.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Ngắt kết nối</string>
@@ -1421,9 +1421,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Yêu cầu để lưu</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Không bao giờ lưu</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Tự động điền trong %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Điền và lưu tên người dùng và mật khẩu trong các trang web khi sử dụng %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Tự động điền vào các ứng dụng khác</string>
@@ -1754,13 +1754,13 @@
     <string name="synced_tabs_connect_another_device">Kết nối thiết bị khác.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Vui lòng xác thực lại.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Vui lòng kích hoạt đồng bộ hóa thẻ.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Bạn không có bất kỳ thẻ nào mở trong Firefox trên các thiết bị khác của bạn.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Bạn không có bất kỳ thẻ nào mở trong Waterfox trên các thiết bị khác của bạn.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Xem danh sách các thẻ từ các thiết bị khác của bạn.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Đăng nhập vào đồng bộ hóa</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1812,7 +1812,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Tự động đóng sau một tháng?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox có thể đóng các thẻ bạn không xem trong tháng qua.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox có thể đóng các thẻ bạn không xem trong tháng qua.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">BẬT TỰ ĐỘNG ĐÓNG</string>
 
@@ -1820,7 +1820,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Tự động đóng đã bật</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Đặt các liên kết từ trang web, email và tin nhắn để tự động mở trong Firefox.</string>
+    <string name="default_browser_experiment_card_text">Đặt các liên kết từ trang web, email và tin nhắn để tự động mở trong Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Xóa</string>
@@ -1844,7 +1844,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Được cung cấp bởi Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Một phần của gia đình Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Một phần của gia đình Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Tìm hiểu thêm</string>
 
@@ -1855,5 +1855,5 @@
     <string name="experiments_snackbar">Bật telemetry để gửi dữ liệu.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Đi đến cài đặt</string>
-    <string name="firefox_suggest_header">Đề xuất của Firefox</string>
+    <string name="firefox_suggest_header">Đề xuất của Waterfox</string>
 </resources>

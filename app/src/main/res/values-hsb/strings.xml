@@ -266,8 +266,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Wotwołće znowa swoje najnowše pytanja ze swojeje startoweje strony a rajtarkow.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Waša personalizowana startowa strona Firefox nětko wosnadnja tam pokročować, hdźež sće přestał. Namakajće swoje najnowše rajtarki, zapołožki a pytanske wuslědki.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Waša personalizowana startowa strona Waterfox nětko wosnadnja tam pokročować, hdźež sće přestał. Namakajće swoje najnowše rajtarki, zapołožki a pytanske wuslědki.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -339,12 +339,12 @@
     <string name="errorpage_httpsonly_message_summary">Je pak tež móžno, zo so wo nadběh jedna. Jeli websydło najebać toho wopytujeće, wy njeměł sensibelne informacije zapodać. Jeli pokročujeće, so modus Jenož-HTTPS nachwilu za sydło znjemóžni.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Bjezbarjernosć</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Swójski kontowy serwer Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Swójski kontowy serwer Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Swójski synchronizowanski serwer</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Kontowy resp. synchronizowanski serwer Firefox je so změnił. Nałoženje so kónči, zo bychu so změny nałožili…</string>
+    <string name="toast_override_fxa_sync_server_done">Kontowy resp. synchronizowanski serwer Waterfox je so změnił. Nałoženje so kónči, zo bychu so změny nałožili…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Konto</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -358,11 +358,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Přiměrić</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Synchronizujće zapołožki, historiju a wjace ze swojim kontom Firefox</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Synchronizujće zapołožki, historiju a wjace ze swojim kontom Waterfox</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Zregistrujće so, zo byšće rajtarki, zapołožki, hesła a dalše synchronizował.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Konto Firefox</string>
+    <string name="preferences_account_default_name">Konto Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Zaso zwjazać, zo by ze synchronizaciju pokročowało</string>
     <!-- Preference for language -->
@@ -445,11 +445,11 @@
     <string name="wallpaper_updated_snackbar_action">Pokazać</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Podótkńće so loga startoweje strony Firefox, zo byšće pozadkowy wobraz změnił</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Podótkńće so loga startoweje strony Waterfox, zo byšće pozadkowy wobraz změnił</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo Firefox - pozadkowy wobraz změnić, tłóčatko</string>
+    <string name="wallpaper_logo_content_description">Logo Waterfox - pozadkowy wobraz změnić, tłóčatko</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -502,7 +502,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Přijate rajtarki</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Zdźělenki za rajtarki su so z druhich gratow Firefox přijali.</string>
+    <string name="fxa_received_tab_channel_description">Zdźělenki za rajtarki su so z druhich gratow Waterfox přijali.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Rajtark přijaty</string>
     <!-- %s is the device name -->
@@ -674,7 +674,7 @@
     <string name="studies_remove">Wotstronić</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktiwny</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s móže hdys a hdys studije instalować a přewjesć.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Dalše informacije</string>
@@ -798,7 +798,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Přizjewić</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Abo załožće konto Firefox, zo byšće synchronizowanje započał</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Abo załožće konto Waterfox, zo byšće synchronizowanje započał</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1050,7 +1050,7 @@
     <string name="sync_connect_device">Dalši grat zwjazać</string>
 
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Zo byšće rajtark pósłał, přizjewće so pola Firefox na znajmjeńša jednym dalšim graće.</string>
+    <string name="sync_connect_device_dialog">Zo byšće rajtark pósłał, přizjewće so pola Waterfox na znajmjeńša jednym dalšim graće.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Sym zrozumił</string>
     <!-- Share error message -->
@@ -1201,14 +1201,14 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Witajće k %s!</string>
 
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Firefox mjez gratami synchronizować</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Waterfox mjez gratami synchronizować</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Přinjesće zapołožki, historiju a hesła k %1$s na tutym graće.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registrować</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Synchronizacija je zmóžnjena</string>
@@ -1231,7 +1231,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Waša priwatnosć</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Sym %s wuwili, zo bychmy wam kontrolu wo tym dali, što online dźěliće a što z nami.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Čitajće naš zdźělenku priwatnosće</string>
@@ -1265,16 +1265,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Kod skenować</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Wočińće Firefox na swojim ličaku a dźiće k <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Wočińće Waterfox na swojim ličaku a dźiće k <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Hotowy za skenowanje</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Přizjewće so ze swojej kameru</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">E-mejl město toho wužiwać</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Žane konto? <u>Załožće tajke</u>, zo byšće Firefox mjez gratami synchronizował.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Žane konto? <u>Załožće tajke</u>, zo byšće Waterfox mjez gratami synchronizował.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s přestanje z wašim kontom synchronizować, ale njezhaša přehladowanske daty na tutym graće.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Zwisk dźělić</string>
@@ -1436,9 +1436,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Před składowanjom so prašeć</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Ženje njeskładować</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">W %1$s awtomatisce wupjelnić</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Wužiwarske mjena a hesła na websydłach zasadźić a składować, mjeztym zo %1$s wužiwaće.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">W druhich nałoženjach awtomatisce wupjelnić</string>
@@ -1774,13 +1774,13 @@
     <string name="synced_tabs_connect_another_device">Z druhim gratom zwjazać.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Prošu awtentifikujće znowa.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Prošu zmóžńće synchronizowanje rajtarkow.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Nimaće žane wočinjene rajtarki w Firefox na swojich druhich gratach.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Nimaće žane wočinjene rajtarki w Waterfox na swojich druhich gratach.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Wobhladajće sej lisćinu rajtarkow ze swojich gratow.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Pola Sync přizjewić</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1832,7 +1832,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Po jednym měsacu awtomatisce začinić?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox móže rajtarki začinić, kotrež njejsće sej zańdźeny měsac wobhladał.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox móže rajtarki začinić, kotrež njejsće sej zańdźeny měsac wobhladał.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AWTOMATISKE ZAČINJENJE ZMÓŽNIĆ</string>
 
@@ -1840,7 +1840,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Awtomatiske začinjenje zmóžnjene</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Nastajće wotkazy z websydłow, mejlkow a powěsćow, zo bychu so awtomatisce we Firefox wočinili.</string>
+    <string name="default_browser_experiment_card_text">Nastajće wotkazy z websydłow, mejlkow a powěsćow, zo bychu so awtomatisce we Waterfox wočinili.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Wotstronić</string>
@@ -1864,7 +1864,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Wot Pocket spěchowany</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Dźěl swójby Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Dźěl swójby Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Dalše informacije</string>
 
@@ -1875,5 +1875,5 @@
     <string name="experiments_snackbar">Zmóžńće telemetriju, zo byšće daty słał.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">K nastajenjam</string>
-    <string name="firefox_suggest_header">Namjety Firefox</string>
+    <string name="firefox_suggest_header">Namjety Waterfox</string>
 </resources>

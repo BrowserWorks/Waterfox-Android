@@ -260,8 +260,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Remalfermu viajn lastajn serĉojn de via eka paĝo aŭ langetoj.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Via personecigita eka paĝo de Firefox igas pli facila la taskon repreni vian retumon kie vi ĝin interrompis. Trovu viajn ĵusajn langetojn, legosignojn kaj serĉajn rezultojn.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Via personecigita eka paĝo de Waterfox igas pli facila la taskon repreni vian retumon kie vi ĝin interrompis. Trovu viajn ĵusajn langetojn, legosignojn kaj serĉajn rezultojn.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -333,12 +333,12 @@
     <string name="errorpage_httpsonly_message_summary">Tamen ankaŭ eblas, ke iu provas interkapti viajn datumojn. Se vi daŭrigas, ne enigu iun ajn privatan datumon, cetere la HTTPS-nura reĝimo estos portempe malŝaltita por la vizitota retejo.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Alirebleco</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Personecigita servilo de konto de Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Personecigita servilo de konto de Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Personecigita servilo de spegulado</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">La serviloj de Konto de Firefox Account/Spegulado estis ŝanĝitaj. La programo nun finiĝos por apliki la ŝanĝojn…</string>
+    <string name="toast_override_fxa_sync_server_done">La serviloj de Konto de Waterfox Account/Spegulado estis ŝanĝitaj. La programo nun finiĝos por apliki la ŝanĝojn…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Konto</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -352,11 +352,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personecigi</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Spegulu legosignojn, historion kaj aliajn aferojn per via konto de Firefox</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Spegulu legosignojn, historion kaj aliajn aferojn per via konto de Waterfox</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Komencu seancon por speguli langetojn, legosignojn, pasvortojn kaj pli.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Konto de Firefox</string>
+    <string name="preferences_account_default_name">Konto de Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Rekonektiĝu por daŭrigi la speguladon</string>
     <!-- Preference for language -->
@@ -438,10 +438,10 @@
     <string name="wallpaper_updated_snackbar_action">Vidi</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Ŝanĝi ekranfonon per tuŝeto de la emblemo de Firefox en la eka paĝo</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Ŝanĝi ekranfonon per tuŝeto de la emblemo de Waterfox en la eka paĝo</string>
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Emblemo de Firefox – ŝanĝi ekranfonon, butono</string>
+    <string name="wallpaper_logo_content_description">Emblemo de Waterfox – ŝanĝi ekranfonon, butono</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -494,7 +494,7 @@
     <string name="fxa_received_tab_channel_name">Ricevitaj langetoj</string>
 
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Sciigoj por langetoj ricevitaj el aliaj aparatoj Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Sciigoj por langetoj ricevitaj el aliaj aparatoj Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Langeto ricevita</string>
     <!-- %s is the device name -->
@@ -663,7 +663,7 @@
     <string name="studies_remove">Forigi</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktiva</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s povas de tempo al tempo instali kaj fari studojn.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Pli da informo</string>
@@ -1035,7 +1035,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Konekti alian aparaton</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Por sendi langeton, komencu seancon en Firefox en almenaŭ unu alia aparato.</string>
+    <string name="sync_connect_device_dialog">Por sendi langeton, komencu seancon en Waterfox en almenaŭ unu alia aparato.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Mi komprenis</string>
     <!-- Share error message -->
@@ -1179,13 +1179,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Bonvenon al %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Speguli Firefox inter aparatoj</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Speguli Waterfox inter aparatoj</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Porti legosignojn, historion kaj pasvortojn al %1$s en tiu ĉi aparato.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registriĝi</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Spegulado estas ŝaltita</string>
@@ -1209,7 +1209,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Via privateco</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Ni kreis %s por doni al vi la eblon plene regi kion vi dividas en la reto kaj kion vi dividas kun ni.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Legu nian rimarkon pri privateco</string>
@@ -1243,16 +1243,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Skani la kodon</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[En via komputilo malfermu Firefox kaj vizitu <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[En via komputilo malfermu Waterfox kaj vizitu <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Preta skani</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Komencu seancon per via filmilo</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Anstataŭe uzi retpoŝton</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Ĉu vi ne havas konton? <u>Kreu ĝin</u> por speguli Firefox inter aparatoj.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Ĉu vi ne havas konton? <u>Kreu ĝin</u> por speguli Waterfox inter aparatoj.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ne plu spegulos vian konton, sed ĝi ne forigos iun ajn el viaj retumaj datumoj en tiu ĉi aparato.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Malkonekti</string>
@@ -1417,9 +1417,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Neniam konservi</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Aŭtomata plenigo de %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Plenigi kaj konservi nomojn de uzanto kaj pasvortojn en retejoj dum vi uzas %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Aŭtomata plenigo en aliaj programoj</string>
@@ -1755,13 +1755,13 @@
 
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Bonvolu legitimiĝu denove.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Bonvolu aktivigi speguladon de langetoj.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">Vi ne havas iun ajn langeton malfermita en viaj aliaj aparatoj.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Vidi liston de langetoj el viaj aliaj aparatoj.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Komenci seancon por speguli</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1815,14 +1815,14 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Ĉu aŭtomate fermi post unu monato?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox aŭtomate fermos langetojn, kiuj ne estis vizititaj dum la lasta monato.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox aŭtomate fermos langetojn, kiuj ne estis vizititaj dum la lasta monato.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ŜALTI AŬTOMATAN FERMON</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">Aŭtomata fermo aktivita</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Aŭtomate malfermi ligilon en retejoj, retpoŝtoj kaj mesaĝoj per Firefox.</string>
+    <string name="default_browser_experiment_card_text">Aŭtomate malfermi ligilon en retejoj, retpoŝtoj kaj mesaĝoj per Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Forigi</string>
@@ -1846,7 +1846,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Pelata de Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Parto de la familio de Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Parto de la familio de Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Pli da informo</string>
 

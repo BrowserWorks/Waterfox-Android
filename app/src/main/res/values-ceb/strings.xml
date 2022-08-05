@@ -89,8 +89,8 @@
 
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string name="open_in_app_cfr_info_message">Ma-set nimo ang Firefox nga automatic mo-abri ug link sa mga apps.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">Ma-set nimo ang Waterfox nga automatic mo-abri ug link sa mga apps.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Adto sa settings</string>
     <!-- Text for the negative action button -->
@@ -273,12 +273,12 @@
     <string name="search_engine_suggestions_description">Pangitaa pinaagi sa address bar</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_title_2">Mga kabag-ohan sa Firefox</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">Mga kabag-ohan sa Waterfox</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Gipasayon na karon ang pag-balik kung asa ka mibiya.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_section_home_title_2">Personal nga Firefox homepage</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Personal nga Waterfox homepage</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Adto sa imong mga abri nga tab, mga bookmark, ug browsing history.</string>
     <!-- Onboarding home screen dialog description text for the tab tray section. -->
@@ -290,12 +290,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Bisitaha imong bag-ong mga search gikan sa imong homepage ug mga tab.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Ang imong personal nga Firefox homepage karon sayon na mopadayon kung asa ka nibiya. Pangitaa imong bag-ong mga tab, mga bookmark, ug mga search result.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Ang imong personal nga Waterfox homepage karon sayon na mopadayon kung asa ka nibiya. Pangitaa imong bag-ong mga tab, mga bookmark, ug mga search result.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description">Abri ug bag-ong Firefox tab</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string name="search_widget_content_description">Abri ug bag-ong Waterfox tab</string>
 
 
     <!-- Text preview for smaller sized widgets -->
@@ -363,12 +363,12 @@
     <string name="preferences_add_private_browsing_shortcut">Dugang ug shortcut sa private browsing</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility"></string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Custom nga server sa Firefox Account</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Custom nga server sa Waterfox Account</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Custom nga Sync server</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Nausab ang Firefox Account/Sync server. Kamulong gina-quit ang application para maapply ang nausab …</string>
+    <string name="toast_override_fxa_sync_server_done">Nausab ang Waterfox Account/Sync server. Kamulong gina-quit ang application para maapply ang nausab …</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account"></string>
     <!-- Preference shown on banner to sign into account -->
@@ -384,7 +384,7 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize"></string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">i-Sync ang mga bookmark, history, ug uban pa sa imong Firefox Account</string>
+    <string name="preferences_sign_in_description">i-Sync ang mga bookmark, history, ug uban pa sa imong Waterfox Account</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name"></string>
     <!-- Preference text for account title when there was an error syncing FxA -->
@@ -507,7 +507,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Nadawat nga mga tab</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Mga pahibalo sa mga tab nga nadawat gikan sa ubang mga Firefox device.</string>
+    <string name="fxa_received_tab_channel_description">Mga pahibalo sa mga tab nga nadawat gikan sa ubang mga Waterfox device.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Tab nga nadawat</string>
     <!-- When multiple tabs have been received -->

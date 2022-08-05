@@ -262,8 +262,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Վերանայեք ձեր վերջին որոնումները ձեր տնային էջից և ներդիրներից:</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Ձեր անհատականացված Firefox-ի տնային էջը այժմ հեշտացնում է աշխատանքը շարունակելու այն կետից, որում կանգնել եք: Գտեք ձեր վերջին ներդիրները, էջանիշերը և որոնման արդյունքները:</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Ձեր անհատականացված Waterfox-ի տնային էջը այժմ հեշտացնում է աշխատանքը շարունակելու այն կետից, որում կանգնել եք: Գտեք ձեր վերջին ներդիրները, էջանիշերը և որոնման արդյունքները:</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -334,12 +334,12 @@
     <string name="errorpage_httpsonly_message_summary">Այնուամենայնիվ, հնարավոր է նաև, որ հարձակվող է ներգրավված: Եթե շարունակեք այցելել կայք, չպետք է մուտքագրեք որևէ զգայուն տեղեկատվություն: Եթե շարունակեք, ապա կայքի համար ժամանակավորապես կանջատվի միայն HTTPS-ի ռեժիմը:</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Մատչելիություն</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Ընտրովի Firefox հաշվի սերվեր</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Ընտրովի Waterfox հաշվի սերվեր</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Ընտրովի համաժամեցման սերվեր</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox հաշիվը / համաժամեցման սերվերը փոփոխված է: Հայտը դադարեցվում է՝ փոփոխությունները գործադրելու համար…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox հաշիվը / համաժամեցման սերվերը փոփոխված է: Հայտը դադարեցվում է՝ փոփոխությունները գործադրելու համար…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Հաշիվ</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -353,11 +353,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Հարմարեցնել</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Համաժամեցրեք էջանիշները, պատմությունը և ավելին ձեր Firefox հաշվի հետ</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Համաժամեցրեք էջանիշները, պատմությունը և ավելին ձեր Waterfox հաշվի հետ</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Մուտք գործեք՝ ներդիրները, էջանիշերը, գաղտնաբառերը և ավելին համաժամեցնելու համար:</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox-ի հաշիվ</string>
+    <string name="preferences_account_default_name">Waterfox-ի հաշիվ</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Կրկին կապակցվեք՝ համաժամեցումը վերսկսելու համար</string>
     <!-- Preference for language -->
@@ -440,11 +440,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Տեսք</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Փոխեք պաստառը՝ կտտացնելով Firefox-ի գլխավոր էջի պատկերանշանին</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Փոխեք պաստառը՝ կտտացնելով Waterfox-ի գլխավոր էջի պատկերանշանին</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox լոգոն` փոխել պաստառը, կոճակը</string>
+    <string name="wallpaper_logo_content_description">Waterfox լոգոն` փոխել պաստառը, կոճակը</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -496,7 +496,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Ստացված ներդիրներ</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Ծանուցումներ Firefox-ի այլ սարքերից ստացված ներդիրների վերաբերյալ:</string>
+    <string name="fxa_received_tab_channel_description">Ծանուցումներ Waterfox-ի այլ սարքերից ստացված ներդիրների վերաբերյալ:</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Ներդիր է ստացվել</string>
     <!-- %s is the device name -->
@@ -664,7 +664,7 @@
     <string name="studies_remove">Հեռացնել</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Գործուն</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s-ը կարող է ժամանակ առ ժամանակ տեղադրել և աշխատեցնել ուսումնասիրություններ:</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Իմանալ ավելին</string>
@@ -785,7 +785,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Մուտք գործել</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Կամ ստեղծեք Firefox հաշիվ՝ համաժամացումը սկսելու համար</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Կամ ստեղծեք Waterfox հաշիվ՝ համաժամացումը սկսելու համար</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1039,7 +1039,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Կապակցվել այլ սարքի</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Ներդիր ուղարկելու համար մուտք գործեք Firefox առնվազն մեկ այլ սարքի վրա:</string>
+    <string name="sync_connect_device_dialog">Ներդիր ուղարկելու համար մուտք գործեք Waterfox առնվազն մեկ այլ սարքի վրա:</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Հասկացա</string>
     <!-- Share error message -->
@@ -1191,14 +1191,14 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Բարի գալուստ %s:</string>
 
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Համաժամեցնել Firefox-ը</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Համաժամեցնել Waterfox-ը</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Այս սարքում բերեք էջանիշները, պատմությունը և գաղտնաբառերը %1$s-ում:</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Գրանցվել</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Համաժամեցումը միացված է</string>
@@ -1222,7 +1222,7 @@
     <string name="onboarding_privacy_notice_header">Ձեր գաղտնիությունը</string>
 
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Մենք պատրաստել ենք %s-ը, որպեսզի դուք կառավարեք այն, ինչ համօգտագործում եք առցանց և թե ինչով եք կիսվում մեզ հետ:</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Կարդացեք մեր գաղտնիության ծանուցումը</string>
@@ -1255,16 +1255,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Սկանավորել կոդը</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Ձեր համակարգչում բացեք Firefox-ը և անցեք <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Ձեր համակարգչում բացեք Waterfox-ը և անցեք <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Պատրաստ է սկանավորել</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Մուտք գործեք ձեր տեսախցիկի հետ</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Փոխարենը օգտ. էլ. փոստ</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Չունե՞ք հաշիվ: <u>Ստեղծեք նորը</u>՝ Firefox-ը տարբեր սարքերի միջև համաժամեցնելու համար:]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Չունե՞ք հաշիվ: <u>Ստեղծեք նորը</u>՝ Waterfox-ը տարբեր սարքերի միջև համաժամեցնելու համար:]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s-ը կդադարեցնի համաժամացումը ձեր հաշվի հետ, բայց չի ջնջի այս սարքի ձեր զննարկման որևէ տվյալ։</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Ապակապակցել</string>
@@ -1427,9 +1427,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Հարցնել պահպանելիս</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Երբեք չպահպանել</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Ինքնալցնել %1$s-ում</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s-ը օգտագործելիս կայքերում լցրեք և պահեք օգտվողի անունները և գաղտնաբառերը:</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Ինքնալցնել այլ հավելվածներում</string>
@@ -1759,14 +1759,14 @@
     <string name="synced_tabs_connect_another_device">Կապակցել այլ սարքի:</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Խնդրում ենք վերահաստատել:</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Խնդրում ենք միացնել ներդիրի համաժամացումը:</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Դուք չունեք բացված որևէ ներդիր Firefox-ի ձեր մյուս սարքերում:</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Դուք չունեք բացված որևէ ներդիր Waterfox-ի ձեր մյուս սարքերում:</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Դիտեք այլ սարքերում ձեր ներդիրների ցանկը:</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Մուտք գործեք՝ համաժամեցնելու համար</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1818,7 +1818,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Ինքնափակե՞լ մեկ ամսից:</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox-ը կարող է փակել ներդիրները, որոնք չեք դիտել վերջին ամսում:</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox-ը կարող է փակել ներդիրները, որոնք չեք դիտել վերջին ամսում:</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ՄԻԱՑՆԵԼ ԻՆՔՆԱՓԱԿՈՒՄԸ</string>
 
@@ -1826,7 +1826,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Ինքնափակումը միացված է</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Կայեք հղումներ կայքերից, էլ. նամակներից և հաղորդագրություններից, որոնք ինքնաբար կերպով կբացվեն Firefox-ում:</string>
+    <string name="default_browser_experiment_card_text">Կայեք հղումներ կայքերից, էլ. նամակներից և հաղորդագրություններից, որոնք ինքնաբար կերպով կբացվեն Waterfox-ում:</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Հեռացնել</string>
@@ -1850,7 +1850,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Pocket-ի կողմից:</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox ընտանիքի մի մասը: %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox ընտանիքի մի մասը: %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Իմանալ ավելին</string>
 
@@ -1861,5 +1861,5 @@
     <string name="experiments_snackbar">Միացնել հեռաչափությունը՝ տվյալներ ուղարկելու համար:</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Անցնել Կարգավորումներին</string>
-    <string name="firefox_suggest_header">Firefox-ի առաջարկ</string>
+    <string name="firefox_suggest_header">Waterfox-ի առաջարկ</string>
 </resources>

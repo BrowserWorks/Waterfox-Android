@@ -270,8 +270,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ales rzu ɣer yinadiyen ineggura seg usebtar-inek•inem d waccaren.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Asebter-inek•inem n Firefox udmawan yettarra tura fessus ugar akemmel seg wanda akken i tḥebseḍ. Af accaren-ik•im n melmi kan, ticraḍ n yisebtar, d yigmaḍ n unadi.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Asebter-inek•inem n Waterfox udmawan yettarra tura fessus ugar akemmel seg wanda akken i tḥebseḍ. Af accaren-ik•im n melmi kan, ticraḍ n yisebtar, d yigmaḍ n unadi.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -343,12 +343,12 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="errorpage_httpsonly_message_summary">Yezmer daɣen ad tili d aẓḍam. Ma yella tkemmleḍ ɣer usmel-a web, ur ilaq ara akk ad taruḍ agbur amḥulfu. Ma yella tkemmleḍ, f askar HTTPS kan ara yensen i kra n wakud i usmel-a.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Tuffart</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Sagen aqeddac n umiḍan Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Sagen aqeddac n umiḍan Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Sagen aeddac n umtawi</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Amiḍan Firefox/Aqeddac n umtawi ittwasnifel, Ffeɣ seg usnas akken ad iddu usnifel…</string>
+    <string name="toast_override_fxa_sync_server_done">Amiḍan Waterfox/Aqeddac n umtawi ittwasnifel, Ffeɣ seg usnas akken ad iddu usnifel…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Amiḍan</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -362,11 +362,11 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Sagen</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Mtawi ticraḍ n yisebtar, azray, awalen uffiren, akked waṭas-nniḍen s umiḍan n Firefox</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Mtawi ticraḍ n yisebtar, azray, awalen uffiren, akked waṭas-nniḍen s umiḍan n Waterfox</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Qqen ɣer waccaren yemtawan, ticraḍ n yisebtar, awalen uffiren d wugar n wayen-nniḍen.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Amiḍan Firefox</string>
+    <string name="preferences_account_default_name">Amiḍan Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Ales tuqqna akken ad ikemmel umtawi</string>
     <!-- Preference for language -->
@@ -452,11 +452,11 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="wallpaper_updated_snackbar_action">Wali</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Beddel tugna n ugilal s tira n ulugu n usebter agejdan n Firefox</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Beddel tugna n ugilal s tira n ulugu n usebter agejdan n Waterfox</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Alogo Firefox - beddel agilal, taqeffalt</string>
+    <string name="wallpaper_logo_content_description">Alogo Waterfox - beddel agilal, taqeffalt</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -509,7 +509,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Accaren yettwaremsen</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Ilɣa n yiccaren yettwaremsen seg Firefox ɣef yibenlan-nniḍen.</string>
+    <string name="fxa_received_tab_channel_description">Ilɣa n yiccaren yettwaremsen seg Waterfox ɣef yibenlan-nniḍen.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Iccaren yettwarmesen</string>
     <!-- %s is the device name -->
@@ -682,7 +682,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="studies_remove">Kkes</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Rmed</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s yezmer ad isebded yerna ad iseddu leqraya seg wakud ɣer wayeḍ.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Issin ugar</string>
@@ -1057,7 +1057,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="sync_connect_device">Qqen ibenk-nniḍen</string>
 
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Akken ad tazneḍ iccer, qqen ɣer Firefox xarsum ɣef yiwen n yibenk.</string>
+    <string name="sync_connect_device_dialog">Akken ad tazneḍ iccer, qqen ɣer Waterfox xarsum ɣef yiwen n yibenk.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Awi-t</string>
     <!-- Share error message -->
@@ -1208,13 +1208,13 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Ansuf ɣer %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Mtawi Firefox gar yibenkan</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Mtawi Waterfox gar yibenkan</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Awi-d ticraḍ n yisebtar, amazray, d wawalen uffiren ɣer %1$s deg yibenk-a.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Jerred</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Amtawi yermed</string>
@@ -1238,7 +1238,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="onboarding_privacy_notice_header">Tabaḍnit inek/m</string>
 
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Nfeṣṣel %si w akken ad nerr gar ifassen-ik·im ayen i tbeṭṭuḍ srid aked wayen tbeṭṭuḍ yid-neɣ.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Ɣer tasertit-nneɣ n tbaḍnit</string>
@@ -1271,16 +1271,16 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Semḍen tangalt</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Deg uselkim-ik, ldi Firefox sakin kcem ɣer <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Deg uselkim-ik, ldi Waterfox sakin kcem ɣer <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ihegga i uḍummu</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Qqen s tkamirat-ik</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Seqdec tansa n yimayl deg umḍiq-is</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Ulac amiḍan? <u>Rnu yiwen</u> i umtaw n Firefox gar yibenkan.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Ulac amiḍan? <u>Rnu yiwen</u> i umtaw n Waterfox gar yibenkan.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ad iseḥbes amtawi d umiḍan-inek, acukan ur ittekkes ara isefka-inek n tunigin seg uselkim-a.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Ffeɣ</string>
@@ -1445,9 +1445,9 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_passwords_save_logins_ask_to_save">Suter asekles</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Urǧin sekles</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Ččar s wudem awurman %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Ččar syen sekles ismawen n useqdac d wawalen uffiren ma tesseqdaceḍ %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Ččar s wudem awurman deg yisnasen-nniḍen</string>
@@ -1781,14 +1781,14 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="synced_tabs_connect_another_device">Qqen ibenk-nniḍen.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Ma ulac aɣilif, ales asesteb.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Ma ulac aɣilif, rmed amtawi n waccaren.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Ulac ɣur-k accarren yeldin deg Firefox deg yibenkan-inek-nniḍen.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Ulac ɣur-k accarren yeldin deg Waterfox deg yibenkan-inek-nniḍen.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Wali tabdart n waccaren seg yibenkan-ik-nniḍen.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Kcem akken ad yemtawi</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1842,7 +1842,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Amdal awurman seld yiwen wayyur?</string>
 
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox izmer ad imdel accaren i twalaḍ aggur iɛeddan.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox izmer ad imdel accaren i twalaḍ aggur iɛeddan.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">RMED AMDAL AWURMAN</string>
 
@@ -1850,7 +1850,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="inactive_tabs_auto_close_message_snackbar">Amdal awurman yermed</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Sbadu iseɣwan seg yismal web, seg yimaylen d yiznan i twaledyawt s wudem awurman deg Firefox.</string>
+    <string name="default_browser_experiment_card_text">Sbadu iseɣwan seg yismal web, seg yimaylen d yiznan i twaledyawt s wudem awurman deg Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Kkes</string>
@@ -1874,7 +1874,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Sɣur Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">D aḥric seg twacult Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">D aḥric seg twacult Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Issin ugar</string>
 
@@ -1885,5 +1885,5 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="experiments_snackbar">Rmed tilisɣelt i tuzna n yisefka.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Ddu ɣer yiɣewwaren</string>
-    <string name="firefox_suggest_header">Firefox Suggest</string>
+    <string name="firefox_suggest_header">Waterfox Suggest</string>
 </resources>

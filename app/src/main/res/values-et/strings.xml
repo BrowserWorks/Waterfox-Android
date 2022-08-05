@@ -267,7 +267,7 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Külasta oma viimaseid otsinguid uuesti avalehelt või kaartidelt.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Isikupärastatud Firefoxi avaleht teeb lihtsamaks jätkamise sealt, kus pooleli jäi. Leia oma hiljutised kaardid, järjehoidjad ja otsingutulemused.</string>
 
     <!-- Search Widget -->
@@ -341,7 +341,7 @@
     <string name="errorpage_httpsonly_message_summary">Siiski on võimalik, et sellega on seotud ka ründaja. Saidi külastamise jätkamisel ära sisesta tundliku teavet. Jätkamisel lülitatakse saidi jaoks ajutiselt ainult HTTPSi režiim välja.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Hõlbustus</string>
-    <!-- Preference to override the Firefox Account server -->
+    <!-- Preference to override the Waterfox Account server -->
     <string name="preferences_override_fxa_server">Kohandatud Firefoxi konto server</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Kohandatud sünkroonimise server</string>
@@ -671,7 +671,7 @@
     <string name="studies_remove">Eemalda</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Praegu toimuvad</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s võib aegajalt paigaldada ja käivitada uuringuid.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Rohkem teavet</string>
@@ -1182,14 +1182,14 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Tere tulemast %si!</string>
 
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sünkroniseeri Firefox seadmete vahel</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sünkroniseeri Waterfox seadmete vahel</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Too järjehoidjad, ajalugu ja paroolid %1$si selles seadmes.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registreeru</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sync on sisse lülitatud</string>
@@ -1213,7 +1213,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Sinu privaatsus</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Me oleme %si loonud nii, et sulle jääks võimalus otsustada, mida sa jagad võrgus ja mida sa jagad meiega.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Loe meie privaatsuspoliitikat</string>
@@ -1247,16 +1247,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Koodi skannimine</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Ava Firefox oma arvutis ja mine aadressile <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Ava Waterfox oma arvutis ja mine aadressile <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Skannimiseks valmis</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Logi sisse oma kaameraga</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Kasuta selle asemel e-posti aadressi</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
     <string name="sign_in_create_account_text"><![CDATA[Pole kontot? <u>Loo üks</u>, et sünkroniseerida Firefoxi seadmete vahel.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s lõpetab sinu kontoga sünkroniseerimise, aga ei kustuta lehitsemise andmeid sellest seadmest.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Ühenda lahti</string>
@@ -1422,9 +1422,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Ei salvestata kunagi</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Täidetakse automaatselt %1$sis</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$si kasutamisel täidetakse ja salvestatakse saitide kasutajanimesid ja paroole.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Täidetakse automaatselt teistes äppides</string>
@@ -1761,13 +1761,13 @@
     <string name="synced_tabs_connect_another_device">Ühenda teine seade.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Palun autendi uuesti.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Palun luba kaartide sünkroniseerimine.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">Sul pole teistes seadmetes olevates Firefoxides kaarte avatud.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Vaata teistes seadmetes avatud kaartide nimekirja.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Sünkroniseerimiseks logi sisse</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1822,14 +1822,14 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Kas sulgeda automaatselt kuu aja pärast?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox saab sulgeda kaardid, mida sa pole viimase kuu jooksul vaadanud.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox saab sulgeda kaardid, mida sa pole viimase kuu jooksul vaadanud.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">LÜLITA SISSE AUTOMAATNE SULGEMINE</string>
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">Automaatne sulgemine on lubatud</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Määra Firefox automaatselt avama linke, e-posti ja sõnumeid.</string>
+    <string name="default_browser_experiment_card_text">Määra Waterfox automaatselt avama linke, e-posti ja sõnumeid.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Eemalda</string>

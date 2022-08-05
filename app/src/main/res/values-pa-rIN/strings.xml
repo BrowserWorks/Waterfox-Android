@@ -273,8 +273,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">ਆਪਣੇ ਮੁੱਖ-ਸਫ਼ੇ ਅਤੇ ਟੈਬਾਂ ਤੋਂ ਆਪਣੀਆਂ ਸੱਜਰੀਆਂ ਖੋਜਾਂ ਨੂੰ ਮੁੜ-ਖੋਲ੍ਹੋ।</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">ਤੁਹਾਡੇ ਆਪਣੇ ਬਣਾਏ Firefox ਮੁੱਖ-ਸਫ਼ੇ ਨੇ ਹੁਣ ਜਿੱਥੇ ਤੁਸੀਂ ਛੱਡ ਕੇ ਗਏ ਸੀ, ਉਥੋਂ ਹੀ ਸ਼ੁਰੂ ਕਰਨਾ ਸੌਖਾ ਬਣਾ ਦਿੱਤਾ ਹੈ। ਆਪਣੀਆਂ ਸੱਜਰੀਆਂ ਟੈਬਾਂ, ਬੁੱਕਮਾਰਕ ਅਤੇ ਖੋਜ ਨਤੀਜੇ ਲੱਭੋ।</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">ਤੁਹਾਡੇ ਆਪਣੇ ਬਣਾਏ Waterfox ਮੁੱਖ-ਸਫ਼ੇ ਨੇ ਹੁਣ ਜਿੱਥੇ ਤੁਸੀਂ ਛੱਡ ਕੇ ਗਏ ਸੀ, ਉਥੋਂ ਹੀ ਸ਼ੁਰੂ ਕਰਨਾ ਸੌਖਾ ਬਣਾ ਦਿੱਤਾ ਹੈ। ਆਪਣੀਆਂ ਸੱਜਰੀਆਂ ਟੈਬਾਂ, ਬੁੱਕਮਾਰਕ ਅਤੇ ਖੋਜ ਨਤੀਜੇ ਲੱਭੋ।</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -345,12 +345,12 @@
     <string name="errorpage_httpsonly_message_summary">ਪਰ ਇਹ ਵੀ ਸੰਭਵ ਹੈ ਕਿ ਹਮਲਾਵਰ ਸ਼ਾਮਲ ਹੋਵੇ। ਜੇ ਤੁਸੀਂ ਵੈੱਬਸਾਈਟ ਨਾਲ ਜਾਰੀ ਰੱਖਣਾ ਹੈ ਤਾਂ ਤੁਹਾਨੂੰ ਕੋਈ ਵੀ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਨਹੀਂ ਭਰਨੀ ਚਾਹੀਦੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਹੈ ਤਾਂ ਇਸ ਸਾਈਟ ਲਈ ਸਿਰਫ਼-HTTPS ਮੋਡ ਨੂੰ ਆਰਜ਼ੀ ਤੌਰ ਉੱਤੇ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ।</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ਅਸੈਸਬਿਲਟੀ</string>
-    <!-- Preference to override the Firefox Account server -->
+    <!-- Preference to override the Waterfox Account server -->
     <string name="preferences_override_fxa_server">ਕਸਟਮ ਫਾਇਰਫਾਕਸ ਖਾਤਾ ਸਰਵਰ</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">ਪਸੰਦੀਦਾ ਸਿੰਕ ਸਰਵਰ</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox ਖਾਤਾ/ਸਿੰਕ ਸਰਵਰ ਸੋਧਿਆ ਗਿਆ ਹੈ। ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਕਰਨ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਤੋਂ ਬਾਹਰ ਜਾਓ…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox ਖਾਤਾ/ਸਿੰਕ ਸਰਵਰ ਸੋਧਿਆ ਗਿਆ ਹੈ। ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਕਰਨ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਤੋਂ ਬਾਹਰ ਜਾਓ…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">ਖਾਤਾ</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -453,11 +453,11 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">ਵੇਖੋ</string>
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Firefox ਮੁੱਖ-ਸਫ਼ੇ ਲੋਗੋ ਨੂੰ ਛੂਹ ਕੇ ਵਾਲਪੇਪਰ ਬਦਲੋ</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox ਮੁੱਖ-ਸਫ਼ੇ ਲੋਗੋ ਨੂੰ ਛੂਹ ਕੇ ਵਾਲਪੇਪਰ ਬਦਲੋ</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox ਲੋਗੋ - ਵਾਲਪੇਪਰ ,ਬਟਨ ਬਦਲੋ</string>
+    <string name="wallpaper_logo_content_description">Waterfox ਲੋਗੋ - ਵਾਲਪੇਪਰ ,ਬਟਨ ਬਦਲੋ</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -684,7 +684,7 @@
     <string name="studies_remove">ਹਟਾਓ</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">ਸਰਗਰਮ</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s ਸਮੇਂ ਸਮੇਂ ਉੱਤੇ ਅਧਿਐਨ ਇੰਸਟਾਲ ਕਰ ਤੇ ਚਲਾ ਸਕਦਾ ਹੈ।</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ਹੋਰ ਸਿੱਖੋ</string>
@@ -807,7 +807,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">ਸਾਇਨ ਇਨ</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>ਜਾਂ ਸਿੰਕ ਕਰਨ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ Firefox ਖਾਤਾ ਬਣਾਓ</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>ਜਾਂ ਸਿੰਕ ਕਰਨ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ Waterfox ਖਾਤਾ ਬਣਾਓ</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1215,14 +1215,14 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ Firefox ਸਿੰਕ ਕਰੋ</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ Waterfox ਸਿੰਕ ਕਰੋ</string>
 
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ %1$s ਵਿੱਚ ਬੁੱਕਮਾਰਕ, ਅਤੀਤ ਅਤੇ ਪਾਸਵਰਡ ਲਿਆਓ।</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">ਸਾਈਨ ਅੱਪ ਕਰੋ</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">ਸਿੰਕ ਚਾਲੂ ਹੈ</string>
@@ -1245,7 +1245,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">ਅਸੀਂ %s ਨੂੰ ਇੰਝ ਬਣਾਇਆ ਹੈ ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਪੂਰਾ ਕੰਟਰੋਲ ਹੋਵੇ ਕਿ ਤੁਸੀਂ
 ਆਨਲਾਈਨ ਕੀ ਸਾਂਝਾ ਕਰਦੇ ਹੋ ਅਤੇ ਸਾਡੇ ਨਾਲ ਕੀ ਸਾਂਝਾ ਕਰਦੇ ਹੋ।</string>
     <!-- Text for the button to read the privacy notice -->
@@ -1286,9 +1286,9 @@
     <string name="sign_in_with_camera">ਆਪਣੇ ਕੈਮਰੇ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">ਇਸ ਦੀ ਬਜਾਏ ਈਮੇਲ ਵਰਤੋਂ</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[ਖਾਤਾ ਨਹੀਂ ਹੈ?<u>ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ</u> Firefox ਸਿੰਕ ਕਰਨ ਲਈ ਬਣਾਓ।]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[ਖਾਤਾ ਨਹੀਂ ਹੈ?<u>ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ</u> Waterfox ਸਿੰਕ ਕਰਨ ਲਈ ਬਣਾਓ।]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s ਤੁਹਾਡੇ ਖਾਤੇ ਨਾਲ ਸਿੰਕ ਕਰਨਾ ਰੋਕ ਦੇਵੇਗਾ, ਪਰ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਤੁਹਾਡੇ ਬਰਾਊਜ਼ ਕੀਤੇ ਡਾਟੇ ਨੂੰ ਹਟਾਏਗਾ ਨਹੀਂ।</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">ਡਿਸ-ਕਨੈਕਟ ਕਰੋ</string>
@@ -1451,9 +1451,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save"> ਸੰਭਾਲਣ ਲਈ ਪੁੱਛੋ</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">ਕਦੇ ਨਾ ਸੰਭਾਲੋ</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s ਵਿੱਚ ਆਪੇ ਭਰੋ</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s ਵਰਤਣ ਦੌਰਾਨ ਵੈਬਸਾਈਟਾਂ ਵਿੱਚ ਵਰਤੋੰਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਭਰੋ ਤੇ ਸੰਭਾਲੋ|</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">ਹੋਰ ਐਪਾਂ ਵਿੱਚ ਆਪੇ ਭਰੋ</string>
@@ -1784,13 +1784,13 @@
     <string name="synced_tabs_connect_another_device">ਹੋਰ ਡਿਵਾਈਸ ਨਾਲ ਕਨੈਕਟ ਕਰੋ।</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">ਮੁੜ-ਪ੍ਰਮਾਣਿਤ ਕਰੋ।</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">ਟੈਬ ਨੂੰ ਸਿੰਕ ਕਰਨਾ ਸਮਰੱਥ ਕਰੋ।</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">ਤੁਹਾਡੇ ਹੋਰ ਡਿਵਾਈਸ ਉੱਤੇ ਫਾਇਰਫਾਕਸ ਵਿੱਚ ਕੋਈ ਵੀ ਖੋਲ੍ਹੀ ਹੋਈ ਟੈਬ ਨਹੀਂ ਹੈ।</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">ਤੁਹਾਡੇ ਹੋਰ ਡਿਵਾਈਸਾਂ ਤੋਂ ਟੈਬਾਂ ਦੀ ਸੂਚੀ ਵੇਖੋ।</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">ਸਿੰਕ ਕਰਨ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1842,7 +1842,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ਇੱਕ ਮਹੀਨੇ ਬਾਅਦ ਆਪੇ ਬੰਦ ਕਰਨਾ ਹੈ?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox ਉਹਨਾਂ ਟੈਬਾਂ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਨਾਂ ਨੂੰ ਤੁਸੀਂ ਪਿਛਲੇ ਮਹੀਨੇ ਭਰ ਤੋਂ ਨਹੀਂ ਵੇਖਿਆ ਹੈ।</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox ਉਹਨਾਂ ਟੈਬਾਂ ਨੂੰ ਬੰਦ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਨਾਂ ਨੂੰ ਤੁਸੀਂ ਪਿਛਲੇ ਮਹੀਨੇ ਭਰ ਤੋਂ ਨਹੀਂ ਵੇਖਿਆ ਹੈ।</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ਆਪੇ-ਬੰਦ ਕਰਨ ਨੂੰ ਚਾਲੂ ਕਰੋ</string>
 
@@ -1850,7 +1850,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">ਆਪੇ ਬੰਦ ਕਰਨਾ ਸਮਰੱਥ ਹੈ</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">ਵੈੱਬਸਾਈਟਾਂ, ਈਮੇਲਾਂ ਅਤੇ ਸੁਨੇਹਿਆਂ ਨੂੰ Firefox ਵਿੱਚ ਆਪਣੇ ਖੋਲ੍ਹਣ ਲਈ ਲਿੰਕ ਸੈੱਟ ਕਰੋ।</string>
+    <string name="default_browser_experiment_card_text">ਵੈੱਬਸਾਈਟਾਂ, ਈਮੇਲਾਂ ਅਤੇ ਸੁਨੇਹਿਆਂ ਨੂੰ Waterfox ਵਿੱਚ ਆਪਣੇ ਖੋਲ੍ਹਣ ਲਈ ਲਿੰਕ ਸੈੱਟ ਕਰੋ।</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">ਹਟਾਓ</string>
@@ -1874,7 +1874,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Pocket ਵਲੋਂ ਇਖ਼ਤਿਆਰ</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Firefox ਪਰਿਵਾਰ ਦਾ ਹਿੱਸਾ। %s</string>
+    <string name="pocket_stories_feature_caption">Waterfox ਪਰਿਵਾਰ ਦਾ ਹਿੱਸਾ। %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">ਹੋਰ ਜਾਣੋ</string>
 
@@ -1885,5 +1885,5 @@
     <string name="experiments_snackbar">ਡਾਟਾ ਭੇਜਣ ਲਈ ਟੈਲੀਮੈਂਟਰੀ ਨੂੰ ਸਮਰੱਥ ਕਰੋ।</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਜਾਓ</string>
-    <string name="firefox_suggest_header">Firefox ਸੁਝਾਅ</string>
+    <string name="firefox_suggest_header">Waterfox ਸੁਝਾਅ</string>
 </resources>

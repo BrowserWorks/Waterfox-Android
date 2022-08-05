@@ -48,7 +48,7 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Mag-customize</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox Account</string>
+    <string name="preferences_account_default_name">Waterfox Account</string>
     <!-- Preference for language -->
     <string name="preferences_language">Lenggwahe</string>
 

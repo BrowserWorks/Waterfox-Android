@@ -65,8 +65,8 @@
     <string name="cfr_neg_button_text">Ne, hvala</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Možeš postaviti da Firefox automatski otvara poveznice u aplikacijama.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">Možeš postaviti da Waterfox automatski otvara poveznice u aplikacijama.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Idi u postavke</string>
     <!-- Text for the negative action button -->
@@ -94,7 +94,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">Automatski zatvoriti nakon jednog mjeseca?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Firefox može zatvoriti kartice koje nisu otvorene posljednjih mjesec dana.</string>
+    <string moz:RemovedIn="99" name="tab_tray_inactive_auto_close_body" tools:ignore="UnusedResources">Waterfox može zatvoriti kartice koje nisu otvorene posljednjih mjesec dana.</string>
     <!-- Content description for close button in the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_button_content_description">Zatvori</string>
 
@@ -234,11 +234,11 @@
     <string name="search_engine_suggestions_description">Pretraži izravno iz adresne trake</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
     <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">Što je novo u Firefoxu</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Sada je lakše nastaviti pregledavati web.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
     <string moz:RemovedIn="99" name="onboarding_home_screen_section_home_title_2" tools:ignore="UnusedResources">Firefoxova personalizirana početna stranica</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Skoči na svoje otvorene kartice, zabilješke i povijest pregledavanja.</string>
@@ -251,11 +251,11 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ponovno pregledaj svoja posljednja pretraživanja na početnoj stranici i karticama.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Tvoja personalizirana Firefoxova početna stranica sada ti olakšava da nastaviš pretraživati. Pronađi svoje nedavne kartice, zabilješke i rezultate pretraživanja.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
     <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Otvori novu karticu u Firefoxu</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Traži</string>
@@ -303,12 +303,12 @@
     <string name="preferences_add_private_browsing_shortcut">Dodaj prečac za privatno pregledavanje</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Pristupačnost</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Prilagođeni poslužitelj Firefox računa</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Prilagođeni poslužitelj Waterfox računa</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Prilagođeni poslužitelj za sinkronizaciju</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox Account/Sync poslužitelj je izmijenjen. Izlaskom iz aplikacije će se primijeniti izmjene…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/Sync poslužitelj je izmijenjen. Izlaskom iz aplikacije će se primijeniti izmjene…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Račun</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -322,9 +322,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Prilagodi</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sinkroniziraj zabilješke, lozinke i ostalo sa svojim Firefox računom</string>
+    <string name="preferences_sign_in_description">Sinkroniziraj zabilješke, lozinke i ostalo sa svojim Waterfox računom</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox račun</string>
+    <string name="preferences_account_default_name">Waterfox račun</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Ponovo se poveži za nastavak sinkronizacije</string>
     <!-- Preference for language -->
@@ -412,7 +412,7 @@
     <string moz:removedIn="99" name="wallpaper_tap_to_change_switch_description" tools:ignore="UnusedResources">Kruži i ažuriraj sliku bez napuštanja početne stranice.</string>
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Firefox logo - promijenite pozadinu, tipka</string>
+    <string name="wallpaper_logo_content_description">Waterfox logo - promijenite pozadinu, tipka</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -465,7 +465,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Primljene kartice</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Obavijesti za kartice koje su primljene s drugih Firefox uređaja.</string>
+    <string name="fxa_received_tab_channel_description">Obavijesti za kartice koje su primljene s drugih Waterfox uređaja.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Kartica primljena</string>
     <!-- %s is the device name -->
@@ -633,8 +633,8 @@
     <string name="studies_remove">Ukloni</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktivno</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox može s vremena na vrijeme instalirati i pokretati studije.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox može s vremena na vrijeme instalirati i pokretati studije.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Saznaj više</string>
 
@@ -981,7 +981,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Poveži jedan drugi uređaj</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Za slanje kartice, prijavi se na Firefox na barem jednom drugom uređaju.</string>
+    <string name="sync_connect_device_dialog">Za slanje kartice, prijavi se na Waterfox na barem jednom drugom uređaju.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Razumijem</string>
     <!-- Share error message -->
@@ -1111,46 +1111,46 @@
     <string name="deleting_browsing_data_in_progress">Brisanje podataka pregledavanja …</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox pregled je sada Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox pregled je sada Waterfox Nightly</string>
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly je aktualiziran svake noći i sadrži nove eksperimentalne značajke.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly je aktualiziran svake noći i sadrži nove eksperimentalne značajke.
         Međutim, Nightly može biti manje stabilan. Preuzmi beta verziju našeg preglednika za stabilnije iskustvo.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Preuzmite Firefox za Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Preuzmite Waterfox za Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly se preselio</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly se preselio</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Ova aplikacija više neće primati sigurnosna aktualiziranja. Prestani koristiti ovu aplikaciju i prebaci se na novi Nightly.
-        \n\nZa preseljavanje oznaka, prijava i povijesti u drugu aplikaciju, stvori Firefox račun.</string>
+        \n\nZa preseljavanje oznaka, prijava i povijesti u drugu aplikaciju, stvori Waterfox račun.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Prebaci se na novi Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly se preselio</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly se preselio</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Ova aplikacija više neće primati sigurnosna aktualiziranja. Nabavi novi Nightly i prestani koristiti ovu aplikaciju.
-        \n\nZa preseljavanje oznaka, prijava i povijesti u drugu aplikaciju, stvori Firefox račun.</string>
+        \n\nZa preseljavanje oznaka, prijava i povijesti u drugu aplikaciju, stvori Waterfox račun.</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Nabavi novi Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Dobro došao, dobro došla u %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sinkroniziraj Firefox između uređaja</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sinkroniziraj Waterfox između uređaja</string>
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registriraj se</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sinkronizacija je uključena</string>
 
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Uvijek uključena privatnost</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox automatski sprječava tvrtke da te potajno prate širom weba.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox automatski sprječava tvrtke da te potajno prate širom weba.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Standardno (zadano)</string>
     <!-- text for standard blocking option button description -->
@@ -1167,7 +1167,7 @@
     <string name="onboarding_privacy_notice_header">Tvoja privatnost</string>
 
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s smo stvorili za jednostavno upravljanje podacima koje dijeliš na mreži i koje dijeliš s nama.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Pročitaj naša pravila privatnosti</string>
@@ -1201,16 +1201,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Skeniraj kȏd</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Na računalu otvori Firefox i idi na <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Na računalu otvori Waterfox i idi na <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Spremno za skeniranje</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Prijavi se pomoću kamere</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Umjesto toga koristi e-poštu</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Nemaš račun? <u>Stvori ga</u> i sinkroniziraj Firefox među uređajima.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Nemaš račun? <u>Stvori ga</u> i sinkroniziraj Waterfox među uređajima.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s će prestati sinkroniziranje s tvojim računom, ali neće izbrisati podatke o tvom pregledavanju na ovom uređaju.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Prekini vezu</string>
@@ -1374,9 +1374,9 @@
     <string name="preferences_passwords_save_logins_ask_to_save">Pitaj treba li se spremiti</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Nikad ne spremaj</string>
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Automatski ispuni u %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Ispuni i spremi korisnička imena i lozinke na web-stranicama tijekom korištenja %1$sa.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Automatski ispuni u drugim aplikacijama</string>
@@ -1660,14 +1660,14 @@
     <string name="synced_tabs_connect_another_device">Poveži drugi uređaj.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Ponovite autorizaciju.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Omogućite sinkroniziranje kartica.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">Nemaš otvorene kartice u Firefoxu na drugim uređajima.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Pogledaj popis kartica s tvojih drugih uređaja.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Prijavi se za sinkronizaciju</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1709,7 +1709,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatski zatvoriti nakon jednog mjeseca?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox može zatvoriti kartice koje nisu pregledane posljednjih mjesec dana.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox može zatvoriti kartice koje nisu pregledane posljednjih mjesec dana.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">UKLJUČI AUTOMATSKO ZATVARANJE</string>
 
@@ -1718,7 +1718,7 @@
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
-    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Pomozi poboljšati Firefox</string>
+    <string moz:RemovedIn="99" name="inactive_tabs_survey_header_1" tools:ignore="UnusedResources">Pomozi poboljšati Waterfox</string>
 
     <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
     <string moz:RemovedIn="99" name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Zašto ste isključili neaktivne kartice?</string>

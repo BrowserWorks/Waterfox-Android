@@ -267,7 +267,7 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Wrōć do niydownego szukanio z domowyj strōny i kart.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Twoja spersōnalizowano dōmowo strōna Firefoksa pōmogo teroz snadnij wrōcić tam, kaj sie skōńczyło. Znojdź niydowne karty, zokłodki i wyniki szukanio.</string>
 
     <!-- Search Widget -->
@@ -340,14 +340,14 @@
     <string name="errorpage_httpsonly_message_summary">Może ale tyż sie rozchodzić ô jaki atak. Jak przyńdziesz na strōna, to niy ôstawiej na nij żodnych prywatnych informacyji. Jak na nia pudziesz, tryb &quot;Ino HTTPS&quot; czasowo sie wyłōnczy do tyj strōny. </string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Dostympność</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Włosny serwer kōnta Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Włosny serwer kōnta Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Włosny serwer do synchrōnizacyje</string>
 
 
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Serwer kōnta Firefox/synchrōnizacyje je zmiyniōny. Zawiyranie aplikacyje, coby przidać zmiany…</string>
+    <string name="toast_override_fxa_sync_server_done">Serwer kōnta Waterfox/synchrōnizacyje je zmiyniōny. Zawiyranie aplikacyje, coby przidać zmiany…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Kōnto</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -361,9 +361,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Przipasuj</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Synchrōnizuj zokłodki, historyjo i inksze ze swojim kōntym Firefox</string>
+    <string name="preferences_sign_in_description">Synchrōnizuj zokłodki, historyjo i inksze ze swojim kōntym Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Kōnto Firefox</string>
+    <string name="preferences_account_default_name">Kōnto Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Połōncz sie zaś, coby durch synchrōnizować</string>
     <!-- Preference for language -->
@@ -501,7 +501,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Przijynte karty</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Powiadōmiynia ô kartach przijyntych z inkszych maszin z aplikacyjōm Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Powiadōmiynia ô kartach przijyntych z inkszych maszin z aplikacyjōm Waterfox.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Karta je przijynto</string>
     <!-- %s is the device name -->
@@ -671,7 +671,7 @@
     <string name="studies_remove">Skasuj</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Aktywne</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s może roz za czas insztalować i kludzić podszukōnki.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Przewiydz sie wiyncyj</string>
@@ -1179,18 +1179,18 @@
     <string name="delete_history_group_snackbar">Grupa skasowano</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview to teroz Firefox Nightly</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview to teroz Waterfox Nightly</string>
 
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly kożdo noc je aktualizowany i mo nowe, eksperymyntalne funkcyje.
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly kożdo noc je aktualizowany i mo nowe, eksperymyntalne funkcyje.
         Może ale być mynij stabilny. Pobier nasza przeglōndarka beta, coby używać stabilniyjszyj wersyje.</string>
 
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Pobier Firefoxa Beta na Androida</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly sie przekludziōł</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly sie przekludziōł</string>
 
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">Ta aplikacyjo niy bydzie już dostować bezpiecznych aktualizacyji. Przestōń jij używać i przełōncz sie na nowe Nightly.
@@ -1198,8 +1198,8 @@
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Przełōncz sie na nowe Nightly</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly sie przekludziōł</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly sie przekludziōł</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">Ta aplikacyjo niy bydzie już dostować bezpiecznych aktualizacyji. Pobier nowe Nightly i przestōń jij używać.
         \n\nCoby przeniyś swoje zokłodki, dane logowanio i historyjo do inkszyj aplikacyji, załōż kōnto Firefoxa.</string>
@@ -1208,15 +1208,15 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s wito!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
     <string name="onboarding_account_sign_in_header_1">Synchrōnizuj Firefoxa miyndzy maszinami</string>
-    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Synchrōnizuj aplikacyjo %1$s miyndzy maszinami</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Przekludź zokłodki, historyjo i hasła do aplikacyje %1$s na tyj maszinie.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Zaregistruj sie</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Synchrōnizacyjo je załōnczōno</string>
@@ -1241,7 +1241,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Twoja prywatność</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s dowo ci kōntrola nad tym, co udostympniosz online i co udostympniosz nōm.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Poczytej ô naszych prawidłach prywatności</string>
@@ -1281,10 +1281,10 @@
     <string name="sign_in_with_camera">Zaloguj sie z kamerōm</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Użyj lepij emaila</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
     <string name="sign_in_create_account_text"><![CDATA[Niy mosz kōnta? <u>Zrychtuj je</u>, coby synchrōnizować Firefoxa miyndzy maszinami.]]></string>
 
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s skōńczy sie synchrōnizować ze twojim kōntym, ale niy skasuje żodnych danych przeglōndanio na tyj maszinie.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Rozłōncz</string>

@@ -149,9 +149,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Saincheap</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sioncronaigh leabharmharcanna, stair, agus tuilleadh le do chuntas Firefox</string>
+    <string name="preferences_sign_in_description">Sioncronaigh leabharmharcanna, stair, agus tuilleadh le do chuntas Waterfox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Cuntas Firefox</string>
+    <string name="preferences_account_default_name">Cuntas Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Athcheangail chun sioncronú a thosú arís</string>
     <!-- Preference for language -->
@@ -212,7 +212,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Cluaisíní faighte</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Fógraí maidir le cluaisíní a fhaigheann tú ó Firefox ar ghléasanna eile.</string>
+    <string name="fxa_received_tab_channel_description">Fógraí maidir le cluaisíní a fhaigheann tú ó Waterfox ar ghléasanna eile.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Cluaisín Faighte</string>
     <!-- %s is the device name -->
@@ -594,7 +594,7 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Fáilte go dtí %s!</string>
 
     <!-- text to display in the snackbar once account is signed-in -->
@@ -630,7 +630,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scan an cód</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Oscail Firefox ar do ríomhaire agus tabhair cuairt ar <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Oscail Waterfox ar do ríomhaire agus tabhair cuairt ar <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Réidh le scanadh</string>
     <!-- Text shown for settings option for sign with pairing -->

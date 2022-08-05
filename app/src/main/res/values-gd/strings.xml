@@ -84,8 +84,8 @@
     <string name="cfr_neg_button_text">Cha chuir, mòran taing</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string name="open_in_app_cfr_info_message">’S urrainn dhut iarraidh air Firefox ceanglaichean fhosgladh ann an aplacaidean gu fèin-obrachail.</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">’S urrainn dhut iarraidh air Waterfox ceanglaichean fhosgladh ann an aplacaidean gu fèin-obrachail.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Tadhail air na roghainnean</string>
     <!-- Text for the negative action button -->
@@ -113,7 +113,7 @@
     <!-- Text for title for the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_title">A bheil thu airson an dùnadh an dèidh mìos?</string>
     <!-- Text for the body for the auto-close dialog of the inactive tabs. -->
-    <string name="tab_tray_inactive_auto_close_body">Dùnaidh Firefox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.</string>
+    <string name="tab_tray_inactive_auto_close_body">Dùnaidh Waterfox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.</string>
     <!-- Content description for close button in the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_button_content_description">Dùin</string>
     <!-- Text for turn on auto close tabs button in the auto-close dialog of the inactive tabs. -->
@@ -291,12 +291,12 @@
     <string name="search_engine_suggestions_description">Lorg sa bhad on bhàr-sheòlaidh</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_title_2">Na tha ùr ann am Firefox</string>
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">Na tha ùr ann am Waterfox</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Tha e nas fhasa a-nis leantainn ort far an robh thu roimhe.</string>
-    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_section_home_title_2">Duilleag-dhachaigh Firefox ghnàthaichte</string>
+    <!-- Onboarding home screen dialog title text for the home section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Duilleag-dhachaigh Waterfox ghnàthaichte</string>
 
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Leum gu na tabaichean fosgailte, comharran-lìn is eachdraidh a’ bhrabhsaidh agad.</string>
@@ -309,12 +309,12 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Ath-thadhail air na luirg a rinn thu o chionn goirid air an duilleag-dhachaigh agad.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Leis gu bheil duilleag-dhachaigh phearsantaichte agad ann am Firefox a-nis, tha e nas fhasa cumail a’ dol far an do stad thu roimhe. Faigh greim air na tabaichean, comharran-lìn is toraidhean-luirg a bh’ agad o chionn goirid.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Leis gu bheil duilleag-dhachaigh phearsantaichte agad ann am Waterfox a-nis, tha e nas fhasa cumail a’ dol far an do stad thu roimhe. Faigh greim air na tabaichean, comharran-lìn is toraidhean-luirg a bh’ agad o chionn goirid.</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string name="search_widget_content_description">Fosgail taba Firefox ùr</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string name="search_widget_content_description">Fosgail taba Waterfox ùr</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Lorg</string>
     <!-- Text preview for larger sized widgets -->
@@ -376,12 +376,12 @@
     <string name="preferences_add_private_browsing_shortcut">Cuir ath-ghoirid brabhsaidh prìobhaideach ris</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">So-ruigsinneachd</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Frithealaiche chunntasan Firefox gnàthaichte</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Frithealaiche chunntasan Waterfox gnàthaichte</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Frithealaiche sioncronachaidh gnàthaichte</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Chaidh frithealaichte nan cunntasan Firefox no an t-sioncronachaidh atharrachadh. Fàg an aplacaid gus na h-atharraichean a chur an gnìomh…</string>
+    <string name="toast_override_fxa_sync_server_done">Chaidh frithealaichte nan cunntasan Waterfox no an t-sioncronachaidh atharrachadh. Fàg an aplacaid gus na h-atharraichean a chur an gnìomh…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Cunntas</string>
     <!-- Preference shown on banner to sign into account -->
@@ -399,9 +399,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Gnàthaich</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Sioncronaich na comharran-lìn, faclan-faire is mòran a bharrachd leis a’ chunntas Firefox agad</string>
+    <string name="preferences_sign_in_description">Sioncronaich na comharran-lìn, faclan-faire is mòran a bharrachd leis a’ chunntas Waterfox agad</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Cunntas Firefox</string>
+    <string name="preferences_account_default_name">Cunntas Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Ceangail ris às ùr airson leantainn air an t-sioncronachadh</string>
     <!-- Preference for language -->
@@ -529,7 +529,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Tabaichean a fhuaras</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Brathan airson tabaichean a fhuaras o uidheaman Firefox eile.</string>
+    <string name="fxa_received_tab_channel_description">Brathan airson tabaichean a fhuaras o uidheaman Waterfox eile.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Fhuaras taba</string>
     <!-- When multiple tabs have been received -->
@@ -563,7 +563,7 @@
     <string name="preferences_usage_data_description">Cuiridh seo dàta air dèanadas, cleachdadh, bathar-cruaidh agus gnàthachadh a’ bhrabhsair agad dha Mozilla ach an urrainn dhuinn %1$s a dhèanamh nas fheàrr fhathast</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Dàta margaideachd</string>
-    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
     <string name="preferences_marketing_data_description">Co-roinnidh seo dàta mu na gleusan a chleachdas tu ann am %1$s le Leanplum, reiceadair na margaideachd mobile againn.</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">Co-roinnidh seo dàta bunasach a’ cleachdaidh le Adjust, an reiceadair margaideachd mobile againn</string>
@@ -586,7 +586,7 @@
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Cuir an sioncronachadh air</string>
     <!-- Preference for pairing -->
-    <string moz:removedIn="95" name="preferences_sync_pair" tools:ignore="UnusedResources">Sganaich an còd paidhreachaidh ann am Firefox desktop</string>
+    <string moz:removedIn="95" name="preferences_sync_pair" tools:ignore="UnusedResources">Sganaich an còd paidhreachaidh ann am Waterfox desktop</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Clàraich a-steach</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -740,8 +740,8 @@
     <string name="studies_remove">Thoir air falbh</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Gnìomhach</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string name="studies_description">Dh’fhaoidte gun stàlaich is ruith Firefox rannsachadh o àm gu àm.</string>
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string name="studies_description">Dh’fhaoidte gun stàlaich is ruith Waterfox rannsachadh o àm gu àm.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Barrachd fiosrachaidh</string>
     <!-- Dialog button to confirm the removing a study. -->
@@ -1149,7 +1149,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Ceangail uidheam eile ris</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Airson taba a chur, clàraich a-steach gu Firefox air co-dhiù aon uidheam eile.</string>
+    <string name="sync_connect_device_dialog">Airson taba a chur, clàraich a-steach gu Waterfox air co-dhiù aon uidheam eile.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Tha mi agaibh</string>
     <!-- Share error message -->
@@ -1310,59 +1310,59 @@
     <string name="deleting_browsing_data_in_progress">A’ sguabadh an dàta bhrabhsaidh às…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header">’S e Firefox Nightly a tha air Firefox Preview a-nis</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header">’S e Waterfox Nightly a tha air Waterfox Preview a-nis</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description">
-        Thèid Firefox Nightly ùrachadh gach oidhche agus tha gleusan deuchainneil na bhroinn.
+        Thèid Waterfox Nightly ùrachadh gach oidhche agus tha gleusan deuchainneil na bhroinn.
         Ge-tà, dh’fhaoidte nach bi e buileach cho seasmhach. Luchdaich a-nuas am brabhsair beta againn airson brabhsair nas seasmhaiche.</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_button_2">Faigh Firefox airson Android Beta</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2">Faigh Waterfox airson Android Beta</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header_preview_installed">Rinn Firefox Nightly gluasad</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header_preview_installed">Rinn Waterfox Nightly gluasad</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_installed">
         Chan fhaigh an aplacaid seo ùrachaidhean tèarainteachd tuilleadh. Na cleachd an aplacaid seo tuilleadh is faigh greim air an tionndadh ùr Nightly na àite.
-        \n\nAirson na comharran-lìn, clàraidhean a-steach is an eachdraidh agad a ghluasad gu aplacaid eile, cruthaich cunntas Firefox.</string>
+        \n\nAirson na comharran-lìn, clàraidhean a-steach is an eachdraidh agad a ghluasad gu aplacaid eile, cruthaich cunntas Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_installed">Cleachd an tionndadh ùr Nightly na àite</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_header_preview_not_installed">Rinn Firefox Nightly gluasad</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header_preview_not_installed">Rinn Waterfox Nightly gluasad</string>
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description_preview_not_installed">
         Chan fhaigh an aplacaid seo ùrachaidhean tèarainteachd tuilleadh. Na cleachd an aplacaid seo tuilleadh is faigh greim air an tionndadh ùr Nightly na àite.
-        \n\nAirson na comharran-lìn, clàraidhean a-steach is an eachdraidh agad a ghluasad gu aplacaid eile, cruthaich cunntas Firefox.</string>
+        \n\nAirson na comharran-lìn, clàraidhean a-steach is an eachdraidh agad a ghluasad gu aplacaid eile, cruthaich cunntas Waterfox.</string>
     <!-- text for firefox preview moving tip button  -->
     <string name="tip_firefox_preview_moved_button_preview_not_installed">Faigh an tionndadh ùr Nightly</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Fàilte gu %s!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">A bheil cunntas agad mu thràth?</string>
     <!-- text for the "What's New" onboarding card header -->
     <string moz:removedIn="94" name="onboarding_whats_new_header1" tools:ignore="UnusedResources">Faic na tha ùr</string>
     <!-- text for the "what's new" onboarding card description
-    The first parameter is the short name of the app (e.g. Firefox) -->
+    The first parameter is the short name of the app (e.g. Waterfox) -->
     <string moz:removedIn="94" name="onboarding_whats_new_description" tools:ignore="UnusedResources">A bheil ceist agad mun dealbhadh ur aig %s? Airson fiosrachadh na tha air atharrachadh?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string moz:removedIn="94" name="onboarding_whats_new_description_linktext" tools:ignore="UnusedResources">Faigh freagairtean an-seo</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sioncronaich Firefox eadar uidheaman</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account -->
-    <string name="onboarding_manual_sign_in_description">Thoir a-steach comharran-lìn, an eachdraidh is faclan-faire gu Firefox air an uidheam seo.</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sioncronaich Waterfox eadar uidheaman</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account -->
+    <string name="onboarding_manual_sign_in_description">Thoir a-steach comharran-lìn, an eachdraidh is faclan-faire gu Waterfox air an uidheam seo.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
+        another Waterfox browser. (The word `Waterfox` should not be translated)
         The first parameter is the email of the detected user's account -->
-    <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_header_3" tools:ignore="UnusedResources">Rinn thu clàradh a-steach mar %s air brabhsair Firefox eile air an uidheam seo. Am bu toil leat clàradh a-steach leis a’ cunntas ud?</string>
+    <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_header_3" tools:ignore="UnusedResources">Rinn thu clàradh a-steach mar %s air brabhsair Waterfox eile air an uidheam seo. Am bu toil leat clàradh a-steach leis a’ cunntas ud?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_confirm" tools:ignore="UnusedResources">Bu toil, clàraich a-steach mi</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string moz:removedIn="96" name="onboarding_firefox_account_signing_in" tools:ignore="UnusedResources">Gad chlàradh a-steach…</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Clàraich leinn</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Fan clàraichte a-muigh</string>
@@ -1372,8 +1372,8 @@
     <string moz:removedIn="96" name="onboarding_firefox_account_automatic_signin_failed" tools:ignore="UnusedResources">Dh’fhàillig an logadh a-steach</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Tha prìobhaideachd air an-còmhnaidh</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string name="onboarding_tracking_protection_description_3">Cuiridh Firefox casg gu fèin-obrachail air companaidhean o leantainn ort gu dìomhair air feadh an lìn.</string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string name="onboarding_tracking_protection_description_3">Cuiridh Waterfox casg gu fèin-obrachail air companaidhean o leantainn ort gu dìomhair air feadh an lìn.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Stannardach (bun-roghainn)</string>
     <!-- text for standard blocking option button description -->
@@ -1401,7 +1401,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Do phrìobhaideachd</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Dhealbh sinn %s airson ’s gum bi smachd agad-sa air na cho-roinneas tu air loidhne agus na cho-roinneas tu leinn.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Leugh sanas na prìobhaideachd againn</string>
@@ -1437,18 +1437,18 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Sganaich an còd</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Fosgail Firefox air a’ choimpiutair agad is tadhail air <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Fosgail Waterfox air a’ choimpiutair agad is tadhail air <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Deiseil airson sganadh</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Clàraich a-steach leis a’ chamara agad</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Cleachd post-d na àite</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Nach eil cunntas agad? <u>Cruthaich fear</u> airson Firefox a shioncronachadh eadar uidheaman.]]></string>
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Nach eil cunntas agad? <u>Cruthaich fear</u> airson Waterfox a shioncronachadh eadar uidheaman.]]></string>
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">Sguiridh Firefox de shioncronachadh a’ chunntais agad ach cha sguab e às gin dhen dàta brabhsaidh agad air an uidheam seo.</string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="sign_out_confirmation_message">Sguiridh Waterfox de shioncronachadh a’ chunntais agad ach cha sguab e às gin dhen dàta brabhsaidh agad air an uidheam seo.</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">Sguiridh %s de shioncronachadh a’ chunntais agad ach cha sguab e às gin dhen dàta brabhsaidh agad air an uidheam seo.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Dì-cheangail</string>
@@ -1929,13 +1929,13 @@
     <string name="synced_tabs_connect_another_device">Ceangail uidheam eile ris.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Dèan dearbhadh às ùr.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Cuir an comas sioncronachadh nan tabaichean.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Chan eil taba sam bith fosgailte agad ann am Firefox air uidheaman eile.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Chan eil taba sam bith fosgailte agad ann am Waterfox air uidheaman eile.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Seall liosta nan tabaichean a tha agad air uidheaman eile.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Clàraich a-steach a shioncronachadh</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">Chan eil taba fosgailte</string>
@@ -1975,7 +1975,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">A bheil thu airson an dùnadh an dèidh mìos?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Dùnaidh Firefox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Dùnaidh Waterfox tabaichean nach tug thu sùil orra thairis air a’ mhìos seo chaidh.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">CUIR GLEUS AN FHÈIN-DÙNAIDH AIR</string>
 
@@ -1987,7 +1987,7 @@
     <string name="inactive_tabs_survey_close_button_content_description">Dùin</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Suidhich ceanglaichean o làraichean-lìn, puist-d agus teachdaireachdan airson ’s gun tèid am fosgladh gu fèin-obrachail ann am Firefox.</string>
+    <string name="default_browser_experiment_card_text">Suidhich ceanglaichean o làraichean-lìn, puist-d agus teachdaireachdan airson ’s gun tèid am fosgladh gu fèin-obrachail ann am Waterfox.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Thoir air falbh</string>

@@ -61,8 +61,8 @@
     <string name="cfr_neg_button_text">နေပါစေ</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
-    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
-    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">အက်ပ် များတွင် လင့်ခ်များကို အလိုအလျောက်ဖွင့်ရန် Firefox ကို သတ်မှတ်နိုင်သည်။</string>
+    <!-- Text for the info message. 'Waterfox' intentionally hardcoded here.-->
+    <string moz:RemovedIn="99" name="open_in_app_cfr_info_message" tools:ignore="UnusedResources">အက်ပ် များတွင် လင့်ခ်များကို အလိုအလျောက်ဖွင့်ရန် Waterfox ကို သတ်မှတ်နိုင်သည်။</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">ဆက်တင် များသို့ သွားပါ။</string>
     <!-- Text for the negative action button -->
@@ -196,8 +196,8 @@
     <string name="search_engine_suggestions_description">လိပ်စာ ဘားမှ တိုက်ရိုက် ရှာပါ</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Firefox တက်ဗ် အသစ်တစ်ခု ဖွင့်ပါ</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">Waterfox တက်ဗ် အသစ်တစ်ခု ဖွင့်ပါ</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">ရှာပါ</string>
     <!-- Text preview for larger sized widgets -->
@@ -244,12 +244,12 @@
     <string name="preferences_add_private_browsing_shortcut">သီးသန့်ရှာဖွေမှုဖြတ်လမ်းပေါင်းထည့်ပါ။</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">အသုံးပြုခွင့်</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">စိတ်ကြိုက် Firefox အကောင့် ဆာဗာ</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">စိတ်ကြိုက် Waterfox အကောင့် ဆာဗာ</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">သုံးသူစိတ်ကြိုက် ချိန်သားကိုက် ဆာဗာ</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox Account/Sync server ကို ပြုပြင်ပြီး ဖြစ်သည်။ အပြောင်းအလဲများ လျှောက်ထားရန်လျှောက်လွှာ မှ ထွက်ပါ</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/Sync server ကို ပြုပြင်ပြီး ဖြစ်သည်။ အပြောင်းအလဲများ လျှောက်ထားရန်လျှောက်လွှာ မှ ထွက်ပါ</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">အကောင့်</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -261,9 +261,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">စိတ်ကြိုက်လုပ်ပါ</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">စာမှတ်များ၊မှတ်တမ်းများနှင့်အခြားအရာများကို Firefox အကောင့်ဖြင့် တပ်တူပြုပါ။</string>
+    <string name="preferences_sign_in_description">စာမှတ်များ၊မှတ်တမ်းများနှင့်အခြားအရာများကို Waterfox အကောင့်ဖြင့် တပ်တူပြုပါ။</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox အကောင့်</string>
+    <string name="preferences_account_default_name">Waterfox အကောင့်</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">စည်းညှိခြင်းကိုပြန်လည်စတင်ရန်ပြန်လည်ချိတ်ဆက်ပါ</string>
     <!-- Preference for language -->
@@ -372,7 +372,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">လက်ခံရရှိ တက်ဗ်များ</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">အခြားစက်များရှိ Firefox များမှ ရရှိသော တပ်ဗ်အသစ်များ အတွက် သတိပေးချက်များ</string>
+    <string name="fxa_received_tab_channel_description">အခြားစက်များရှိ Waterfox များမှ ရရှိသော တပ်ဗ်အသစ်များ အတွက် သတိပေးချက်များ</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">တပ်ဗ်ကို လက်ခံရရှိသည်</string>
     <!-- %s is the device name -->
@@ -510,8 +510,8 @@
     <string name="studies_remove">ဖယ်ရှားပါ</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">လုပ်ဆောင်နေသည်</string>
-    <!-- Description for studies, it indicates why Firefox use studies -->
-    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Firefox သည် လေ့လာမှုများကို အခါအားလျော်စွာ တပ်ဆင်ပြီး လုပ်ဆောင်နိုင်သည်။</string>
+    <!-- Description for studies, it indicates why Waterfox use studies -->
+    <string moz:RemovedIn="99" name="studies_description" tools:ignore="UnusedResources">Waterfox သည် လေ့လာမှုများကို အခါအားလျော်စွာ တပ်ဆင်ပြီး လုပ်ဆောင်နိုင်သည်။</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ပိုမို လေ့လာရန်</string>
 
@@ -842,7 +842,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">အခြားကိရိယာကို ချိတ်ဆက်ရန်</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">သင်တက်ဘ်တစ်ခုကိုပို့ရန်အနည်းဆုံးအခြားကိရိယာတစ်ခုပေါ်တွင် Firefox သို့ဆိုင်းအင်လုပ်ပါ။</string>
+    <string name="sync_connect_device_dialog">သင်တက်ဘ်တစ်ခုကိုပို့ရန်အနည်းဆုံးအခြားကိရိယာတစ်ခုပေါ်တွင် Waterfox သို့ဆိုင်းအင်လုပ်ပါ။</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">ရပြီ</string>
     <!-- Share error message -->
@@ -971,48 +971,48 @@
     <string name="deleting_browsing_data_in_progress">ကြည့်ရှုမှုအချက်အလက်များ ဖျက်နေသည်…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview သည် ယခုတွင် Firefox Nightly ဖြစ်သွားသည်</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview သည် ယခုတွင် Waterfox Nightly ဖြစ်သွားသည်</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">
-        Firefox Nightly သည် ညစဉ် ပြုပြင်မွမ်းမံမှု လုပ်ပြီး အင်္ဂါရပ် အသစ်များကို စမ်းသပ်ထားသည်။
+        Waterfox Nightly သည် ညစဉ် ပြုပြင်မွမ်းမံမှု လုပ်ပြီး အင်္ဂါရပ် အသစ်များကို စမ်းသပ်ထားသည်။
         သို့သော် ၎င်းသည် တည်ငြိမ်မှု လျော့နည်းနိုင်သည်။ ပိုမို တည်ငြိမ်သော အတွေ့အကြုံ အတွက်ကျွန်ုပ်တို့၏ ဘီတာ ဘရောက်စာ ကို ဒေါင်းလုတ် လုပ်ပါ။</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">အန်းဒရိုက် ဘီတာ အတွက် Firefox ရယူပါ</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">အန်းဒရိုက် ဘီတာ အတွက် Waterfox ရယူပါ</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly ပြောင်းရွှေ့သွားသည်</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly ပြောင်းရွှေ့သွားသည်</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">
         ဤ အက်ပ် သည် လုံခြုံရေး အပ်ဒိတ်များကို လက်ခံတော့မည် မဟုတ်ပါ။ ဤ အက်ပ် ကို မသုံးဘဲ Nightly အသစ် သို့ ပြောင်းပါ။
-        \ n \ n သင်၏ စာမှတ်များ၊ လော့ဂ်အင်များ နှင့် မှတ်တမ်း တို့ကို အခြား အက်ပ်တစ်ခု သို့လွှဲပြောင်းရန် Firefox အကောင့် တစ်ခု ပြုလုပ်ပါ။</string>
+        \ n \ n သင်၏ စာမှတ်များ၊ လော့ဂ်အင်များ နှင့် မှတ်တမ်း တို့ကို အခြား အက်ပ်တစ်ခု သို့လွှဲပြောင်းရန် Waterfox အကောင့် တစ်ခု ပြုလုပ်ပါ။</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">Nightly အသစ် သို့ ပြောင်းပါ</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly ပြောင်းရွှေ့သွားသည် </string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly ပြောင်းရွှေ့သွားသည် </string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">
         ဤ အက်ပ် သည် လုံခြုံရေး အပ်ဒိတ်များကို လက်ခံတော့မည် မဟုတ်ပါ။ ဤ အက်ပ် ကို မသုံးဘဲ Nightly အသစ် သို့ ပြောင်းပါ။
-        \ n \ n သင်၏ စာမှတ်များ၊ လော့ဂ်အင်များ နှင့် မှတ်တမ်း တို့ကို အခြား အက်ပ်တစ်ခု သို့ လွှဲပြောင်းရန် Firefox အကောင့် တစ်ခု ပြုလုပ်ပါ။</string>
+        \ n \ n သင်၏ စာမှတ်များ၊ လော့ဂ်အင်များ နှင့် မှတ်တမ်း တို့ကို အခြား အက်ပ်တစ်ခု သို့ လွှဲပြောင်းရန် Waterfox အကောင့် တစ်ခု ပြုလုပ်ပါ။</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">Nightly ကိုရယူပါ</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s မှကြိုဆိုပါတယ်</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">စက်ကိရိယာများအကြား Firefox ကို တစ်ပြေးညီဖြစ်အောင် ပြုလုပ်ပါ</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">စက်ကိရိယာများအကြား Waterfox ကို တစ်ပြေးညီဖြစ်အောင် ပြုလုပ်ပါ</string>
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">စတင်သုံးရန် စာရင်းသွင်းပါ</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">ထပ်တူပြုခြင်းဖွင့်ထားသည်</string>
 
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">လုံခြုံမှုအတွက် အမြဲ အွန် ထားပါ</string>
-    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
-    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox သည် ကုမ္ပဏီများ သင်ကို ဝက်ဘ်ပေါ်တွင် လျှို့ဝှက်စွာ နောက်လိုက်နေခြင်းအား အလိုအလျောက် ရပ်တန့်စေသည်။ </string>
+    <!-- text for the tracking protection card description. 'Waterfox' intentionally hardcoded here -->
+    <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Waterfox သည် ကုမ္ပဏီများ သင်ကို ဝက်ဘ်ပေါ်တွင် လျှို့ဝှက်စွာ နောက်လိုက်နေခြင်းအား အလိုအလျောက် ရပ်တန့်စေသည်။ </string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">စံ (ပုံသေ)</string>
     <!-- text for standard blocking option button description -->
@@ -1030,7 +1030,7 @@
     <string name="onboarding_privacy_notice_header">သင့်အတွက်သီးသန့်လုံခြုံမှု</string>
 
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">သင် အွန်လိုင်းတွင် မျှဝေသည်များ နှင့် သင် ကျွန်ုပ်တို့ နှင့် မျှဝေသည်များအပေါ် သင်အား ထိန်းချုပ် ခွင့် ပေးနိုင်ရန် ကျွန်ုပ်တို့သည် %s အား ပုံစံရေးဆွဲထားပါသည်။</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">ကျွန်ုပ်တို့သီးသန့်ထားရှိမှု သတိပေးချက်များကိုဖတ်ပါ။</string>
@@ -1064,16 +1064,16 @@
     <string name="sync_scan_code">ကုဒ်ကိုစစ်ဆေးပါ</string>
 
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[<b>https://firefox.com/pair</b>ကိုသွားပြီး သင့်ကွန်ပျူတာတွင် Firefox ဖွင့်ပါ။]]></string>
+    <string name="sign_in_instructions"><![CDATA[<b>https://firefox.com/pair</b>ကိုသွားပြီး သင့်ကွန်ပျူတာတွင် Waterfox ဖွင့်ပါ။]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">စကင်ဖတ်ရန်အဆင်သင့်ဖြစ်သည်</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">သင်၏ကင်မရာဖြင့်ဆိုင်းအင်လုပ်ပါ</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">အီးမေးလ်အစား</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[အကောင့် မရှိဘူးလား? <u> သုံးစွဲသည့် ကိရိယာများ အကြား Firefox ကို တစ်ပြေးညီတည်း ချိန်ညှိရန် </u> တစ်ခု ဖန်တီးပါ။ ]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[အကောင့် မရှိဘူးလား? <u> သုံးစွဲသည့် ကိရိယာများ အကြား Waterfox ကို တစ်ပြေးညီတည်း ချိန်ညှိရန် </u> တစ်ခု ဖန်တီးပါ။ ]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s သည် အကောင့်နှင့် အချက်အလက်များ ထပ်တူပြုခြင်းကို ရပ်တန့်ပါမည်။ သို့သော် ယခု ကိရိယာရှိ သင်၏ မည်သည့် အချက်အလက် ကိုမျှ ဖျက်ပစ်မည် မဟုတ်ပါ။</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">ချိတ်ဆက်မှုဖြုတ်ပါ</string>
@@ -1237,9 +1237,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">ဘယ်တော့မှ မသိမ်းပါနှင့်</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">%1$s တွင် အလိုအလျောက် ဖြည့်ပါ</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">%1$s ကို သုံးနေစဉ် ၀က်ဆိုက်များတွင် အသုံးပြုသူအမည် နှင့် စကားဝှက်များကို ဖြည့်ပြီး သိမ်းဆည်းပါ</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">အခြား အက်ပ်များတွင် အလိုအလျောက် ဖြည့်ပါ </string>
@@ -1494,13 +1494,13 @@
     <string name="synced_tabs_connect_another_device">အခြား ကိရိယာ သို့ ချိတ်ဆက်မည်</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">ကျေးဇူးပြု၍ ပြန်လည် အတည်ပြုပါ။</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">ကျေးဇူးပြ၍ တပ်ဗ် ထပ်တူတစ်ပြေးတည်း ဖြစ်စေရန် ဖွင့်ပါ </string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">သင့် အခြား စက်ပစ္စည်းများတွင် Firefox ၌ ဖွင့်ထားသော တပ်ဗ်များ မရှိပါ</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">သင့် အခြား စက်ပစ္စည်းများတွင် Waterfox ၌ ဖွင့်ထားသော တပ်ဗ်များ မရှိပါ</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">သင်၏ အခြားစက်ပစ္စည်းများမှ တပ်ဗ် များ စာရင်းကို ကြည့်ပါ။</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">ချိန်သားကိုက် ရန် ဝင်ရောက်ပါ</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">ဖွင့်ထားသည့် တပ်ဗ်များ မရှိပါ</string>
@@ -1527,7 +1527,7 @@
     <string name="inactive_tabs_title">လှုပ်ရှားမှုမရှိသော တပ်ဗ်များ </string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Firefox တွင် ဝက်ဘ်ဆိုက်များ၊ အီးမေးလ်များ နှင့် မက်ဆေ့ခ်ျများမှ လင့်ခ်များ အလိုအလျောက် ပွင့်ရန်  သတ်မှတ်ပါ။</string>
+    <string name="default_browser_experiment_card_text">Waterfox တွင် ဝက်ဘ်ဆိုက်များ၊ အီးမေးလ်များ နှင့် မက်ဆေ့ခ်ျများမှ လင့်ခ်များ အလိုအလျောက် ပွင့်ရန်  သတ်မှတ်ပါ။</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">ဖယ်ရှားပါ</string>

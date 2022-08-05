@@ -223,7 +223,7 @@
     <string name="search_engine_suggestions_description">सीधे पता बार से खोजें</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <!-- Onboarding home screen dialog title text. Waterfox is intentionally hardcoded. -->
     <string moz:removedIn="99" name="onboarding_home_screen_title_2" tools:ignore="UnusedResources">फ़ायरफ़ॉक्स में नया क्या है</string>
     <!-- Onboarding home screen dialog description text for the tab tray section. -->
     <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">साफ, व्यवस्थित टैब</string>
@@ -231,8 +231,8 @@
     <string name="onboarding_home_screen_section_useful_history_title_2">हाल के खोज</string>
 
     <!-- Search Widget -->
-    <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
-    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">एक नया Firefox टैब खोलें</string>
+    <!-- Content description for searching with a widget. Waterfox is intentionally hardcoded.-->
+    <string moz:RemovedIn="99" name="search_widget_content_description" tools:ignore="UnusedResources">एक नया Waterfox टैब खोलें</string>
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">खोजें</string>
 
@@ -278,12 +278,12 @@
     <string name="preferences_add_private_browsing_shortcut">निजी ब्राउज़िंग शॉर्टकट जोड़ें</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">अभिगम्यता</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">अनुकूलित Firefox Account सर्वर</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">अनुकूलित Waterfox Account सर्वर</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">अनुकूलित सिंक सर्वर</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Firefox Account/सिंक सर्वर संसोधित किया गया। परिवर्तन लागू करने के लिए एप्लीकेशन बंद हो रहा है…</string>
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/सिंक सर्वर संसोधित किया गया। परिवर्तन लागू करने के लिए एप्लीकेशन बंद हो रहा है…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">खाता</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -295,9 +295,9 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">अनुकूलित करें</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">अपने Firefox Account के साथ बुकमार्क, इतिहास और अन्य चीज़ों को सिंक करें।</string>
+    <string name="preferences_sign_in_description">अपने Waterfox Account के साथ बुकमार्क, इतिहास और अन्य चीज़ों को सिंक करें।</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox खाता</string>
+    <string name="preferences_account_default_name">Waterfox खाता</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">सिंक को पुनः प्रारंभ करने के लिए दोबारा कनेक्ट करें</string>
     <!-- Preference for language -->
@@ -411,7 +411,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">प्राप्त टैब</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">अन्य Firefox उपकरणों से प्राप्त टैब के लिए अधिसूचनाएं।</string>
+    <string name="fxa_received_tab_channel_description">अन्य Waterfox उपकरणों से प्राप्त टैब के लिए अधिसूचनाएं।</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">टैब प्राप्त किया गया</string>
     <!-- %s is the device name -->
@@ -890,7 +890,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">अन्य डिवाइस जोड़ें</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">टैब भेजने के लिए, कम से कम एक अन्य डिवाइस पर Firefox में साइन इन करें।</string>
+    <string name="sync_connect_device_dialog">टैब भेजने के लिए, कम से कम एक अन्य डिवाइस पर Waterfox में साइन इन करें।</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">समझ गए</string>
     <!-- Share error message -->
@@ -1023,36 +1023,36 @@
     <string name="deleting_browsing_data_in_progress">ब्राउज़िंग डेटा मिटा रहे हैं…</string>
 
     <!-- Tips -->
-    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Firefox Preview अब Firefox Nightly है</string>
+    <!-- text for firefox preview moving tip header "Waterfox Preview" and "Waterfox Nightly" are intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header" tools:ignore="UnusedResources">Waterfox Preview अब Waterfox Nightly है</string>
 
     <!-- text for firefox preview moving tip description -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Firefox Nightly  हर रात को अपडेट किया जाता है और इसमें नए प्रयोगात्मक विशेषताओं जोड़ी जाति हैं।
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description" tools:ignore="UnusedResources">Waterfox Nightly  हर रात को अपडेट किया जाता है और इसमें नए प्रयोगात्मक विशेषताओं जोड़ी जाति हैं।
          हालाकी यह कम स्थिर हो सकता है । अधिक स्थायी अनुभव के लिए हमारा बीटा ब्राउज़र डाउनलोड करें।</string>
-    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Android के लिए Firefox Beta पाएँ</string>
+    <!-- text for firefox preview moving tip button. "Waterfox for Android Beta" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_2" tools:ignore="UnusedResources">Android के लिए Waterfox Beta पाएँ</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Firefox Nightly को हटा दिया गया</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_installed" tools:ignore="UnusedResources">Waterfox Nightly को हटा दिया गया</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_installed" tools:ignore="UnusedResources">यह ऐप अब कोई सुरक्षा अपडेट प्राप्त नहीं करेगा। इसे उपयोग करना बंद करें और नए Nightly में बदलें।
-        \n\nअपने बूकमार्क, लॉगिन और इतिहास को किसी अन्य ऐप  स्थानांतरित करने के लिए, एक Firefox खाता बनायें।</string>
+        \n\nअपने बूकमार्क, लॉगिन और इतिहास को किसी अन्य ऐप  स्थानांतरित करने के लिए, एक Waterfox खाता बनायें।</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_installed" tools:ignore="UnusedResources">नए Nightly पर स्विच करें</string>
 
-    <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
-    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Firefox Nightly को हटा दिया गया</string>
+    <!-- text for firefox preview moving tip header. "Waterfox Nightly" is intentionally hardcoded -->
+    <string moz:RemovedIn="100" name="tip_firefox_preview_moved_header_preview_not_installed" tools:ignore="UnusedResources">Waterfox Nightly को हटा दिया गया</string>
     <!-- text for firefox preview moving tip description -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_description_preview_not_installed" tools:ignore="UnusedResources">यह ऐप अब कोई सुरक्षा अपडेट प्राप्त नहीं करेगा। नया Nightly पायें और इसे उपयोग करना बंद करें।
-        \n\nअपने बूकमार्क, लॉगिन और इतिहास को किसी अन्य ऐप  स्थानांतरित करने के लिए, एक Firefox खाता बनायें।</string>
+        \n\nअपने बूकमार्क, लॉगिन और इतिहास को किसी अन्य ऐप  स्थानांतरित करने के लिए, एक Waterfox खाता बनायें।</string>
     <!-- text for firefox preview moving tip button  -->
     <string moz:RemovedIn="100" name="tip_firefox_preview_moved_button_preview_not_installed" tools:ignore="UnusedResources">नई Nightly पायें</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s में आपका स्वागत हैं!</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">साइन अप</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">सिंक चालू है</string>
@@ -1093,14 +1093,14 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">कोड को स्कैन करें</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[अपने कंप्यूटर पर Firefox खोलें और <b> https://firefox.com/pair </ b> पर जाएं]]></string>
+    <string name="sign_in_instructions"><![CDATA[अपने कंप्यूटर पर Waterfox खोलें और <b> https://firefox.com/pair </ b> पर जाएं]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">स्कैन करने के लिए तैयार है</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">अपने कैमरे से साइन इन करें</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">इसके बजाय ईमेल का उपयोग करें</string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">%s आपके खाते के साथ सिंक करना बंद करेगा, लेकिन इस उपकरण पर स्थित आपका कोई भी ब्राउजिंग डाटा नहीं मिटाएगा।</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">डिस्कनेक्ट करें</string>
@@ -1494,13 +1494,13 @@
     <string name="synced_tabs_connect_another_device">अन्य डिवाइस कनेक्ट करें</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">कृपया पुनः प्रमाणित करें।</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">कृपया टैब सिंकिंग सक्षम करें।</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">आपके अन्य उपकरणों पर Firefox में कोई टैब खुला नहीं है।</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">आपके अन्य उपकरणों पर Waterfox में कोई टैब खुला नहीं है।</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">अपने अन्य उपकरणों से टैब की एक सूची देखें।</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">सिंक करने के लिए साइन इन करें</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->

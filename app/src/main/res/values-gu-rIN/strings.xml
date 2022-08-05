@@ -218,9 +218,9 @@
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">થીમ</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">તમારા Firefox એકાઉન્ટ સાથે બુકમાર્ક્સ, ઇતિહાસ અને વધુને સમન્વયિત કરો</string>
+    <string name="preferences_sign_in_description">તમારા Waterfox એકાઉન્ટ સાથે બુકમાર્ક્સ, ઇતિહાસ અને વધુને સમન્વયિત કરો</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Firefox ખાતુ</string>
+    <string name="preferences_account_default_name">Waterfox ખાતુ</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">સમન્વયન ફરી શરૂ કરવા માટે ફરીથી કનેક્ટ કરો</string>
     <!-- Preference for language -->
@@ -285,7 +285,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">પ્રાપ્ત ટેબ્સ </string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">અન્ય Firefox ઉપકરણોથી પ્રાપ્ત ટેબ્સ માટેની સૂચનાઓ.</string>
+    <string name="fxa_received_tab_channel_description">અન્ય Waterfox ઉપકરણોથી પ્રાપ્ત ટેબ્સ માટેની સૂચનાઓ.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">ટેબ પ્રાપ્ત</string>
     <!-- When multiple tabs have been received -->
@@ -692,7 +692,7 @@
     <string name="sync_connect_device">બીજા ઉપકરણ સાથે જોડાણ કરો</string>
 
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">ટેબ મોકલવા માટે, ઓછામાં ઓછા એક અન્ય ઉપકરણ પર Firefox માં સાઇન ઇન કરો.</string>
+    <string name="sync_connect_device_dialog">ટેબ મોકલવા માટે, ઓછામાં ઓછા એક અન્ય ઉપકરણ પર Waterfox માં સાઇન ઇન કરો.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">સમજાઈ ગયું</string>
     <!-- Share error message -->
@@ -827,12 +827,12 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">%s પર આપનું સ્વાગત છે!</string>
-    <!-- text for the Firefox Accounts section header -->
+    <!-- text for the Waterfox Accounts section header -->
     <string name="onboarding_fxa_section_header">પહેલેથી જ એકાઉન્ટ છે?</string>
-    <!-- text for the Firefox Preview feature section header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- text for the Waterfox Preview feature section header
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_feature_section_header">%s ને જાણો</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">જુઓ નવુ શું છે</string>
@@ -842,7 +842,7 @@
     <string name="onboarding_firefox_account_auto_signin_confirm">હા, મને સાઇન ઇન કરો</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">સાઇન ઇન કરી રહ્યું છે…</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
+    <!-- text for the button to manually sign into Waterfox account. The word "Waterfox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Firefoxમાં સાઇન ઇન કરો</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">સાઇન આઉટ રહો</string>
@@ -898,7 +898,7 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">તેના બદલે ઇમેઇલનો ઉપયોગ કરો</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_confirmation_message">Firefox તમારા એકાઉન્ટ સાથે સમન્વય કરવાનું બંધ કરશે, પરંતુ આ ઉપકરણ પરના તમારી કોઈપણ બ્રાઉઝિંગ માહિતીને કાઢી નાખશે નહીં.</string>
+    <string name="sign_out_confirmation_message">Waterfox તમારા એકાઉન્ટ સાથે સમન્વય કરવાનું બંધ કરશે, પરંતુ આ ઉપકરણ પરના તમારી કોઈપણ બ્રાઉઝિંગ માહિતીને કાઢી નાખશે નહીં.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">જોડાણ તોડો</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -1158,9 +1158,9 @@
     <string name="login_menu_delete_button">કાઢી નાંખો</string>
 
     <!-- depcrecated: text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_firefox_account_header">%s માંથી સૌથી વધુ મેળવો.</string>
 
     <!-- Deprecated: text for the firefox account onboarding card header when we detect you're already signed in to -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">તમે આ ફોન પરના બીજા Firefox બ્રાઉઝર પર %s તરીકે સાઇન ઇન કર્યું છે. શું તમે આ એકાઉન્ટ સાથે સાઇન ઇન કરવા માંગો છો?</string>
+    <string name="onboarding_firefox_account_auto_signin_header_2">તમે આ ફોન પરના બીજા Waterfox બ્રાઉઝર પર %s તરીકે સાઇન ઇન કર્યું છે. શું તમે આ એકાઉન્ટ સાથે સાઇન ઇન કરવા માંગો છો?</string>
     </resources>

@@ -271,8 +271,8 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Rivedi le tue ultime ricerche effettuate dalla pagina iniziale e dalle schede.</string>
 
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">La pagina iniziale personalizzata di Firefox rende più semplice riprendere da dove avevi interrotto. Puoi trovare le schede recenti, i segnalibri e i risultati delle ricerche.</string>
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">La pagina iniziale personalizzata di Waterfox rende più semplice riprendere da dove avevi interrotto. Puoi trovare le schede recenti, i segnalibri e i risultati delle ricerche.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -345,12 +345,12 @@
     <string name="errorpage_httpsonly_message_summary">Esiste tuttavia la possibilità che si tratti di un tentativo di attacco. Se decidi di accedere comunque al sito web, dovresti evitare di inserire informazioni sensibili. Proseguendo, la modalità solo HTTPS verrà temporaneamente disattivata per questo sito.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accessibilità</string>
-    <!-- Preference to override the Firefox Account server -->
-    <string name="preferences_override_fxa_server">Server personalizzato per account Firefox</string>
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Server personalizzato per account Waterfox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Server personalizzato per Sync</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
-    <string name="toast_override_fxa_sync_server_done">Server per account Firefox/Sync modificato. L’app verrà chiusa per applicare le modifiche…</string>
+    <string name="toast_override_fxa_sync_server_done">Server per account Waterfox/Sync modificato. L’app verrà chiusa per applicare le modifiche…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Account</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -364,11 +364,11 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personalizza</string>
     <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Sincronizza segnalibri, cronologia e molto altro con il tuo account Firefox</string>
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Sincronizza segnalibri, cronologia e molto altro con il tuo account Waterfox</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Accedi per sincronizzare schede, segnalibri, password e altro ancora.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
-    <string name="preferences_account_default_name">Account Firefox</string>
+    <string name="preferences_account_default_name">Account Waterfox</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Riconnetti per riprendere la sincronizzazione</string>
     <!-- Preference for language -->
@@ -454,11 +454,11 @@
     <string name="wallpaper_updated_snackbar_action">Visualizza</string>
 
     <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Cambia lo sfondo toccando il logo di Firefox nella pagina iniziale</string>
+    <string name="wallpaper_tap_to_change_switch_label_1">Cambia lo sfondo toccando il logo di Waterfox nella pagina iniziale</string>
 
     <!-- This is the accessibility content description for the wallpapers functionality. Users are
     able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Logo di Firefox. Pulsante per cambiare lo sfondo</string>
+    <string name="wallpaper_logo_content_description">Logo di Waterfox. Pulsante per cambiare lo sfondo</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -511,7 +511,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Schede ricevute</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Notifiche per schede ricevute da altri dispositivi Firefox.</string>
+    <string name="fxa_received_tab_channel_description">Notifiche per schede ricevute da altri dispositivi Waterfox.</string>
 
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Scheda ricevuta</string>
@@ -685,7 +685,7 @@
 
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Attivi</string>
-    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
     <string name="studies_description_2">%1$s può installare e condurre degli studi di tanto in tanto.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Ulteriori informazioni</string>
@@ -810,7 +810,7 @@
     <!-- The synced history sign in dialog button text -->
     <string name="history_sign_in_button">Accedi</string>
     <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>Oppure crea un account Firefox per iniziare a sincronizzare</u>]]></string>
+    <string name="history_sign_in_create_account"><![CDATA[<u>Oppure crea un account Waterfox per iniziare a sincronizzare</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1075,7 +1075,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Connetti un altro dispositivo</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Per inviare una scheda, accedi all’account Firefox su almeno un altro dispositivo.</string>
+    <string name="sync_connect_device_dialog">Per inviare una scheda, accedi all’account Waterfox su almeno un altro dispositivo.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Tutto chiaro</string>
 
@@ -1235,13 +1235,13 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="onboarding_header">Benvenuto in %s.</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sincronizza Firefox tra vari dispositivi</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sincronizza Waterfox tra vari dispositivi</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Porta segnalibri, cronologia e password di %1$s su questo dispositivo.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
+    <!-- text for the button to manually sign into Waterfox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registrati</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">La sincronizzazione è attiva</string>
@@ -1265,7 +1265,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">La tua privacy</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">%s è progettato per darti il pieno controllo sulle informazioni che condividi online e con noi.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Leggi la nostra informativa sulla privacy</string>
@@ -1298,16 +1298,16 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scansiona il codice</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Apri Firefox sul computer e vai su <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[Apri Waterfox sul computer e vai su <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Pronto per la scansione</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Accedi con la fotocamera</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Accedi con l’email</string>
-    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[Non hai l’account? <u>Creane uno</u> per sincronizzare Firefox tra vari dispositivi.]]></string>
-    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Non hai l’account? <u>Creane uno</u> per sincronizzare Waterfox tra vari dispositivi.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
     <string name="sign_out_confirmation_message_2">I dati di navigazione non verranno più sincronizzati con l’account %s, ma non saranno rimossi dal dispositivo in uso.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Disconnetti</string>
@@ -1471,9 +1471,9 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Non salvare mai</string>
 
-    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Compila automaticamente in %1$s</string>
-    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Compila e salva nomi utente e password nei siti web quando utilizzi %1$s.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Compila automaticamente in altre app</string>
@@ -1808,14 +1808,14 @@
     <string name="synced_tabs_connect_another_device">Connetti un altro dispositivo.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Esegui nuovamente l’accesso.</string>
-    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Attiva la sincronizzazione delle schede.</string>
 
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Non risulta alcuna scheda aperta in Firefox negli altri dispositivi.</string>
-    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_no_tabs">Non risulta alcuna scheda aperta in Waterfox negli altri dispositivi.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Visualizza un elenco delle schede aperte in altri dispositivi.</string>
-    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
     <string name="synced_tabs_sign_in_button">Accedi per sincronizzare</string>
 
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
@@ -1867,7 +1867,7 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Chiudi automaticamente dopo un mese?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox può chiudere le schede che non hai visualizzato nell’ultimo mese.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox può chiudere le schede che non hai visualizzato nell’ultimo mese.</string>
 
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ATTIVA CHIUSURA AUTOMATICA</string>
@@ -1876,7 +1876,7 @@
     <string name="inactive_tabs_auto_close_message_snackbar">Chiusura automatica attiva</string>
 
     <!-- Default browser experiment -->
-    <string name="default_browser_experiment_card_text">Apri link da siti web, email e messaggi in Firefox per impostazione predefinita.</string>
+    <string name="default_browser_experiment_card_text">Apri link da siti web, email e messaggi in Waterfox per impostazione predefinita.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Elimina</string>
@@ -1900,7 +1900,7 @@
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Sviluppato con tecnologia Pocket</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Parte della famiglia Firefox. %s</string>
+    <string name="pocket_stories_feature_caption">Parte della famiglia Waterfox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Ulteriori informazioni</string>
 
@@ -1911,5 +1911,5 @@
     <string name="experiments_snackbar">Attiva la telemetria per inviare dati.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Vai alle impostazioni</string>
-    <string name="firefox_suggest_header">Firefox Suggest</string>
+    <string name="firefox_suggest_header">Waterfox Suggest</string>
 </resources>
