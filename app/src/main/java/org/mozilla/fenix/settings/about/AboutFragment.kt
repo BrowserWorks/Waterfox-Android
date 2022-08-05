@@ -110,7 +110,7 @@ class AboutFragment : Fragment(), AboutPageListener {
 
             String.format(
                 "%s (Build #%s)%s\n%s: %s\n%s: %s\n%s: %s",
-                packageInfo.versionName,
+                BuildConfig.VERSION_NAME,
                 versionCode,
                 maybeFenixGitHash,
                 componentsAbbreviation,
