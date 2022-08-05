@@ -49,7 +49,7 @@ fun showPrivacyPopWindow(context: Context, activity: Activity) {
             context.getString(R.string.privacy_notice_positive_button)
         ) { _, _ ->
             context.settings().shouldShowPrivacyPopWindow = false
-            context.settings().isMarketingTelemetryEnabled = true
+            context.settings().isMarketingTelemetryEnabled = false
             context.components.analytics.metrics.start(MetricServiceType.Marketing)
         }
         .setNeutralButton(
