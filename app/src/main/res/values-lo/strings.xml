@@ -450,7 +450,7 @@
     <string name="preference_usage_data">ການໃຊ້ງານ ແລະ ຂໍ້ມູນທາງເຕັກນິກ</string>
 
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">ແບ່ງປັນຂໍ້ມູນປະສິດທິພາບ, ການໃຊ້ງານ, ຮາດແວ ແລະ ການປັບແຕ່ງໃນບຣາວເຊີຂອງທ່ານກັບ Mozilla ເພື່ອຊ່ວຍພວກເຮົາສ້າງ %1$s ໃຫ້ດີຂື້ນກ່ວາເກົ່າ</string>
+    <string name="preferences_usage_data_description">ແບ່ງປັນຂໍ້ມູນປະສິດທິພາບ, ການໃຊ້ງານ, ຮາດແວ ແລະ ການປັບແຕ່ງໃນບຣາວເຊີຂອງທ່ານກັບ Waterfox Projectເພື່ອຊ່ວຍພວກເຮົາສ້າງ %1$s ໃຫ້ດີຂື້ນກ່ວາເກົ່າ</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">ຂໍ້ມູນດ້ານການຕະຫຼາດ</string>
     <!-- Preference description for marketing data collection -->
@@ -458,7 +458,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">ການສຶກສາ</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">ອະນຸຍາດໃຫ້ Mozilla ຕິດຕັ້ງ ແລະ ເປີດໃຊ້ການສຶກສາ</string>
+    <string name="preference_experiments_summary_2">ອະນຸຍາດໃຫ້ Waterfox Projectຕິດຕັ້ງ ແລະ ເປີດໃຊ້ການສຶກສາ</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

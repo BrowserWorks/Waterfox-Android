@@ -487,7 +487,7 @@
     <string moz:removedIn="96" name="preference_experiments_summary" tools:ignore="UnusedResources">به موزیلا اجازه می دهم داده های ویژگی های آزمایشی را نصب و جمع آوری کند</string>
     <!-- Preference switch for crash reporter -->
     <string moz:removedIn="96" name="preferences_crash_reporter" tools:ignore="UnusedResources">گزارشگر فروپاشی</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string moz:removedIn="96" name="preferences_mozilla_location_service" tools:ignore="UnusedResources">سرویس موقعیت مکانی موزیلا</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string moz:removedIn="96" name="preferences_fenix_health_report" tools:ignore="UnusedResources">گزارش سلامت %s</string>

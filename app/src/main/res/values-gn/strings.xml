@@ -523,7 +523,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Jepuru ha mba’ekuaarã aporekogua</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Emoherakuã mba’ekuaarã apopy, jepuru, hardware ha kundahára mboava Mozilla ndive orepytyvõ hag̃ua oikoporãvévo %1$s</string>
+    <string name="preferences_usage_data_description">Emoherakuã mba’ekuaarã apopy, jepuru, hardware ha kundahára mboava Waterfox Projectndive orepytyvõ hag̃ua oikoporãvévo %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Mba’ekuaarã jehepyme’ẽrã</string>
     <!-- Preference description for marketing data collection -->

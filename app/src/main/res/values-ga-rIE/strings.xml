@@ -231,7 +231,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Úsáid agus sonraí teicniúla</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Seolann sé faisnéis maidir le feidhmíocht, úsáid, crua-earraí, agus saincheapadh an bhrabhsálaí chuig Mozilla chun cabhrú linn feabhas a chur ar %1$s</string>
+    <string name="preferences_usage_data_description">Seolann sé faisnéis maidir le feidhmíocht, úsáid, crua-earraí, agus saincheapadh an bhrabhsálaí chuig Waterfox Projectchun cabhrú linn feabhas a chur ar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Sonraí margaíochta</string>
 

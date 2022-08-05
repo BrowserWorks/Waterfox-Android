@@ -531,7 +531,7 @@
 
 
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Comparti prestationes, uso, datos hardware e personalisationes re tu navigator con Mozilla pro adjutar nos a render %1$s melior</string>
+    <string name="preferences_usage_data_description">Comparti prestationes, uso, datos hardware e personalisationes re tu navigator con Waterfox Projectpro adjutar nos a render %1$s melior</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Datos de mercato</string>
 
@@ -541,7 +541,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studios</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Consenti Mozilla installar e exequer studios</string>
+    <string name="preference_experiments_summary_2">Consenti Waterfox Projectinstallar e exequer studios</string>
 
 
     <!-- Turn On Sync Preferences -->

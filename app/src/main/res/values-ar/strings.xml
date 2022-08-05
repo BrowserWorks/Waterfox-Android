@@ -569,7 +569,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">الاستخدام والبيانات التقنية</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">شارك بيانات المتصفح فيما يتعلق بالأداء و الاستخدام و العتاد و التخصيصات مع Mozilla لمساعدتنا في جعل %1$s أفضل</string>
+    <string name="preferences_usage_data_description">شارك بيانات المتصفح فيما يتعلق بالأداء و الاستخدام و العتاد و التخصيصات مع Waterfox Projectلمساعدتنا في جعل %1$s أفضل</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">بيانات التسويق</string>
     <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
@@ -579,14 +579,14 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">الدراسات</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">تسمح لمؤسسة Mozilla بتثبيت الدراسات وتشغيلها</string>
+    <string name="preference_experiments_summary_2">تسمح لمؤسسة Waterfox Projectبتثبيت الدراسات وتشغيلها</string>
     <!-- Title for experiments preferences -->
     <string moz:removedIn="96" name="preference_experiments" tools:ignore="UnusedResources">التجارب</string>
     <!-- Summary for experiments preferences -->
-    <string moz:removedIn="96" name="preference_experiments_summary" tools:ignore="UnusedResources">يسمح بأن تثبّت Mozilla بيانات المزايا التجريبية وتجمعها</string>
+    <string moz:removedIn="96" name="preference_experiments_summary" tools:ignore="UnusedResources">يسمح بأن تثبّت Waterfox Projectبيانات المزايا التجريبية وتجمعها</string>
     <!-- Preference switch for crash reporter -->
     <string moz:removedIn="96" name="preferences_crash_reporter" tools:ignore="UnusedResources">مُبلّغ الانهيار</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string moz:removedIn="96" name="preferences_mozilla_location_service" tools:ignore="UnusedResources">خدمة التموضع من Mozilla</string>
 
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->

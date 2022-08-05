@@ -47,7 +47,7 @@
     <string moz:removedIn="101" name="recently_saved_show_all" tools:ignore="UnusedResources">सभी दिखाएँ</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s को Mozilla द्वारा निर्मित किया गया है।</string>
+    <string name="about_content">%1$s को Waterfox Projectद्वारा निर्मित किया गया है।</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -430,13 +430,13 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">उपयोगिता और तकनीकी डेटा</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Mozilla के साथ अपने ब्राउज़र के बारे में प्रदर्शन, उपयोग, हार्डवेयर और अनुकूलन डेटा साझा करना हमें %1$s को बेहतर बनाने में मदद करता है</string>
+    <string name="preferences_usage_data_description">Waterfox Projectके साथ अपने ब्राउज़र के बारे में प्रदर्शन, उपयोग, हार्डवेयर और अनुकूलन डेटा साझा करना हमें %1$s को बेहतर बनाने में मदद करता है</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">मार्केटिंग डेटा</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">अध्ययन</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Mozilla को संस्थापित करने और अध्ययन चलाने की अनुमति देता है</string>
+    <string name="preference_experiments_summary_2">Waterfox Projectको संस्थापित करने और अध्ययन चलाने की अनुमति देता है</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -684,7 +684,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">माफ़ कीजिए। %1$s उस पृष्ठ को लोड नहीं कर सकता हैं।</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Mozilla को क्रैश रिपोर्ट भेजें</string>
+    <string name="tab_crash_send_report">Waterfox Projectको क्रैश रिपोर्ट भेजें</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">टैब बंद करें</string>
     <!-- Restore tab button text on the tab crash page -->

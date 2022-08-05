@@ -516,7 +516,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Data defnydd a thechnegol</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Mae’n rhannu data perfformiad, defnydd, caledwedd a chyfaddasu eich porwr gyda Mozilla er mwyn gwella %1$s</string>
+    <string name="preferences_usage_data_description">Mae’n rhannu data perfformiad, defnydd, caledwedd a chyfaddasu eich porwr gyda Waterfox Projecter mwyn gwella %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Data marchnata</string>
     <!-- Preference description for marketing data collection -->
@@ -524,7 +524,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Astudiaethau</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Yn caniatáu i Mozilla osod a rhedeg astudiaethau</string>
+    <string name="preference_experiments_summary_2">Yn caniatáu i Waterfox Projectosod a rhedeg astudiaethau</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

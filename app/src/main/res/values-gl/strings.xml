@@ -355,13 +355,13 @@
     <string name="preference_usage_data">Uso e datos técnicos</string>
 
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Comparte datos de rendemento, uso, hardware e personalizacións sobre o seu navegador con Mozilla para axudarnos a mellorar %1$s</string>
+    <string name="preferences_usage_data_description">Comparte datos de rendemento, uso, hardware e personalizacións sobre o seu navegador con Waterfox Projectpara axudarnos a mellorar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Datos de mercadotecnia</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Estudos</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Permite que Mozilla instale e execute estudos</string>
+    <string name="preference_experiments_summary_2">Permite que Waterfox Projectinstale e execute estudos</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

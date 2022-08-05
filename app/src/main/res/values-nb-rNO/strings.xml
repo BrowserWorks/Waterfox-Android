@@ -529,7 +529,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Undersøkelse</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Tillater Mozilla å installere og kjøre undersøkelser</string>
+    <string name="preference_experiments_summary_2">Tillater Waterfox Projectå installere og kjøre undersøkelser</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

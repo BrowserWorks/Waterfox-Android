@@ -327,7 +327,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Date tehnice și de utilizare</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Partajează cu Mozilla date privind performanța, utilizarea, hardware-ul și personalizările browserului tău pentru a ne ajuta să îmbunătățim %1$s</string>
+    <string name="preferences_usage_data_description">Partajează cu Waterfox Projectdate privind performanța, utilizarea, hardware-ul și personalizările browserului tău pentru a ne ajuta să îmbunătățim %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Date de marketing</string>
 

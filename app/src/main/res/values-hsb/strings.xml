@@ -47,7 +47,7 @@
     <string name="recently_saved_menu_item_remove">Wotstronić</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s so přez Mozilla zhotowja.</string>
+    <string name="about_content">%1$s so přez Waterfox Projectzhotowja.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -530,7 +530,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studije</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Mozilla dowolić, studije instalować a přewjesć</string>
+    <string name="preference_experiments_summary_2">Waterfox Projectdowolić, studije instalować a přewjesć</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -820,7 +820,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Bohužel %1$s njemóže tutu stronu začitać.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Mozilla spadowu rozprawu pósłać</string>
+    <string name="tab_crash_send_report">Waterfox Projectspadowu rozprawu pósłać</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Rajtark začinić</string>
     <!-- Restore tab button text on the tab crash page -->

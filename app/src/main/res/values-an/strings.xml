@@ -398,7 +398,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Uso y datos tecnicos</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Comparte datos de rendimiento, uso, hardware y personalizacions sobre lo tuyo navegador con Mozilla pa aduyar a amillorar %1$s</string>
+    <string name="preferences_usage_data_description">Comparte datos de rendimiento, uso, hardware y personalizacions sobre lo tuyo navegador con Waterfox Projectpa aduyar a amillorar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Datos de marketing</string>
     <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
@@ -406,10 +406,10 @@
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Experimentos</string>
     <!-- Summary for experiments preferences -->
-    <string name="preference_experiments_summary">Permite a Mozilla instalar y recopilar datos pa funcions experimentals</string>
+    <string name="preference_experiments_summary">Permite a Waterfox Projectinstalar y recopilar datos pa funcions experimentals</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Informe d’error</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string name="preferences_mozilla_location_service">Servicio de localización de Mozilla</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">Informe de salut de %s</string>

@@ -48,7 +48,7 @@
     <string name="recently_saved_menu_item_remove">Тоза кардан</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s аз ҷониби Mozilla истеҳсол карда шудааст.</string>
+    <string name="about_content">%1$s аз ҷониби Waterfox Projectистеҳсол карда шудааст.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -520,7 +520,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Истифодабарӣ ва маълумоти техникӣ</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Барои беҳтар кардани %1$s маълумоти самаранокӣ, истифодабарӣ, сахтафзор ва танзимоти фармоишӣ дар бораи браузери шумо бо Mozilla мубодила карда шавад</string>
+    <string name="preferences_usage_data_description">Барои беҳтар кардани %1$s маълумоти самаранокӣ, истифодабарӣ, сахтафзор ва танзимоти фармоишӣ дар бораи браузери шумо бо Waterfox Projectмубодила карда шавад</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Маълумоти маркетингӣ</string>
     <!-- Preference description for marketing data collection -->
@@ -528,7 +528,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Таҳқиқҳо</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Ба Mozilla иҷозат медиҳад, ки таҳқиқҳоро насб ва иҷро кунад</string>
+    <string name="preference_experiments_summary_2">Ба Waterfox Projectиҷозат медиҳад, ки таҳқиқҳоро насб ва иҷро кунад</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

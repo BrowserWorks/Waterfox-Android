@@ -523,7 +523,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Даследаванні</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Дазволіць Mozilla ўсталёўваць і запускаць даследаванні</string>
+    <string name="preference_experiments_summary_2">Дазволіць Waterfox Projectўсталёўваць і запускаць даследаванні</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

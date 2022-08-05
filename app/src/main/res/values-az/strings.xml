@@ -290,8 +290,8 @@
     <string name="preference_experiments">Eksperimentlər</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Çökmə məlumatçısı</string>
-    <!-- Preference switch for Mozilla location service -->
-    <string name="preferences_mozilla_location_service">Mozilla mövqe xidməti</string>
+    <!-- Preference switch for Waterfox Projectlocation service -->
+    <string name="preferences_mozilla_location_service">Waterfox Projectmövqe xidməti</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

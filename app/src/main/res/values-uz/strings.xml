@@ -58,7 +58,7 @@
     <string moz:removedIn="97" name="recently_saved_show_all_content_description" tools:ignore="UnusedResources">Barcha saqlangan xatchoʻplarni koʻrsatish tugmasi</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s brauzerini Mozilla ishlab chiqqan.</string>
+    <string name="about_content">%1$s brauzerini Waterfox Projectishlab chiqqan.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -562,8 +562,8 @@
     <string moz:removedIn="96" name="preference_experiments_summary" tools:ignore="UnusedResources">Mozillaga tajriba xususiyatlar uchun maʼlumotlarni oʻrnatish va yigʻish imkonini bering</string>
     <!-- Preference switch for crash reporter -->
     <string moz:removedIn="96" name="preferences_crash_reporter" tools:ignore="UnusedResources">Nosozlik haqida xabar</string>
-    <!-- Preference switch for Mozilla location service -->
-    <string moz:removedIn="96" name="preferences_mozilla_location_service" tools:ignore="UnusedResources">Mozilla joylashuv xizmati</string>
+    <!-- Preference switch for Waterfox Projectlocation service -->
+    <string moz:removedIn="96" name="preferences_mozilla_location_service" tools:ignore="UnusedResources">Waterfox Projectjoylashuv xizmati</string>
 
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string moz:removedIn="96" name="preferences_fenix_health_report" tools:ignore="UnusedResources">%s yaroqliligi haqida hisobot</string>

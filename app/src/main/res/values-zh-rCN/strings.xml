@@ -52,7 +52,7 @@
     <string name="recently_saved_menu_item_remove">移除</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s 由 Mozilla 倾力打造。</string>
+    <string name="about_content">%1$s 由 Waterfox Project倾力打造。</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -533,7 +533,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">使用率和技术数据</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">与 Mozilla 分享使用浏览器时的工作性能、使用方式、硬件设备以及有关自定义的数据，帮助我们改进 %1$s，让它变得更好</string>
+    <string name="preferences_usage_data_description">与 Waterfox Project分享使用浏览器时的工作性能、使用方式、硬件设备以及有关自定义的数据，帮助我们改进 %1$s，让它变得更好</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">营销数据</string>
     <!-- Preference description for marketing data collection -->
@@ -541,7 +541,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">研究</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">允许 Mozilla 安装和运行研究</string>
+    <string name="preference_experiments_summary_2">允许 Waterfox Project安装和运行研究</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -834,7 +834,7 @@
     <string name="tab_crash_title_2">抱歉，%1$s 无法加载该页面。</string>
 
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">向 Mozilla 发送崩溃报告</string>
+    <string name="tab_crash_send_report">向 Waterfox Project发送崩溃报告</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">关闭标签页</string>
     <!-- Restore tab button text on the tab crash page -->

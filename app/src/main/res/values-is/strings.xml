@@ -519,7 +519,7 @@
     <string name="preference_usage_data">Notkun og tæknileg gögn</string>
 
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Deilir afköstum, notkun, vélbúnaðarupplýsingum og sérsniðum gögnum um vafrann þinn með Mozilla svo hægt sé að betrumbæta %1$s</string>
+    <string name="preferences_usage_data_description">Deilir afköstum, notkun, vélbúnaðarupplýsingum og sérsniðum gögnum um vafrann þinn með Waterfox Projectsvo hægt sé að betrumbæta %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Markaðsgögn</string>
     <!-- Preference description for marketing data collection -->
@@ -527,7 +527,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Kannanir</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Leyfir Mozilla að setja upp og keyra rannsóknir</string>
+    <string name="preference_experiments_summary_2">Leyfir Waterfox Projectað setja upp og keyra rannsóknir</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

@@ -560,7 +560,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Cleachdadh is dàta teicnigeach</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Cuiridh seo dàta air dèanadas, cleachdadh, bathar-cruaidh agus gnàthachadh a’ bhrabhsair agad dha Mozilla ach an urrainn dhuinn %1$s a dhèanamh nas fheàrr fhathast</string>
+    <string name="preferences_usage_data_description">Cuiridh seo dàta air dèanadas, cleachdadh, bathar-cruaidh agus gnàthachadh a’ bhrabhsair agad dha Waterfox Projectach an urrainn dhuinn %1$s a dhèanamh nas fheàrr fhathast</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Dàta margaideachd</string>
     <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
@@ -570,14 +570,14 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Rannsachadh</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Leig le Mozilla rannsachadh a stàladh is a ruith an-còmhnaidh</string>
+    <string name="preference_experiments_summary_2">Leig le Waterfox Projectrannsachadh a stàladh is a ruith an-còmhnaidh</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Deuchainnean</string>
     <!-- Summary for experiments preferences -->
-    <string name="preference_experiments_summary">Leig le Mozilla  gleusan deuchainneil a stàladh is dàta a chruinneachadh mu an dèidhinn</string>
+    <string name="preference_experiments_summary">Leig le Waterfox Project gleusan deuchainneil a stàladh is dàta a chruinneachadh mu an dèidhinn</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Aithrisiche nan tuislidhean</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string name="preferences_mozilla_location_service">Seirbheis an ionaid aig Mozilla</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">Aithisg slàinte %s</string>

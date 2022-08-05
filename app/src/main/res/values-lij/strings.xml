@@ -268,7 +268,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Dæti tecnichi e statistiche d\'uzo</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Condividdi con Mozilla informaçioin in sce prestaçioin, uzo, hardware e personalizaçioin do navegatô pe contribuî a-o megioamento de %1$s</string>
+    <string name="preferences_usage_data_description">Condividdi con Waterfox Projectinformaçioin in sce prestaçioin, uzo, hardware e personalizaçioin do navegatô pe contribuî a-o megioamento de %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Dæti de marketing</string>
 

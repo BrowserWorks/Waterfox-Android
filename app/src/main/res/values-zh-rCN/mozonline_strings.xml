@@ -5,12 +5,12 @@
     <string name="privacy_notice_title">关于您的权利</string>
     <!-- Privacy Notice content-->
     <string name="privacy_notice_content">Waterfox 是一款自由开源软件，由来自世界各地成千上万的社区志愿者共同完成。以下几点您应该了解：
-    \n\n•Waterfox 提供给您时依照的条款为 Mozilla 公共许可证（MPL）。这表示您可以使用、复制和向他人分发 Waterfox。我们也非常欢迎您按自己的需要修改 Waterfox 的源代码。Mozilla 公共许可证还授予您分发您自己修改过的软件版本的权利。
-    \n•您没有获得 Mozilla 基金会或其他任何一方的商标权利或许可，这包括但不限于 Waterfox 的名称或标志。有关商标的其他信息在：这里。
-    \n•Waterfox 的一些功能（例如崩溃报告器）使您可以向 Mozilla 提供反馈。提交反馈的同时，您授权 Mozilla 使用反馈信息改进产品、在其网站上发布反馈信息，以及分发反馈内容。
-    \n•关于我们如何使用您通过 Waterfox 提交给 Mozilla 的个人信息和反馈，请参见 Waterfox 隐私权政策。</string>
+    \n\n•Waterfox 提供给您时依照的条款为 Waterfox Project公共许可证（MPL）。这表示您可以使用、复制和向他人分发 Waterfox。我们也非常欢迎您按自己的需要修改 Waterfox 的源代码。Waterfox Project公共许可证还授予您分发您自己修改过的软件版本的权利。
+    \n•您没有获得 Waterfox Project基金会或其他任何一方的商标权利或许可，这包括但不限于 Waterfox 的名称或标志。有关商标的其他信息在：这里。
+    \n•Waterfox 的一些功能（例如崩溃报告器）使您可以向 Waterfox Project提供反馈。提交反馈的同时，您授权 Waterfox Project使用反馈信息改进产品、在其网站上发布反馈信息，以及分发反馈内容。
+    \n•关于我们如何使用您通过 Waterfox 提交给 Waterfox Project的个人信息和反馈，请参见 Waterfox 隐私权政策。</string>
     <!-- Privacy Notice clickable-->
-    <string name="privacy_notice_clickable1">Mozilla 公共许可证（MPL）</string>
+    <string name="privacy_notice_clickable1">Waterfox Project公共许可证（MPL）</string>
     <!-- Privacy Notice clickable-->
     <string name="privacy_notice_clickable2">这里</string>
     <!-- Privacy Notice clickable-->

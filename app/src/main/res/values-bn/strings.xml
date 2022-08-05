@@ -41,7 +41,7 @@
     <string moz:removedIn="101" name="recently_saved_show_all" tools:ignore="UnusedResources">সব দেখান</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s হচ্ছে Mozilla দ্বারা তৈরি।</string>
+    <string name="about_content">%1$s হচ্ছে Waterfox Projectদ্বারা তৈরি।</string>
 
     <string name="private_browsing_common_myths">
        ব্যাক্তিগত ব্রাউজিং সম্পর্কে কিছু ভুল ধারণা
@@ -322,7 +322,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">ব্যবহার এবং প্রযুক্তিগত তথ্য</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">আমাদের %1$s আরও উন্নত করতে সহায়তা করতে Mozilla -র সাথে আপনার ব্রাউজার সম্পর্কিত কর্মক্ষমতা, ব্যবহার, হার্ডওয়্যার এবং কাস্টমাইজেশন তথ্য শেয়ার করুন</string>
+    <string name="preferences_usage_data_description">আমাদের %1$s আরও উন্নত করতে সহায়তা করতে Waterfox Project-র সাথে আপনার ব্রাউজার সম্পর্কিত কর্মক্ষমতা, ব্যবহার, হার্ডওয়্যার এবং কাস্টমাইজেশন তথ্য শেয়ার করুন</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">বিপণন তথ্য</string>
 
@@ -483,7 +483,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">দুঃখিত। %1$s পৃষ্ঠাটি লোড করতে পারেছে না।</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Mozilla তে ক্র্যাশ রিপোর্ট পাঠান</string>
+    <string name="tab_crash_send_report">Waterfox Projectতে ক্র্যাশ রিপোর্ট পাঠান</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">ট্যাব বন্ধ করুন</string>
     <!-- Restore tab button text on the tab crash page -->

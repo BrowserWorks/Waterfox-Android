@@ -339,7 +339,7 @@
     <string name="preference_experiments_summary">ಪ್ರಾಯೋಗಿಕ ವೈಶಿಷ್ಟ್ಯಗಳಿಗಾಗಿ ಡೇಟಾವನ್ನು ಸ್ಥಾಪಿಸಲು ಮತ್ತು ಸಂಗ್ರಹಿಸಲು ಮೊಜಿಲ್ಲಾವನ್ನು ಅನುಮತಿಸುತ್ತದೆ</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">ಕ್ರಿಯಾವೈಫಲ್ಯ ವರದಿಗಾರ</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string name="preferences_mozilla_location_service">ಮೊಜಿಲ್ಲಾ ಸ್ಥಳ ಸೇವೆ</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s ಆರೋಗ್ಯ ವರದಿ</string>

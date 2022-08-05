@@ -365,7 +365,7 @@
     <string name="preference_experiments_summary">പരീക്ഷണാത്മക സവിശേഷതകൾക്കായി ഇൻസ്റ്റാൾ ചെയ്യാനും ഡാറ്റ ശേഖരിക്കാനും മോസില്ലയെ അനുവദിക്കുന്നു</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">തകരാർ റിപ്പോർട്ടർ</string>
-    <!-- Preference switch for Mozilla location service -->
+    <!-- Preference switch for Waterfox Projectlocation service -->
     <string name="preferences_mozilla_location_service">മോസില്ല ലൊക്കേഷൻ സേവനം</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s ആരോഗ്യ റിപ്പോർട്ട്</string>

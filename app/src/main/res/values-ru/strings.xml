@@ -536,7 +536,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Исследования</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Разрешить Mozilla устанавливать и запускать исследования</string>
+    <string name="preference_experiments_summary_2">Разрешить Waterfox Projectустанавливать и запускать исследования</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

@@ -524,7 +524,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Data penggunaan dan teknis</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Bagikan data kinerja, penggunaan, perangkat keras dan pengubahsuaian peramban Anda dengan Mozilla untuk membantu kami membuat %1$s semakin baik</string>
+    <string name="preferences_usage_data_description">Bagikan data kinerja, penggunaan, perangkat keras dan pengubahsuaian peramban Anda dengan Waterfox Projectuntuk membantu kami membuat %1$s semakin baik</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Data pemasaran</string>
     <!-- Preference description for marketing data collection -->
@@ -532,7 +532,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Kajian</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Izinkan Mozilla untuk memasang dan menjalankan kajian</string>
+    <string name="preference_experiments_summary_2">Izinkan Waterfox Projectuntuk memasang dan menjalankan kajian</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

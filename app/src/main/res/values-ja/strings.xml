@@ -52,7 +52,7 @@
     <string name="recently_saved_menu_item_remove">削除</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s は Mozilla の製品です。</string>
+    <string name="about_content">%1$s は Waterfox Projectの製品です。</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -527,7 +527,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">使用状況と技術データ</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">パフォーマンス情報、使用状況、ハードウェア情報、設定を Mozilla に送信して %1$s の改善に役立てます</string>
+    <string name="preferences_usage_data_description">パフォーマンス情報、使用状況、ハードウェア情報、設定を Waterfox Projectに送信して %1$s の改善に役立てます</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">マーケティングデータ</string>
     <!-- Preference description for marketing data collection -->
@@ -535,7 +535,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">調査</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">調査機能のインストールと実行を Mozilla に許可する</string>
+    <string name="preference_experiments_summary_2">調査機能のインストールと実行を Waterfox Projectに許可する</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -823,7 +823,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">申し訳ありません。%1$s はそのページを読み込めません。</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">クラッシュレポートを Mozilla に送信する</string>
+    <string name="tab_crash_send_report">クラッシュレポートを Waterfox Projectに送信する</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">タブを閉じる</string>
     <!-- Restore tab button text on the tab crash page -->

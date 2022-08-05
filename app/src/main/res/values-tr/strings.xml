@@ -48,7 +48,7 @@
     <string name="recently_saved_menu_item_remove">Kaldır</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s bir Mozilla ürünüdür.</string>
+    <string name="about_content">%1$s bir Waterfox Projectürünüdür.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -519,7 +519,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Kullanım verileri ve teknik veriler</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">%1$s tarayıcınızı iyileştirmemize yardımcı olmak için tarayıcınızla ilgili performans, kullanım, donanım ve özelleştirme verilerini Mozilla ile paylaşır</string>
+    <string name="preferences_usage_data_description">%1$s tarayıcınızı iyileştirmemize yardımcı olmak için tarayıcınızla ilgili performans, kullanım, donanım ve özelleştirme verilerini Waterfox Projectile paylaşır</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Pazarlama verileri</string>
     <!-- Preference description for marketing data collection -->

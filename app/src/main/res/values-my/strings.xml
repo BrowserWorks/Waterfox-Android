@@ -43,7 +43,7 @@
     <string moz:removedIn="101" name="recently_saved_show_all" tools:ignore="UnusedResources">အားလုံးပြပါ</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s ကို Mozilla မှ ထုတ်လုပ်သည်။</string>
+    <string name="about_content">%1$s ကို Waterfox Projectမှ ထုတ်လုပ်သည်။</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -391,7 +391,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">အသုံးပြုမှုနှင့်နည်းပညာဆိုင်ရာဒေတာ</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">သုံးဆွဲပုံ၊  စက်ပစ္စည်းအသေးစိတ် အချက်အလက် နှင့် ပြင်ဆင်ထားပုံများအား Mozilla နှင့် မျှဝေပြီး %1$s ကို ကောင်းအောင်လုပ်ရာတွင် ကူညီပါ</string>
+    <string name="preferences_usage_data_description">သုံးဆွဲပုံ၊  စက်ပစ္စည်းအသေးစိတ် အချက်အလက် နှင့် ပြင်ဆင်ထားပုံများအား Waterfox Projectနှင့် မျှဝေပြီး %1$s ကို ကောင်းအောင်လုပ်ရာတွင် ကူညီပါ</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">စျေးကွက်ရှာဖွေရေးအချက်အလက်</string>
     <!-- Preference description for marketing data collection -->
@@ -399,7 +399,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">လေ့လာရေး</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Mozilla ကို ထည့်သွင်းစေပြီး လေ့လာခွင့်ပြုပါ</string>
+    <string name="preference_experiments_summary_2">Waterfox Projectကို ထည့်သွင်းစေပြီး လေ့လာခွင့်ပြုပါ</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

@@ -518,7 +518,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Sử dụng và dữ liệu kỹ thuật</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Chia sẻ hiệu năng, cách sử dụng, phần cứng và dữ liệu tùy biến liên quan đến trình duyệt của bạn với Mozilla để giúp chúng tôi tạo ra %1$s tốt hơn</string>
+    <string name="preferences_usage_data_description">Chia sẻ hiệu năng, cách sử dụng, phần cứng và dữ liệu tùy biến liên quan đến trình duyệt của bạn với Waterfox Projectđể giúp chúng tôi tạo ra %1$s tốt hơn</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Dữ liệu tiếp thị</string>
     <!-- Preference description for marketing data collection -->
@@ -526,7 +526,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Nghiên cứu</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Cho phép Mozilla cài đặt và chạy các nghiên cứu</string>
+    <string name="preference_experiments_summary_2">Cho phép Waterfox Projectcài đặt và chạy các nghiên cứu</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

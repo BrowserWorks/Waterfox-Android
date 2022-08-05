@@ -525,7 +525,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Gebruiks- en technische gegevens</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Deelt gegevens over prestaties, gebruik, hardware en aanpassingen van uw browser met Mozilla om %1$s te helpen verbeteren</string>
+    <string name="preferences_usage_data_description">Deelt gegevens over prestaties, gebruik, hardware en aanpassingen van uw browser met Waterfox Projectom %1$s te helpen verbeteren</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketinggegevens</string>
     <!-- Preference description for marketing data collection -->
@@ -533,7 +533,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Onderzoeken</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Stelt Mozilla in staat om onderzoeken te installeren en uit te voeren</string>
+    <string name="preference_experiments_summary_2">Stelt Waterfox Projectin staat om onderzoeken te installeren en uit te voeren</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -822,7 +822,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Sorry. %1$s kan die pagina niet laden.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Crashrapport naar Mozilla verzenden</string>
+    <string name="tab_crash_send_report">Crashrapport naar Waterfox Projectverzenden</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Tabblad sluiten</string>
     <!-- Restore tab button text on the tab crash page -->

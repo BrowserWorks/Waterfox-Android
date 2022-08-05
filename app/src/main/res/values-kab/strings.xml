@@ -529,7 +529,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Isefka itiknikanen akked useqdec</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Ad yebḍu isefka ɣef timellit, aseqdec, arrum d wudem n yiminig-ik  i Mozilla akken ad aɣ-d-yefk afus i usnerni n %1$s</string>
+    <string name="preferences_usage_data_description">Ad yebḍu isefka ɣef timellit, aseqdec, arrum d wudem n yiminig-ik  i Waterfox Projectakken ad aɣ-d-yefk afus i usnerni n %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Isefka n uzenzi</string>
     <!-- Preference description for marketing data collection -->
@@ -537,7 +537,7 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studies</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Sireg Mozilla ad tesbedded sakin ad tseddu studies</string>
+    <string name="preference_experiments_summary_2">Sireg Waterfox Projectad tesbedded sakin ad tseddu studies</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

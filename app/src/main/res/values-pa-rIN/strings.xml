@@ -539,7 +539,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">ਅਧਿਐਨ</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Mozilla ਨੂੰ ਅਧਿਐਨ ਇੰਸਟਾਲ ਕਰਨ ਤੇ ਚਲਾਉਣ ਦੇ ਇਜਾਜ਼ਤ ਦਿਓ</string>
+    <string name="preference_experiments_summary_2">Waterfox Projectਨੂੰ ਅਧਿਐਨ ਇੰਸਟਾਲ ਕਰਨ ਤੇ ਚਲਾਉਣ ਦੇ ਇਜਾਜ਼ਤ ਦਿਓ</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

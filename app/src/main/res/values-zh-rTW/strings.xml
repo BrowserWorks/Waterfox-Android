@@ -51,7 +51,7 @@
     <string name="recently_saved_menu_item_remove">移除</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s 是由 Mozilla 所打造。</string>
+    <string name="about_content">%1$s 是由 Waterfox Project所打造。</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -529,7 +529,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">使用與技術資料</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">分享您瀏覽器的效能、使用方式、硬體設備、與自訂功能的資料給 Mozilla 以幫助我們讓 %1$s 變得更好</string>
+    <string name="preferences_usage_data_description">分享您瀏覽器的效能、使用方式、硬體設備、與自訂功能的資料給 Waterfox Project以幫助我們讓 %1$s 變得更好</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">行銷資料</string>
     <!-- Preference description for marketing data collection -->
@@ -537,7 +537,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">使用者研究</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">允許 Mozilla 安裝執行使用者研究</string>
+    <string name="preference_experiments_summary_2">允許 Waterfox Project安裝執行使用者研究</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->

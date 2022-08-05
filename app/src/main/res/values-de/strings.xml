@@ -51,7 +51,7 @@
     <string name="recently_saved_menu_item_remove">Entfernen</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s wird von Mozilla hergestellt.</string>
+    <string name="about_content">%1$s wird von Waterfox Projecthergestellt.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -530,7 +530,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Nutzungs- und technische Daten</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Übermittelt an Mozilla Browser-Daten wie Performanz, Nutzung, Hardware und Benutzeranpassungen des Browsers, um %1$s zu verbessern</string>
+    <string name="preferences_usage_data_description">Übermittelt an Waterfox ProjectBrowser-Daten wie Performanz, Nutzung, Hardware und Benutzeranpassungen des Browsers, um %1$s zu verbessern</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketing-Daten</string>
     <!-- Preference description for marketing data collection -->
@@ -538,7 +538,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studien</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Ermöglicht Mozilla die Installation und Durchführung von Studien</string>
+    <string name="preference_experiments_summary_2">Ermöglicht Waterfox Projectdie Installation und Durchführung von Studien</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -829,7 +829,7 @@
     <string name="tab_crash_title_2">Es tut uns leid. %1$s kann diese Seite nicht laden.</string>
 
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Absturzbericht an Mozilla senden</string>
+    <string name="tab_crash_send_report">Absturzbericht an Waterfox Projectsenden</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Tab schließen</string>
     <!-- Restore tab button text on the tab crash page -->

@@ -19,7 +19,7 @@
     <string name="no_open_tabs_description">Tabbe maa udditiiɗe maa kollire ɗoo.</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">Ko Mozilla jibini %1$s</string>
+    <string name="about_content">Ko Waterfox Projectjibini %1$s</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -311,7 +311,7 @@
     <string name="preference_usage_data">Kuutorogol e keɓe karalle</string>
 
     <!-- Summary for experiments preferences -->
-    <string name="preference_experiments_summary">Ina yamira Mozilla yo aaf etee ƴetta keɓe ngam fannuuji ƴeewndorɗi</string>
+    <string name="preference_experiments_summary">Ina yamira Waterfox Projectyo aaf etee ƴetta keɓe ngam fannuuji ƴeewndorɗi</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Jaŋtorde Kooke</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->

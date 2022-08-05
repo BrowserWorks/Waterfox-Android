@@ -472,7 +472,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Usage at technical data</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Ibinabahagi sa Mozilla ang datos patungkol sa performance, paggamit, hardware at customization sa browser mo para mapaganda lalo ang %1$s</string>
+    <string name="preferences_usage_data_description">Ibinabahagi sa Waterfox Projectang datos patungkol sa performance, paggamit, hardware at customization sa browser mo para mapaganda lalo ang %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketing data</string>
     <!-- Preference description for marketing data collection, parameter is the app name (e.g. Waterfox) -->
@@ -482,16 +482,16 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Mga pag-aaral</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Pinapayagan ang Mozilla para magkabit at magpatakbo ng mga pag-aaral</string>
+    <string name="preference_experiments_summary_2">Pinapayagan ang Waterfox Projectpara magkabit at magpatakbo ng mga pag-aaral</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Mga eksperimento</string>
 
     <!-- Summary for experiments preferences -->
-    <string name="preference_experiments_summary">Pinapayagan ang Mozilla para magkabit at magkolekta ng datos para sa mga eksperimental na feature</string>
+    <string name="preference_experiments_summary">Pinapayagan ang Waterfox Projectpara magkabit at magkolekta ng datos para sa mga eksperimental na feature</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Crash reporter</string>
-    <!-- Preference switch for Mozilla location service -->
-    <string name="preferences_mozilla_location_service">Mozilla location service</string>
+    <!-- Preference switch for Waterfox Projectlocation service -->
+    <string name="preferences_mozilla_location_service">Waterfox Projectlocation service</string>
 
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s health report</string>

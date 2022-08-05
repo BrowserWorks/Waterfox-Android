@@ -413,8 +413,8 @@
     <string name="preference_experiments_summary">Dozvoljava Mozilli da instalira i prikuplja podatke o eksperimentalnim opcijama</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Izvještač o rušenju</string>
-    <!-- Preference switch for Mozilla location service -->
-    <string name="preferences_mozilla_location_service">Mozilla lokacijski servis</string>
+    <!-- Preference switch for Waterfox Projectlocation service -->
+    <string name="preferences_mozilla_location_service">Waterfox Projectlokacijski servis</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s izvještaj o zdravlju</string>
 

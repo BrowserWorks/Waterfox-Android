@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla Public
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <resources xmlns:tools="http://schemas.android.com/tools"  xmlns:moz="http://mozac.org/tools">
@@ -46,7 +46,7 @@
     <string name="recently_saved_menu_item_remove">Remove</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s is produced by Mozilla.</string>
+    <string name="about_content">%1$s is produced by Waterfox Project.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
@@ -499,7 +499,7 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Usage and technical data</string>
     <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Shares performance, usage, hardware and customization data about your browser with Mozilla to help us make %1$s better</string>
+    <string name="preferences_usage_data_description">Shares performance, usage, hardware and customization data about your browser with Waterfox Project to help us make %1$s better</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketing data</string>
     <!-- Preference description for marketing data collection -->
@@ -507,7 +507,7 @@
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studies</string>
     <!-- Summary for studies preferences -->
-    <string name="preference_experiments_summary_2">Allows Mozilla to install and run studies</string>
+    <string name="preference_experiments_summary_2">Allows Waterfox Project to install and run studies</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -782,7 +782,7 @@
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Sorry. %1$s can’t load that page.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
-    <string name="tab_crash_send_report">Send crash report to Mozilla</string>
+    <string name="tab_crash_send_report">Send crash report to Waterfox Project</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Close tab</string>
     <!-- Restore tab button text on the tab crash page -->
