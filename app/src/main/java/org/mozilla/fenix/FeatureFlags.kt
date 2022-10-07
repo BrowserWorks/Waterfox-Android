@@ -16,7 +16,7 @@ object FeatureFlags {
      * Pull-to-refresh allows you to pull the web content down far enough to have the page to
      * reload.
      */
-    val pullToRefreshEnabled = Config.channel.isNightlyOrDebug
+    val pullToRefreshEnabled = Config.channel.isDebug
 
     /**
      * Enables the Sync Addresses feature.
@@ -46,12 +46,12 @@ object FeatureFlags {
     /**
      * Identifies and separates the tabs list with a group containing search term tabs.
      */
-    val tabGroupFeature = Config.channel.isNightlyOrDebug
+    val tabGroupFeature = Config.channel.isDebug
 
     /**
      * Allows tabs to be dragged around as long as tab groups are disabled
      */
-    val tabReorderingFeature = Config.channel.isNightlyOrDebug
+    val tabReorderingFeature = Config.channel.isDebug
 
     /**
      * Show Pocket recommended stories on home.
@@ -86,12 +86,12 @@ object FeatureFlags {
     /**
      * Enables the Task Continuity enhancements.
      */
-    val taskContinuityFeature = Config.channel.isNightlyOrDebug
+    val taskContinuityFeature = Config.channel.isDebug
 
     /**
      * Enables the Unified Search feature.
      */
-    val unifiedSearchFeature = Config.channel.isNightlyOrDebug
+    val unifiedSearchFeature = Config.channel.isDebug
 
     /**
      * Enables receiving from the messaging framework.

@@ -53,7 +53,7 @@ class SettingsFragmentTest {
         every { testContext.components.analytics } returns mockk(relaxed = true)
         every { testContext.components.backgroundServices } returns mockk(relaxed = true)
         mockkObject(Config)
-        every { Config.channel } returns ReleaseChannel.Nightly
+        every { Config.channel } returns ReleaseChannel.Debug
 
         val activity = Robolectric.buildActivity(FragmentActivity::class.java).create().get()
         activity.supportFragmentManager.beginTransaction()

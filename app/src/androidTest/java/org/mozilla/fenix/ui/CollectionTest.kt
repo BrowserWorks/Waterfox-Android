@@ -212,7 +212,7 @@ class CollectionTest {
 
     @SmokeTest
     @Test
-    // Test running on beta/release builds in CI:
+    // Test running on release builds in CI:
     // caution when making changes to it, so they don't block the builds
     @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun deleteCollectionTest() {

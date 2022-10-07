@@ -146,9 +146,7 @@ private fun isSentryEnabled() = !BuildConfig.SENTRY_TOKEN.isNullOrEmpty()
 private fun getSentryProjectUrl(): String? {
     val baseUrl = "https://sentry.io/organizations/mozilla/issues"
     return when (Config.channel) {
-        ReleaseChannel.Nightly -> "$baseUrl/?project=6295546"
         ReleaseChannel.Release -> "$baseUrl/?project=6375561"
-        ReleaseChannel.Beta -> "$baseUrl/?project=6295551"
         else -> null
     }
 }

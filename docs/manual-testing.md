@@ -15,34 +15,6 @@ Overview
 - Feature coverage: yes
 - Bug verification coverage: uplifts
 
-
-## Beta
-- Frequency: Fenix release schedule
-- Tasks performed by the QA team:
-  - Smoke and sanity testing
-  - Exploratory testing
-  - Localization testing
-  - Bug triage
-- Specific Beta testing tasks:
-  - Full functional & UI testing
-  - TalkBack & Accessibility testing
-  - Full Search testing
-- Feature coverage: yes
-- Bug verification coverage: uplifts
-
-## Nightly
-- Frequency: daily
-- Tasks performed by the QA team
-  - Smoke and sanity testing
-  - Exploratory testing
-  - Bug triage
-- Specific Nightly testing tasks:
-  - Bug verification (qa label)
-  - Feature testing
-  - Test case creation (including a11y)
-- Feature coverage: yes
-- Bug verification coverage: yes
-
 ### Device defaults
 - Device coverage: (unless otherwise specified): Pixel, Samsung, Xiaomi, OnePlus, Huawei
   - Phone & tablets
@@ -61,9 +33,7 @@ Overview
 
 #### Smoke & sanity testing
 - Duration: 1 day
-- Frequency:
-  - Release & Beta: Fenix release schedule
-  - Nightly: 2-3  times per week (depending of other tasks priority)
+- Frequency: Fenix release schedule
 - Description:
   - Small suite of tests focused on all major functionalities
 

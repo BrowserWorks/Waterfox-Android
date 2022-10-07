@@ -35,7 +35,7 @@ class TrackingProtectionPolicyFactoryTest {
     @Before
     fun setup() {
         mockkObject(Config)
-        every { Config.channel } returns ReleaseChannel.Nightly
+        every { Config.channel } returns ReleaseChannel.Debug
 
         all = testContext.resources.getString(R.string.all)
         social = testContext.resources.getString(R.string.social)

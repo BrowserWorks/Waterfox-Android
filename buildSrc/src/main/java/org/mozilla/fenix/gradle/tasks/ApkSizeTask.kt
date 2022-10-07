@@ -73,7 +73,7 @@ open class ApkSizeTask : DefaultTask() {
      *   },
      *   "suites": [
      *     {
-     *       "name": "apk-size-[debug,nightly,beta,release]",
+     *       "name": "apk-size-[debug,release]",
      *       "lowerIsBetter": true,
      *       "subtests": [
      *         { "name": "app-arm64-v8a-debug.apk", "value": 98855735 },

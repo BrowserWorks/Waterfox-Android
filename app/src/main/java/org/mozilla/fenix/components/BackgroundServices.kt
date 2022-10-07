@@ -86,9 +86,9 @@ class BackgroundServices(
         capabilities = setOf(DeviceCapability.SEND_TAB),
 
         // Enable encryption for account state on supported API levels (23+).
-        // Just on Nightly and local builds for now.
+        // Just on local builds for now.
         // Enabling this for all channels is tracked in https://github.com/mozilla-mobile/fenix/issues/6704
-        secureStateAtRest = Config.channel.isNightlyOrDebug
+        secureStateAtRest = Config.channel.isDebug
     )
 
     @VisibleForTesting

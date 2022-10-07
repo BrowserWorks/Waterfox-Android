@@ -37,7 +37,7 @@ class NoNetworkAccessStartupTests {
     }
 
     @Test
-    // Test running on beta/release builds in CI:
+    // Test running on release builds in CI:
     // caution when making changes to it, so they don't block the builds
     // Based on STR from https://github.com/mozilla-mobile/fenix/issues/16886
     fun noNetworkConnectionStartupTest() {
