@@ -45,10 +45,8 @@ object Config {
     @JvmStatic
     fun majorVersion(project: Project): String {
         val releaseVersion = releaseVersionName(project)
-        val version = if (releaseVersion.isBlank()) {
+        val version = releaseVersion.ifBlank {
             nightlyVersionName()
-        } else {
-            releaseVersion
         }
 
         return version.split(".")[0]

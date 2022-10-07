@@ -96,19 +96,17 @@ Pre-requisites:
 For general development, we recommend the **debug** build variant. Here's an explanation of each variant:
 
 - **debug**: the default for developers, similar to most other Android apps. It is debuggable, uses a Nightly GeckoView with debug symbols, adds tools like LeakCanary for troublingshooting, and does not strip unused code.
-- **nightly**: what we ship to the Firefox Nightly channel, using GeckoView Nightly.
-- **beta**: what we ship to the Firefox Beta channel, using GeckoView Beta. It is more stable than nightly.
 - **release**: what we ship as Firefox for Android, using GeckoView Release. It is the most stable.
 
-nightly, beta, and release are unsigned and `debuggable=false` by default. If
-you want these variants to be:
+release is unsigned and `debuggable=false` by default. If
+you want this variant to be:
 - automatically signed, see [Automatically signing release builds](#automatically-sign-release-builds)
 - `debuggable=true`, see [Building debuggable release variants](#building-debuggable-release-variants)
 
 #### Performance Build Variants
 For accurate performance measurements, read this section!
 
-To analyze performance during **local development** build a production variant locally (this could either be the Nightly, beta or release).  Otherwise, you could also grab a pre-existing APK if you don't need to test some local changes. Then, use the Firefox profiler to profile what you need!
+To analyze performance during **local development** build a production (release) variant locally.  Otherwise, you could also grab a pre-existing APK if you don't need to test some local changes. Then, use the Firefox profiler to profile what you need!
 
 For more information on how to use the profiler or how to use the build, refer to this [how to measure performance with the build](https://wiki.mozilla.org/Performance/How_to_get_started_on_Fenix)
 
@@ -181,7 +179,7 @@ This is helpful when you're building release variants frequently, for example to
 
 ### Building debuggable release variants
 
-Nightly, Beta and Release variants are getting published to Google Play and therefore are not debuggable. To locally create debuggable builds of those variants, add the following to `<proj-root>/local.properties`:
+Release variant is getting published to Google Play and therefore is not debuggable. To locally create debuggable builds of this variant, add the following to `<proj-root>/local.properties`:
 
 ```sh
 debuggable
@@ -189,7 +187,7 @@ debuggable
 
 ### Setting raptor manifest flag
 
-To set the raptor manifest flag in Nightly, Beta and Release variants, add the following to `<proj-root>/local.properties`:
+To set the raptor manifest flag in Release variant, add the following to `<proj-root>/local.properties`:
 
 ```sh
 raptorEnabled

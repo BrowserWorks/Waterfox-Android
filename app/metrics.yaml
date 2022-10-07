@@ -5983,7 +5983,7 @@ perf.startup:
       Tabs or other uses of `ExternalAppBrowserActivity` to simplify result
       analysis. The methodology for determining this measurement is imperfect
       to simplify implementation. Issues may include:
-      <br>- Not measuring Beta and Release channels (due to
+      <br>- Not measuring Release channel (due to
       `MigrationDecisionActivity` interrupting the logic).
       <br>- Not distinguishing between MAIN to homescreen, onboarding, session
       restore, others?
@@ -6071,7 +6071,7 @@ perf.startup:
     description: |
       The duration of `FenixApplication.onCreate` in the main process. This does
       not measure the duration of migration code (via
-      `MigratingFenixApplication` included in the Beta and Release channels.
+      `MigratingFenixApplication` included in the Release channel.
     bugs:
       - https://github.com/mozilla-mobile/fenix/issues/17969
     data_reviews:

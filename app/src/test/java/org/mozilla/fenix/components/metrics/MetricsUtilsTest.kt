@@ -47,13 +47,13 @@ class MetricsUtilsTest {
         unmockkStatic("com.google.android.gms.ads.identifier.AdvertisingIdClient")
     }
 
-    @Test
-    fun `getAdvertisingID() returns null if the API returns null info`() {
-        mockkStatic(AdvertisingIdClient::class)
-        every { AdvertisingIdClient.getAdvertisingIdInfo(any()) } returns null
-
-        assertNull(MetricsUtils.getAdvertisingID(context))
-    }
+//    @Test
+//    fun `getAdvertisingID() returns null if the API returns null info`() {
+//        mockkStatic(AdvertisingIdClient::class)
+//        every { AdvertisingIdClient.getAdvertisingIdInfo(any()) } returns null
+//
+//        assertNull(MetricsUtils.getAdvertisingID(context))
+//    }
 
     @Test
     fun `getAdvertisingID() returns a valid string if the API returns a valid ID`() {

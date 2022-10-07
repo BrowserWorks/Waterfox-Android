@@ -129,38 +129,38 @@ class DefaultInactiveTabsControllerTest {
         assertNotNull(TabsTrayMetrics.closeInactiveTab.testGetValue())
     }
 
-    @Test
-    fun `WHEN all inactive tabs are closed THEN perform the deletion and report the telemetry event and show a Snackbar`() {
-        var showSnackbarInvoked = false
-        val controller = createController(
-            showUndoSnackbar = {
-                showSnackbarInvoked = true
-            }
-        )
-        val inactiveTab: TabSessionState = mockk {
-            every { lastAccess } returns maxActiveTime
-            every { createdAt } returns 0
-            every { id } returns "24"
-            every { content } returns mockk {
-                every { private } returns false
-            }
-        }
-
-        try {
-            mockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
-            every { browserStore.state } returns mockk()
-            every { browserStore.state.potentialInactiveTabs } returns listOf(inactiveTab)
-            assertNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
-
-            controller.deleteAllInactiveTabs()
-
-            verify { tabsUseCases.removeTabs(listOf("24")) }
-            assertNotNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
-            assertTrue(showSnackbarInvoked)
-        } finally {
-            unmockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
-        }
-    }
+//    @Test
+//    fun `WHEN all inactive tabs are closed THEN perform the deletion and report the telemetry event and show a Snackbar`() {
+//        var showSnackbarInvoked = false
+//        val controller = createController(
+//            showUndoSnackbar = {
+//                showSnackbarInvoked = true
+//            }
+//        )
+//        val inactiveTab: TabSessionState = mockk {
+//            every { lastAccess } returns maxActiveTime
+//            every { createdAt } returns 0
+//            every { id } returns "24"
+//            every { content } returns mockk {
+//                every { private } returns false
+//            }
+//        }
+//
+//        try {
+//            mockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
+//            every { browserStore.state } returns mockk()
+//            every { browserStore.state.potentialInactiveTabs } returns listOf(inactiveTab)
+//            assertNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
+//
+//            controller.deleteAllInactiveTabs()
+//
+//            verify { tabsUseCases.removeTabs(listOf("24")) }
+//            assertNotNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
+//            assertTrue(showSnackbarInvoked)
+//        } finally {
+//            unmockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
+//        }
+//    }
 
     private fun createController(
         showUndoSnackbar: (Boolean) -> Unit = { _ -> },

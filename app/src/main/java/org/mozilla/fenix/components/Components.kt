@@ -103,17 +103,8 @@ class Components(private val context: Context) {
     }
 
     val addonCollectionProvider by lazyMonitored {
-        // Check if we have a customized (overridden) AMO collection (only supported in Nightly)
-        if (Config.channel.isNightlyOrDebug && context.settings().amoCollectionOverrideConfigured()) {
-            AddonCollectionProvider(
-                context,
-                core.client,
-                collectionUser = context.settings().overrideAmoUser,
-                collectionName = context.settings().overrideAmoCollection
-            )
-        }
-        // Use build config otherwise
-        else if (!BuildConfig.AMO_COLLECTION_USER.isNullOrEmpty() &&
+        // Use build config if specified
+        if (!BuildConfig.AMO_COLLECTION_USER.isNullOrEmpty() &&
             !BuildConfig.AMO_COLLECTION_NAME.isNullOrEmpty()
         ) {
             AddonCollectionProvider(
@@ -125,7 +116,7 @@ class Components(private val context: Context) {
                 maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE
             )
         }
-        // Fall back to defaults
+        // Fall back to defaults otherwise
         else {
             AddonCollectionProvider(context, core.client, maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE)
         }

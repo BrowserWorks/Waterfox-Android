@@ -36,7 +36,7 @@ def parse_args():
                          "details."))
     p.add_argument('command', choices=['activate', 'deactivate'], help=("whether to activate or deactive start up "
                    "profiling for the given release channel"))
-    p.add_argument('release_channel', choices=['nightly', 'beta', 'release', 'debug'], help=("the release channel to "
+    p.add_argument('release_channel', choices=['release', 'debug'], help=("the release channel to "
                    "change the startup profiling state of the command on"))
 
     p.add_argument('-p', '--product', choices=PRODUCTS, default=PROD_FENIX, help="which product to work on")
@@ -71,8 +71,6 @@ def convert_channel_to_id(product, channel):
     if product == PROD_FENIX:
         mapping = {
             'release': 'org.mozilla.firefox',
-            'beta': 'org.mozilla.firefox_beta',
-            'nightly': 'org.mozilla.fenix',
             'debug': 'org.mozilla.fenix.debug'
         }
         return mapping[channel]

@@ -291,7 +291,7 @@ class SmokeTest {
     }
 
     @Test
-    // Test running on beta/release builds in CI:
+    // Test running on release builds in CI:
     // caution when making changes to it, so they don't block the builds
     // Verifies the Settings menu opens from a tab's 3 dot menu
     fun openMainMenuSettingsItemTest() {
@@ -703,7 +703,7 @@ class SmokeTest {
     }
 
     @Test
-    // Test running on beta/release builds in CI:
+    // Test running on release builds in CI:
     // caution when making changes to it, so they don't block the builds
     fun noHistoryInPrivateBrowsingTest() {
         val website = TestAssetHelper.getGenericAsset(mockWebServer, 1)

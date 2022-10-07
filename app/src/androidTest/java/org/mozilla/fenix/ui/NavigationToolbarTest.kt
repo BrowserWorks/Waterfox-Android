@@ -97,7 +97,7 @@ class NavigationToolbarTest {
     }
 
     @Test
-    // Test running on beta/release builds in CI:
+    // Test running on release builds in CI:
     // caution when making changes to it, so they don't block the builds
     fun visitURLTest() {
         val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
