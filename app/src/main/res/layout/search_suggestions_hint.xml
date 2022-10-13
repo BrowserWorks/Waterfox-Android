@@ -59,7 +59,7 @@
             tools:text="@string/search_suggestions_onboarding_text"
             tools:textAppearance="?attr/textAppearanceListItemSmall" />
 
-        <org.mozilla.fenix.utils.LinkTextView
+        <net.waterfox.android.utils.LinkTextView
             android:id="@+id/learn_more"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

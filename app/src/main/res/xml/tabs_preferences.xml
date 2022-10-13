@@ -9,12 +9,12 @@
         android:title="@string/preferences_tab_view"
         app:allowDividerAbove="false"
         app:iconSpaceReserved="false">
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="false"
             android:key="@string/pref_key_tab_view_list_do_not_use"
             android:title="@string/tab_view_list" />
 
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="true"
             android:key="@string/pref_key_tab_view_grid"
             android:title="@string/tab_view_grid" />
@@ -32,22 +32,22 @@
         android:title="@string/preferences_close_tabs"
         app:allowDividerAbove="true"
         app:iconSpaceReserved="false">
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="true"
             android:key="@string/pref_key_close_tabs_manually"
             android:title="@string/close_tabs_manually" />
 
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="false"
             android:key="@string/pref_key_close_tabs_after_one_day"
             android:title="@string/close_tabs_after_one_day" />
 
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="false"
             android:key="@string/pref_key_close_tabs_after_one_week"
             android:title="@string/close_tabs_after_one_week" />
 
-        <org.mozilla.fenix.settings.RadioButtonPreference
+        <net.waterfox.android.settings.RadioButtonPreference
             android:defaultValue="false"
             android:key="@string/pref_key_close_tabs_after_one_month"
             android:title="@string/close_tabs_after_one_month" />

@@ -42,6 +42,6 @@ dependencies {
 
 jar {
     manifest {
-        attributes('Lint-Registry-v2': 'org.mozilla.fenix.lintrules.LintIssueRegistry')
+        attributes('Lint-Registry-v2': 'net.waterfox.android.lintrules.LintIssueRegistry')
     }
 }

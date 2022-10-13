@@ -17,7 +17,7 @@ jobs:
         uses: mozilla-mobile/relbot@master
         if: github.repository == 'mozilla-mobile/fenix'
         with:
-          project: fenix
+          project: waterfox
           command: update-android-components
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

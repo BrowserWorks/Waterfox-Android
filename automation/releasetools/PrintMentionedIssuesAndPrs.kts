@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit
  * - Pull down issue names for each, to make constructing the changelog easier
  */
 
-val origin = "https://github.com/mozilla-mobile/fenix.git"
+val origin = "https://github.com/WaterfoxCo/Waterfox-Android.git"
 val DEBUG = false
 
 println("Starting PrintMentionedIssuesAndPrs.kts")

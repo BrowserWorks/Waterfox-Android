@@ -82,10 +82,10 @@ task-defaults:
             - 'bash'
             - './test-linux.sh'
             - '--cfg=mozharness/configs/raptor/android_hw_config.py'
-            - '--app=fenix'
+            - '--app=waterfox'
             - '--browsertime'
-            - '--binary=org.mozilla.fenix'
-            - '--activity=org.mozilla.fenix.IntentReceiverActivity'
+            - '--binary=net.waterfox.android'
+            - '--activity=net.waterfox.android.IntentReceiverActivity'
             - '--download-symbols=ondemand'
             - '--browsertime-node=$MOZ_FETCHES_DIR/node/bin/node'
             - '--browsertime-geckodriver=$MOZ_FETCHES_DIR/geckodriver'
@@ -135,19 +135,19 @@ tasks:
             - allrecipes
 
     youtube-playback-av1-sfr:
-        description: "Raptor YouTube Playback AV1 SFR on Fenix"
+        description: "Raptor YouTube Playback AV1 SFR on Waterfox"
         test-name: youtube-playback-av1-sfr
         run-visual-metrics: False
         chimera: False
 
     youtube-playback-h264-sfr:
-        description: "Raptor YouTube Playback H264 SFR on Fenix"
+        description: "Raptor YouTube Playback H264 SFR on Waterfox"
         test-name: youtube-playback-h264-sfr
         run-visual-metrics: False
         chimera: False
 
     youtube-playback-vp9-sfr:
-        description: "Raptor YouTube Playback VP9 SFR on Fenix"
+        description: "Raptor YouTube Playback VP9 SFR on Waterfox"
         run-visual-metrics: False
         chimera: False
         test-name: youtube-playback-vp9-sfr

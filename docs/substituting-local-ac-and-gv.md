@@ -1,17 +1,17 @@
 # Substituting local ac and GV
-To build fenix with a local android-components or local GeckoView, we recommend the following methods:
+To build Waterfox with a local android-components or local GeckoView, we recommend the following methods:
 
-|type|fenix -> local ac|fenix -> local GV|fenix -> local ac -> local GV|
+|type|waterfox -> local ac|waterfox -> local GV|waterfox -> local ac -> local GV|
 |-|-|-|-|
 |**method**|local.properties|local.properties|manual publish + local.properties|
 
-For instructions with `local.properties`, see [the root README](https://github.com/mozilla-mobile/fenix/blob/main/README.md). For instructions on manual publish + local.properties, keep reading. See [ac#8386](https://github.com/mozilla-mobile/android-components/issues/8386) for why we can't use local properties for fenix -> local ac -> local GV publishing.
+For instructions with `local.properties`, see [the root README](https://github.com/WaterfoxCo/Waterfox-Android/blob/main/README.md). For instructions on manual publish + local.properties, keep reading. See [ac#8386](https://github.com/mozilla-mobile/android-components/issues/8386) for why we can't use local properties for fenix -> local ac -> local GV publishing.
 
-## fenix -> local ac -> local GV
-We're going to manually publish our GeckoView to our local maven repository, modify ac locally to consume it, and use local.properties to build fenix -> local ac.
+## waterfox -> local ac -> local GV
+We're going to manually publish our GeckoView to our local maven repository, modify ac locally to consume it, and use local.properties to build waterfox -> local ac.
 
 ### 1. Synchronize checkouts
-To avoid breaking changes causing our builds to fail, we should make sure each of the repositories is on a commit from around the same time frame. You can use the [`android-components/tools/list_compatible_dependency_versions.py` script](https://github.com/mozilla-mobile/android-components/blob/main/tools/list_compatible_dependency_versions.py) to trivially identify ac and GV builds from a given fenix commit. If you want to synchronize builds from a GV or ac commit, you'll likely need to try to align around the commit merge dates (use `git log --pretty=fuller`).
+To avoid breaking changes causing our builds to fail, we should make sure each of the repositories is on a commit from around the same time frame. You can use the [`android-components/tools/list_compatible_dependency_versions.py` script](https://github.com/mozilla-mobile/android-components/blob/main/tools/list_compatible_dependency_versions.py) to trivially identify ac and GV builds from a given waterfox commit. If you want to synchronize builds from a GV or ac commit, you'll likely need to try to align around the commit merge dates (use `git log --pretty=fuller`).
 
 ### 2. Manually publish GeckoView
 With our builds synchronized, we can publish our local changes to GeckoView. To publish GeckoView, run:
@@ -51,7 +51,7 @@ diff --git a/mobile/android/geckoview/build.gradle b/mobile/android/geckoview/bu
 And execute `./mach build | grep version` to find a version number like `98.0.20211208151112-SNAPSHOT`.
 
 ### 3. Modify ac to consume local GV
-Update the build.gradle and Gecko.kt file in Fenix (see the diff below). Remember to update the GV version with the version you found in step 2!
+Update the build.gradle and Gecko.kt file in Waterfox (see the diff below). Remember to update the GV version with the version you found in step 2!
 ```diff
 diff --git a/build.gradle b/build.gradle
 index fa8149781f..863df65a57 100644
@@ -97,5 +97,5 @@ index 331158bf50..f37a05791a 100644
  }
 ```
 
-### 4. Build fenix with local.properties change
-Now build fenix as usual with [the `local.properties` change](https://github.com/mozilla-mobile/fenix#auto-publication-workflow-for-android-components-and-application-services) to build with your local ac. This build will automatically build ac each time it is run. You should have a fenix -> local ac -> local GV build now!
+### 4. Build Waterfox with local.properties change
+Now build Waterfox as usual with [the `local.properties` change](https://github.com/WaterfoxCo/Waterfox-Android#auto-publication-workflow-for-android-components-and-application-services) to build with your local ac. This build will automatically build ac each time it is run. You should have a fenix -> local ac -> local GV build now!

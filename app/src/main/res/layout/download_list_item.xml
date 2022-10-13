@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent">
 
-    <org.mozilla.fenix.library.LibrarySiteItemView
+    <net.waterfox.android.library.LibrarySiteItemView
         android:id="@+id/download_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

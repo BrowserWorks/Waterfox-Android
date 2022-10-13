@@ -8,13 +8,13 @@
 //
 // To run our benchmarks, you need to set the "benchmark" gradle property. You can:
 // - (preferred) Run via the command line (change the class you run on):
-// ./gradlew -Pbenchmark app:connectedCheck -Pandroid.testInstrumentationRunnerArguments.class=org.mozilla.fenix.perf.SampleBenchmark
+// ./gradlew -Pbenchmark app:connectedCheck -Pandroid.testInstrumentationRunnerArguments.class=net.waterfox.android.perf.SampleBenchmark
 // - Use the IDE. Temporarily set the "benchmark" property in app/build.gradle with "ext.benchmark=true"
 // near the top of the file. DO NOT COMMIT THIS.
 // - (note: I was unable to get IDE run configurations working)
 //
 // To get the results, look at this file (we recommend using the median; results are in nanoseconds):
-// app/build/outputs/connected_android_test_additional_output/nightlyAndroidTest/connected/<device>/org.mozilla.fenix-benchmarkData.json
+// app/build/outputs/connected_android_test_additional_output/nightlyAndroidTest/connected/<device>/net.waterfox.android-benchmarkData.json
 //
 // I was unable to get the results to print directly in Android Studio (perhaps it's my device).
 //
@@ -41,7 +41,7 @@ ext.maybeConfigForJetpackBenchmark = { android ->
     // builds. We chose not to do this because it's a lot of work to pull code out into a
     // separate module just to benchmark it. We were able to replicate the outcome by setting
     // this testBuildType property.
-    android.testBuildType "nightly"
+    android.testBuildType "release"
 
     // WARNING: our proguard configuration for androidTest is not set up correctly so the tests
     // fail if we don't disable minification. DISABLING MINIFICATION PRODUCES BENCHMARKS THAT ARE

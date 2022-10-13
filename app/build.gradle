@@ -1,4 +1,4 @@
-import org.mozilla.fenix.gradle.tasks.ApkSizeTask
+import net.waterfox.android.gradle.tasks.ApkSizeTask
 
 plugins {
     id "com.jetbrains.python.envs" version "0.0.26"
@@ -63,7 +63,7 @@ android {
                 "}"
         // This should be the base URL used to call the AMO API.
         buildConfigField "String", "AMO_SERVER_URL", "\"https://services.addons.mozilla.org\""
-        def deepLinkSchemeValue = "fenix-dev"
+        def deepLinkSchemeValue = "waterfox-dev"
         buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
         manifestPlaceholders = [
                 "deepLinkScheme": deepLinkSchemeValue
@@ -87,7 +87,8 @@ android {
 
         // Changing the build config can cause files that depend on BuildConfig.java to recompile
         // so we only set the git hash in release builds to avoid possible recompilation in debug builds.
-        buildConfigField "String", "GIT_HASH", "\"${Config.getGitHash()}\""
+        // TODO: [Waterfox] This times out for some reason. Find a solution.
+//        buildConfigField "String", "GIT_HASH", "\"${Config.getGitHash()}\""
 
         if (gradle.hasProperty("localProperties.autosignReleaseWithDebugKey")) {
             signingConfig signingConfigs.debug
@@ -112,14 +113,14 @@ android {
             def deepLinkSchemeValue = "waterfox"
             buildConfigField "String", "DEEP_LINK_SCHEME", "\"$deepLinkSchemeValue\""
             manifestPlaceholders = [
-                    // This release type is meant to replace Firefox (Release channel) and therefore needs to inherit
+                    // This release type is meant to replace Waterfox (Release channel) and therefore needs to inherit
                     // its sharedUserId for all eternity. See:
                     // https://searchfox.org/mozilla-central/search?q=moz_android_shared_id&case=false&regexp=false&path=
                     // Shipping an app update without sharedUserId can have
                     // fatal consequences. For example see:
                     //  - https://issuetracker.google.com/issues/36924841
                     //  - https://issuetracker.google.com/issues/36905922
-                    "sharedUserId": "org.waterfox.android.sharedID",
+                    "sharedUserId": "net.waterfox.android.sharedID",
                     "deepLinkScheme": deepLinkSchemeValue
             ]
         }
@@ -243,8 +244,8 @@ android.applicationVariants.all { variant ->
             output.versionNameOverride = versionName
             output.versionCodeOverride = versionCodeOverride
         }
-    } else if (gradle.hasProperty("localProperties.branchBuild.fenix.version")) {
-        def versionName = gradle.getProperty("localProperties.branchBuild.fenix.version")
+    } else if (gradle.hasProperty("localProperties.branchBuild.waterfox.version")) {
+        def versionName = gradle.getProperty("localProperties.branchBuild.waterfox.version")
         println("versionName override: $versionName")
         variant.outputs.each { output ->
             output.versionNameOverride = versionName
@@ -382,6 +383,7 @@ android.applicationVariants.all { variant ->
     }
 }
 
+// TODO: [Waterfox] remove both of these plugins
 // Generate Kotlin code for the Fenix Glean metrics.
 apply plugin: "org.mozilla.telemetry.glean-gradle-plugin"
 apply plugin: "org.mozilla.components.nimbus-gradle-plugin"

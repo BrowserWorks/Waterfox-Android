@@ -38,13 +38,13 @@ gcloud:
   performance-metrics: true
 
   test-targets:
-    - class org.mozilla.fenix.ui.NavigationToolbarTest#visitURLTest
-    - class org.mozilla.fenix.ui.HistoryTest#visitedUrlHistoryTest
-    - class org.mozilla.fenix.ui.SmokeTest#openMainMenuSettingsItemTest
-    - class org.mozilla.fenix.ui.SettingsSearchTest#toggleSearchSuggestionsTest
-    - class org.mozilla.fenix.ui.CollectionTest#deleteCollectionTest
-    - class org.mozilla.fenix.ui.SmokeTest#noHistoryInPrivateBrowsingTest
-    - class org.mozilla.fenix.ui.NoNetworkAccessStartupTests#noNetworkConnectionStartupTest
+    - class net.waterfox.android.ui.NavigationToolbarTest#visitURLTest
+    - class net.waterfox.android.ui.HistoryTest#visitedUrlHistoryTest
+    - class net.waterfox.android.ui.SmokeTest#openMainMenuSettingsItemTest
+    - class net.waterfox.android.ui.SettingsSearchTest#toggleSearchSuggestionsTest
+    - class net.waterfox.android.ui.CollectionTest#deleteCollectionTest
+    - class net.waterfox.android.ui.SmokeTest#noHistoryInPrivateBrowsingTest
+    - class net.waterfox.android.ui.NoNetworkAccessStartupTests#noNetworkConnectionStartupTest
 
   device:
    - model: Pixel2

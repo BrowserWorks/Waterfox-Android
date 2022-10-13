@@ -255,7 +255,7 @@
             app:layout_constraintTop_toBottomOf="@id/category_description"
             android:text="@string/preference_etp_smartblock_description" />
 
-        <org.mozilla.fenix.utils.LinkTextView
+        <net.waterfox.android.utils.LinkTextView
             android:id="@+id/smartblock_learn_more"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

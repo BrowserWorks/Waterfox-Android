@@ -16,9 +16,9 @@ from subprocess import run
 
 PATH_PREFIX = '/data/local/tmp'
 
-PROD_FENIX = 'fenix'
+PROD_WATERFOX = 'waterfox'
 PROD_GVE = 'geckoview_example'
-PRODUCTS = [PROD_FENIX, PROD_GVE]
+PRODUCTS = [PROD_WATERFOX, PROD_GVE]
 
 GV_CONFIG = b'''env:
   MOZ_PROFILER_STARTUP: 1
@@ -39,7 +39,7 @@ def parse_args():
     p.add_argument('release_channel', choices=['release', 'debug'], help=("the release channel to "
                    "change the startup profiling state of the command on"))
 
-    p.add_argument('-p', '--product', choices=PRODUCTS, default=PROD_FENIX, help="which product to work on")
+    p.add_argument('-p', '--product', choices=PRODUCTS, default=PROD_WATERFOX, help="which product to work on")
     return p.parse_args()
 
 
@@ -68,10 +68,10 @@ def remove(filename):
 
 
 def convert_channel_to_id(product, channel):
-    if product == PROD_FENIX:
+    if product == PROD_WATERFOX:
         mapping = {
-            'release': 'org.mozilla.firefox',
-            'debug': 'org.mozilla.fenix.debug'
+            'release': 'net.waterfox.android',
+            'debug': 'net.waterfox.android.debug'
         }
         return mapping[channel]
     elif product == PROD_GVE:

@@ -4,16 +4,16 @@
   <CurrentIssues>
     <ID>ConstructorParameterNaming:BrowsingModeManager.kt$DefaultBrowsingModeManager$private var _mode: BrowsingMode</ID>
     <ID>FunctionOnlyReturningConstant:MetricsUtils.kt$MetricsUtils$ @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE) internal fun getHashingSalt(): String</ID>
-    <ID>FunctionOnlyReturningConstant:SupportUtils.kt$SupportUtils$fun getFirefoxAccountSumoUrl(): String</ID>
-    <ID>FunctionParameterNaming:FenixSnackbar.kt$FenixSnackbar.Companion$_view: View?</ID>
+    <ID>FunctionOnlyReturningConstant:SupportUtils.kt$SupportUtils$fun getWaterfoxAccountSumoUrl(): String</ID>
+    <ID>FunctionParameterNaming:WaterfoxSnackbar.kt$WaterfoxSnackbar.Companion$_view: View?</ID>
     <ID>LongParameterList:BrowserToolbarController.kt$DefaultBrowserToolbarController$( private val store: BrowserStore, private val tabsUseCases: TabsUseCases, private val activity: HomeActivity, private val navController: NavController, private val readerModeController: ReaderModeController, private val engineView: EngineView, private val homeViewModel: HomeScreenViewModel, private val customTabSessionId: String?, private val browserAnimator: BrowserAnimator, private val onTabCounterClicked: () -&gt; Unit, private val onCloseTab: (SessionState) -&gt; Unit )</ID>
-    <ID>LongParameterList:BrowserToolbarMenuController.kt$DefaultBrowserToolbarMenuController$( private val store: BrowserStore, private val activity: HomeActivity, private val navController: NavController, private val settings: Settings, private val readerModeController: ReaderModeController, private val sessionFeature: ViewBoundFeatureWrapper&lt;SessionFeature&gt;, private val findInPageLauncher: () -&gt; Unit, private val browserAnimator: BrowserAnimator, private val swipeRefresh: SwipeRefreshLayout, private val customTabSessionId: String?, private val openInFenixIntent: Intent, private val bookmarkTapped: (String, String) -&gt; Unit, private val scope: CoroutineScope, private val tabCollectionStorage: TabCollectionStorage, private val topSitesStorage: DefaultTopSitesStorage, private val pinnedSiteStorage: PinnedSiteStorage, private val browserStore: BrowserStore )</ID>
+    <ID>LongParameterList:BrowserToolbarMenuController.kt$DefaultBrowserToolbarMenuController$( private val store: BrowserStore, private val activity: HomeActivity, private val navController: NavController, private val settings: Settings, private val readerModeController: ReaderModeController, private val sessionFeature: ViewBoundFeatureWrapper&lt;SessionFeature&gt;, private val findInPageLauncher: () -&gt; Unit, private val browserAnimator: BrowserAnimator, private val swipeRefresh: SwipeRefreshLayout, private val customTabSessionId: String?, private val openInWaterfoxIntent: Intent, private val bookmarkTapped: (String, String) -&gt; Unit, private val scope: CoroutineScope, private val tabCollectionStorage: TabCollectionStorage, private val topSitesStorage: DefaultTopSitesStorage, private val pinnedSiteStorage: PinnedSiteStorage, private val browserStore: BrowserStore )</ID>
     <ID>LongParameterList:CrashContentIntegration.kt$CrashContentIntegration$( private val browserStore: BrowserStore, private val appStore: AppStore, private val toolbar: BrowserToolbar, private val isToolbarPlacedAtTop: Boolean, private val crashReporterView: CrashContentView, private val components: Components, private val settings: Settings, private val navController: NavController, private val sessionId: String? )</ID>
     <ID>LongParameterList:CustomTabsIntegration.kt$CustomTabsIntegration$( store: BrowserStore, useCases: CustomTabsUseCases, toolbar: BrowserToolbar, sessionId: String, activity: Activity, onItemTapped: (ToolbarMenu.Item) -&gt; Unit = {}, shouldReverseItems: Boolean, isPrivate: Boolean )</ID>
     <ID>LongParameterList:DeleteBrowsingDataController.kt$DefaultDeleteBrowsingDataController$( private val removeAllTabs: TabsUseCases.RemoveAllTabsUseCase, private val removeAllDownloads: DownloadsUseCases.RemoveAllDownloadsUseCase, private val historyStorage: HistoryStorage, private val permissionStorage: PermissionStorage, private val store: BrowserStore, private val iconsStorage: BrowserIcons, private val engine: Engine, private val coroutineContext: CoroutineContext = Dispatchers.Main )</ID>
     <ID>LongParameterList:HistoryController.kt$DefaultHistoryController$( private val store: HistoryFragmentStore, private val navController: NavController, private val scope: CoroutineScope, private val openToBrowser: (item: History.Regular) -&gt; Unit, private val displayDeleteAll: () -&gt; Unit, private val invalidateOptionsMenu: () -&gt; Unit, private val deleteHistoryItems: (Set&lt;History&gt;) -&gt; Unit, private val syncHistory: suspend () -&gt; Unit, private val metrics: MetricController )</ID>
     <ID>LongParameterList:QuickSettingsController.kt$DefaultQuickSettingsController$( private val context: Context, private val quickSettingsStore: QuickSettingsFragmentStore, private val browserStore: BrowserStore, private val ioScope: CoroutineScope, private val navController: NavController, @VisibleForTesting internal val sessionId: String, @VisibleForTesting internal var sitePermissions: SitePermissions?, private val settings: Settings, private val permissionStorage: PermissionStorage, private val reload: ReloadUrlUseCase, private val requestRuntimePermissions: OnNeedToRequestPermissions = { }, private val displayPermissions: () -&gt; Unit, private val engine: Engine = context.components.core.engine, )</ID>
-    <ID>LongParameterList:ShareController.kt$DefaultShareController$( private val context: Context, private val shareSubject: String?, private val shareData: List&lt;ShareData&gt;, private val sendTabUseCases: SendTabUseCases, private val snackbar: FenixSnackbar, private val navController: NavController, private val recentAppsStorage: RecentAppsStorage, private val viewLifecycleScope: CoroutineScope, private val dispatcher: CoroutineDispatcher = Dispatchers.IO, private val dismiss: (ShareController.Result) -&gt; Unit )</ID>
+    <ID>LongParameterList:ShareController.kt$DefaultShareController$( private val context: Context, private val shareSubject: String?, private val shareData: List&lt;ShareData&gt;, private val sendTabUseCases: SendTabUseCases, private val snackbar: WaterfoxSnackbar, private val navController: NavController, private val recentAppsStorage: RecentAppsStorage, private val viewLifecycleScope: CoroutineScope, private val dispatcher: CoroutineDispatcher = Dispatchers.IO, private val dismiss: (ShareController.Result) -&gt; Unit )</ID>
     <ID>LongParameterList:TabsTrayController.kt$DefaultTabsTrayController$( private val trayStore: TabsTrayStore, private val browserStore: BrowserStore, private val browsingModeManager: BrowsingModeManager, private val navController: NavController, private val navigateToHomeAndDeleteSession: (String) -&gt; Unit, private val profiler: Profiler?, private val navigationInteractor: NavigationInteractor, private val tabsUseCases: TabsUseCases, private val selectTabPosition: (Int, Boolean) -&gt; Unit, private val dismissTray: () -&gt; Unit, private val showUndoSnackbarForTab: (Boolean) -&gt; Unit, @VisibleForTesting internal val showCancelledDownloadWarning: (downloadCount: Int, tabId: String?, source: String?) -&gt; Unit, )</ID>
     <ID>LongParameterList:ToolbarIntegration.kt$DefaultToolbarIntegration$( context: Context, toolbar: BrowserToolbar, toolbarMenu: ToolbarMenu, domainAutocompleteProvider: DomainAutocompleteProvider, historyStorage: HistoryStorage, lifecycleOwner: LifecycleOwner, sessionId: String? = null, isPrivate: Boolean, interactor: BrowserToolbarInteractor, engine: Engine )</ID>
     <ID>UndocumentedPublicClass:AboutItem.kt$AboutItem</ID>
@@ -126,7 +126,7 @@
     <ID>UndocumentedPublicClass:CollectionsListAdapter.kt$CollectionsListAdapter$CollectionItemViewHolder : ViewHolder</ID>
     <ID>UndocumentedPublicClass:Config.kt$Config</ID>
     <ID>UndocumentedPublicClass:Config.kt$ReleaseChannel</ID>
-    <ID>UndocumentedPublicClass:ConnectionPanelDialogFragment.kt$ConnectionPanelDialogFragment : FenixDialogFragment</ID>
+    <ID>UndocumentedPublicClass:ConnectionPanelDialogFragment.kt$ConnectionPanelDialogFragment : WaterfoxDialogFragment</ID>
     <ID>UndocumentedPublicClass:CounterPreference.kt$CounterPreference</ID>
     <ID>UndocumentedPublicClass:CrashReporterController.kt$CrashReporterController</ID>
     <ID>UndocumentedPublicClass:CreateShortcutFragment.kt$CreateShortcutFragment : DialogFragment</ID>
@@ -135,7 +135,7 @@
     <ID>UndocumentedPublicClass:CustomTabsIntegration.kt$CustomTabsIntegration : LifecycleAwareFeatureUserInteractionHandler</ID>
     <ID>UndocumentedPublicClass:CustomTabsService.kt$CustomTabsService : AbstractCustomTabsService</ID>
     <ID>UndocumentedPublicClass:CustomizeHomeButtonViewHolder.kt$CustomizeHomeButtonViewHolder : ComposeViewHolder</ID>
-    <ID>UndocumentedPublicClass:DebugFenixApplication.kt$DebugFenixApplication : FenixApplication</ID>
+    <ID>UndocumentedPublicClass:DebugWaterfoxApplication.kt$DebugWaterfoxApplication : WaterfoxApplication</ID>
     <ID>UndocumentedPublicClass:DefaultBrowserNotificationWorker.kt$DefaultBrowserNotificationWorker : Worker</ID>
     <ID>UndocumentedPublicClass:DefaultBrowserPreference.kt$DefaultBrowserPreference : Preference</ID>
     <ID>UndocumentedPublicClass:DefaultLocaleSettingsController.kt$DefaultLocaleSettingsController : LocaleSettingsController</ID>
@@ -179,11 +179,11 @@
     <ID>UndocumentedPublicClass:ExceptionsDeleteButtonViewHolder.kt$ExceptionsDeleteButtonViewHolder : ViewHolder</ID>
     <ID>UndocumentedPublicClass:ExceptionsFragmentStore.kt$ExceptionsFragmentAction$Change : ExceptionsFragmentAction</ID>
     <ID>UndocumentedPublicClass:ExceptionsHeaderViewHolder.kt$ExceptionsHeaderViewHolder : ViewHolder</ID>
-    <ID>UndocumentedPublicClass:FenixOnboarding.kt$FenixOnboarding : PreferencesHolder</ID>
-    <ID>UndocumentedPublicClass:FenixSnackbar.kt$FenixSnackbar : BaseTransientBottomBar</ID>
-    <ID>UndocumentedPublicClass:FenixSnackbarDelegate.kt$FenixSnackbarDelegate : SnackbarDelegate</ID>
-    <ID>UndocumentedPublicClass:FenixTabCounterMenu.kt$FenixTabCounterMenu : TabCounterMenu</ID>
-    <ID>UndocumentedPublicClass:FirefoxTheme.kt$FirefoxTheme</ID>
+    <ID>UndocumentedPublicClass:WaterfoxOnboarding.kt$WaterfoxOnboarding : PreferencesHolder</ID>
+    <ID>UndocumentedPublicClass:WaterfoxSnackbar.kt$WaterfoxSnackbar : BaseTransientBottomBar</ID>
+    <ID>UndocumentedPublicClass:WaterfoxSnackbarDelegate.kt$WaterfoxSnackbarDelegate : SnackbarDelegate</ID>
+    <ID>UndocumentedPublicClass:WaterfoxTabCounterMenu.kt$WaterfoxTabCounterMenu : TabCounterMenu</ID>
+    <ID>UndocumentedPublicClass:WaterfoxTheme.kt$WaterfoxTheme</ID>
     <ID>UndocumentedPublicClass:FirstSessionPing.kt$FirstSessionPing</ID>
     <ID>UndocumentedPublicClass:GeckoProvider.kt$GeckoProvider</ID>
     <ID>UndocumentedPublicClass:GroupableRadioButton.kt$GroupableRadioButton</ID>
@@ -494,7 +494,7 @@
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$InstallPwaToHomeScreen : Item</ID>
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$NewTab : Item</ID>
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$OpenInApp : Item</ID>
-    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$OpenInFenix : Item</ID>
+    <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$OpenInWaterfox : Item</ID>
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Quit : Item</ID>
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$Reload : Item</ID>
     <ID>UndocumentedPublicClass:ToolbarMenu.kt$ToolbarMenu.Item$RemoveFromTopSites : Item</ID>
@@ -539,7 +539,7 @@
     <ID>UndocumentedPublicClass:UseCases.kt$RemoveTabUseCaseWrapper : RemoveTabUseCase</ID>
     <ID>UndocumentedPublicClass:UseCases.kt$SelectTabUseCaseWrapper : SelectTabUseCase</ID>
     <ID>UndocumentedPublicClass:Utils.kt$BookmarkNodeWithDepth</ID>
-    <ID>UndocumentedPublicClass:Wallpaper.kt$Wallpaper.Local$Firefox : Local</ID>
+    <ID>UndocumentedPublicClass:Wallpaper.kt$Wallpaper.Local$Waterfox : Local</ID>
     <ID>UndocumentedPublicClass:Wallpaper.kt$Wallpaper.Remote$House : Remote</ID>
     <ID>UndocumentedPublicClass:WallpaperFileManager.kt$WallpaperFileManager</ID>
     <ID>UndocumentedPublicClass:WallpaperSettingsFragment.kt$WallpaperSettingsFragment : Fragment</ID>
@@ -694,20 +694,20 @@
     <ID>UndocumentedPublicFunction:Extensions.kt$fun SitePermissions.get(field: PhoneFeature)</ID>
     <ID>UndocumentedPublicFunction:Extensions.kt$fun SitePermissions.toggle(featurePhone: PhoneFeature): SitePermissions</ID>
     <ID>UndocumentedPublicFunction:Extensions.kt$fun SitePermissions.update(field: PhoneFeature, value: SitePermissions.Status)</ID>
-    <ID>UndocumentedPublicFunction:FenixApplication.kt$FenixApplication$@CallSuper open fun setupInAllProcesses()</ID>
-    <ID>UndocumentedPublicFunction:FenixApplication.kt$FenixApplication$@CallSuper open fun setupInMainProcessOnly()</ID>
-    <ID>UndocumentedPublicFunction:FenixApplication.kt$FenixApplication$@OptIn(DelicateCoroutinesApi::class) open fun downloadWallpapers()</ID>
-    <ID>UndocumentedPublicFunction:FenixApplication.kt$FenixApplication$open fun updateLeakCanaryState(isEnabled: Boolean)</ID>
-    <ID>UndocumentedPublicFunction:FenixDialogFragment.kt$FenixDialogFragment$fun inflateRootView(container: ViewGroup? = null): View</ID>
-    <ID>UndocumentedPublicFunction:FenixOnboarding.kt$FenixOnboarding$fun finish()</ID>
-    <ID>UndocumentedPublicFunction:FenixOnboarding.kt$FenixOnboarding$fun userHasBeenOnboarded(): Boolean</ID>
-    <ID>UndocumentedPublicFunction:FenixSnackbar.kt$FenixSnackbar$fun setAction(text: String, action: () -&gt; Unit)</ID>
-    <ID>UndocumentedPublicFunction:FenixSnackbar.kt$FenixSnackbar$fun setAppropriateBackground(isError: Boolean)</ID>
-    <ID>UndocumentedPublicFunction:FenixSnackbar.kt$FenixSnackbar$fun setLength(duration: Int)</ID>
-    <ID>UndocumentedPublicFunction:FenixSnackbar.kt$FenixSnackbar$fun setText(text: String)</ID>
-    <ID>UndocumentedPublicFunction:FirefoxTheme.kt$@Composable fun ProvideFirefoxColors( colors: FirefoxColors, content: @Composable () -&gt; Unit )</ID>
-    <ID>UndocumentedPublicFunction:FirefoxTheme.kt$FirefoxColors$fun copy(): FirefoxColors</ID>
-    <ID>UndocumentedPublicFunction:FirefoxTheme.kt$FirefoxColors$fun update(other: FirefoxColors)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxApplication.kt$WaterfoxApplication$@CallSuper open fun setupInAllProcesses()</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxApplication.kt$WaterfoxApplication$@CallSuper open fun setupInMainProcessOnly()</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxApplication.kt$WaterfoxApplication$@OptIn(DelicateCoroutinesApi::class) open fun downloadWallpapers()</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxApplication.kt$WaterfoxApplication$open fun updateLeakCanaryState(isEnabled: Boolean)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxDialogFragment.kt$WaterfoxDialogFragment$fun inflateRootView(container: ViewGroup? = null): View</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxOnboarding.kt$WaterfoxOnboarding$fun finish()</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxOnboarding.kt$WaterfoxOnboarding$fun userHasBeenOnboarded(): Boolean</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxSnackbar.kt$WaterfoxSnackbar$fun setAction(text: String, action: () -&gt; Unit)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxSnackbar.kt$WaterfoxSnackbar$fun setAppropriateBackground(isError: Boolean)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxSnackbar.kt$WaterfoxSnackbar$fun setLength(duration: Int)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxSnackbar.kt$WaterfoxSnackbar$fun setText(text: String)</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxTheme.kt$@Composable fun ProvideWaterfoxColors( colors: WaterfoxColors, content: @Composable () -&gt; Unit )</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxTheme.kt$WaterfoxColors$fun copy(): WaterfoxColors</ID>
+    <ID>UndocumentedPublicFunction:WaterfoxTheme.kt$WaterfoxColors$fun update(other: WaterfoxColors)</ID>
     <ID>UndocumentedPublicFunction:Fragment.kt$fun Fragment.breadcrumb( message: String, data: Map&lt;String, String&gt; = emptyMap() )</ID>
     <ID>UndocumentedPublicFunction:Fragment.kt$fun Fragment.getPreferenceKey(@StringRes resourceId: Int): String</ID>
     <ID>UndocumentedPublicFunction:Fragment.kt$fun Fragment.nav(@IdRes id: Int?, directions: NavDirections, options: NavOptions? = null)</ID>
@@ -962,7 +962,7 @@
     <ID>UndocumentedPublicFunction:StudiesView.kt$StudiesView$@Suppress("TooGenericExceptionCaught", "ApplySharedPref") fun bind()</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun createAuthCustomTabIntent(context: Context, url: String): Intent</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun createCustomTabIntent(context: Context, url: String): Intent</ID>
-    <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun getFirefoxAccountSumoUrl(): String</ID>
+    <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun getWaterfoxAccountSumoUrl(): String</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun getMozillaPageUrl(page: MozillaPage, locale: Locale = Locale.getDefault()): String</ID>
     <ID>UndocumentedPublicFunction:SupportUtils.kt$SupportUtils$fun getWhatsNewUrl(context: Context)</ID>
     <ID>UndocumentedPublicFunction:SwipeGestureLayout.kt$SwipeGestureLayout$fun addGestureListener(listener: SwipeGestureListener)</ID>

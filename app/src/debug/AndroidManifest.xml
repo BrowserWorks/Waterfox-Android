@@ -1,5 +1,5 @@
 <manifest
-        package="org.mozilla.fenix"
+        package="net.waterfox.android"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools">
 
@@ -23,7 +23,7 @@
 
     <application
             tools:replace="android:name"
-            android:name="org.mozilla.fenix.DebugFenixApplication">
+            android:name="net.waterfox.android.DebugWaterfoxApplication">
     </application>
 
 </manifest>

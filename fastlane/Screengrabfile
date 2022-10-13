@@ -2,8 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-app_package_name('org.mozilla.fenix.debug')
-use_tests_in_packages(['org.mozilla.fenix.screenshots'])
+app_package_name('net.waterfox.android.debug')
+use_tests_in_packages(['net.waterfox.android.screenshots'])
 
 app_apk_path('app/build/outputs/apk/geckoBeta/debug/app-geckoBeta-x86-debug.apk')
 tests_apk_path('app/build/outputs/apk/androidTest/geckoBeta/debug/app-geckoBeta-debug-androidTest.apk')

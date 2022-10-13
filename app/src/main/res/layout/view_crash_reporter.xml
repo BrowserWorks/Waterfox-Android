@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.8"
-        app:srcCompat="@drawable/fenix_error_1" />
+        app:srcCompat="@drawable/waterfox_error_1" />
 
     <TextView
         android:id="@+id/title"

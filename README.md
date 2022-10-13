@@ -1,11 +1,11 @@
-# Firefox for Android
+# Waterfox for Android
 
 [![Task Status](https://firefox-ci-tc.services.mozilla.com/api/github/v1/repository/mozilla-mobile/fenix/main/badge.svg)](https://firefox-ci-tc.services.mozilla.com/api/github/v1/repository/mozilla-mobile/fenix/main/latest)
 [![codecov](https://codecov.io/gh/mozilla-mobile/fenix/branch/main/graph/badge.svg)](https://codecov.io/gh/mozilla-mobile/fenix)
 
-Fenix (internal codename) is the all-new Firefox for Android browser, based on [GeckoView](https://mozilla.github.io/geckoview/) and [Mozilla Android Components](https://mozac.org/).
+The all-new Waterfox for Android browser is based on [GeckoView](https://mozilla.github.io/geckoview/) and [Mozilla Android Components](https://mozac.org/).
 
-<a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90"/></a>
+<a href="https://play.google.com/store/apps/details?id=net.waterfox.android" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90"/></a>
 
 ## Getting Involved
 
@@ -76,7 +76,7 @@ Pre-requisites:
 1. Clone or Download the repository:
 
   ```shell
-  git clone https://github.com/mozilla-mobile/fenix
+  git clone https://github.com/WaterfoxCo/Waterfox-Android
   ```
 
 2. **Import** the project into Android Studio **or** build on the command line:
@@ -96,7 +96,7 @@ Pre-requisites:
 For general development, we recommend the **debug** build variant. Here's an explanation of each variant:
 
 - **debug**: the default for developers, similar to most other Android apps. It is debuggable, uses a Nightly GeckoView with debug symbols, adds tools like LeakCanary for troublingshooting, and does not strip unused code.
-- **release**: what we ship as Firefox for Android, using GeckoView Release. It is the most stable.
+- **release**: what we ship as Waterfox for Android, using GeckoView Release. It is the most stable.
 
 release is unsigned and `debuggable=false` by default. If
 you want this variant to be:

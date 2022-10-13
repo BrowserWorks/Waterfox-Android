@@ -10,7 +10,7 @@
     android:layout_height="match_parent"
     android:background="?scrim"
     android:fitsSystemWindows="true"
-    tools:context="org.mozilla.fenix.shortcut.CreateShortcutFragment">
+    tools:context="net.waterfox.android.shortcut.CreateShortcutFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

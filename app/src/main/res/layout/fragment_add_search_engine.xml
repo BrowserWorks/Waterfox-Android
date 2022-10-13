@@ -9,7 +9,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.mozilla.fenix.settings.search.AddSearchEngineFragment">
+    tools:context="net.waterfox.android.settings.search.AddSearchEngineFragment">
     <LinearLayout
         android:id="@+id/search_engine_wrapper"
         android:layout_width="match_parent"

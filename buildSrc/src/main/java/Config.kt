@@ -2,8 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+import net.waterfox.android.gradle.ext.execReadStandardOutOrThrow
 import org.gradle.api.Project
-import org.mozilla.fenix.gradle.ext.execReadStandardOutOrThrow
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.Date
@@ -75,7 +75,7 @@ object Config {
      *
      * There is a discrepancy between the epoch date used here (20141228)
      * and the epoch used in Fennec (20150801) for historical reasons. We keep
-     * this discrepancy to avoid having Fenix version codes decrease.
+     * this discrepancy to avoid having Waterfox version codes decrease.
      * Note that the original Fennec implementation also had an inconsistency in
      * the documented epoch date (20150901) and the effective epoch date (20150801).
      */

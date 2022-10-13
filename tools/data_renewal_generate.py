@@ -24,7 +24,7 @@ write_header = True
 # The number of soon to expired telemetry detected 
 total_count = 0
 
-USAGE="""usage: ./{script_name} future_fenix_version_number""" 
+USAGE="""usage: ./{script_name} future_waterfox_version_number"""
 
 # list of values that we care about
 _KEY_FILTER = [

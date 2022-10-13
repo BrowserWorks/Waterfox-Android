@@ -189,7 +189,7 @@ tasks:
                               MOBILE_REPOSITORY_TYPE: git
                               MOBILE_PIP_REQUIREMENTS: taskcluster/requirements.txt
                               MOZ_AUTOMATION: "1"
-                              REPOSITORIES: {$json: {mobile: "Fenix"}}
+                              REPOSITORIES: {$json: {mobile: "Waterfox"}}
                               HG_STORE_PATH: /builds/worker/checkouts/hg-store
                               ANDROID_SDK_ROOT: /builds/worker/android-sdk
                             - $if: 'tasks_for in ["github-pull-request"]'

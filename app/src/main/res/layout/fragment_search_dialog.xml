@@ -2,7 +2,7 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<org.mozilla.fenix.perf.SearchDialogFragmentConstraintLayout
+<net.waterfox.android.perf.SearchDialogFragmentConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -59,7 +59,7 @@
         app:barrierDirection="top"
         app:constraint_referenced_ids="awesome_bar,pill_wrapper"/>
 
-    <org.mozilla.fenix.search.awesomebar.AwesomeBarWrapper
+    <net.waterfox.android.search.awesomebar.AwesomeBarWrapper
         android:id="@+id/awesome_bar"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -189,4 +189,4 @@
         app:layout_constraintBottom_toBottomOf="@id/pill_wrapper"
         app:layout_constraintStart_toEndOf="@id/qr_scan_button"
         app:layout_constraintTop_toTopOf="@id/pill_wrapper" />
-</org.mozilla.fenix.perf.SearchDialogFragmentConstraintLayout>
+</net.waterfox.android.perf.SearchDialogFragmentConstraintLayout>

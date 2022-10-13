@@ -21,7 +21,7 @@ task-defaults:
     apk-artifact-template:
         type: file
         name: public/build/{abi}/target.apk
-        github-name: 'fenix-{version}-{abi}.apk'
+        github-name: 'waterfox-{version}-{abi}.apk'
         path: '/builds/worker/checkouts/vcs/app/build/outputs/apk/{gradle_build_type}/{fileName}'
     description: Build Fenix from source code.
     fetches:
@@ -178,7 +178,7 @@ tasks:
 
     beta-mozillaonline:
         apk-artifact-template:
-            github-name: 'fenix-mozillaonline-{version}-{abi}.apk'
+            github-name: 'waterfox-mozillaonline-{version}-{abi}.apk'
         attributes:
             release-type: beta
             shipping_phase: promote
@@ -207,7 +207,7 @@ tasks:
 
     release-mozillaonline:
         apk-artifact-template:
-            github-name: 'fenix-mozillaonline-{version}-{abi}.apk'
+            github-name: 'waterfox-mozillaonline-{version}-{abi}.apk'
         attributes:
             release-type: release
             shipping_phase: promote
