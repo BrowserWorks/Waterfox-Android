@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.mozilla.fenix.library.bookmarks.BookmarkFragment">
+    tools:context="net.waterfox.android.library.bookmarks.BookmarkFragment">
 
     <LinearLayout
         android:id="@+id/bookmarkLayout"

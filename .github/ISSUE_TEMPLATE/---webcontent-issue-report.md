@@ -16,7 +16,7 @@ assignees: ''
 ### Does toggling Tracking Protection fix the issue? (Press the shield icon in the toolbar while on the site to see toggle)
 
 ### Can you reproduce in Chrome (or other non-Mozilla browser)?
-<!--- Note: If you can reproduce the same issue in Firefox for Android AND Chrome, this issue is very unlikely to be fixed by our teams. -->
+<!--- Note: If you can reproduce the same issue in Waterfox for Android AND Chrome, this issue is very unlikely to be fixed by our teams. -->
 <!-- If you cannot reproduce in Chrome and know how to do so, please consider filing a Bugzilla issue here for faster triage https://bugzilla.mozilla.org/enter_bug.cgi?product=GeckoView&component=General -->
 
 ### Device information

@@ -60,7 +60,7 @@
         android:labelFor="@id/edit_search_string"
         android:textColor="@android:color/tertiary_text_dark" />
 
-    <org.mozilla.fenix.utils.LinkTextView
+    <net.waterfox.android.utils.LinkTextView
         android:id="@+id/custom_search_engines_learn_more"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,11 +1,11 @@
-Softvision Mobile QA - Fenix testing tasks and process
+Softvision Mobile QA - Waterfox testing tasks and process
 =============
 
 Overview
 --------
 
 ## Release
-- Frequency: Fenix release schedule
+- Frequency: Waterfox release schedule
 - Tasks performed by the QA team:
   - Smoke and sanity testing
   - Exploratory testing
@@ -33,7 +33,7 @@ Overview
 
 #### Smoke & sanity testing
 - Duration: 1 day
-- Frequency: Fenix release schedule
+- Frequency: Waterfox release schedule
 - Description:
   - Small suite of tests focused on all major functionalities
 
@@ -59,7 +59,7 @@ Overview
 - Frequency: Upon Geckoview release
 - Description
   - Suite of tests based on the most important languages and pseudo locale tests.
-  - Additionally, the number of languages listed ( Fenix settings) are verified to be the same number as in Pontoon.
+  - Additionally, the number of languages listed (Waterfox settings) are verified to be the same number as in Pontoon.
 
 #### Search testing
 - Duration: 1 day

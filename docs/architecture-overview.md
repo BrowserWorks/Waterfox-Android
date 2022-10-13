@@ -2,7 +2,7 @@
 
 ### Unidirectional data flow
 
-Firefox Preview's presentation layer architecture is based on the concept of "unidirectional data flow." This is a popular approach in client side development, especially on the web, and is core to Redux, MVI, Elm Architecture, and Flux.  Our architecture is not identical to any of these (and they are not identical to each other), but the base concepts are the same. For a basic understanding of the motivations and approach, see [the official Redux docs](https://redux.js.org/basics/data-flow).  For an article on when unidirectional data flow is and is not a good approach, see [this](https://medium.com/swlh/the-case-for-flux-379b7d1982c6). These are both written from the perspective of React.js developers, but the concepts are largely the same.
+Waterfox Preview's presentation layer architecture is based on the concept of "unidirectional data flow." This is a popular approach in client side development, especially on the web, and is core to Redux, MVI, Elm Architecture, and Flux.  Our architecture is not identical to any of these (and they are not identical to each other), but the base concepts are the same. For a basic understanding of the motivations and approach, see [the official Redux docs](https://redux.js.org/basics/data-flow).  For an article on when unidirectional data flow is and is not a good approach, see [this](https://medium.com/swlh/the-case-for-flux-379b7d1982c6). These are both written from the perspective of React.js developers, but the concepts are largely the same.
 
 Our largest deviation from these architectures is that while they each recommend one large, global store of data, we have a single store per screen. This carries both benefits and drawbacks, both of which will be covered later in this document.
 
@@ -25,7 +25,7 @@ It is recommended that consumers rely as much as possible on `consumeFrom(store)
 
 Note that there is one Store for any given screen, and only one will be active at any given time. Stores are persisted across configuration changes, but created and destroyed during fragment transactions. This means that data that must be shared across Stores must be passed as arguments to the new fragment.
 
-Stores should be created using [StoreProvider#get](https://github.com/mozilla-mobile/fenix/blob/main/app/src/main/java/org/mozilla/fenix/components/StoreProvider.kt).
+Stores should be created using [StoreProvider#get](https://github.com/WaterfoxCo/Waterfox-Android/blob/main/app/src/main/java/net/waterfox/android/components/StoreProvider.kt).
 
 -------
 

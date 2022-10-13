@@ -1,0 +1,121 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+package net.waterfox.android.telemetry
+
+import mozilla.components.browser.state.action.BrowserAction
+import mozilla.components.browser.state.action.ContentAction
+import mozilla.components.browser.state.action.DownloadAction
+import mozilla.components.browser.state.action.EngineAction
+import mozilla.components.browser.state.action.TabListAction
+import mozilla.components.browser.state.selector.findTab
+import mozilla.components.browser.state.selector.findTabOrCustomTab
+import mozilla.components.browser.state.selector.normalTabs
+import mozilla.components.browser.state.state.BrowserState
+import mozilla.components.browser.state.state.EngineState
+import mozilla.components.browser.state.state.SessionState
+import mozilla.components.feature.search.telemetry.ads.AdsTelemetry
+import mozilla.components.lib.state.Middleware
+import mozilla.components.lib.state.MiddlewareContext
+import mozilla.components.support.base.android.Clock
+import mozilla.components.support.base.log.logger.Logger
+import net.waterfox.android.GleanMetrics.Events
+import net.waterfox.android.GleanMetrics.Metrics
+import net.waterfox.android.utils.Settings
+import net.waterfox.android.GleanMetrics.EngineTab as EngineMetrics
+
+/**
+ * [Middleware] to record telemetry in response to [BrowserAction]s.
+ *
+ * @property settings reference to the application [Settings].
+ * @property adsTelemetry reference to [AdsTelemetry] use to record search telemetry.
+ */
+class TelemetryMiddleware(
+    private val settings: Settings,
+) : Middleware<BrowserState, BrowserAction> {
+
+    private val logger = Logger("TelemetryMiddleware")
+
+    @Suppress("TooGenericExceptionCaught", "ComplexMethod", "NestedBlockDepth")
+    override fun invoke(
+        context: MiddlewareContext<BrowserState, BrowserAction>,
+        next: (BrowserAction) -> Unit,
+        action: BrowserAction
+    ) {
+        // Pre process actions
+        when (action) {
+            is ContentAction.UpdateLoadingStateAction -> {
+                context.state.findTab(action.sessionId)?.let { tab ->
+                    // Record UriOpened event when a non-private page finishes loading
+                    if (tab.content.loading && !action.loading) {
+                        Events.normalAndPrivateUriCount.add()
+                    }
+                }
+            }
+            is DownloadAction.AddDownloadAction -> { /* NOOP */ }
+            is EngineAction.KillEngineSessionAction -> {
+                val tab = context.state.findTabOrCustomTab(action.tabId)
+                onEngineSessionKilled(context.state, tab)
+            }
+            else -> {
+                // no-op
+            }
+        }
+
+        next(action)
+
+        // Post process actions
+        when (action) {
+            is TabListAction.AddTabAction,
+            is TabListAction.AddMultipleTabsAction,
+            is TabListAction.RemoveTabAction,
+            is TabListAction.RemoveAllNormalTabsAction,
+            is TabListAction.RemoveAllTabsAction,
+            is TabListAction.RestoreAction -> {
+                // Update/Persist tabs count whenever it changes
+                settings.openTabsCount = context.state.normalTabs.count()
+                if (context.state.normalTabs.isNotEmpty()) {
+                    Metrics.hasOpenTabs.set(true)
+                } else {
+                    Metrics.hasOpenTabs.set(false)
+                }
+            }
+            else -> {
+                // no-op
+            }
+        }
+    }
+
+    /**
+     * Collecting some engine-specific (GeckoView) telemetry.
+     * https://github.com/mozilla-mobile/android-components/issues/9366
+     */
+    private fun onEngineSessionKilled(state: BrowserState, tab: SessionState?) {
+        if (tab == null) {
+            logger.debug("Could not find tab for killed engine session")
+            return
+        }
+
+        val isSelected = tab.id == state.selectedTabId
+        val age = tab.engineState.age()
+
+        // Increment the counter of killed foreground/background tabs
+        val tabKillLabel = if (isSelected) { "foreground" } else { "background" }
+        EngineMetrics.kills[tabKillLabel].add()
+
+        // Record the age of the engine session of the killed foreground/background tab.
+        if (isSelected && age != null) {
+            EngineMetrics.killForegroundAge.accumulateSamples(listOf(age))
+        } else if (age != null) {
+            EngineMetrics.killBackgroundAge.accumulateSamples(listOf(age))
+        }
+    }
+}
+
+@Suppress("MagicNumber")
+private fun EngineState.age(): Long? {
+    val timestamp = (timestamp ?: return null)
+    val now = Clock.elapsedRealtime()
+    return (now - timestamp)
+}

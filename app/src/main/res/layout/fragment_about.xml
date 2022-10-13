@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="org.mozilla.fenix.settings.about.AboutFragment">
+    tools:context="net.waterfox.android.settings.about.AboutFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,13 +20,13 @@
         <ImageView
             android:id="@+id/wordmark"
             android:layout_width="0dp"
-            android:layout_height="@dimen/about_header_fenix_logo_height"
+            android:layout_height="@dimen/about_header_waterfox_logo_height"
             android:layout_marginStart="@dimen/about_header_icon_margin_start_end"
             android:layout_marginTop="@dimen/about_header_icon_margin_top"
             android:layout_marginEnd="@dimen/about_header_icon_margin_start_end"
             android:contentDescription="@string/app_name"
             android:importantForAccessibility="no"
-            app:srcCompat="?fenixLogo"
+            app:srcCompat="?attr/waterfoxLogo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

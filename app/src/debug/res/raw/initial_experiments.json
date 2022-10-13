@@ -1,8 +1,8 @@
 {
   "data": [{
           "slug": "feature-text-variables-validation-android",
-          "appId": "org.mozilla.fenix",
-          "appName": "fenix",
+          "appId": "net.waterfox.android",
+          "appName": "waterfox",
           "channel": "nightly",
           "branches": [
               {

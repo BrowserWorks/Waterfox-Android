@@ -11,9 +11,9 @@
         android:shortcutShortLabel="@string/home_screen_shortcut_open_new_tab_2"
         android:shortcutLongLabel="@string/home_screen_shortcut_open_new_tab_2">
         <intent
-            android:action="org.mozilla.fenix.OPEN_TAB"
-            android:targetPackage="org.mozilla.fenix"
-            android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
+            android:action="net.waterfox.android.OPEN_TAB"
+            android:targetPackage="net.waterfox.android"
+            android:targetClass="net.waterfox.android.IntentReceiverActivity" />
     </shortcut>
     <shortcut
         android:shortcutId="open_new_private_tab"
@@ -22,8 +22,8 @@
         android:shortcutShortLabel="@string/home_screen_shortcut_open_new_private_tab_2"
         android:shortcutLongLabel="@string/home_screen_shortcut_open_new_private_tab_2">
         <intent
-            android:action="org.mozilla.fenix.OPEN_PRIVATE_TAB"
-            android:targetPackage="org.mozilla.fenix"
-            android:targetClass="org.mozilla.fenix.IntentReceiverActivity" />
+            android:action="net.waterfox.android.OPEN_PRIVATE_TAB"
+            android:targetPackage="net.waterfox.android"
+            android:targetClass="net.waterfox.android.IntentReceiverActivity" />
     </shortcut>
 </shortcuts>

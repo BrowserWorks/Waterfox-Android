@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <org.mozilla.fenix.trackingprotection.SwitchWithDescription
+    <net.waterfox.android.trackingprotection.SwitchWithDescription
         android:id="@+id/trackingProtectionSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

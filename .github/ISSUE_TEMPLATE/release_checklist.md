@@ -1,16 +1,16 @@
 ## Overview ##
 
-Firefox for Android roughly follows the [Firefox Gecko release schedule](https://wiki.mozilla.org/Release_Management/Calendar#Calendars).
+Waterfox for Android roughly follows the [Firefox Gecko release schedule](https://wiki.mozilla.org/Release_Management/Calendar#Calendars).
 This means we cut a Beta every 4 weeks, with a full cycle (~4 weeks) of baking on Beta before going to Production release. 
 
-The [Firefox for Android release schedule](https://docs.google.com/spreadsheets/d/1HotjliSCGOp2nTkfXrxv8qYcurNpkqLWBKbbId6ovTY/edit#gid=0) contains more details related to specific Mobile handoffs.
+The [Waterfox for Android release schedule](https://docs.google.com/spreadsheets/d/1HotjliSCGOp2nTkfXrxv8qYcurNpkqLWBKbbId6ovTY/edit#gid=0) contains more details related to specific Mobile handoffs.
 
 ### Requirements
 - JIRA access
 - Bugzilla account
 - Sentry access
 
-## Firefox for Android Release
+## Waterfox for Android Release
 There are two releases this covers: the current changes in the Fenix Nightly channel that is going out to Beta, and the current Beta that is going to Production.
 
 ## Cutting a Beta

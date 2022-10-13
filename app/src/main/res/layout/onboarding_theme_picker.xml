@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="@id/theme_light_image"
         app:layout_constraintTop_toBottomOf="@id/theme_light_image" />
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/theme_light_radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/description_text"
         app:srcCompat="@drawable/onboarding_light_theme" />
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/theme_dark_radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider" />
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/theme_automatic_radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

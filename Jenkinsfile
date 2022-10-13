@@ -11,7 +11,7 @@ pipeline {
         stage('test') {
         when { branch 'main' }
             steps {
-                dir('app/src/androidTest/java/org/mozilla/fenix/syncIntegration') {
+                dir('app/src/androidTest/java/net/waterfox/android/syncIntegration') {
                     sh 'pipenv install'
                     sh 'pipenv check'
                     sh 'pipenv run pytest'
@@ -27,7 +27,7 @@ pipeline {
                      allowMissing: false,
                      alwaysLinkToLastBuild: true,
                      keepAll: true,
-                     reportDir: 'app/src/androidTest/java/org/mozilla/fenix/syncintegration/results',
+                     reportDir: 'app/src/androidTest/java/net/waterfox/android/syncintegration/results',
                      reportFiles: 'index.html',
                      reportName: 'HTML Report'])
                  }

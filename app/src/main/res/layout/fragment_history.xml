@@ -9,4 +9,4 @@
     android:id="@+id/historyLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.mozilla.fenix.library.history.HistoryFragment" />
+    tools:context="net.waterfox.android.library.history.HistoryFragment" />

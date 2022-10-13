@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <org.mozilla.fenix.library.LibrarySiteItemView
+    <net.waterfox.android.library.LibrarySiteItemView
         android:id="@+id/view_more_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

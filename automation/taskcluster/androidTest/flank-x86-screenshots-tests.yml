@@ -38,7 +38,7 @@ gcloud:
   performance-metrics: true
 
   test-targets:
-   - package org.mozilla.fenix.screenshots
+   - package net.waterfox.android.screenshots
 
   device:
    - model: Pixel2

@@ -38,7 +38,7 @@
         tools:text="@string/onboarding_tracking_protection_description_4" />
 
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/tracking_protection_standard_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         app:onboardingKeyTitle="@string/onboarding_tracking_protection_standard_button_2"
         tools:text="Standard" />
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/tracking_protection_strict_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

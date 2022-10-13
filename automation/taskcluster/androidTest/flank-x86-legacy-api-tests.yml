@@ -38,19 +38,19 @@ gcloud:
   performance-metrics: true
 
   test-targets:
-    - class org.mozilla.fenix.ui.DownloadTest#pauseResumeCancelDownloadTest
-    - class org.mozilla.fenix.ui.SearchTest#scanButtonAllowPermissionTest
-    - class org.mozilla.fenix.ui.SearchTest#scanButtonDenyPermissionTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#audioVideoPermissionChoiceOnEachRequestTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#cameraPermissionChoiceOnEachRequestTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#microphonePermissionChoiceOnEachRequestTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberAllowAudioVideoPermissionChoiceTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberAllowCameraPermissionChoiceTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberAllowMicrophonePermissionChoiceTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberBlockAudioVideoPermissionChoiceTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberBlockCameraPermissionChoiceTest
-    - class org.mozilla.fenix.ui.SitePermissionsTest#rememberBlockMicrophonePermissionChoiceTest
-    - class org.mozilla.fenix.ui.SmokeTest#redirectToAppPermissionsSystemSettingsTest
+    - class net.waterfox.android.ui.DownloadTest#pauseResumeCancelDownloadTest
+    - class net.waterfox.android.ui.SearchTest#scanButtonAllowPermissionTest
+    - class net.waterfox.android.ui.SearchTest#scanButtonDenyPermissionTest
+    - class net.waterfox.android.ui.SitePermissionsTest#audioVideoPermissionChoiceOnEachRequestTest
+    - class net.waterfox.android.ui.SitePermissionsTest#cameraPermissionChoiceOnEachRequestTest
+    - class net.waterfox.android.ui.SitePermissionsTest#microphonePermissionChoiceOnEachRequestTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberAllowAudioVideoPermissionChoiceTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberAllowCameraPermissionChoiceTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberAllowMicrophonePermissionChoiceTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberBlockAudioVideoPermissionChoiceTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberBlockCameraPermissionChoiceTest
+    - class net.waterfox.android.ui.SitePermissionsTest#rememberBlockMicrophonePermissionChoiceTest
+    - class net.waterfox.android.ui.SmokeTest#redirectToAppPermissionsSystemSettingsTest
 
   device:
     - model: Pixel2

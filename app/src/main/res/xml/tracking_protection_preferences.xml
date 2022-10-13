@@ -14,19 +14,19 @@
         android:icon="@drawable/ic_tracking_protection_enabled"
         android:key="@string/pref_key_tracking_protection"
         android:title="@string/preference_enhanced_tracking_protection" />
-    <org.mozilla.fenix.settings.RadioButtonInfoPreference
+    <net.waterfox.android.settings.RadioButtonInfoPreference
         android:defaultValue="true"
         android:dependency="@string/pref_key_tracking_protection"
         android:key="@string/pref_key_tracking_protection_standard_option"
         android:summary="@string/preference_enhanced_tracking_protection_standard_description_4"
         android:title="@string/preference_enhanced_tracking_protection_standard_default_1" />
-    <org.mozilla.fenix.settings.RadioButtonInfoPreference
+    <net.waterfox.android.settings.RadioButtonInfoPreference
         android:defaultValue="false"
         android:dependency="@string/pref_key_tracking_protection"
         android:key="@string/pref_key_tracking_protection_strict_default"
         android:summary="@string/preference_enhanced_tracking_protection_strict_description_3"
         android:title="@string/preference_enhanced_tracking_protection_strict" />
-    <org.mozilla.fenix.settings.RadioButtonInfoPreference
+    <net.waterfox.android.settings.RadioButtonInfoPreference
         android:defaultValue="false"
         android:dependency="@string/pref_key_tracking_protection"
         android:key="@string/pref_key_tracking_protection_custom_option"
@@ -38,7 +38,7 @@
         android:key="@string/pref_key_tracking_protection_custom_cookies"
         android:layout="@layout/checkbox_left_preference_etp"
         android:title="@string/preference_enhanced_tracking_protection_custom_cookies" />
-    <org.mozilla.fenix.settings.DropDownListPreference
+    <net.waterfox.android.settings.DropDownListPreference
         android:defaultValue="@string/social"
         android:dependency="@string/pref_key_tracking_protection_custom_cookies"
         android:entries="@array/cookies_options_entries"
@@ -51,7 +51,7 @@
         android:key="@string/pref_key_tracking_protection_custom_tracking_content"
         android:layout="@layout/checkbox_left_preference_etp"
         android:title="@string/preference_enhanced_tracking_protection_custom_tracking_content" />
-    <org.mozilla.fenix.settings.DropDownListPreference
+    <net.waterfox.android.settings.DropDownListPreference
         android:defaultValue="@string/all"
         android:dependency="@string/pref_key_tracking_protection_custom_tracking_content"
         android:entries="@array/tracking_content_options_entries"

@@ -17,7 +17,7 @@
         android:key="@string/pref_key_android_autofill"
         android:title="@string/preferences_android_autofill"
         android:summary="@string/preferences_android_autofill_description" />
-    <org.mozilla.fenix.settings.SyncPreference
+    <net.waterfox.android.settings.SyncPreference
         android:key="@string/pref_key_sync_logins"
         android:title="@string/preferences_passwords_sync_logins" />
     <Preference

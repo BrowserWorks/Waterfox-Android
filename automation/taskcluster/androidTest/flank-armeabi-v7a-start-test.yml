@@ -34,7 +34,7 @@ gcloud:
   performance-metrics: true
 
   test-targets:
-   - class org.mozilla.fenix.ui.NavigationToolbarTest#visitURLTest
+   - class net.waterfox.android.ui.NavigationToolbarTest#visitURLTest
 
   device:
    - model: Pixel2

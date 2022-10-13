@@ -156,7 +156,7 @@
 
     <dialog
         android:id="@+id/tabsTrayFragment"
-        android:name="org.mozilla.fenix.tabstray.TabsTrayFragment">
+        android:name="net.waterfox.android.tabstray.TabsTrayFragment">
         <argument
             android:name="enterMultiselect"
             android:defaultValue="false"
@@ -164,21 +164,21 @@
         <argument
             android:name="page"
             android:defaultValue="NormalTabs"
-            app:argType="org.mozilla.fenix.tabstray.Page" />
+            app:argType="net.waterfox.android.tabstray.Page" />
         <argument
             android:name="accessPoint"
             android:defaultValue="None"
-            app:argType="org.mozilla.fenix.tabstray.TabsTrayAccessPoint" />
+            app:argType="net.waterfox.android.tabstray.TabsTrayAccessPoint" />
     </dialog>
 
     <fragment
         android:id="@+id/startupFragment"
-        android:name="org.mozilla.fenix.StartupFragment">
+        android:name="net.waterfox.android.StartupFragment">
     </fragment>
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="org.mozilla.fenix.home.HomeFragment"
+        android:name="net.waterfox.android.home.HomeFragment"
         tools:layout="@layout/fragment_home">
         <argument
             android:name="focusOnAddressBar"
@@ -191,12 +191,12 @@
     </fragment>
     <dialog
         android:id="@+id/homeOnboardingDialogFragment"
-        android:name="org.mozilla.fenix.onboarding.HomeOnboardingDialogFragment"
+        android:name="net.waterfox.android.onboarding.HomeOnboardingDialogFragment"
         tools:layout="@layout/fragment_onboarding_home_dialog"/>
 
     <dialog
         android:id="@+id/searchDialogFragment"
-        android:name="org.mozilla.fenix.search.SearchDialogFragment"
+        android:name="net.waterfox.android.search.SearchDialogFragment"
         tools:layout="@layout/fragment_search_dialog">
         <argument
             android:name="session_id"
@@ -210,26 +210,26 @@
         <argument
             android:name="search_access_point"
             android:defaultValue="NONE"
-            app:argType="org.mozilla.fenix.components.metrics.MetricsUtils$Source" />
+            app:argType="net.waterfox.android.components.metrics.MetricsUtils$Source" />
     </dialog>
 
     <fragment
         android:id="@+id/recentlyClosedFragment"
-        android:name="org.mozilla.fenix.library.recentlyclosed.RecentlyClosedFragment"
+        android:name="net.waterfox.android.library.recentlyclosed.RecentlyClosedFragment"
         android:label="@string/library_recently_closed_tabs" />
 
     <fragment
         android:id="@+id/SitePermissionsManagePhoneFeature"
-        android:name="org.mozilla.fenix.settings.sitepermissions.SitePermissionsManagePhoneFeatureFragment"
+        android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsManagePhoneFeatureFragment"
         tools:layout="@layout/fragment_manage_site_permissions_feature_phone">
         <argument
             android:name="phoneFeature"
-            app:argType="org.mozilla.fenix.settings.PhoneFeature" />
+            app:argType="net.waterfox.android.settings.PhoneFeature" />
     </fragment>
 
     <fragment
         android:id="@+id/browserFragment"
-        android:name="org.mozilla.fenix.browser.BrowserFragment"
+        android:name="net.waterfox.android.browser.BrowserFragment"
         app:exitAnim="@anim/fade_out"
         tools:layout="@layout/fragment_browser">
         <argument
@@ -252,7 +252,7 @@
 
     <fragment
         android:id="@+id/externalAppBrowserFragment"
-        android:name="org.mozilla.fenix.customtabs.ExternalAppBrowserFragment"
+        android:name="net.waterfox.android.customtabs.ExternalAppBrowserFragment"
         tools:layout="@layout/fragment_browser">
         <argument
             android:name="activeSessionId"
@@ -266,7 +266,7 @@
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="org.mozilla.fenix.library.history.HistoryFragment"
+        android:name="net.waterfox.android.library.history.HistoryFragment"
         android:label="@string/library_history"
         tools:layout="@layout/fragment_history">
 
@@ -281,7 +281,7 @@
 
     <fragment
         android:id="@+id/syncedHistoryFragment"
-        android:name="org.mozilla.fenix.library.history.HistoryFragment"
+        android:name="net.waterfox.android.library.history.HistoryFragment"
         android:label="@string/history_from_other_devices"
         tools:layout="@layout/fragment_history">
 
@@ -296,30 +296,30 @@
 
     <dialog
         android:id="@+id/historySearchDialogFragment"
-        android:name="org.mozilla.fenix.library.history.HistorySearchDialogFragment"
+        android:name="net.waterfox.android.library.history.HistorySearchDialogFragment"
         tools:layout="@layout/fragment_history_search_dialog">
     </dialog>
 
     <fragment
         android:id="@+id/historyMetadataGroupFragment"
-        android:name="org.mozilla.fenix.library.historymetadata.HistoryMetadataGroupFragment">
+        android:name="net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragment">
         <argument
             android:name="title"
             app:argType="string" />
         <argument
             android:name="historyMetadataItems"
-            app:argType="org.mozilla.fenix.library.history.History[]" />
+            app:argType="net.waterfox.android.library.history.History[]" />
     </fragment>
 
     <fragment
         android:id="@+id/downloadsFragment"
-        android:name="org.mozilla.fenix.library.downloads.DownloadFragment"
+        android:name="net.waterfox.android.library.downloads.DownloadFragment"
         android:label="Downloads"
         tools:layout="@layout/fragment_downloads" />
 
     <fragment
         android:id="@+id/bookmarkFragment"
-        android:name="org.mozilla.fenix.library.bookmarks.BookmarkFragment"
+        android:name="net.waterfox.android.library.bookmarks.BookmarkFragment"
         tools:layout="@layout/fragment_bookmark">
         <argument
             android:name="currentRoot"
@@ -342,13 +342,13 @@
 
     <dialog
         android:id="@+id/bookmarkSearchDialogFragment"
-        android:name="org.mozilla.fenix.library.bookmarks.BookmarkSearchDialogFragment"
+        android:name="net.waterfox.android.library.bookmarks.BookmarkSearchDialogFragment"
         tools:layout="@layout/fragment_bookmark_search_dialog">
     </dialog>
 
     <fragment
         android:id="@+id/bookmarkEditFragment"
-        android:name="org.mozilla.fenix.library.bookmarks.edit.EditBookmarkFragment"
+        android:name="net.waterfox.android.library.bookmarks.edit.EditBookmarkFragment"
         tools:layout="@layout/fragment_edit_bookmark">
         <argument
             android:name="guidToEdit"
@@ -365,7 +365,7 @@
 
     <fragment
         android:id="@+id/bookmarkSelectFolderFragment"
-        android:name="org.mozilla.fenix.library.bookmarks.selectfolder.SelectBookmarkFolderFragment"
+        android:name="net.waterfox.android.library.bookmarks.selectfolder.SelectBookmarkFolderFragment"
         android:label="@string/bookmark_select_folder_fragment_label"
         tools:layout="@layout/fragment_select_bookmark_folder">
         <action
@@ -387,7 +387,7 @@
 
     <fragment
         android:id="@+id/bookmarkAddFolderFragment"
-        android:name="org.mozilla.fenix.library.bookmarks.addfolder.AddBookmarkFolderFragment"
+        android:name="net.waterfox.android.library.bookmarks.addfolder.AddBookmarkFolderFragment"
         android:label="@string/bookmark_add_folder_fragment_label"
         tools:layout="@layout/fragment_edit_bookmark">
         <action
@@ -397,7 +397,7 @@
 
     <fragment
         android:id="@+id/savedLoginsAuthFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.SavedLoginsAuthFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.SavedLoginsAuthFragment"
         android:label="@string/preferences_passwords_logins_and_passwords">
         <action
             android:id="@+id/action_savedLoginsAuthFragment_to_loginsListFragment"
@@ -431,7 +431,7 @@
 
     <fragment
         android:id="@+id/savedLoginsFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.SavedLoginsFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.SavedLoginsFragment"
         tools:layout="@layout/fragment_saved_logins">
         <action
             android:id="@+id/action_savedLoginsFragment_to_loginDetailFragment"
@@ -450,13 +450,13 @@
 
     <fragment
         android:id="@+id/loginExceptionsFragment"
-        android:name="org.mozilla.fenix.exceptions.login.LoginExceptionsFragment"
+        android:name="net.waterfox.android.exceptions.login.LoginExceptionsFragment"
         android:label="@string/preferences_passwords_exceptions"
         tools:layout="@layout/fragment_exceptions" />
 
     <fragment
         android:id="@+id/loginDetailFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.LoginDetailFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.LoginDetailFragment"
         tools:layout="@layout/fragment_login_detail">
         <argument
             android:name="savedLoginId"
@@ -471,12 +471,12 @@
 
     <fragment
         android:id="@+id/editLoginFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.EditLoginFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.EditLoginFragment"
         android:label="@string/edit"
         tools:layout="@layout/fragment_edit_login">
         <argument
             android:name="savedLoginItem"
-            app:argType="org.mozilla.fenix.settings.logins.SavedLogin"
+            app:argType="net.waterfox.android.settings.logins.SavedLogin"
             app:nullable="false" />
         <action
             android:id="@+id/action_editLoginFragment_to_loginDetailFragment"
@@ -487,7 +487,7 @@
 
     <fragment
         android:id="@+id/addLoginFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.AddLoginFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.AddLoginFragment"
         android:label="@string/add_login"
         tools:layout="@layout/fragment_add_login">
         <action
@@ -499,7 +499,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="org.mozilla.fenix.settings.SettingsFragment"
+        android:name="net.waterfox.android.settings.SettingsFragment"
         android:label="@string/settings_title">
         <argument
             android:name="preference_to_scroll_to"
@@ -685,19 +685,19 @@
     </fragment>
     <dialog
         android:id="@+id/profilerStartDialogFragment"
-        android:name="org.mozilla.fenix.perf.ProfilerStartDialogFragment">
+        android:name="net.waterfox.android.perf.ProfilerStartDialogFragment">
     </dialog>
     <dialog
         android:id="@+id/profilerStopDialogFragment"
-        android:name="org.mozilla.fenix.perf.ProfilerStopDialogFragment">
+        android:name="net.waterfox.android.perf.ProfilerStopDialogFragment">
     </dialog>
     <fragment
         android:id="@+id/tabsSettingsFragment"
-        android:name="org.mozilla.fenix.settings.TabsSettingsFragment"
+        android:name="net.waterfox.android.settings.TabsSettingsFragment"
         android:label="@string/preferences_tabs" />
     <fragment
         android:id="@+id/homeSettingsFragment"
-        android:name="org.mozilla.fenix.settings.HomeSettingsFragment"
+        android:name="net.waterfox.android.settings.HomeSettingsFragment"
         android:label="@string/preferences_home_2">
         <action
             android:id="@+id/action_homeSettingsFragment_to_wallpaperSettingsFragment"
@@ -709,11 +709,11 @@
     </fragment>
     <fragment
         android:id="@+id/wallpaperSettingsFragment"
-        android:name="org.mozilla.fenix.settings.wallpaper.WallpaperSettingsFragment"
+        android:name="net.waterfox.android.settings.wallpaper.WallpaperSettingsFragment"
         android:label="@string/customize_wallpapers"/>
     <fragment
         android:id="@+id/dataChoicesFragment"
-        android:name="org.mozilla.fenix.settings.DataChoicesFragment"
+        android:name="net.waterfox.android.settings.DataChoicesFragment"
         android:label="@string/preferences_data_choices">
         <action
             android:id="@+id/action_dataChoicesFragment_to_studiesFragment"
@@ -726,11 +726,11 @@
     </fragment>
     <fragment
         android:id="@+id/studiesFragment"
-        android:name="org.mozilla.fenix.settings.studies.StudiesFragment"
+        android:name="net.waterfox.android.settings.studies.StudiesFragment"
         android:label="@string/preference_experiments_2" />
     <fragment
         android:id="@+id/sitePermissionsFragment"
-        android:name="org.mozilla.fenix.settings.sitepermissions.SitePermissionsFragment"
+        android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsFragment"
         android:label="@string/preferences_site_permissions">
         <action
             android:id="@+id/action_site_permissions_to_manage_phone_features"
@@ -752,11 +752,11 @@
 
     <fragment
         android:id="@+id/accessibilityFragment"
-        android:name="org.mozilla.fenix.settings.AccessibilityFragment"
+        android:name="net.waterfox.android.settings.AccessibilityFragment"
         android:label="@string/preferences_accessibility" />
     <fragment
         android:id="@+id/accountSettingsFragment"
-        android:name="org.mozilla.fenix.settings.account.AccountSettingsFragment"
+        android:name="net.waterfox.android.settings.account.AccountSettingsFragment"
         android:label="@string/preferences_account_settings">
         <action
             android:id="@+id/action_accountSettingsFragment_to_signOutFragment"
@@ -765,7 +765,7 @@
 
     <fragment
         android:id="@+id/turnOnSyncFragment"
-        android:name="org.mozilla.fenix.settings.account.TurnOnSyncFragment"
+        android:name="net.waterfox.android.settings.account.TurnOnSyncFragment"
         android:label="@string/preferences_sync_2"
         tools:layout="@layout/fragment_turn_on_sync">
         <argument
@@ -779,13 +779,13 @@
 
     <fragment
         android:id="@+id/pairFragment"
-        android:name="org.mozilla.fenix.settings.PairFragment"
+        android:name="net.waterfox.android.settings.PairFragment"
         android:label="@string/preferences_sync_2"
         tools:layout="@layout/fragment_pair" />
 
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="org.mozilla.fenix.settings.about.AboutFragment"
+        android:name="net.waterfox.android.settings.about.AboutFragment"
         tools:layout="@layout/fragment_about">
         <action
             android:id="@+id/action_aboutFragment_to_aboutLibrariesFragment"
@@ -797,31 +797,31 @@
     </fragment>
     <fragment
         android:id="@+id/secretSettingsPreference"
-        android:name="org.mozilla.fenix.settings.SecretSettingsFragment"
+        android:name="net.waterfox.android.settings.SecretSettingsFragment"
         android:label="@string/preferences_debug_settings" />
     <fragment
         android:id="@+id/secretInfoSettingsFragment"
-        android:name="org.mozilla.fenix.settings.SecretDebugSettingsFragment"
+        android:name="net.waterfox.android.settings.SecretDebugSettingsFragment"
         android:label="@string/preferences_debug_info" />
     <fragment
         android:id="@+id/aboutLibrariesFragment"
-        android:name="org.mozilla.fenix.settings.about.AboutLibrariesFragment"
+        android:name="net.waterfox.android.settings.about.AboutLibrariesFragment"
         tools:layout="@layout/fragment_about_libraries" />
     <fragment
         android:id="@+id/customizationFragment"
-        android:name="org.mozilla.fenix.settings.CustomizationFragment"
+        android:name="net.waterfox.android.settings.CustomizationFragment"
         android:label="@string/preferences_customize" />
     <fragment
         android:id="@+id/privateBrowsingFragment"
-        android:name="org.mozilla.fenix.settings.PrivateBrowsingFragment"
+        android:name="net.waterfox.android.settings.PrivateBrowsingFragment"
         android:label="@string/preferences_private_browsing_options" />
     <fragment
         android:id="@+id/httpsOnlyFragment"
-        android:name="org.mozilla.fenix.settings.HttpsOnlyFragment"
+        android:name="net.waterfox.android.settings.HttpsOnlyFragment"
         android:label="@string/preferences_https_only_title" />
     <fragment
         android:id="@+id/trackingProtectionFragment"
-        android:name="org.mozilla.fenix.settings.TrackingProtectionFragment">
+        android:name="net.waterfox.android.settings.TrackingProtectionFragment">
         <action
             android:id="@+id/action_trackingProtectionFragment_to_exceptionsFragment"
             app:destination="@id/trackingProtectionExceptionsFragment"
@@ -839,17 +839,17 @@
     </fragment>
     <fragment
         android:id="@+id/deleteBrowsingDataFragment"
-        android:name="org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataFragment"
+        android:name="net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataFragment"
         android:label="@string/preferences_delete_browsing_data"
         tools:layout="@layout/fragment_delete_browsing_data" />
     <fragment
         android:id="@+id/trackingProtectionExceptionsFragment"
-        android:name="org.mozilla.fenix.exceptions.trackingprotection.TrackingProtectionExceptionsFragment"
+        android:name="net.waterfox.android.exceptions.trackingprotection.TrackingProtectionExceptionsFragment"
         android:label="@string/preference_exceptions"
         tools:layout="@layout/fragment_exceptions" />
     <dialog
         android:id="@+id/collectionCreationFragment"
-        android:name="org.mozilla.fenix.collections.CollectionCreationFragment"
+        android:name="net.waterfox.android.collections.CollectionCreationFragment"
         tools:layout="@layout/fragment_create_collection">
         <argument
             android:name="tabIds"
@@ -868,22 +868,22 @@
             app:argType="long" />
         <argument
             android:name="saveCollectionStep"
-            app:argType="org.mozilla.fenix.collections.SaveCollectionStep"
+            app:argType="net.waterfox.android.collections.SaveCollectionStep"
             app:nullable="false" />
     </dialog>
 
     <dialog
         android:id="@+id/createShortcutFragment"
-        android:name="org.mozilla.fenix.shortcut.CreateShortcutFragment"
+        android:name="net.waterfox.android.shortcut.CreateShortcutFragment"
         tools:layout="@layout/fragment_create_shortcut" />
     <dialog
         android:id="@+id/pwaOnboardingDialogFragment"
-        android:name="org.mozilla.fenix.shortcut.PwaOnboardingDialogFragment"
+        android:name="net.waterfox.android.shortcut.PwaOnboardingDialogFragment"
         tools:layout="@layout/fragment_pwa_onboarding" />
 
     <dialog
         android:id="@+id/shareFragment"
-        android:name="org.mozilla.fenix.share.ShareFragment"
+        android:name="net.waterfox.android.share.ShareFragment"
         tools:layout="@layout/fragment_share">
         <argument
             android:name="data"
@@ -908,7 +908,7 @@
     </dialog>
     <dialog
         android:id="@+id/quickSettingsSheetDialogFragment"
-        android:name="org.mozilla.fenix.settings.quicksettings.QuickSettingsSheetDialogFragment"
+        android:name="net.waterfox.android.settings.quicksettings.QuickSettingsSheetDialogFragment"
         tools:layout="@layout/fragment_quick_settings_dialog_sheet">
         <argument
             android:name="sessionId"
@@ -943,18 +943,18 @@
     </dialog>
     <fragment
         android:id="@+id/accountProblemFragment"
-        android:name="org.mozilla.fenix.settings.account.AccountProblemFragment">
+        android:name="net.waterfox.android.settings.account.AccountProblemFragment">
         <action
             android:id="@+id/action_accountProblemFragment_to_signOutFragment"
             app:destination="@id/signOutFragment" />
     </fragment>
     <dialog
         android:id="@+id/signOutFragment"
-        android:name="org.mozilla.fenix.settings.account.SignOutFragment"
+        android:name="net.waterfox.android.settings.account.SignOutFragment"
         tools:layout="@layout/fragment_sign_out" />
     <dialog
         android:id="@+id/trackingProtectionPanelDialogFragment"
-        android:name="org.mozilla.fenix.trackingprotection.TrackingProtectionPanelDialogFragment"
+        android:name="net.waterfox.android.trackingprotection.TrackingProtectionPanelDialogFragment"
         tools:layout="@layout/fragment_tracking_protection">
         <argument
             android:name="sessionId"
@@ -976,7 +976,7 @@
     </dialog>
     <dialog
         android:id="@+id/connectionPanelDialogFragment"
-        android:name="org.mozilla.fenix.settings.quicksettings.ConnectionPanelDialogFragment"
+        android:name="net.waterfox.android.settings.quicksettings.ConnectionPanelDialogFragment"
         tools:layout="@layout/quicksettings_website_info">
         <argument
             android:name="sessionId"
@@ -1005,31 +1005,31 @@
     </dialog>
     <fragment
         android:id="@+id/trackingProtectionBlockingFragment"
-        android:name="org.mozilla.fenix.trackingprotection.TrackingProtectionBlockingFragment"
+        android:name="net.waterfox.android.trackingprotection.TrackingProtectionBlockingFragment"
         tools:layout="@layout/fragment_tracking_protection_blocking">
         <argument
             android:name="protectionMode"
-            app:argType="org.mozilla.fenix.trackingprotection.TrackingProtectionMode" />
+            app:argType="net.waterfox.android.trackingprotection.TrackingProtectionMode" />
     </fragment>
     <fragment
         android:id="@+id/deleteBrowsingDataOnQuitFragment"
-        android:name="org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitFragment" />
+        android:name="net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitFragment" />
 
     <fragment
         android:id="@+id/addNewDeviceFragment"
-        android:name="org.mozilla.fenix.share.AddNewDeviceFragment"
+        android:name="net.waterfox.android.share.AddNewDeviceFragment"
         tools:layout="@layout/fragment_add_new_device" />
     <fragment
         android:id="@+id/localeSettingsFragment"
-        android:name="org.mozilla.fenix.settings.advanced.LocaleSettingsFragment"
+        android:name="net.waterfox.android.settings.advanced.LocaleSettingsFragment"
         tools:layout="@layout/fragment_locale_settings" />
     <fragment
         android:id="@+id/saveLoginSettingFragment"
-        android:name="org.mozilla.fenix.settings.logins.fragment.SavedLoginsSettingFragment"
+        android:name="net.waterfox.android.settings.logins.fragment.SavedLoginsSettingFragment"
         android:label="SaveLoginSettingFragment" />
     <fragment
         android:id="@+id/webExtensionActionPopupFragment"
-        android:name="org.mozilla.fenix.addons.WebExtensionActionPopupFragment"
+        android:name="net.waterfox.android.addons.WebExtensionActionPopupFragment"
         tools:layout="@layout/fragment_add_on_internal_settings">
         <argument
             android:name="webExtensionId"
@@ -1041,7 +1041,7 @@
     </fragment>
     <dialog
         android:id="@+id/tabHistoryDialogFragment"
-        android:name="org.mozilla.fenix.tabhistory.TabHistoryDialogFragment"
+        android:name="net.waterfox.android.tabhistory.TabHistoryDialogFragment"
         tools:layout="@layout/fragment_tab_history_dialog">
         <argument
             android:name="activeSessionId"
@@ -1055,7 +1055,7 @@
 
         <fragment
             android:id="@+id/sitePermissionsExceptionsFragment"
-            android:name="org.mozilla.fenix.settings.sitepermissions.SitePermissionsExceptionsFragment"
+            android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsExceptionsFragment"
             android:label="@string/preference_exceptions"
             tools:layout="@layout/fragment_site_permissions_exceptions">
             <action
@@ -1066,11 +1066,11 @@
 
         <fragment
             android:id="@+id/sitePermissionsManageExceptionsPhoneFeatureFragment"
-            android:name="org.mozilla.fenix.settings.sitepermissions.SitePermissionsManageExceptionsPhoneFeatureFragment"
+            android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsManageExceptionsPhoneFeatureFragment"
             tools:layout="@layout/fragment_manage_site_permissions_feature_phone">
             <argument
                 android:name="phoneFeature"
-                app:argType="org.mozilla.fenix.settings.PhoneFeature" />
+                app:argType="net.waterfox.android.settings.PhoneFeature" />
             <argument
                 android:name="sitePermissions"
                 app:argType="mozilla.components.concept.engine.permission.SitePermissions" />
@@ -1078,7 +1078,7 @@
 
         <fragment
             android:id="@+id/sitePermissionsDetailsExceptionsFragment"
-            android:name="org.mozilla.fenix.settings.sitepermissions.SitePermissionsDetailsExceptionsFragment">
+            android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsDetailsExceptionsFragment">
             <action
                 android:id="@+id/action_site_permissions_to_exceptions_to_manage_phone_feature"
                 app:destination="@id/sitePermissionsManageExceptionsPhoneFeatureFragment"
@@ -1094,7 +1094,7 @@
         app:startDestination="@id/addonsManagementFragment">
         <fragment
             android:id="@+id/addonsManagementFragment"
-            android:name="org.mozilla.fenix.addons.AddonsManagementFragment"
+            android:name="net.waterfox.android.addons.AddonsManagementFragment"
             tools:layout="@layout/fragment_add_ons_management">
             <action
                 android:id="@+id/action_addonsManagementFragment_to_addonDetailsFragment"
@@ -1113,7 +1113,7 @@
         </fragment>
         <fragment
             android:id="@+id/installedAddonDetailsFragment"
-            android:name="org.mozilla.fenix.addons.InstalledAddonDetailsFragment"
+            android:name="net.waterfox.android.addons.InstalledAddonDetailsFragment"
             tools:layout="@layout/fragment_installed_add_on_details">
             <action
                 android:id="@+id/action_installedAddonFragment_to_addonInternalSettingsFragment"
@@ -1130,7 +1130,7 @@
         </fragment>
         <fragment
             android:id="@+id/notYetSupportedAddonFragment"
-            android:name="org.mozilla.fenix.addons.NotYetSupportedAddonFragment"
+            android:name="net.waterfox.android.addons.NotYetSupportedAddonFragment"
             tools:layout="@layout/fragment_not_yet_supported_addons">
             <argument
                 android:name="addons"
@@ -1138,7 +1138,7 @@
         </fragment>
         <fragment
             android:id="@+id/addonPermissionsDetailFragment"
-            android:name="org.mozilla.fenix.addons.AddonPermissionsDetailsFragment"
+            android:name="net.waterfox.android.addons.AddonPermissionsDetailsFragment"
             tools:layout="@layout/fragment_add_on_permissions">
             <argument
                 android:name="addon"
@@ -1146,7 +1146,7 @@
         </fragment>
         <fragment
             android:id="@+id/addonInternalSettingsFragment"
-            android:name="org.mozilla.fenix.addons.AddonInternalSettingsFragment"
+            android:name="net.waterfox.android.addons.AddonInternalSettingsFragment"
             tools:layout="@layout/fragment_add_on_internal_settings">
             <argument
                 android:name="addon"
@@ -1154,7 +1154,7 @@
         </fragment>
         <fragment
             android:id="@+id/addonDetailsFragment"
-            android:name="org.mozilla.fenix.addons.AddonDetailsFragment"
+            android:name="net.waterfox.android.addons.AddonDetailsFragment"
             tools:layout="@layout/fragment_add_on_details">
             <argument
                 android:name="addon"
@@ -1167,7 +1167,7 @@
         app:startDestination="@id/searchEngineFragment">
         <fragment
             android:id="@+id/searchEngineFragment"
-            android:name="org.mozilla.fenix.settings.search.SearchEngineFragment"
+            android:name="net.waterfox.android.settings.search.SearchEngineFragment"
             android:label="@string/preferences_search">
             <action
                 android:id="@+id/action_searchEngineFragment_to_addSearchEngineFragment"
@@ -1178,11 +1178,11 @@
         </fragment>
         <fragment
             android:id="@+id/addSearchEngineFragment"
-            android:name="org.mozilla.fenix.settings.search.AddSearchEngineFragment"
+            android:name="net.waterfox.android.settings.search.AddSearchEngineFragment"
             tools:layout="@layout/fragment_add_search_engine" />
         <fragment
             android:id="@+id/editCustomSearchEngineFragment"
-            android:name="org.mozilla.fenix.settings.search.EditCustomSearchEngineFragment"
+            android:name="net.waterfox.android.settings.search.EditCustomSearchEngineFragment"
             tools:layout="@layout/fragment_add_search_engine">
             <argument
                 android:name="searchEngineIdentifier"
@@ -1195,7 +1195,7 @@
         app:startDestination="@id/nimbusExperimentsFragment">
         <fragment
             android:id="@+id/nimbusExperimentsFragment"
-            android:name="org.mozilla.fenix.nimbus.NimbusExperimentsFragment"
+            android:name="net.waterfox.android.nimbus.NimbusExperimentsFragment"
             android:label="@string/preferences_nimbus_experiments"
             tools:layout="@layout/mozac_service_nimbus_experiments">
             <action
@@ -1204,7 +1204,7 @@
         </fragment>
         <fragment
             android:id="@+id/nimbusBranchesFragment"
-            android:name="org.mozilla.fenix.nimbus.NimbusBranchesFragment"
+            android:name="net.waterfox.android.nimbus.NimbusBranchesFragment"
             tools:layout="@layout/mozac_service_nimbus_experiment_details">
             <argument
                 android:name="experimentId"
@@ -1228,7 +1228,7 @@
         app:startDestination="@id/autofillSettingFragment">
         <fragment
             android:id="@+id/autofillSettingFragment"
-            android:name="org.mozilla.fenix.settings.autofill.AutofillSettingFragment"
+            android:name="net.waterfox.android.settings.autofill.AutofillSettingFragment"
             android:label="@string/preferences_credit_cards">
             <action
                 android:id="@+id/action_autofillSettingFragment_to_creditCardEditorFragment"
@@ -1261,7 +1261,7 @@
         </fragment>
         <fragment
             android:id="@+id/creditCardEditorFragment"
-            android:name="org.mozilla.fenix.settings.creditcards.CreditCardEditorFragment"
+            android:name="net.waterfox.android.settings.creditcards.CreditCardEditorFragment"
             android:label="@string/credit_cards_add_card">
             <argument
                 android:name="creditCard"
@@ -1271,7 +1271,7 @@
         </fragment>
         <fragment
             android:id="@+id/creditCardsManagementFragment"
-            android:name="org.mozilla.fenix.settings.creditcards.CreditCardsManagementFragment"
+            android:name="net.waterfox.android.settings.creditcards.CreditCardsManagementFragment"
             android:label="@string/credit_cards_saved_cards">
             <action
                 android:id="@+id/action_creditCardsManagementFragment_to_creditCardEditorFragment"
@@ -1283,7 +1283,7 @@
         </fragment>
         <fragment
             android:id="@+id/addressEditorFragment"
-            android:name="org.mozilla.fenix.settings.address.AddressEditorFragment"
+            android:name="net.waterfox.android.settings.address.AddressEditorFragment"
             android:label="@string/addresses_add_address">
             <argument
                 android:name="address"
@@ -1293,7 +1293,7 @@
         </fragment>
         <fragment
             android:id="@+id/addressManagementFragment"
-            android:name="org.mozilla.fenix.settings.address.AddressManagementFragment"
+            android:name="net.waterfox.android.settings.address.AddressManagementFragment"
             android:label="@string/addresses_manage_addresses">
             <action
                 android:id="@+id/action_addressManagementFragment_to_addressEditorFragment"

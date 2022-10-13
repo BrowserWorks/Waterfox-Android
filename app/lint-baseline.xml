@@ -432,7 +432,7 @@
         errorLine1="                isInPrimaryState = { getCurrentTab()?.content?.canGoBack ?: false },"
         errorLine2="                                     ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="96"
             column="38"/>
     </issue>
@@ -443,7 +443,7 @@
         errorLine1="                isInPrimaryState = { getCurrentTab()?.content?.canGoForward ?: false },"
         errorLine2="                                     ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="118"
             column="38"/>
     </issue>
@@ -454,7 +454,7 @@
         errorLine1="                    getCurrentTab()?.content?.loading == false"
         errorLine2="                    ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="141"
             column="21"/>
     </issue>
@@ -465,7 +465,7 @@
         errorLine1="                    if (getCurrentTab()?.content?.loading == true) {"
         errorLine2="                        ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="155"
             column="25"/>
     </issue>
@@ -476,7 +476,7 @@
         errorLine1="                selected = getCurrentTab()?.let {"
         errorLine2="                           ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="183"
             column="28"/>
     </issue>
@@ -487,7 +487,7 @@
         errorLine1="        getCurrentTab()?.let { tab ->"
         errorLine2="        ~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/BrowserFragment.kt"
+            file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
             line="273"
             column="9"/>
     </issue>
@@ -498,7 +498,7 @@
         errorLine1="        tabsAction.updateCount(tabCount)"
         errorLine2="                   ~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/components/toolbar/ToolbarIntegration.kt"
+            file="src/main/java/net/waterfox/android/components/toolbar/ToolbarIntegration.kt"
             line="138"
             column="20"/>
     </issue>
@@ -509,7 +509,7 @@
         errorLine1="fun EagerFlingBehavior("
         errorLine2="    ~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/compose/LazyListEagerFlingBehavior.kt"
+            file="src/main/java/net/waterfox/android/compose/LazyListEagerFlingBehavior.kt"
             line="21"
             column="5"/>
     </issue>
@@ -520,7 +520,7 @@
         errorLine1="                    display.setUrlBackground(getDrawable(R.drawable.search_url_background))"
         errorLine2="                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/components/toolbar/BrowserToolbarView.kt"
+            file="src/main/java/net/waterfox/android/components/toolbar/BrowserToolbarView.kt"
             line="89"
             column="46"/>
     </issue>
@@ -539,7 +539,7 @@
     <issue
         id="Typos"
         message="Repeated word &quot;zaman&quot; in message: possible typo"
-        errorLine1="    &lt;string name=&quot;studies_description&quot;>Firefox zaman zaman araştırmalar yükleyip çalıştırabilir.&lt;/string>"
+        errorLine1="    &lt;string name=&quot;studies_description&quot;>Waterfox zaman zaman araştırmalar yükleyip çalıştırabilir.&lt;/string>"
         errorLine2="                                               ^">
         <location
             file="src/main/res/values-tr/strings.xml"
@@ -685,7 +685,7 @@
         errorLine1="        notifyDataSetChanged()"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/library/downloads/DownloadAdapter.kt"
+            file="src/main/java/net/waterfox/android/library/downloads/DownloadAdapter.kt"
             line="43"
             column="9"/>
     </issue>
@@ -696,7 +696,7 @@
         errorLine1="        notifyDataSetChanged()"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/collections/SaveCollectionListAdapter.kt"
+            file="src/main/java/net/waterfox/android/collections/SaveCollectionListAdapter.kt"
             line="50"
             column="9"/>
     </issue>
@@ -707,7 +707,7 @@
         errorLine1="            tabsTrayBinding.tabsTray.adapter?.notifyDataSetChanged()"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/tabstray/TabsTrayFragment.kt"
+            file="src/main/java/net/waterfox/android/tabstray/TabsTrayFragment.kt"
             line="384"
             column="13"/>
     </issue>
@@ -715,7 +715,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="    &lt;org.mozilla.fenix.library.LibrarySiteItemView"
+        errorLine1="    &lt;net.waterfox.android.library.LibrarySiteItemView"
         errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/component_recently_closed.xml"
@@ -748,7 +748,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -759,7 +759,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -770,7 +770,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -781,7 +781,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -792,7 +792,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -803,7 +803,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="            &lt;org.mozilla.fenix.settings.deletebrowsingdata.DeleteBrowsingDataItem"
+        errorLine1="            &lt;net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataItem"
         errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_delete_browsing_data.xml"
@@ -814,7 +814,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="        &lt;org.mozilla.fenix.trackingprotection.TrackingProtectionCategoryItem"
+        errorLine1="        &lt;net.waterfox.android.trackingprotection.TrackingProtectionCategoryItem"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_tracking_protection_blocking.xml"
@@ -825,7 +825,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="        &lt;org.mozilla.fenix.trackingprotection.TrackingProtectionCategoryItem"
+        errorLine1="        &lt;net.waterfox.android.trackingprotection.TrackingProtectionCategoryItem"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_tracking_protection_blocking.xml"
@@ -836,7 +836,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="        &lt;org.mozilla.fenix.trackingprotection.TrackingProtectionCategoryItem"
+        errorLine1="        &lt;net.waterfox.android.trackingprotection.TrackingProtectionCategoryItem"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_tracking_protection_blocking.xml"
@@ -847,7 +847,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="        &lt;org.mozilla.fenix.trackingprotection.TrackingProtectionCategoryItem"
+        errorLine1="        &lt;net.waterfox.android.trackingprotection.TrackingProtectionCategoryItem"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_tracking_protection_blocking.xml"
@@ -858,7 +858,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="        &lt;org.mozilla.fenix.trackingprotection.TrackingProtectionCategoryItem"
+        errorLine1="        &lt;net.waterfox.android.trackingprotection.TrackingProtectionCategoryItem"
         errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/fragment_tracking_protection_blocking.xml"
@@ -869,7 +869,7 @@
     <issue
         id="MozMultipleConstraintLayoutsAndCustomViews"
         message="Custom views extending `ConstraintLayout` are less efficient because they cannot share other `ConstraintLayout` defined in file."
-        errorLine1="    &lt;org.mozilla.fenix.trackingprotection.SwitchWithDescription"
+        errorLine1="    &lt;net.waterfox.android.trackingprotection.SwitchWithDescription"
         errorLine2="     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/layout/quicksettings_tracking_protection.xml"
@@ -894,7 +894,7 @@
         errorLine1="        Log.i(&quot;Crash Reporter&quot;, &quot;Report submitted: $didSubmitReport&quot;)"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/crashes/CrashReporterController.kt"
+            file="src/main/java/net/waterfox/android/crashes/CrashReporterController.kt"
             line="81"
             column="9"/>
     </issue>
@@ -1297,21 +1297,21 @@
 
     <issue
         id="IconDensities"
-        message="Missing the following drawables in `drawable-mdpi`: amethyst.png, cerulean.png, fenix_search_widget.png, sunrise.jpg">
+        message="Missing the following drawables in `drawable-mdpi`: amethyst.png, cerulean.png, waterfox_search_widget.png, sunrise.jpg">
         <location
             file="src/main/res/drawable-mdpi"/>
     </issue>
 
     <issue
         id="IconDensities"
-        message="Missing the following drawables in `drawable-xhdpi`: amethyst.png, cerulean.png, fenix_search_widget.png, sunrise.jpg">
+        message="Missing the following drawables in `drawable-xhdpi`: amethyst.png, cerulean.png, waterfox_search_widget.png, sunrise.jpg">
         <location
             file="src/main/res/drawable-xhdpi"/>
     </issue>
 
     <issue
         id="IconDensities"
-        message="Missing the following drawables in `drawable-xxhdpi`: amethyst.png, cerulean.png, fenix_search_widget.png, sunrise.jpg">
+        message="Missing the following drawables in `drawable-xxhdpi`: amethyst.png, cerulean.png, waterfox_search_widget.png, sunrise.jpg">
         <location
             file="src/main/res/drawable-xxhdpi"/>
     </issue>
@@ -1344,7 +1344,7 @@
         errorLine1="        binding.awesomeBar.setOnTouchListener { _, _ ->"
         errorLine2="        ^">
         <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
             line="213"
             column="9"/>
     </issue>
@@ -1355,7 +1355,7 @@
         errorLine1="        binding.awesomeBar.setOnTouchListener { _, _ ->"
         errorLine2="                                              ^">
         <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
             line="213"
             column="47"/>
     </issue>
@@ -1366,7 +1366,7 @@
         errorLine1="            dialog?.window?.decorView?.setOnTouchListener { _, event ->"
         errorLine2="                                                          ^">
         <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
             line="227"
             column="59"/>
     </issue>
@@ -1377,7 +1377,7 @@
         errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
         errorLine2="                ^">
         <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
             line="253"
             column="17"/>
     </issue>
@@ -1388,7 +1388,7 @@
         errorLine1="                binding.searchWrapper.setOnTouchListener { _, _ ->"
         errorLine2="                                                         ^">
         <location
-            file="src/main/java/org/mozilla/fenix/search/SearchDialogFragment.kt"
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
             line="253"
             column="58"/>
     </issue>
@@ -1399,7 +1399,7 @@
         errorLine1="    override fun onTouchEvent(event: MotionEvent?): Boolean {"
         errorLine2="                 ~~~~~~~~~~~~">
         <location
-            file="src/main/java/org/mozilla/fenix/browser/SwipeGestureLayout.kt"
+            file="src/main/java/net/waterfox/android/browser/SwipeGestureLayout.kt"
             line="120"
             column="18"/>
     </issue>

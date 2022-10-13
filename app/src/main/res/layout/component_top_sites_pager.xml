@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <org.mozilla.fenix.home.topsites.PagerIndicator
+    <net.waterfox.android.home.topsites.PagerIndicator
         android:id="@+id/page_indicator"
         android:layout_width="wrap_content"
         android:layout_height="6dp"

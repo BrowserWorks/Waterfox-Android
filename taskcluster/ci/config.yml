@@ -30,7 +30,7 @@ taskgraph:
     register: fenix_taskgraph:register
     repositories:
         mobile:
-            name: "Fenix"
+            name: "Waterfox"
     cached-task-prefix: mobile.v2.fenix
     decision-parameters: 'fenix_taskgraph.parameters:get_decision_parameters'
 

@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="org.mozilla.fenix.settings.about.AboutLibrariesFragment">
+    tools:context="net.waterfox.android.settings.about.AboutLibrariesFragment">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

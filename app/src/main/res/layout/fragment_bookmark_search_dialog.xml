@@ -60,7 +60,7 @@
         app:barrierDirection="top"
         app:constraint_referenced_ids="awesome_bar,pill_wrapper"/>
 
-    <org.mozilla.fenix.library.bookmarks.awesomebar.AwesomeBarWrapper
+    <net.waterfox.android.library.bookmarks.awesomebar.AwesomeBarWrapper
         android:id="@+id/awesome_bar"
         android:layout_width="0dp"
         android:layout_height="0dp"

@@ -33,7 +33,7 @@
         android:textColor="?attr/textPrimary"
         android:textSize="12sp" />
 
-    <org.mozilla.fenix.utils.ClearableEditText
+    <net.waterfox.android.utils.ClearableEditText
         android:id="@+id/bookmarkNameEdit"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bookmark_edit_text_height"
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <org.mozilla.fenix.utils.ClearableEditText
+        <net.waterfox.android.utils.ClearableEditText
             android:id="@+id/bookmarkUrlEdit"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bookmark_edit_text_height"

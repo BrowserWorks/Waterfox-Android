@@ -98,7 +98,7 @@
     <!-- About Fragment -->
     <dimen name="about_list_item_height">56dp</dimen>
     <dimen name="about_list_item_text_padding">8dp</dimen>
-    <dimen name="about_header_fenix_logo_height">80dp</dimen>
+    <dimen name="about_header_waterfox_logo_height">80dp</dimen>
     <dimen name="about_header_icon_margin_top">36dp</dimen>
     <dimen name="about_header_icon_margin_start_end">84dp</dimen>
     <dimen name="about_header_title_margin_top">16dp</dimen>

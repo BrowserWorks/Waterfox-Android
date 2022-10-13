@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_text" />
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/toolbar_bottom_radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar_top_image"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <org.mozilla.fenix.onboarding.OnboardingRadioButton
+    <net.waterfox.android.onboarding.OnboardingRadioButton
         android:id="@+id/toolbar_top_radio_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

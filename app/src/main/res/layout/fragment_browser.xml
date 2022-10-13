@@ -2,7 +2,7 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<org.mozilla.fenix.browser.SwipeGestureLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<net.waterfox.android.browser.SwipeGestureLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gestureLayout"
@@ -60,7 +60,7 @@
                 android:elevation="24dp"
                 android:visibility="gone" />
 
-            <org.mozilla.fenix.crashes.CrashContentView
+            <net.waterfox.android.crashes.CrashContentView
                 android:id="@+id/crash_reporter_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,11 +93,11 @@
             app:layout_constraintTop_toBottomOf="@id/creditCardSelectBar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <org.mozilla.fenix.browser.TabPreview
+    <net.waterfox.android.browser.TabPreview
         android:id="@+id/tabPreview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="false"
         android:focusable="false"
         android:visibility="gone" />
-</org.mozilla.fenix.browser.SwipeGestureLayout>
+</net.waterfox.android.browser.SwipeGestureLayout>

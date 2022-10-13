@@ -49,7 +49,7 @@
         android:id="@+id/fxa_sign_in_button"
         style="@style/NeutralOnboardingButton"
         android:layout_marginTop="10dp"
-        android:text="@string/onboarding_firefox_account_sign_in_1"
+        android:text="@string/onboarding_waterfox_account_sign_in_1"
         app:layout_constraintTop_toBottomOf="@id/description_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="parent"  />

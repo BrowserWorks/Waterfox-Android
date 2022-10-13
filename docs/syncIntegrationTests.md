@@ -1,5 +1,5 @@
 ### Sync Integration Tests
-The aim of these tests is to check that the synchronization is working between Fenix and Desktop. The intention is to add tests for History, Bookmarks, Tabs and Logins. 
+The aim of these tests is to check that the synchronization is working between Waterfox and Desktop. The intention is to add tests for History, Bookmarks, Tabs and Logins. 
 At this moment only tests for History and Bookmarks are defined.
 
 ### Steps to Run
@@ -8,11 +8,11 @@ To run these tests you will need Python 2 and pipenv installed. Once you have th
 `$ pipenv install`
 `$ pipenv run pytest`
 
-When a test is launched a stage account is created. That will be used both in Desktop and Fenix to be sure that what is saved in one place is shown in the other.
+When a test is launched a stage account is created. That will be used both in Desktop and Waterfox to be sure that what is saved in one place is shown in the other.
 
-The process for example for History item Desktop -> Fenix, would be:
+The process for example for History item Desktop -> Waterfox, would be:
 - Desktop is launched, user signed in and history item created.
-- Android sim is launched (Pixel 3 API28), Fenix app starts and same user is signed in, then we go to History list and verify that the item is there.
+- Android sim is launched (Pixel 3 API28), Waterfox app starts and same user is signed in, then we go to History list and verify that the item is there.
 
 
 ### Results

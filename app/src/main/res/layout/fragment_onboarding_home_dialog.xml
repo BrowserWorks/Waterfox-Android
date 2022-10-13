@@ -20,7 +20,7 @@
         android:layout_marginTop="16dp" >
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/firefox_logo"
+            android:id="@+id/waterfox_logo"
             android:layout_width="59dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
@@ -28,7 +28,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_firefox" />
+            app:srcCompat="@drawable/ic_waterfox" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/welcome_title"
@@ -41,7 +41,7 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firefox_logo" />
+            app:layout_constraintTop_toBottomOf="@id/waterfox_logo" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/description"

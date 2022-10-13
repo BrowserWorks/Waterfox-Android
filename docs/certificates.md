@@ -1,12 +1,9 @@
 # Certificates
 
-The certificates for the official Fenix builds (`production`)
+The certificates for the official Waterfox builds (`production`)
 can be accessed from the `certificates` folder in the root of this repository
 
 # Fingerprints
-
-Note: we currently only have the Fenix nightly deployed, and it's using the
-production key at the moment.
 
 Channel | Fingerprint type | Fingerprint
 ---|---|---

@@ -59,9 +59,9 @@
     <string name="profiler_stop">Stop Profiler</string>
 
     <string name="profiler_settings_title">Profiler Settings</string>
-    <string name="profiler_filter_firefox">Waterfox</string>
+    <string name="profiler_filter_waterfox">Waterfox</string>
     <string name="profiler_running">Profiler is currently running</string>
-    <string name="profiler_filter_firefox_explain">Recommended preset for profiling Waterfox</string>
+    <string name="profiler_filter_waterfox_explain">Recommended preset for profiling Waterfox</string>
     <string name="profiler_filter_graphics">Graphics</string>
     <string name="profiler_filter_graphics_explain">Preset for investigating graphics bugs in Waterfox</string>
     <string name="profiler_filter_media">Media</string>
