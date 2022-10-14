@@ -69,11 +69,6 @@
 
 -keep class net.waterfox.android.**ViewModel { *; }
 
-####################################################################################################
-# Adjust
-####################################################################################################
-
--keep public class com.adjust.sdk.** { *; }
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }
@@ -108,9 +103,6 @@
 # https://github.com/mozilla-mobile/fenix/issues/2094
 -keep class androidx.constraintlayout.** { *; }
 
-# TODO: [Waterfox] remove Adjust
-# Keep adjust relevant classes
--keep class com.adjust.sdk.** { *; }
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }

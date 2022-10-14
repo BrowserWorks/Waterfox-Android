@@ -29,14 +29,11 @@ class SettingsSubMenuDataCollectionRobot {
 
     fun verifyUsageAndTechnicalDataSwitchDefault() = assertUsageAndTechnicalDataSwitchDefault()
 
-    fun verifyMarketingDataSwitchDefault() = assertMarketingDataValueSwitchDefault()
-
     fun verifyExperimentsSwitchDefault() = assertExperimentsSwitchDefault()
 
     fun verifyDataCollectionSubMenuItems() {
         verifyDataCollectionOptions()
         verifyUsageAndTechnicalDataSwitchDefault()
-        verifyMarketingDataSwitchDefault()
         // Temporarily disabled until https://github.com/mozilla-mobile/fenix/issues/17086 and
         // https://github.com/mozilla-mobile/fenix/issues/17143 are resolved:
         // verifyExperimentsSwitchDefault()
@@ -74,15 +71,6 @@ private fun assertDataCollectionOptions() {
     onView(withText(usageAndTechnicalDataText))
         .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
-    onView(withText(R.string.preferences_marketing_data))
-        .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-
-    val marketingDataText =
-        "Shares basic usage data with Adjust, our mobile marketing vendor"
-
-    onView(withText(marketingDataText))
-        .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-
     // Temporarily disabled until https://github.com/mozilla-mobile/fenix/issues/17086 and
     // https://github.com/mozilla-mobile/fenix/issues/17143 are resolved:
     // onView(withText(R.string.preference_experiments_2)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
@@ -92,11 +80,6 @@ private fun assertDataCollectionOptions() {
 private fun usageAndTechnicalDataButton() = onView(withText(R.string.preference_usage_data))
 
 private fun assertUsageAndTechnicalDataSwitchDefault() = usageAndTechnicalDataButton()
-    .assertIsEnabled(isEnabled = true)
-
-private fun marketingDataButton() = onView(withText(R.string.preferences_marketing_data))
-
-private fun assertMarketingDataValueSwitchDefault() = marketingDataButton()
     .assertIsEnabled(isEnabled = true)
 
 private fun experimentsButton() = onView(withText(R.string.preference_experiments_2))

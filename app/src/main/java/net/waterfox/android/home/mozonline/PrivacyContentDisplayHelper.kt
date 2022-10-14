@@ -12,8 +12,6 @@ import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricServiceType
-import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import kotlin.system.exitProcess
 
@@ -49,8 +47,6 @@ fun showPrivacyPopWindow(context: Context, activity: Activity) {
             context.getString(R.string.privacy_notice_positive_button)
         ) { _, _ ->
             context.settings().shouldShowPrivacyPopWindow = false
-            context.settings().isMarketingTelemetryEnabled = false
-            context.components.analytics.metrics.start(MetricServiceType.Marketing)
         }
         .setNeutralButton(
             context.getString(R.string.privacy_notice_neutral_button_2),

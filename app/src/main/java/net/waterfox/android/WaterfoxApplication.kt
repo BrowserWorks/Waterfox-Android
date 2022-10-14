@@ -332,10 +332,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         if (settings().isTelemetryEnabled) {
             components.analytics.metrics.start(MetricServiceType.Data)
         }
-
-        if (settings().isMarketingTelemetryEnabled) {
-            components.analytics.metrics.start(MetricServiceType.Marketing)
-        }
     }
 
     // See https://github.com/mozilla-mobile/fenix/issues/7227 for context.
@@ -612,11 +608,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             }
 
             mozillaProducts.set(mozillaProductDetector.getInstalledMozillaProducts(applicationContext))
-
-            adjustCampaign.set(settings.adjustCampaignId)
-            adjustAdGroup.set(settings.adjustAdGroup)
-            adjustCreative.set(settings.adjustCreative)
-            adjustNetwork.set(settings.adjustNetwork)
 
             searchWidgetInstalled.set(settings.searchWidgetInstalled)
 

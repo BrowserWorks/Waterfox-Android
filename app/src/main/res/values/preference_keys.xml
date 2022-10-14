@@ -71,7 +71,6 @@
 
     <!-- Data Choices -->
     <string name="pref_key_telemetry" translatable="false">pref_key_telemetry</string>
-    <string name="pref_key_marketing_telemetry" translatable="false">pref_key_marketing_telemetry</string>
     <string name="pref_key_crash_reporter" translatable="false">pref_key_crash_reporter</string>
 
     <!-- Account Settings -->
@@ -191,11 +190,6 @@
     <string name="pref_key_open_links_in_external_app" translatable="false">pref_key_open_links_in_external_app</string>
     <string name="pref_key_external_download_manager" translatable="false">pref_key_external_download_manager</string>
     <string name="pref_key_allow_screenshots_in_private_mode" translatable="false">pref_key_allow_screenshots_in_private_mode</string>
-
-    <string name="pref_key_adjust_campaign" translatable="false">pref_key_adjust_campaign</string>
-    <string name="pref_key_adjust_network" translatable="false">pref_key_adjust_network</string>
-    <string name="pref_key_adjust_adgroup" translatable="false">pref_key_adjust_adgroup</string>
-    <string name="pref_key_adjust_creative" translatable="false">pref_key_adjust_creative</string>
 
     <string name="pref_key_contile_context_id" translatable="false">pref_key_contile_context_id</string>
 

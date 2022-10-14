@@ -7,10 +7,6 @@
         android:key="@string/pref_key_telemetry"
         android:summary="@string/preferences_usage_data_description"
         android:title="@string/preference_usage_data" />
-    <SwitchPreference
-        android:key="@string/pref_key_marketing_telemetry"
-        android:summary="@string/preferences_marketing_data_description2"
-        android:title="@string/preferences_marketing_data" />
 
     <androidx.preference.Preference
         android:key="@string/pref_key_studies_section"

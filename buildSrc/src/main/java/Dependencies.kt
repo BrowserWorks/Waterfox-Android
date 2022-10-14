@@ -43,9 +43,6 @@ object Versions {
 
     const val mozilla_android_components = AndroidComponents.VERSION
 
-    const val adjust = "4.30.0"
-    const val installreferrer = "2.2"
-
     const val junit = "5.5.2"
     const val mockk = "1.12.4"
 
@@ -215,9 +212,6 @@ object Deps {
 
     const val protobuf_javalite = "com.google.protobuf:protobuf-javalite:${Versions.protobuf}"
     const val protobuf_compiler = "com.google.protobuf:protoc:${Versions.protobuf}"
-
-    const val adjust = "com.adjust.sdk:adjust-android:${Versions.adjust}"
-    const val installreferrer = "com.android.installreferrer:installreferrer:${Versions.installreferrer}"
 
     const val jna = "net.java.dev.jna:jna:${Versions.jna}@jar"
 

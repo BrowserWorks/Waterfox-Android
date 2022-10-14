@@ -101,10 +101,6 @@ class WaterfoxApplicationTest {
         every { browsersCache.all(any()).isDefaultBrowser } returns true
         every { mozillaProductDetector.getMozillaBrowserDefault(any()) } returns expectedAppName
         every { mozillaProductDetector.getInstalledMozillaProducts(any()) } returns listOf(expectedAppName)
-        every { settings.adjustCampaignId } returns "ID"
-        every { settings.adjustAdGroup } returns "group"
-        every { settings.adjustCreative } returns "creative"
-        every { settings.adjustNetwork } returns "network"
         every { settings.searchWidgetInstalled } returns true
         every { settings.openTabsCount } returns 1
         every { settings.topSitesSize } returns 2
@@ -156,10 +152,6 @@ class WaterfoxApplicationTest {
         assertEquals(true, Metrics.defaultBrowser.testGetValue())
         assertEquals(expectedAppName, Metrics.defaultMozBrowser.testGetValue())
         assertEquals(listOf(expectedAppName), Metrics.mozillaProducts.testGetValue())
-        assertEquals("ID", Metrics.adjustCampaign.testGetValue())
-        assertEquals("group", Metrics.adjustAdGroup.testGetValue())
-        assertEquals("creative", Metrics.adjustCreative.testGetValue())
-        assertEquals("network", Metrics.adjustNetwork.testGetValue())
         assertEquals(true, Metrics.searchWidgetInstalled.testGetValue())
         assertEquals(true, Metrics.hasOpenTabs.testGetValue())
         assertEquals(1, Metrics.tabsOpenCount.testGetValue())

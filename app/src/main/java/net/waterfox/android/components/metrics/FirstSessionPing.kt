@@ -55,40 +55,21 @@ class FirstSessionPing(private val context: Context) {
      */
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     internal fun triggerPing() {
-        if (checkMetricsNotEmpty()) {
-            context.settings().also {
-                FirstSession.campaign.set(it.adjustCampaignId)
-                FirstSession.adgroup.set(it.adjustAdGroup)
-                FirstSession.creative.set(it.adjustCreative)
-                FirstSession.network.set(it.adjustNetwork)
-                FirstSession.distributionId.set(
-                    when (Config.channel.isMozillaOnline) {
-                        true -> "MozillaOnline"
-                        false -> "Mozilla"
-                    }
-                )
-                FirstSession.timestamp.set()
-            }
+        context.settings().also {
+            FirstSession.distributionId.set(
+                when (Config.channel.isMozillaOnline) {
+                    true -> "MozillaOnline"
+                    false -> "Mozilla"
+                }
+            )
+            FirstSession.timestamp.set()
+        }
 
-            CoroutineScope(Dispatchers.IO).launch {
-                Pings.firstSession.submit()
-                markAsTriggered()
-            }
+        CoroutineScope(Dispatchers.IO).launch {
+            Pings.firstSession.submit()
+            markAsTriggered()
         }
     }
-
-    /**
-     * Check that at least one of the metrics values is set before sending the ping.
-     * Note: it is normal for many of these values to not be set as campaigns do not always
-     * utilize every attribute!
-     * */
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    internal fun checkMetricsNotEmpty(): Boolean = listOf(
-        context.settings().adjustCampaignId,
-        context.settings().adjustAdGroup,
-        context.settings().adjustCreative,
-        context.settings().adjustNetwork
-    ).any { it.isNotEmpty() }
 
     /**
      * Trigger sending the `installation` ping if it wasn't sent already.

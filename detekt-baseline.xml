@@ -50,7 +50,6 @@
     <ID>UndocumentedPublicClass:AddSearchEngineFragment.kt$AddSearchEngineFragment : FragmentOnCheckedChangeListener</ID>
     <ID>UndocumentedPublicClass:AddonDetailsBindingDelegate.kt$AddonDetailsInteractor</ID>
     <ID>UndocumentedPublicClass:AddonPermissionDetailsBindingDelegate.kt$AddonPermissionsDetailsInteractor</ID>
-    <ID>UndocumentedPublicClass:AdjustMetricsService.kt$AdjustMetricsService : MetricsService</ID>
     <ID>UndocumentedPublicClass:AppAction.kt$AppAction$AddNonFatalCrash : AppAction</ID>
     <ID>UndocumentedPublicClass:AppAction.kt$AppAction$Change : AppAction</ID>
     <ID>UndocumentedPublicClass:AppAction.kt$AppAction$CollectionExpanded : AppAction</ID>
@@ -782,7 +781,7 @@
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun start(type: MetricServiceType)</ID>
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun stop(type: MetricServiceType)</ID>
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun track(event: Event)</ID>
-    <ID>UndocumentedPublicFunction:MetricController.kt$MetricController.Companion$fun create( services: List&lt;MetricsService&gt;, isDataTelemetryEnabled: () -&gt; Boolean, isMarketingDataTelemetryEnabled: () -&gt; Boolean, settings: Settings ): MetricController</ID>
+    <ID>UndocumentedPublicFunction:MetricController.kt$MetricController.Companion$fun create( services: List&lt;MetricsService&gt;, isDataTelemetryEnabled: () -&gt; Boolean, settings: Settings ): MetricController</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun shouldTrack(event: Event): Boolean</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun start()</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun stop()</ID>
