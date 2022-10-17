@@ -21,7 +21,6 @@ import net.waterfox.android.GleanMetrics.Messaging
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.ReleaseChannel
-import net.waterfox.android.components.metrics.AdjustMetricsService
 import net.waterfox.android.components.metrics.GleanMetricsService
 import net.waterfox.android.components.metrics.MetricController
 import net.waterfox.android.experiments.createNimbus
@@ -115,10 +114,8 @@ class Analytics(
         MetricController.create(
             listOf(
                 GleanMetricsService(context),
-                AdjustMetricsService(context as Application)
             ),
             isDataTelemetryEnabled = { context.settings().isTelemetryEnabled },
-            isMarketingDataTelemetryEnabled = { context.settings().isMarketingTelemetryEnabled },
             context.settings()
         )
     }

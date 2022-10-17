@@ -37,12 +37,6 @@ class DataChoicesFragment : PreferenceFragmentCompat() {
                 // that in future we will need to pass in the new telemetry client_id
                 // to this method when the user opts back in.
                 context.components.analytics.experiments.resetTelemetryIdentifiers()
-            } else if (key == getPreferenceKey(R.string.pref_key_marketing_telemetry)) {
-                if (context.settings().isMarketingTelemetryEnabled) {
-                    context.components.analytics.metrics.start(MetricServiceType.Marketing)
-                } else {
-                    context.components.analytics.metrics.stop(MetricServiceType.Marketing)
-                }
             }
         }
     }
@@ -62,11 +56,6 @@ class DataChoicesFragment : PreferenceFragmentCompat() {
             val appName = context.getString(R.string.app_name)
             summary = context.getString(R.string.preferences_usage_data_description, appName)
 
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_marketing_telemetry).apply {
-            isChecked = context.settings().isMarketingTelemetryEnabled
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }
     }

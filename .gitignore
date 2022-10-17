@@ -79,7 +79,6 @@ gen-external-apklibs
 .DS_Store
 
 # Secrets files, e.g. tokens
-.adjust_token
 .sentry_token
 .mls_token
 .nimbus

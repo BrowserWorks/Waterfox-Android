@@ -62,14 +62,12 @@ interface MetricController {
         fun create(
             services: List<MetricsService>,
             isDataTelemetryEnabled: () -> Boolean,
-            isMarketingDataTelemetryEnabled: () -> Boolean,
             settings: Settings
         ): MetricController {
             return if (BuildConfig.TELEMETRY) {
                 ReleaseMetricController(
                     services,
                     isDataTelemetryEnabled,
-                    isMarketingDataTelemetryEnabled,
                     settings
                 )
             } else DebugMetricController()
@@ -100,7 +98,6 @@ internal class DebugMetricController(
 internal class ReleaseMetricController(
     private val services: List<MetricsService>,
     private val isDataTelemetryEnabled: () -> Boolean,
-    private val isMarketingDataTelemetryEnabled: () -> Boolean,
     private val settings: Settings
 ) : MetricController {
     private var initialized = mutableSetOf<MetricServiceType>()
@@ -373,9 +370,9 @@ internal class ReleaseMetricController(
 
     private fun isInitialized(type: MetricServiceType): Boolean = initialized.contains(type)
 
+    // TODO: [Waterfox] remove this method
     private fun isTelemetryEnabled(type: MetricServiceType): Boolean = when (type) {
         MetricServiceType.Data -> isDataTelemetryEnabled()
-        MetricServiceType.Marketing -> isMarketingDataTelemetryEnabled()
     }
 
     companion object {

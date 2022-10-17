@@ -25,7 +25,6 @@ internal class FirstSessionPingTest {
         mockkStatic("net.waterfox.android.ext.ContextKt")
         every { mockedContext.settings() } returns mockedSettings
         val mockAp = spyk(FirstSessionPing(mockedContext), recordPrivateCalls = true)
-        every { mockAp.checkMetricsNotEmpty() } returns true
         every { mockAp.wasAlreadyTriggered() } returns false
         every { mockAp.markAsTriggered() } just Runs
 

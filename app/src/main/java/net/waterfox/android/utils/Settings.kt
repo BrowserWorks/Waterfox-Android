@@ -160,26 +160,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
-    var adjustCampaignId by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_campaign),
-        default = ""
-    )
-
-    var adjustNetwork by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_network),
-        default = ""
-    )
-
-    var adjustAdGroup by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_adgroup),
-        default = ""
-    )
-
-    var adjustCreative by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_adjust_creative),
-        default = ""
-    )
-
     var contileContextId by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_contile_context_id),
         default = ""
@@ -240,7 +220,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
     // WATERFOX
     val isTelemetryEnabled = false
-    var isMarketingTelemetryEnabled = false
     var isExperimentationEnabled = false
 
     var isOverrideTPPopupsForPerformanceTest = false
