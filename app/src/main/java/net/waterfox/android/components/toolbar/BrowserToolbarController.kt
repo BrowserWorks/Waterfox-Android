@@ -13,11 +13,8 @@ import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.engine.EngineView
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.ktx.kotlin.isUrl
 import mozilla.components.ui.tabcounter.TabCounterMenu
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.ReaderMode
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator
@@ -92,7 +89,6 @@ class DefaultBrowserToolbarController(
     }
 
     override fun handleToolbarClick() {
-        Events.searchBarTapped.record(Events.SearchBarTappedExtra("BROWSER"))
         // If we're displaying awesomebar search results, Home screen will not be visible (it's
         // covered up with the search results). So, skip the navigation event in that case.
         // If we don't, there's a visual flickr as we navigate to Home and then display search
@@ -126,10 +122,8 @@ class DefaultBrowserToolbarController(
     override fun handleReaderModePressed(enabled: Boolean) {
         if (enabled) {
             readerModeController.showReaderView()
-            ReaderMode.opened.record(NoExtras())
         } else {
             readerModeController.hideReaderView()
-            ReaderMode.closed.record(NoExtras())
         }
     }
 
@@ -171,16 +165,11 @@ class DefaultBrowserToolbarController(
     }
 
     override fun handleHomeButtonClick() {
-        Events.browserToolbarHomeTapped.record(NoExtras())
         browserAnimator.captureEngineViewAndDrawStatically {
             navController.navigate(
                 BrowserFragmentDirections.actionGlobalHome()
             )
         }
-    }
-
-    companion object {
-        internal const val TELEMETRY_BROWSER_IDENTIFIER = "browserMenu"
     }
 }
 

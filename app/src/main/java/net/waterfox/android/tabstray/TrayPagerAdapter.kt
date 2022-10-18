@@ -25,15 +25,15 @@ import net.waterfox.android.tabstray.viewholders.SyncedTabsPageViewHolder
 
 @Suppress("LongParameterList")
 class TrayPagerAdapter(
-    @VisibleForTesting internal val context: Context,
-    @VisibleForTesting internal val lifecycleOwner: LifecycleOwner,
-    @VisibleForTesting internal val tabsTrayStore: TabsTrayStore,
-    @VisibleForTesting internal val browserInteractor: BrowserTrayInteractor,
-    @VisibleForTesting internal val navInteractor: NavigationInteractor,
-    @VisibleForTesting internal val tabsTrayInteractor: TabsTrayInteractor,
-    @VisibleForTesting internal val browserStore: BrowserStore,
-    @VisibleForTesting internal val appStore: AppStore,
-    @VisibleForTesting internal val inactiveTabsInteractor: InactiveTabsInteractor,
+    @get:VisibleForTesting internal val context: Context,
+    @get:VisibleForTesting internal val lifecycleOwner: LifecycleOwner,
+    @get:VisibleForTesting internal val tabsTrayStore: TabsTrayStore,
+    @get:VisibleForTesting internal val browserInteractor: BrowserTrayInteractor,
+    @get:VisibleForTesting internal val navInteractor: NavigationInteractor,
+    @get:VisibleForTesting internal val tabsTrayInteractor: TabsTrayInteractor,
+    @get:VisibleForTesting internal val browserStore: BrowserStore,
+    @get:VisibleForTesting internal val appStore: AppStore,
+    @get:VisibleForTesting internal val inactiveTabsInteractor: InactiveTabsInteractor,
 ) : RecyclerView.Adapter<AbstractPageViewHolder>() {
 
     /**
@@ -46,10 +46,9 @@ class TrayPagerAdapter(
             InactiveTabsAdapter(
                 lifecycleOwner = lifecycleOwner,
                 tabsTrayStore = tabsTrayStore,
-                inactiveTabsInteractor = inactiveTabsInteractor,
-                featureName = INACTIVE_TABS_FEATURE_NAME,
+                inactiveTabsInteractor = inactiveTabsInteractor
             ),
-            BrowserTabsAdapter(context, browserInteractor, tabsTrayStore, TABS_TRAY_FEATURE_NAME, lifecycleOwner)
+            BrowserTabsAdapter(context, browserInteractor, tabsTrayStore, lifecycleOwner)
         )
     }
 
@@ -58,7 +57,6 @@ class TrayPagerAdapter(
             context,
             browserInteractor,
             tabsTrayStore,
-            TABS_TRAY_FEATURE_NAME,
             lifecycleOwner
         )
     }
@@ -132,10 +130,6 @@ class TrayPagerAdapter(
 
     companion object {
         const val TRAY_TABS_COUNT = 3
-
-        // Telemetry keys for identifying from which app features the a was opened / closed.
-        const val TABS_TRAY_FEATURE_NAME = "Tabs tray"
-        const val INACTIVE_TABS_FEATURE_NAME = "Inactive tabs"
 
         val POSITION_NORMAL_TABS = Page.NormalTabs.ordinal
         val POSITION_PRIVATE_TABS = Page.PrivateTabs.ordinal

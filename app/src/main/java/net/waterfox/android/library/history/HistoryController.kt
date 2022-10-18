@@ -15,8 +15,6 @@ import mozilla.components.browser.state.action.HistoryMetadataAction
 import mozilla.components.browser.state.action.RecentlyClosedAction
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.browser.storage.sync.PlacesHistoryStorage
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Events
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
@@ -24,7 +22,6 @@ import net.waterfox.android.components.history.DefaultPagedHistoryProvider
 import net.waterfox.android.ext.components
 import net.waterfox.android.library.history.HistoryFragment.DeleteConfirmationDialogFragment
 import net.waterfox.android.utils.Settings
-import net.waterfox.android.GleanMetrics.History as GleanHistory
 
 @Suppress("TooManyFunctions")
 interface HistoryController {
@@ -82,7 +79,6 @@ class DefaultHistoryController(
         when (item) {
             is History.Regular -> openToBrowser(item)
             is History.Group -> {
-                GleanHistory.searchTermGroupTapped.record(NoExtras())
                 navController.navigate(
                     HistoryFragmentDirections.actionGlobalHistoryMetadataGroup(
                         title = item.title,
@@ -152,11 +148,6 @@ class DefaultHistoryController(
                     endTime = longRange.last,
                 )
             }
-            when (timeFrame) {
-                RemoveTimeFrame.LastHour -> GleanHistory.removedLastHour.record(NoExtras())
-                RemoveTimeFrame.TodayAndYesterday -> GleanHistory.removedTodayAndYesterday.record(NoExtras())
-                null -> GleanHistory.removedAll.record(NoExtras())
-            }
             // We introduced more deleting options, but are keeping these actions for all options.
             // The approach could be improved: https://github.com/mozilla-mobile/fenix/issues/26102
             browserStore.dispatch(RecentlyClosedAction.RemoveAllClosedTabAction)
@@ -180,8 +171,6 @@ class DefaultHistoryController(
             CoroutineScope(Dispatchers.IO).launch {
                 store.dispatch(HistoryFragmentAction.EnterDeletionMode)
                 for (item in items) {
-                    GleanHistory.removed.record(NoExtras())
-
                     when (item) {
                         is History.Regular -> context.components.core.historyStorage.deleteVisitsFor(item.url)
                         is History.Group -> {
@@ -213,7 +202,6 @@ class DefaultHistoryController(
             HistoryFragmentDirections.actionGlobalRecentlyClosed(),
             NavOptions.Builder().setPopUpTo(R.id.recentlyClosedFragment, true).build()
         )
-        Events.recentlyClosedTabsOpened.record(NoExtras())
     }
 
     override fun handleEnterSyncedHistory() {

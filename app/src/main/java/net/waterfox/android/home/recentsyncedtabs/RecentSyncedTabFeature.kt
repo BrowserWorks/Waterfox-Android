@@ -20,8 +20,6 @@ import mozilla.components.support.base.feature.LifecycleAwareFeature
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
-import mozilla.telemetry.glean.GleanTimerId
-import net.waterfox.android.GleanMetrics.RecentSyncedTabs
 
 /**
  * Delegate to handle layout updates and dispatch actions related to the recent synced tab.
@@ -40,7 +38,6 @@ class RecentSyncedTabFeature(
     private val coroutineScope: CoroutineScope,
 ) : LifecycleAwareFeature {
 
-    private var syncStartId: GleanTimerId? = null
     private var lastSyncedTab: RecentSyncedTab? = null
 
     override fun start() {
@@ -82,8 +79,6 @@ class RecentSyncedTabFeature(
     }
 
     private fun dispatchLoading() {
-        syncStartId?.let { RecentSyncedTabs.recentSyncedTabTimeToLoad.cancel(it) }
-        syncStartId = RecentSyncedTabs.recentSyncedTabTimeToLoad.start()
         if (appStore.state.recentSyncedTabState == RecentSyncedTabState.None) {
             appStore.dispatch(AppAction.RecentSyncedTabStateChange(RecentSyncedTabState.Loading))
         }
@@ -103,7 +98,6 @@ class RecentSyncedTabFeature(
                     iconUrl = tab.iconUrl
                 )
             } ?: return
-        recordMetrics(syncedTab, lastSyncedTab, syncStartId)
         appStore.dispatch(
             AppAction.RecentSyncedTabStateChange(RecentSyncedTabState.Success(syncedTab))
         )
@@ -113,18 +107,6 @@ class RecentSyncedTabFeature(
     private fun onError() {
         if (appStore.state.recentSyncedTabState == RecentSyncedTabState.Loading) {
             appStore.dispatch(AppAction.RecentSyncedTabStateChange(RecentSyncedTabState.None))
-        }
-    }
-
-    private fun recordMetrics(
-        tab: RecentSyncedTab,
-        lastSyncedTab: RecentSyncedTab?,
-        syncStartId: GleanTimerId?
-    ) {
-        RecentSyncedTabs.recentSyncedTabShown[tab.deviceType.name.lowercase()].add()
-        syncStartId?.let { RecentSyncedTabs.recentSyncedTabTimeToLoad.stopAndAccumulate(it) }
-        if (tab == lastSyncedTab) {
-            RecentSyncedTabs.latestSyncedTabIsStale.add()
         }
     }
 }

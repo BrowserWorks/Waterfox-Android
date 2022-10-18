@@ -8,7 +8,6 @@ import android.annotation.SuppressLint
 import android.view.MotionEvent
 import android.view.View
 import android.widget.PopupWindow
-import androidx.annotation.VisibleForTesting
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
@@ -18,14 +17,11 @@ import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import mozilla.components.feature.top.sites.TopSite
-import net.waterfox.android.GleanMetrics.Pings
-import net.waterfox.android.GleanMetrics.TopSites
 import net.waterfox.android.R
 import net.waterfox.android.databinding.TopSiteItemBinding
 import net.waterfox.android.ext.bitmapForUrl
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.loadIntoView
-import net.waterfox.android.ext.name
 import net.waterfox.android.home.sessioncontrol.TopSiteInteractor
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.view.ViewHolder
@@ -41,7 +37,6 @@ class TopSiteItemViewHolder(
     init {
         binding.topSiteItem.setOnLongClickListener {
             interactor.onTopSiteMenuOpened()
-            TopSites.longPress.record(TopSites.LongPressExtra(topSite.name()))
 
             val topSiteMenu = TopSiteItemMenu(
                 context = view.context,
@@ -92,7 +87,6 @@ class TopSiteItemViewHolder(
                 itemView.context.components.core.client.bitmapForUrl(topSite.imageUrl)?.let { bitmap ->
                     withContext(Main) {
                         binding.faviconImage.setImageBitmap(bitmap)
-                        submitTopSitesImpressionPing(topSite, position)
                     }
                 }
             }
@@ -123,21 +117,6 @@ class TopSiteItemViewHolder(
         }
 
         this.topSite = topSite
-    }
-
-    @VisibleForTesting
-    internal fun submitTopSitesImpressionPing(topSite: TopSite.Provided, position: Int) {
-        TopSites.contileImpression.record(
-            TopSites.ContileImpressionExtra(
-                position = position + 1,
-                source = "newtab"
-            )
-        )
-
-        topSite.id?.let { TopSites.contileTileId.set(it) }
-        topSite.title?.let { TopSites.contileAdvertiser.set(it.lowercase()) }
-        TopSites.contileReportingUrl.set(topSite.impressionUrl)
-        Pings.topsitesImpression.submit()
     }
 
     private fun onTouchEvent(

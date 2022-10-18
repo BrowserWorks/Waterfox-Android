@@ -40,19 +40,14 @@ import kotlinx.coroutines.withContext
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.appservices.places.uniffi.PlacesException
 import mozilla.components.browser.state.action.ContentAction
-import mozilla.components.browser.state.selector.findCustomTab
-import mozilla.components.browser.state.selector.findCustomTabOrSelectedTab
-import mozilla.components.browser.state.selector.findTab
-import mozilla.components.browser.state.selector.findTabOrCustomTab
-import mozilla.components.browser.state.selector.findTabOrCustomTabOrSelectedTab
-import mozilla.components.browser.state.selector.getNormalOrPrivateTabs
-import mozilla.components.browser.state.selector.selectedTab
+import mozilla.components.browser.state.selector.*
 import mozilla.components.browser.state.state.CustomTabSessionState
 import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.state.content.DownloadState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.browser.thumbnails.BrowserThumbnails
+import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.feature.accounts.FxaCapability
 import mozilla.components.feature.accounts.FxaWebChannelFeature
@@ -67,82 +62,56 @@ import mozilla.components.feature.media.fullscreen.MediaSessionFullscreenFeature
 import mozilla.components.feature.privatemode.feature.SecureWindowFeature
 import mozilla.components.feature.prompts.PromptFeature
 import mozilla.components.feature.prompts.PromptFeature.Companion.PIN_REQUEST
-import mozilla.components.feature.prompts.share.ShareDelegate
-import mozilla.components.feature.readerview.ReaderViewFeature
-import mozilla.components.feature.search.SearchFeature
-import mozilla.components.feature.session.FullScreenFeature
-import mozilla.components.feature.session.PictureInPictureFeature
-import mozilla.components.feature.session.SessionFeature
-import mozilla.components.feature.session.SwipeRefreshFeature
-import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.feature.prompts.address.AddressDelegate
 import mozilla.components.feature.prompts.creditcard.CreditCardDelegate
 import mozilla.components.feature.prompts.login.LoginDelegate
-import mozilla.components.feature.session.ScreenOrientationFeature
+import mozilla.components.feature.prompts.share.ShareDelegate
+import mozilla.components.feature.readerview.ReaderViewFeature
+import mozilla.components.feature.search.SearchFeature
+import mozilla.components.feature.session.*
+import mozilla.components.feature.session.behavior.EngineViewBrowserToolbarBehavior
 import mozilla.components.feature.sitepermissions.SitePermissionsFeature
+import mozilla.components.feature.webauthn.WebAuthnFeature
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.flowScoped
+import mozilla.components.service.sync.autofill.DefaultCreditCardValidationDelegate
 import mozilla.components.service.sync.logins.DefaultLoginValidationDelegate
+import mozilla.components.support.base.feature.ActivityResultHandler
 import mozilla.components.support.base.feature.PermissionsFeature
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
+import mozilla.components.support.ktx.android.view.enterToImmersiveMode
 import mozilla.components.support.ktx.android.view.exitImmersiveModeIfNeeded
 import mozilla.components.support.ktx.android.view.hideKeyboard
+import mozilla.components.support.ktx.kotlin.getOrigin
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import net.waterfox.android.*
 import net.waterfox.android.BuildConfig
-import net.waterfox.android.FeatureFlags
-import net.waterfox.android.HomeActivity
-import net.waterfox.android.IntentReceiverActivity
-import net.waterfox.android.NavGraphDirections
-import net.waterfox.android.OnBackLongPressedListener
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.readermode.DefaultReaderModeController
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.FindInPageIntegration
 import net.waterfox.android.components.StoreProvider
-import net.waterfox.android.components.toolbar.BrowserFragmentState
-import net.waterfox.android.components.toolbar.BrowserFragmentStore
-import net.waterfox.android.components.toolbar.BrowserToolbarView
-import net.waterfox.android.components.toolbar.DefaultBrowserToolbarController
-import net.waterfox.android.components.toolbar.DefaultBrowserToolbarMenuController
-import net.waterfox.android.components.toolbar.ToolbarIntegration
-import net.waterfox.android.downloads.DownloadService
-import net.waterfox.android.downloads.DynamicDownloadDialog
-import net.waterfox.android.ext.accessibilityManager
-import net.waterfox.android.ext.breadcrumb
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getPreferenceKey
-import net.waterfox.android.ext.hideToolbar
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.settings
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.home.HomeScreenViewModel
-import net.waterfox.android.home.SharedViewModel
-import net.waterfox.android.onboarding.WaterfoxOnboarding
-import net.waterfox.android.settings.SupportUtils
-import net.waterfox.android.theme.ThemeManager
-import net.waterfox.android.utils.allowUndo
-import net.waterfox.android.wifi.SitePermissionsWifiIntegration
-import java.lang.ref.WeakReference
-import mozilla.components.feature.session.behavior.EngineViewBrowserToolbarBehavior
-import mozilla.components.feature.webauthn.WebAuthnFeature
-import mozilla.components.service.glean.private.NoExtras
-import mozilla.components.service.sync.autofill.DefaultCreditCardValidationDelegate
-import mozilla.components.support.base.feature.ActivityResultHandler
-import mozilla.components.support.ktx.android.view.enterToImmersiveMode
-import mozilla.components.support.ktx.kotlin.getOrigin
-import net.waterfox.android.GleanMetrics.Downloads
-import net.waterfox.android.GleanMetrics.MediaState
+import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.components.toolbar.*
 import net.waterfox.android.components.toolbar.interactor.BrowserToolbarInteractor
 import net.waterfox.android.components.toolbar.interactor.DefaultBrowserToolbarInteractor
 import net.waterfox.android.crashes.CrashContentIntegration
 import net.waterfox.android.databinding.FragmentBrowserBinding
-import net.waterfox.android.ext.secure
+import net.waterfox.android.downloads.DownloadService
+import net.waterfox.android.downloads.DynamicDownloadDialog
+import net.waterfox.android.ext.*
+import net.waterfox.android.home.HomeScreenViewModel
+import net.waterfox.android.home.SharedViewModel
+import net.waterfox.android.onboarding.WaterfoxOnboarding
 import net.waterfox.android.perf.MarkersFragmentLifecycleCallbacks
+import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.biometric.BiometricPromptFeature
+import net.waterfox.android.theme.ThemeManager
+import net.waterfox.android.utils.allowUndo
+import net.waterfox.android.wifi.SitePermissionsWifiIntegration
+import java.lang.ref.WeakReference
 import mozilla.components.feature.session.behavior.ToolbarPosition as MozacToolbarPosition
 
 /**
@@ -523,10 +492,6 @@ abstract class BaseBrowserFragment :
 
                 dynamicDownloadDialog.show()
                 browserToolbarView.expand()
-
-                if (downloadState.contentType == "application/pdf") {
-                    Downloads.pdfDownloadCount.add()
-                }
             }
         }
 
@@ -1342,7 +1307,6 @@ abstract class BaseBrowserFragment :
     }
 
     final override fun onPictureInPictureModeChanged(enabled: Boolean) {
-        if (enabled) MediaState.pictureInPicture.record(NoExtras())
         pipFeature?.onPictureInPictureModeChanged(enabled)
     }
 
@@ -1377,8 +1341,6 @@ abstract class BaseBrowserFragment :
             binding.engineView.setDynamicToolbarMaxHeight(0)
             // Without this, fullscreen has a margin at the top.
             binding.engineView.setVerticalClipping(0)
-
-            MediaState.fullscreen.record(NoExtras())
         } else {
             activity?.exitImmersiveModeIfNeeded()
             (activity as? HomeActivity)?.let { activity ->

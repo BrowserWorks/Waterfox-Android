@@ -14,13 +14,13 @@ import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.concept.engine.manifest.WebAppManifestParser
 import mozilla.components.concept.engine.manifest.getOrNull
+import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.feature.contextmenu.ContextMenuCandidate
 import mozilla.components.feature.customtabs.CustomTabWindowFeature
 import mozilla.components.feature.pwa.feature.ManifestUpdateFeature
 import mozilla.components.feature.pwa.feature.WebAppActivityFeature
 import mozilla.components.feature.pwa.feature.WebAppHideToolbarFeature
 import mozilla.components.feature.pwa.feature.WebAppSiteControlsFeature
-import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.arch.lifecycle.addObservers
@@ -29,11 +29,7 @@ import net.waterfox.android.R
 import net.waterfox.android.browser.BaseBrowserFragment
 import net.waterfox.android.browser.CustomTabContextMenuCandidate
 import net.waterfox.android.browser.WaterfoxSnackbarDelegate
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.settings
+import net.waterfox.android.ext.*
 
 /**
  * Fragment used for browsing the web within external apps.
@@ -187,9 +183,4 @@ class ExternalAppBrowserFragment : BaseBrowserFragment(), UserInteractionHandler
         view,
         WaterfoxSnackbarDelegate(view)
     )
-
-    companion object {
-        // We only care about millisecond precision for telemetry events
-        internal const val MS_PRECISION = 1_000_000L
-    }
 }

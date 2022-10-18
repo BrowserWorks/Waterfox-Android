@@ -220,7 +220,6 @@ android.applicationVariants.all { variant ->
     println("Application ID:    " + [variant.mergedFlavor.applicationId, variant.buildType.applicationIdSuffix].findAll().join())
     println("Build type:        " + variant.buildType.name)
     println("Flavor:            " + variant.flavorName)
-    println("Telemetry enabled: " + !isDebug)
 
     if (useReleaseVersioning) {
         // The Google Play Store does not allow multiple APKs for the same app that all have the
@@ -253,7 +252,7 @@ android.applicationVariants.all { variant ->
     }
 
 // -------------------------------------------------------------------------------------------------
-// BuildConfig: Set variables for Sentry, Crash Reporting, and Telemetry
+// BuildConfig: Set variables for Sentry and Crash Reporting
 // -------------------------------------------------------------------------------------------------
 
     buildConfigField 'String', 'SENTRY_TOKEN', 'null'
@@ -266,12 +265,6 @@ android.applicationVariants.all { variant ->
         } catch (FileNotFoundException ignored) {}
     } else {
         buildConfigField 'boolean', 'CRASH_REPORTING', 'false'
-    }
-
-    if (!isDebug) {
-        buildConfigField 'boolean', 'TELEMETRY', 'true'
-    } else {
-        buildConfigField 'boolean', 'TELEMETRY', 'false'
     }
 
     def buildDate = Config.generateBuildDate()
@@ -363,9 +356,9 @@ android.applicationVariants.all { variant ->
     }
 }
 
-// TODO: [Waterfox] remove both of these plugins
 // Generate Kotlin code for the Fenix Glean metrics.
 apply plugin: "org.mozilla.telemetry.glean-gradle-plugin"
+// TODO: [Waterfox] remove Nimbus plugin
 apply plugin: "org.mozilla.components.nimbus-gradle-plugin"
 
 // TODO: [Waterfox] remove when we no longer depend on Nimbus
@@ -490,7 +483,6 @@ dependencies {
     implementation Deps.mozilla_service_sync_autofill
     implementation Deps.mozilla_service_sync_logins
     implementation Deps.mozilla_service_firefox_accounts
-    implementation(Deps.mozilla_service_glean)
     implementation Deps.mozilla_service_location
     implementation Deps.mozilla_service_nimbus
 
@@ -541,6 +533,7 @@ dependencies {
     implementation Deps.protobuf_javalite
     implementation Deps.google_material
 
+    // TODO: [Waterfox] can this be removed as well?
     implementation Deps.google_ads_id // Required for the Google Advertising ID
 
     implementation Deps.google_play_store // Required for in-app reviews
@@ -595,10 +588,6 @@ dependencies {
     implementation Deps.mozilla_support_rusthttp
 
     testImplementation Deps.mockk
-
-    // For the initial release of Glean 19, we require consumer applications to
-    // depend on a separate library for unit tests. This will be removed in future releases.
-    testImplementation "org.mozilla.telemetry:glean-native-forUnitTests:${project.ext.glean_version}"
 
     lintChecks project(":mozilla-lint-rules")
 }
@@ -799,11 +788,6 @@ if (appServicesSrcDir) {
     }
 }
 
-if (gradle.hasProperty('localProperties.autoPublish.glean.dir')) {
-    ext.gleanSrcDir = gradle."localProperties.autoPublish.glean.dir"
-    apply from: "../${gleanSrcDir}/build-scripts/substitute-local-glean.gradle"
-}
-
 // Define a reusable task for updating the versions of our built-in web extensions. We automate this
 // to make sure we never forget to update the version, either in local development or for releases.
 // In both cases, we want to make sure the latest version of all extensions (including their latest
@@ -831,6 +815,3 @@ android.applicationVariants.all { variant ->
         dependsOn "package${variant.name.capitalize()}"
     }
 }
-
-// Enable expiration by major version.
-ext.gleanExpireByVersion = Config.majorVersion(project)

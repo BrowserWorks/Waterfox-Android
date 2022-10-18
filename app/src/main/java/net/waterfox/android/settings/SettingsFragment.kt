@@ -18,7 +18,6 @@ import android.widget.Toast
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
@@ -34,28 +33,16 @@ import mozilla.components.concept.sync.AccountObserver
 import mozilla.components.concept.sync.AuthType
 import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.concept.sync.Profile
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.ktx.android.view.showKeyboard
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.Config
-import net.waterfox.android.GleanMetrics.Addons
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.databinding.AmoCollectionOverrideDialogBinding
-import net.waterfox.android.ext.application
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getPreferenceKey
-import net.waterfox.android.ext.navigateToNotificationsSettings
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.settings
-import net.waterfox.android.ext.openSetDefaultBrowserOption
-import net.waterfox.android.ext.showToolbar
+import net.waterfox.android.ext.*
 import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.ProfilerViewModel
 import net.waterfox.android.settings.account.AccountUiView
-import net.waterfox.android.utils.BrowsersCache
 import net.waterfox.android.utils.Settings
 import kotlin.system.exitProcess
 
@@ -119,41 +106,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
             requireComponents.backgroundServices.accountManager.accountProfile()
         )
 
-        val booleanPreferenceTelemetryAllowList = listOf(
-            requireContext().getString(R.string.pref_key_show_search_suggestions),
-            requireContext().getString(R.string.pref_key_remote_debugging),
-            requireContext().getString(R.string.pref_key_telemetry),
-            requireContext().getString(R.string.pref_key_tracking_protection),
-            requireContext().getString(R.string.pref_key_search_bookmarks),
-            requireContext().getString(R.string.pref_key_search_browsing_history),
-            requireContext().getString(R.string.pref_key_show_clipboard_suggestions),
-            requireContext().getString(R.string.pref_key_show_search_engine_shortcuts),
-            requireContext().getString(R.string.pref_key_open_links_in_a_private_tab),
-            requireContext().getString(R.string.pref_key_sync_logins),
-            requireContext().getString(R.string.pref_key_sync_bookmarks),
-            requireContext().getString(R.string.pref_key_sync_history),
-            requireContext().getString(R.string.pref_key_show_voice_search),
-            requireContext().getString(R.string.pref_key_show_search_suggestions_in_private)
-        )
-
-        preferenceManager.sharedPreferences
-            .registerOnSharedPreferenceChangeListener(this) { sharedPreferences, key ->
-                try {
-                    if (key in booleanPreferenceTelemetryAllowList) {
-                        val enabled = sharedPreferences.getBoolean(key, false)
-                        Events.preferenceToggled.record(Events.PreferenceToggledExtra(enabled, key))
-                    }
-                } catch (e: ClassCastException) {
-                    // The setting is not a boolean, not tracked
-                }
-            }
-
-        profilerViewModel.getProfilerState().observe(
-            this,
-            Observer<Boolean> {
-                updateProfilerUI(it)
-            }
-        )
+        profilerViewModel.getProfilerState().observe(this) {
+            updateProfilerUI(it)
+        }
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -256,7 +211,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 SettingsFragmentDirections.actionSettingsFragmentToSearchEngineFragment()
             }
             resources.getString(R.string.pref_key_tracking_protection_settings) -> {
-                TrackingProtection.etpSettings.record(NoExtras())
                 SettingsFragmentDirections.actionSettingsFragmentToTrackingProtectionFragment()
             }
             resources.getString(R.string.pref_key_site_permissions) -> {
@@ -275,7 +229,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 SettingsFragmentDirections.actionSettingsFragmentToLocaleSettingsFragment()
             }
             resources.getString(R.string.pref_key_addons) -> {
-                Addons.openAddonsInSettings.record(mozilla.components.service.glean.private.NoExtras())
                 SettingsFragmentDirections.actionSettingsFragmentToAddonsFragment()
             }
             resources.getString(R.string.pref_key_data_choices) -> {
@@ -618,11 +571,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 getString(R.string.preferences_https_only_off)
             }
         }
-    }
-
-    private fun isFirefoxDefaultBrowser(): Boolean {
-        val browsers = BrowsersCache.all(requireContext())
-        return browsers.isFirefoxDefaultBrowser
     }
 
     private fun updateProfilerUI(profilerStatus: Boolean) {

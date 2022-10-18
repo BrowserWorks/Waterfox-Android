@@ -35,9 +35,7 @@ import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.StoreProvider
@@ -142,7 +140,6 @@ class TrackingProtectionPanelDialogFragment : AppCompatDialogFragment(), UserInt
     }
 
     private fun openTrackingProtectionSettings() {
-        TrackingProtection.panelSettings.record(NoExtras())
         nav(
             R.id.trackingProtectionPanelDialogFragment,
             TrackingProtectionPanelDialogFragmentDirections.actionGlobalTrackingProtectionFragment()

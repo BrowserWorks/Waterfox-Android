@@ -31,40 +31,23 @@ import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.downloads.ui.DownloadCancelDialogFragment
 import mozilla.components.feature.tabs.tabstray.TabsFeature
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.StoreProvider
-import net.waterfox.android.databinding.ComponentTabstray2Binding
-import net.waterfox.android.databinding.ComponentTabstrayFabBinding
-import net.waterfox.android.databinding.FragmentTabTrayDialogBinding
-import net.waterfox.android.databinding.TabsTrayTabCounter2Binding
-import net.waterfox.android.databinding.TabstrayMultiselectItemsBinding
+import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.databinding.*
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.requireComponents
 import net.waterfox.android.ext.runIfFragmentIsAttached
 import net.waterfox.android.ext.settings
 import net.waterfox.android.home.HomeScreenViewModel
 import net.waterfox.android.share.ShareFragment
-import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
-import net.waterfox.android.tabstray.browser.DefaultBrowserTrayInteractor
-import net.waterfox.android.tabstray.browser.DefaultInactiveTabsController
-import net.waterfox.android.tabstray.browser.DefaultInactiveTabsInteractor
-import net.waterfox.android.tabstray.browser.InactiveTabsInteractor
-import net.waterfox.android.tabstray.browser.SelectionBannerBinding
+import net.waterfox.android.tabstray.browser.*
 import net.waterfox.android.tabstray.browser.SelectionBannerBinding.VisibilityModifier
-import net.waterfox.android.tabstray.browser.SelectionHandleBinding
-import net.waterfox.android.tabstray.browser.TabSorter
-import net.waterfox.android.tabstray.ext.anchorWithAction
-import net.waterfox.android.tabstray.ext.bookmarkMessage
-import net.waterfox.android.tabstray.ext.collectionMessage
-import net.waterfox.android.tabstray.ext.make
-import net.waterfox.android.tabstray.ext.showWithTheme
-import net.waterfox.android.theme.ThemeManager
+import net.waterfox.android.tabstray.ext.*
 import net.waterfox.android.tabstray.syncedtabs.SyncedTabsIntegration
+import net.waterfox.android.theme.ThemeManager
 import net.waterfox.android.utils.allowUndo
 import kotlin.math.max
 
@@ -138,9 +121,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
         )
 
         val args by navArgs<TabsTrayFragmentArgs>()
-        args.accessPoint.takeIf { it != TabsTrayAccessPoint.None }?.let {
-            TabsTray.accessPoint[it.name.lowercase()].add()
-        }
         val initialMode = if (args.enterMultiselect) {
             TabsTrayState.Mode.Select(emptySet())
         } else {
@@ -186,7 +166,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
             fabButtonBinding.newTabButton.accessibilityTraversalAfter =
                 tabsTrayBinding.tabLayout.id
         }
-        TabsTray.opened.record(NoExtras())
 
         navigationInteractor =
             DefaultNavigationInteractor(
@@ -253,7 +232,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
         )
 
         setupBackgroundDismissalListener {
-            TabsTray.closed.record(NoExtras())
             dismissAllowingStateLoss()
         }
 
@@ -512,9 +490,6 @@ class TabsTrayFragment : AppCompatDialogFragment() {
     @VisibleForTesting
     internal fun setupMenu(navigationInteractor: NavigationInteractor) {
         tabsTrayBinding.tabTrayOverflow.setOnClickListener { anchor ->
-
-            TabsTray.menuOpened.record(NoExtras())
-
             val menu = getTrayMenu(
                 context = requireContext(),
                 browserStore = requireComponents.core.store,
@@ -565,7 +540,7 @@ class TabsTrayFragment : AppCompatDialogFragment() {
 
     @VisibleForTesting
     internal fun dismissTabsTray() {
-        // This should always be the last thing we do because nothing (e.g. telemetry)
+        // This should always be the last thing we do because nothing
         // is guaranteed after that.
         dismissAllowingStateLoss()
     }

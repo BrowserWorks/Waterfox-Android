@@ -9,8 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import mozilla.components.ui.tabcounter.TabCounter
 import mozilla.components.ui.tabcounter.TabCounterMenu
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.StartOnHome
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
@@ -59,8 +57,6 @@ class TabCounterBuilder(
         }
 
         tabCounter.setOnClickListener {
-            StartOnHome.openTabsTray.record(NoExtras())
-
             navController.nav(
                 R.id.homeFragment,
                 HomeFragmentDirections.actionGlobalTabsTrayFragment()

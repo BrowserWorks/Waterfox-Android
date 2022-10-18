@@ -20,15 +20,8 @@ import mozilla.components.feature.sitepermissions.SitePermissionsRules
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.Action
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.AutoplayAction
 import mozilla.components.service.contile.ContileTopSitesProvider
-import mozilla.components.support.ktx.android.content.PreferencesHolder
-import mozilla.components.support.ktx.android.content.booleanPreference
-import mozilla.components.support.ktx.android.content.floatPreference
-import mozilla.components.support.ktx.android.content.intPreference
-import mozilla.components.support.ktx.android.content.longPreference
-import mozilla.components.support.ktx.android.content.stringPreference
-import mozilla.components.support.ktx.android.content.stringSetPreference
+import mozilla.components.support.ktx.android.content.*
 import mozilla.components.support.locale.LocaleManager
-import org.mozilla.experiments.nimbus.internal.NimbusFeatureException
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.Config
 import net.waterfox.android.FeatureFlags
@@ -52,8 +45,9 @@ import net.waterfox.android.settings.registerOnSharedPreferenceChangeListener
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_ALL
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_AUDIBLE
 import net.waterfox.android.wallpapers.WallpaperManager
+import org.mozilla.experiments.nimbus.internal.NimbusFeatureException
 import java.security.InvalidParameterException
-import java.util.UUID
+import java.util.*
 
 private const val AUTOPLAY_USER_SETTING = "AUTOPLAY_USER_SETTING"
 
@@ -219,7 +213,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     )
 
     // WATERFOX
-    val isTelemetryEnabled = false
     var isExperimentationEnabled = false
 
     var isOverrideTPPopupsForPerformanceTest = false
@@ -1077,21 +1070,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     )
 
     /**
-     * Storing number of installed add-ons for telemetry purposes
-     */
-    var installedAddonsCount by intPreference(
-        appContext.getPreferenceKey(R.string.pref_key_installed_addons_count),
-        0
-    )
-
-    /**
-     * Storing the list of installed add-ons for telemetry purposes
-     */
-    var installedAddonsList by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_installed_addons_list),
-        default = ""
-    )
-    /**
      *  URLs from the user's history that contain this search param will be hidden
      * from the top sites. The value is a string with one of the following forms:
      * - "" (empty) - Disable this feature
@@ -1102,22 +1080,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     val frecencyFilterQuery by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_frecency_filter_query),
         default = "mfadid=adm"
-    )
-
-    /**
-     * Storing number of enabled add-ons for telemetry purposes
-     */
-    var enabledAddonsCount by intPreference(
-        appContext.getPreferenceKey(R.string.pref_key_enabled_addons_count),
-        0
-    )
-
-    /**
-     * Storing the list of enabled add-ons for telemetry purposes
-     */
-    var enabledAddonsList by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_enabled_addons_list),
-        default = ""
     )
 
     private var savedLoginsSortingStrategyString by stringPreference(

@@ -22,9 +22,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import mozilla.components.service.nimbus.NimbusApi
 import mozilla.components.support.base.log.logger.Logger
-import mozilla.telemetry.glean.private.NoExtras
-import org.mozilla.experiments.nimbus.internal.EnrolledExperiment
-import net.waterfox.android.GleanMetrics.Preferences
 import net.waterfox.android.R
 import net.waterfox.android.databinding.SettingsStudiesBinding
 import net.waterfox.android.ext.getPreferenceKey
@@ -32,6 +29,7 @@ import net.waterfox.android.ext.settings
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.SupportUtils.SumoTopic.OPT_OUT_STUDIES
 import net.waterfox.android.utils.Settings
+import org.mozilla.experiments.nimbus.internal.EnrolledExperiment
 import kotlin.system.exitProcess
 
 @Suppress("LongParameterList")
@@ -55,7 +53,6 @@ class StudiesView(
         provideStudiesSwitch().isChecked = settings.isExperimentationEnabled
         provideStudiesSwitch().setOnClickListener {
             val isChecked = provideStudiesSwitch().isChecked
-            Preferences.studiesPreferenceEnabled.record(NoExtras())
             provideStudiesTitle().text = getSwitchCheckedTitle()
             val builder = AlertDialog.Builder(context)
                 .setPositiveButton(

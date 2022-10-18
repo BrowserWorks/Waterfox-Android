@@ -6,8 +6,6 @@ package net.waterfox.android.home.sessioncontrol.viewholders.onboarding
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingFinishBinding
 import net.waterfox.android.home.sessioncontrol.OnboardingInteractor
@@ -21,7 +19,6 @@ class OnboardingFinishViewHolder(
         val binding = OnboardingFinishBinding.bind(view)
         binding.finishButton.setOnClickListener {
             interactor.onStartBrowsingClicked()
-            Onboarding.finish.record(NoExtras())
         }
     }
 

@@ -13,12 +13,7 @@ import kotlinx.coroutines.launch
 import mozilla.components.browser.storage.sync.PlacesBookmarksStorage
 import mozilla.components.browser.storage.sync.PlacesHistoryStorage
 import mozilla.components.browser.storage.sync.RemoteTabsStorage
-import mozilla.components.concept.sync.AccountObserver
-import mozilla.components.concept.sync.AuthType
-import mozilla.components.concept.sync.DeviceCapability
-import mozilla.components.concept.sync.DeviceConfig
-import mozilla.components.concept.sync.DeviceType
-import mozilla.components.concept.sync.OAuthAccount
+import mozilla.components.concept.sync.*
 import mozilla.components.feature.accounts.push.FxaPushSupportFeature
 import mozilla.components.feature.accounts.push.SendTabFeature
 import mozilla.components.feature.syncedtabs.storage.SyncedTabsStorage
@@ -33,20 +28,16 @@ import mozilla.components.service.fxa.manager.SCOPE_SYNC
 import mozilla.components.service.fxa.store.SyncStore
 import mozilla.components.service.fxa.store.SyncStoreSupport
 import mozilla.components.service.fxa.sync.GlobalSyncableStoreProvider
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
 import mozilla.components.service.sync.logins.SyncableLoginsStorage
 import mozilla.components.support.utils.RunWhenReadyQueue
 import net.waterfox.android.Config
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.SyncAuth
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
-import net.waterfox.android.ext.settings
 import net.waterfox.android.perf.StrictModeManager
 import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.sync.SyncedTabsIntegration
-import net.waterfox.android.utils.Settings
 
 /**
  * Component group for background services. These are the components that need to be accessed from within a
@@ -126,10 +117,6 @@ class BackgroundServices(
         }
     }
 
-    private val telemetryAccountObserver = TelemetryAccountObserver(
-        context.settings(),
-    )
-
     val accountAbnormalities = AccountAbnormalities(context, crashReporter, strictMode)
 
     val syncStore by lazyMonitored {
@@ -171,9 +158,6 @@ class BackgroundServices(
         ),
         crashReporter
     ).also { accountManager ->
-        // Register a telemetry account observer to keep track of FxA auth metrics.
-        accountManager.register(telemetryAccountObserver)
-
         // Register an "abnormal fxa behaviour" middleware to keep track of events such as
         // unexpected logouts.
         accountManager.register(accountAbnormalities)
@@ -213,45 +197,5 @@ private class AccountManagerReadyObserver(
 ) : AccountObserver {
     override fun onReady(authenticatedAccount: OAuthAccount?) {
         accountManagerAvailableQueue.ready()
-    }
-}
-
-@VisibleForTesting(otherwise = PRIVATE)
-internal class TelemetryAccountObserver(
-    private val settings: Settings,
-) : AccountObserver {
-    override fun onAuthenticated(account: OAuthAccount, authType: AuthType) {
-        settings.signedInFxaAccount = true
-        when (authType) {
-            // User signed-in into an existing FxA account.
-            AuthType.Signin -> SyncAuth.signIn.record(NoExtras())
-
-            // User created a new FxA account.
-            AuthType.Signup -> SyncAuth.signUp.record(NoExtras())
-
-            // User paired to an existing account via QR code scanning.
-            AuthType.Pairing -> SyncAuth.paired.record(NoExtras())
-
-            // Account Manager recovered a broken FxA auth state, without direct user involvement.
-            AuthType.Recovered -> SyncAuth.recovered.record(NoExtras())
-
-            // User signed-in into an FxA account via unknown means.
-            // Exact mechanism identified by the 'action' param.
-            is AuthType.OtherExternal -> SyncAuth.otherExternal.record(NoExtras())
-
-            // User signed-in into an FxA account shared from another locally installed app using the copy flow.
-            AuthType.MigratedCopy,
-            // User signed-in into an FxA account shared from another locally installed app using the reuse flow.
-            AuthType.MigratedReuse,
-            // Account restored from a hydrated state on disk (e.g. during startup).
-            AuthType.Existing -> {
-                // no-op, events not recorded in Glean
-            }
-        }
-    }
-
-    override fun onLoggedOut() {
-        SyncAuth.signOut.record(NoExtras())
-        settings.signedInFxaAccount = false
     }
 }

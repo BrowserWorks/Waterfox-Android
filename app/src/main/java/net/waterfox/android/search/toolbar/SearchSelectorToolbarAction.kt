@@ -21,8 +21,6 @@ import mozilla.components.lib.state.ext.flow
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
 import mozilla.components.support.ktx.android.view.toScope
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.UnifiedSearch
 import net.waterfox.android.R
 import net.waterfox.android.ext.settings
 import net.waterfox.android.search.SearchDialogFragmentStore
@@ -51,7 +49,6 @@ class SearchSelectorToolbarAction(
                     Orientation.DOWN
                 }
 
-                UnifiedSearch.searchMenuTapped.record(NoExtras())
                 menu.menuController.show(anchor = it, orientation = orientation, forceOrientation = true)
             }
 

@@ -15,7 +15,6 @@ import mozilla.components.feature.intent.ext.sanitize
 import mozilla.components.feature.intent.processing.IntentProcessor
 import mozilla.components.support.utils.EXTRA_ACTIVITY_REFERRER_CATEGORY
 import mozilla.components.support.utils.EXTRA_ACTIVITY_REFERRER_PACKAGE
-import net.waterfox.android.GleanMetrics.Events
 import net.waterfox.android.HomeActivity.Companion.PRIVATE_BROWSING_MODE
 import net.waterfox.android.components.IntentProcessorType
 import net.waterfox.android.components.getType
@@ -57,11 +56,6 @@ class IntentReceiverActivity : Activity() {
         // Call process for side effects, short on the first that returns true
         val private = settings().openLinksInAPrivateTab
         intent.putExtra(PRIVATE_BROWSING_MODE, private)
-        if (private) {
-            Events.openedLink.record(Events.OpenedLinkExtra("PRIVATE"))
-        } else {
-            Events.openedLink.record(Events.OpenedLinkExtra("NORMAL"))
-        }
 
         addReferrerInformation(intent)
 
@@ -95,7 +89,6 @@ class IntentReceiverActivity : Activity() {
                 components.intentProcessors.privateIntentProcessor
             )
         } else {
-            Events.openedLink.record(Events.OpenedLinkExtra("NORMAL"))
             listOf(
                 components.intentProcessors.customTabIntentProcessor,
                 components.intentProcessors.intentProcessor

@@ -7,13 +7,8 @@ package net.waterfox.android.settings
 import android.os.Bundle
 import androidx.annotation.VisibleForTesting
 import androidx.navigation.findNavController
-import androidx.preference.CheckBoxPreference
-import androidx.preference.DropDownPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
+import androidx.preference.*
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
@@ -108,7 +103,6 @@ class TrackingProtectionFragment : PreferenceFragmentCompat() {
         radio.onClickListener {
             updateCustomOptionsVisibility()
             updateTrackingProtectionPolicy()
-            TrackingProtection.etpSettingChanged.record(TrackingProtection.EtpSettingChangedExtra(mode.name))
         }
 
         radio.onInfoClickListener {

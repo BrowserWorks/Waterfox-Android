@@ -6,8 +6,6 @@ package net.waterfox.android.library.bookmarks
 
 import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.BookmarksManagement
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.utils.Do
 
@@ -51,7 +49,6 @@ class BookmarkFragmentInteractor(
         require(item.type == BookmarkNodeType.ITEM)
         item.url?.let {
             bookmarksController.handleCopyUrl(item)
-            BookmarksManagement.copied.record(NoExtras())
         }
     }
 
@@ -59,7 +56,6 @@ class BookmarkFragmentInteractor(
         require(item.type == BookmarkNodeType.ITEM)
         item.url?.let {
             bookmarksController.handleBookmarkSharing(item)
-            BookmarksManagement.shared.record(NoExtras())
         }
     }
 
@@ -67,7 +63,6 @@ class BookmarkFragmentInteractor(
         require(item.type == BookmarkNodeType.ITEM)
         item.url?.let {
             bookmarksController.handleOpeningBookmark(item, BrowsingMode.Normal)
-            BookmarksManagement.openInNewTab.record(NoExtras())
         }
     }
 
@@ -75,7 +70,6 @@ class BookmarkFragmentInteractor(
         require(item.type == BookmarkNodeType.ITEM)
         item.url?.let {
             bookmarksController.handleOpeningBookmark(item, BrowsingMode.Private)
-            BookmarksManagement.openInPrivateTab.record(NoExtras())
         }
     }
 
@@ -104,7 +98,6 @@ class BookmarkFragmentInteractor(
         Do exhaustive when (item.type) {
             BookmarkNodeType.ITEM -> {
                 bookmarksController.handleBookmarkTapped(item)
-                BookmarksManagement.open.record(NoExtras())
             }
             BookmarkNodeType.FOLDER -> bookmarksController.handleBookmarkExpand(item)
             BookmarkNodeType.SEPARATOR -> throw IllegalStateException("Cannot open separators")

@@ -9,17 +9,11 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import mozilla.components.browser.state.selector.getNormalOrPrivateTabs
-import mozilla.components.browser.state.selector.normalTabs
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
-import mozilla.components.browser.storage.sync.Tab as SyncTab
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.service.fxa.manager.FxaAccountManager
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Collections
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.collections.CollectionsDialog
 import net.waterfox.android.collections.show
@@ -28,7 +22,9 @@ import net.waterfox.android.components.bookmarks.BookmarksUseCase
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.tabstray.ext.getTabSessionState
 import net.waterfox.android.tabstray.ext.isActiveDownload
+import java.util.*
 import kotlin.coroutines.CoroutineContext
+import mozilla.components.browser.storage.sync.Tab as SyncTab
 
 /**
  * An interactor that helps with navigating to different parts of the app from the tabs tray.
@@ -117,7 +113,6 @@ class DefaultNavigationInteractor(
 ) : NavigationInteractor {
 
     override fun onTabTrayDismissed() {
-        TabsTray.closed.record(NoExtras())
         dismissTabTray()
     }
 
@@ -142,12 +137,9 @@ class DefaultNavigationInteractor(
         navController.navigate(
             TabsTrayFragmentDirections.actionGlobalRecentlyClosed()
         )
-        Events.recentlyClosedTabsOpened.record(NoExtras())
     }
 
     override fun onShareTabs(tabs: Collection<TabSessionState>) {
-        TabsTray.shareSelectedTabs.record(TabsTray.ShareSelectedTabsExtra(tabCount = tabs.size))
-
         val data = tabs.map {
             ShareData(url = it.content.url, title = it.content.title)
         }
@@ -196,9 +188,6 @@ class DefaultNavigationInteractor(
     }
 
     override fun onSaveToCollections(tabs: Collection<TabSessionState>) {
-        TabsTray.selectedTabsToCollection.record(TabsTray.SelectedTabsToCollectionExtra(tabCount = tabs.size))
-
-        TabsTray.saveToCollection.record(NoExtras())
         tabsTrayStore.dispatch(TabsTrayAction.ExitSelectMode)
 
         CollectionsDialog(
@@ -207,21 +196,6 @@ class DefaultNavigationInteractor(
             onPositiveButtonClick = { id, isNewCollection ->
 
                 // If collection is null, a new one was created.
-                if (isNewCollection) {
-                    Collections.saved.record(
-                        Collections.SavedExtra(
-                            browserStore.state.normalTabs.size.toString(),
-                            tabs.size.toString()
-                        )
-                    )
-                } else {
-                    Collections.tabsAdded.record(
-                        Collections.TabsAddedExtra(
-                            browserStore.state.normalTabs.size.toString(),
-                            tabs.size.toString()
-                        )
-                    )
-                }
                 id?.apply {
                     showCollectionSnackbar(tabs.size, isNewCollection)
                 }
@@ -231,8 +205,6 @@ class DefaultNavigationInteractor(
     }
 
     override fun onSaveToBookmarks(tabs: Collection<TabSessionState>) {
-        TabsTray.bookmarkSelectedTabs.record(TabsTray.BookmarkSelectedTabsExtra(tabCount = tabs.size))
-
         tabs.forEach { tab ->
             // We don't combine the context with lifecycleScope so that our jobs are not cancelled
             // if we leave the fragment, i.e. we still want the bookmarks to be added if the
@@ -246,8 +218,6 @@ class DefaultNavigationInteractor(
     }
 
     override fun onSyncedTabClicked(tab: SyncTab) {
-        Events.syncedTabOpened.record(NoExtras())
-
         dismissTabTray()
         activity.openToBrowserAndLoad(
             searchTermOrURL = tab.active().url,

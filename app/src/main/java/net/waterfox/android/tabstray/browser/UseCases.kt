@@ -5,14 +5,12 @@
 package net.waterfox.android.tabstray.browser
 
 import mozilla.components.feature.tabs.TabsUseCases
-import net.waterfox.android.GleanMetrics.TabsTray
 
 class SelectTabUseCaseWrapper(
     private val selectTab: TabsUseCases.SelectTabUseCase,
     private val onSelect: (String) -> Unit
 ) : TabsUseCases.SelectTabUseCase {
     operator fun invoke(tabId: String, source: String? = null) {
-        TabsTray.openedExistingTab.record(TabsTray.OpenedExistingTabExtra(source ?: "unknown"))
         selectTab(tabId)
         onSelect(tabId)
     }
@@ -26,7 +24,6 @@ class RemoveTabUseCaseWrapper(
     private val onRemove: (String) -> Unit,
 ) : TabsUseCases.RemoveTabUseCase {
     operator fun invoke(tabId: String, source: String? = null) {
-        TabsTray.closedExistingTab.record(TabsTray.ClosedExistingTabExtra(source ?: "unknown"))
         onRemove(tabId)
     }
 

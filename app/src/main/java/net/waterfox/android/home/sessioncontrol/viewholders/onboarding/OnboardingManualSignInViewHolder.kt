@@ -7,8 +7,6 @@ package net.waterfox.android.home.sessioncontrol.viewholders.onboarding
 import android.view.View
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingManualSigninBinding
 import net.waterfox.android.home.HomeFragmentDirections
@@ -18,8 +16,6 @@ class OnboardingManualSignInViewHolder(view: View) : RecyclerView.ViewHolder(vie
 
     init {
         binding.fxaSignInButton.setOnClickListener {
-            Onboarding.fxaManualSignin.record(NoExtras())
-
             val directions = HomeFragmentDirections.actionGlobalTurnOnSync()
             Navigation.findNavController(view).navigate(directions)
         }

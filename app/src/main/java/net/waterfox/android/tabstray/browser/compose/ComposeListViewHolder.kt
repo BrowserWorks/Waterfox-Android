@@ -29,7 +29,6 @@ import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
  * @param selectionHolder [SelectionHolder]<[TabSessionState]> for helping with selecting
  * any number of displayed [TabSessionState]s.
  * @param composeItemView that displays a "tab".
- * @param featureName [String] representing the name of the feature displaying tabs. Used in telemetry reporting.
  * @param viewLifecycleOwner [LifecycleOwner] to which this Composable will be tied to.
  */
 class ComposeListViewHolder(
@@ -37,7 +36,6 @@ class ComposeListViewHolder(
     private val tabsTrayStore: TabsTrayStore,
     private val selectionHolder: SelectionHolder<TabSessionState>? = null,
     composeItemView: ComposeView,
-    private val featureName: String,
     viewLifecycleOwner: LifecycleOwner,
 ) : ComposeAbstractTabViewHolder(composeItemView, viewLifecycleOwner) {
 
@@ -68,15 +66,15 @@ class ComposeListViewHolder(
     }
 
     private fun onCloseClicked(tab: TabSessionState) {
-        delegate?.onTabClosed(tab, featureName)
+        delegate?.onTabClosed(tab)
     }
 
     private fun onClick(tab: TabSessionState) {
         val holder = selectionHolder
         if (holder != null) {
-            interactor.onMultiSelectClicked(tab, holder, featureName)
+            interactor.onMultiSelectClicked(tab, holder, null)
         } else {
-            interactor.onTabSelected(tab, featureName)
+            interactor.onTabSelected(tab)
         }
     }
 

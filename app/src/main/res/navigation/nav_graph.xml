@@ -210,7 +210,7 @@
         <argument
             android:name="search_access_point"
             android:defaultValue="NONE"
-            app:argType="net.waterfox.android.components.metrics.MetricsUtils$Source" />
+            app:argType="net.waterfox.android.search.SearchEventSource" />
     </dialog>
 
     <fragment

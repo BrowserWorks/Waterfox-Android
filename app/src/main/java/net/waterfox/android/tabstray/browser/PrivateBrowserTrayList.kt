@@ -24,8 +24,7 @@ class PrivateBrowserTrayList @JvmOverloads constructor(
         TabsTouchHelper(
             interactionDelegate = (adapter as BrowserTabsAdapter).delegate,
             onViewHolderTouched = { swipeToDelete.isSwipeable },
-            onViewHolderDraw = { context.components.settings.gridTabView.not() },
-            featureNameHolder = (adapter as BrowserTabsAdapter)
+            onViewHolderDraw = { context.components.settings.gridTabView.not() }
         )
     }
 

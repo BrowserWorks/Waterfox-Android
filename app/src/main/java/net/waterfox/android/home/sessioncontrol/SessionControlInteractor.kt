@@ -9,7 +9,6 @@ import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.pocket.PocketStory
 import net.waterfox.android.browser.browsingmode.BrowsingMode
-import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.gleanplumb.Message
 import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
 import net.waterfox.android.home.pocket.PocketStoriesController
@@ -42,13 +41,6 @@ interface TabSessionInteractor {
      * Called when a user clicks on the Private Mode button on the homescreen.
      */
     fun onPrivateModeButtonClicked(newMode: BrowsingMode, userHasBeenOnboarded: Boolean)
-
-    /**
-     * Called when there is an update to the session state and updated metrics need to be reported
-     *
-     * * @param state The state the homepage from which to report desired metrics.
-     */
-    fun reportSessionMetrics(state: AppState)
 }
 
 /**
@@ -448,10 +440,6 @@ class SessionControlInteractor(
 
     override fun onDiscoverMoreClicked(link: String) {
         pocketStoriesController.handleDiscoverMoreClicked(link)
-    }
-
-    override fun reportSessionMetrics(state: AppState) {
-        controller.handleReportSessionMetrics(state)
     }
 
     override fun onMessageClicked(message: Message) {

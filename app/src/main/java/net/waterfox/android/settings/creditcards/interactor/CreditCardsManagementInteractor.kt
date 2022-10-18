@@ -5,8 +5,6 @@
 package net.waterfox.android.settings.creditcards.interactor
 
 import mozilla.components.concept.storage.CreditCard
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.CreditCards
 import net.waterfox.android.settings.creditcards.controller.CreditCardsManagementController
 
 /**
@@ -41,11 +39,9 @@ class DefaultCreditCardsManagementInteractor(
 
     override fun onSelectCreditCard(creditCard: CreditCard) {
         controller.handleCreditCardClicked(creditCard)
-        CreditCards.managementCardTapped.record(NoExtras())
     }
 
     override fun onAddCreditCardClick() {
         controller.handleAddCreditCardClicked()
-        CreditCards.managementAddTapped.record(NoExtras())
     }
 }

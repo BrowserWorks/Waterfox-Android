@@ -30,16 +30,14 @@ sealed class BrowserTabViewHolder(itemView: View) : RecyclerView.ViewHolder(item
      * @param selectionHolder [SelectionHolder]<[TabSessionState]> for helping with selecting
      * any number of displayed [TabSessionState]s.
      * @param itemView [View] that displays a "tab".
-     * @param featureName [String] representing the name of the feature displaying tabs. Used in telemetry reporting.
      */
     class GridViewHolder(
         imageLoader: ImageLoader,
         override val browserTrayInteractor: BrowserTrayInteractor,
         store: TabsTrayStore,
         selectionHolder: SelectionHolder<TabSessionState>? = null,
-        itemView: View,
-        featureName: String
-    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, store, selectionHolder, featureName) {
+        itemView: View
+    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, store, selectionHolder) {
 
         private val closeButton: AppCompatImageButton = itemView.findViewById(R.id.mozac_browser_tabstray_close)
 
@@ -84,16 +82,14 @@ sealed class BrowserTabViewHolder(itemView: View) : RecyclerView.ViewHolder(item
      * @param selectionHolder [SelectionHolder]<[TabSessionState]> for helping with selecting
      * any number of displayed [TabSessionState]s.
      * @param itemView [View] that displays a "tab".
-     * @param featureName [String] representing the name of the feature displaying tabs. Used in telemetry reporting.
      */
     class ListViewHolder(
         imageLoader: ImageLoader,
         override val browserTrayInteractor: BrowserTrayInteractor,
         store: TabsTrayStore,
         selectionHolder: SelectionHolder<TabSessionState>? = null,
-        itemView: View,
-        featureName: String
-    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, store, selectionHolder, featureName) {
+        itemView: View
+    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, store, selectionHolder) {
         override val thumbnailSize: Int
             get() = max(
                 itemView.resources.getDimensionPixelSize(R.dimen.tab_tray_list_item_thumbnail_height),

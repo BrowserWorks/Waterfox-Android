@@ -7,13 +7,11 @@ package net.waterfox.android.tabstray.browser
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.appstate.AppAction.UpdateInactiveExpanded
 import net.waterfox.android.ext.potentialInactiveTabs
 import net.waterfox.android.utils.Settings
-import net.waterfox.android.GleanMetrics.TabsTray as TabsTrayMetrics
 
 /**
  * Contract for how all user interactions with the Inactive Tabs feature are to be handled.
@@ -70,25 +68,17 @@ class DefaultInactiveTabsController(
 ) : InactiveTabsController {
 
     override fun openInactiveTab(tab: TabSessionState) {
-        TabsTrayMetrics.openInactiveTab.add()
     }
 
     override fun closeInactiveTab(tab: TabSessionState) {
-        TabsTrayMetrics.closeInactiveTab.add()
     }
 
     override fun updateCardExpansion(isExpanded: Boolean) {
         appStore.dispatch(UpdateInactiveExpanded(isExpanded))
-
-        when (isExpanded) {
-            true -> TabsTrayMetrics.inactiveTabsExpanded.record(NoExtras())
-            false -> TabsTrayMetrics.inactiveTabsCollapsed.record(NoExtras())
-        }
     }
 
     override fun dismissAutoCloseDialog() {
         markDialogAsShown()
-        TabsTrayMetrics.autoCloseDimissed.record(NoExtras())
     }
 
     override fun enableInactiveTabsAutoClose() {
@@ -97,11 +87,9 @@ class DefaultInactiveTabsController(
         settings.closeTabsAfterOneWeek = false
         settings.closeTabsAfterOneDay = false
         settings.manuallyCloseTabs = false
-        TabsTrayMetrics.autoCloseTurnOnClicked.record(NoExtras())
     }
 
     override fun deleteAllInactiveTabs() {
-        TabsTrayMetrics.closeAllInactiveTabs.record(NoExtras())
         browserStore.state.potentialInactiveTabs.map { it.id }.let {
             tabsUseCases.removeTabs(it)
         }

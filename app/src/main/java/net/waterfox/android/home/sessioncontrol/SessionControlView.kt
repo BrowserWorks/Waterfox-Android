@@ -204,12 +204,10 @@ class SessionControlView(
         }
     }
 
-    fun update(state: AppState, shouldReportMetrics: Boolean = false) {
+    fun update(state: AppState) {
         if (state.shouldShowHomeOnboardingDialog(view.context.settings())) {
             interactor.showOnboardingDialog()
         }
-
-        if (shouldReportMetrics) interactor.reportSessionMetrics(state)
 
         sessionControlAdapter.submitList(state.toAdapterList(view.context.settings()))
     }

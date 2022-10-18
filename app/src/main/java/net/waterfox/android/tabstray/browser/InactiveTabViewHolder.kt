@@ -5,26 +5,16 @@
 package net.waterfox.android.tabstray.browser
 
 import android.view.View
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.platform.ComposeView
 import androidx.lifecycle.LifecycleOwner
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.ComposeViewHolder
-import net.waterfox.android.tabstray.TabsTrayFragment
-import net.waterfox.android.tabstray.TabsTrayInteractor
-import net.waterfox.android.tabstray.TabsTrayState
-import net.waterfox.android.tabstray.TabsTrayStore
-import net.waterfox.android.tabstray.TrayPagerAdapter
+import net.waterfox.android.tabstray.*
 import net.waterfox.android.tabstray.inactivetabs.InactiveTabsList
-import net.waterfox.android.GleanMetrics.TabsTray as TabsTrayMetrics
 
 /**
  * The [ComposeViewHolder] for displaying the section of inactive tabs in [TrayPagerAdapter].
@@ -53,10 +43,6 @@ class InactiveTabViewHolder(
         val showInactiveTabsAutoCloseDialog =
             components.settings.shouldShowInactiveTabsAutoCloseDialog(inactiveTabs.size)
         var showAutoClosePrompt by remember { mutableStateOf(showInactiveTabsAutoCloseDialog) }
-
-        if (showInactiveTabsAutoCloseDialog) {
-            TabsTrayMetrics.autoCloseSeen.record(NoExtras())
-        }
 
         if (inactiveTabs.isNotEmpty()) {
             InactiveTabsList(

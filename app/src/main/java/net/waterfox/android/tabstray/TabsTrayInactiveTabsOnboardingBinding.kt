@@ -24,8 +24,6 @@ import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.lib.state.helpers.AbstractBinding
 import mozilla.components.support.ktx.android.util.dpToPx
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.R
 import net.waterfox.android.browser.infobanner.InfoBanner
 import net.waterfox.android.databinding.ComponentTabstray2Binding
@@ -81,14 +79,12 @@ class TabsTrayInactiveTabsOnboardingBinding(
         popupBinding.closeInfoBanner.setOnClickListener {
             inactiveTabsDialog.dismiss()
             settings.shouldShowInactiveTabsOnboardingPopup = false
-            TabsTray.inactiveTabsCfrDismissed.record(NoExtras())
         }
 
         popupBinding.bannerInfoMessage.setOnClickListener {
             inactiveTabsDialog.dismiss()
             settings.shouldShowInactiveTabsOnboardingPopup = false
             navigationInteractor.onTabSettingsClicked()
-            TabsTray.inactiveTabsCfrSettings.record(NoExtras())
         }
 
         val messageText = context.getString(R.string.tab_tray_inactive_onboarding_message)
@@ -118,6 +114,5 @@ class TabsTrayInactiveTabsOnboardingBinding(
             setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
         inactiveTabsDialog.show()
-        TabsTray.inactiveTabsCfrVisible.record(NoExtras())
     }
 }

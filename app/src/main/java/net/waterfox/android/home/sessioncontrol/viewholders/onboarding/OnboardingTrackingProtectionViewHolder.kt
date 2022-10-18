@@ -6,7 +6,6 @@ package net.waterfox.android.home.sessioncontrol.viewholders.onboarding
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingTrackingProtectionBinding
 import net.waterfox.android.ext.components
@@ -49,20 +48,10 @@ class OnboardingTrackingProtectionViewHolder(view: View) : RecyclerView.ViewHold
 
         standardTrackingProtection.onClickListener {
             updateTrackingProtectionPolicy()
-            Onboarding.prefToggledTrackingProt.record(
-                Onboarding.PrefToggledTrackingProtExtra(
-                    Settings.STANDARD.name
-                )
-            )
         }
 
         strictTrackingProtection.onClickListener {
             updateTrackingProtectionPolicy()
-            Onboarding.prefToggledTrackingProt.record(
-                Onboarding.PrefToggledTrackingProtExtra(
-                    Settings.STRICT.name
-                )
-            )
         }
     }
 
@@ -82,7 +71,5 @@ class OnboardingTrackingProtectionViewHolder(view: View) : RecyclerView.ViewHold
 
     companion object {
         const val LAYOUT_ID = R.layout.onboarding_tracking_protection
-        // Tracking protection policy types used for telemetry
-        enum class Settings { STRICT, STANDARD }
     }
 }

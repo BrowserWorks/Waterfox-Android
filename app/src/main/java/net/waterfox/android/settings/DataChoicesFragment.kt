@@ -8,11 +8,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricServiceType
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getPreferenceKey
 import net.waterfox.android.ext.nav
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
@@ -22,25 +18,6 @@ import net.waterfox.android.ext.showToolbar
  */
 class DataChoicesFragment : PreferenceFragmentCompat() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        val context = requireContext()
-        preferenceManager.sharedPreferences.registerOnSharedPreferenceChangeListener(this) { _, key ->
-            if (key == getPreferenceKey(R.string.pref_key_telemetry)) {
-                if (context.settings().isTelemetryEnabled) {
-                    context.components.analytics.metrics.start(MetricServiceType.Data)
-                } else {
-                    context.components.analytics.metrics.stop(MetricServiceType.Data)
-                }
-                // Reset experiment identifiers on both opt-in and opt-out; it's likely
-                // that in future we will need to pass in the new telemetry client_id
-                // to this method when the user opts back in.
-                context.components.analytics.experiments.resetTelemetryIdentifiers()
-            }
-        }
-    }
-
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_data_collection))
@@ -49,15 +26,6 @@ class DataChoicesFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.data_choices_preferences, rootKey)
-
-        requirePreference<SwitchPreference>(R.string.pref_key_telemetry).apply {
-            isChecked = context.settings().isTelemetryEnabled
-
-            val appName = context.getString(R.string.app_name)
-            summary = context.getString(R.string.preferences_usage_data_description, appName)
-
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
     }
 
     private fun updateStudiesSection() {

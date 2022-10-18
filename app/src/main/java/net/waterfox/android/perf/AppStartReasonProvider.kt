@@ -13,8 +13,8 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
 import mozilla.components.support.base.log.logger.Logger
-import net.waterfox.android.GleanMetrics.Metrics
 import net.waterfox.android.android.DefaultActivityLifecycleCallbacks
+import net.waterfox.android.perf.AppStartReasonProvider.StartReason
 
 private val logger = Logger("AppStartReasonProvider")
 
@@ -71,7 +71,6 @@ class AppStartReasonProvider {
                     StartReason.TO_BE_DETERMINED -> StartReason.NON_ACTIVITY
                     StartReason.ACTIVITY -> reason /* the start reason is already known: do nothing. */
                     StartReason.NON_ACTIVITY -> {
-                        Metrics.startReasonProcessError.set(true)
                         logger.error("AppStartReasonProvider.Process...onCreate unexpectedly called twice")
                         reason
                     }
@@ -89,7 +88,6 @@ class AppStartReasonProvider {
                 StartReason.TO_BE_DETERMINED -> StartReason.ACTIVITY
                 StartReason.NON_ACTIVITY -> reason /* the start reason is already known: do nothing. */
                 StartReason.ACTIVITY -> {
-                    Metrics.startReasonActivityError.set(true)
                     logger.error("AppStartReasonProvider.Activity...onCreate unexpectedly called twice")
                     reason
                 }

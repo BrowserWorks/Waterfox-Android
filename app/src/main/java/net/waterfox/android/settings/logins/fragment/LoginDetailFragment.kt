@@ -7,12 +7,7 @@ package net.waterfox.android.settings.logins.fragment
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.InputType
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
@@ -20,21 +15,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import mozilla.components.lib.state.ext.consumeFrom
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.SecureFragment
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.StoreProvider
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.databinding.FragmentLoginDetailBinding
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.increaseTapArea
-import net.waterfox.android.ext.redirectToReAuth
-import net.waterfox.android.ext.settings
-import net.waterfox.android.ext.showToolbar
-import net.waterfox.android.ext.simplifiedUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.settings.logins.LoginsFragmentStore
 import net.waterfox.android.settings.logins.SavedLogin
 import net.waterfox.android.settings.logins.controller.SavedLoginsStorageController
@@ -183,7 +171,6 @@ class LoginDetailFragment : SecureFragment(R.layout.fragment_login_detail) {
     }
 
     private fun editLogin() {
-        Logins.openLoginEditor.record(NoExtras())
         val directions =
             LoginDetailFragmentDirections.actionLoginDetailFragmentToEditLoginFragment(
                 login!!
@@ -199,7 +186,6 @@ class LoginDetailFragment : SecureFragment(R.layout.fragment_login_detail) {
                     dialog.cancel()
                 }
                 setPositiveButton(R.string.dialog_delete_positive) { dialog: DialogInterface, _ ->
-                    Logins.deleteSavedLogin.record(NoExtras())
                     interactor.onDeleteLogin(args.savedLoginId)
                     dialog.dismiss()
                 }
@@ -221,7 +207,6 @@ class LoginDetailFragment : SecureFragment(R.layout.fragment_login_detail) {
             val clipboard = view.context.components.clipboardHandler
             clipboard.text = value
             showCopiedSnackbar(view.context.getString(snackbarText))
-            Logins.copyLogin.record(NoExtras())
         }
 
         private fun showCopiedSnackbar(copiedItem: String) {

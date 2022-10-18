@@ -4,35 +4,19 @@
 
 package net.waterfox.android.share
 
-import android.content.ActivityNotFoundException
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
-import android.content.Intent.ACTION_SEND
-import android.content.Intent.EXTRA_SUBJECT
-import android.content.Intent.EXTRA_TEXT
-import android.content.Intent.FLAG_ACTIVITY_MULTIPLE_TASK
-import android.content.Intent.FLAG_ACTIVITY_NEW_DOCUMENT
+import android.content.*
+import android.content.Intent.*
 import android.net.Uri
 import androidx.annotation.VisibleForTesting
 import androidx.navigation.NavController
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.concept.sync.Device
 import mozilla.components.concept.sync.TabData
 import mozilla.components.feature.accounts.push.SendTabUseCases
 import mozilla.components.feature.share.RecentAppsStorage
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.ktx.kotlin.isExtensionUrl
-import net.waterfox.android.GleanMetrics.SyncAccount
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.ext.nav
@@ -136,7 +120,6 @@ class DefaultShareController(
     }
 
     override fun handleShareToDevice(device: Device) {
-        SyncAccount.sendTab.record(NoExtras())
         shareToDevicesWithRetry { sendTabUseCases.sendToDeviceAsync(device.id, shareData.toTabData()) }
     }
 
@@ -145,7 +128,6 @@ class DefaultShareController(
     }
 
     override fun handleSignIn() {
-        SyncAccount.signInToSendTab.record(NoExtras())
         val directions =
             ShareFragmentDirections.actionGlobalTurnOnSync(padSnackbar = true)
         navController.nav(R.id.shareFragment, directions)

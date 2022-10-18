@@ -13,8 +13,6 @@ import mozilla.components.browser.state.action.HistoryMetadataAction
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.storage.HistoryMetadataStorage
 import mozilla.components.feature.tabs.TabsUseCases.SelectOrAddUseCase
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.RecentSearches
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
@@ -114,7 +112,6 @@ class DefaultRecentVisitsController(
         scope.launch {
             storage.deleteHistoryMetadata(groupTitle)
         }
-        RecentSearches.groupDeleted.record(NoExtras())
     }
 
     /**

@@ -20,9 +20,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import mozilla.components.lib.state.ext.consumeFrom
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.ktx.android.view.hideKeyboard
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.R
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.databinding.FragmentEditLoginBinding
@@ -30,13 +28,9 @@ import net.waterfox.android.ext.components
 import net.waterfox.android.ext.redirectToReAuth
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.toEditable
-import net.waterfox.android.settings.logins.LoginsAction
-import net.waterfox.android.settings.logins.LoginsFragmentStore
-import net.waterfox.android.settings.logins.SavedLogin
+import net.waterfox.android.settings.logins.*
 import net.waterfox.android.settings.logins.controller.SavedLoginsStorageController
-import net.waterfox.android.settings.logins.createInitialLoginsListState
 import net.waterfox.android.settings.logins.interactor.EditLoginInteractor
-import net.waterfox.android.settings.logins.togglePasswordReveal
 
 /**
  * Displays the editable saved login information for a single website
@@ -288,7 +282,6 @@ class EditLoginFragment : Fragment(R.layout.fragment_edit_login) {
                 binding.usernameText.text.toString(),
                 binding.passwordText.text.toString()
             )
-            Logins.saveEditedLogin.record(NoExtras())
             true
         }
         else -> false

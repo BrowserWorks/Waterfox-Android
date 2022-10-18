@@ -20,17 +20,10 @@ import androidx.core.view.isVisible
 import mozilla.components.browser.state.state.CustomTabSessionState
 import mozilla.components.concept.engine.content.blocking.TrackerLog
 import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentTrackingProtectionPanelBinding
 import net.waterfox.android.ext.addUnderline
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.CROSS_SITE_TRACKING_COOKIES
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.CRYPTOMINERS
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.FINGERPRINTERS
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.REDIRECT_TRACKERS
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.SOCIAL_MEDIA_TRACKERS
-import net.waterfox.android.trackingprotection.TrackingProtectionCategory.TRACKING_CONTENT
+import net.waterfox.android.trackingprotection.TrackingProtectionCategory.*
 
 /**
  * Interface for the TrackingProtectionPanelViewInteractor. This interface is implemented by objects that want
@@ -258,7 +251,6 @@ class TrackingProtectionPanelView(
 
     override fun onClick(v: View) {
         val category = getCategory(v) ?: return
-        TrackingProtection.etpTrackerList.record(NoExtras())
         shouldFocusAccessibilityView = true
         interactor.openDetails(category, categoryBlocked = !isLoaded(v))
     }

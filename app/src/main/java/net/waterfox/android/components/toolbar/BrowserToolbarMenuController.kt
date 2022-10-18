@@ -26,12 +26,7 @@ import mozilla.components.feature.session.SessionFeature
 import mozilla.components.feature.top.sites.DefaultTopSitesStorage
 import mozilla.components.feature.top.sites.PinnedSiteStorage
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
-import net.waterfox.android.GleanMetrics.Collections
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.ExperimentsDefaultBrowser
-import net.waterfox.android.GleanMetrics.ReaderMode
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
@@ -39,14 +34,10 @@ import net.waterfox.android.browser.BrowserAnimator
 import net.waterfox.android.browser.BrowserFragmentDirections
 import net.waterfox.android.browser.readermode.ReaderModeController
 import net.waterfox.android.collections.SaveCollectionStep
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.TabCollectionStorage
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.accounts.AccountState
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getRootView
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.navigateSafe
-import net.waterfox.android.ext.openSetDefaultBrowserOption
+import net.waterfox.android.ext.*
 import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.utils.Do
 import net.waterfox.android.utils.Settings
@@ -92,7 +83,6 @@ class DefaultBrowserToolbarMenuController(
     override fun handleToolbarItemInteraction(item: ToolbarMenu.Item) {
         val sessionUseCases = activity.components.useCases.sessionUseCases
         val customTabUseCases = activity.components.useCases.customTabsUseCases
-        trackToolbarItemInteraction(item)
 
         Do exhaustive when (item) {
             // TODO: These can be removed for https://github.com/mozilla-mobile/fenix/issues/17870
@@ -165,7 +155,6 @@ class DefaultBrowserToolbarMenuController(
             }
             is ToolbarMenu.Item.CustomizeReaderView -> {
                 readerModeController.showControls()
-                ReaderMode.appearance.record(NoExtras())
             }
             is ToolbarMenu.Item.Back -> {
                 if (item.viewHistory) {
@@ -309,12 +298,6 @@ class DefaultBrowserToolbarMenuController(
                 )
             }
             is ToolbarMenu.Item.SaveToCollection -> {
-                Collections.saveButton.record(
-                    Collections.SaveButtonExtra(
-                        TELEMETRY_BROWSER_IDENTIFIER
-                    )
-                )
-
                 currentSession?.let { currentSession ->
                     val directions =
                         BrowserFragmentDirections.actionGlobalCollectionCreationFragment(
@@ -359,7 +342,6 @@ class DefaultBrowserToolbarMenuController(
                 )
             }
             is ToolbarMenu.Item.SetDefaultBrowser -> {
-                ExperimentsDefaultBrowser.toolbarMenuClicked.record(NoExtras())
                 activity.openSetDefaultBrowserOption()
             }
             is ToolbarMenu.Item.RemoveFromTopSites -> {
@@ -401,69 +383,5 @@ class DefaultBrowserToolbarMenuController(
                 currentSession.content.url
             }
         }
-    }
-
-    @Suppress("ComplexMethod")
-    private fun trackToolbarItemInteraction(item: ToolbarMenu.Item) {
-        when (item) {
-            is ToolbarMenu.Item.OpenInWaterfox ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("open_in_waterfox"))
-            is ToolbarMenu.Item.InstallPwaToHomeScreen ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("add_to_homescreen"))
-            is ToolbarMenu.Item.Quit ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("quit"))
-            is ToolbarMenu.Item.OpenInApp ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("open_in_app"))
-            is ToolbarMenu.Item.CustomizeReaderView ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("reader_mode_appearance"))
-            is ToolbarMenu.Item.Back ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("back"))
-            is ToolbarMenu.Item.Forward ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("forward"))
-            is ToolbarMenu.Item.Reload ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("reload"))
-            is ToolbarMenu.Item.Stop ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("stop"))
-            is ToolbarMenu.Item.Share ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("share"))
-            is ToolbarMenu.Item.Settings ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("settings"))
-            is ToolbarMenu.Item.RequestDesktop ->
-                if (item.isChecked) {
-                    Events.browserMenuAction.record(Events.BrowserMenuActionExtra("desktop_view_on"))
-                } else {
-                    Events.browserMenuAction.record(Events.BrowserMenuActionExtra("desktop_view_off"))
-                }
-            is ToolbarMenu.Item.FindInPage ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("find_in_page"))
-            is ToolbarMenu.Item.SaveToCollection ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("save_to_collection"))
-            is ToolbarMenu.Item.AddToTopSites ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("add_to_top_sites"))
-            is ToolbarMenu.Item.AddToHomeScreen ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("add_to_homescreen"))
-            is ToolbarMenu.Item.SyncAccount ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("sync_account"))
-            is ToolbarMenu.Item.Bookmark ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("bookmark"))
-            is ToolbarMenu.Item.AddonsManager ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("addons_manager"))
-            is ToolbarMenu.Item.Bookmarks ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("bookmarks"))
-            is ToolbarMenu.Item.History ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("history"))
-            is ToolbarMenu.Item.Downloads ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("downloads"))
-            is ToolbarMenu.Item.NewTab ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("new_tab"))
-            is ToolbarMenu.Item.SetDefaultBrowser ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("set_default_browser"))
-            is ToolbarMenu.Item.RemoveFromTopSites ->
-                Events.browserMenuAction.record(Events.BrowserMenuActionExtra("remove_from_top_sites"))
-        }
-    }
-
-    companion object {
-        internal const val TELEMETRY_BROWSER_IDENTIFIER = "browserMenu"
     }
 }

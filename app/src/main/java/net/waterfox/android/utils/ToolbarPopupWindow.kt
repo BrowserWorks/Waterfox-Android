@@ -14,17 +14,15 @@ import android.widget.PopupWindow
 import androidx.annotation.VisibleForTesting
 import androidx.core.view.isVisible
 import com.google.android.material.snackbar.Snackbar
+import mozilla.components.browser.state.selector.findCustomTab
 import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.store.BrowserStore
+import mozilla.components.support.base.log.logger.Logger
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.databinding.BrowserToolbarPopupWindowBinding
 import net.waterfox.android.ext.components
 import java.lang.ref.WeakReference
-import mozilla.components.browser.state.selector.findCustomTab
-import mozilla.components.service.glean.private.NoExtras
-import mozilla.components.support.base.log.logger.Logger
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.databinding.BrowserToolbarPopupWindowBinding
 
 object ToolbarPopupWindow {
     fun show(
@@ -78,7 +76,6 @@ object ToolbarPopupWindow {
                         .setText(context.getString(R.string.browser_toolbar_url_copied_to_clipboard_snackbar))
                         .show()
                 }
-                Events.copyUrlTapped.record(NoExtras())
             }
         }
 

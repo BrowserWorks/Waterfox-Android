@@ -16,8 +16,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Addresses
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.ext.components
 import net.waterfox.android.settings.address.controller.DefaultAddressManagementController
@@ -63,11 +61,9 @@ class AddressManagementFragment : Fragment() {
                         addresses = addresses.value ?: emptyList(),
                         onAddressClick = {
                             interactor.onSelectAddress(it)
-                            Addresses.managementAddressTapped.record(NoExtras())
                         },
                         onAddAddressButtonClick = {
                             interactor.onAddAddressButtonClick()
-                            Addresses.managementAddTapped.record(NoExtras())
                         }
                     )
                 }

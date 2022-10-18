@@ -7,7 +7,6 @@ package net.waterfox.android.gecko
 import android.content.Context
 import mozilla.components.browser.engine.gecko.autofill.GeckoAutocompleteStorageDelegate
 import mozilla.components.browser.engine.gecko.ext.toContentBlockingSetting
-import mozilla.components.browser.engine.gecko.glean.GeckoAdapter
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy
 import mozilla.components.concept.storage.CreditCardsAddressesStorage
 import mozilla.components.concept.storage.LoginsStorage
@@ -54,7 +53,6 @@ object GeckoProvider {
 
         val runtimeSettings = builder
             .crashHandler(CrashHandlerService::class.java)
-            .telemetryDelegate(GeckoAdapter())
             .contentBlocking(policy.toContentBlockingSetting())
             .debugLogging(Config.channel.isDebug)
             .aboutConfigEnabled(Config.channel.isDebug)

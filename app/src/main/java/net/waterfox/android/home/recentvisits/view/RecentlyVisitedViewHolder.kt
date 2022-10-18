@@ -10,9 +10,6 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.LifecycleOwner
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.History
-import net.waterfox.android.GleanMetrics.RecentlyVisitedHomepage
 import net.waterfox.android.R
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.ComposeViewHolder
@@ -62,16 +59,9 @@ class RecentlyVisitedViewHolder(
             onRecentVisitClick = { recentlyVisitedItem, pageNumber ->
                 when (recentlyVisitedItem) {
                     is RecentHistoryHighlight -> {
-                        RecentlyVisitedHomepage.historyHighlightOpened.record(NoExtras())
                         interactor.onRecentHistoryHighlightClicked(recentlyVisitedItem)
                     }
                     is RecentHistoryGroup -> {
-                        RecentlyVisitedHomepage.searchGroupOpened.record(NoExtras())
-                        History.recentSearchesTapped.record(
-                            History.RecentSearchesTappedExtra(
-                                pageNumber.toString()
-                            )
-                        )
                         interactor.onRecentHistoryGroupClicked(recentlyVisitedItem)
                     }
                 }
