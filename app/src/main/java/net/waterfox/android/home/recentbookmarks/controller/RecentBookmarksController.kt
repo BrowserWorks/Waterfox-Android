@@ -11,7 +11,6 @@ import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.concept.engine.EngineSession
 import mozilla.components.concept.engine.EngineSession.LoadUrlFlags.Companion.ALLOW_JAVASCRIPT_URL
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.RecentBookmarks
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
@@ -59,11 +58,9 @@ class DefaultRecentBookmarksController(
             from = BrowserDirection.FromHome,
             flags = EngineSession.LoadUrlFlags.select(ALLOW_JAVASCRIPT_URL)
         )
-        RecentBookmarks.bookmarkClicked.add()
     }
 
     override fun handleShowAllBookmarksClicked() {
-        RecentBookmarks.showAllBookmarks.add()
         dismissSearchDialogIfDisplayed()
         navController.navigate(
             HomeFragmentDirections.actionGlobalBookmarkFragment(BookmarkRoot.Mobile.id)

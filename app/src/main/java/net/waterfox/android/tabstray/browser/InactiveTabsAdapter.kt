@@ -18,15 +18,13 @@ import net.waterfox.android.tabstray.TabsTrayStore
  * @param tabsTrayStore [TabsTrayStore] used to listen for changes to [TabsTrayState.inactiveTabs].
  * @param inactiveTabsInteractor [InactiveTabsInteractor] used to respond to interactions with the inactive tabs header
  * and the auto close dialog.
- * @param featureName [String] representing the name of the inactive tabs feature for telemetry reporting.
  */
 @Suppress("LongParameterList")
 class InactiveTabsAdapter(
     private val lifecycleOwner: LifecycleOwner,
     private val tabsTrayStore: TabsTrayStore,
-    private val inactiveTabsInteractor: InactiveTabsInteractor,
-    override val featureName: String,
-) : RecyclerView.Adapter<InactiveTabViewHolder>(), FeatureNameHolder {
+    private val inactiveTabsInteractor: InactiveTabsInteractor
+) : RecyclerView.Adapter<InactiveTabViewHolder>() {
 
     override fun getItemCount(): Int = 1
 

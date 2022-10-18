@@ -39,8 +39,7 @@ class TabsTouchHelper(
     interactionDelegate: TabsTray.Delegate,
     onViewHolderTouched: OnViewHolderTouched = { true },
     onViewHolderDraw: OnViewHolderToDraw = { true },
-    featureNameHolder: FeatureNameHolder,
-    delegate: Callback = TouchCallback(interactionDelegate, onViewHolderTouched, onViewHolderDraw, featureNameHolder),
+    delegate: Callback = TouchCallback(interactionDelegate, onViewHolderTouched, onViewHolderDraw),
 ) : ItemTouchHelper(delegate)
 
 /**
@@ -52,8 +51,7 @@ class TouchCallback(
     delegate: TabsTray.Delegate,
     private val onViewHolderTouched: OnViewHolderTouched,
     private val onViewHolderDraw: OnViewHolderToDraw,
-    featureNameHolder: FeatureNameHolder,
-    onRemove: (TabSessionState) -> Unit = { delegate.onTabClosed(it, featureNameHolder.featureName) }
+    onRemove: (TabSessionState) -> Unit = { delegate.onTabClosed(it) }
 ) : TabTouchCallback(onRemove) {
 
     override fun getMovementFlags(

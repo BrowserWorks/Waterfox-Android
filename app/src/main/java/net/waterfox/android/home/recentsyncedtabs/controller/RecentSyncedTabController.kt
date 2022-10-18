@@ -6,7 +6,6 @@ package net.waterfox.android.home.recentsyncedtabs.controller
 
 import androidx.navigation.NavController
 import mozilla.components.feature.tabs.TabsUseCases
-import net.waterfox.android.GleanMetrics.RecentSyncedTabs
 import net.waterfox.android.R
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
@@ -41,13 +40,11 @@ class DefaultRecentSyncedTabController(
     private val accessPoint: TabsTrayAccessPoint,
 ) : RecentSyncedTabController {
     override fun handleRecentSyncedTabClick(tab: RecentSyncedTab) {
-        RecentSyncedTabs.recentSyncedTabOpened[tab.deviceType.name.lowercase()].add()
         addNewTabUseCase.invoke(tab.url)
         navController.navigate(R.id.browserFragment)
     }
 
     override fun handleSyncedTabShowAllClicked() {
-        RecentSyncedTabs.showAllSyncedTabsClicked.add()
         navController.navigate(
             HomeFragmentDirections.actionGlobalTabsTrayFragment(
                 page = Page.SyncedTabs,

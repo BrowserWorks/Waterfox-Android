@@ -6,12 +6,7 @@ package net.waterfox.android.library.recentlyclosed
 
 import android.os.Bundle
 import android.text.SpannableString
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.flow.map
@@ -20,9 +15,7 @@ import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flowScoped
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.RecentlyClosedTabs
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
@@ -66,7 +59,6 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
         return when (item.itemId) {
             R.id.close_history -> {
                 close()
-                RecentlyClosedTabs.menuClose.record(NoExtras())
                 true
             }
             R.id.share_history_multi_select -> {
@@ -92,7 +84,6 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-        RecentlyClosedTabs.opened.record(NoExtras())
     }
 
     override fun onCreateView(

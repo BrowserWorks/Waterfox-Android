@@ -4,39 +4,26 @@
 
 package net.waterfox.android.components
 
-import android.app.Application
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import mozilla.components.lib.crash.CrashReporter
-import mozilla.components.lib.crash.service.CrashReporterService
-import mozilla.components.lib.crash.service.GleanCrashReporterService
-import mozilla.components.lib.crash.service.MozillaSocorroService
 import mozilla.components.lib.crash.sentry.SentryService
+import mozilla.components.lib.crash.service.CrashReporterService
+import mozilla.components.lib.crash.service.MozillaSocorroService
 import mozilla.components.service.nimbus.NimbusApi
-import net.waterfox.android.BuildConfig
-import net.waterfox.android.Config
-import net.waterfox.android.GleanMetrics.Messaging
-import net.waterfox.android.HomeActivity
-import net.waterfox.android.R
-import net.waterfox.android.ReleaseChannel
-import net.waterfox.android.components.metrics.GleanMetricsService
-import net.waterfox.android.components.metrics.MetricController
+import net.waterfox.android.*
 import net.waterfox.android.experiments.createNimbus
-import net.waterfox.android.ext.settings
 import net.waterfox.android.gleanplumb.CustomAttributeProvider
-import net.waterfox.android.gleanplumb.OnDiskMessageMetadataStorage
 import net.waterfox.android.gleanplumb.NimbusMessagingStorage
+import net.waterfox.android.gleanplumb.OnDiskMessageMetadataStorage
 import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.lazyMonitored
-import org.mozilla.geckoview.BuildConfig.MOZ_APP_BUILDID
-import org.mozilla.geckoview.BuildConfig.MOZ_APP_VENDOR
-import org.mozilla.geckoview.BuildConfig.MOZ_APP_VERSION
-import org.mozilla.geckoview.BuildConfig.MOZ_UPDATE_CHANNEL
+import org.mozilla.geckoview.BuildConfig.*
 
 /**
- * Component group for all functionality related to analytics e.g. crash reporting and telemetry.
+ * Component group for all functionality related to analytics e.g. crash reporting.
  */
 class Analytics(
     private val context: Context
@@ -99,7 +86,6 @@ class Analytics(
         CrashReporter(
             context = context,
             services = services,
-            telemetryServices = listOf(GleanCrashReporterService(context)),
             shouldPrompt = CrashReporter.Prompt.ALWAYS,
             promptConfiguration = CrashReporter.PromptConfiguration(
                 appName = context.getString(R.string.app_name),
@@ -107,16 +93,6 @@ class Analytics(
             ),
             enabled = true,
             nonFatalCrashIntent = pendingIntent
-        )
-    }
-
-    val metrics: MetricController by lazyMonitored {
-        MetricController.create(
-            listOf(
-                GleanMetricsService(context),
-            ),
-            isDataTelemetryEnabled = { context.settings().isTelemetryEnabled },
-            context.settings()
         )
     }
 
@@ -129,9 +105,7 @@ class Analytics(
             context = context,
             metadataStorage = OnDiskMessageMetadataStorage(context),
             gleanPlumb = experiments,
-            reportMalformedMessage = {
-                Messaging.malformed.record(Messaging.MalformedExtra(it))
-            },
+            reportMalformedMessage = {},
             messagingFeature = FxNimbus.features.messaging,
             attributeProvider = CustomAttributeProvider,
         )

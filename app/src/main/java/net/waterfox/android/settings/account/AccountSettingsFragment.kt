@@ -16,11 +16,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.preference.CheckBoxPreference
-import androidx.preference.EditTextPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceCategory
-import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.*
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import mozilla.components.concept.sync.AccountObserver
@@ -34,18 +30,11 @@ import mozilla.components.service.fxa.sync.SyncReason
 import mozilla.components.service.fxa.sync.SyncStatusObserver
 import mozilla.components.service.fxa.sync.getLastSynced
 import mozilla.components.support.ktx.android.content.getColorFromAttr
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.SyncAccount
 import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.StoreProvider
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getPreferenceKey
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.secure
-import net.waterfox.android.ext.settings
-import net.waterfox.android.ext.showToolbar
+import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.ext.*
 import net.waterfox.android.settings.requirePreference
 
 @SuppressWarnings("TooManyFunctions", "LargeClass")
@@ -78,11 +67,6 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_account_settings))
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        SyncAccount.opened.record(NoExtras())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -327,7 +311,6 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
      */
     private fun syncNow() {
         viewLifecycleOwner.lifecycleScope.launch {
-            SyncAccount.syncNow.record(NoExtras())
             // Trigger a sync.
             requireComponents.backgroundServices.accountManager.syncNow(SyncReason.User)
             // Poll for device events & update devices.

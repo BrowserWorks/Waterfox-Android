@@ -10,15 +10,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import mozilla.components.lib.state.Middleware
 import mozilla.components.lib.state.MiddlewareContext
-import net.waterfox.android.GleanMetrics.Messaging
 import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.ConsumeMessageToShow
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.Evaluate
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.MessageClicked
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.MessageDismissed
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.Restore
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.UpdateMessageToShow
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.UpdateMessages
+import net.waterfox.android.components.appstate.AppAction.MessagingAction.*
 import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.gleanplumb.Message
 import net.waterfox.android.gleanplumb.NimbusMessagingStorage
@@ -69,7 +62,6 @@ class MessagingMiddleware(
         oldMessage: Message,
         context: AppStoreMiddlewareContext
     ) {
-        sendShownMessageTelemetry(oldMessage.id)
         val newMetadata = oldMessage.metadata.copy(
             displayCount = oldMessage.metadata.displayCount + 1,
             lastTimeShown = now()
@@ -80,7 +72,6 @@ class MessagingMiddleware(
         val newMessages = if (newMetadata.displayCount < oldMessage.maxDisplayCount) {
             updateMessage(context, oldMessage, newMessage)
         } else {
-            sendExpiredMessageTelemetry(newMessage.id)
             consumeMessageToShowIfNeeded(context, oldMessage)
             removeMessage(context, oldMessage)
         }
@@ -88,16 +79,6 @@ class MessagingMiddleware(
         coroutineScope.launch {
             messagingStorage.updateMetadata(newMetadata)
         }
-    }
-
-    @VisibleForTesting
-    internal fun sendShownMessageTelemetry(messageId: String) {
-        Messaging.messageShown.record(Messaging.MessageShownExtra(messageId))
-    }
-
-    @VisibleForTesting
-    internal fun sendExpiredMessageTelemetry(messageId: String) {
-        Messaging.messageExpired.record(Messaging.MessageExpiredExtra(messageId))
     }
 
     @VisibleForTesting

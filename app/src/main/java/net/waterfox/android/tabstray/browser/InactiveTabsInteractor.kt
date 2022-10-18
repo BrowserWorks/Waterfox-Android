@@ -5,7 +5,6 @@
 package net.waterfox.android.tabstray.browser
 
 import mozilla.components.browser.state.state.TabSessionState
-import net.waterfox.android.tabstray.TrayPagerAdapter
 
 /**
  * Interactor for all things related to inactive tabs in the tabs tray.
@@ -91,7 +90,7 @@ class DefaultInactiveTabsInteractor(
      */
     override fun onTabClicked(tab: TabSessionState) {
         controller.openInactiveTab(tab)
-        browserInteractor.onTabSelected(tab, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME)
+        browserInteractor.onTabSelected(tab)
     }
 
     /**
@@ -99,7 +98,7 @@ class DefaultInactiveTabsInteractor(
      */
     override fun onTabClosed(tab: TabSessionState) {
         controller.closeInactiveTab(tab)
-        browserInteractor.onTabClosed(tab, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME)
+        browserInteractor.onTabClosed(tab)
     }
 
     /**

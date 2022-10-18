@@ -11,8 +11,6 @@ import android.os.StrictMode
 import android.speech.RecognizerIntent
 import androidx.appcompat.app.AppCompatActivity
 import mozilla.components.support.locale.LocaleManager
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.SearchWidget
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.IntentReceiverActivity
 import net.waterfox.android.ext.components
@@ -77,7 +75,6 @@ class VoiceSearchActivity : AppCompatActivity() {
                 }
             )
         }
-        SearchWidget.voiceButton.record(NoExtras())
 
         startActivityForResult(intentSpeech, SPEECH_REQUEST_CODE)
     }

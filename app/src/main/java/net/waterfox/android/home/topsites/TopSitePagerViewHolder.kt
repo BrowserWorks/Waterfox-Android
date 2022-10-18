@@ -10,7 +10,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import mozilla.components.feature.top.sites.TopSite
-import net.waterfox.android.GleanMetrics.TopSites
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentTopSitesPagerBinding
 import net.waterfox.android.home.sessioncontrol.AdapterItem
@@ -29,14 +28,6 @@ class TopSitePagerViewHolder(
 
     private val topSitesPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
-            if (currentPage != position) {
-                TopSites.swipeCarousel.record(
-                    TopSites.SwipeCarouselExtra(
-                        position.toString()
-                    )
-                )
-            }
-
             pageIndicator.setSelection(position)
             currentPage = position
         }

@@ -8,15 +8,14 @@ import android.content.Context
 import android.content.DialogInterface
 import android.view.View
 import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
-import mozilla.components.concept.storage.Address
-import android.widget.ArrayAdapter
 import mozilla.components.browser.state.search.RegionState
+import mozilla.components.concept.storage.Address
 import mozilla.components.concept.storage.UpdatableAddressFields
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.android.view.showKeyboard
-import net.waterfox.android.GleanMetrics.Addresses
 import net.waterfox.android.R
 import net.waterfox.android.databinding.FragmentAddressEditorBinding
 import net.waterfox.android.ext.placeCursorAtEnd
@@ -103,10 +102,8 @@ class AddressEditorView(
 
         if (address != null) {
             interactor.onUpdateAddress(address.guid, addressFields)
-            Addresses.updated.add()
         } else {
             interactor.onSaveAddress(addressFields)
-            Addresses.saved.add()
         }
     }
 
@@ -118,7 +115,6 @@ class AddressEditorView(
             }
             setPositiveButton(R.string.addressess_confirm_dialog_ok_button) { _, _ ->
                 interactor.onDeleteAddress(guid)
-                Addresses.deleted.add()
             }
             create()
         }.show()

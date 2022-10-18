@@ -17,13 +17,9 @@ import mozilla.components.concept.base.profiler.Profiler
 import mozilla.components.concept.engine.mediasession.MediaSession.PlaybackState
 import mozilla.components.feature.tabs.TabsUseCases
 import mozilla.components.lib.state.DelicateAction
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Tab
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
-import net.waterfox.android.components.metrics.Event
 import net.waterfox.android.ext.DEFAULT_ACTIVE_DAYS
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.tabstray.ext.isActiveDownload
@@ -119,7 +115,7 @@ class DefaultTabsTrayController(
     private val selectTabPosition: (Int, Boolean) -> Unit,
     private val dismissTray: () -> Unit,
     private val showUndoSnackbarForTab: (Boolean) -> Unit,
-    @VisibleForTesting
+    @get:VisibleForTesting
     internal val showCancelledDownloadWarning: (downloadCount: Int, tabId: String?, source: String?) -> Unit,
 
 ) : TabsTrayController {
@@ -135,7 +131,6 @@ class DefaultTabsTrayController(
             "DefaultTabTrayController.onNewTabTapped",
             startTime
         )
-        sendNewTabEvent(isPrivate)
     }
 
     override fun handleTrayScrollingToPosition(position: Int, smoothScroll: Boolean) {
@@ -190,7 +185,6 @@ class DefaultTabsTrayController(
                     dismissTabsTrayAndNavigateHome(tabId)
                 }
             }
-            TabsTray.closedExistingTab.record(TabsTray.ClosedExistingTabExtra(source ?: "unknown"))
         }
     }
 
@@ -201,8 +195,6 @@ class DefaultTabsTrayController(
      * This method has no effect for tabs that do not exist.
      */
     override fun handleMultipleTabsDeletion(tabs: Collection<TabSessionState>) {
-        TabsTray.closeSelectedTabs.record(TabsTray.CloseSelectedTabsExtra(tabCount = tabs.size))
-
         val isPrivate = tabs.any { it.content.private }
 
         // If user closes all the tabs from selected tabs page dismiss tray and navigate home.
@@ -262,15 +254,6 @@ class DefaultTabsTrayController(
     }
 
     @VisibleForTesting
-    internal fun sendNewTabEvent(isPrivateModeSelected: Boolean) {
-        if (isPrivateModeSelected) {
-            TabsTray.newPrivateTabTapped.record(NoExtras())
-        } else {
-            TabsTray.newTabTapped.record(NoExtras())
-        }
-    }
-
-    @VisibleForTesting
     internal fun dismissTabsTrayAndNavigateHome(sessionId: String) {
         dismissTray()
         navigateToHomeAndDeleteSession(sessionId)
@@ -279,12 +262,10 @@ class DefaultTabsTrayController(
     override fun handleMediaClicked(tab: SessionState) {
         when (tab.mediaSessionState?.playbackState) {
             PlaybackState.PLAYING -> {
-                Tab.mediaPause.record(NoExtras())
                 tab.mediaSessionState?.controller?.pause()
             }
 
             PlaybackState.PAUSED -> {
-                Tab.mediaPlay.record(NoExtras())
                 tab.mediaSessionState?.controller?.play()
             }
             else -> throw AssertionError(

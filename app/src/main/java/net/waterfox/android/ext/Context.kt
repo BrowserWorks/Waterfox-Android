@@ -17,10 +17,9 @@ import androidx.annotation.StringRes
 import mozilla.components.support.locale.LocaleManager
 import net.waterfox.android.WaterfoxApplication
 import net.waterfox.android.components.Components
-import net.waterfox.android.components.metrics.MetricController
 import net.waterfox.android.settings.advanced.getSelectedLocale
 import java.lang.String.format
-import java.util.Locale
+import java.util.*
 
 /**
  * Get the BrowserApplication object from a context.
@@ -33,12 +32,6 @@ val Context.application: WaterfoxApplication
  */
 val Context.components: Components
     get() = application.components
-
-/**
- * Helper function to get the MetricController off of context.
- */
-val Context.metrics: MetricController
-    get() = this.components.analytics.metrics
 
 fun Context.asActivity() = (this as? ContextThemeWrapper)?.baseContext as? Activity
     ?: this as? Activity

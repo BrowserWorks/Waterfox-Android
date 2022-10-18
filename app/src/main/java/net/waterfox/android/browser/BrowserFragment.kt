@@ -24,19 +24,13 @@ import mozilla.components.feature.contextmenu.ContextMenuCandidate
 import mozilla.components.feature.readerview.ReaderViewFeature
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.tabs.WindowFeature
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
-import net.waterfox.android.GleanMetrics.ReaderMode
 import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.TabCollectionStorage
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.toolbar.ToolbarMenu
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.settings
+import net.waterfox.android.ext.*
 import net.waterfox.android.shortcut.PwaOnboardingObserver
 import net.waterfox.android.theme.ThemeManager
 
@@ -203,10 +197,6 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
                     components.core.store,
                     binding.readerViewControlsBar
                 ) { available, active ->
-                    if (available) {
-                        ReaderMode.available.record(NoExtras())
-                    }
-
                     readerModeAvailable = available
                     readerModeAction.setSelected(active)
                     safeInvalidateBrowserToolbarView()

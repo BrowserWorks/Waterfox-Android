@@ -7,8 +7,6 @@ package net.waterfox.android.tabstray
 import androidx.annotation.VisibleForTesting
 import mozilla.components.lib.state.Middleware
 import mozilla.components.lib.state.MiddlewareContext
-import net.waterfox.android.GleanMetrics.Metrics
-import net.waterfox.android.GleanMetrics.TabsTray
 
 /**
  * [Middleware] that reacts to various [TabsTrayAction]s.
@@ -28,16 +26,7 @@ class TabsTrayMiddleware : Middleware<TabsTrayState, TabsTrayAction> {
             is TabsTrayAction.UpdateInactiveTabs -> {
                 if (shouldReportInactiveTabMetrics) {
                     shouldReportInactiveTabMetrics = false
-
-                    TabsTray.hasInactiveTabs.record(TabsTray.HasInactiveTabsExtra(action.tabs.size))
-                    Metrics.inactiveTabsCount.set(action.tabs.size.toLong())
                 }
-            }
-            is TabsTrayAction.EnterSelectMode -> {
-                TabsTray.enterMultiselectMode.record(TabsTray.EnterMultiselectModeExtra(false))
-            }
-            is TabsTrayAction.AddSelectTab -> {
-                TabsTray.enterMultiselectMode.record(TabsTray.EnterMultiselectModeExtra(true))
             }
             else -> {
                 // no-op

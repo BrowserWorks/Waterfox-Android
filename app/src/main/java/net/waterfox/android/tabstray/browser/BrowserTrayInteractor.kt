@@ -8,8 +8,6 @@ import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.tabstray.TabsTray
 import mozilla.components.feature.tabs.TabsUseCases
 import mozilla.components.support.base.feature.UserInteractionHandler
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Collections
 import net.waterfox.android.selection.SelectionHolder
 import net.waterfox.android.selection.SelectionInteractor
 import net.waterfox.android.tabstray.TabsTrayAction
@@ -195,7 +193,6 @@ class DefaultBrowserTrayInteractor(
         holder: SelectionHolder<TabSessionState>
     ): Boolean {
         return if (holder.selectedItems.isEmpty()) {
-            Collections.longPress.record(NoExtras())
             select(tab)
             true
         } else {

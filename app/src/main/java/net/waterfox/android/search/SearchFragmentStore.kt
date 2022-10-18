@@ -15,7 +15,6 @@ import mozilla.components.lib.state.Store
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.components.Components
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.utils.Settings
 
 /**
@@ -110,7 +109,7 @@ data class SearchFragmentState(
     val showSessionSuggestions: Boolean,
     val tabId: String?,
     val pastedText: String? = null,
-    val searchAccessPoint: MetricsUtils.Source,
+    val searchAccessPoint: SearchEventSource,
     val clipboardHasUrl: Boolean = false
 ) : State
 
@@ -122,7 +121,7 @@ fun createInitialSearchFragmentState(
     components: Components,
     tabId: String?,
     pastedText: String?,
-    searchAccessPoint: MetricsUtils.Source
+    searchAccessPoint: SearchEventSource
 ): SearchFragmentState {
     val settings = components.settings
     val tab = tabId?.let { components.core.store.state.findTab(it) }

@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.AppTheme
-import net.waterfox.android.GleanMetrics.ToolbarSettings
 import net.waterfox.android.R
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.ext.requireComponents
@@ -84,11 +82,6 @@ class CustomizationFragment : PreferenceFragmentCompat() {
     private fun bindDarkTheme() {
         radioDarkTheme = requirePreference(R.string.pref_key_dark_theme)
         radioDarkTheme.onClickListener {
-            AppTheme.darkThemeSelected.record(
-                AppTheme.DarkThemeSelectedExtra(
-                    "SETTINGS"
-                )
-            )
             setNewTheme(AppCompatDelegate.MODE_NIGHT_YES)
         }
     }
@@ -114,22 +107,7 @@ class CustomizationFragment : PreferenceFragmentCompat() {
 
     private fun setupToolbarCategory() {
         val topPreference = requirePreference<RadioButtonPreference>(R.string.pref_key_toolbar_top)
-        topPreference.onClickListener {
-            ToolbarSettings.changedPosition.record(
-                ToolbarSettings.ChangedPositionExtra(
-                    Position.TOP.name
-                )
-            )
-        }
-
         val bottomPreference = requirePreference<RadioButtonPreference>(R.string.pref_key_toolbar_bottom)
-        bottomPreference.onClickListener {
-            ToolbarSettings.changedPosition.record(
-                ToolbarSettings.ChangedPositionExtra(
-                    Position.BOTTOM.name
-                )
-            )
-        }
 
         val toolbarPosition = requireContext().settings().toolbarPosition
         topPreference.setCheckedWithoutClickListener(toolbarPosition == ToolbarPosition.TOP)
@@ -152,10 +130,5 @@ class CustomizationFragment : PreferenceFragmentCompat() {
             isChecked = context.settings().isSwipeToolbarToSwitchTabsEnabled
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }
-    }
-
-    companion object {
-        // Used to send telemetry data about toolbar position changes
-        enum class Position { TOP, BOTTOM }
     }
 }

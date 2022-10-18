@@ -6,13 +6,8 @@ package net.waterfox.android.home.pocket
 
 import androidx.annotation.VisibleForTesting
 import androidx.navigation.NavController
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.service.pocket.PocketStory
-import mozilla.components.service.pocket.PocketStory.PocketRecommendedStory
-import mozilla.components.service.pocket.PocketStory.PocketSponsoredStory
-import mozilla.components.service.pocket.ext.getCurrentFlightImpressions
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Pocket
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
@@ -84,26 +79,10 @@ internal class DefaultPocketStoriesController(
         storyPosition: Pair<Int, Int>
     ) {
         appStore.dispatch(AppAction.PocketStoriesShown(listOf(storyShown)))
-
-        when (storyShown) {
-            is PocketSponsoredStory -> {
-                Pocket.homeRecsSpocShown.record(
-                    Pocket.HomeRecsSpocShownExtra(
-                        position = "${storyPosition.first}x${storyPosition.second}",
-                        timesShown = storyShown.getCurrentFlightImpressions().size.inc().toString()
-                    )
-                )
-            }
-            else -> {
-                // no-op
-                // The telemetry for PocketRecommendedStory is sent separately for bulk updates.
-            }
-        }
     }
 
     override fun handleStoriesShown(storiesShown: List<PocketStory>) {
         appStore.dispatch(AppAction.PocketStoriesShown(storiesShown))
-        Pocket.homeRecsShown.record(NoExtras())
     }
 
     override fun handleCategoryClick(categoryClicked: PocketRecommendedStoriesCategory) {
@@ -112,13 +91,6 @@ internal class DefaultPocketStoriesController(
         // First check whether the category is clicked to be deselected.
         if (initialCategoriesSelections.map { it.name }.contains(categoryClicked.name)) {
             appStore.dispatch(AppAction.DeselectPocketStoriesCategory(categoryClicked.name))
-            Pocket.homeRecsCategoryClicked.record(
-                Pocket.HomeRecsCategoryClickedExtra(
-                    categoryName = categoryClicked.name,
-                    newState = "deselected",
-                    selectedTotal = initialCategoriesSelections.size.toString()
-                )
-            )
             return
         }
 
@@ -136,14 +108,6 @@ internal class DefaultPocketStoriesController(
 
         // Finally update the selection.
         appStore.dispatch(AppAction.SelectPocketStoriesCategory(categoryClicked.name))
-
-        Pocket.homeRecsCategoryClicked.record(
-            Pocket.HomeRecsCategoryClickedExtra(
-                categoryName = categoryClicked.name,
-                newState = "selected",
-                selectedTotal = initialCategoriesSelections.size.toString()
-            )
-        )
     }
 
     override fun handleStoryClicked(
@@ -152,37 +116,16 @@ internal class DefaultPocketStoriesController(
     ) {
         dismissSearchDialogIfDisplayed()
         homeActivity.openToBrowserAndLoad(storyClicked.url, true, BrowserDirection.FromHome)
-
-        when (storyClicked) {
-            is PocketRecommendedStory -> {
-                Pocket.homeRecsStoryClicked.record(
-                    Pocket.HomeRecsStoryClickedExtra(
-                        position = "${storyPosition.first}x${storyPosition.second}",
-                        timesShown = storyClicked.timesShown.inc().toString()
-                    )
-                )
-            }
-            is PocketSponsoredStory -> {
-                Pocket.homeRecsSpocClicked.record(
-                    Pocket.HomeRecsSpocClickedExtra(
-                        position = "${storyPosition.first}x${storyPosition.second}",
-                        timesShown = storyClicked.getCurrentFlightImpressions().size.inc().toString()
-                    )
-                )
-            }
-        }
     }
 
     override fun handleLearnMoreClicked(link: String) {
         dismissSearchDialogIfDisplayed()
         homeActivity.openToBrowserAndLoad(link, true, BrowserDirection.FromHome)
-        Pocket.homeRecsLearnMoreClicked.record(NoExtras())
     }
 
     override fun handleDiscoverMoreClicked(link: String) {
         dismissSearchDialogIfDisplayed()
         homeActivity.openToBrowserAndLoad(link, true, BrowserDirection.FromHome)
-        Pocket.homeRecsDiscoverClicked.record(NoExtras())
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)

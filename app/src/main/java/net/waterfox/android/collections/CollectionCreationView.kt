@@ -20,8 +20,6 @@ import androidx.transition.TransitionManager
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.android.view.showKeyboard
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Collections
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentCollectionCreationBinding
 import net.waterfox.android.ext.components
@@ -110,8 +108,6 @@ class CollectionCreationView(
     }
 
     private fun updateForSelectTabs(state: CollectionCreationState) {
-        Collections.tabSelectOpened.record(NoExtras())
-
         binding.tabList.isClickable = true
 
         binding.backButton.apply {

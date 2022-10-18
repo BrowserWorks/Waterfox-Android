@@ -29,8 +29,7 @@ class NormalBrowserTrayList @JvmOverloads constructor(
             onViewHolderTouched = {
                 it is TabViewHolder && swipeToDelete.isSwipeable
             },
-            onViewHolderDraw = { context.components.settings.gridTabView.not() },
-            featureNameHolder = concatAdapter.browserAdapter
+            onViewHolderDraw = { context.components.settings.gridTabView.not() }
         )
     }
 

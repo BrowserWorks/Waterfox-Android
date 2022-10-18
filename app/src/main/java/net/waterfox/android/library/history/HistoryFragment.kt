@@ -9,12 +9,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.SpannableString
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
@@ -27,35 +22,23 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flowScoped
 import mozilla.components.service.fxa.sync.SyncReason
 import mozilla.components.support.base.feature.UserInteractionHandler
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.BrowserDirection
-import net.waterfox.android.FeatureFlags
-import net.waterfox.android.HomeActivity
-import net.waterfox.android.NavHostActivity
-import net.waterfox.android.R
+import net.waterfox.android.*
 import net.waterfox.android.addons.showSnackBar
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.components.history.DefaultPagedHistoryProvider
 import net.waterfox.android.databinding.FragmentHistoryBinding
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getRootView
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.setTextColor
-import net.waterfox.android.ext.toShortUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.library.LibraryPageFragment
 import net.waterfox.android.utils.allowUndo
-import net.waterfox.android.GleanMetrics.History as GleanHistory
 
 @SuppressWarnings("TooManyFunctions", "LargeClass")
 class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
@@ -156,8 +139,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         super.onCreate(savedInstanceState)
 
         historyProvider = DefaultPagedHistoryProvider(requireComponents.core.historyStorage)
-
-        GleanHistory.opened.record(NoExtras())
 
         setHasOptionsMenu(true)
     }
@@ -267,7 +248,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         }
         R.id.open_history_in_new_tabs_multi_select -> {
             openItemsInNewTab { selectedItem ->
-                GleanHistory.openedItemsInNewTabs.record(NoExtras())
                 (selectedItem as? History.Regular)?.url ?: (selectedItem as? History.Metadata)?.url
             }
 
@@ -277,7 +257,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         }
         R.id.open_history_in_private_tabs_multi_select -> {
             openItemsInNewTab(private = true) { selectedItem ->
-                GleanHistory.openedItemsInNewTabs.record(NoExtras())
                 (selectedItem as? History.Regular)?.url ?: (selectedItem as? History.Metadata)?.url
             }
 
@@ -291,7 +270,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
             true
         }
         R.id.history_search -> {
-            GleanHistory.searchIconTapped.record(NoExtras())
             historyInteractor.onSearch()
             true
         }
@@ -337,8 +315,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     }
 
     private fun openItem(item: History.Regular) {
-        GleanHistory.openedItem.record(NoExtras())
-
         (activity as HomeActivity).openToBrowserAndLoad(
             searchTermOrURL = item.url,
             newTab = true,
@@ -353,7 +329,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     }
 
     private fun share(data: List<ShareData>) {
-        GleanHistory.shared.record(NoExtras())
         val directions = HistoryFragmentDirections.actionGlobalShareFragment(
             data = data.toTypedArray()
         )
@@ -386,7 +361,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
                 setView(layout)
 
                 setNegativeButton(R.string.delete_browsing_data_prompt_cancel) { dialog: DialogInterface, _ ->
-                    GleanHistory.removePromptCancelled.record(NoExtras())
                     dialog.cancel()
                 }
                 setPositiveButton(R.string.delete_browsing_data_prompt_allow) { dialog: DialogInterface, _ ->
@@ -399,8 +373,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
                     historyInteractor.onDeleteTimeRangeConfirmed(selectedTimeFrame)
                     dialog.dismiss()
                 }
-
-                GleanHistory.removePromptOpened.record(NoExtras())
             }.create()
     }
 

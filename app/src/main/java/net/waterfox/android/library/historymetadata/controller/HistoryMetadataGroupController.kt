@@ -18,14 +18,12 @@ import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.ext.components
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.library.history.History
 import net.waterfox.android.library.history.toPendingDeletionHistory
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragment.DeleteAllConfirmationDialogFragment
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentAction
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentDirections
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentStore
-import net.waterfox.android.GleanMetrics.History as GleanHistory
 
 /**
  * An interface that handles the view manipulation of the history metadata group in the History
@@ -109,7 +107,6 @@ class DefaultHistoryMetadataGroupController(
     override fun handleOpen(item: History.Metadata) {
         selectOrAddUseCase.invoke(item.url, item.historyMetadataKey)
         navController.navigate(R.id.browserFragment)
-        GleanHistory.searchTermGroupOpenTab.record(NoExtras())
     }
 
     override fun handleSelect(item: History.Metadata) {
@@ -155,7 +152,6 @@ class DefaultHistoryMetadataGroupController(
                 items.forEach {
                     store.dispatch(HistoryMetadataGroupFragmentAction.Delete(it))
                     context.components.core.historyStorage.deleteVisitsFor(it.url)
-                    GleanHistory.searchTermGroupRemoveTab.record(NoExtras())
                 }
                 // The method is called for both single and multiple items.
                 // In case all items have been deleted, we have to disband the search group.
@@ -181,7 +177,6 @@ class DefaultHistoryMetadataGroupController(
             browserStore.dispatch(
                 HistoryMetadataAction.DisbandSearchGroupAction(searchTerm = searchTerm)
             )
-            GleanHistory.searchTermGroupRemoveAll.record(NoExtras())
             allDeletedSnackbar.invoke()
             launch(Main) {
                 navController.popBackStack(R.id.historyFragment, false)

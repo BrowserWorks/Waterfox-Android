@@ -14,10 +14,8 @@ import androidx.core.content.pm.PackageInfoCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.BuildConfig
-import net.waterfox.android.GleanMetrics.Events
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.crashes.CrashListActivity
@@ -25,11 +23,7 @@ import net.waterfox.android.databinding.FragmentAboutBinding
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
 import net.waterfox.android.settings.SupportUtils
-import net.waterfox.android.settings.about.AboutItemType.LICENSING_INFO
-import net.waterfox.android.settings.about.AboutItemType.PRIVACY_NOTICE
-import net.waterfox.android.settings.about.AboutItemType.RIGHTS
-import net.waterfox.android.settings.about.AboutItemType.SUPPORT
-import net.waterfox.android.settings.about.AboutItemType.WHATS_NEW
+import net.waterfox.android.settings.about.AboutItemType.*
 import net.waterfox.android.utils.Do
 import net.waterfox.android.whatsnew.WhatsNew
 import org.mozilla.geckoview.BuildConfig as GeckoViewBuildConfig
@@ -196,11 +190,8 @@ class AboutFragment : Fragment(), AboutPageListener {
         Do exhaustive when (item) {
             is AboutItem.ExternalLink -> {
                 when (item.type) {
-                    WHATS_NEW -> {
-                        WhatsNew.userViewedWhatsNew(requireContext())
-                        Events.whatsNewTapped.record(NoExtras())
-                    }
-                    SUPPORT, PRIVACY_NOTICE, LICENSING_INFO, RIGHTS -> {} // no telemetry needed
+                    WHATS_NEW -> WhatsNew.userViewedWhatsNew(requireContext())
+                    SUPPORT, PRIVACY_NOTICE, LICENSING_INFO, RIGHTS -> Unit
                 }
 
                 openLinkInNormalTab(item.url)

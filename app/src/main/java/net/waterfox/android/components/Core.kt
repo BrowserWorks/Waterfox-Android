@@ -45,11 +45,8 @@ import mozilla.components.feature.readerview.ReaderViewMiddleware
 import mozilla.components.feature.recentlyclosed.RecentlyClosedMiddleware
 import mozilla.components.feature.recentlyclosed.RecentlyClosedTabsStorage
 import mozilla.components.feature.search.ext.createApplicationSearchEngine
-import mozilla.components.feature.search.middleware.AdsTelemetryMiddleware
 import mozilla.components.feature.search.middleware.SearchMiddleware
 import mozilla.components.feature.search.region.RegionMiddleware
-import mozilla.components.feature.search.telemetry.ads.AdsTelemetry
-import mozilla.components.feature.search.telemetry.incontent.InContentTelemetry
 import mozilla.components.feature.session.HistoryDelegate
 import mozilla.components.feature.session.middleware.LastAccessMiddleware
 import mozilla.components.feature.session.middleware.undo.UndoMiddleware
@@ -73,14 +70,9 @@ import mozilla.components.service.pocket.Profile
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
 import mozilla.components.service.sync.logins.SyncableLoginsStorage
 import mozilla.components.support.base.worker.Frequency
-import net.waterfox.android.AppRequestInterceptor
-import net.waterfox.android.BuildConfig
-import net.waterfox.android.Config
-import net.waterfox.android.IntentReceiverActivity
-import net.waterfox.android.R
+import net.waterfox.android.*
 import net.waterfox.android.components.search.SearchMigration
 import net.waterfox.android.downloads.DownloadService
-import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.gecko.GeckoProvider
 import net.waterfox.android.historymetadata.DefaultHistoryMetadataService
@@ -91,10 +83,9 @@ import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.StrictModeManager
 import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.settings.SupportUtils
-import net.waterfox.android.telemetry.TelemetryMiddleware
 import net.waterfox.android.utils.getUndoDelay
 import org.mozilla.geckoview.GeckoRuntime
-import java.util.UUID
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**
@@ -230,7 +221,6 @@ class Core(
                 RecentlyClosedMiddleware(recentlyClosedTabsStorage, RECENTLY_CLOSED_MAX),
                 DownloadMiddleware(context, DownloadService::class.java),
                 ReaderViewMiddleware(),
-                TelemetryMiddleware(context.settings()),
                 ThumbnailsMiddleware(thumbnailStorage),
                 UndoMiddleware(context.getUndoDelay()),
                 RegionMiddleware(context, locationService),
@@ -241,7 +231,6 @@ class Core(
                 ),
                 RecordingDevicesMiddleware(context),
                 PromptMiddleware(),
-                AdsTelemetryMiddleware(adsTelemetry),
                 LastMediaAccessMiddleware(),
                 HistoryMetadataMiddleware(historyMetadataService),
             ) + if (tabsPrioritizationEnable) {
@@ -274,12 +263,6 @@ class Core(
         ).apply {
             // Install the "icons" WebExtension to automatically load icons for every visited website.
             icons.install(engine, this)
-
-            // Install the "ads" WebExtension to get the links in an partner page.
-            adsTelemetry.install(engine, this)
-
-            // Install the "cookies" WebExtension and tracks user interaction with SERPs.
-            searchTelemetry.install(engine, this)
 
             WebNotificationFeature(
                 context, engine, icons, R.drawable.ic_status_logo,
@@ -314,18 +297,6 @@ class Core(
      */
     val icons by lazyMonitored {
         BrowserIcons(context, client)
-    }
-
-    val metrics by lazyMonitored {
-        context.components.analytics.metrics
-    }
-
-    val adsTelemetry by lazyMonitored {
-        AdsTelemetry()
-    }
-
-    val searchTelemetry by lazyMonitored {
-        InContentTelemetry()
     }
 
     /**

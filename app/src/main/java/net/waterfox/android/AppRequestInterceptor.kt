@@ -12,7 +12,6 @@ import mozilla.components.browser.errorpages.ErrorPages
 import mozilla.components.browser.errorpages.ErrorType
 import mozilla.components.concept.engine.EngineSession
 import mozilla.components.concept.engine.request.RequestInterceptor
-import net.waterfox.android.GleanMetrics.ErrorPage
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.isOnline
 import java.lang.ref.WeakReference
@@ -62,8 +61,6 @@ class AppRequestInterceptor(
     ): RequestInterceptor.ErrorResponse? {
         val improvedErrorType = improveErrorType(errorType)
         val riskLevel = getRiskLevel(improvedErrorType)
-
-        ErrorPage.visitedError.record(ErrorPage.VisitedErrorExtra(improvedErrorType.name))
 
         val errorPageUri = ErrorPages.createUrlEncodedErrorPage(
             context = context,

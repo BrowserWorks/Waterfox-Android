@@ -7,7 +7,6 @@ package net.waterfox.android.settings.logins.fragment
 import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.showToolbar
@@ -33,13 +32,6 @@ class SavedLoginsSettingFragment : PreferenceFragmentCompat() {
         val preferenceSave = requirePreference<RadioButtonPreference>(R.string.pref_key_save_logins)
         preferenceSave.onPreferenceChangeListener = object : SharedPreferenceUpdater() {
             override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                if (newValue == true) {
-                    Logins.saveLoginsSettingChanged.record(
-                        Logins.SaveLoginsSettingChangedExtra(
-                            Setting.ASK_TO_SAVE.name
-                        )
-                    )
-                }
                 // We want to reload the current session here so we can try to fill the current page
                 context?.components?.useCases?.sessionUseCases?.reload?.invoke()
                 return super.onPreferenceChange(preference, newValue)
@@ -52,23 +44,11 @@ class SavedLoginsSettingFragment : PreferenceFragmentCompat() {
         val preferenceNeverSave = requirePreference<RadioButtonPreference>(R.string.pref_key_never_save_logins)
         preferenceNeverSave.onPreferenceChangeListener = object : SharedPreferenceUpdater() {
             override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                if (newValue == true) {
-                    Logins.saveLoginsSettingChanged.record(
-                        Logins.SaveLoginsSettingChangedExtra(
-                            Setting.NEVER_SAVE.name
-                        )
-                    )
-                }
                 // We want to reload the current session here so we don't save any currently inserted login
                 context?.components?.useCases?.sessionUseCases?.reload?.invoke()
                 return super.onPreferenceChange(preference, newValue)
             }
         }
         return preferenceNeverSave
-    }
-
-    companion object {
-        // Setting describing the approach of saving logins, used for telemetry
-        enum class Setting { NEVER_SAVE, ASK_TO_SAVE }
     }
 }

@@ -9,8 +9,6 @@ import androidx.navigation.Navigation
 import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceClickListener
 import androidx.preference.PreferenceFragmentCompat
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Autoplay
 import net.waterfox.android.R
 import net.waterfox.android.ext.getPreferenceKey
 import net.waterfox.android.ext.settings
@@ -71,11 +69,6 @@ class SitePermissionsFragment : PreferenceFragmentCompat() {
     private fun navigateToPhoneFeature(phoneFeature: PhoneFeature) {
         val directions = SitePermissionsFragmentDirections
             .actionSitePermissionsToManagePhoneFeatures(phoneFeature)
-
-        if (phoneFeature == PhoneFeature.AUTOPLAY_AUDIBLE) {
-            Autoplay.visitedSetting.record(NoExtras())
-        }
-
         Navigation.findNavController(requireView()).navigate(directions)
     }
 }

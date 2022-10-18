@@ -34,19 +34,11 @@ import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.support.ktx.android.content.getColorFromAttr
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.android.view.showKeyboard
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.BookmarksManagement
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.databinding.FragmentEditBookmarkBinding
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getRootView
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.placeCursorAtEnd
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.setToolbarColors
-import net.waterfox.android.ext.toShortUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.library.bookmarks.BookmarksSharedViewModel
 import net.waterfox.android.library.bookmarks.friendlyRootTitle
 
@@ -209,7 +201,6 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
                     // Use fragment's lifecycle; the view may be gone by the time dialog is interacted with.
                     lifecycleScope.launch(IO) {
                         requireComponents.core.bookmarksStorage.deleteNode(args.guidToEdit)
-                        BookmarksManagement.removed.record(NoExtras())
 
                         launch(Main) {
                             Navigation.findNavController(requireActivity(), R.id.container)
@@ -249,15 +240,8 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
         viewLifecycleOwner.lifecycleScope.launch(IO) {
             try {
                 requireComponents.let { components ->
-                    if (title != bookmarkNode?.title || url != bookmarkNode?.url) {
-                        BookmarksManagement.edited.record(NoExtras())
-                    }
                     val parentGuid = sharedViewModel.selectedFolder?.guid ?: bookmarkNode!!.parentGuid
                     val parentChanged = initialParentGuid != parentGuid
-                    // Only track the 'moved' event if new parent was selected.
-                    if (parentChanged) {
-                        BookmarksManagement.moved.record(NoExtras())
-                    }
                     components.core.bookmarksStorage.updateNode(
                         args.guidToEdit,
                         BookmarkInfo(

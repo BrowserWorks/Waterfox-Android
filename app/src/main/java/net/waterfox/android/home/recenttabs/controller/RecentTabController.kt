@@ -9,12 +9,9 @@ import androidx.annotation.VisibleForTesting.PRIVATE
 import androidx.navigation.NavController
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.tabs.TabsUseCases.SelectTabUseCase
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.RecentTabs
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.ext.inProgressMediaTab
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recenttabs.interactor.RecentTabInteractor
@@ -54,19 +51,12 @@ class DefaultRecentTabsController(
 ) : RecentTabController {
 
     override fun handleRecentTabClicked(tabId: String) {
-        if (tabId == store.state.inProgressMediaTab?.id) {
-            RecentTabs.inProgressMediaTabOpened.record(NoExtras())
-        } else {
-            RecentTabs.recentTabOpened.record(NoExtras())
-        }
-
         selectTabUseCase.invoke(tabId)
         navController.navigate(R.id.browserFragment)
     }
 
     override fun handleRecentTabShowAllClicked() {
         dismissSearchDialogIfDisplayed()
-        RecentTabs.showAllClicked.record(NoExtras())
         navController.navigate(HomeFragmentDirections.actionGlobalTabsTrayFragment())
     }
 

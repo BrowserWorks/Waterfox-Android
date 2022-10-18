@@ -5,7 +5,6 @@
 package net.waterfox.android.components
 
 import mozilla.components.support.utils.RunWhenReadyQueue
-import net.waterfox.android.perf.ColdStartupDurationTelemetry
 import net.waterfox.android.perf.VisualCompletenessQueue
 import net.waterfox.android.perf.lazyMonitored
 
@@ -14,5 +13,4 @@ import net.waterfox.android.perf.lazyMonitored
  */
 class PerformanceComponent {
     val visualCompletenessQueue by lazyMonitored { VisualCompletenessQueue(RunWhenReadyQueue()) }
-    val coldStartupDurationTelemetry by lazyMonitored { ColdStartupDurationTelemetry() }
 }

@@ -9,7 +9,6 @@ import android.os.Build.VERSION.SDK_INT
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.RecyclerView
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingThemePickerBinding
 import net.waterfox.android.ext.components
@@ -40,20 +39,10 @@ class OnboardingThemePickerViewHolder(view: View) : RecyclerView.ViewHolder(view
         radioDarkTheme.addIllustration(binding.themeDarkImage)
 
         binding.themeDarkImage.setOnClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.DARK.name
-                )
-            )
             radioDarkTheme.performClick()
         }
 
         binding.themeLightImage.setOnClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.LIGHT.name
-                )
-            )
             radioLightTheme.performClick()
         }
 
@@ -62,38 +51,18 @@ class OnboardingThemePickerViewHolder(view: View) : RecyclerView.ViewHolder(view
         binding.clickableRegionAutomatic.contentDescription = "$automaticTitle $automaticSummary"
 
         binding.clickableRegionAutomatic.setOnClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.FOLLOW_DEVICE.name
-                )
-            )
             radioFollowDeviceTheme.performClick()
         }
 
         radioLightTheme.onClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.LIGHT.name
-                )
-            )
             setNewTheme(AppCompatDelegate.MODE_NIGHT_NO)
         }
 
         radioDarkTheme.onClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.DARK.name
-                )
-            )
             setNewTheme(AppCompatDelegate.MODE_NIGHT_YES)
         }
 
         radioFollowDeviceTheme.onClickListener {
-            Onboarding.prefToggledThemePicker.record(
-                Onboarding.PrefToggledThemePickerExtra(
-                    Theme.FOLLOW_DEVICE.name
-                )
-            )
             if (SDK_INT >= Build.VERSION_CODES.P) {
                 setNewTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
             } else {
@@ -128,7 +97,5 @@ class OnboardingThemePickerViewHolder(view: View) : RecyclerView.ViewHolder(view
 
     companion object {
         const val LAYOUT_ID = R.layout.onboarding_theme_picker
-        // The theme used for telemetry
-        enum class Theme { LIGHT, DARK, FOLLOW_DEVICE }
     }
 }

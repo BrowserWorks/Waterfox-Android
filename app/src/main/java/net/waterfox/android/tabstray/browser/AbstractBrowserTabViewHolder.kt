@@ -29,16 +29,9 @@ import mozilla.components.browser.toolbar.MAX_URI_LENGTH
 import mozilla.components.concept.base.images.ImageLoadRequest
 import mozilla.components.concept.base.images.ImageLoader
 import mozilla.components.concept.engine.mediasession.MediaSession
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.Tab
 import net.waterfox.android.R
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.increaseTapArea
-import net.waterfox.android.ext.removeAndDisable
-import net.waterfox.android.ext.removeTouchDelegate
-import net.waterfox.android.ext.showAndEnable
-import net.waterfox.android.ext.toShortUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.selection.SelectionHolder
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
@@ -49,7 +42,6 @@ import net.waterfox.android.tabstray.TabsTrayStore
  * @param itemView [View] that displays a "tab".
  * @param imageLoader [ImageLoader] used to load tab thumbnails.
  * @param trayStore [TabsTrayStore] containing the complete state of tabs tray and methods to update that.
- * @param featureName [String] representing the name of the feature displaying tabs. Used in telemetry reporting.
  * @param store [BrowserStore] containing the complete state of the browser and methods to update that.
  */
 @Suppress("LongParameterList")
@@ -58,7 +50,6 @@ abstract class AbstractBrowserTabViewHolder(
     private val imageLoader: ImageLoader,
     private val trayStore: TabsTrayStore,
     private val selectionHolder: SelectionHolder<TabSessionState>?,
-    internal val featureName: String,
     private val store: BrowserStore = itemView.context.components.core.store,
 ) : SelectableTabViewHolder(itemView) {
 
@@ -106,7 +97,7 @@ abstract class AbstractBrowserTabViewHolder(
             setSelectionInteractor(tab, selectionHolder, browserTrayInteractor)
         } else {
             itemView.setOnClickListener {
-                browserTrayInteractor.onTabSelected(tab, featureName)
+                browserTrayInteractor.onTabSelected(tab)
             }
         }
 
@@ -189,12 +180,10 @@ abstract class AbstractBrowserTabViewHolder(
             setOnClickListener {
                 when (sessionState?.mediaSessionState?.playbackState) {
                     MediaSession.PlaybackState.PLAYING -> {
-                        Tab.mediaPause.record(NoExtras())
                         sessionState.mediaSessionState?.controller?.pause()
                     }
 
                     MediaSession.PlaybackState.PAUSED -> {
-                        Tab.mediaPlay.record(NoExtras())
                         sessionState.mediaSessionState?.controller?.play()
                     }
                     else -> throw AssertionError(
@@ -215,7 +204,7 @@ abstract class AbstractBrowserTabViewHolder(
         interactor: BrowserTrayInteractor
     ) {
         itemView.setOnClickListener {
-            interactor.onMultiSelectClicked(item, holder, featureName)
+            interactor.onMultiSelectClicked(item, holder, null)
         }
 
         itemView.setOnLongClickListener {

@@ -511,10 +511,6 @@
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Learn more</string>
 
-    <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Usage and technical data</string>
-    <!-- Preference description for usage and technical data collection -->
-    <string name="preferences_usage_data_description">Shares performance, usage, hardware and customization data about your browser with Waterfox Projectto help us make %1$s better</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Studies</string>
     <!-- Summary for studies preferences -->
@@ -1833,9 +1829,5 @@
     <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
     <string name="pocket_stories_sponsor_indication">Sponsored</string>
 
-    <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off.-->
-    <string name="experiments_snackbar">Enable telemetry to send data.</string>
-    <!-- Snackbar button text to navigate to telemetry settings.-->
-    <string name="experiments_snackbar_button">Go to settings</string>
     <string name="waterfox_suggest_header">Waterfox Suggest</string>
 </resources>

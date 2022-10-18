@@ -17,18 +17,12 @@ import mozilla.components.browser.state.state.selectedOrDefaultSearchEngine
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.engine.EngineSession.LoadUrlFlags
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.support.ktx.kotlin.isUrl
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.SearchShortcuts
-import net.waterfox.android.GleanMetrics.UnifiedSearch
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
-import net.waterfox.android.components.Core
 import net.waterfox.android.components.Core.Companion.BOOKMARKS_SEARCH_ENGINE_ID
 import net.waterfox.android.components.Core.Companion.HISTORY_SEARCH_ENGINE_ID
 import net.waterfox.android.components.Core.Companion.TABS_SEARCH_ENGINE_ID
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.crashes.CrashListActivity
 import net.waterfox.android.ext.navigateSafe
 import net.waterfox.android.ext.settings
@@ -115,21 +109,6 @@ class SearchDialogController(
             engine = searchEngine,
             requestDesktopMode = fromHomeScreen && activity.settings().openNextTabInDesktopMode
         )
-
-        if (url.isUrl() || searchEngine == null) {
-            Events.enteredUrl.record(Events.EnteredUrlExtra(autocomplete = false))
-        } else {
-            val searchAccessPoint = when (fragmentStore.state.searchAccessPoint) {
-                MetricsUtils.Source.NONE -> MetricsUtils.Source.ACTION
-                else -> fragmentStore.state.searchAccessPoint
-            }
-
-            MetricsUtils.recordSearchMetrics(
-                searchEngine,
-                searchEngine == store.state.search.selectedOrDefaultSearchEngine,
-                searchAccessPoint
-            )
-        }
     }
 
     override fun handleEditingCancelled() {
@@ -167,8 +146,6 @@ class SearchDialogController(
             from = BrowserDirection.FromSearchDialog,
             flags = flags
         )
-
-        Events.enteredUrl.record(Events.EnteredUrlExtra(autocomplete = false))
     }
 
     override fun handleSearchTermsTapped(searchTerms: String) {
@@ -183,33 +160,20 @@ class SearchDialogController(
             engine = searchEngine,
             forceSearch = true
         )
-
-        val searchAccessPoint = when (fragmentStore.state.searchAccessPoint) {
-            MetricsUtils.Source.NONE -> MetricsUtils.Source.SUGGESTION
-            else -> fragmentStore.state.searchAccessPoint
-        }
-
-        if (searchEngine != null) {
-            MetricsUtils.recordSearchMetrics(
-                searchEngine,
-                searchEngine == store.state.search.selectedOrDefaultSearchEngine,
-                searchAccessPoint
-            )
-        }
     }
 
     override fun handleSearchShortcutEngineSelected(searchEngine: SearchEngine) {
         focusToolbar()
 
         when {
-            searchEngine.type == SearchEngine.Type.APPLICATION && searchEngine.id == Core.HISTORY_SEARCH_ENGINE_ID -> {
+            searchEngine.type == SearchEngine.Type.APPLICATION && searchEngine.id == HISTORY_SEARCH_ENGINE_ID -> {
                 fragmentStore.dispatch(SearchFragmentAction.SearchHistoryEngineSelected(searchEngine))
             }
             searchEngine.type == SearchEngine.Type.APPLICATION
-                && searchEngine.id == Core.BOOKMARKS_SEARCH_ENGINE_ID -> {
+                && searchEngine.id == BOOKMARKS_SEARCH_ENGINE_ID -> {
                 fragmentStore.dispatch(SearchFragmentAction.SearchBookmarksEngineSelected(searchEngine))
             }
-            searchEngine.type == SearchEngine.Type.APPLICATION && searchEngine.id == Core.TABS_SEARCH_ENGINE_ID -> {
+            searchEngine.type == SearchEngine.Type.APPLICATION && searchEngine.id == TABS_SEARCH_ENGINE_ID -> {
                 fragmentStore.dispatch(SearchFragmentAction.SearchTabsEngineSelected(searchEngine))
             }
             searchEngine == store.state.search.selectedOrDefaultSearchEngine -> {
@@ -218,24 +182,6 @@ class SearchDialogController(
             else -> {
                 fragmentStore.dispatch(SearchFragmentAction.SearchShortcutEngineSelected(searchEngine, settings))
             }
-        }
-
-        val engine = when (searchEngine.type) {
-            SearchEngine.Type.CUSTOM -> "custom"
-            SearchEngine.Type.APPLICATION ->
-                when (searchEngine.id) {
-                    HISTORY_SEARCH_ENGINE_ID -> "history"
-                    BOOKMARKS_SEARCH_ENGINE_ID -> "bookmarks"
-                    TABS_SEARCH_ENGINE_ID -> "tabs"
-                    else -> "application"
-                }
-            else -> searchEngine.name
-        }
-
-        if (settings.showUnifiedSearchFeature) {
-            UnifiedSearch.engineSelected.record(UnifiedSearch.EngineSelectedExtra(engine))
-        } else {
-            SearchShortcuts.selected.record(SearchShortcuts.SelectedExtra(engine))
         }
     }
 

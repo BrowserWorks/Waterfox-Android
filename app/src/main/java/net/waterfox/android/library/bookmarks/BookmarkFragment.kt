@@ -8,12 +8,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.SpannableString
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.getSystemService
 import androidx.core.view.isVisible
@@ -22,38 +17,23 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.isActive
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.support.base.feature.UserInteractionHandler
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.BookmarksManagement
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.StoreProvider
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.databinding.FragmentBookmarkBinding
-import net.waterfox.android.ext.bookmarkStorage
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getRootView
-import net.waterfox.android.ext.minus
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.setTextColor
-import net.waterfox.android.ext.toShortUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.library.LibraryPageFragment
 import net.waterfox.android.utils.allowUndo
 
@@ -226,14 +206,12 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
                 openItemsInNewTab { node -> node.url }
 
                 showTabTray()
-                BookmarksManagement.openInNewTabs.record(NoExtras())
                 true
             }
             R.id.open_bookmarks_in_private_tabs_multi_select -> {
                 openItemsInNewTab(private = true) { node -> node.url }
 
                 showTabTray()
-                BookmarksManagement.openInPrivateTabs.record(NoExtras())
                 true
             }
             R.id.share_bookmark_multi_select -> {
@@ -326,7 +304,7 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
             {
                 undoPendingDeletion(selected)
             },
-            operation = getDeleteOperation(eventType)
+            operation = getDeleteOperation()
         )
     }
 
@@ -388,7 +366,7 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
                         {
                             undoPendingDeletion(selected)
                         },
-                        operation = getDeleteOperation(BookmarkRemoveType.FOLDER)
+                        operation = getDeleteOperation()
                     )
                 }
                 create()
@@ -409,20 +387,12 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
         refreshBookmarks()
     }
 
-    private fun getDeleteOperation(event: BookmarkRemoveType): (suspend (context: Context) -> Unit) {
+    private fun getDeleteOperation(): (suspend (context: Context) -> Unit) {
         return { context ->
             CoroutineScope(IO).launch {
                 pendingBookmarksToDelete.map {
                     async { context.bookmarkStorage.deleteNode(it.guid) }
                 }.awaitAll()
-            }
-            when (event) {
-                BookmarkRemoveType.FOLDER ->
-                    BookmarksManagement.folderRemove.record(NoExtras())
-                BookmarkRemoveType.MULTIPLE ->
-                    BookmarksManagement.multiRemoved.record(NoExtras())
-                BookmarkRemoveType.SINGLE ->
-                    BookmarksManagement.removed.record(NoExtras())
             }
             refreshBookmarks()
         }

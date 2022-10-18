@@ -14,8 +14,6 @@ import kotlinx.coroutines.launch
 import mozilla.components.concept.sync.AccountObserver
 import mozilla.components.concept.sync.AuthType
 import mozilla.components.concept.sync.OAuthAccount
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.SyncAuth
 import net.waterfox.android.R
 import net.waterfox.android.ext.getPreferenceKey
 import net.waterfox.android.ext.nav
@@ -26,7 +24,6 @@ class AccountProblemFragment : PreferenceFragmentCompat(), AccountObserver {
 
     private val signInClickListener = Preference.OnPreferenceClickListener {
         requireComponents.services.accountsAuthFeature.beginAuthentication(requireContext())
-        SyncAuth.useEmailProblem.record(NoExtras())
         // TODO The sign-in web content populates session history,
         // so pressing "back" after signing in won't take us back into the settings screen, but rather up the
         // session history stack.

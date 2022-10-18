@@ -95,10 +95,6 @@
     java.util.Locale get(int);
 }
 
-# TODO: [Waterfox] remove Glean
-# Keep code generated from Glean Metrics
--keep class net.waterfox.android.GleanMetrics.** {  *; }
-
 # Keep motionlayout internal methods
 # https://github.com/mozilla-mobile/fenix/issues/2094
 -keep class androidx.constraintlayout.** { *; }

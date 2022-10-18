@@ -6,8 +6,6 @@ package net.waterfox.android.home.intent
 
 import android.content.Intent
 import androidx.navigation.NavController
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Events
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.ext.openSetDefaultBrowserOption
 import net.waterfox.android.ext.settings
@@ -26,7 +24,6 @@ class DefaultBrowserIntentProcessor(
     override fun process(intent: Intent, navController: NavController, out: Intent): Boolean {
         return if (isDefaultBrowserNotificationIntent(intent)) {
             activity.openSetDefaultBrowserOption()
-            Events.defaultBrowserNotifTapped.record(NoExtras())
             true
         } else {
             false

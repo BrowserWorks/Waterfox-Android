@@ -5,9 +5,7 @@
 package net.waterfox.android.library.history
 
 import mozilla.components.concept.engine.EngineSession.LoadUrlFlags
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.History
 import net.waterfox.android.HomeActivity
 
 /**
@@ -34,7 +32,6 @@ class HistorySearchDialogController(
     }
 
     override fun handleUrlTapped(url: String, flags: LoadUrlFlags) {
-        History.searchResultTapped.record(NoExtras())
         clearToolbarFocus()
 
         activity.openToBrowserAndLoad(

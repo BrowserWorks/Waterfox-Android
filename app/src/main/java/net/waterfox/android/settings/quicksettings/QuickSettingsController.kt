@@ -16,8 +16,6 @@ import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.feature.session.SessionUseCases.ReloadUrlUseCase
 import mozilla.components.support.base.feature.OnNeedToRequestPermissions
 import mozilla.components.support.ktx.kotlin.getOrigin
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.components.PermissionStorage
 import net.waterfox.android.ext.components
@@ -105,9 +103,9 @@ class DefaultQuickSettingsController(
     private val browserStore: BrowserStore,
     private val ioScope: CoroutineScope,
     private val navController: NavController,
-    @VisibleForTesting
+    @get:VisibleForTesting
     internal val sessionId: String,
-    @VisibleForTesting
+    @get:VisibleForTesting
     internal var sitePermissions: SitePermissions?,
     private val settings: Settings,
     private val permissionStorage: PermissionStorage,
@@ -189,7 +187,6 @@ class DefaultQuickSettingsController(
             if (isEnabled) {
                 trackingProtectionUseCases.removeException(session.id)
             } else {
-                TrackingProtection.exceptionAdded.record(NoExtras())
                 trackingProtectionUseCases.addException(session.id)
             }
 

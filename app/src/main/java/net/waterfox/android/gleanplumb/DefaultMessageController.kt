@@ -9,7 +9,6 @@ import android.net.Uri
 import androidx.annotation.VisibleForTesting
 import androidx.core.net.toUri
 import net.waterfox.android.BuildConfig
-import net.waterfox.android.GleanMetrics.Messaging
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction.MessagingAction.MessageClicked
@@ -26,20 +25,12 @@ class DefaultMessageController(
 
     override fun onMessagePressed(message: Message) {
         val result = messagingStorage.getMessageAction(message)
-        val uuid = result.first
         val action = result.second
-        Messaging.messageClicked.record(
-            Messaging.MessageClickedExtra(
-                messageKey = message.id,
-                actionUuid = uuid
-            )
-        )
         handleAction(action)
         appStore.dispatch(MessageClicked(message))
     }
 
     override fun onMessageDismissed(message: Message) {
-        Messaging.messageDismissed.record(Messaging.MessageDismissedExtra(message.id))
         appStore.dispatch(MessageDismissed(message))
     }
 

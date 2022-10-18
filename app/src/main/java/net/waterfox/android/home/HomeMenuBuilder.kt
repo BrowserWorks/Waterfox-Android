@@ -14,10 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.menu.view.MenuButton
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.HomeScreen
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
@@ -29,7 +26,6 @@ import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.theme.ThemeManager
 import net.waterfox.android.whatsnew.WhatsNew
 import java.lang.ref.WeakReference
-import net.waterfox.android.GleanMetrics.HomeMenu as HomeMenuMetrics
 
 /**
  * Helper class for building the [HomeMenu].
@@ -86,16 +82,12 @@ class HomeMenuBuilder(
 
         when (item) {
             HomeMenu.Item.Settings -> {
-                HomeMenuMetrics.settingsItemClicked.record(NoExtras())
-
                 navController.nav(
                     R.id.homeFragment,
                     HomeFragmentDirections.actionGlobalSettingsFragment()
                 )
             }
             HomeMenu.Item.CustomizeHome -> {
-                HomeScreen.customizeHomeClicked.record(NoExtras())
-
                 navController.nav(
                     R.id.homeFragment,
                     HomeFragmentDirections.actionGlobalHomeSettingsFragment()
@@ -144,7 +136,6 @@ class HomeMenuBuilder(
             }
             HomeMenu.Item.WhatsNew -> {
                 WhatsNew.userViewedWhatsNew(context)
-                Events.whatsNewTapped.record(NoExtras())
 
                 homeActivity.openToBrowserAndLoad(
                     searchTermOrURL = SupportUtils.getWhatsNewUrl(context),

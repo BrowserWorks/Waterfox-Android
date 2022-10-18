@@ -84,9 +84,6 @@ class StartupStateProvider(
     /**
      * A short-circuit implementation of [isColdStartForStartedActivity] that will return false early
      * so we don't have to call [isColdStartForStartedActivity].
-     *
-     * When this can be called might be tightly coupled to [ColdStartupDurationTelemetry]: use at
-     * your own risk.
      */
     fun shouldShortCircuitColdStart(): Boolean = startupLog.log.contains(LogEntry.AppStopped)
 

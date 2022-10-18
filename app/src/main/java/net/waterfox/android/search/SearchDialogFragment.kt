@@ -17,19 +17,13 @@ import android.os.Build
 import android.os.Bundle
 import android.speech.RecognizerIntent
 import android.text.style.StyleSpan
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.ViewStub
-import android.view.WindowManager
+import android.view.*
 import android.view.accessibility.AccessibilityEvent
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.constraintlayout.widget.ConstraintProperties.BOTTOM
-import androidx.constraintlayout.widget.ConstraintProperties.PARENT_ID
-import androidx.constraintlayout.widget.ConstraintProperties.TOP
+import androidx.constraintlayout.widget.ConstraintProperties.*
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.graphics.drawable.toDrawable
 import androidx.core.net.toUri
@@ -52,7 +46,6 @@ import mozilla.components.feature.qr.QrFeature
 import mozilla.components.feature.toolbar.ToolbarAutocompleteFeature
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.coroutines.Dispatchers
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
@@ -67,8 +60,6 @@ import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import mozilla.components.ui.autocomplete.InlineAutocompleteEditText
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Awesomebar
-import net.waterfox.android.GleanMetrics.VoiceSearch
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.Core.Companion.BOOKMARKS_SEARCH_ENGINE_ID
@@ -358,7 +349,6 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         }
 
         binding.fillLinkFromClipboard.setOnClickListener {
-            Awesomebar.clipboardSuggestionClicked.record(NoExtras())
             val clipboardUrl = requireContext().components.clipboardHandler.extractURL() ?: ""
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -784,7 +774,6 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         // around such a small edge case, we make the button have no functionality in this case.
         if (!isSpeechAvailable()) { return }
 
-        VoiceSearch.tapped.record(NoExtras())
         speechIntent.apply {
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_PROMPT, requireContext().getString(R.string.voice_search_explainer))

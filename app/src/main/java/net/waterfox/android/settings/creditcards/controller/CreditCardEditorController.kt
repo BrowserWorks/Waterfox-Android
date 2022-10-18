@@ -12,9 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import mozilla.components.concept.storage.NewCreditCardFields
 import mozilla.components.concept.storage.UpdatableCreditCardFields
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
-import net.waterfox.android.GleanMetrics.CreditCards
 import net.waterfox.android.settings.creditcards.CreditCardEditorFragment
 import net.waterfox.android.settings.creditcards.interactor.CreditCardEditorInteractor
 
@@ -76,7 +74,6 @@ class DefaultCreditCardEditorController(
                 lifecycleScope.launch(Dispatchers.Main) {
                     navController.popBackStack()
                 }
-                CreditCards.deleted.add()
             }
             dialog.dismiss()
         }
@@ -89,7 +86,6 @@ class DefaultCreditCardEditorController(
             lifecycleScope.launch(Dispatchers.Main) {
                 navController.popBackStack()
             }
-            CreditCards.saved.add()
         }
     }
 
@@ -100,7 +96,6 @@ class DefaultCreditCardEditorController(
             lifecycleScope.launch(Dispatchers.Main) {
                 navController.popBackStack()
             }
-            CreditCards.modified.record(NoExtras())
         }
     }
 }

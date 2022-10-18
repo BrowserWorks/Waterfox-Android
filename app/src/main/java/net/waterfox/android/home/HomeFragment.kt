@@ -10,11 +10,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.StrictMode
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.ViewTreeObserver
+import android.view.*
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
@@ -22,13 +18,11 @@ import androidx.annotation.VisibleForTesting
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
-import androidx.constraintlayout.widget.ConstraintSet.BOTTOM
-import androidx.constraintlayout.widget.ConstraintSet.PARENT_ID
-import androidx.constraintlayout.widget.ConstraintSet.TOP
+import androidx.constraintlayout.widget.ConstraintSet.*
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.core.view.doOnPreDraw
+import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -69,31 +63,21 @@ import mozilla.components.feature.top.sites.TopSitesProviderConfig
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flow
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.Config
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.HomeScreen
-import net.waterfox.android.GleanMetrics.Wallpapers
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator.Companion.getToolbarNavOptions
 import net.waterfox.android.browser.browsingmode.BrowsingMode
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.PrivateShortcutCreateManager
 import net.waterfox.android.components.TabCollectionStorage
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.databinding.FragmentHomeBinding
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.containsQueryParameters
-import net.waterfox.android.ext.hideToolbar
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.settings
+import net.waterfox.android.ext.*
 import net.waterfox.android.gleanplumb.DefaultMessageController
 import net.waterfox.android.gleanplumb.MessagingFeature
 import net.waterfox.android.home.mozonline.showPrivacyPopWindow
@@ -448,7 +432,7 @@ class HomeFragment : Fragment() {
             sessionControlView?.update(requireContext().components.appStore.state)
 
             binding.root.consumeFrom(requireContext().components.appStore, viewLifecycleOwner) {
-                sessionControlView?.update(it, shouldReportMetrics = true)
+                sessionControlView?.update(it)
             }
         }
     }
@@ -494,8 +478,6 @@ class HomeFragment : Fragment() {
         val profilerStartTime = requireComponents.core.engine.profiler?.getProfilerTime()
 
         super.onViewCreated(view, savedInstanceState)
-        HomeScreen.homeScreenDisplayed.record(NoExtras())
-        HomeScreen.homeScreenViewCount.add()
 
         observeSearchEngineChanges()
         observeSearchEngineNameChanges()
@@ -746,13 +728,7 @@ class HomeFragment : Fragment() {
                 context.getString(R.string.wallpaper_logo_content_description)
             binding.wordmark.setOnClickListener {
                 val manager = requireComponents.wallpaperManager
-                val newWallpaper = manager.switchToNextWallpaper()
-                Wallpapers.wallpaperSwitched.record(
-                    Wallpapers.WallpaperSwitchedExtra(
-                        name = newWallpaper.name,
-                        themeCollection = newWallpaper::class.simpleName
-                    )
-                )
+                manager.switchToNextWallpaper()
             }
         }
     }
@@ -902,8 +878,6 @@ class HomeFragment : Fragment() {
             )
 
         nav(R.id.homeFragment, directions, getToolbarNavOptions(requireContext()))
-
-        Events.searchBarTapped.record(Events.SearchBarTappedExtra("HOME"))
     }
 
     private fun subscribeToTabCollections(): Observer<List<TabCollection>> {

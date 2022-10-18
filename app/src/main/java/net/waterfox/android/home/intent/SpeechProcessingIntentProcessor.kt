@@ -5,16 +5,12 @@
 package net.waterfox.android.home.intent
 
 import android.content.Intent
-import android.os.StrictMode
 import androidx.navigation.NavController
 import mozilla.components.browser.state.search.SearchEngine
-import mozilla.components.browser.state.state.selectedOrDefaultSearchEngine
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.search.ext.waitForSelectedOrDefaultSearchEngine
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
-import net.waterfox.android.components.metrics.MetricsUtils
-import net.waterfox.android.ext.components
 import net.waterfox.android.widget.VoiceSearchActivity.Companion.SPEECH_PROCESSING
 
 /**
@@ -49,14 +45,6 @@ class SpeechProcessingIntentProcessor(
     }
 
     private fun launchToBrowser(searchEngine: SearchEngine, text: String) {
-        activity.components.strictMode.resetAfter(StrictMode.allowThreadDiskReads()) {
-            MetricsUtils.recordSearchMetrics(
-                searchEngine,
-                searchEngine == store.state.search.selectedOrDefaultSearchEngine,
-                MetricsUtils.Source.WIDGET
-            )
-        }
-
         activity.openToBrowserAndLoad(
             searchTermOrURL = text,
             newTab = true,

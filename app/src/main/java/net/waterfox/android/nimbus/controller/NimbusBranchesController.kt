@@ -8,14 +8,12 @@ import android.content.Context
 import androidx.navigation.NavController
 import mozilla.components.service.nimbus.NimbusApi
 import mozilla.components.service.nimbus.ui.NimbusBranchesAdapterDelegate
-import org.mozilla.experiments.nimbus.Branch
-import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.ext.getRootView
 import net.waterfox.android.ext.settings
 import net.waterfox.android.nimbus.NimbusBranchesAction
-import net.waterfox.android.nimbus.NimbusBranchesFragmentDirections
 import net.waterfox.android.nimbus.NimbusBranchesStore
+import org.mozilla.experiments.nimbus.Branch
 
 /**
  * [NimbusBranchesFragment] controller. This implements [NimbusBranchesAdapterDelegate] to handle
@@ -35,27 +33,17 @@ class NimbusBranchesController(
 ) : NimbusBranchesAdapterDelegate {
 
     override fun onBranchItemClicked(branch: Branch) {
-        val telemetryEnabled = context.settings().isTelemetryEnabled
         val experimentsEnabled = context.settings().isExperimentationEnabled
 
         updateOptInState(branch)
 
-        if (!telemetryEnabled && !experimentsEnabled) {
-            val snackbarText = context.getString(R.string.experiments_snackbar)
-            val buttonText = context.getString(R.string.experiments_snackbar_button)
+        if (!experimentsEnabled) {
             context.getRootView()?.let { v ->
                 WaterfoxSnackbar.make(
                     view = v,
                     WaterfoxSnackbar.LENGTH_LONG,
                     isDisplayedWithBrowserToolbar = false
                 )
-                    .setText(snackbarText)
-                    .setAction(buttonText) {
-                        navController.navigate(
-                            NimbusBranchesFragmentDirections
-                                .actionNimbusBranchesFragmentToDataChoicesFragment()
-                        )
-                    }
                     .show()
             }
         }

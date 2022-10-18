@@ -10,14 +10,12 @@ import androidx.annotation.VisibleForTesting
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import mozilla.components.browser.state.selector.findTab
-import mozilla.components.browser.state.selector.normalTabs
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.tab.collections.TabCollection
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Collections
 import net.waterfox.android.components.TabCollectionStorage
 import net.waterfox.android.ext.getDefaultCollectionNumber
+import java.util.*
 
 interface CollectionCreationController {
 
@@ -90,13 +88,6 @@ class DefaultCollectionCreationController(
         scope.launch {
             tabCollectionStorage.createCollection(name, sessionBundle)
         }
-
-        Collections.saved.record(
-            Collections.SavedExtra(
-                browserStore.state.normalTabs.size.toString(),
-                sessionBundle.size.toString()
-            )
-        )
     }
 
     override fun renameCollection(collection: TabCollection, name: String) {
@@ -104,7 +95,6 @@ class DefaultCollectionCreationController(
         scope.launch {
             tabCollectionStorage.renameCollection(collection, name)
         }
-        Collections.renamed.record(NoExtras())
     }
 
     override fun backPressed(fromStep: SaveCollectionStep) {
@@ -135,13 +125,6 @@ class DefaultCollectionCreationController(
             tabCollectionStorage
                 .addTabsToCollection(collection, sessionBundle)
         }
-
-        Collections.tabsAdded.record(
-            Collections.TabsAddedExtra(
-                browserStore.state.normalTabs.size.toString(),
-                sessionBundle.size.toString()
-            )
-        )
     }
 
     override fun saveTabsToCollection(tabs: List<Tab>) {

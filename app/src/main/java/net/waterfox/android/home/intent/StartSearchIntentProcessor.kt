@@ -7,13 +7,11 @@ package net.waterfox.android.home.intent
 import android.content.Intent
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.SearchWidget
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.ext.nav
+import net.waterfox.android.search.SearchEventSource
 
 /**
  * When the search widget is tapped, Waterfox should open to the search fragment.
@@ -26,13 +24,12 @@ class StartSearchIntentProcessor : HomeIntentProcessor {
         return if (event != null) {
             val source = when (event) {
                 SEARCH_WIDGET -> {
-                    SearchWidget.newTabButton.record(NoExtras())
-                    MetricsUtils.Source.WIDGET
+                    SearchEventSource.WIDGET
                 }
                 STATIC_SHORTCUT_NEW_TAB,
                 STATIC_SHORTCUT_NEW_PRIVATE_TAB,
                 PRIVATE_BROWSING_PINNED_SHORTCUT -> {
-                    MetricsUtils.Source.SHORTCUT
+                    SearchEventSource.SHORTCUT
                 }
                 else -> null
             }

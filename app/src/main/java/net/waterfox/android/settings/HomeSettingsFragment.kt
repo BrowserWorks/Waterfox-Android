@@ -11,7 +11,6 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.CustomizeHome
 import net.waterfox.android.R
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.ext.components
@@ -37,85 +36,25 @@ class HomeSettingsFragment : PreferenceFragmentCompat() {
     private fun setupPreferences() {
         requirePreference<SwitchPreference>(R.string.pref_key_show_top_sites).apply {
             isChecked = context.settings().showTopSitesFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "most_visited_sites"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<CheckBoxPreference>(R.string.pref_key_enable_contile).apply {
             isChecked = context.settings().showContileFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "contile"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_recent_tabs).apply {
             isVisible = FeatureFlags.showRecentTabsFeature
             isChecked = context.settings().showRecentTabsFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "jump_back_in"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_recent_bookmarks).apply {
             isVisible = FeatureFlags.recentBookmarksFeature
             isChecked = context.settings().showRecentBookmarksFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "recently_saved"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_pocket_homescreen_recommendations).apply {
             isVisible = FeatureFlags.isPocketRecommendationsFeatureEnabled(context)
             isChecked = context.settings().showPocketRecommendationsFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "pocket"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<CheckBoxPreference>(R.string.pref_key_pocket_sponsored_stories).apply {
@@ -143,18 +82,6 @@ class HomeSettingsFragment : PreferenceFragmentCompat() {
         requirePreference<SwitchPreference>(R.string.pref_key_history_metadata_feature).apply {
             isVisible = FeatureFlags.historyMetadataUIFeature
             isChecked = context.settings().historyMetadataUIFeature
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    CustomizeHome.preferenceToggled.record(
-                        CustomizeHome.PreferenceToggledExtra(
-                            newValue as Boolean,
-                            "recently_visited"
-                        )
-                    )
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         val openingScreenRadioHomepage =

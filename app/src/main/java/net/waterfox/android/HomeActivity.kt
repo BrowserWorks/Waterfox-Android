@@ -12,15 +12,8 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.os.StrictMode
-import android.os.SystemClock
-import android.text.format.DateUtils
 import android.util.AttributeSet
-import android.view.ActionMode
-import android.view.KeyEvent
-import android.view.LayoutInflater
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewConfiguration
+import android.view.*
 import android.view.WindowManager.LayoutParams.FLAG_SECURE
 import androidx.annotation.CallSuper
 import androidx.annotation.IdRes
@@ -34,9 +27,7 @@ import androidx.navigation.NavDirections
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -69,46 +60,23 @@ import mozilla.components.support.locale.LocaleAwareAppCompatActivity
 import mozilla.components.support.utils.SafeIntent
 import mozilla.components.support.utils.toSafeIntent
 import mozilla.components.support.webextensions.WebExtensionPopupFeature
-import mozilla.telemetry.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.Metrics
-import net.waterfox.android.GleanMetrics.StartOnHome
 import net.waterfox.android.addons.AddonDetailsFragmentDirections
 import net.waterfox.android.addons.AddonPermissionsDetailsFragmentDirections
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.browser.browsingmode.DefaultBrowsingModeManager
-import net.waterfox.android.components.metrics.BreadcrumbsRecorder
 import net.waterfox.android.databinding.ActivityHomeBinding
 import net.waterfox.android.exceptions.trackingprotection.TrackingProtectionExceptionsFragmentDirections
-import net.waterfox.android.ext.alreadyOnDestination
-import net.waterfox.android.ext.breadcrumb
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.setNavigationIcon
-import net.waterfox.android.ext.settings
+import net.waterfox.android.ext.*
 import net.waterfox.android.home.HomeFragmentDirections
-import net.waterfox.android.home.intent.CrashReporterIntentProcessor
-import net.waterfox.android.home.intent.DefaultBrowserIntentProcessor
-import net.waterfox.android.home.intent.HomeDeepLinkIntentProcessor
-import net.waterfox.android.home.intent.OpenBrowserIntentProcessor
-import net.waterfox.android.home.intent.OpenSpecificTabIntentProcessor
-import net.waterfox.android.home.intent.SpeechProcessingIntentProcessor
-import net.waterfox.android.home.intent.StartSearchIntentProcessor
+import net.waterfox.android.home.intent.*
 import net.waterfox.android.library.bookmarks.BookmarkFragmentDirections
 import net.waterfox.android.library.bookmarks.DesktopFolders
 import net.waterfox.android.library.history.HistoryFragmentDirections
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentDirections
 import net.waterfox.android.library.recentlyclosed.RecentlyClosedFragmentDirections
 import net.waterfox.android.onboarding.DefaultBrowserNotificationWorker
-import net.waterfox.android.perf.MarkersActivityLifecycleCallbacks
-import net.waterfox.android.perf.MarkersFragmentLifecycleCallbacks
-import net.waterfox.android.perf.Performance
-import net.waterfox.android.perf.PerformanceInflater
-import net.waterfox.android.perf.ProfilerMarkers
-import net.waterfox.android.perf.StartupPathProvider
-import net.waterfox.android.perf.StartupTimeline
-import net.waterfox.android.perf.StartupTypeTelemetry
+import net.waterfox.android.perf.*
 import net.waterfox.android.search.SearchDialogFragmentDirections
 import net.waterfox.android.session.PrivateNotificationService
 import net.waterfox.android.settings.HttpsOnlyFragmentDirections
@@ -136,15 +104,8 @@ import java.lang.ref.WeakReference
  * - home screen
  * - browser screen
  */
-@OptIn(ExperimentalCoroutinesApi::class)
 @SuppressWarnings("TooManyFunctions", "LargeClass", "LongParameterList", "LongMethod")
 open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
-    // DO NOT MOVE ANYTHING ABOVE THIS, GETTING INIT TIME IS CRITICAL
-    // we need to store startup timestamp for warm startup. we cant directly store
-    // inside AppStartupTelemetry since that class lives inside components and
-    // components requires context to access.
-    protected val homeActivityInitTimeStampNanoSeconds = SystemClock.elapsedRealtimeNanos()
-
     private lateinit var binding: ActivityHomeBinding
     lateinit var themeManager: ThemeManager
     lateinit var browsingModeManager: BrowsingModeManager
@@ -190,7 +151,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
     private var actionMode: ActionMode? = null
 
     private val startupPathProvider = StartupPathProvider()
-    private lateinit var startupTypeTelemetry: StartupTypeTelemetry
 
     final override fun onCreate(savedInstanceState: Bundle?) {
         // DO NOT MOVE ANYTHING ABOVE THIS getProfilerTime CALL.
@@ -247,25 +207,10 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
         if (!shouldStartOnHome() && shouldNavigateToBrowserOnColdStart(savedInstanceState)) {
             navigateToBrowserOnColdStart()
-        } else {
-            StartOnHome.enterHomeScreen.record(NoExtras())
         }
 
         Performance.processIntentIfPerformanceTest(intent, this)
 
-        if (settings().isTelemetryEnabled) {
-            lifecycle.addObserver(
-                BreadcrumbsRecorder(
-                    components.analytics.crashReporter,
-                    navHost.navController, ::getBreadcrumbMessage
-                )
-            )
-
-            val safeIntent = intent?.toSafeIntent()
-            safeIntent
-                ?.let(::getIntentSource)
-                ?.also { Events.appOpened.record(Events.AppOpenedExtra(it)) }
-        }
         supportActionBar?.hide()
 
         lifecycle.addObservers(webExtensionPopupFeature, serviceWorkerSupport)
@@ -275,13 +220,7 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             moveTaskToBack(true)
         }
 
-        captureSnapshotTelemetryMetrics()
-
-        startupTelemetryOnCreateCalled(intent.toSafeIntent())
         startupPathProvider.attachOnActivityOnCreate(lifecycle, intent)
-        startupTypeTelemetry = StartupTypeTelemetry(components.startupStateProvider, startupPathProvider).apply {
-            attachOnHomeActivityOnCreate(lifecycle)
-        }
 
         components.core.requestInterceptor.setNavigationController(navHost.navController)
 
@@ -314,17 +253,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         }
     }
 
-    private fun startupTelemetryOnCreateCalled(safeIntent: SafeIntent) {
-        // We intentionally only record this in HomeActivity and not ExternalBrowserActivity (e.g.
-        // PWAs) so we don't include more unpredictable code paths in the results.
-        components.performance.coldStartupDurationTelemetry.onHomeActivityOnCreate(
-            components.performance.visualCompletenessQueue,
-            components.startupStateProvider,
-            safeIntent,
-            binding.rootContainer
-        )
-    }
-
     @CallSuper
     @Suppress("TooGenericExceptionCaught")
     override fun onResume() {
@@ -355,10 +283,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
                 }
             } catch (e: Exception) {
                 Logger.error("Failed to refresh contile top sites", e)
-            }
-
-            if (settings().checkIfWaterfoxIsDefaultBrowserOnAppResume()) {
-                Events.defaultBrowserChanged.record(NoExtras())
             }
 
             DefaultBrowserNotificationWorker.setDefaultBrowserNotificationIfNeeded(applicationContext)
@@ -999,23 +923,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         isVisuallyComplete = true
     }
 
-    private fun captureSnapshotTelemetryMetrics() = CoroutineScope(IO).launch {
-        // PWA
-        val recentlyUsedPwaCount = components.core.webAppShortcutManager.recentlyUsedWebAppsCount(
-            activeThresholdMs = PWA_RECENTLY_USED_THRESHOLD
-        )
-        if (recentlyUsedPwaCount == 0) {
-            Metrics.hasRecentPwas.set(false)
-        } else {
-            Metrics.hasRecentPwas.set(true)
-            // This metric's lifecycle is set to 'application', meaning that it gets reset upon
-            // application restart. Combined with the behaviour of the metric type itself (a growing counter),
-            // it's important that this metric is only set once per application's lifetime.
-            // Otherwise, we're going to over-count.
-            Metrics.recentlyUsedPwaCount.add(recentlyUsedPwaCount)
-        }
-    }
-
     @VisibleForTesting
     internal fun isActivityColdStarted(startingIntent: Intent, activityIcicle: Bundle?): Boolean {
         // First time opening this activity in the task.
@@ -1064,9 +971,5 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         const val EXTRA_DELETE_PRIVATE_TABS = "notification_delete_and_open"
         const val EXTRA_OPENED_FROM_NOTIFICATION = "notification_open"
         const val START_IN_RECENTS_SCREEN = "start_in_recents_screen"
-
-        // PWA must have been used within last 30 days to be considered "recently used" for the
-        // telemetry purposes.
-        const val PWA_RECENTLY_USED_THRESHOLD = DateUtils.DAY_IN_MILLIS * 30L
     }
 }

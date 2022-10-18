@@ -8,8 +8,6 @@ import android.text.InputType
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
-import mozilla.components.service.glean.private.NoExtras
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.R
 
 fun togglePasswordReveal(passwordText: TextView, revealPasswordButton: ImageButton) {
@@ -18,7 +16,6 @@ fun togglePasswordReveal(passwordText: TextView, revealPasswordButton: ImageButt
     if (passwordText.inputType == InputType.TYPE_TEXT_VARIATION_PASSWORD
         or InputType.TYPE_CLASS_TEXT
     ) {
-        Logins.viewPasswordLogin.record(NoExtras())
         passwordText.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
         revealPasswordButton.setImageDrawable(
             AppCompatResources.getDrawable(context, R.drawable.mozac_ic_password_hide)

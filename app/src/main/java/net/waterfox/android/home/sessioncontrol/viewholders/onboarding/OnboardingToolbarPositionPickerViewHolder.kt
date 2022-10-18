@@ -6,7 +6,6 @@ package net.waterfox.android.home.sessioncontrol.viewholders.onboarding
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.databinding.OnboardingToolbarPositionPickerBinding
@@ -36,47 +35,23 @@ class OnboardingToolbarPositionPickerViewHolder(view: View) : RecyclerView.ViewH
         radio.updateRadioValue(true)
 
         radioBottomToolbar.onClickListener {
-            Onboarding.prefToggledToolbarPosition.record(
-                Onboarding.PrefToggledToolbarPositionExtra(
-                    Position.BOTTOM.name
-                )
-            )
-
             itemView.context.asActivity()?.recreate()
         }
 
         binding.toolbarBottomImage.setOnClickListener {
-            Onboarding.prefToggledToolbarPosition.record(
-                Onboarding.PrefToggledToolbarPositionExtra(
-                    Position.BOTTOM.name
-                )
-            )
-
             radioBottomToolbar.performClick()
         }
 
         radioTopToolbar.onClickListener {
-            Onboarding.prefToggledToolbarPosition.record(
-                Onboarding.PrefToggledToolbarPositionExtra(
-                    Position.TOP.name
-                )
-            )
             itemView.context.asActivity()?.recreate()
         }
 
         binding.toolbarTopImage.setOnClickListener {
-            Onboarding.prefToggledToolbarPosition.record(
-                Onboarding.PrefToggledToolbarPositionExtra(
-                    Position.TOP.name
-                )
-            )
             radioTopToolbar.performClick()
         }
     }
 
     companion object {
         const val LAYOUT_ID = R.layout.onboarding_toolbar_position_picker
-        // Position of the toolbar used for telemetry
-        enum class Position { TOP, BOTTOM }
     }
 }

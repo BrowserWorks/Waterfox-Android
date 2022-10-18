@@ -15,7 +15,6 @@ import mozilla.components.browser.errorpages.ErrorPages
 import mozilla.components.browser.errorpages.ErrorType
 import mozilla.components.concept.engine.request.RequestInterceptor
 import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Before
@@ -24,7 +23,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.AppRequestInterceptor.Companion.HIGH_RISK_ERROR_PAGES
 import net.waterfox.android.AppRequestInterceptor.Companion.LOW_AND_MEDIUM_RISK_ERROR_PAGES
-import net.waterfox.android.GleanMetrics.ErrorPage
 import net.waterfox.android.components.Services
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.isOnline
@@ -190,11 +188,6 @@ class AppRequestInterceptorTest {
             )
 
             assertEquals(expectedPage, actualPage)
-            // Check if the error metric was recorded
-            assertEquals(
-                error.name,
-                ErrorPage.visitedError.testGetValue()!!.last().extra?.get("error_type")
-            )
         }
     }
 
@@ -212,11 +205,6 @@ class AppRequestInterceptorTest {
             )
 
             assertEquals(expectedPage, actualPage)
-            // Check if the error metric was recorded
-            assertEquals(
-                error.name,
-                ErrorPage.visitedError.testGetValue()!!.last().extra?.get("error_type")
-            )
         }
     }
 
@@ -235,11 +223,6 @@ class AppRequestInterceptorTest {
             )
 
             assertEquals(expectedPage, actualPage)
-            // Check if the error metric was recorded
-            assertEquals(
-                error.name,
-                ErrorPage.visitedError.testGetValue()!!.last().extra?.get("error_type")
-            )
         }
     }
 

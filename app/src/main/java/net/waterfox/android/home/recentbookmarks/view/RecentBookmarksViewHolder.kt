@@ -10,23 +10,16 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.LifecycleOwner
 import mozilla.components.lib.state.ext.observeAsComposableState
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.R
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.ComposeViewHolder
 import net.waterfox.android.home.recentbookmarks.interactor.RecentBookmarksInteractor
-import net.waterfox.android.GleanMetrics.RecentBookmarks as RecentBookmarksMetrics
 
 class RecentBookmarksViewHolder(
     composeView: ComposeView,
     viewLifecycleOwner: LifecycleOwner,
     val interactor: RecentBookmarksInteractor,
 ) : ComposeViewHolder(composeView, viewLifecycleOwner) {
-
-    init {
-        RecentBookmarksMetrics.shown.record(NoExtras())
-    }
-
     companion object {
         val LAYOUT_ID = View.generateViewId()
     }

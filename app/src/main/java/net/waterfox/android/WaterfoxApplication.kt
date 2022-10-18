@@ -13,19 +13,12 @@ import androidx.annotation.CallSuper
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.getSystemService
-import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.work.Configuration.Builder
 import androidx.work.Configuration.Provider
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import mozilla.appservices.Megazord
 import mozilla.components.browser.state.action.SystemAction
 import mozilla.components.browser.state.selector.selectedTab
-import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.base.crash.Breadcrumb
 import mozilla.components.concept.engine.webextension.WebExtension
 import mozilla.components.concept.engine.webextension.isUnsupported
@@ -33,17 +26,9 @@ import mozilla.components.concept.push.PushProcessor
 import mozilla.components.concept.storage.FrecencyThresholdOption
 import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
 import mozilla.components.feature.addons.update.GlobalAddonDependencyProvider
-import mozilla.components.feature.autofill.AutofillUseCases
-import mozilla.components.feature.search.ext.buildSearchUrl
-import mozilla.components.feature.search.ext.waitForSelectedOrDefaultSearchEngine
 import mozilla.components.feature.top.sites.TopSitesFrecencyConfig
 import mozilla.components.feature.top.sites.TopSitesProviderConfig
 import mozilla.components.lib.crash.CrashReporter
-import mozilla.components.service.fxa.manager.SyncEnginesStorage
-import mozilla.components.service.glean.Glean
-import mozilla.components.service.glean.config.Configuration
-import mozilla.components.service.glean.net.ConceptFetchHttpUploader
-import mozilla.components.support.rusterrors.initializeRustErrors
 import mozilla.components.support.base.facts.register
 import mozilla.components.support.base.log.Log
 import mozilla.components.support.base.log.logger.Logger
@@ -51,53 +36,33 @@ import mozilla.components.support.base.observer.Observable
 import mozilla.components.support.ktx.android.content.isMainProcess
 import mozilla.components.support.ktx.android.content.runOnlyInMainProcess
 import mozilla.components.support.locale.LocaleAwareApplication
+import mozilla.components.support.rusterrors.initializeRustErrors
 import mozilla.components.support.rusthttp.RustHttpConfig
 import mozilla.components.support.rustlog.RustLog
 import mozilla.components.support.utils.logElapsedTime
 import mozilla.components.support.webextensions.WebExtensionSupport
-import org.mozilla.experiments.nimbus.NimbusInterface
-import org.mozilla.experiments.nimbus.internal.EnrolledExperiment
-import net.waterfox.android.GleanMetrics.Addons
-import net.waterfox.android.GleanMetrics.AndroidAutofill
-import net.waterfox.android.GleanMetrics.CustomizeHome
-import net.waterfox.android.GleanMetrics.GleanBuildInfo
-import net.waterfox.android.GleanMetrics.Metrics
-import net.waterfox.android.GleanMetrics.PerfStartup
-import net.waterfox.android.GleanMetrics.Preferences
-import net.waterfox.android.GleanMetrics.SearchDefaultEngine
-import net.waterfox.android.GleanMetrics.TopSites
 import net.waterfox.android.components.Components
 import net.waterfox.android.components.Core
 import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.components.metrics.MetricServiceType
-import net.waterfox.android.components.metrics.MozillaProductDetector
-import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.ext.containsQueryParameters
-import net.waterfox.android.ext.isCustomEngine
-import net.waterfox.android.ext.isKnownSearchDomain
 import net.waterfox.android.ext.settings
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.MarkersActivityLifecycleCallbacks
 import net.waterfox.android.perf.ProfilerMarkerFactProcessor
 import net.waterfox.android.perf.StartupTimeline
-import net.waterfox.android.perf.StorageStatsMetrics
 import net.waterfox.android.perf.runBlockingIncrement
 import net.waterfox.android.push.PushFxaIntegration
 import net.waterfox.android.push.WebPushEngineIntegration
 import net.waterfox.android.session.PerformanceActivityLifecycleCallbacks
 import net.waterfox.android.session.VisibilityLifecycleCallback
-import net.waterfox.android.settings.CustomizationFragment
-import net.waterfox.android.telemetry.TelemetryLifecycleObserver
 import net.waterfox.android.utils.BrowsersCache
-import net.waterfox.android.utils.Settings
 import net.waterfox.android.utils.Settings.Companion.TOP_SITES_PROVIDER_MAX_THRESHOLD
-import net.waterfox.android.wallpapers.WallpaperManager
-import java.util.UUID
+import org.mozilla.experiments.nimbus.NimbusInterface
+import org.mozilla.experiments.nimbus.internal.EnrolledExperiment
 import java.util.concurrent.TimeUnit
 
 /**
  *The main application class for Waterfox. Records data to measure initialization performance.
- *  Installs [CrashReporter], initializes [Glean] in Waterfox builds and setup Megazord in the main process.
+ *  Installs [CrashReporter] and setup Megazord in the main process.
  */
 @Suppress("Registered", "TooManyFunctions", "LargeClass")
 open class WaterfoxApplication : LocaleAwareApplication(), Provider {
@@ -113,9 +78,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         private set
 
     override fun onCreate() {
-        // We use start/stop instead of measure so we don't measure outside the main process.
-        val completeMethodDurationTimerId = PerfStartup.applicationOnCreate.start() // DO NOT MOVE ANYTHING ABOVE HERE.
-
         super.onCreate()
 
         setupInAllProcesses()
@@ -128,39 +90,9 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             return
         }
 
-        // We need to always initialize Glean and do it early here.
-        initializeGlean()
-
         setupInMainProcessOnly()
         // WATERFOX
         // downloadWallpapers()
-        // DO NOT MOVE ANYTHING BELOW THIS stop CALL.
-        PerfStartup.applicationOnCreate.stopAndAccumulate(completeMethodDurationTimerId)
-    }
-
-    @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
-    protected open fun initializeGlean() {
-        val telemetryEnabled = settings().isTelemetryEnabled
-
-        logger.debug("Initializing Glean (uploadEnabled=$telemetryEnabled})")
-
-        Glean.initialize(
-            applicationContext = this,
-            configuration = Configuration(
-                channel = BuildConfig.BUILD_TYPE,
-                httpClient = ConceptFetchHttpUploader(
-                    lazy(LazyThreadSafetyMode.NONE) { components.core.client }
-                )
-            ),
-            uploadEnabled = telemetryEnabled,
-            buildInfo = GleanBuildInfo.buildInfo
-        )
-
-        // We avoid blocking the main thread on startup by setting startup metrics on the background thread.
-        val store = components.core.store
-        GlobalScope.launch(Dispatchers.IO) {
-            setStartupMetrics(store, settings())
-        }
     }
 
     @CallSuper
@@ -200,7 +132,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         }
 
         setupLeakCanary()
-        startMetricsIfEnabled()
         setupPush()
 
         visibilityLifecycleCallback = VisibilityLifecycleCallback(getSystemService())
@@ -216,8 +147,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         components.appStartReasonProvider.registerInAppOnCreate(this)
         components.startupActivityLog.registerInAppOnCreate(this)
         initVisualCompletenessQueueAndQueueTasks()
-
-        ProcessLifecycleOwner.get().lifecycle.addObserver(TelemetryLifecycleObserver(components.core.store))
     }
 
     @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
@@ -291,17 +220,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             }
         }
 
-        fun queueMetrics() {
-            if (SDK_INT >= Build.VERSION_CODES.O) { // required by StorageStatsMetrics.
-                queue.runIfReadyOrQueue {
-                    // Because it may be slow to capture the storage stats, it might be preferred to
-                    // create a WorkManager task for this metric, however, I ran out of
-                    // implementation time and WorkManager is harder to test.
-                    StorageStatsMetrics.report(this.applicationContext)
-                }
-            }
-        }
-
         @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
         fun queueReviewPrompt() {
             GlobalScope.launch(Dispatchers.IO) {
@@ -323,15 +241,8 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         // We init these items in the visual completeness queue to avoid them initing in the critical
         // startup path, before the UI finishes drawing (i.e. visual completeness).
         queueInitStorageAndServices()
-        queueMetrics()
         queueReviewPrompt()
         queueRestoreLocale()
-    }
-
-    private fun startMetricsIfEnabled() {
-        if (settings().isTelemetryEnabled) {
-            components.analytics.metrics.start(MetricServiceType.Data)
-        }
     }
 
     // See https://github.com/mozilla-mobile/fenix/issues/7227 for context.
@@ -398,7 +309,8 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         // Note: Megazord.init() must be called as soon as possible ...
         Megazord.init()
         // Give the generated FxNimbus a closure to lazily get the Nimbus object
-        FxNimbus.initialize { components.analytics.experiments }
+        // TODO: [Waterfox] remove Nimbus initialization
+//        FxNimbus.initialize { components.analytics.experiments }
         return GlobalScope.async(Dispatchers.IO) {
             initializeRustErrors(components.analytics.crashReporter)
             // ... but RustHttpConfig.setClient() and RustLog.enable() can be called later.
@@ -431,7 +343,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         if (FeatureFlags.messagingFeature && settings.isExperimentationEnabled) {
             components.appStore.dispatch(AppAction.MessagingAction.Restore)
         }
-        reportHomeScreenSectionMetrics(settings)
     }
 
     override fun onTrimMemory(level: Int) {
@@ -568,228 +479,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             // we remove any previous subscriptions.
             checker.unregisterForChecks()
         }
-    }
-
-    /**
-     * This function is called right after Glean is initialized. Part of this function depends on
-     * shared preferences to be updated so the correct value is sent with the metrics ping.
-     *
-     * The reason we're using shared preferences to track these values is due to the limitations of
-     * the current metrics ping design. The values set here will be sent in every metrics ping even
-     * if these values have not changed since the last startup.
-     */
-    @Suppress("ComplexMethod", "LongMethod")
-    @VisibleForTesting
-    internal fun setStartupMetrics(
-        browserStore: BrowserStore,
-        settings: Settings,
-        browsersCache: BrowsersCache = BrowsersCache,
-        mozillaProductDetector: MozillaProductDetector = MozillaProductDetector
-    ) {
-        setPreferenceMetrics(settings)
-        with(Metrics) {
-            // Set this early to guarantee it's in every ping from here on.
-            distributionId.set(
-                when (Config.channel.isMozillaOnline) {
-                    true -> "MozillaOnline"
-                    false -> "Mozilla"
-                }
-            )
-
-            defaultBrowser.set(browsersCache.all(applicationContext).isDefaultBrowser)
-            mozillaProductDetector.getMozillaBrowserDefault(applicationContext)?.also {
-                defaultMozBrowser.set(it)
-            }
-
-            if (settings.contileContextId.isEmpty()) {
-                settings.contileContextId = TopSites.contextId.generateAndSet().toString()
-            } else {
-                TopSites.contextId.set(UUID.fromString(settings.contileContextId))
-            }
-
-            mozillaProducts.set(mozillaProductDetector.getInstalledMozillaProducts(applicationContext))
-
-            searchWidgetInstalled.set(settings.searchWidgetInstalled)
-
-            val openTabsCount = settings.openTabsCount
-            hasOpenTabs.set(openTabsCount > 0)
-            if (openTabsCount > 0) {
-                tabsOpenCount.add(openTabsCount)
-            }
-
-            val topSitesSize = settings.topSitesSize
-            hasTopSites.set(topSitesSize > 0)
-            if (topSitesSize > 0) {
-                topSitesCount.add(topSitesSize)
-            }
-
-            val installedAddonSize = settings.installedAddonsCount
-            Addons.hasInstalledAddons.set(installedAddonSize > 0)
-            if (installedAddonSize > 0) {
-                Addons.installedAddons.set(settings.installedAddonsList.split(','))
-            }
-
-            val enabledAddonSize = settings.enabledAddonsCount
-            Addons.hasEnabledAddons.set(enabledAddonSize > 0)
-            if (enabledAddonSize > 0) {
-                Addons.enabledAddons.set(settings.enabledAddonsList.split(','))
-            }
-
-            val desktopBookmarksSize = settings.desktopBookmarksSize
-            hasDesktopBookmarks.set(desktopBookmarksSize > 0)
-            if (desktopBookmarksSize > 0) {
-                desktopBookmarksCount.add(desktopBookmarksSize)
-            }
-
-            val mobileBookmarksSize = settings.mobileBookmarksSize
-            hasMobileBookmarks.set(mobileBookmarksSize > 0)
-            if (mobileBookmarksSize > 0) {
-                mobileBookmarksCount.add(mobileBookmarksSize)
-            }
-
-            toolbarPosition.set(
-                when (settings.toolbarPosition) {
-                    ToolbarPosition.BOTTOM -> CustomizationFragment.Companion.Position.BOTTOM.name
-                    ToolbarPosition.TOP -> CustomizationFragment.Companion.Position.TOP.name
-                }
-            )
-
-            tabViewSetting.set(settings.getTabViewPingString())
-            closeTabSetting.set(settings.getTabTimeoutPingString())
-
-            val installSourcePackage = if (SDK_INT >= Build.VERSION_CODES.R) {
-                packageManager.getInstallSourceInfo(packageName).installingPackageName
-            } else {
-                @Suppress("DEPRECATION")
-                packageManager.getInstallerPackageName(packageName)
-            }
-            installSource.set(installSourcePackage.orEmpty())
-
-            defaultWallpaper.set(WallpaperManager.isDefaultTheCurrentWallpaper(settings))
-        }
-
-        with(AndroidAutofill) {
-            val autofillUseCases = AutofillUseCases()
-            supported.set(autofillUseCases.isSupported(applicationContext))
-            enabled.set(autofillUseCases.isEnabled(applicationContext))
-        }
-
-        browserStore.waitForSelectedOrDefaultSearchEngine { searchEngine ->
-            searchEngine?.let {
-                val sendSearchUrl =
-                    !searchEngine.isCustomEngine() || searchEngine.isKnownSearchDomain()
-                if (sendSearchUrl) {
-                    SearchDefaultEngine.apply {
-                        code.set(searchEngine.id)
-                        name.set(searchEngine.name)
-                        searchUrl.set(searchEngine.buildSearchUrl(""))
-                    }
-                } else {
-                    SearchDefaultEngine.apply {
-                        code.set(searchEngine.id)
-                        name.set("custom")
-                    }
-                }
-            }
-        }
-    }
-
-    @Suppress("ComplexMethod")
-    private fun setPreferenceMetrics(
-        settings: Settings
-    ) {
-        with(Preferences) {
-            searchSuggestionsEnabled.set(settings.shouldShowSearchSuggestions)
-            remoteDebuggingEnabled.set(settings.isRemoteDebuggingEnabled)
-            studiesEnabled.set(settings.isExperimentationEnabled)
-            telemetryEnabled.set(settings.isTelemetryEnabled)
-            browsingHistorySuggestion.set(settings.shouldShowHistorySuggestions)
-            bookmarksSuggestion.set(settings.shouldShowBookmarkSuggestions)
-            clipboardSuggestionsEnabled.set(settings.shouldShowClipboardSuggestions)
-            searchShortcutsEnabled.set(settings.shouldShowSearchShortcuts)
-            voiceSearchEnabled.set(settings.shouldShowVoiceSearch)
-            openLinksInAppEnabled.set(settings.openLinksInExternalApp)
-            signedInSync.set(settings.signedInFxaAccount)
-            searchTermGroupsEnabled.set(settings.searchTermTabGroupsAreEnabled)
-
-            val syncedItems = SyncEnginesStorage(applicationContext).getStatus().entries.filter {
-                it.value
-            }.map { it.key.nativeName }
-            syncItems.set(syncedItems)
-
-            toolbarPositionSetting.set(
-                when {
-                    settings.shouldUseFixedTopToolbar -> "fixed_top"
-                    settings.shouldUseBottomToolbar -> "bottom"
-                    else -> "top"
-                }
-            )
-
-            enhancedTrackingProtection.set(
-                when {
-                    !settings.shouldUseTrackingProtection -> ""
-                    settings.useStandardTrackingProtection -> "standard"
-                    settings.useStrictTrackingProtection -> "strict"
-                    settings.useCustomTrackingProtection -> "custom"
-                    else -> ""
-                }
-            )
-
-            val accessibilitySelection = mutableListOf<String>()
-
-            if (settings.switchServiceIsEnabled) {
-                accessibilitySelection.add("switch")
-            }
-
-            if (settings.touchExplorationIsEnabled) {
-                accessibilitySelection.add("touch exploration")
-            }
-
-            accessibilityServices.set(accessibilitySelection.toList())
-
-            userTheme.set(
-                when {
-                    settings.shouldUseLightTheme -> "light"
-                    settings.shouldUseDarkTheme -> "dark"
-                    settings.shouldFollowDeviceTheme -> "system"
-                    settings.shouldUseAutoBatteryTheme -> "battery"
-                    else -> ""
-                }
-            )
-
-            inactiveTabsEnabled.set(settings.inactiveTabsAreEnabled)
-        }
-        reportHomeScreenMetrics(settings)
-    }
-
-    @VisibleForTesting
-    internal fun reportHomeScreenMetrics(settings: Settings) {
-        reportOpeningScreenMetrics(settings)
-        reportHomeScreenSectionMetrics(settings)
-    }
-
-    private fun reportOpeningScreenMetrics(settings: Settings) {
-        CustomizeHome.openingScreen.set(
-            when {
-                settings.alwaysOpenTheHomepageWhenOpeningTheApp -> "homepage"
-                settings.alwaysOpenTheLastTabWhenOpeningTheApp -> "last tab"
-                settings.openHomepageAfterFourHoursOfInactivity -> "homepage after four hours"
-                else -> ""
-            }
-        )
-    }
-
-    private fun reportHomeScreenSectionMetrics(settings: Settings) {
-        // These settings are backed by Nimbus features.
-        // We break them out here so they can be recorded when
-        // `nimbus.applyPendingExperiments()` is called.
-        CustomizeHome.jumpBackIn.set(settings.showRecentTabsFeature)
-        CustomizeHome.recentlySaved.set(settings.showRecentBookmarksFeature)
-        CustomizeHome.mostVisitedSites.set(settings.showTopSitesFeature)
-        CustomizeHome.recentlyVisited.set(settings.historyMetadataUIFeature)
-        CustomizeHome.pocket.set(settings.showPocketRecommendationsFeature)
-        CustomizeHome.sponsoredPocket.set(settings.showPocketSponsoredStories)
-        CustomizeHome.contile.set(settings.showContileFeature)
     }
 
     protected fun recordOnInit() {

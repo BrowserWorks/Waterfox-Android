@@ -5,9 +5,7 @@
 package net.waterfox.android.settings.logins.controller
 
 import androidx.navigation.NavController
-import mozilla.components.service.glean.private.NoExtras
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.logins.LoginsAction
 import net.waterfox.android.settings.logins.LoginsFragmentStore
@@ -37,7 +35,6 @@ class LoginsListController(
 
     fun handleItemClicked(item: SavedLogin) {
         loginsFragmentStore.dispatch(LoginsAction.LoginSelected(item))
-        Logins.openIndividualLogin.record(NoExtras())
         navController.navigate(
             SavedLoginsFragmentDirections.actionSavedLoginsFragmentToLoginDetailFragment(item.guid)
         )

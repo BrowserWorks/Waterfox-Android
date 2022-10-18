@@ -5,14 +5,10 @@
 package net.waterfox.android.settings
 
 import android.os.Bundle
-import android.view.View
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import mozilla.telemetry.glean.private.NoExtras
 import net.waterfox.android.FeatureFlags
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.Tabs
 import net.waterfox.android.R
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
@@ -34,11 +30,6 @@ class TabsSettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.tabs_preferences, rootKey)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Tabs.settingOpened.record(NoExtras())
     }
 
     override fun onResume() {
@@ -77,9 +68,6 @@ class TabsSettingsFragment : PreferenceFragmentCompat() {
             it.isEnabled = !(it.context.settings().closeTabsAfterOneDay || it.context.settings().closeTabsAfterOneWeek)
         }
 
-        listRadioButton.onClickListener(::sendTabViewTelemetry)
-        gridRadioButton.onClickListener(::sendTabViewTelemetry)
-
         radioManual.onClickListener(::enableInactiveTabsSetting)
         radioOneDay.onClickListener(::disableInactiveTabsSetting)
         radioOneWeek.onClickListener(::disableInactiveTabsSetting)
@@ -100,14 +88,6 @@ class TabsSettingsFragment : PreferenceFragmentCompat() {
             radioOneMonth,
             radioOneWeek
         )
-    }
-
-    private fun sendTabViewTelemetry() {
-        if (listRadioButton.isChecked && !gridRadioButton.isChecked) {
-            Events.tabViewChanged.record(Events.TabViewChangedExtra("list"))
-        } else {
-            Events.tabViewChanged.record(Events.TabViewChangedExtra("grid"))
-        }
     }
 
     private fun enableInactiveTabsSetting() {

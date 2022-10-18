@@ -24,16 +24,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import mozilla.components.feature.autofill.preference.AutofillPreference
 import mozilla.components.service.fxa.SyncEngine
-import mozilla.components.service.glean.private.NoExtras
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.R
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.secure
-import net.waterfox.android.ext.settings
-import net.waterfox.android.ext.showToolbar
+import net.waterfox.android.ext.*
 import net.waterfox.android.settings.SharedPreferenceUpdater
 import net.waterfox.android.settings.SyncPreferenceView
 import net.waterfox.android.settings.biometric.BiometricPromptFeature
@@ -224,7 +217,6 @@ class SavedLoginsAuthFragment : PreferenceFragmentCompat() {
      * Called when authentication succeeds.
      */
     private fun navigateToSavedLoginsFragment() {
-        Logins.openLogins.record(NoExtras())
         val directions =
             SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToLoginsListFragment()
         findNavController().navigate(directions)
