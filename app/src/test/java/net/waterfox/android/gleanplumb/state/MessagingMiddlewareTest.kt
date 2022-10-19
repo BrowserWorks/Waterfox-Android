@@ -13,8 +13,6 @@ import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
 import mozilla.components.lib.state.MiddlewareContext
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
 import org.junit.Assert.assertTrue
@@ -48,9 +46,6 @@ class MessagingMiddlewareTest {
     private lateinit var middleware: MessagingMiddleware
     private lateinit var messagingStorage: NimbusMessagingStorage
     private lateinit var middlewareContext: MiddlewareContext<AppState, AppAction>
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Before
     fun setUp() {
@@ -164,7 +159,6 @@ class MessagingMiddlewareTest {
 
         coVerify { messagingStorage.updateMetadata(message.metadata.copy(displayCount = 1)) }
         verify { middlewareContext.dispatch(UpdateMessages(emptyList())) }
-        verify { spiedMiddleware.sendExpiredMessageTelemetry(message.id) }
     }
 
     @Test
@@ -337,6 +331,5 @@ class MessagingMiddlewareTest {
         verify { spiedMiddleware.removeMessage(middlewareContext, oldMessage) }
         verify { middlewareContext.dispatch(UpdateMessages(emptyList())) }
         coVerify { messagingStorage.updateMetadata(updatedMessage.metadata) }
-        verify { spiedMiddleware.sendShownMessageTelemetry(oldMessage.id) }
     }
 }

@@ -10,15 +10,9 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingPrivacyNoticeBinding
 import net.waterfox.android.ext.components
@@ -27,9 +21,6 @@ import net.waterfox.android.home.sessioncontrol.OnboardingInteractor
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class OnboardingPrivacyNoticeViewHolderTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var binding: OnboardingPrivacyNoticeBinding
     private lateinit var interactor: OnboardingInteractor
@@ -48,9 +39,5 @@ class OnboardingPrivacyNoticeViewHolderTest {
 
         binding.readButton.performClick()
         verify { interactor.onReadPrivacyNoticeClicked() }
-        // Check if the event was recorded
-        assertNotNull(Onboarding.privacyNotice.testGetValue())
-        assertEquals(1, Onboarding.privacyNotice.testGetValue()!!.size)
-        assertNull(Onboarding.privacyNotice.testGetValue()!!.single().extra)
     }
 }

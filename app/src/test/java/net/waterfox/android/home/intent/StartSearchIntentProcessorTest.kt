@@ -10,26 +10,17 @@ import androidx.navigation.navOptions
 import io.mockk.Called
 import io.mockk.mockk
 import io.mockk.verify
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.SearchWidget
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.ext.nav
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.search.SearchEventSource
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class StartSearchIntentProcessorTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val navController: NavController = mockk(relaxed = true)
     private val out: Intent = mockk(relaxed = true)
@@ -61,17 +52,12 @@ class StartSearchIntentProcessorTest {
             popUpTo = R.id.homeFragment
         }
 
-        assertNotNull(SearchWidget.newTabButton.testGetValue())
-        val recordedEvents = SearchWidget.newTabButton.testGetValue()!!
-        assertEquals(1, recordedEvents.size)
-        assertEquals(null, recordedEvents.single().extra)
-
         verify {
             navController.nav(
                 null,
                 NavGraphDirections.actionGlobalSearchDialog(
                     sessionId = null,
-                    searchAccessPoint = MetricsUtils.Source.WIDGET
+                    searchAccessPoint = SearchEventSource.WIDGET
                 ),
                 options
             )

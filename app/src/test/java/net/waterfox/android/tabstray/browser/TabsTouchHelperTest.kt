@@ -20,17 +20,12 @@ import net.waterfox.android.tabstray.viewholders.SyncedTabsPageViewHolder
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class TabsTouchHelperTest {
 
-    private val featureName = object : FeatureNameHolder {
-        override val featureName: String
-            get() = "featureName"
-    }
-
     @Test
     fun `movement flags remain unchanged if onSwipeToDelete is true`() {
         val recyclerView = RecyclerView(testContext)
         val layout = ComposeView(testContext)
         val viewHolder = SyncedTabsPageViewHolder(layout, mockk(), mockk())
-        val callback = TouchCallback(mockk(), { true }, { false }, featureName)
+        val callback = TouchCallback(mockk(), { true }, { false })
 
         assertEquals(0, callback.getDragDirs(recyclerView, viewHolder))
         assertEquals(
@@ -49,7 +44,7 @@ class TabsTouchHelperTest {
         val recyclerView = RecyclerView(testContext)
         val layout = ComposeView(testContext)
         val viewHolder = SyncedTabsPageViewHolder(layout, mockk(), mockk())
-        val callback = TouchCallback(mockk(), { false }, { false }, featureName)
+        val callback = TouchCallback(mockk(), { false }, { false })
 
         assertEquals(0, callback.getDragDirs(recyclerView, viewHolder))
         assertEquals(

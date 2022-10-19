@@ -4,29 +4,17 @@
 
 package net.waterfox.android.tabstray
 
-import io.mockk.mockk
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.libstate.ext.waitUntilIdle
-import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Metrics
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class TabsTrayMiddlewareTest {
 
     private lateinit var store: TabsTrayStore
     private lateinit var tabsTrayMiddleware: TabsTrayMiddleware
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Before
     fun setUp() {
@@ -35,19 +23,6 @@ class TabsTrayMiddlewareTest {
             middlewares = listOf(tabsTrayMiddleware),
             initialState = TabsTrayState()
         )
-    }
-
-    @Test
-    fun `WHEN inactive tabs are updated THEN report the count of inactive tabs`() {
-
-        assertNull(TabsTray.hasInactiveTabs.testGetValue())
-        assertNull(Metrics.inactiveTabsCount.testGetValue())
-
-        store.dispatch(TabsTrayAction.UpdateInactiveTabs(emptyList()))
-        store.waitUntilIdle()
-        assertNotNull(TabsTray.hasInactiveTabs.testGetValue())
-        assertNotNull(Metrics.inactiveTabsCount.testGetValue())
-        assertEquals(0L, Metrics.inactiveTabsCount.testGetValue())
     }
 
     @Test
@@ -65,29 +40,5 @@ class TabsTrayMiddlewareTest {
         assertEquals(4L, tabsTrayMiddleware.generateTabGroupSizeMappedValue(12))
         assertEquals(4L, tabsTrayMiddleware.generateTabGroupSizeMappedValue(20))
         assertEquals(4L, tabsTrayMiddleware.generateTabGroupSizeMappedValue(50))
-    }
-
-    @Test
-    fun `WHEN multi select mode from menu is entered THEN relevant metrics are collected`() {
-        assertNull(TabsTray.enterMultiselectMode.testGetValue())
-
-        store.dispatch(TabsTrayAction.EnterSelectMode)
-        store.waitUntilIdle()
-
-        assertNotNull(TabsTray.enterMultiselectMode.testGetValue())
-        val snapshot = TabsTray.enterMultiselectMode.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("false", snapshot.single().extra?.getValue("tab_selected"))
-    }
-
-    @Test
-    fun `WHEN multi select mode by long press is entered THEN relevant metrics are collected`() {
-        store.dispatch(TabsTrayAction.AddSelectTab(mockk()))
-        store.waitUntilIdle()
-
-        assertNotNull(TabsTray.enterMultiselectMode.testGetValue())
-        val snapshot = TabsTray.enterMultiselectMode.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("true", snapshot.single().extra?.getValue("tab_selected"))
     }
 }

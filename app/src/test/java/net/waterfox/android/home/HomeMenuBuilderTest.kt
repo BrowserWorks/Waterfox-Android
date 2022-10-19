@@ -13,17 +13,11 @@ import io.mockk.verify
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.menu.view.MenuButton
 import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.HomeScreen
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.accounts.AccountState
@@ -34,13 +28,9 @@ import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.Settings
 import net.waterfox.android.whatsnew.WhatsNew
 import java.lang.ref.WeakReference
-import net.waterfox.android.GleanMetrics.HomeMenu as HomeMenuMetrics
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class HomeMenuBuilderTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var view: View
     private lateinit var lifecycleOwner: LifecycleOwner
@@ -69,12 +59,8 @@ class HomeMenuBuilderTest {
     }
 
     @Test
-    fun `WHEN Settings menu item is tapped THEN navigate to settings fragment and record metrics`() {
-        assertNull(HomeMenuMetrics.settingsItemClicked.testGetValue())
-
+    fun `WHEN Settings menu item is tapped THEN navigate to settings fragment`() {
         homeMenuBuilder.onItemTapped(HomeMenu.Item.Settings)
-
-        assertNotNull(HomeMenuMetrics.settingsItemClicked.testGetValue())
 
         verify {
             navController.nav(
@@ -85,12 +71,8 @@ class HomeMenuBuilderTest {
     }
 
     @Test
-    fun `WHEN Customize Home menu item is tapped THEN navigate to home settings fragment and record metrics`() {
-        assertNull(HomeScreen.customizeHomeClicked.testGetValue())
-
+    fun `WHEN Customize Home menu item is tapped THEN navigate to home settings fragment`() {
         homeMenuBuilder.onItemTapped(HomeMenu.Item.CustomizeHome)
-
-        assertNotNull(HomeScreen.customizeHomeClicked.testGetValue())
 
         verify {
             navController.nav(
@@ -183,12 +165,8 @@ class HomeMenuBuilderTest {
     }
 
     @Test
-    fun `WHEN Whats New menu item is tapped THEN open the browser to the SUMO whats new page and record metrics`() {
-        assertNull(Events.whatsNewTapped.testGetValue())
-
+    fun `WHEN Whats New menu item is tapped THEN open the browser to the SUMO whats new page`() {
         homeMenuBuilder.onItemTapped(HomeMenu.Item.WhatsNew)
-
-        assertNotNull(Events.whatsNewTapped.testGetValue())
 
         verify {
             WhatsNew.userViewedWhatsNew(testContext)

@@ -21,24 +21,20 @@ import io.mockk.verify
 import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.state.search.SearchEngine.Type.BUNDLED
 import mozilla.components.concept.menu.Orientation
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.libstate.ext.waitUntilIdle
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.UnifiedSearch
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.search.SearchDialogFragmentStore
 import net.waterfox.android.search.SearchEngineSource
+import net.waterfox.android.search.SearchEventSource
 import net.waterfox.android.search.SearchFragmentAction.SearchDefaultEngineSelected
 import net.waterfox.android.search.SearchFragmentAction.SearchHistoryEngineSelected
 import net.waterfox.android.search.SearchFragmentState
@@ -60,9 +56,6 @@ class SearchSelectorToolbarActionTest {
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
-
     @Before
     fun setup() {
         MockKAnnotations.init(this)
@@ -79,12 +72,10 @@ class SearchSelectorToolbarActionTest {
             )
         )
         val view = action.createView(LinearLayout(testContext) as ViewGroup) as SearchSelector
-        assertNull(UnifiedSearch.searchMenuTapped.testGetValue())
 
         every { settings.shouldUseBottomToolbar } returns false
         view.performClick()
 
-        assertNotNull(UnifiedSearch.searchMenuTapped.testGetValue())
         verify {
             menu.menuController.show(view, Orientation.DOWN, true)
         }
@@ -92,7 +83,6 @@ class SearchSelectorToolbarActionTest {
         every { settings.shouldUseBottomToolbar } returns true
         view.performClick()
 
-        assertNotNull(UnifiedSearch.searchMenuTapped.testGetValue())
         verify {
             menu.menuController.show(view, Orientation.UP, true)
         }
@@ -267,7 +257,7 @@ private val testSearchFragmentState = SearchFragmentState(
     showSessionSuggestions = true,
     tabId = "tabId",
     pastedText = "",
-    searchAccessPoint = MetricsUtils.Source.SHORTCUT
+    searchAccessPoint = SearchEventSource.SHORTCUT
 )
 
 private val testSearchEngine = SearchEngine(

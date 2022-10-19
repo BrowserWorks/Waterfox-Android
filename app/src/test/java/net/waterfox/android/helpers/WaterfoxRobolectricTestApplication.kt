@@ -23,8 +23,6 @@ class WaterfoxRobolectricTestApplication : WaterfoxApplication() {
 
     override val components = mockk<Components>()
 
-    override fun initializeGlean() = Unit
-
     override fun setupInAllProcesses() = Unit
 
     override fun setupInMainProcessOnly() = Unit

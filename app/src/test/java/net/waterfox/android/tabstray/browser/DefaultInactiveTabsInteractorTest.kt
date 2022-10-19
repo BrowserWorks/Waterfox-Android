@@ -49,7 +49,7 @@ class DefaultInactiveTabsInteractorTest {
         createInteractor().onTabClicked(tab)
 
         verify { controller.openInactiveTab(tab) }
-        verify { browserInteractor.onTabSelected(tab, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME) }
+        verify { browserInteractor.onTabSelected(tab, null) }
     }
 
     @Test
@@ -64,7 +64,7 @@ class DefaultInactiveTabsInteractorTest {
         createInteractor().onTabClosed(tab)
 
         verify { controller.closeInactiveTab(tab) }
-        verify { browserInteractor.onTabClosed(tab, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME) }
+        verify { browserInteractor.onTabClosed(tab, null) }
     }
 
     @Test

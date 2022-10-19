@@ -8,25 +8,15 @@ import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
-import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.BookmarksManagement
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @SuppressWarnings("TooManyFunctions", "LargeClass")
-@RunWith(WaterfoxRobolectricTestRunner::class) // For GleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class BookmarkFragmentInteractorTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var interactor: BookmarkFragmentInteractor
 
@@ -59,9 +49,6 @@ class BookmarkFragmentInteractorTest {
         interactor.open(item)
 
         verify { bookmarkController.handleBookmarkTapped(item) }
-        assertNotNull(BookmarksManagement.open.testGetValue())
-        assertEquals(1, BookmarksManagement.open.testGetValue()!!.size)
-        assertNull(BookmarksManagement.open.testGetValue()!!.single().extra)
     }
 
     @Test(expected = IllegalStateException::class)
@@ -128,9 +115,6 @@ class BookmarkFragmentInteractorTest {
         interactor.onCopyPressed(item)
 
         verify { bookmarkController.handleCopyUrl(item) }
-        assertNotNull(BookmarksManagement.copied.testGetValue())
-        assertEquals(1, BookmarksManagement.copied.testGetValue()!!.size)
-        assertNull(BookmarksManagement.copied.testGetValue()!!.single().extra)
     }
 
     @Test
@@ -138,9 +122,6 @@ class BookmarkFragmentInteractorTest {
         interactor.onSharePressed(item)
 
         verify { bookmarkController.handleBookmarkSharing(item) }
-        assertNotNull(BookmarksManagement.shared.testGetValue())
-        assertEquals(1, BookmarksManagement.shared.testGetValue()!!.size)
-        assertNull(BookmarksManagement.shared.testGetValue()!!.single().extra)
     }
 
     @Test
@@ -148,9 +129,6 @@ class BookmarkFragmentInteractorTest {
         interactor.onOpenInNormalTab(item)
 
         verify { bookmarkController.handleOpeningBookmark(item, BrowsingMode.Normal) }
-        assertNotNull(BookmarksManagement.openInNewTab.testGetValue())
-        assertEquals(1, BookmarksManagement.openInNewTab.testGetValue()!!.size)
-        assertNull(BookmarksManagement.openInNewTab.testGetValue()!!.single().extra)
     }
 
     @Test
@@ -158,9 +136,6 @@ class BookmarkFragmentInteractorTest {
         interactor.onOpenInPrivateTab(item)
 
         verify { bookmarkController.handleOpeningBookmark(item, BrowsingMode.Private) }
-        assertNotNull(BookmarksManagement.openInPrivateTab.testGetValue())
-        assertEquals(1, BookmarksManagement.openInPrivateTab.testGetValue()!!.size)
-        assertNull(BookmarksManagement.openInPrivateTab.testGetValue()!!.single().extra)
     }
 
     @Test

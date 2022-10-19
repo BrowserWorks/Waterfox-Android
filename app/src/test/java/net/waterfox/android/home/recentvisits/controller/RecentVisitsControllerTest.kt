@@ -22,17 +22,12 @@ import mozilla.components.concept.storage.HistoryMetadata
 import mozilla.components.concept.storage.HistoryMetadataKey
 import mozilla.components.concept.storage.HistoryMetadataStorage
 import mozilla.components.feature.tabs.TabsUseCases.SelectOrAddUseCase
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.RecentSearches
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
@@ -45,8 +40,6 @@ import net.waterfox.android.home.recentvisits.RecentlyVisitedItem.RecentHistoryH
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class RecentVisitsControllerTest {
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
     private val scope = coroutinesTestRule.scope
@@ -140,7 +133,6 @@ class RecentVisitsControllerTest {
                 )
             )
         )
-        assertNull(RecentSearches.groupDeleted.testGetValue())
 
         controller.handleRemoveRecentHistoryGroup(historyGroup.title)
 
@@ -149,7 +141,6 @@ class RecentVisitsControllerTest {
             store.dispatch(HistoryMetadataAction.DisbandSearchGroupAction(searchTerm = historyGroup.title))
             appStore.dispatch(AppAction.DisbandSearchGroupAction(searchTerm = historyGroup.title))
         }
-        assertNotNull(RecentSearches.groupDeleted.testGetValue())
 
         coVerify {
             storage.deleteHistoryMetadata(historyGroup.title)

@@ -30,25 +30,15 @@ import mozilla.components.service.fxa.store.SyncAction
 import mozilla.components.service.fxa.store.SyncStatus
 import mozilla.components.service.fxa.store.SyncStore
 import mozilla.components.service.fxa.sync.SyncReason
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.libstate.ext.waitUntilIdle
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.RecentSyncedTabs
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 
 @RunWith(AndroidJUnit4::class)
 class RecentSyncedTabFeatureTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val earliestTime = 100L
     private val earlierTime = 250L
@@ -247,83 +237,6 @@ class RecentSyncedTabFeatureTest {
                 AppAction.RecentSyncedTabStateChange(RecentSyncedTabState.Success(expectedTab))
             )
         }
-    }
-
-    @Test
-    fun `WHEN synced tab dispatched THEN labeled counter metric recorded with device type`() = runTest {
-        val account = mockk<Account>()
-        syncStore.setState(account = account)
-        every { appStore.state } returns mockk {
-            every { recentSyncedTabState } returns RecentSyncedTabState.Loading
-        }
-        val tab = SyncedDeviceTabs(deviceAccessed1, listOf(createActiveTab()))
-        coEvery { storage.getSyncedDeviceTabs() } returns listOf(tab)
-
-        feature.start()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-
-        assertEquals(1, RecentSyncedTabs.recentSyncedTabShown["desktop"].testGetValue())
-    }
-
-    @Test
-    fun `WHEN synced tab dispatched THEN load time metric recorded`() = runTest {
-        val account = mockk<Account>()
-        syncStore.setState(account = account)
-        every { appStore.state } returns mockk {
-            every { recentSyncedTabState } returns RecentSyncedTabState.None
-        }
-        val tab = SyncedDeviceTabs(deviceAccessed1, listOf(createActiveTab()))
-        coEvery { storage.getSyncedDeviceTabs() } returns listOf(tab)
-
-        feature.start()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-
-        assertNotNull(RecentSyncedTabs.recentSyncedTabTimeToLoad.testGetValue())
-    }
-
-    @Test
-    fun `GIVEN that the dispatched tab was the last dispatched tab WHEN dispatched THEN recorded as stale`() = runTest {
-        val account = mockk<Account>()
-        syncStore.setState(account = account)
-        every { appStore.state } returns mockk {
-            every { recentSyncedTabState } returns RecentSyncedTabState.None
-        }
-        val tab = SyncedDeviceTabs(deviceAccessed1, listOf(createActiveTab()))
-        coEvery { storage.getSyncedDeviceTabs() } returns listOf(tab)
-
-        feature.start()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-        syncStore.setState(status = SyncStatus.Started)
-        runCurrent()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-
-        assertEquals(1, RecentSyncedTabs.latestSyncedTabIsStale.testGetValue())
-    }
-
-    @Test
-    fun `GIVEN that the dispatched tab was not the last dispatched tab WHEN dispatched THEN not recorded as stale`() = runTest {
-        val account = mockk<Account>()
-        syncStore.setState(account = account)
-        every { appStore.state } returns mockk {
-            every { recentSyncedTabState } returns RecentSyncedTabState.None
-        }
-        val tabs1 = listOf(SyncedDeviceTabs(deviceAccessed1, listOf(createActiveTab())))
-        val tabs2 = listOf(SyncedDeviceTabs(deviceAccessed2, listOf(createActiveTab())))
-        coEvery { storage.getSyncedDeviceTabs() } returnsMany listOf(tabs1, tabs2)
-
-        feature.start()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-        syncStore.setState(status = SyncStatus.Started)
-        runCurrent()
-        syncStore.setState(status = SyncStatus.Idle)
-        runCurrent()
-
-        assertNull(RecentSyncedTabs.latestSyncedTabIsStale.testGetValue())
     }
 
     @Test

@@ -4,58 +4,37 @@
 
 package net.waterfox.android.tabstray.browser
 
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class RemoveTabUseCaseWrapperTest {
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
-
     @Test
-    fun `WHEN invoked with no source name THEN metrics with unknown source, use case and callback are triggered`() {
+    fun `WHEN invoked with no source name THEN use case and callback are triggered`() {
         var actualTabId: String? = null
         val onRemove: (String) -> Unit = { tabId ->
             actualTabId = tabId
         }
         val wrapper = RemoveTabUseCaseWrapper(onRemove)
 
-        assertNull(TabsTray.closedExistingTab.testGetValue())
-
         wrapper("123")
 
-        assertNotNull(TabsTray.closedExistingTab.testGetValue())
-        val snapshot = TabsTray.closedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("unknown", snapshot.single().extra?.getValue("source"))
         assertEquals("123", actualTabId)
     }
 
     @Test
-    fun `WHEN invoked with a source name THEN metrics containing the source, use case and callback are triggered`() {
+    fun `WHEN invoked with a source name THEN use case and callback are triggered`() {
         var actualTabId: String? = null
         val onRemove: (String) -> Unit = { tabId ->
             actualTabId = tabId
         }
         val wrapper = RemoveTabUseCaseWrapper(onRemove)
 
-        assertNull(TabsTray.closedExistingTab.testGetValue())
-
         wrapper("123", "Test")
 
-        assertNotNull(TabsTray.closedExistingTab.testGetValue())
-        val snapshot = TabsTray.closedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("Test", snapshot.single().extra?.getValue("source"))
         assertEquals("123", actualTabId)
     }
 }

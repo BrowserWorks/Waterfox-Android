@@ -10,23 +10,15 @@ import io.mockk.Called
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Events
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultBrowserIntentProcessorTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Test
     fun `do not process blank intents`() {
@@ -52,14 +44,11 @@ class DefaultBrowserIntentProcessorTest {
         every { activity.startActivity(any()) } returns Unit
         every { activity.applicationContext } returns testContext
 
-        assertNull(Events.defaultBrowserNotifTapped.testGetValue())
-
         val result = DefaultBrowserIntentProcessor(activity)
             .process(intent, navController, out)
 
         assert(result)
 
-        assertNotNull(Events.defaultBrowserNotifTapped.testGetValue())
         verify { navController wasNot Called }
         verify { out wasNot Called }
     }

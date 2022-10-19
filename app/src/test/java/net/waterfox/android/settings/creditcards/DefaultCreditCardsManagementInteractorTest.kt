@@ -7,24 +7,15 @@ package net.waterfox.android.settings.creditcards
 import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.concept.storage.CreditCard
-import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.CreditCards
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.creditcards.controller.CreditCardsManagementController
 import net.waterfox.android.settings.creditcards.interactor.DefaultCreditCardsManagementInteractor
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultCreditCardsManagementInteractorTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val controller: CreditCardsManagementController = mockk(relaxed = true)
 
@@ -38,19 +29,14 @@ class DefaultCreditCardsManagementInteractorTest {
     @Test
     fun onSelectCreditCard() {
         val creditCard: CreditCard = mockk(relaxed = true)
-        assertNull(CreditCards.managementCardTapped.testGetValue())
 
         interactor.onSelectCreditCard(creditCard)
         verify { controller.handleCreditCardClicked(creditCard) }
-        assertNotNull(CreditCards.managementCardTapped.testGetValue())
     }
 
     @Test
     fun onClickAddCreditCard() {
-        assertNull(CreditCards.managementAddTapped.testGetValue())
-
         interactor.onAddCreditCardClick()
         verify { controller.handleAddCreditCardClicked() }
-        assertNotNull(CreditCards.managementAddTapped.testGetValue())
     }
 }

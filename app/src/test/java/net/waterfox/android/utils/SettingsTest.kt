@@ -154,13 +154,6 @@ class SettingsTest {
     }
 
     @Test
-    fun isTelemetryEnabled() {
-        // When just created
-        // Then
-        assertFalse(settings.isTelemetryEnabled)
-    }
-
-    @Test
     fun showLoginsDialogWarningSync() {
         // When just created
         // Then

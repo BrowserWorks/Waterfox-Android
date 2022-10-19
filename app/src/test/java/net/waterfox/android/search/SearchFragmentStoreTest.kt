@@ -29,7 +29,6 @@ import net.waterfox.android.HomeActivity
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.components.Components
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.utils.Settings
 
 class SearchFragmentStoreTest {
@@ -72,7 +71,7 @@ class SearchFragmentStoreTest {
             showSessionSuggestions = true,
             tabId = null,
             pastedText = "pastedText",
-            searchAccessPoint = MetricsUtils.Source.ACTION
+            searchAccessPoint = SearchEventSource.ACTION
         )
 
         assertEquals(
@@ -82,7 +81,7 @@ class SearchFragmentStoreTest {
                 components,
                 tabId = null,
                 pastedText = "pastedText",
-                searchAccessPoint = MetricsUtils.Source.ACTION
+                searchAccessPoint = SearchEventSource.ACTION
             )
         )
         assertEquals(
@@ -92,7 +91,7 @@ class SearchFragmentStoreTest {
                 components,
                 tabId = "tabId",
                 pastedText = "pastedText",
-                searchAccessPoint = MetricsUtils.Source.ACTION
+                searchAccessPoint = SearchEventSource.ACTION
             )
         )
     }
@@ -131,14 +130,14 @@ class SearchFragmentStoreTest {
                 showSessionSuggestions = true,
                 tabId = "tabId",
                 pastedText = "",
-                searchAccessPoint = MetricsUtils.Source.SHORTCUT
+                searchAccessPoint = SearchEventSource.SHORTCUT
             ),
             createInitialSearchFragmentState(
                 activity,
                 components,
                 tabId = "tabId",
                 pastedText = "",
-                searchAccessPoint = MetricsUtils.Source.SHORTCUT
+                searchAccessPoint = SearchEventSource.SHORTCUT
             )
         )
     }
@@ -385,6 +384,6 @@ class SearchFragmentStoreTest {
         showBookmarkSuggestions = false,
         showSyncedTabsSuggestions = false,
         showSessionSuggestions = false,
-        searchAccessPoint = MetricsUtils.Source.NONE
+        searchAccessPoint = SearchEventSource.NONE
     )
 }

@@ -4,7 +4,6 @@
 
 package net.waterfox.android.home
 
-import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.feature.tab.collections.Tab
@@ -13,7 +12,6 @@ import mozilla.components.service.pocket.PocketStory
 import org.junit.Before
 import org.junit.Test
 import net.waterfox.android.browser.browsingmode.BrowsingMode
-import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
 import net.waterfox.android.home.pocket.PocketStoriesController
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
@@ -284,13 +282,5 @@ class SessionControlInteractorTest {
         interactor.onLearnMoreClicked(link)
 
         verify { pocketStoriesController.handleLearnMoreClicked(link) }
-    }
-
-    @Test
-    fun reportSessionMetrics() {
-        val appState: AppState = mockk(relaxed = true)
-        every { appState.recentBookmarks } returns emptyList()
-        interactor.reportSessionMetrics(appState)
-        verify { controller.handleReportSessionMetrics(appState) }
     }
 }
