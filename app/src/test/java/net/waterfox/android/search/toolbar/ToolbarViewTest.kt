@@ -16,7 +16,6 @@ import io.mockk.verify
 import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.browser.toolbar.edit.EditToolbar
-import mozilla.components.concept.engine.Engine
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -25,16 +24,15 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.R
-import net.waterfox.android.components.metrics.MetricsUtils
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.search.SearchEngineSource
+import net.waterfox.android.search.SearchEventSource
 import net.waterfox.android.search.SearchFragmentState
 import net.waterfox.android.utils.Settings
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class ToolbarViewTest {
     @MockK(relaxed = true) private lateinit var interactor: ToolbarInteractor
-    @MockK private lateinit var engine: Engine
     private lateinit var context: Context
     private lateinit var toolbar: BrowserToolbar
     private val defaultState: SearchFragmentState = SearchFragmentState(
@@ -60,7 +58,7 @@ class ToolbarViewTest {
         showBookmarkSuggestions = false,
         showSyncedTabsSuggestions = false,
         showSessionSuggestions = false,
-        searchAccessPoint = MetricsUtils.Source.NONE
+        searchAccessPoint = SearchEventSource.NONE
     )
 
     @Before

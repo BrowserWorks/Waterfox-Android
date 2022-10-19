@@ -25,18 +25,10 @@ import net.waterfox.android.tabstray.TabsTrayStore
 import mozilla.components.browser.state.state.createTab
 import mozilla.components.concept.engine.mediasession.MediaSession
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
-import net.waterfox.android.GleanMetrics.Tab
 import net.waterfox.android.ext.components
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class AbstractBrowserTabViewHolderTest {
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     val store = TabsTrayStore()
     val browserStore = BrowserStore()
@@ -59,7 +51,7 @@ class AbstractBrowserTabViewHolderTest {
 
         holder.itemView.performClick()
 
-        verify { interactor.onTabSelected(any(), holder.featureName) }
+        verify { interactor.onTabSelected(any(), null) }
     }
 
     @Test
@@ -81,11 +73,11 @@ class AbstractBrowserTabViewHolderTest {
 
         holder.itemView.performClick()
 
-        verify { interactor.onMultiSelectClicked(tab, any(), holder.featureName) }
+        verify { interactor.onMultiSelectClicked(tab, any(), null) }
     }
 
     @Test
-    fun `WHEN the current media state is paused AND playPause button is clicked THEN the media is played AND the right metric is recorded`() {
+    fun `WHEN the current media state is paused AND playPause button is clicked THEN the media is played`() {
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
         val view = LayoutInflater.from(testContext).inflate(R.layout.tab_tray_item, null)
         val mediaSessionController = mockk<MediaSession.Controller>(relaxed = true)
@@ -108,21 +100,16 @@ class AbstractBrowserTabViewHolderTest {
             mediaBrowserStore,
             interactor
         )
-        assertNull(Tab.mediaPlay.testGetValue())
 
         holder.bind(mediaTab, false, mockk(), mockk())
 
         holder.itemView.findViewById<ImageButton>(R.id.play_pause_button).performClick()
 
-        assertNotNull(Tab.mediaPlay.testGetValue())
-        assertEquals(1, Tab.mediaPlay.testGetValue()!!.size)
-        assertNull(Tab.mediaPlay.testGetValue()!!.single().extra)
-
         verify { mediaSessionController.play() }
     }
 
     @Test
-    fun `WHEN the current media state is playing AND playPause button is clicked THEN the media is paused AND the right metric is recorded`() {
+    fun `WHEN the current media state is playing AND playPause button is clicked THEN the media is paused`() {
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
         val view = LayoutInflater.from(testContext).inflate(R.layout.tab_tray_item, null)
         val mediaSessionController = mockk<MediaSession.Controller>(relaxed = true)
@@ -145,15 +132,10 @@ class AbstractBrowserTabViewHolderTest {
             mediaBrowserStore,
             interactor
         )
-        assertNull(Tab.mediaPause.testGetValue())
 
         holder.bind(mediaTab, false, mockk(), mockk())
 
         holder.itemView.findViewById<ImageButton>(R.id.play_pause_button).performClick()
-
-        assertNotNull(Tab.mediaPause.testGetValue())
-        assertEquals(1, Tab.mediaPause.testGetValue()!!.size)
-        assertNull(Tab.mediaPause.testGetValue()!!.single().extra)
 
         verify { mediaSessionController.pause() }
     }
@@ -165,9 +147,8 @@ class AbstractBrowserTabViewHolderTest {
         trayStore: TabsTrayStore,
         selectionHolder: SelectionHolder<TabSessionState>?,
         store: BrowserStore,
-        override val browserTrayInteractor: BrowserTrayInteractor,
-        featureName: String = "Test"
-    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, trayStore, selectionHolder, featureName, store) {
+        override val browserTrayInteractor: BrowserTrayInteractor
+    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, trayStore, selectionHolder, store) {
         override val thumbnailSize: Int
             get() = 30
 

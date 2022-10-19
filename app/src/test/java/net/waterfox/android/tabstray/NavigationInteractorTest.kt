@@ -22,22 +22,14 @@ import mozilla.components.browser.state.state.content.DownloadState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.browser.storage.sync.TabEntry
 import mozilla.components.service.fxa.manager.FxaAccountManager
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.Assert
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.rules.RuleChain
 import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.collections.CollectionsDialog
 import net.waterfox.android.collections.show
@@ -47,7 +39,7 @@ import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import mozilla.components.browser.state.state.createTab as createStateTab
 import mozilla.components.browser.storage.sync.Tab as SyncTab
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class NavigationInteractorTest {
     private lateinit var store: BrowserStore
     private lateinit var tabsTrayStore: TabsTrayStore
@@ -59,11 +51,8 @@ class NavigationInteractorTest {
     private val accountManager: FxaAccountManager = mockk(relaxed = true)
     private val activity: HomeActivity = mockk(relaxed = true)
 
-    val coroutinesTestRule: MainCoroutineRule = MainCoroutineRule()
-    val gleanTestRule = GleanTestRule(testContext)
-
     @get:Rule
-    val chain: RuleChain = RuleChain.outerRule(coroutinesTestRule).around(gleanTestRule)
+    val coroutinesTestRule: MainCoroutineRule = MainCoroutineRule()
 
     private val testDispatcher = coroutinesTestRule.testDispatcher
 
@@ -77,8 +66,6 @@ class NavigationInteractorTest {
     fun `onTabTrayDismissed calls dismissTabTray on DefaultNavigationInteractor`() {
         var dismissTabTrayInvoked = false
 
-        assertNull(TabsTray.closed.testGetValue())
-
         createInteractor(
             dismissTabTray = {
                 dismissTabTrayInvoked = true
@@ -86,7 +73,6 @@ class NavigationInteractorTest {
         ).onTabTrayDismissed()
 
         assertTrue(dismissTabTrayInvoked)
-        assertNotNull(TabsTray.closed.testGetValue())
     }
 
     @Test
@@ -115,12 +101,9 @@ class NavigationInteractorTest {
 
     @Test
     fun `onOpenRecentlyClosedClicked calls navigation on DefaultNavigationInteractor`() {
-        assertNull(Events.recentlyClosedTabsOpened.testGetValue())
-
         createInteractor().onOpenRecentlyClosedClicked()
 
         verify(exactly = 1) { navController.navigate(TabsTrayFragmentDirections.actionGlobalRecentlyClosed()) }
-        assertNotNull(Events.recentlyClosedTabsOpened.testGetValue())
     }
 
     @Test
@@ -178,15 +161,9 @@ class NavigationInteractorTest {
 
     @Test
     fun `onShareTabs calls navigation on DefaultNavigationInteractor`() {
-
         createInteractor().onShareTabs(listOf(testTab))
 
         verify(exactly = 1) { navController.navigate(any<NavDirections>()) }
-
-        assertNotNull(TabsTray.shareSelectedTabs.testGetValue())
-        val snapshot = TabsTray.shareSelectedTabs.testGetValue()!!
-        Assert.assertEquals(1, snapshot.size)
-        Assert.assertEquals("1", snapshot.single().extra?.getValue("tab_count"))
     }
 
     @Test
@@ -194,11 +171,10 @@ class NavigationInteractorTest {
         mockkStatic("net.waterfox.android.collections.CollectionsDialogKt")
 
         every { any<CollectionsDialog>().show(any()) } answers { }
-        assertNull(TabsTray.saveToCollection.testGetValue())
 
         createInteractor().onSaveToCollections(listOf(testTab))
 
-        assertNotNull(TabsTray.saveToCollection.testGetValue())
+        // TODO: [Waterfox] verify navigation
 
         unmockkStatic("net.waterfox.android.collections.CollectionsDialogKt")
     }
@@ -214,18 +190,12 @@ class NavigationInteractorTest {
 
         coVerify(exactly = 1) { bookmarksUseCase.addBookmark(any(), any(), any()) }
         assertTrue(showBookmarkSnackbarInvoked)
-
-        assertNotNull(TabsTray.bookmarkSelectedTabs.testGetValue())
-        val snapshot = TabsTray.bookmarkSelectedTabs.testGetValue()!!
-        Assert.assertEquals(1, snapshot.size)
-        Assert.assertEquals("1", snapshot.single().extra?.getValue("tab_count"))
     }
 
     @Test
-    fun `onSyncedTabsClicked sets metrics and opens browser`() {
+    fun `onSyncedTabsClicked opens browser`() {
         val tab = mockk<SyncTab>()
         val entry = mockk<TabEntry>()
-        assertNull(Events.syncedTabOpened.testGetValue())
 
         every { tab.active() }.answers { entry }
         every { entry.url }.answers { "https://mozilla.org" }
@@ -238,7 +208,6 @@ class NavigationInteractorTest {
         ).onSyncedTabClicked(tab)
 
         assertTrue(dismissTabTrayInvoked)
-        assertNotNull(Events.syncedTabOpened.testGetValue())
 
         verify {
             activity.openToBrowserAndLoad(

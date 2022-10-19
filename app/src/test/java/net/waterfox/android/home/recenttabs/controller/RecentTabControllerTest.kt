@@ -18,16 +18,11 @@ import mozilla.components.browser.state.state.createTab
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.tabs.TabsUseCases
 import mozilla.components.support.test.ext.joinBlocking
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.RecentTabs
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
@@ -38,9 +33,6 @@ class RecentTabControllerTest {
 
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val navController: NavController = mockk(relaxed = true)
     private val selectTabUseCase: TabsUseCases = mockk(relaxed = true)
@@ -68,9 +60,6 @@ class RecentTabControllerTest {
 
     @Test
     fun handleRecentTabClicked() {
-        assertNull(RecentTabs.recentTabOpened.testGetValue())
-        assertNull(RecentTabs.inProgressMediaTabOpened.testGetValue())
-
         every { navController.currentDestination } returns mockk {
             every { id } returns R.id.homeFragment
         }
@@ -88,15 +77,10 @@ class RecentTabControllerTest {
             selectTabUseCase.selectTab.invoke(tab.id)
             navController.navigate(R.id.browserFragment)
         }
-        assertNotNull(RecentTabs.recentTabOpened.testGetValue())
-        assertNull(RecentTabs.inProgressMediaTabOpened.testGetValue())
     }
 
     @Test
     fun handleRecentTabClickedForMediaTab() {
-        assertNull(RecentTabs.recentTabOpened.testGetValue())
-        assertNull(RecentTabs.inProgressMediaTabOpened.testGetValue())
-
         every { navController.currentDestination } returns mockk {
             every { id } returns R.id.homeFragment
         }
@@ -115,14 +99,10 @@ class RecentTabControllerTest {
             selectTabUseCase.selectTab.invoke(inProgressMediaTab.id)
             navController.navigate(R.id.browserFragment)
         }
-        assertNull(RecentTabs.recentTabOpened.testGetValue())
-        assertNotNull(RecentTabs.inProgressMediaTabOpened.testGetValue())
     }
 
     @Test
     fun handleRecentTabShowAllClickedFromHome() {
-        assertNull(RecentTabs.showAllClicked.testGetValue())
-
         every { navController.currentDestination } returns mockk {
             every { id } returns R.id.homeFragment
         }
@@ -138,14 +118,10 @@ class RecentTabControllerTest {
         verify(exactly = 0) {
             navController.navigateUp()
         }
-
-        assertNotNull(RecentTabs.showAllClicked.testGetValue())
     }
 
     @Test
     fun handleRecentTabShowAllClickedFromSearchDialog() {
-        assertNull(RecentTabs.showAllClicked.testGetValue())
-
         every { navController.currentDestination } returns mockk {
             every { id } returns R.id.searchDialogFragment
         }
@@ -159,7 +135,5 @@ class RecentTabControllerTest {
                 match<NavDirections> { it.actionId == R.id.action_global_tabsTrayFragment }
             )
         }
-
-        assertNotNull(RecentTabs.showAllClicked.testGetValue())
     }
 }

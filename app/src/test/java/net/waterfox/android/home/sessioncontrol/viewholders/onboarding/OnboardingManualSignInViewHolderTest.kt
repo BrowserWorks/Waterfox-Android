@@ -14,15 +14,11 @@ import io.mockk.mockkStatic
 import io.mockk.unmockkStatic
 import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
 import org.junit.After
-import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingManualSigninBinding
 import net.waterfox.android.ext.components
@@ -31,9 +27,6 @@ import net.waterfox.android.home.HomeFragmentDirections
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class OnboardingManualSignInViewHolderTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var binding: OnboardingManualSigninBinding
     private lateinit var navController: NavController
@@ -72,9 +65,5 @@ class OnboardingManualSignInViewHolderTest {
         binding.fxaSignInButton.performClick()
 
         verify { navController.navigate(HomeFragmentDirections.actionGlobalTurnOnSync()) }
-        // Check if the event was recorded
-        Assert.assertNotNull(Onboarding.fxaManualSignin.testGetValue())
-        assertEquals(1, Onboarding.fxaManualSignin.testGetValue()!!.size)
-        Assert.assertNull(Onboarding.fxaManualSignin.testGetValue()!!.single().extra)
     }
 }

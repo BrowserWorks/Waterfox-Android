@@ -28,21 +28,14 @@ import mozilla.components.feature.top.sites.TopSitesUseCases
 import mozilla.components.support.test.ext.joinBlocking
 import mozilla.components.support.test.libstate.ext.waitUntilIdle
 import mozilla.components.support.test.middleware.CaptureActionsMiddleware
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.ui.tabcounter.TabCounterMenu
-import mozilla.telemetry.glean.testing.GleanTestRule
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.ReaderMode
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator
@@ -92,9 +85,6 @@ class DefaultBrowserToolbarControllerTest {
 
     private lateinit var store: BrowserStore
     private val captureMiddleware = CaptureActionsMiddleware<BrowserState, BrowserAction>()
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Before
     fun setUp() {
@@ -210,31 +200,24 @@ class DefaultBrowserToolbarControllerTest {
     @Test
     fun `handle reader mode enabled`() {
         val controller = createController()
-        assertNull(ReaderMode.opened.testGetValue())
 
         controller.handleReaderModePressed(enabled = true)
 
         verify { readerModeController.showReaderView() }
-        assertNotNull(ReaderMode.opened.testGetValue())
-        assertNull(ReaderMode.opened.testGetValue()!!.single().extra)
     }
 
     @Test
     fun `handle reader mode disabled`() {
         val controller = createController()
-        assertNull(ReaderMode.closed.testGetValue())
 
         controller.handleReaderModePressed(enabled = false)
 
         verify { readerModeController.hideReaderView() }
-        assertNotNull(ReaderMode.closed.testGetValue())
-        assertNull(ReaderMode.closed.testGetValue()!!.single().extra)
     }
 
     @Test
     fun handleToolbarClick() {
         val controller = createController()
-        assertNull(Events.searchBarTapped.testGetValue())
 
         controller.handleToolbarClick()
 
@@ -242,11 +225,6 @@ class DefaultBrowserToolbarControllerTest {
         val searchDialogDirections = BrowserFragmentDirections.actionGlobalSearchDialog(
             sessionId = "1"
         )
-
-        assertNotNull(Events.searchBarTapped.testGetValue())
-        val snapshot = Events.searchBarTapped.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("BROWSER", snapshot.single().extra?.getValue("source"))
 
         verify {
             // shows the home screen "behind" the search dialog
@@ -260,8 +238,6 @@ class DefaultBrowserToolbarControllerTest {
         val searchResultsTab = createTab("https://google.com?q=mozilla+website", searchTerms = "mozilla website")
         store.dispatch(TabListAction.AddTabAction(searchResultsTab, select = true)).joinBlocking()
 
-        assertNull(Events.searchBarTapped.testGetValue())
-
         val controller = createController()
         controller.handleToolbarClick()
 
@@ -269,11 +245,6 @@ class DefaultBrowserToolbarControllerTest {
         val searchDialogDirections = BrowserFragmentDirections.actionGlobalSearchDialog(
             sessionId = searchResultsTab.id
         )
-
-        assertNotNull(Events.searchBarTapped.testGetValue())
-        val snapshot = Events.searchBarTapped.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("BROWSER", snapshot.single().extra?.getValue("source"))
 
         // Does not show the home screen "behind" the search dialog if the current session has search terms.
         verify(exactly = 0) {
@@ -357,13 +328,10 @@ class DefaultBrowserToolbarControllerTest {
 
     @Test
     fun handleHomeButtonClick() {
-        assertNull(Events.browserToolbarHomeTapped.testGetValue())
-
         val controller = createController()
         controller.handleHomeButtonClick()
 
         verify { navController.navigate(BrowserFragmentDirections.actionGlobalHome()) }
-        assertNotNull(Events.browserToolbarHomeTapped.testGetValue())
     }
 
     private fun createController(

@@ -25,21 +25,17 @@ import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.concept.engine.permission.SitePermissions.Status.NO_DECISION
 import mozilla.components.feature.session.SessionUseCases
 import mozilla.components.feature.session.TrackingProtectionUseCases
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.TrackingProtection
 import net.waterfox.android.components.PermissionStorage
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.directionsEq
@@ -81,9 +77,6 @@ class DefaultQuickSettingsControllerTest {
     private lateinit var requestPermissions: (Array<String>) -> Unit
 
     private lateinit var controller: DefaultQuickSettingsController
-
-    @get:Rule
-    val gleanRule = GleanTestRule(testContext)
 
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
@@ -324,11 +317,9 @@ class DefaultQuickSettingsControllerTest {
         }
 
         isEnabled = false
-        assertNull(TrackingProtection.exceptionAdded.testGetValue())
 
         controller.handleTrackingProtectionToggled(isEnabled)
 
-        assertNotNull(TrackingProtection.exceptionAdded.testGetValue())
         verify {
             trackingProtectionUseCases.addException(tab.id)
             sessionUseCases.reload.invoke(tab.id)

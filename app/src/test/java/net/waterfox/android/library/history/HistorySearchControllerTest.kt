@@ -9,25 +9,16 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.verify
 import kotlinx.coroutines.test.runTest
 import mozilla.components.concept.engine.EngineSession
-import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.History
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class HistorySearchControllerTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @MockK(relaxed = true) private lateinit var activity: HomeActivity
     @MockK(relaxed = true) private lateinit var store: HistorySearchFragmentStore
@@ -71,13 +62,10 @@ class HistorySearchControllerTest {
     fun `WHEN url is tapped THEN openToBrowserAndLoad is called`() {
         val url = "https://www.google.com/"
         val flags = EngineSession.LoadUrlFlags.none()
-        assertNull(History.searchResultTapped.testGetValue())
 
         createController().handleUrlTapped(url, flags)
         createController().handleUrlTapped(url)
 
-        assertNotNull(History.searchResultTapped.testGetValue())
-        assertNull(History.searchResultTapped.testGetValue()!!.last().extra)
         verify {
             activity.openToBrowserAndLoad(
                 searchTermOrURL = url,

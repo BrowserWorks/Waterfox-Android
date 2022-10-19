@@ -31,18 +31,14 @@ import io.mockk.verify
 import kotlinx.coroutines.CoroutineScope
 import mozilla.components.browser.menu.BrowserMenu
 import mozilla.components.browser.state.store.BrowserStore
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertSame
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentTabstray2Binding
@@ -69,9 +65,6 @@ class TabsTrayFragmentTest {
 
     @get:Rule
     val mockkRule = MockkRetryTestRule()
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Before
     fun setup() {
@@ -264,12 +257,9 @@ class TabsTrayFragmentTest {
             }
             every { fragment.getTrayMenu(any(), any(), any(), any(), any()) } returns menuBuilder
 
-            assertNull(TabsTray.menuOpened.testGetValue())
-
             fragment.setupMenu(navigationInteractor)
             tabsTrayBinding.tabTrayOverflow.performClick()
 
-            assertNotNull(TabsTray.menuOpened.testGetValue())
             verify { menuBuilder.build() }
             verify { menu.showWithTheme(tabsTrayBinding.tabTrayOverflow) }
         } finally {

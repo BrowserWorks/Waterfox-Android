@@ -4,24 +4,18 @@
 
 package net.waterfox.android.tabstray.browser
 
-import io.mockk.mockk
-import io.mockk.spyk
-import io.mockk.verify
-import mozilla.components.browser.state.state.ContentState
+import io.mockk.*
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.components.AppStore
+import net.waterfox.android.ext.maxActiveTime
+import net.waterfox.android.ext.potentialInactiveTabs
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.utils.Settings
-import net.waterfox.android.GleanMetrics.TabsTray as TabsTrayMetrics
+import org.junit.Assert.assertTrue
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultInactiveTabsControllerTest {
@@ -31,56 +25,20 @@ class DefaultInactiveTabsControllerTest {
     private val browserStore: BrowserStore = mockk(relaxed = true)
     private val tabsUseCases: TabsUseCases = mockk(relaxed = true)
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
-
     @Test
-    fun `WHEN the inactive tabs section is expanded THEN the expanded telemetry event should be reported`() {
-        val controller = createController()
-
-        assertNull(TabsTrayMetrics.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTrayMetrics.inactiveTabsCollapsed.testGetValue())
-
-        controller.updateCardExpansion(isExpanded = true)
-
-        assertNotNull(TabsTrayMetrics.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTrayMetrics.inactiveTabsCollapsed.testGetValue())
-    }
-
-    @Test
-    fun `WHEN the inactive tabs section is collapsed THEN the collapsed telemetry event should be reported`() {
-        val controller = createController()
-
-        assertNull(TabsTrayMetrics.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTrayMetrics.inactiveTabsCollapsed.testGetValue())
-
-        controller.updateCardExpansion(isExpanded = false)
-
-        assertNull(TabsTrayMetrics.inactiveTabsExpanded.testGetValue())
-        assertNotNull(TabsTrayMetrics.inactiveTabsCollapsed.testGetValue())
-    }
-
-    @Test
-    fun `WHEN the inactive tabs auto-close feature prompt is dismissed THEN update settings and report the telemetry event`() {
+    fun `WHEN the inactive tabs auto-close feature prompt is dismissed THEN update settings`() {
         val controller = spyk(createController())
-
-        assertNull(TabsTrayMetrics.autoCloseDimissed.testGetValue())
 
         controller.dismissAutoCloseDialog()
 
-        assertNotNull(TabsTrayMetrics.autoCloseDimissed.testGetValue())
         verify { settings.hasInactiveTabsAutoCloseDialogBeenDismissed = true }
     }
 
     @Test
-    fun `WHEN the inactive tabs auto-close feature prompt is accepted THEN update settings and report the telemetry event`() {
+    fun `WHEN the inactive tabs auto-close feature prompt is accepted THEN update settings`() {
         val controller = spyk(createController())
 
-        assertNull(TabsTrayMetrics.autoCloseTurnOnClicked.testGetValue())
-
         controller.enableInactiveTabsAutoClose()
-
-        assertNotNull(TabsTrayMetrics.autoCloseTurnOnClicked.testGetValue())
 
         verify { settings.closeTabsAfterOneMonth = true }
         verify { settings.closeTabsAfterOneWeek = false }
@@ -89,42 +47,8 @@ class DefaultInactiveTabsControllerTest {
         verify { settings.hasInactiveTabsAutoCloseDialogBeenDismissed = true }
     }
 
-    @Test
-    fun `WHEN an inactive tab is selected THEN report the telemetry event`() {
-        val controller = createController()
-        val tab = TabSessionState(
-            id = "tabId",
-            content = ContentState(
-                url = "www.mozilla.com",
-            )
-        )
-
-        assertNull(TabsTrayMetrics.openInactiveTab.testGetValue())
-
-        controller.openInactiveTab(tab)
-
-        assertNotNull(TabsTrayMetrics.openInactiveTab.testGetValue())
-    }
-
-    @Test
-    fun `WHEN an inactive tab is closed THEN report the telemetry event`() {
-        val controller = createController()
-        val tab = TabSessionState(
-            id = "tabId",
-            content = ContentState(
-                url = "www.mozilla.com",
-            )
-        )
-
-        assertNull(TabsTrayMetrics.closeInactiveTab.testGetValue())
-
-        controller.closeInactiveTab(tab)
-
-        assertNotNull(TabsTrayMetrics.closeInactiveTab.testGetValue())
-    }
-
 //    @Test
-//    fun `WHEN all inactive tabs are closed THEN perform the deletion and report the telemetry event and show a Snackbar`() {
+//    fun `WHEN all inactive tabs are closed THEN perform the deletion and show a Snackbar`() {
 //        var showSnackbarInvoked = false
 //        val controller = createController(
 //            showUndoSnackbar = {
@@ -144,12 +68,10 @@ class DefaultInactiveTabsControllerTest {
 //            mockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
 //            every { browserStore.state } returns mockk()
 //            every { browserStore.state.potentialInactiveTabs } returns listOf(inactiveTab)
-//            assertNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
 //
 //            controller.deleteAllInactiveTabs()
 //
 //            verify { tabsUseCases.removeTabs(listOf("24")) }
-//            assertNotNull(TabsTrayMetrics.closeAllInactiveTabs.testGetValue())
 //            assertTrue(showSnackbarInvoked)
 //        } finally {
 //            unmockkStatic("mozilla.components.browser.state.selector.SelectorsKt")

@@ -7,58 +7,35 @@ package net.waterfox.android.tabstray.browser
 import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class SelectTabUseCaseWrapperTest {
 
     val selectUseCase: TabsUseCases.SelectTabUseCase = mockk(relaxed = true)
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
-
     @Test
-    fun `WHEN invoked with no source name THEN metrics with unknown source, use case and callback are triggered`() {
+    fun `WHEN invoked with no source name THEN use case and callback are triggered`() {
         var invoked = ""
         val onSelect: (String) -> Unit = { invoked = it }
         val wrapper = SelectTabUseCaseWrapper(selectUseCase, onSelect)
 
-        assertNull(TabsTray.openedExistingTab.testGetValue())
-
         wrapper("123")
-
-        assertNotNull(TabsTray.openedExistingTab.testGetValue())
-        val snapshot = TabsTray.openedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("unknown", snapshot.single().extra?.getValue("source"))
 
         verify { selectUseCase("123") }
         assertEquals("123", invoked)
     }
 
     @Test
-    fun `WHEN invoked with a source name THEN metrics, use case and callback are triggered`() {
+    fun `WHEN invoked with a source name THEN use case and callback are triggered`() {
         var invoked = ""
         val onSelect: (String) -> Unit = { invoked = it }
         val wrapper = SelectTabUseCaseWrapper(selectUseCase, onSelect)
 
-        assertNull(TabsTray.openedExistingTab.testGetValue())
-
         wrapper("123", "Test")
-
-        assertNotNull(TabsTray.openedExistingTab.testGetValue())
-        val snapshot = TabsTray.openedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("Test", snapshot.single().extra?.getValue("source"))
 
         verify { selectUseCase("123") }
         assertEquals("123", invoked)

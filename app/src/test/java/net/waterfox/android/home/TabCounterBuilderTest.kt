@@ -10,15 +10,10 @@ import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.ui.tabcounter.TabCounter
 import mozilla.components.ui.tabcounter.TabCounterMenu
-import mozilla.telemetry.glean.testing.GleanTestRule
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.StartOnHome
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
@@ -29,9 +24,6 @@ import net.waterfox.android.utils.Settings
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class TabCounterBuilderTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var navController: NavController
     private lateinit var browsingModeManager: BrowsingModeManager
@@ -63,14 +55,10 @@ class TabCounterBuilderTest {
     }
 
     @Test
-    fun `WHEN tab counter is clicked THEN navigate to tabs tray and record metrics`() {
+    fun `WHEN tab counter is clicked THEN navigate to tabs tray`() {
         tabCounterBuilder.build()
 
-        assertNull(StartOnHome.openTabsTray.testGetValue())
-
         tabCounter.performClick()
-
-        assertNotNull(StartOnHome.openTabsTray.testGetValue())
 
         verify {
             navController.nav(

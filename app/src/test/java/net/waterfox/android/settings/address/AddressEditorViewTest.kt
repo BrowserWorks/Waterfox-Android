@@ -14,24 +14,19 @@ import kotlinx.coroutines.runBlocking
 import mozilla.components.browser.state.search.RegionState
 import mozilla.components.concept.storage.Address
 import mozilla.components.concept.storage.UpdatableAddressFields
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Addresses
 import net.waterfox.android.R
 import net.waterfox.android.databinding.FragmentAddressEditorBinding
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.address.interactor.AddressEditorInteractor
 import net.waterfox.android.settings.address.view.AddressEditorView
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // For gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class AddressEditorViewTest {
 
     private lateinit var view: View
@@ -39,9 +34,6 @@ class AddressEditorViewTest {
     private lateinit var addressEditorView: AddressEditorView
     private lateinit var binding: FragmentAddressEditorBinding
     private lateinit var address: Address
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @Before
     fun setup() {
@@ -306,30 +298,6 @@ class AddressEditorViewTest {
         addressEditorView.bind()
 
         assertEquals(AddressUtils.countries[DEFAULT_COUNTRY]!!.displayName, binding.countryDropDown.selectedItem.toString())
-    }
-
-    @Test
-    fun `GIVEN an existing address WHEN the save button is clicked THEN proper metrics are recorded`() = runBlocking {
-        assertNull(Addresses.updated.testGetValue())
-
-        val addressEditorView = spyk(AddressEditorView(binding, interactor, address = address))
-        addressEditorView.bind()
-
-        binding.saveButton.performClick()
-
-        assertNotNull(Addresses.updated.testGetValue())
-    }
-
-    @Test
-    fun `GIVEN a new address WHEN the save button is clicked THEN proper metrics are recorded`() = runBlocking {
-        assertNull(Addresses.saved.testGetValue())
-
-        val addressEditorView = spyk(AddressEditorView(binding, interactor))
-        addressEditorView.bind()
-
-        binding.saveButton.performClick()
-
-        assertNotNull(Addresses.saved.testGetValue())
     }
 
     private fun generateAddress(country: String = "US", addressLevel1: String = "Oregon") = Address(

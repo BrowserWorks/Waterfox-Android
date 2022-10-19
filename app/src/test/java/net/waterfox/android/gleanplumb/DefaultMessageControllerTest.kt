@@ -9,17 +9,11 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
-import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.BuildConfig
-import net.waterfox.android.GleanMetrics.Messaging
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
@@ -29,9 +23,6 @@ import net.waterfox.android.nimbus.MessageData
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultMessageControllerTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val activity: HomeActivity = mockk(relaxed = true)
     private val storageNimbus: NimbusMessagingStorage = mockk(relaxed = true)
@@ -53,15 +44,9 @@ class DefaultMessageControllerTest {
         val message = mockMessage()
         every { customController.handleAction(any()) } returns mockk()
         every { storageNimbus.getMessageAction(message) } returns Pair("uuid", message.id)
-        assertNull(Messaging.messageClicked.testGetValue())
 
         customController.onMessagePressed(message)
 
-        assertNotNull(Messaging.messageClicked.testGetValue())
-        val event = Messaging.messageClicked.testGetValue()!!
-        assertEquals(1, event.size)
-        assertEquals(message.id, event.single().extra!!["message_key"])
-        assertEquals("uuid", event.single().extra!!["action_uuid"])
         verify { customController.handleAction(any()) }
         verify { store.dispatch(MessageClicked(message)) }
     }
@@ -91,14 +76,9 @@ class DefaultMessageControllerTest {
     @Test
     fun `WHEN calling onMessageDismissed THEN report to the messageManager`() {
         val message = mockMessage()
-        assertNull(Messaging.messageDismissed.testGetValue())
 
         controller.onMessageDismissed(message)
 
-        assertNotNull(Messaging.messageDismissed.testGetValue())
-        val event = Messaging.messageDismissed.testGetValue()!!
-        assertEquals(1, event.size)
-        assertEquals(message.id, event.single().extra!!["message_key"])
         verify { store.dispatch(AppAction.MessagingAction.MessageDismissed(message)) }
     }
 

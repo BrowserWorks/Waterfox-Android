@@ -33,7 +33,7 @@ class BrowserTabsAdapterTest {
     @Test
     fun `WHEN bind with payloads is called THEN update the holder`() {
         every { testContext.components.core.thumbnailStorage } returns mockk()
-        val adapter = BrowserTabsAdapter(context, interactor, store, "Test", mockk())
+        val adapter = BrowserTabsAdapter(context, interactor, store, mockk())
         val holder = mockk<AbstractBrowserTabViewHolder>(relaxed = true)
 
         adapter.updateTabs(
@@ -59,7 +59,7 @@ class BrowserTabsAdapterTest {
         every { testContext.components.core.store } returns BrowserStore()
         every { testContext.components.analytics } returns mockk(relaxed = true)
         every { testContext.components.settings } returns mockk(relaxed = true)
-        val adapter = BrowserTabsAdapter(context, interactor, store, "Test", mockk())
+        val adapter = BrowserTabsAdapter(context, interactor, store, mockk())
         val binding = TabTrayItemBinding.inflate(LayoutInflater.from(testContext))
         val holder = spyk(
             BrowserTabViewHolder.ListViewHolder(
@@ -67,8 +67,7 @@ class BrowserTabsAdapterTest {
                 browserTrayInteractor = interactor,
                 store = store,
                 selectionHolder = null,
-                itemView = binding.root,
-                featureName = "Test"
+                itemView = binding.root
             )
         )
         val tab = createTab(url = "url", id = "tab1")

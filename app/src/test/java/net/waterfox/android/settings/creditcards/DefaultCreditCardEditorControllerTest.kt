@@ -15,26 +15,18 @@ import mozilla.components.concept.storage.CreditCardNumber
 import mozilla.components.concept.storage.NewCreditCardFields
 import mozilla.components.concept.storage.UpdatableCreditCardFields
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
 import mozilla.components.support.utils.CreditCardNetworkType
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.CreditCards
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.creditcards.controller.DefaultCreditCardEditorController
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultCreditCardEditorControllerTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val storage: AutofillCreditCardsAddressesStorage = mockk(relaxed = true)
     private val navController: NavController = mockk(relaxed = true)
@@ -78,7 +70,6 @@ class DefaultCreditCardEditorControllerTest {
     @Test
     fun handleDeleteCreditCard() = runTestOnMain {
         val creditCardId = "id"
-        assertNull(CreditCards.deleted.testGetValue())
 
         controller.handleDeleteCreditCard(creditCardId)
 
@@ -86,7 +77,6 @@ class DefaultCreditCardEditorControllerTest {
             storage.deleteCreditCard(creditCardId)
             navController.popBackStack()
         }
-        assertNotNull(CreditCards.deleted.testGetValue())
     }
 
     @Test
@@ -99,7 +89,6 @@ class DefaultCreditCardEditorControllerTest {
             expiryYear = 2030,
             cardType = CreditCardNetworkType.DISCOVER.cardName
         )
-        assertNull(CreditCards.saved.testGetValue())
 
         controller.handleSaveCreditCard(creditCardFields)
 
@@ -107,7 +96,6 @@ class DefaultCreditCardEditorControllerTest {
             storage.addCreditCard(creditCardFields)
             navController.popBackStack()
         }
-        assertNotNull(CreditCards.saved.testGetValue())
     }
 
     @Test
@@ -121,7 +109,6 @@ class DefaultCreditCardEditorControllerTest {
             expiryYear = 2034,
             cardType = CreditCardNetworkType.DISCOVER.cardName
         )
-        assertNull(CreditCards.modified.testGetValue())
 
         controller.handleUpdateCreditCard(creditCardId, creditCardFields)
 
@@ -129,6 +116,5 @@ class DefaultCreditCardEditorControllerTest {
             storage.updateCreditCard(creditCardId, creditCardFields)
             navController.popBackStack()
         }
-        assertNotNull(CreditCards.modified.testGetValue())
     }
 }

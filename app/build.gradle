@@ -356,8 +356,9 @@ android.applicationVariants.all { variant ->
     }
 }
 
-// Generate Kotlin code for the Fenix Glean metrics.
+// TODO: [Waterfox] remove
 apply plugin: "org.mozilla.telemetry.glean-gradle-plugin"
+
 // TODO: [Waterfox] remove Nimbus plugin
 apply plugin: "org.mozilla.components.nimbus-gradle-plugin"
 
@@ -404,6 +405,9 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
+    // TODO: [Waterfox] remove
+    implementation(Deps.mozilla_service_glean)
+
     jnaForTest Deps.jna
     testImplementation files(configurations.jnaForTest.copyRecursive().files)
 

@@ -14,14 +14,9 @@ import io.mockk.runs
 import io.mockk.verify
 import mozilla.components.concept.sync.DeviceType
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertEquals
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.RecentSyncedTabs
 import net.waterfox.android.R
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
@@ -30,9 +25,6 @@ import net.waterfox.android.tabstray.TabsTrayAccessPoint
 
 @RunWith(AndroidJUnit4::class)
 class DefaultRecentSyncedTabControllerTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val addTabUseCase: TabsUseCases.AddNewTabUseCase = mockk()
     private val navController: NavController = mockk()
@@ -83,34 +75,5 @@ class DefaultRecentSyncedTabControllerTest {
                 )
             )
         }
-    }
-
-    @Test
-    fun `WHEN synced tab clicked THEN metric counter labeled by device type is incremented`() {
-        val url = "https://mozilla.org"
-        val deviceType = DeviceType.DESKTOP
-        val tab = RecentSyncedTab(
-            deviceDisplayName = "display",
-            deviceType = deviceType,
-            title = "title",
-            url = url,
-            iconUrl = null
-        )
-
-        every { addTabUseCase.invoke(any()) } just runs
-        every { navController.navigate(any<Int>()) } just runs
-
-        controller.handleRecentSyncedTabClick(tab)
-
-        assertEquals(1, RecentSyncedTabs.recentSyncedTabOpened["desktop"].testGetValue())
-    }
-
-    @Test
-    fun `WHEN synced tab show all clicked THEN metric counter is incremented`() {
-        every { navController.navigate(any<NavDirections>()) } just runs
-
-        controller.handleSyncedTabShowAllClicked()
-
-        assertEquals(1, RecentSyncedTabs.showAllSyncedTabsClicked.testGetValue())
     }
 }

@@ -37,7 +37,7 @@ class AbstractBrowserPageViewHolderTest {
     }
 
     val adapter =
-        BrowserTabsAdapter(testContext, browserTrayInteractor, tabsTrayStore, "Test", mockk())
+        BrowserTabsAdapter(testContext, browserTrayInteractor, tabsTrayStore, mockk())
 
     @Test
     fun `WHEN tabs inserted THEN show tray`() {

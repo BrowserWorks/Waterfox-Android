@@ -25,19 +25,15 @@ import mozilla.components.concept.sync.DeviceType
 import mozilla.components.concept.sync.TabData
 import mozilla.components.feature.accounts.push.SendTabUseCases
 import mozilla.components.feature.share.RecentAppsStorage
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.SyncAccount
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.ext.nav
@@ -46,7 +42,7 @@ import net.waterfox.android.share.listadapters.AppShareOption
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class ShareControllerTest {
-    // Need a valid context to retrieve Strings for example, but we also need it to return our "metrics"
+    // Need a valid context to retrieve Strings for example
     private val context: Context = spyk(testContext)
     private val shareSubject = "shareSubject"
     private val shareData = listOf(
@@ -65,9 +61,6 @@ class ShareControllerTest {
     private val navController = mockk<NavController>(relaxed = true)
     private val dismiss = mockk<(ShareController.Result) -> Unit>(relaxed = true)
     private val recentAppStorage = mockk<RecentAppsStorage>(relaxed = true)
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
@@ -256,10 +249,6 @@ class ShareControllerTest {
 
         controller.handleShareToDevice(deviceToShareTo)
 
-        assertNotNull(SyncAccount.sendTab.testGetValue())
-        assertEquals(1, SyncAccount.sendTab.testGetValue()!!.size)
-        assertNull(SyncAccount.sendTab.testGetValue()!!.single().extra)
-
         // Verify all the needed methods are called.
         verify {
             sendTabUseCases.sendToDeviceAsync(capture(deviceId), capture(tabsShared))
@@ -314,10 +303,6 @@ class ShareControllerTest {
     @Test
     fun `handleSignIn should navigate to the Sync Fragment and dismiss this one`() {
         controller.handleSignIn()
-
-        assertNotNull(SyncAccount.signInToSendTab.testGetValue())
-        assertEquals(1, SyncAccount.signInToSendTab.testGetValue()!!.size)
-        assertNull(SyncAccount.signInToSendTab.testGetValue()!!.single().extra)
 
         verifyOrder {
             navController.nav(

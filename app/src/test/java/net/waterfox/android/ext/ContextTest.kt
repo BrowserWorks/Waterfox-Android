@@ -90,13 +90,6 @@ class ContextTest {
     }
 
     @Test
-    fun `GIVEN context WHEN getting metrics controller THEN send back metrics`() {
-        every { testContext.components.analytics } returns mockk(relaxed = true)
-        val expectedMetricsValue = ApplicationProvider.getApplicationContext<WaterfoxApplication>().components.analytics.metrics
-        assertEquals(expectedMetricsValue, testContext.metrics)
-    }
-
-    @Test
     fun `GIVEN activity context WHEN make it an activity THEN return activity`() {
         val mockActivity = mockk<Activity> {
             every { baseContext } returns null

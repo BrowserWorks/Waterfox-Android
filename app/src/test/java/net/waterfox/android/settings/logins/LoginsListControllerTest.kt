@@ -7,16 +7,9 @@ package net.waterfox.android.settings.logins
 import androidx.navigation.NavController
 import io.mockk.mockk
 import io.mockk.verifyAll
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Logins
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.logins.controller.LoginsListController
@@ -25,8 +18,6 @@ import net.waterfox.android.utils.Settings
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class LoginsListControllerTest {
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private val store: LoginsFragmentStore = mockk(relaxed = true)
     private val settings: Settings = mockk(relaxed = true)
@@ -54,7 +45,6 @@ class LoginsListControllerTest {
     @Test
     fun `handle login item clicked`() {
         val login: SavedLogin = mockk(relaxed = true)
-        assertNull(Logins.openIndividualLogin.testGetValue())
 
         controller.handleItemClicked(login)
 
@@ -64,10 +54,6 @@ class LoginsListControllerTest {
                 SavedLoginsFragmentDirections.actionSavedLoginsFragmentToLoginDetailFragment(login.guid)
             )
         }
-
-        assertNotNull(Logins.openIndividualLogin.testGetValue())
-        assertEquals(1, Logins.openIndividualLogin.testGetValue()!!.size)
-        assertNull(Logins.openIndividualLogin.testGetValue()!!.single().extra)
     }
 
     @Test

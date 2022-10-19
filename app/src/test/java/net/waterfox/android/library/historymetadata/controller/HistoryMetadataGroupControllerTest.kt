@@ -17,14 +17,9 @@ import mozilla.components.browser.storage.sync.PlacesHistoryStorage
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.concept.storage.HistoryMetadataKey
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.glean.testing.GleanTestRule
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
@@ -41,13 +36,10 @@ import net.waterfox.android.library.history.HistoryItemTimeGroup
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentAction
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentDirections
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentStore
-import net.waterfox.android.GleanMetrics.History as GleanHistory
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class HistoryMetadataGroupControllerTest {
 
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
     private val scope = coroutinesTestRule.scope
@@ -98,8 +90,6 @@ class HistoryMetadataGroupControllerTest {
 
     @Test
     fun handleOpen() {
-        assertNull(GleanHistory.searchTermGroupOpenTab.testGetValue())
-
         controller.handleOpen(mozillaHistoryMetadataItem)
 
         verify {
@@ -109,15 +99,6 @@ class HistoryMetadataGroupControllerTest {
             )
             navController.navigate(R.id.browserFragment)
         }
-        assertNotNull(GleanHistory.searchTermGroupOpenTab.testGetValue())
-        assertEquals(
-            1,
-            GleanHistory.searchTermGroupOpenTab.testGetValue()!!.size
-        )
-        assertNull(
-            GleanHistory.searchTermGroupOpenTab.testGetValue()!!
-                .single().extra
-        )
     }
 
     @Test
@@ -173,23 +154,12 @@ class HistoryMetadataGroupControllerTest {
 
     @Test
     fun handleDeleteSingle() = runTestOnMain {
-        assertNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
-
         controller.handleDelete(setOf(mozillaHistoryMetadataItem))
 
         coVerify {
             store.dispatch(HistoryMetadataGroupFragmentAction.Delete(mozillaHistoryMetadataItem))
             historyStorage.deleteVisitsFor(mozillaHistoryMetadataItem.url)
         }
-        assertNotNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
-        assertEquals(
-            1,
-            GleanHistory.searchTermGroupRemoveTab.testGetValue()!!.size
-        )
-        assertNull(
-            GleanHistory.searchTermGroupRemoveTab.testGetValue()!!
-                .single().extra
-        )
         // Here we don't expect the action to be dispatched, because items inside the store
         // we provided by getMetadataItemsList(), but only one item has been removed
         verify(exactly = 0) {
@@ -201,7 +171,6 @@ class HistoryMetadataGroupControllerTest {
 
     @Test
     fun handleDeleteMultiple() = runTestOnMain {
-        assertNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
         controller.handleDelete(getMetadataItemsList().toSet())
 
         coVerify {
@@ -210,11 +179,6 @@ class HistoryMetadataGroupControllerTest {
                 historyStorage.deleteVisitsFor(it.url)
             }
         }
-        assertNotNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
-        assertNull(
-            GleanHistory.searchTermGroupRemoveTab.testGetValue()!!
-                .last().extra
-        )
         // Here we expect the action to be dispatched, because both deleted items and items inside
         // the store were provided by the same method getMetadataItemsList()
         verify {
@@ -236,7 +200,6 @@ class HistoryMetadataGroupControllerTest {
                 url = "https://stackoverflow.com/"
             )
         )
-        assertNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
 
         controller.handleDelete(abnormalList.toSet())
         coVerify {
@@ -245,22 +208,12 @@ class HistoryMetadataGroupControllerTest {
                 historyStorage.deleteVisitsFor(it.url)
             }
         }
-        assertNotNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
-        assertNull(
-            GleanHistory.searchTermGroupRemoveTab.testGetValue()!!
-                .last().extra
-        )
         coVerify {
             abnormalList.forEach {
                 store.dispatch(HistoryMetadataGroupFragmentAction.Delete(it))
                 historyStorage.deleteVisitsFor(it.url)
             }
         }
-        assertNotNull(GleanHistory.searchTermGroupRemoveTab.testGetValue())
-        assertNull(
-            GleanHistory.searchTermGroupRemoveTab.testGetValue()!!
-                .last().extra
-        )
         // Here we expect the action to be dispatched, because deleted items include the items
         // provided by getMetadataItemsList(), so that the store becomes empty and the event
         // should be sent
@@ -285,8 +238,6 @@ class HistoryMetadataGroupControllerTest {
 
     @Test
     fun handleDeleteAllConfirmed() = runTestOnMain {
-        assertNull(GleanHistory.searchTermGroupRemoveAll.testGetValue())
-
         controller.handleDeleteAllConfirmed()
 
         coVerify {
@@ -298,15 +249,6 @@ class HistoryMetadataGroupControllerTest {
                 HistoryMetadataAction.DisbandSearchGroupAction(searchTerm = searchTerm)
             )
         }
-        assertNotNull(GleanHistory.searchTermGroupRemoveAll.testGetValue())
-        assertEquals(
-            1,
-            GleanHistory.searchTermGroupRemoveAll.testGetValue()!!.size
-        )
-        assertNull(
-            GleanHistory.searchTermGroupRemoveAll.testGetValue()!!
-                .single().extra
-        )
     }
 
     @Suppress("LongParameterList")

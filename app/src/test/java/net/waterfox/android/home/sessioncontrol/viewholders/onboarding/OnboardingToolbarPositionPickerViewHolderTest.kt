@@ -8,16 +8,11 @@ import android.view.LayoutInflater
 import io.mockk.every
 import io.mockk.mockk
 import mozilla.components.support.test.robolectric.testContext
-import mozilla.telemetry.glean.testing.GleanTestRule
-import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.GleanMetrics.Onboarding
 import net.waterfox.android.ext.components
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.databinding.OnboardingToolbarPositionPickerBinding
@@ -26,9 +21,6 @@ import net.waterfox.android.utils.Settings
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class OnboardingToolbarPositionPickerViewHolderTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var binding: OnboardingToolbarPositionPickerBinding
     private lateinit var settings: Settings
@@ -63,35 +55,5 @@ class OnboardingToolbarPositionPickerViewHolderTest {
         binding.toolbarTopImage.performClick()
         assertTrue(binding.toolbarTopRadioButton.isChecked)
         assertFalse(binding.toolbarBottomRadioButton.isChecked)
-    }
-
-    @Test
-    fun `WHEN the top radio button is clicked THEN the proper event is recorded`() {
-        every { settings.toolbarPosition } returns ToolbarPosition.BOTTOM
-        OnboardingToolbarPositionPickerViewHolder(binding.root)
-
-        binding.toolbarTopImage.performClick()
-
-        assertNotNull(Onboarding.prefToggledToolbarPosition.testGetValue())
-        assertEquals(
-            OnboardingToolbarPositionPickerViewHolder.Companion.Position.TOP.name,
-            Onboarding.prefToggledToolbarPosition.testGetValue()!!
-                .last().extra?.get("position")
-        )
-    }
-
-    @Test
-    fun `WHEN the bottom radio button is clicked THEN the proper event is recorded`() {
-        every { settings.toolbarPosition } returns ToolbarPosition.TOP
-        OnboardingToolbarPositionPickerViewHolder(binding.root)
-
-        binding.toolbarBottomImage.performClick()
-
-        assertNotNull(Onboarding.prefToggledToolbarPosition.testGetValue())
-        assertEquals(
-            OnboardingToolbarPositionPickerViewHolder.Companion.Position.BOTTOM.name,
-            Onboarding.prefToggledToolbarPosition.testGetValue()!!
-                .last().extra?.get("position")
-        )
     }
 }

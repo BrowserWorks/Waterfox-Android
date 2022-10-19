@@ -18,7 +18,6 @@ import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.AppRequestInterceptor.Companion.HIGH_RISK_ERROR_PAGES
@@ -30,9 +29,6 @@ import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class AppRequestInterceptorTest {
-
-    @get:Rule
-    val gleanTestRule = GleanTestRule(testContext)
 
     private lateinit var interceptor: RequestInterceptor
     private lateinit var navigationController: NavController
