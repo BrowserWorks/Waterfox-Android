@@ -356,7 +356,7 @@ android.applicationVariants.all { variant ->
     }
 }
 
-// TODO: [Waterfox] remove
+// TODO: [Waterfox] remove Glean plugin
 apply plugin: "org.mozilla.telemetry.glean-gradle-plugin"
 
 // TODO: [Waterfox] remove Nimbus plugin
@@ -398,6 +398,13 @@ configurations {
     jnaForTest
 }
 
+// TODO: [Waterfox] try to exclude all telemetry dependencies
+//configurations.all {
+//    // Telemetry is a transitive dependency of several necessary dependencies,
+//    // thus we have to exclude it globally.
+//    exclude group: 'org.mozilla.telemetry'
+//}
+
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
         freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
@@ -405,7 +412,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
-    // TODO: [Waterfox] remove
+    // TODO: [Waterfox] remove Glean dependency
     implementation(Deps.mozilla_service_glean)
 
     jnaForTest Deps.jna
@@ -536,9 +543,6 @@ dependencies {
     implementation Deps.androidx_datastore
     implementation Deps.protobuf_javalite
     implementation Deps.google_material
-
-    // TODO: [Waterfox] can this be removed as well?
-    implementation Deps.google_ads_id // Required for the Google Advertising ID
 
     implementation Deps.google_play_store // Required for in-app reviews
 

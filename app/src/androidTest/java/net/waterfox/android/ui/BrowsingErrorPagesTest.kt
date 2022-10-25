@@ -49,7 +49,7 @@ class BrowsingErrorPagesTest {
     @SmokeTest
     @Test
     fun blockMalwarePageTest() {
-        val malwareURl = "http://itisatrap.org/waterfox/its-an-attack.html"
+        val malwareURl = "http://itisatrap.org/firefox/its-an-attack.html"
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(malwareURl.toUri()) {
@@ -60,7 +60,7 @@ class BrowsingErrorPagesTest {
     @SmokeTest
     @Test
     fun blockPhishingPageTest() {
-        val phishingURl = "http://itisatrap.org/waterfox/its-a-trap.html"
+        val phishingURl = "http://itisatrap.org/firefox/its-a-trap.html"
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(phishingURl.toUri()) {
@@ -71,7 +71,7 @@ class BrowsingErrorPagesTest {
     @SmokeTest
     @Test
     fun blockUnwantedSoftwarePageTest() {
-        val unwantedURl = "http://itisatrap.org/waterfox/unwanted.html"
+        val unwantedURl = "http://itisatrap.org/firefox/unwanted.html"
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(unwantedURl.toUri()) {
@@ -82,7 +82,7 @@ class BrowsingErrorPagesTest {
     @SmokeTest
     @Test
     fun blockHarmfulPageTest() {
-        val harmfulURl = "https://itisatrap.org/waterfox/harmful.html"
+        val harmfulURl = "https://itisatrap.org/firefox/harmful.html"
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(harmfulURl.toUri()) {

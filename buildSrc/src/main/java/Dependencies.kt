@@ -47,8 +47,6 @@ object Versions {
     const val uiautomator = "2.2.0"
     const val robolectric = "4.8.1"
 
-    const val google_ads_id_version = "18.0.1"
-
     const val google_play_store_version = "1.10.3"
 
     const val protobuf = "3.20.1" // keep in sync with the version used in AS.
@@ -221,6 +219,8 @@ object Deps {
     // For the full IDs of these test dependencies, see:
     //   https://developer.android.com/training/testing/set-up-project#android-test-dependencies
     private const val androidx_test_shared_version = "1.4.0" // this appears to be shared with many deps.
+    // However orchestrator seems to be an exception, it needs to be at its latest version, currently 1.4.1
+    private const val androidx_test_orchestrator_version = "1.4.1"
     const val androidx_test_core = "androidx.test:core:$androidx_test_shared_version"
     private const val androidx_espresso_version = "3.4.0"
     const val espresso_core = "androidx.test.espresso:espresso-core:$androidx_espresso_version"
@@ -230,7 +230,7 @@ object Deps {
     const val androidx_junit = "androidx.test.ext:junit:1.1.2-alpha05"
     const val androidx_test_extensions = "androidx.test.ext:junit-ktx:1.1.3"
     // Monitor is unused
-    const val orchestrator = "androidx.test:orchestrator:$androidx_test_shared_version"
+    const val orchestrator = "androidx.test:orchestrator:$androidx_test_orchestrator_version"
     const val tools_test_runner = "androidx.test:runner:$androidx_test_shared_version"
     const val tools_test_rules = "androidx.test:rules:$androidx_test_shared_version"
     // Truth is unused
@@ -241,8 +241,6 @@ object Deps {
     const val uiautomator = "androidx.test.uiautomator:uiautomator:${Versions.uiautomator}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
 
-    const val google_ads_id = "com.google.android.gms:play-services-ads-identifier:${Versions.google_ads_id_version}"
-
     // Required for in-app reviews
     const val google_play_store = "com.google.android.play:core:${Versions.google_play_store_version}"
 
@@ -252,7 +250,7 @@ object Deps {
     const val junitParams = "org.junit.jupiter:junit-jupiter-params:${Versions.junit}"
     const val junitEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junit}"
 
-    // TODO: [Waterfox] remove
+    // TODO: [Waterfox] remove Glean dependency
     const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
 }
 

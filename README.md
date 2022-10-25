@@ -120,7 +120,6 @@ The known features that are disabled by default are:
 - Sentry
 - Mozilla Location Services (also known as MLS)
 - Firebase Push Services
-- Telemetry (only disabled by default in debug builds)
 - Nimbus
 
 ## Pre-push hooks

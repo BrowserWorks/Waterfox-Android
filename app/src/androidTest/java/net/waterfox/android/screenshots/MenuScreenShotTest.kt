@@ -223,8 +223,6 @@ fun settingsAddToHomeScreen() = onView(withText(R.string.preferences_add_private
 
 fun settingsRemoveData() = onView(withText(R.string.preferences_delete_browsing_data)).click()
 
-fun settingsTelemetry() = onView(withText(R.string.preferences_data_collection)).click()
-
 fun loginsAndPassword() = onView(withText(R.string.preferences_passwords_logins_and_passwords)).click()
 
 fun addOns() = onView(withText(R.string.preferences_addons)).click()

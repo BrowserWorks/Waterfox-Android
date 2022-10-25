@@ -35,6 +35,7 @@ class Analytics(
             false -> "Mozilla"
         }
 
+        // TODO: [Waterfox] Do we want to keep Sentry?
         if (isSentryEnabled()) {
             // We treat caught exceptions similar to debug logging.
             // On the release channel volume of these is too high for our Sentry instances, and
