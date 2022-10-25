@@ -14,7 +14,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withParent
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.CoreMatchers.allOf
 import net.waterfox.android.R
-import net.waterfox.android.helpers.TestHelper.appName
 import net.waterfox.android.helpers.assertIsEnabled
 import net.waterfox.android.helpers.click
 
@@ -27,13 +26,10 @@ class SettingsSubMenuDataCollectionRobot {
 
     fun verifyDataCollectionOptions() = assertDataCollectionOptions()
 
-    fun verifyUsageAndTechnicalDataSwitchDefault() = assertUsageAndTechnicalDataSwitchDefault()
-
     fun verifyExperimentsSwitchDefault() = assertExperimentsSwitchDefault()
 
     fun verifyDataCollectionSubMenuItems() {
         verifyDataCollectionOptions()
-        verifyUsageAndTechnicalDataSwitchDefault()
         // Temporarily disabled until https://github.com/mozilla-mobile/fenix/issues/17086 and
         // https://github.com/mozilla-mobile/fenix/issues/17143 are resolved:
         // verifyExperimentsSwitchDefault()
@@ -61,26 +57,11 @@ private fun assertNavigationToolBarHeader() = onView(
     .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
 private fun assertDataCollectionOptions() {
-
-    onView(withText(R.string.preference_usage_data))
-        .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-
-    val usageAndTechnicalDataText =
-        "Shares performance, usage, hardware and customization data about your browser with Mozilla to help us make $appName better"
-
-    onView(withText(usageAndTechnicalDataText))
-        .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-
     // Temporarily disabled until https://github.com/mozilla-mobile/fenix/issues/17086 and
     // https://github.com/mozilla-mobile/fenix/issues/17143 are resolved:
     // onView(withText(R.string.preference_experiments_2)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
     // onView(withText(R.string.preference_experiments_summary_2)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 }
-
-private fun usageAndTechnicalDataButton() = onView(withText(R.string.preference_usage_data))
-
-private fun assertUsageAndTechnicalDataSwitchDefault() = usageAndTechnicalDataButton()
-    .assertIsEnabled(isEnabled = true)
 
 private fun experimentsButton() = onView(withText(R.string.preference_experiments_2))
 

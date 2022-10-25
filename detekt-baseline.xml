@@ -434,7 +434,6 @@
     <ID>UndocumentedPublicClass:StartupActivityLog.kt$StartupActivityLog.LogEntry$AppStarted : LogEntry</ID>
     <ID>UndocumentedPublicClass:StartupActivityLog.kt$StartupActivityLog.LogEntry$AppStopped : LogEntry</ID>
     <ID>UndocumentedPublicClass:StartupPathProvider.kt$StartupPathProvider$StartupPathLifecycleObserver : DefaultLifecycleObserver</ID>
-    <ID>UndocumentedPublicClass:StartupTypeTelemetry.kt$StartupTypeTelemetry$StartupTypeLifecycleObserver : DefaultLifecycleObserver</ID>
     <ID>UndocumentedPublicClass:StrictModeManager.kt$StrictModeManager$DisableStrictModeFragmentLifecycleCallbacks : FragmentLifecycleCallbacks</ID>
     <ID>UndocumentedPublicClass:StudiesInteractor.kt$DefaultStudiesInteractor : StudiesInteractor</ID>
     <ID>UndocumentedPublicClass:StudiesInteractor.kt$StudiesInteractor</ID>
@@ -618,7 +617,6 @@
     <ID>UndocumentedPublicFunction:BrowsersCache.kt$BrowsersCache$@Synchronized fun resetAll()</ID>
     <ID>UndocumentedPublicFunction:ClearSiteDataView.kt$ClearSiteDataView$fun update(webInfoState: WebsiteInfoState)</ID>
     <ID>UndocumentedPublicFunction:ClearableEditText.kt$ClearableEditText$fun onTextChanged(text: CharSequence?)</ID>
-    <ID>UndocumentedPublicFunction:ColdStartupDurationTelemetry.kt$ColdStartupDurationTelemetry$fun onHomeActivityOnCreate( visualCompletenessQueue: VisualCompletenessQueue, startupStateProvider: StartupStateProvider, safeIntent: SafeIntent, rootContainer: View )</ID>
     <ID>UndocumentedPublicFunction:CollectionCreationBottomBarView.kt$CollectionCreationBottomBarView$fun update(step: SaveCollectionStep, state: CollectionCreationState)</ID>
     <ID>UndocumentedPublicFunction:CollectionCreationController.kt$CollectionCreationController$fun addNewCollection()</ID>
     <ID>UndocumentedPublicFunction:CollectionCreationController.kt$CollectionCreationController$fun addTabToSelection(tab: Tab)</ID>
@@ -781,7 +779,6 @@
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun start(type: MetricServiceType)</ID>
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun stop(type: MetricServiceType)</ID>
     <ID>UndocumentedPublicFunction:MetricController.kt$MetricController$fun track(event: Event)</ID>
-    <ID>UndocumentedPublicFunction:MetricController.kt$MetricController.Companion$fun create( services: List&lt;MetricsService&gt;, isDataTelemetryEnabled: () -&gt; Boolean, settings: Settings ): MetricController</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun shouldTrack(event: Event): Boolean</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun start()</ID>
     <ID>UndocumentedPublicFunction:MetricsService.kt$MetricsService$fun stop()</ID>
@@ -952,9 +949,6 @@
     <ID>UndocumentedPublicFunction:StartupTimeline.kt$StartupTimeline$fun onActivityCreateEndIntentReceiver()</ID>
     <ID>UndocumentedPublicFunction:StartupTimeline.kt$StartupTimeline$fun onApplicationInit()</ID>
     <ID>UndocumentedPublicFunction:StartupTimeline.kt$StartupTimeline$fun onTopSitesItemBound(holder: TopSiteItemViewHolder)</ID>
-    <ID>UndocumentedPublicFunction:StartupTypeTelemetry.kt$StartupTypeTelemetry$@VisibleForTesting(otherwise = NONE) fun getTestCallbacks()</ID>
-    <ID>UndocumentedPublicFunction:StartupTypeTelemetry.kt$StartupTypeTelemetry$@VisibleForTesting(otherwise = PRIVATE) fun record()</ID>
-    <ID>UndocumentedPublicFunction:StartupTypeTelemetry.kt$StartupTypeTelemetry$fun attachOnHomeActivityOnCreate(lifecycle: Lifecycle)</ID>
     <ID>UndocumentedPublicFunction:StorageStatsMetrics.kt$StorageStatsMetrics$// I couldn't get runBlockingTest to work correctly so I moved the functionality under test to // a synchronous function. @VisibleForTesting(otherwise = PRIVATE) @WorkerThread // queryStatsForUid fun reportSync(context: Context)</ID>
     <ID>UndocumentedPublicFunction:StorageStatsMetrics.kt$StorageStatsMetrics$@OptIn(DelicateCoroutinesApi::class) // GlobalScope usage fun report(context: Context)</ID>
     <ID>UndocumentedPublicFunction:StoreProvider.kt$StoreProvider.Companion$fun &lt;T : Store&lt;*, *&gt;&gt; get(fragment: Fragment, createStore: () -&gt; T): T</ID>

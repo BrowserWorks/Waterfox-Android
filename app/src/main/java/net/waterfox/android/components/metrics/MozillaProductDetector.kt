@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import net.waterfox.android.utils.BrowsersCache
 
+// TODO: [Waterfox] Do we need this class?
 object MozillaProductDetector {
     enum class MozillaProducts(val productName: String) {
         // Browsers
