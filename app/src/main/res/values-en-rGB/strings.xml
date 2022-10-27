@@ -424,11 +424,7 @@
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Recently visited</string>
-    <!-- Title for the customize home screen section with Pocket. -->
-    <string name="customize_toggle_pocket">Pocket</string>
 
-    <!-- Title for the customize home screen section with sponsored Pocket stories. -->
-    <string name="customize_toggle_pocket_sponsored">Sponsored stories</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">Wallpapers</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -1826,23 +1822,6 @@
 
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Close</string>
-
-    <!-- Pocket recommended stories -->
-    <!-- Header text for a section on the home screen. -->
-    <string name="pocket_stories_header_1">Thought-provoking stories</string>
-    <!-- Header text for a section on the home screen. -->
-    <string name="pocket_stories_categories_header">Stories by topic</string>
-    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
-    <string name="pocket_stories_placeholder_text">Discover more</string>
-    <!-- Title of an app feature. Smaller than a heading.-->
-    <string name="pocket_stories_feature_title">Powered by Pocket</string>
-    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Part of the Waterfox family. %s</string>
-    <!-- Clickable text for opening an external link for more information about Pocket. -->
-    <string name="pocket_stories_feature_learn_more">Learn more</string>
-
-    <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
-    <string name="pocket_stories_sponsor_indication">Sponsored</string>
 
     <string name="waterfox_suggest_header">Waterfox Suggest</string>
 </resources>

@@ -38,23 +38,23 @@ class AppViewHolderTest {
     @Test
     fun `bind app share option`() {
         val app = AppShareOption(
-            name = "Pocket",
-            icon = getDrawable(testContext, R.drawable.ic_pocket)!!,
-            packageName = "com.mozilla.pocket",
+            name = "Baidu",
+            icon = getDrawable(testContext, R.drawable.ic_baidu)!!,
+            packageName = "com.baidu",
             activityName = "MainActivity"
         )
         viewHolder.bind(app)
 
-        assertEquals("Pocket", binding.appName.text)
+        assertEquals("Baidu", binding.appName.text)
         assertEquals(app.icon, binding.appIcon.drawable)
     }
 
     @Test
     fun `trigger interactor if application is bound`() {
         val app = AppShareOption(
-            name = "Pocket",
-            icon = getDrawable(testContext, R.drawable.ic_pocket)!!,
-            packageName = "com.mozilla.pocket",
+            name = "Baidu",
+            icon = getDrawable(testContext, R.drawable.ic_baidu)!!,
+            packageName = "com.baidu",
             activityName = "MainActivity"
         )
 

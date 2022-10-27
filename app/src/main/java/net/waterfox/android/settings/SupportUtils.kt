@@ -21,7 +21,6 @@ import java.util.Locale
 
 object SupportUtils {
     const val RATE_APP_URL = "market://details?id=" + BuildConfig.APPLICATION_ID
-    const val POCKET_TRENDING_URL = "https://getpocket.com/fenix-top-articles"
     const val WIKIPEDIA_URL = "https://www.wikipedia.org/"
     const val WATERFOX_PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}"
     const val GOOGLE_URL = "https://www.google.com/"

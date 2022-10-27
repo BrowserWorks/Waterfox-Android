@@ -29,10 +29,10 @@ class TopSiteItemViewHolderTest {
     private lateinit var interactor: TopSiteInteractor
     private lateinit var lifecycleOwner: LifecycleOwner
 
-    private val pocket = TopSite.Default(
+    private val topSite = TopSite.Default(
         id = 1L,
-        title = "Pocket",
-        url = "https://getpocket.com",
+        title = "Baidu",
+        url = "https://www.baidu.com/",
         createdAt = 0
     )
 
@@ -47,16 +47,16 @@ class TopSiteItemViewHolderTest {
 
     @Test
     fun `calls interactor on click`() {
-        TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(pocket, position = 0)
+        TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(topSite, position = 0)
 
         binding.topSiteItem.performClick()
-        verify { interactor.onSelectTopSite(pocket, position = 0) }
+        verify { interactor.onSelectTopSite(topSite, position = 0) }
     }
 
     @Test
     fun `calls interactor on long click`() {
         every { testContext.components.analytics } returns mockk(relaxed = true)
-        TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(pocket, position = 0)
+        TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(topSite, position = 0)
 
         binding.topSiteItem.performLongClick()
         verify { interactor.onTopSiteMenuOpened() }
@@ -66,8 +66,8 @@ class TopSiteItemViewHolderTest {
     fun `GIVEN a default top site WHEN bind is called THEN the title has a pin indicator`() {
         val defaultTopSite = TopSite.Default(
             id = 1L,
-            title = "Pocket",
-            url = "https://getpocket.com",
+            title = "Baidu",
+            url = "https://www.baidu.com/",
             createdAt = 0
         )
 

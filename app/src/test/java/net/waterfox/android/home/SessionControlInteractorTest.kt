@@ -8,12 +8,9 @@ import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
-import mozilla.components.service.pocket.PocketStory
 import org.junit.Before
 import org.junit.Test
 import net.waterfox.android.browser.browsingmode.BrowsingMode
-import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
-import net.waterfox.android.home.pocket.PocketStoriesController
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
 import net.waterfox.android.home.recentbookmarks.controller.RecentBookmarksController
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
@@ -29,7 +26,6 @@ class SessionControlInteractorTest {
     private val recentTabController: RecentTabController = mockk(relaxed = true)
     private val recentSyncedTabController: RecentSyncedTabController = mockk(relaxed = true)
     private val recentBookmarksController: RecentBookmarksController = mockk(relaxed = true)
-    private val pocketStoriesController: PocketStoriesController = mockk(relaxed = true)
 
     // Note: the recent visits tests are handled in [RecentVisitsInteractorTest] and [RecentVisitsControllerTest]
     private val recentVisitsController: RecentVisitsController = mockk(relaxed = true)
@@ -43,8 +39,7 @@ class SessionControlInteractorTest {
             recentTabController,
             recentSyncedTabController,
             recentBookmarksController,
-            recentVisitsController,
-            pocketStoriesController
+            recentVisitsController
         )
     }
 
@@ -226,61 +221,5 @@ class SessionControlInteractorTest {
     fun `WHEN onSponsorPrivacyClicked is called THEN handleSponsorPrivacyClicked is called`() {
         interactor.onSponsorPrivacyClicked()
         verify { controller.handleSponsorPrivacyClicked() }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a story is shown THEN handle it in a PocketStoriesController`() {
-        val shownStory: PocketStory = mockk()
-        val storyGridLocation = 1 to 2
-
-        interactor.onStoryShown(shownStory, storyGridLocation)
-
-        verify { pocketStoriesController.handleStoryShown(shownStory, storyGridLocation) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN stories are shown THEN handle it in a PocketStoriesController`() {
-        val shownStories: List<PocketStory> = mockk()
-
-        interactor.onStoriesShown(shownStories)
-
-        verify { pocketStoriesController.handleStoriesShown(shownStories) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a category is clicked THEN handle it in a PocketStoriesController`() {
-        val clickedCategory: PocketRecommendedStoriesCategory = mockk()
-
-        interactor.onCategoryClicked(clickedCategory)
-
-        verify { pocketStoriesController.handleCategoryClick(clickedCategory) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN a story is clicked THEN handle it in a PocketStoriesController`() {
-        val clickedStory: PocketStory = mockk()
-        val storyGridLocation = 1 to 2
-
-        interactor.onStoryClicked(clickedStory, storyGridLocation)
-
-        verify { pocketStoriesController.handleStoryClicked(clickedStory, storyGridLocation) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN discover more clicked THEN handle it in a PocketStoriesController`() {
-        val link = "http://getpocket.com/explore"
-
-        interactor.onDiscoverMoreClicked(link)
-
-        verify { pocketStoriesController.handleDiscoverMoreClicked(link) }
-    }
-
-    @Test
-    fun `GIVEN a PocketStoriesInteractor WHEN learn more clicked THEN handle it in a PocketStoriesController`() {
-        val link = "https://www.mozilla.org/en-US/waterfox/pocket/"
-
-        interactor.onLearnMoreClicked(link)
-
-        verify { pocketStoriesController.handleLearnMoreClicked(link) }
     }
 }

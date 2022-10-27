@@ -43,7 +43,6 @@ class SettingsAdvancedTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
-        featureSettingsHelper.setPocketEnabled(false)
     }
 
     @After

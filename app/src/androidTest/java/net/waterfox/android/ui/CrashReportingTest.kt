@@ -34,7 +34,6 @@ class CrashReportingTest {
     @Before
     fun setUp() {
         featureSettingsHelper.setJumpBackCFREnabled(false)
-        featureSettingsHelper.setPocketEnabled(false)
 
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         mockWebServer = MockWebServer().apply {

@@ -7,12 +7,8 @@ package net.waterfox.android.home.sessioncontrol
 import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.service.pocket.PocketStory
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.gleanplumb.Message
-import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
-import net.waterfox.android.home.pocket.PocketStoriesController
-import net.waterfox.android.home.pocket.PocketStoriesInteractor
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
 import net.waterfox.android.home.recentbookmarks.controller.RecentBookmarksController
 import net.waterfox.android.home.recentbookmarks.interactor.RecentBookmarksInteractor
@@ -156,8 +152,8 @@ interface OnboardingInteractor {
     fun onReadPrivacyNoticeClicked()
 
     /**
-     * Show the onboarding dialog to onboard users about recentTabs,recentBookmarks,
-     * historyMetadata and pocketArticles sections.
+     * Show the onboarding dialog to onboard users about recentTabs, recentBookmarks and
+     * historyMetadata sections.
      */
     fun showOnboardingDialog()
 }
@@ -245,8 +241,7 @@ class SessionControlInteractor(
     private val recentTabController: RecentTabController,
     private val recentSyncedTabController: RecentSyncedTabController,
     private val recentBookmarksController: RecentBookmarksController,
-    private val recentVisitsController: RecentVisitsController,
-    private val pocketStoriesController: PocketStoriesController
+    private val recentVisitsController: RecentVisitsController
 ) : CollectionInteractor,
     OnboardingInteractor,
     TopSiteInteractor,
@@ -257,8 +252,7 @@ class SessionControlInteractor(
     RecentSyncedTabInteractor,
     RecentBookmarksInteractor,
     RecentVisitsInteractor,
-    CustomizeHomeIteractor,
-    PocketStoriesInteractor {
+    CustomizeHomeIteractor {
 
     override fun onCollectionAddTabTapped(collection: TabCollection) {
         controller.handleCollectionAddTabTapped(collection)
@@ -416,30 +410,6 @@ class SessionControlInteractor(
 
     override fun openCustomizeHomePage() {
         controller.handleCustomizeHomeTapped()
-    }
-
-    override fun onStoryShown(storyShown: PocketStory, storyPosition: Pair<Int, Int>) {
-        pocketStoriesController.handleStoryShown(storyShown, storyPosition)
-    }
-
-    override fun onStoriesShown(storiesShown: List<PocketStory>) {
-        pocketStoriesController.handleStoriesShown(storiesShown)
-    }
-
-    override fun onCategoryClicked(categoryClicked: PocketRecommendedStoriesCategory) {
-        pocketStoriesController.handleCategoryClick(categoryClicked)
-    }
-
-    override fun onStoryClicked(storyClicked: PocketStory, storyPosition: Pair<Int, Int>) {
-        pocketStoriesController.handleStoryClicked(storyClicked, storyPosition)
-    }
-
-    override fun onLearnMoreClicked(link: String) {
-        pocketStoriesController.handleLearnMoreClicked(link)
-    }
-
-    override fun onDiscoverMoreClicked(link: String) {
-        pocketStoriesController.handleDiscoverMoreClicked(link)
     }
 
     override fun onMessageClicked(message: Message) {

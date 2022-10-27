@@ -376,7 +376,7 @@ private fun RecentlyVisitedPreview() {
                 RecentHistoryGroup(title = "running shoes"),
                 RecentHistoryGroup(title = "waterfoxco"),
                 RecentHistoryGroup(title = "waterfox"),
-                RecentHistoryGroup(title = "pocket")
+                RecentHistoryGroup(title = "tennis")
             ),
             menuItems = emptyList()
         )

@@ -13,15 +13,10 @@ class FeatureSettingsHelper {
     private val settings = context.settings()
 
     // saving default values of feature flags
-    private var isPocketEnabled: Boolean = settings.showPocketRecommendationsFeature
     private var isJumpBackInCFREnabled: Boolean = settings.shouldShowJumpBackInCFR
     private var isRecentTabsFeatureEnabled: Boolean = settings.showRecentTabsFeature
     private var isRecentlyVisitedFeatureEnabled: Boolean = settings.historyMetadataUIFeature
     private var isUserKnowsAboutPwasTrue: Boolean = settings.userKnowsAboutPwas
-
-    fun setPocketEnabled(enabled: Boolean) {
-        settings.showPocketRecommendationsFeature = enabled
-    }
 
     fun setJumpBackCFREnabled(enabled: Boolean) {
         settings.shouldShowJumpBackInCFR = enabled
@@ -51,7 +46,6 @@ class FeatureSettingsHelper {
     // Use this after each test if you have modified these feature settings
     // to make sure the app goes back to the default state
     fun resetAllFeatureFlags() {
-        settings.showPocketRecommendationsFeature = isPocketEnabled
         settings.shouldShowJumpBackInCFR = isJumpBackInCFREnabled
         settings.showRecentTabsFeature = isRecentTabsFeatureEnabled
         settings.historyMetadataUIFeature = isRecentlyVisitedFeatureEnabled

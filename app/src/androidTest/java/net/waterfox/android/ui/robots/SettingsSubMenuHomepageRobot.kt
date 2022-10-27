@@ -30,7 +30,6 @@ class SettingsSubMenuHomepageRobot {
         assertJumpBackInButton()
         assertRecentBookmarksButton()
         assertRecentSearchesButton()
-        assertPocketButton()
         assertOpeningScreenHeading()
         assertHomepageButton()
         assertLastTabButton()
@@ -90,9 +89,6 @@ private fun recentBookmarksButton() =
 private fun recentSearchesButton() =
     onView(allOf(withText(R.string.customize_toggle_recently_visited)))
 
-private fun pocketButton() =
-    onView(allOf(withText(R.string.customize_toggle_pocket)))
-
 private fun openingScreenHeading() = onView(withText(R.string.preferences_opening_screen))
 
 private fun homepageButton() =
@@ -132,8 +128,6 @@ private fun assertRecentBookmarksButton() =
     recentBookmarksButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 private fun assertRecentSearchesButton() =
     recentSearchesButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-private fun assertPocketButton() =
-    pocketButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 private fun assertOpeningScreenHeading() =
     openingScreenHeading().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 private fun assertHomepageButton() =

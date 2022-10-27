@@ -228,17 +228,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             components.core.contileTopSitesUpdater.startPeriodicWork()
         }
 
-        // To assess whether the Pocket stories are to be downloaded or not multiple SharedPreferences
-        // are read possibly needing to load them on the current thread. Move that to a background thread.
-        lifecycleScope.launch(IO) {
-            if (settings().showPocketRecommendationsFeature) {
-                components.core.pocketStoriesService.startPeriodicStoriesRefresh()
-            }
-            if (settings().showPocketSponsoredStories) {
-                components.core.pocketStoriesService.startPeriodicSponsoredStoriesRefresh()
-            }
-        }
-
         components.core.engine.profiler?.addMarker(
             MarkersActivityLifecycleCallbacks.MARKER_NAME, startTimeProfiler, "HomeActivity.onCreate"
         )
@@ -390,8 +379,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         )
 
         components.core.contileTopSitesUpdater.stopPeriodicWork()
-        components.core.pocketStoriesService.stopPeriodicStoriesRefresh()
-        components.core.pocketStoriesService.stopPeriodicSponsoredStoriesRefresh()
         privateNotificationObserver?.stop()
     }
 

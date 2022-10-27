@@ -15,7 +15,7 @@ import net.waterfox.android.ext.settings
 
 /**
  * Dialog displayed once when one or multiples of these sections are shown in the home screen
- * recentTabs,recentBookmarks,historyMetadata or pocketArticles.
+ * recentTabs, recentBookmarks or historyMetadata.
  */
 class HomeOnboardingDialogFragment : DialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {

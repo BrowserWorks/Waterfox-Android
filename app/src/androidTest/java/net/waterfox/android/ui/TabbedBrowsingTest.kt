@@ -186,7 +186,6 @@ class TabbedBrowsingTest {
     @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun verifyUndoSnackBarTest() {
         // disabling these features because they interfere with the snackbar visibility
-        featureSettingsHelper.setPocketEnabled(false)
         featureSettingsHelper.setRecentTabsFeatureEnabled(false)
 
         val genericURL = TestAssetHelper.getGenericAsset(mockWebServer, 1)
