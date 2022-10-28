@@ -81,7 +81,6 @@ gen-external-apklibs
 # Secrets files, e.g. tokens
 .sentry_token
 .mls_token
-.nimbus
 .wallpaper_url
 
 # Python Byte-compiled / optimized / DLL files
@@ -101,9 +100,3 @@ test_artifacts/
 
 # Web extensions: manifest.json files are generated
 manifest.json
-
-# Experimenter generated files
-.experimenter.*
-.experimenter.yaml
-*.orig
-*.rej

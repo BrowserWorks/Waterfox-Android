@@ -42,7 +42,6 @@ object SupportUtils {
         YOUR_RIGHTS("your-rights"),
         TRACKING_PROTECTION("tracking-protection-waterfox-android"),
         WHATS_NEW("whats-new-waterfox-android"),
-        OPT_OUT_STUDIES("how-opt-out-studies-waterfox-android"),
         SEND_TABS("send-tab-preview"),
         SET_AS_DEFAULT_BROWSER("set-waterfox-android-default"),
         SEARCH_SUGGESTION("how-search-waterfox-android"),

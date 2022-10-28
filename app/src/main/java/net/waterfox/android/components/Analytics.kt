@@ -12,13 +12,7 @@ import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.lib.crash.sentry.SentryService
 import mozilla.components.lib.crash.service.CrashReporterService
 import mozilla.components.lib.crash.service.MozillaSocorroService
-import mozilla.components.service.nimbus.NimbusApi
 import net.waterfox.android.*
-import net.waterfox.android.experiments.createNimbus
-import net.waterfox.android.gleanplumb.CustomAttributeProvider
-import net.waterfox.android.gleanplumb.NimbusMessagingStorage
-import net.waterfox.android.gleanplumb.OnDiskMessageMetadataStorage
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.lazyMonitored
 import org.mozilla.geckoview.BuildConfig.*
 
@@ -94,21 +88,6 @@ class Analytics(
             ),
             enabled = true,
             nonFatalCrashIntent = pendingIntent
-        )
-    }
-
-    val experiments: NimbusApi by lazyMonitored {
-        createNimbus(context, BuildConfig.NIMBUS_ENDPOINT)
-    }
-
-    val messagingStorage by lazyMonitored {
-        NimbusMessagingStorage(
-            context = context,
-            metadataStorage = OnDiskMessageMetadataStorage(context),
-            gleanPlumb = experiments,
-            reportMalformedMessage = {},
-            messagingFeature = FxNimbus.features.messaging,
-            attributeProvider = CustomAttributeProvider,
         )
     }
 }

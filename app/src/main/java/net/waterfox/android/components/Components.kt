@@ -31,7 +31,6 @@ import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.ext.asRecentTabs
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.filterState
-import net.waterfox.android.gleanplumb.state.MessagingMiddleware
 import net.waterfox.android.ext.sort
 import net.waterfox.android.home.blocklist.BlocklistHandler
 import net.waterfox.android.home.blocklist.BlocklistMiddleware
@@ -210,8 +209,7 @@ class Components(private val context: Context) {
                 recentHistory = emptyList()
             ).run { filterState(blocklistHandler) },
             middlewares = listOf(
-                BlocklistMiddleware(blocklistHandler),
-                MessagingMiddleware(messagingStorage = analytics.messagingStorage)
+                BlocklistMiddleware(blocklistHandler)
             )
         )
     }

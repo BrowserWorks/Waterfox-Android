@@ -35,8 +35,6 @@ import net.waterfox.android.components.settings.lazyFeatureFlagPreference
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.getPreferenceKey
-import net.waterfox.android.nimbus.FxNimbus
-import net.waterfox.android.nimbus.HomeScreenSection
 import net.waterfox.android.settings.PhoneFeature
 import net.waterfox.android.settings.deletebrowsingdata.DeleteBrowsingDataOnQuitType
 import net.waterfox.android.settings.logins.SavedLoginsSortingStrategyMenu
@@ -45,7 +43,6 @@ import net.waterfox.android.settings.registerOnSharedPreferenceChangeListener
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_ALL
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_AUDIBLE
 import net.waterfox.android.wallpapers.WallpaperManager
-import org.mozilla.experiments.nimbus.internal.NimbusFeatureException
 import java.security.InvalidParameterException
 import java.util.*
 
@@ -128,7 +125,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     var showTopSitesFeature by lazyFeatureFlagPreference(
         appContext.getPreferenceKey(R.string.pref_key_show_top_sites),
         featureFlag = true,
-        default = { homescreenSections[HomeScreenSection.TOP_SITES] == true },
+        default = { true },
     )
 
     var numberOfAppLaunches by intPreference(
@@ -211,9 +208,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         appContext.getPreferenceKey(R.string.pref_key_remote_debugging),
         default = false
     )
-
-    // WATERFOX
-    var isExperimentationEnabled = false
 
     var isOverrideTPPopupsForPerformanceTest = false
 
@@ -300,24 +294,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
-    var nimbusUsePreview by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_nimbus_use_preview),
-        default = false
-    )
-
-    val isFirstRun: Boolean =
-        if (!preferences.contains(appContext.getPreferenceKey(R.string.pref_key_is_first_run))) {
-            preferences.edit()
-                .putBoolean(
-                    appContext.getPreferenceKey(R.string.pref_key_is_first_run),
-                    false
-                )
-                .apply()
-            true
-        } else {
-            false
-        }
-
     /**
      * Indicates the last time when the user was interacting with the [BrowserFragment],
      * This is useful to determine if the user has to start on the [HomeFragment]
@@ -389,7 +365,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var searchTermTabGroupsAreEnabled by lazyFeatureFlagPreference(
         appContext.getPreferenceKey(R.string.pref_key_search_term_tab_groups),
-        default = { FxNimbus.features.searchTermGroups.value().enabled },
+        default = { true },
         featureFlag = FeatureFlags.tabGroupFeature
     )
 
@@ -548,9 +524,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         true
     )
 
-    val enabledTotalCookieProtection: Boolean by lazy {
-        FxNimbus.features.engineSettings.value().totalCookieProtectionEnabled
-    }
+    val enabledTotalCookieProtection: Boolean = true
 
     val blockCookiesSelectionInCustomTrackingProtection by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_custom_cookies_select),
@@ -1145,15 +1119,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
-    private val homescreenSections: Map<HomeScreenSection, Boolean> get() = try {
-        FxNimbus.features.homescreen.value().sectionsEnabled
-    } catch (e: NimbusFeatureException) {
-        emptyMap()
-    }
-
     var historyMetadataUIFeature by lazyFeatureFlagPreference(
         appContext.getPreferenceKey(R.string.pref_key_history_metadata_feature),
-        default = { homescreenSections[HomeScreenSection.RECENT_EXPLORATIONS] == true },
+        default = { true },
         featureFlag = FeatureFlags.historyMetadataUIFeature || isHistoryMetadataEnabled
     )
 
@@ -1164,7 +1132,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     var showRecentTabsFeature by lazyFeatureFlagPreference(
         appContext.getPreferenceKey(R.string.pref_key_recent_tabs),
         featureFlag = FeatureFlags.showRecentTabsFeature,
-        default = { homescreenSections[HomeScreenSection.JUMP_BACK_IN] == true },
+        default = { true },
     )
 
     /**
@@ -1173,7 +1141,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var showRecentBookmarksFeature by lazyFeatureFlagPreference(
         appContext.getPreferenceKey(R.string.pref_key_recent_bookmarks),
-        default = { homescreenSections[HomeScreenSection.RECENTLY_SAVED] == true },
+        default = { true },
         featureFlag = FeatureFlags.recentBookmarksFeature
     )
 
@@ -1218,7 +1186,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var showContileFeature by lazyFeatureFlagPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_contile),
-        default = { homescreenSections[HomeScreenSection.CONTILE_TOP_SITES] == true },
+        default = { true },
         featureFlag = true,
     )
 
@@ -1236,7 +1204,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var showUnifiedSearchFeature by lazyFeatureFlagPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_show_unified_search),
-        default = { FxNimbus.features.unifiedSearch.value(appContext).enabled },
+        default = { true },
         featureFlag = FeatureFlags.unifiedSearchFeature
     )
 

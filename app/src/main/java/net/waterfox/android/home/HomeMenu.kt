@@ -28,7 +28,6 @@ import net.waterfox.android.components.accounts.AccountState
 import net.waterfox.android.components.accounts.WaterfoxAccountManager
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.theme.ThemeManager
 import net.waterfox.android.whatsnew.WhatsNew
 
@@ -173,10 +172,8 @@ class HomeMenu(
             onItemTapped.invoke(Item.CustomizeHome)
         }
 
-        // Use nimbus to set the icon and title.
-        val nimbusValidation = FxNimbus.features.nimbusValidation.value()
         val settingsItem = BrowserMenuImageText(
-            nimbusValidation.settingsTitle,
+            context.getString(R.string.browser_menu_settings),
             R.drawable.mozac_ic_settings,
             primaryTextColor
         ) {

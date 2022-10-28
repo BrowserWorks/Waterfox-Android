@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import net.waterfox.android.components.Components
-import net.waterfox.android.gleanplumb.Message
 import net.waterfox.android.home.BottomSpacerViewHolder
 import net.waterfox.android.home.TopPlaceholderViewHolder
 import net.waterfox.android.home.collections.CollectionViewHolder
@@ -31,7 +30,6 @@ import net.waterfox.android.home.sessioncontrol.viewholders.CollectionHeaderView
 import net.waterfox.android.home.sessioncontrol.viewholders.CustomizeHomeButtonViewHolder
 import net.waterfox.android.home.sessioncontrol.viewholders.NoCollectionsMessageViewHolder
 import net.waterfox.android.home.sessioncontrol.viewholders.PrivateBrowsingDescriptionViewHolder
-import net.waterfox.android.home.sessioncontrol.viewholders.onboarding.MessageCardViewHolder
 import net.waterfox.android.home.sessioncontrol.viewholders.onboarding.OnboardingFinishViewHolder
 import net.waterfox.android.home.sessioncontrol.viewholders.onboarding.OnboardingHeaderViewHolder
 import net.waterfox.android.home.sessioncontrol.viewholders.onboarding.OnboardingManualSignInViewHolder
@@ -144,13 +142,6 @@ sealed class AdapterItem(@LayoutRes val viewType: Int) {
 
     object OnboardingManualSignIn : AdapterItem(OnboardingManualSignInViewHolder.LAYOUT_ID)
 
-    data class NimbusMessageCard(
-        val message: Message
-    ) : AdapterItem(MessageCardViewHolder.LAYOUT_ID) {
-        override fun sameAs(other: AdapterItem) =
-            other is NimbusMessageCard && message.id == other.message.id
-    }
-
     object OnboardingThemePicker : AdapterItem(OnboardingThemePickerViewHolder.LAYOUT_ID)
     object OnboardingTrackingProtection :
         AdapterItem(OnboardingTrackingProtectionViewHolder.LAYOUT_ID)
@@ -211,11 +202,6 @@ class SessionControlAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         when (viewType) {
             CustomizeHomeButtonViewHolder.LAYOUT_ID -> return CustomizeHomeButtonViewHolder(
-                composeView = ComposeView(parent.context),
-                viewLifecycleOwner = viewLifecycleOwner,
-                interactor = interactor
-            )
-            MessageCardViewHolder.LAYOUT_ID -> return MessageCardViewHolder(
                 composeView = ComposeView(parent.context),
                 viewLifecycleOwner = viewLifecycleOwner,
                 interactor = interactor
@@ -329,11 +315,6 @@ class SessionControlAdapter(
                 // This ViewHolder can be removed / re-added and we need it to show a fresh new composition.
                 holder.composeView.disposeComposition()
             }
-            is MessageCardViewHolder -> {
-                // Dispose the underlying composition immediately.
-                // This ViewHolder can be removed / re-added and we need it to show a fresh new composition.
-                holder.composeView.disposeComposition()
-            }
             is TabInCollectionViewHolder -> {
                 // Dispose the underlying composition immediately.
                 // This ViewHolder can be removed / re-added and we need it to show a fresh new composition.
@@ -373,9 +354,6 @@ class SessionControlAdapter(
             }
             is TopSitePagerViewHolder -> {
                 holder.bind((item as AdapterItem.TopSitePager).topSites)
-            }
-            is MessageCardViewHolder -> {
-                holder.bind((item as AdapterItem.NimbusMessageCard).message)
             }
             is CollectionViewHolder -> {
                 val (collection, expanded) = item as AdapterItem.CollectionItem

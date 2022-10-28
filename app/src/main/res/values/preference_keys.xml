@@ -15,7 +15,6 @@
     <string name="pref_key_accessibility_force_enable_zoom" translatable="false">pref_key_accessibility_force_enable_zoom</string>
     <string name="pref_key_advanced" translatable="false">pref_key_advanced</string>
     <string name="pref_key_language" translatable="false">pref_key_language</string>
-    <string name="pref_key_data_choices" translatable="false">pref_key_data_choices</string>
     <string name="pref_key_privacy_link" translatable="false">pref_key_privacy_link</string>
     <string name="pref_key_delete_browsing_data" translatable="false">pref_key_delete_browsing_data</string>
     <string name="pref_key_delete_browsing_data_on_quit_preference" translatable="false">pref_key_delete_browsing_data_on_quit_preference</string>
@@ -53,8 +52,6 @@
     <string name="pref_key_private_browsing" translatable="false">pref_key_private_browsing</string>
     <string name="pref_key_leakcanary" translatable="false">pref_key_leakcanary</string>
     <string name="pref_key_remote_debugging" translatable="false">pref_key_remote_debugging</string>
-    <string name="pref_key_studies_section" translatable="false">pref_key_studies_section</string>
-    <string name="pref_key_experimentation" translatable="false">pref_key_experimentation</string>
     <string name="pref_key_showed_private_mode_cfr" translatable="false">pref_key_showed_private_mode_cfr</string>
     <string name="pref_key_private_mode_opened" translatable="false">pref_key_private_mode_opened</string>
     <string name="pref_key_open_in_app_opened" translatable="false">pref_key_open_in_app_opened</string>
@@ -65,7 +62,6 @@
     <string name="pref_key_last_browse_activity_time" translatable="false">pref_key_last_browse_activity_time</string>
     <string name="pref_key_last_cfr_shown_time" translatable="false">pref_key_last_cfr_shown_time</string>
     <string name="pref_key_should_show_default_browser_notification" translatable="false">pref_key_should_show_default_browser_notification</string>
-    <string name="pref_key_is_first_run" translatable="false">pref_key_is_first_run</string>
     <string name="pref_key_has_shown_home_onboarding" translatable="false">pref_key_has_shown_home_onboarding</string>
     <string name="pref_key_home_blocklist">pref_key_home_blocklist</string>
 
@@ -274,8 +270,6 @@
 
     <!-- Secret Settings -->
     <string name="pref_key_show_address_feature" translatable="false">pref_key_show_address_feature</string>
-    <string name="pref_key_nimbus_experiments" translatable="false">pref_key_nimbus_experiments</string>
-    <string name="pref_key_nimbus_use_preview" translatable="false">pref_key_nimbus_use_preview</string>
     <string name="pref_key_history_metadata_feature" translatable="false">pref_key_history_metadata_feature</string>
     <string name="pref_key_show_unified_search" translatable="false">pref_key_show_unified_search</string>
 </resources>

@@ -78,8 +78,6 @@ import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.databinding.FragmentHomeBinding
 import net.waterfox.android.ext.*
-import net.waterfox.android.gleanplumb.DefaultMessageController
-import net.waterfox.android.gleanplumb.MessagingFeature
 import net.waterfox.android.home.mozonline.showPrivacyPopWindow
 import net.waterfox.android.home.recentbookmarks.RecentBookmarksFeature
 import net.waterfox.android.home.recentbookmarks.controller.DefaultRecentBookmarksController
@@ -94,7 +92,6 @@ import net.waterfox.android.home.sessioncontrol.SessionControlInteractor
 import net.waterfox.android.home.sessioncontrol.SessionControlView
 import net.waterfox.android.home.sessioncontrol.viewholders.CollectionHeaderViewHolder
 import net.waterfox.android.home.topsites.DefaultTopSitesView
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.onboarding.WaterfoxOnboarding
 import net.waterfox.android.perf.MarkersFragmentLifecycleCallbacks
 import net.waterfox.android.tabstray.TabsTrayAccessPoint
@@ -151,7 +148,6 @@ class HomeFragment : Fragment() {
     private lateinit var currentMode: CurrentMode
 
     private val topSitesFeature = ViewBoundFeatureWrapper<TopSitesFeature>()
-    private val messagingFeature = ViewBoundFeatureWrapper<MessagingFeature>()
     private val recentTabsListFeature = ViewBoundFeatureWrapper<RecentTabsListFeature>()
     private val recentSyncedTabFeature = ViewBoundFeatureWrapper<RecentSyncedTabFeature>()
     private val recentBookmarksFeature = ViewBoundFeatureWrapper<RecentBookmarksFeature>()
@@ -202,16 +198,6 @@ class HomeFragment : Fragment() {
         )
 
         components.appStore.dispatch(AppAction.ModeChange(currentMode.getCurrentMode()))
-
-        if (requireContext().settings().isExperimentationEnabled) {
-            messagingFeature.set(
-                feature = MessagingFeature(
-                    store = requireComponents.appStore,
-                ),
-                owner = viewLifecycleOwner,
-                view = binding.root
-            )
-        }
 
         if (requireContext().settings().showTopSitesFeature) {
             topSitesFeature.set(
@@ -285,11 +271,6 @@ class HomeFragment : Fragment() {
                 activity = activity,
                 settings = components.settings,
                 engine = components.core.engine,
-                messageController = DefaultMessageController(
-                    appStore = components.appStore,
-                    messagingStorage = components.analytics.messagingStorage,
-                    homeActivity = activity,
-                ),
                 store = store,
                 tabCollectionStorage = components.core.tabCollectionStorage,
                 addTabUseCase = components.useCases.tabsUseCases.addTab,
@@ -342,8 +323,6 @@ class HomeFragment : Fragment() {
         appBarLayout = binding.homeAppBar
 
         activity.themeManager.applyStatusBarTheme(activity)
-
-        FxNimbus.features.homescreen.recordExposure()
 
         displayWallpaperIfEnabled()
 

@@ -7,7 +7,6 @@ package net.waterfox.android.components.settings
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.ktx.android.content.PreferencesHolder
 import mozilla.components.support.ktx.android.content.booleanPreference
-import org.mozilla.experiments.nimbus.internal.NimbusFeatureException
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -32,7 +31,7 @@ private class LazyPreference(val key: String, val default: () -> Boolean) :
     override fun getValue(thisRef: PreferencesHolder, property: KProperty<*>): Boolean {
         val defValue = try {
             default()
-        } catch (e: NimbusFeatureException) {
+        } catch (e: Exception) {
             Logger.error("Failed fetch default value for $key", e)
             false
         }

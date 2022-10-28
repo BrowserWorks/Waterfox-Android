@@ -15,7 +15,6 @@ import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.shouldShowRecentTabs
-import net.waterfox.android.gleanplumb.Message
 import net.waterfox.android.home.Mode
 import net.waterfox.android.home.OnboardingState
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
@@ -34,7 +33,6 @@ internal fun normalModeAdapterItems(
     expandedCollections: Set<Long>,
     recentBookmarks: List<RecentBookmark>,
     showCollectionsPlaceholder: Boolean,
-    nimbusMessageCard: Message? = null,
     showRecentTab: Boolean,
     recentVisits: List<RecentlyVisitedItem>
 ): List<AdapterItem> {
@@ -43,10 +41,6 @@ internal fun normalModeAdapterItems(
 
     // Add a synchronous, unconditional and invisible placeholder so home is anchored to the top when created.
     items.add(AdapterItem.TopPlaceholderItem)
-
-    nimbusMessageCard?.let {
-        items.add(AdapterItem.NimbusMessageCard(it))
-    }
 
     if (settings.showTopSitesFeature && topSites.isNotEmpty()) {
         items.add(AdapterItem.TopSitePager(topSites))
@@ -147,7 +141,6 @@ private fun AppState.toAdapterList(settings: Settings): List<AdapterItem> = when
         expandedCollections,
         recentBookmarks,
         showCollectionPlaceholder,
-        messaging.messageToShow,
         shouldShowRecentTabs(settings),
         recentHistory
     )
