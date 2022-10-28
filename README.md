@@ -209,15 +209,6 @@ In order to build successfully, you need to check out a commit in the dependency
 
 If you're trying to build fenix with a local ac AND a local GV, you'll have to use another method: see [this doc](https://github.com/mozilla-mobile/fenix/blob/main/docs/substituting-local-ac-and-gv.md).
 
-### Using Nimbus servers during local development
-If you're working with the Nimbus experiments platform, by default for local development Fenix configures Nimbus to not use a server.
-
-If you wish to use a Nimbus server during local development, you can add a `https://` or `file://` endpoint to the `local.properties` file.
-
-- `nimbus.remote-settings.url`
-
-Testing experimental branches should be possible without a server.
-
 ### GeckoView
 Specify a relative path to your local `mozilla-central` checkout via `dependencySubstitutions.geckoviewTopsrcdir`,
 and optional a path to m-c object directory via `dependencySubstitutions.geckoviewTopobjdir`.

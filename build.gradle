@@ -70,9 +70,10 @@ buildscript {
         classpath Deps.androidx_safeargs
         classpath Deps.osslicenses_plugin
 
-        // TODO: [Waterfox] remove Glean and Nimbus
+        // TODO: [Waterfox] remove Glean
         classpath "org.mozilla.components:tooling-glean-gradle:${Versions.mozilla_android_components}"
-        classpath "org.mozilla.components:tooling-nimbus-gradle:${Versions.mozilla_android_components}"
+        // TODO: [Waterfox] remove Nimbus
+//        classpath "org.mozilla.components:tooling-nimbus-gradle:${Versions.mozilla_android_components}"
     }
 }
 

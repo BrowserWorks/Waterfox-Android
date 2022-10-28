@@ -36,12 +36,6 @@ class SecretSettingsFragment : PreferenceFragmentCompat() {
             }
         }
 
-        requirePreference<SwitchPreference>(R.string.pref_key_nimbus_use_preview).apply {
-            isVisible = true
-            isChecked = context.settings().nimbusUsePreview
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
         requirePreference<SwitchPreference>(R.string.pref_key_enable_task_continuity).apply {
             isVisible = true
             isChecked = context.settings().enableTaskContinuityEnhancements

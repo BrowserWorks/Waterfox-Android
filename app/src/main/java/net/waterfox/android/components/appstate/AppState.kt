@@ -16,7 +16,6 @@ import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
 import net.waterfox.android.library.history.PendingDeletionHistory
-import net.waterfox.android.gleanplumb.MessagingState
 import net.waterfox.android.wallpapers.WallpaperState
 
 /**
@@ -54,7 +53,6 @@ data class AppState(
     val recentSyncedTabState: RecentSyncedTabState = RecentSyncedTabState.None,
     val recentBookmarks: List<RecentBookmark> = emptyList(),
     val recentHistory: List<RecentlyVisitedItem> = emptyList(),
-    val messaging: MessagingState = MessagingState(),
     val pendingDeletionHistoryItems: Set<PendingDeletionHistory> = emptySet(),
     val wallpaperState: WallpaperState = WallpaperState.default
 ) : State

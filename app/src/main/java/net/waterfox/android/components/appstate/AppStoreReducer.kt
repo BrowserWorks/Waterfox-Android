@@ -7,7 +7,6 @@ package net.waterfox.android.components.appstate
 import androidx.annotation.VisibleForTesting
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.ext.filterOutTab
-import net.waterfox.android.gleanplumb.state.MessagingReducer
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem.RecentHistoryGroup
 
@@ -28,8 +27,6 @@ internal object AppStoreReducer {
             state.copy(nonFatalCrashes = state.nonFatalCrashes - action.crash)
         is AppAction.RemoveAllNonFatalCrashes ->
             state.copy(nonFatalCrashes = emptyList())
-
-        is AppAction.MessagingAction -> MessagingReducer.reduce(state, action)
 
         is AppAction.Change -> state.copy(
             collections = action.collections,

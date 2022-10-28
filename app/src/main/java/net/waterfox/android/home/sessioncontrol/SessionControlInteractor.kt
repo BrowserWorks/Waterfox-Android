@@ -8,7 +8,6 @@ import mozilla.components.feature.tab.collections.Tab
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import net.waterfox.android.browser.browsingmode.BrowsingMode
-import net.waterfox.android.gleanplumb.Message
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
 import net.waterfox.android.home.recentbookmarks.controller.RecentBookmarksController
 import net.waterfox.android.home.recentbookmarks.interactor.RecentBookmarksInteractor
@@ -217,18 +216,6 @@ interface TopSiteInteractor {
     fun onTopSiteMenuOpened()
 }
 
-interface MessageCardInteractor {
-    /**
-     * Called when a [Message]'s button is clicked
-     */
-    fun onMessageClicked(message: Message)
-
-    /**
-     * Called when close button on a [Message] card.
-     */
-    fun onMessageClosedClicked(message: Message)
-}
-
 /**
  * Interactor for the Home screen. Provides implementations for the CollectionInteractor,
  * OnboardingInteractor, TopSiteInteractor, TabSessionInteractor, ToolbarInteractor,
@@ -247,7 +234,6 @@ class SessionControlInteractor(
     TopSiteInteractor,
     TabSessionInteractor,
     ToolbarInteractor,
-    MessageCardInteractor,
     RecentTabInteractor,
     RecentSyncedTabInteractor,
     RecentBookmarksInteractor,
@@ -410,13 +396,5 @@ class SessionControlInteractor(
 
     override fun openCustomizeHomePage() {
         controller.handleCustomizeHomeTapped()
-    }
-
-    override fun onMessageClicked(message: Message) {
-        controller.handleMessageClicked(message)
-    }
-
-    override fun onMessageClosedClicked(message: Message) {
-        controller.handleMessageClosed(message)
     }
 }

@@ -507,14 +507,6 @@
             app:argType="string"
             app:nullable="true" />
         <action
-            android:id="@+id/action_settingsFragment_to_dataChoicesFragment"
-            app:destination="@id/dataChoicesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/settingsFragment" />
-        <action
             android:id="@+id/action_settingsFragment_to_sitePermissionsFragment"
             app:destination="@id/sitePermissionsFragment"
             app:enterAnim="@anim/slide_in_right"
@@ -580,13 +572,6 @@
         <action
             android:id="@+id/action_settingsFragment_to_secretInfoSettingsFragment"
             app:destination="@id/secretInfoSettingsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
-        <action
-            android:id="@+id/action_settingsFragment_to_nimbusExperimentsFragment"
-            app:destination="@id/nimbus_experiment_graph"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -711,23 +696,6 @@
         android:id="@+id/wallpaperSettingsFragment"
         android:name="net.waterfox.android.settings.wallpaper.WallpaperSettingsFragment"
         android:label="@string/customize_wallpapers"/>
-    <fragment
-        android:id="@+id/dataChoicesFragment"
-        android:name="net.waterfox.android.settings.DataChoicesFragment"
-        android:label="@string/preferences_data_choices">
-        <action
-            android:id="@+id/action_dataChoicesFragment_to_studiesFragment"
-            app:destination="@id/studiesFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/dataChoicesFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/studiesFragment"
-        android:name="net.waterfox.android.settings.studies.StudiesFragment"
-        android:label="@string/preference_experiments_2" />
     <fragment
         android:id="@+id/sitePermissionsFragment"
         android:name="net.waterfox.android.settings.sitepermissions.SitePermissionsFragment"
@@ -1187,39 +1155,6 @@
             <argument
                 android:name="searchEngineIdentifier"
                 app:argType="string" />
-        </fragment>
-    </navigation>
-
-    <navigation
-        android:id="@+id/nimbus_experiment_graph"
-        app:startDestination="@id/nimbusExperimentsFragment">
-        <fragment
-            android:id="@+id/nimbusExperimentsFragment"
-            android:name="net.waterfox.android.nimbus.NimbusExperimentsFragment"
-            android:label="@string/preferences_nimbus_experiments"
-            tools:layout="@layout/mozac_service_nimbus_experiments">
-            <action
-                android:id="@+id/action_nimbusExperimentsFragment_to_nimbusBranchesFragment"
-                app:destination="@+id/nimbusBranchesFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/nimbusBranchesFragment"
-            android:name="net.waterfox.android.nimbus.NimbusBranchesFragment"
-            tools:layout="@layout/mozac_service_nimbus_experiment_details">
-            <argument
-                android:name="experimentId"
-                app:argType="string" />
-            <argument
-                android:name="experimentName"
-                app:argType="string" />
-            <action
-                android:id="@+id/action_nimbusBranchesFragment_to_dataChoicesFragment"
-                app:destination="@id/dataChoicesFragment"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:popUpTo="@id/settingsFragment" />
         </fragment>
     </navigation>
 

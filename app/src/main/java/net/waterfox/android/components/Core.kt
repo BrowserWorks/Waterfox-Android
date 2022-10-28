@@ -76,7 +76,6 @@ import net.waterfox.android.historymetadata.DefaultHistoryMetadataService
 import net.waterfox.android.historymetadata.HistoryMetadataMiddleware
 import net.waterfox.android.historymetadata.HistoryMetadataService
 import net.waterfox.android.media.MediaSessionService
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.StrictModeManager
 import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.settings.SupportUtils
@@ -210,8 +209,6 @@ class Core(
      * The [BrowserStore] holds the global [BrowserState].
      */
     val store by lazyMonitored {
-        val tabsPrioritizationEnable =
-            FxNimbus.features.engineSettings.value().tabsPrioritizationEnabled
         val middlewareList =
             mutableListOf(
                 LastAccessMiddleware(),
@@ -230,11 +227,8 @@ class Core(
                 PromptMiddleware(),
                 LastMediaAccessMiddleware(),
                 HistoryMetadataMiddleware(historyMetadataService),
-            ) + if (tabsPrioritizationEnable) {
-                listOf(SessionPrioritizationMiddleware())
-            } else {
-                emptyList()
-            }
+                SessionPrioritizationMiddleware()
+            )
 
         BrowserStore(
             initialState = BrowserState(

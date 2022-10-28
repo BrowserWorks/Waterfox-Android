@@ -32,7 +32,6 @@ import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.support.base.facts.register
 import mozilla.components.support.base.log.Log
 import mozilla.components.support.base.log.logger.Logger
-import mozilla.components.support.base.observer.Observable
 import mozilla.components.support.ktx.android.content.isMainProcess
 import mozilla.components.support.ktx.android.content.runOnlyInMainProcess
 import mozilla.components.support.locale.LocaleAwareApplication
@@ -43,7 +42,6 @@ import mozilla.components.support.utils.logElapsedTime
 import mozilla.components.support.webextensions.WebExtensionSupport
 import net.waterfox.android.components.Components
 import net.waterfox.android.components.Core
-import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.ext.containsQueryParameters
 import net.waterfox.android.ext.settings
 import net.waterfox.android.perf.MarkersActivityLifecycleCallbacks
@@ -56,8 +54,6 @@ import net.waterfox.android.session.PerformanceActivityLifecycleCallbacks
 import net.waterfox.android.session.VisibilityLifecycleCallback
 import net.waterfox.android.utils.BrowsersCache
 import net.waterfox.android.utils.Settings.Companion.TOP_SITES_PROVIDER_MAX_THRESHOLD
-import org.mozilla.experiments.nimbus.NimbusInterface
-import org.mozilla.experiments.nimbus.internal.EnrolledExperiment
 import java.util.concurrent.TimeUnit
 
 /**
@@ -308,9 +304,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
     private fun setupMegazord(): Deferred<Unit> {
         // Note: Megazord.init() must be called as soon as possible ...
         Megazord.init()
-        // Give the generated FxNimbus a closure to lazily get the Nimbus object
-        // TODO: [Waterfox] remove Nimbus initialization
-//        FxNimbus.initialize { components.analytics.experiments }
         return GlobalScope.async(Dispatchers.IO) {
             initializeRustErrors(components.analytics.crashReporter)
             // ... but RustHttpConfig.setClient() and RustLog.enable() can be called later.
@@ -320,28 +313,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             // anymore.
             // (https://github.com/mozilla/application-services/issues/4981).
             RustLog.enable(components.analytics.crashReporter)
-            // We want to ensure Nimbus is initialized as early as possible so we can
-            // experiment on features close to startup.
-            // But we need viaduct (the RustHttp client) to be ready before we do.
-            components.analytics.experiments.apply {
-                initialize()
-                setupNimbusObserver(this)
-            }
-        }
-    }
-
-    private fun setupNimbusObserver(nimbus: Observable<NimbusInterface.Observer>) {
-        nimbus.register(object : NimbusInterface.Observer {
-            override fun onUpdatesApplied(updated: List<EnrolledExperiment>) {
-                onNimbusStartupAndUpdate()
-            }
-        })
-    }
-
-    private fun onNimbusStartupAndUpdate() {
-        val settings = settings()
-        if (FeatureFlags.messagingFeature && settings.isExperimentationEnabled) {
-            components.appStore.dispatch(AppAction.MessagingAction.Restore)
         }
     }
 

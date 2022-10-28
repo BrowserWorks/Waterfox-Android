@@ -87,7 +87,6 @@ import net.waterfox.android.settings.logins.fragment.LoginDetailFragmentDirectio
 import net.waterfox.android.settings.logins.fragment.SavedLoginsAuthFragmentDirections
 import net.waterfox.android.settings.search.AddSearchEngineFragmentDirections
 import net.waterfox.android.settings.search.EditCustomSearchEngineFragmentDirections
-import net.waterfox.android.settings.studies.StudiesFragmentDirections
 import net.waterfox.android.share.AddNewDeviceFragmentDirections
 import net.waterfox.android.tabstray.TabsTrayFragment
 import net.waterfox.android.tabstray.TabsTrayFragmentDirections
@@ -755,9 +754,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             TabsTrayFragmentDirections.actionGlobalBrowser(customTabSessionId)
         BrowserDirection.FromRecentlyClosed ->
             RecentlyClosedFragmentDirections.actionGlobalBrowser(customTabSessionId)
-        BrowserDirection.FromStudiesFragment -> StudiesFragmentDirections.actionGlobalBrowser(
-            customTabSessionId
-        )
     }
 
     /**

@@ -15,8 +15,6 @@ import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
 import net.waterfox.android.library.history.PendingDeletionHistory
-import net.waterfox.android.gleanplumb.Message
-import net.waterfox.android.gleanplumb.MessagingState
 import net.waterfox.android.wallpapers.Wallpaper
 
 /**
@@ -73,46 +71,6 @@ sealed class AppAction : Action {
      * Updates the [RecentSyncedTabState] with the given [state].
      */
     data class RecentSyncedTabStateChange(val state: RecentSyncedTabState) : AppAction()
-
-    /**
-     * [Action]s related to interactions with the Messaging Framework.
-     */
-    sealed class MessagingAction : AppAction() {
-        /**
-         * Restores the [Message] state from the storage.
-         */
-        object Restore : MessagingAction()
-
-        /**
-         * Evaluates if a new messages should be shown to users.
-         */
-        object Evaluate : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messageToShow] with the given [message].
-         */
-        data class UpdateMessageToShow(val message: Message) : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messageToShow] with the given [message].
-         */
-        object ConsumeMessageToShow : MessagingAction()
-
-        /**
-         * Updates [MessagingState.messages] with the given [messages].
-         */
-        data class UpdateMessages(val messages: List<Message>) : MessagingAction()
-
-        /**
-         * Indicates the given [message] was clicked.
-         */
-        data class MessageClicked(val message: Message) : MessagingAction()
-
-        /**
-         * Indicates the given [message] was dismissed.
-         */
-        data class MessageDismissed(val message: Message) : MessagingAction()
-    }
 
     /**
      * [Action]s related to interactions with the wallpapers feature.

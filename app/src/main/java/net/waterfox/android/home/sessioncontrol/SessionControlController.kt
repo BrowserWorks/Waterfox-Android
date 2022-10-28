@@ -39,8 +39,6 @@ import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.nav
 import net.waterfox.android.ext.settings
-import net.waterfox.android.gleanplumb.Message
-import net.waterfox.android.gleanplumb.MessageController
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.Mode
@@ -167,16 +165,6 @@ interface SessionControlController {
     fun handleMenuOpened()
 
     /**
-     * @see [MessageCardInteractor.onMessageClicked]
-     */
-    fun handleMessageClicked(message: Message)
-
-    /**
-     * @see [MessageCardInteractor.onMessageClosedClicked]
-     */
-    fun handleMessageClosed(message: Message)
-
-    /**
      * @see [TabSessionInteractor.onPrivateModeButtonClicked]
      */
     fun handlePrivateModeButtonClicked(newMode: BrowsingMode, userHasBeenOnboarded: Boolean)
@@ -197,7 +185,6 @@ class DefaultSessionControlController(
     private val activity: HomeActivity,
     private val settings: Settings,
     private val engine: Engine,
-    private val messageController: MessageController,
     private val store: BrowserStore,
     private val tabCollectionStorage: TabCollectionStorage,
     private val addTabUseCase: TabsUseCases.AddNewTabUseCase,
@@ -507,14 +494,6 @@ class DefaultSessionControlController(
             pastedText = clipboardText
         )
         navController.nav(R.id.homeFragment, directions)
-    }
-
-    override fun handleMessageClicked(message: Message) {
-        messageController.onMessagePressed(message)
-    }
-
-    override fun handleMessageClosed(message: Message) {
-        messageController.onMessageDismissed(message)
     }
 
     override fun handlePrivateModeButtonClicked(

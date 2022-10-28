@@ -40,7 +40,6 @@ import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.databinding.AmoCollectionOverrideDialogBinding
 import net.waterfox.android.ext.*
-import net.waterfox.android.nimbus.FxNimbus
 import net.waterfox.android.perf.ProfilerViewModel
 import net.waterfox.android.settings.account.AccountUiView
 import net.waterfox.android.utils.Settings
@@ -119,13 +118,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onResume() {
         super.onResume()
 
-        // Use nimbus to set the title, and a trivial addition
-        val nimbusValidation = FxNimbus.features.nimbusValidation.value()
-
-        val title = nimbusValidation.settingsTitle
-        val suffix = nimbusValidation.settingsPunctuation
-
-        showToolbar("$title$suffix")
+        showToolbar(getString(R.string.browser_menu_settings))
 
         // Account UI state is updated as part of `onCreate`. To not do it twice in a row, we only
         // update it here if we're not going through the `onCreate->onStart->onResume` lifecycle chain.
@@ -231,9 +224,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             resources.getString(R.string.pref_key_addons) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToAddonsFragment()
             }
-            resources.getString(R.string.pref_key_data_choices) -> {
-                SettingsFragmentDirections.actionSettingsFragmentToDataChoicesFragment()
-            }
             resources.getString(R.string.pref_key_help) -> {
                 (activity as HomeActivity).openToBrowserAndLoad(
                     searchTermOrURL = SupportUtils.getSumoURLForTopic(
@@ -309,9 +299,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
             resources.getString(R.string.pref_key_secret_debug_info) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToSecretInfoSettingsFragment()
-            }
-            resources.getString(R.string.pref_key_nimbus_experiments) -> {
-                SettingsFragmentDirections.actionSettingsFragmentToNimbusExperimentsFragment()
             }
             resources.getString(R.string.pref_key_override_amo_collection) -> {
                 val context = requireContext()
@@ -425,9 +412,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             findPreference<Preference>(getPreferenceKey(R.string.pref_key_start_profiler))
 
         with(requireContext().settings()) {
-            findPreference<Preference>(
-                getPreferenceKey(R.string.pref_key_nimbus_experiments)
-            )?.isVisible = showSecretDebugMenuThisSession
             findPreference<Preference>(
                 getPreferenceKey(R.string.pref_key_debug_settings)
             )?.isVisible = showSecretDebugMenuThisSession
