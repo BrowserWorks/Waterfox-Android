@@ -64,9 +64,6 @@ import mozilla.components.service.digitalassetlinks.local.StatementApi
 import mozilla.components.service.digitalassetlinks.local.StatementRelationChecker
 import mozilla.components.service.location.LocationService
 import mozilla.components.service.location.MozillaLocationService
-import mozilla.components.service.pocket.PocketStoriesConfig
-import mozilla.components.service.pocket.PocketStoriesService
-import mozilla.components.service.pocket.Profile
 import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStorage
 import mozilla.components.service.sync.logins.SyncableLoginsStorage
 import mozilla.components.support.base.worker.Frequency
@@ -347,19 +344,6 @@ class Core(
 
     val pinnedSiteStorage by lazyMonitored { PinnedSiteStorage(context) }
 
-    @Suppress("MagicNumber")
-    val pocketStoriesConfig by lazyMonitored {
-        PocketStoriesConfig(
-            client,
-            Frequency(4, TimeUnit.HOURS),
-            Profile(
-                profileId = UUID.fromString(context.settings().pocketSponsoredStoriesProfileId),
-                appId = BuildConfig.POCKET_CONSUMER_KEY
-            )
-        )
-    }
-    val pocketStoriesService by lazyMonitored { PocketStoriesService(context, pocketStoriesConfig) }
-
     val contileTopSitesProvider by lazyMonitored {
         ContileTopSitesProvider(
             context = context,
@@ -425,15 +409,6 @@ class Core(
                     //         SupportUtils.GOOGLE_URL
                     //     )
                     // )
-
-                    // if (LocaleManager.getSelectedLocale(context).language == "en") {
-                    //     defaultTopSites.add(
-                    //         Pair(
-                    //             context.getString(R.string.pocket_pinned_top_articles),
-                    //             SupportUtils.POCKET_TRENDING_URL
-                    //         )
-                    //     )
-                    // }
 
                     defaultTopSites.add(
                         Pair(

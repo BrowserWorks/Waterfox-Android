@@ -193,7 +193,7 @@ class HistoryMetadataGroupControllerTest {
         val abnormalList = listOf(
             mozillaHistoryMetadataItem,
             waterfoxHistoryMetadataItem,
-            mozillaHistoryMetadataItem.copy(title = "Pocket", url = "https://getpocket.com"),
+            mozillaHistoryMetadataItem.copy(title = "Baidu", url = "https://www.baidu.com/"),
             mozillaHistoryMetadataItem.copy(title = "BBC", url = "https://www.bbc.com/"),
             mozillaHistoryMetadataItem.copy(
                 title = "Stackoverflow",

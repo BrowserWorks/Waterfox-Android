@@ -340,20 +340,6 @@ android.applicationVariants.all { variant ->
         println("--")
     }
 
-// -------------------------------------------------------------------------------------------------
-// BuildConfig: Set the Pocket consumer key from a local file if it exists
-// -------------------------------------------------------------------------------------------------
-
-    print("Pocket consumer key: ")
-
-    try {
-        def token = new File("${rootDir}/.pocket_consumer_key").text.trim()
-        buildConfigField 'String', 'POCKET_CONSUMER_KEY', '"' + token + '"'
-        println "(Added from .pocket_consumer_key file)"
-    } catch (FileNotFoundException ignored) {
-        buildConfigField 'String', 'POCKET_CONSUMER_KEY', '""'
-        println("--")
-    }
 }
 
 // TODO: [Waterfox] remove Glean plugin
@@ -488,7 +474,6 @@ dependencies {
     implementation Deps.mozilla_feature_webnotifications
     implementation Deps.mozilla_feature_webcompat_reporter
 
-    implementation Deps.mozilla_service_pocket
     implementation Deps.mozilla_service_contile
     implementation Deps.mozilla_service_digitalassetlinks
     implementation Deps.mozilla_service_sync_autofill

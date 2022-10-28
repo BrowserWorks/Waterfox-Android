@@ -28,13 +28,11 @@ import net.waterfox.android.autofill.AutofillConfirmActivity
 import net.waterfox.android.autofill.AutofillSearchActivity
 import net.waterfox.android.autofill.AutofillUnlockActivity
 import net.waterfox.android.components.appstate.AppState
-import net.waterfox.android.datastore.pocketStoriesSelectedCategoriesDataStore
 import net.waterfox.android.ext.asRecentTabs
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.filterState
 import net.waterfox.android.gleanplumb.state.MessagingMiddleware
 import net.waterfox.android.ext.sort
-import net.waterfox.android.home.PocketUpdatesMiddleware
 import net.waterfox.android.home.blocklist.BlocklistHandler
 import net.waterfox.android.home.blocklist.BlocklistMiddleware
 import net.waterfox.android.perf.AppStartReasonProvider
@@ -213,10 +211,6 @@ class Components(private val context: Context) {
             ).run { filterState(blocklistHandler) },
             middlewares = listOf(
                 BlocklistMiddleware(blocklistHandler),
-                PocketUpdatesMiddleware(
-                    core.pocketStoriesService,
-                    context.pocketStoriesSelectedCategoriesDataStore
-                ),
                 MessagingMiddleware(messagingStorage = analytics.messagingStorage)
             )
         )

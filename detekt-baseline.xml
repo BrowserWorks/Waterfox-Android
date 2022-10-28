@@ -384,9 +384,6 @@
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$OnboardingThemePicker : AdapterItem</ID>
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$OnboardingToolbarPositionPicker : AdapterItem</ID>
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$OnboardingTrackingProtection : AdapterItem</ID>
-    <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$PocketCategoriesItem : AdapterItem</ID>
-    <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$PocketRecommendationsFooterItem : AdapterItem</ID>
-    <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$PocketStoriesItem : AdapterItem</ID>
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$PrivateBrowsingDescription : AdapterItem</ID>
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$RecentBookmarks : AdapterItem</ID>
     <ID>UndocumentedPublicClass:SessionControlAdapter.kt$AdapterItem$RecentBookmarksHeader : AdapterItem</ID>
@@ -813,8 +810,6 @@
     <ID>UndocumentedPublicFunction:PhoneFeature.kt$PhoneFeature$fun getStatus( sitePermissions: SitePermissions? = null, settings: Settings? = null ): SitePermissions.Status</ID>
     <ID>UndocumentedPublicFunction:PhoneFeature.kt$PhoneFeature$fun isAndroidPermissionGranted(context: Context): Boolean</ID>
     <ID>UndocumentedPublicFunction:PhoneFeature.kt$PhoneFeature.Companion$fun findFeatureBy(permissions: Array&lt;out String&gt;): PhoneFeature?</ID>
-    <ID>UndocumentedPublicFunction:PocketRecommendationsHeaderViewHolder.kt$@Composable @Preview fun PocketRecommendationsFooterViewHolderPreview()</ID>
-    <ID>UndocumentedPublicFunction:PocketStoriesViewHolder.kt$@Composable @Preview fun PocketStoriesViewHolderPreview()</ID>
     <ID>UndocumentedPublicFunction:PrivacyContentDisplayHelper.kt$fun showPrivacyPopWindow(context: Context, activity: Activity)</ID>
     <ID>UndocumentedPublicFunction:PrivateShortcutCreateManager.kt$PrivateShortcutCreateManager$fun createPrivateShortcut(context: Context)</ID>
     <ID>UndocumentedPublicFunction:ProfilerMarkerFactProcessor.kt$ProfilerMarkerFactProcessor.Companion$fun create(profilerProvider: () -&gt; Profiler?)</ID>

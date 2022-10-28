@@ -64,7 +64,6 @@ class SearchTest {
             start()
         }
         featureSettingsHelper.setJumpBackCFREnabled(false)
-        featureSettingsHelper.setPocketEnabled(false)
     }
 
     @After

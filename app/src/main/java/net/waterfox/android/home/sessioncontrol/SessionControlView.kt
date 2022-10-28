@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.service.pocket.PocketStory
 import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
@@ -37,8 +36,7 @@ internal fun normalModeAdapterItems(
     showCollectionsPlaceholder: Boolean,
     nimbusMessageCard: Message? = null,
     showRecentTab: Boolean,
-    recentVisits: List<RecentlyVisitedItem>,
-    pocketStories: List<PocketStory>
+    recentVisits: List<RecentlyVisitedItem>
 ): List<AdapterItem> {
     val items = mutableListOf<AdapterItem>()
     var shouldShowCustomizeHome = false
@@ -78,13 +76,6 @@ internal fun normalModeAdapterItems(
         }
     } else {
         showCollections(collections, expandedCollections, items)
-    }
-
-    if (settings.showPocketRecommendationsFeature && pocketStories.isNotEmpty()) {
-        shouldShowCustomizeHome = true
-        items.add(AdapterItem.PocketStoriesItem)
-        items.add(AdapterItem.PocketCategoriesItem)
-        items.add(AdapterItem.PocketRecommendationsFooterItem)
     }
 
     if (shouldShowCustomizeHome) {
@@ -158,8 +149,7 @@ private fun AppState.toAdapterList(settings: Settings): List<AdapterItem> = when
         showCollectionPlaceholder,
         messaging.messageToShow,
         shouldShowRecentTabs(settings),
-        recentHistory,
-        pocketStories
+        recentHistory
     )
     is Mode.Private -> privateModeAdapterItems()
     is Mode.Onboarding -> onboardingAdapterItems(mode.state)
@@ -168,7 +158,7 @@ private fun AppState.toAdapterList(settings: Settings): List<AdapterItem> = when
 @VisibleForTesting
 internal fun AppState.shouldShowHomeOnboardingDialog(settings: Settings): Boolean {
     val isAnySectionsVisible = recentTabs.isNotEmpty() || recentBookmarks.isNotEmpty() ||
-        recentHistory.isNotEmpty() || pocketStories.isNotEmpty()
+        recentHistory.isNotEmpty()
     return isAnySectionsVisible && !settings.hasShownHomeOnboardingDialog
 }
 

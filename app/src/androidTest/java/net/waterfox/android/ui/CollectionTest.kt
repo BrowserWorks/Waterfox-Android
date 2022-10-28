@@ -48,7 +48,6 @@ class CollectionTest {
         // disabling these features to have better visibility of Collections,
         // and to avoid multiple matches on tab items
         featureSettingsHelper.setRecentTabsFeatureEnabled(false)
-        featureSettingsHelper.setPocketEnabled(false)
         featureSettingsHelper.setJumpBackCFREnabled(false)
         featureSettingsHelper.setRecentlyVisitedFeatureEnabled(false)
 

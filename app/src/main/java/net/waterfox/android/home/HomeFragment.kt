@@ -81,8 +81,6 @@ import net.waterfox.android.ext.*
 import net.waterfox.android.gleanplumb.DefaultMessageController
 import net.waterfox.android.gleanplumb.MessagingFeature
 import net.waterfox.android.home.mozonline.showPrivacyPopWindow
-import net.waterfox.android.home.pocket.DefaultPocketStoriesController
-import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
 import net.waterfox.android.home.recentbookmarks.RecentBookmarksFeature
 import net.waterfox.android.home.recentbookmarks.controller.DefaultRecentBookmarksController
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabFeature
@@ -204,26 +202,6 @@ class HomeFragment : Fragment() {
         )
 
         components.appStore.dispatch(AppAction.ModeChange(currentMode.getCurrentMode()))
-
-        lifecycleScope.launch(IO) {
-            if (requireContext().settings().showPocketRecommendationsFeature) {
-                val categories = components.core.pocketStoriesService.getStories()
-                    .groupBy { story -> story.category }
-                    .map { (category, stories) -> PocketRecommendedStoriesCategory(category, stories) }
-
-                components.appStore.dispatch(AppAction.PocketStoriesCategoriesChange(categories))
-
-                if (requireContext().settings().showPocketSponsoredStories) {
-                    components.appStore.dispatch(
-                        AppAction.PocketSponsoredStoriesChange(
-                            components.core.pocketStoriesService.getSponsoredStories()
-                        )
-                    )
-                }
-            } else {
-                components.appStore.dispatch(AppAction.PocketStoriesClean)
-            }
-        }
 
         if (requireContext().settings().isExperimentationEnabled) {
             messagingFeature.set(
@@ -349,11 +327,6 @@ class HomeFragment : Fragment() {
                 storage = components.core.historyStorage,
                 scope = viewLifecycleOwner.lifecycleScope,
                 store = components.core.store,
-            ),
-            pocketStoriesController = DefaultPocketStoriesController(
-                homeActivity = activity,
-                appStore = components.appStore,
-                navController = findNavController(),
             )
         )
 
@@ -782,8 +755,8 @@ class HomeFragment : Fragment() {
     }
 
     // To try to find a good time to show the logo animation, we are waiting until all
-    // the sub-recyclerviews (recentBookmarks, collections, recentTabs,recentVisits
-    // and pocketStories) on the home screen have been layout.
+    // the sub-recyclerviews (recentBookmarks, collections, recentTabs and recentVisits)
+    // on the home screen have been layout.
     private val homeLayoutListenerForLogoAnimation = object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
             _binding?.let { safeBindings ->

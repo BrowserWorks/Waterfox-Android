@@ -1214,33 +1214,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     )
 
     /**
-     * Indicates if the Pocket recommended stories homescreen section should be shown.
-     */
-    var showPocketRecommendationsFeature by lazyFeatureFlagPreference(
-        appContext.getPreferenceKey(R.string.pref_key_pocket_homescreen_recommendations),
-        featureFlag = FeatureFlags.isPocketRecommendationsFeatureEnabled(appContext),
-        default = { homescreenSections[HomeScreenSection.POCKET] == true },
-    )
-
-    /**
-     * Indicates if the Pocket recommendations homescreen section should also show sponsored stories.
-     */
-    val showPocketSponsoredStories by lazyFeatureFlagPreference(
-        key = appContext.getPreferenceKey(R.string.pref_key_pocket_sponsored_stories),
-        default = { FxNimbus.features.pocketSponsoredStories.value(appContext).enabled },
-        featureFlag = FeatureFlags.isPocketSponsoredStoriesFeatureEnabled(appContext)
-    )
-
-    /**
-     * Get the profile id to use in the sponsored stories communications with the Pocket endpoint.
-     */
-    val pocketSponsoredStoriesProfileId by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_pocket_sponsored_stories_profile),
-        default = UUID.randomUUID().toString(),
-        persistDefaultIfNotExists = true
-    )
-
-    /**
      * Indicates if the Contile functionality should be visible.
      */
     var showContileFeature by lazyFeatureFlagPreference(

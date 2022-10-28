@@ -32,7 +32,7 @@ class ExtensionsTest {
         val components: Components = mockk(relaxed = true)
         every { components.core.store } returns store
 
-        components.tryReloadTabBy("https://www.getpocket.com".getOrigin()!!)
+        components.tryReloadTabBy("https://www.baidu.com/".getOrigin()!!)
         verify(exactly = 0) { components.useCases.sessionUseCases.reload(any()) }
 
         components.tryReloadTabBy("https://www.mozilla.org".getOrigin()!!)

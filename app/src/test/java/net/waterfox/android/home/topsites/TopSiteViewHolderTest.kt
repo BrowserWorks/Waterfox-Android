@@ -37,8 +37,8 @@ class TopSiteViewHolderTest {
             listOf(
                 TopSite.Default(
                     id = 1L,
-                    title = "Pocket",
-                    url = "https://getpocket.com",
+                    title = "Baidu",
+                    url = "https://www.baidu.com/",
                     createdAt = 0
                 )
             )

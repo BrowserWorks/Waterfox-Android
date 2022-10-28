@@ -88,7 +88,7 @@ class AppRequestInterceptorTest {
         val result = interceptor.onLoadRequest(
             engineSession = mockk(),
             uri = "https://addons.mozilla.org/android/downloads/file/12345678/test.xpi",
-            lastUri = "https://getpocket.com",
+            lastUri = "https://www.baidu.com/",
             hasUserGesture = true,
             isSameDomain = false,
             isDirectNavigation = false,

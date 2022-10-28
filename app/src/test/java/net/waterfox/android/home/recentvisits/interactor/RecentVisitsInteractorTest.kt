@@ -11,7 +11,6 @@ import mozilla.components.concept.storage.HistoryMetadata
 import mozilla.components.concept.storage.HistoryMetadataKey
 import org.junit.Before
 import org.junit.Test
-import net.waterfox.android.home.pocket.PocketStoriesController
 import net.waterfox.android.home.recentbookmarks.controller.RecentBookmarksController
 import net.waterfox.android.home.recentsyncedtabs.controller.RecentSyncedTabController
 import net.waterfox.android.home.recenttabs.controller.RecentTabController
@@ -27,7 +26,6 @@ class RecentVisitsInteractorTest {
     private val recentTabController: RecentTabController = mockk(relaxed = true)
     private val recentSyncedTabController: RecentSyncedTabController = mockk(relaxed = true)
     private val recentBookmarksController: RecentBookmarksController = mockk(relaxed = true)
-    private val pocketStoriesController: PocketStoriesController = mockk(relaxed = true)
     private val recentVisitsController: RecentVisitsController = mockk(relaxed = true)
 
     private lateinit var interactor: SessionControlInteractor
@@ -39,8 +37,7 @@ class RecentVisitsInteractorTest {
             recentTabController,
             recentSyncedTabController,
             recentBookmarksController,
-            recentVisitsController,
-            pocketStoriesController
+            recentVisitsController
         )
     }
 

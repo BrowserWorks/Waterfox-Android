@@ -92,9 +92,6 @@ class TopSiteItemViewHolder(
             }
         } else {
             when (topSite.url) {
-                SupportUtils.POCKET_TRENDING_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_pocket))
-                }
                 SupportUtils.BAIDU_URL -> {
                     binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_baidu))
                 }

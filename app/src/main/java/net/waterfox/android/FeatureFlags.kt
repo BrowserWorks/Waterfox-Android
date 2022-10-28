@@ -52,21 +52,6 @@ object FeatureFlags {
     val tabReorderingFeature = Config.channel.isDebug
 
     /**
-     * Show Pocket recommended stories on home.
-     */
-    @Suppress("UNUSED_PARAMETER")
-    fun isPocketRecommendationsFeatureEnabled(context: Context): Boolean {
-        return false
-    }
-
-    /**
-     * Show Pocket sponsored stories in between Pocket recommended stories on home.
-     */
-    fun isPocketSponsoredStoriesFeatureEnabled(context: Context): Boolean {
-        return isPocketRecommendationsFeatureEnabled(context) && Config.channel.isDebug
-    }
-
-    /**
      * Enables showing the homescreen onboarding card.
      */
     const val showHomeOnboarding = false

@@ -7,22 +7,15 @@ package net.waterfox.android.components
 import android.content.Context
 import io.mockk.every
 import io.mockk.mockk
-import io.mockk.mockkStatic
-import io.mockk.verify
 import kotlinx.coroutines.test.runTest
 import mozilla.components.concept.sync.DeviceType
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.fxa.manager.FxaAccountManager
-import mozilla.components.service.pocket.PocketStory
-import mozilla.components.service.pocket.PocketStory.PocketRecommendedStory
-import mozilla.components.service.pocket.PocketStory.PocketSponsoredStory
-import mozilla.components.service.pocket.PocketStory.PocketSponsoredStoryCaps
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
-import org.junit.Assert.assertSame
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -33,11 +26,8 @@ import net.waterfox.android.components.appstate.AppAction.MessagingAction.Update
 import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.components.appstate.filterOut
 import net.waterfox.android.ext.components
-import net.waterfox.android.ext.getFilteredStories
 import net.waterfox.android.home.CurrentMode
 import net.waterfox.android.home.Mode
-import net.waterfox.android.home.pocket.PocketRecommendedStoriesCategory
-import net.waterfox.android.home.pocket.PocketRecommendedStoriesSelectedCategory
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
@@ -283,215 +273,6 @@ class AppStoreTest {
             assertEquals(listOf(group1, group2, group3, highlight), appStore.state.recentHistory)
             assertEquals(Mode.Private, appStore.state.mode)
         }
-
-    @Test
-    fun `Test selecting a Pocket recommendations category`() = runTest {
-        val otherStoriesCategory = PocketRecommendedStoriesCategory("other")
-        val anotherStoriesCategory = PocketRecommendedStoriesCategory("another")
-        val filteredStories = listOf(mockk<PocketStory>())
-        appStore = AppStore(
-            AppState(
-                pocketStoriesCategories = listOf(otherStoriesCategory, anotherStoriesCategory),
-                pocketStoriesCategoriesSelections = listOf(
-                    PocketRecommendedStoriesSelectedCategory(otherStoriesCategory.name),
-                )
-            )
-        )
-
-        mockkStatic("net.waterfox.android.ext.AppStateKt") {
-            every { any<AppState>().getFilteredStories() } returns filteredStories
-
-            appStore.dispatch(AppAction.SelectPocketStoriesCategory("another")).join()
-
-            verify { any<AppState>().getFilteredStories() }
-        }
-
-        val selectedCategories = appStore.state.pocketStoriesCategoriesSelections
-        assertEquals(2, selectedCategories.size)
-        assertTrue(otherStoriesCategory.name === selectedCategories[0].name)
-        assertSame(filteredStories, appStore.state.pocketStories)
-    }
-
-    @Test
-    fun `Test deselecting a Pocket recommendations category`() = runTest {
-        val otherStoriesCategory = PocketRecommendedStoriesCategory("other")
-        val anotherStoriesCategory = PocketRecommendedStoriesCategory("another")
-        val filteredStories = listOf(mockk<PocketStory>())
-        appStore = AppStore(
-            AppState(
-                pocketStoriesCategories = listOf(otherStoriesCategory, anotherStoriesCategory),
-                pocketStoriesCategoriesSelections = listOf(
-                    PocketRecommendedStoriesSelectedCategory(otherStoriesCategory.name),
-                    PocketRecommendedStoriesSelectedCategory(anotherStoriesCategory.name)
-                )
-            )
-        )
-
-        mockkStatic("net.waterfox.android.ext.AppStateKt") {
-            every { any<AppState>().getFilteredStories() } returns filteredStories
-
-            appStore.dispatch(AppAction.DeselectPocketStoriesCategory("other")).join()
-
-            verify { any<AppState>().getFilteredStories() }
-        }
-
-        val selectedCategories = appStore.state.pocketStoriesCategoriesSelections
-        assertEquals(1, selectedCategories.size)
-        assertTrue(anotherStoriesCategory.name === selectedCategories[0].name)
-        assertSame(filteredStories, appStore.state.pocketStories)
-    }
-
-    @Test
-    fun `Test cleaning the list of Pocket stories`() = runTest {
-        appStore = AppStore(
-            AppState(
-                pocketStoriesCategories = listOf(mockk()),
-                pocketStoriesCategoriesSelections = listOf(mockk()),
-                pocketStories = listOf(mockk()),
-                pocketSponsoredStories = listOf(mockk())
-            )
-        )
-
-        appStore.dispatch(AppAction.PocketStoriesClean)
-            .join()
-
-        assertTrue(appStore.state.pocketStoriesCategories.isEmpty())
-        assertTrue(appStore.state.pocketStoriesCategoriesSelections.isEmpty())
-        assertTrue(appStore.state.pocketStories.isEmpty())
-        assertTrue(appStore.state.pocketSponsoredStories.isEmpty())
-    }
-
-    @Test
-    fun `Test updating the list of Pocket sponsored stories also updates the list of stories to show`() = runTest {
-        val story1 = PocketSponsoredStory(
-            id = 3,
-            title = "title",
-            url = "url",
-            imageUrl = "imageUrl",
-            sponsor = "sponsor",
-            shim = mockk(),
-            priority = 33,
-            caps = mockk(),
-        )
-        val story2 = story1.copy(imageUrl = "imageUrl2")
-
-        appStore = AppStore(AppState())
-
-        mockkStatic("net.waterfox.android.ext.AppStateKt") {
-            val firstFilteredStories = listOf(mockk<PocketSponsoredStory>())
-            every { any<AppState>().getFilteredStories() } returns firstFilteredStories
-            appStore.dispatch(AppAction.PocketSponsoredStoriesChange(listOf(story1, story2))).join()
-            assertTrue(appStore.state.pocketSponsoredStories.containsAll(listOf(story1, story2)))
-            assertEquals(firstFilteredStories, appStore.state.pocketStories)
-
-            val secondFilteredStories = firstFilteredStories + mockk<PocketRecommendedStory>()
-            every { any<AppState>().getFilteredStories() } returns secondFilteredStories
-            val updatedStories = listOf(story2.copy(title = "title3"))
-            appStore.dispatch(AppAction.PocketSponsoredStoriesChange(updatedStories)).join()
-            assertTrue(updatedStories.containsAll(appStore.state.pocketSponsoredStories))
-            assertEquals(secondFilteredStories, appStore.state.pocketStories)
-        }
-    }
-
-    @Test
-    fun `Test updating sponsored Pocket stories after being shown to the user`() = runTest {
-        val story1 = PocketSponsoredStory(
-            id = 3,
-            title = "title",
-            url = "url",
-            imageUrl = "imageUrl",
-            sponsor = "sponsor",
-            shim = mockk(),
-            priority = 33,
-            caps = PocketSponsoredStoryCaps(
-                currentImpressions = listOf(1, 2),
-                lifetimeCount = 11,
-                flightCount = 2,
-                flightPeriod = 11
-            ),
-        )
-        val story2 = story1.copy(id = 22)
-        val story3 = story1.copy(id = 33)
-        val story4 = story1.copy(id = 44)
-        appStore = AppStore(
-            AppState(
-                pocketSponsoredStories = listOf(story1, story2, story3, story4)
-            )
-        )
-
-        appStore.dispatch(AppAction.PocketStoriesShown(listOf(story1, story3))).join()
-
-        assertEquals(4, appStore.state.pocketSponsoredStories.size)
-        assertEquals(3, appStore.state.pocketSponsoredStories[0].caps.currentImpressions.size)
-        assertEquals(2, appStore.state.pocketSponsoredStories[1].caps.currentImpressions.size)
-        assertEquals(3, appStore.state.pocketSponsoredStories[2].caps.currentImpressions.size)
-        assertEquals(2, appStore.state.pocketSponsoredStories[3].caps.currentImpressions.size)
-    }
-
-    @Test
-    fun `Test updating the list of Pocket recommendations categories`() = runTest {
-        val otherStoriesCategory = PocketRecommendedStoriesCategory("other")
-        val anotherStoriesCategory = PocketRecommendedStoriesCategory("another")
-        appStore = AppStore(AppState())
-
-        mockkStatic("net.waterfox.android.ext.AppStateKt") {
-            val firstFilteredStories = listOf(mockk<PocketStory>())
-            every { any<AppState>().getFilteredStories() } returns firstFilteredStories
-
-            appStore.dispatch(
-                AppAction.PocketStoriesCategoriesChange(listOf(otherStoriesCategory, anotherStoriesCategory))
-            ).join()
-            verify { any<AppState>().getFilteredStories() }
-            assertTrue(
-                appStore.state.pocketStoriesCategories.containsAll(
-                    listOf(otherStoriesCategory, anotherStoriesCategory)
-                )
-            )
-            assertSame(firstFilteredStories, appStore.state.pocketStories)
-
-            val updatedCategories = listOf(PocketRecommendedStoriesCategory("yetAnother"))
-            val secondFilteredStories = listOf(mockk<PocketStory>())
-            every { any<AppState>().getFilteredStories() } returns secondFilteredStories
-            appStore.dispatch(
-                AppAction.PocketStoriesCategoriesChange(
-                    updatedCategories
-                )
-            ).join()
-            verify(exactly = 2) { any<AppState>().getFilteredStories() }
-            assertTrue(updatedCategories.containsAll(appStore.state.pocketStoriesCategories))
-            assertSame(secondFilteredStories, appStore.state.pocketStories)
-        }
-    }
-
-    @Test
-    fun `Test updating the list of selected Pocket recommendations categories`() = runTest {
-        val otherStoriesCategory = PocketRecommendedStoriesCategory("other")
-        val anotherStoriesCategory = PocketRecommendedStoriesCategory("another")
-        val selectedCategory = PocketRecommendedStoriesSelectedCategory("selected")
-        appStore = AppStore(AppState())
-
-        mockkStatic("net.waterfox.android.ext.AppStateKt") {
-            val firstFilteredStories = listOf(mockk<PocketStory>())
-            every { any<AppState>().getFilteredStories() } returns firstFilteredStories
-
-            appStore.dispatch(
-                AppAction.PocketStoriesCategoriesSelectionsChange(
-                    storiesCategories = listOf(otherStoriesCategory, anotherStoriesCategory),
-                    categoriesSelected = listOf(selectedCategory)
-                )
-            ).join()
-            verify { any<AppState>().getFilteredStories() }
-            assertTrue(
-                appStore.state.pocketStoriesCategories.containsAll(
-                    listOf(otherStoriesCategory, anotherStoriesCategory)
-                )
-            )
-            assertTrue(
-                appStore.state.pocketStoriesCategoriesSelections.containsAll(listOf(selectedCategory))
-            )
-            assertSame(firstFilteredStories, appStore.state.pocketStories)
-        }
-    }
 
     @Test
     fun `Test filtering out search groups`() {

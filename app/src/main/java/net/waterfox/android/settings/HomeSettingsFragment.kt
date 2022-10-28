@@ -12,8 +12,6 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
-import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
 import net.waterfox.android.utils.view.addToRadioGroup
@@ -50,33 +48,6 @@ class HomeSettingsFragment : PreferenceFragmentCompat() {
         requirePreference<SwitchPreference>(R.string.pref_key_recent_bookmarks).apply {
             isVisible = FeatureFlags.recentBookmarksFeature
             isChecked = context.settings().showRecentBookmarksFeature
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_pocket_homescreen_recommendations).apply {
-            isVisible = FeatureFlags.isPocketRecommendationsFeatureEnabled(context)
-            isChecked = context.settings().showPocketRecommendationsFeature
-        }
-
-        requirePreference<CheckBoxPreference>(R.string.pref_key_pocket_sponsored_stories).apply {
-            isVisible = FeatureFlags.isPocketSponsoredStoriesFeatureEnabled(context)
-            isChecked = context.settings().showPocketSponsoredStories
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    when (newValue) {
-                        true -> {
-                            context.components.core.pocketStoriesService.startPeriodicSponsoredStoriesRefresh()
-                        }
-                        false -> {
-                            context.components.core.pocketStoriesService.deleteProfile()
-                            context.components.appStore.dispatch(
-                                AppAction.PocketSponsoredStoriesChange(emptyList())
-                            )
-                        }
-                    }
-
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_history_metadata_feature).apply {
