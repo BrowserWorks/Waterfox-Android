@@ -178,10 +178,6 @@ class SettingsPrivacyTest {
 
             // DATA COLLECTION
             verifyDataCollectionButton()
-        }.openSettingsSubMenuDataCollection {
-            verifyNavigationToolBarHeader()
-            verifyDataCollectionSubMenuItems()
-        }.goBack {
         }.goBack {
             verifyHomeComponent()
         }

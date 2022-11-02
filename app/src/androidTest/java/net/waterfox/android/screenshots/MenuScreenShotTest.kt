@@ -104,9 +104,6 @@ class MenuScreenShotTest : ScreenshotTest() {
         }.goBack {
             swipeToBottom()
             Screengrab.screenshot("SettingsRobot_settings-scroll-to-bottom")
-        }.openSettingsSubMenuDataCollection {
-            Screengrab.screenshot("settings-telemetry")
-        }.goBack {
         }.openAddonsManagerMenu {
             Screengrab.screenshot("settings-addons")
         }

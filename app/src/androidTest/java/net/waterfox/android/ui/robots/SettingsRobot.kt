@@ -279,15 +279,6 @@ class SettingsRobot {
             return SystemSettingsRobot.Transition()
         }
 
-        fun openSettingsSubMenuDataCollection(interact: SettingsSubMenuDataCollectionRobot.() -> Unit): SettingsSubMenuDataCollectionRobot.Transition {
-            scrollToElementByText("Data collection")
-            fun dataCollectionButton() = mDevice.findObject(textContains("Data collection"))
-            dataCollectionButton().click()
-
-            SettingsSubMenuDataCollectionRobot().interact()
-            return SettingsSubMenuDataCollectionRobot.Transition()
-        }
-
         fun openAddonsManagerMenu(interact: SettingsSubMenuAddonsManagerRobot.() -> Unit): SettingsSubMenuAddonsManagerRobot.Transition {
             addonsManagerButton().click()
 

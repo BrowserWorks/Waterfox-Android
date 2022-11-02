@@ -250,8 +250,6 @@ object Deps {
 
     // TODO: [Waterfox] remove Glean dependency
     const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
-    // TODO: [Waterfox] remove Nimbus dependency
-//    const val mozilla_service_nimbus = "org.mozilla.components:service-nimbus:${Versions.mozilla_android_components}"
 }
 
 /**

@@ -35,7 +35,7 @@ import net.waterfox.android.helpers.HomeActivityTestRule
  *
  * Say no to main thread IO! 🙅
  */
-private const val EXPECTED_SUPPRESSION_COUNT = 16
+private const val EXPECTED_SUPPRESSION_COUNT = 15
 
 /**
  * The number of times we call the `runBlocking` coroutine method on the main thread during this
