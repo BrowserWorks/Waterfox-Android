@@ -1204,7 +1204,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var showUnifiedSearchFeature by lazyFeatureFlagPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_show_unified_search),
-        default = { true },
+        default = { false },
         featureFlag = FeatureFlags.unifiedSearchFeature
     )
 
