@@ -354,8 +354,6 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 dependencies {
     // TODO: [Waterfox] remove Glean dependency
     implementation(Deps.mozilla_service_glean)
-    // TODO: [Waterfox] remove Nimbus dependency
-//    implementation Deps.mozilla_service_nimbus
 
     jnaForTest Deps.jna
     testImplementation files(configurations.jnaForTest.copyRecursive().files)

@@ -5,7 +5,6 @@ import net.waterfox.android.gradle.tasks.GithubDetailsTask
 buildscript {
     // This logic is duplicated in the allprojects block: I don't know how to fix that.
     repositories {
-        // TODO: [Waterfox] remove when we no longer depend on Nimbus
         maven {
             name "Mozilla Nightly"
             url "https://nightly.maven.mozilla.org/maven2"
@@ -72,8 +71,6 @@ buildscript {
 
         // TODO: [Waterfox] remove Glean
         classpath "org.mozilla.components:tooling-glean-gradle:${Versions.mozilla_android_components}"
-        // TODO: [Waterfox] remove Nimbus
-//        classpath "org.mozilla.components:tooling-nimbus-gradle:${Versions.mozilla_android_components}"
     }
 }
 
@@ -84,7 +81,6 @@ plugins {
 allprojects {
     // This logic is duplicated in the buildscript block: I don't know how to fix that.
     repositories {
-        // TODO: [Waterfox] remove when we no longer depend on Nimbus
         maven {
             name "Mozilla Nightly"
             url "https://nightly.maven.mozilla.org/maven2"

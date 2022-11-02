@@ -120,7 +120,6 @@ The known features that are disabled by default are:
 - Sentry
 - Mozilla Location Services (also known as MLS)
 - Firebase Push Services
-- Nimbus
 
 ## Pre-push hooks
 To reduce review turn-around time, we'd like all pushes to run tests locally. We'd
