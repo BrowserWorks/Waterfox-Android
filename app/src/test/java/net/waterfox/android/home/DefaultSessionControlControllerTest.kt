@@ -50,8 +50,6 @@ import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
-import net.waterfox.android.gleanplumb.Message
-import net.waterfox.android.gleanplumb.MessageController
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.sessioncontrol.DefaultSessionControlController
 import net.waterfox.android.settings.SupportUtils
@@ -68,7 +66,6 @@ class DefaultSessionControlControllerTest {
     private val activity: HomeActivity = mockk(relaxed = true)
     private val appStore: AppStore = mockk(relaxed = true)
     private val navController: NavController = mockk(relaxed = true)
-    private val messageController: MessageController = mockk(relaxed = true)
     private val engine: Engine = mockk(relaxed = true)
     private val tabCollectionStorage: TabCollectionStorage = mockk(relaxed = true)
     private val tabsUseCases: TabsUseCases = mockk(relaxed = true)
@@ -808,22 +805,6 @@ class DefaultSessionControlControllerTest {
         }
     }
 
-    @Test
-    fun `WHEN handleMessageClicked and handleMessageClosed are called THEN delegate to messageController`() {
-        val controller = createController()
-        val message = mockk<Message>()
-
-        controller.handleMessageClicked(message)
-        controller.handleMessageClosed(message)
-
-        verify {
-            messageController.onMessagePressed(message)
-        }
-        verify {
-            messageController.onMessageDismissed(message)
-        }
-    }
-
     private fun createController(
         hideOnboarding: () -> Unit = { },
         registerCollectionStorageObserver: () -> Unit = { },
@@ -835,7 +816,6 @@ class DefaultSessionControlControllerTest {
             settings = settings,
             engine = engine,
             store = store,
-            messageController = messageController,
             tabCollectionStorage = tabCollectionStorage,
             addTabUseCase = tabsUseCases.addTab,
             restoreUseCase = mockk(relaxed = true),

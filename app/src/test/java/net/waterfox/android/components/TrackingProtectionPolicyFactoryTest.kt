@@ -138,7 +138,7 @@ class TrackingProtectionPolicyFactoryTest {
     }
 
     @Test
-    fun `GIVEN TCP is enabled by nimbus WHEN applyTCPIfNeeded THEN cookie policy should be TCP`() {
+    fun `GIVEN TCP is enabled WHEN applyTCPIfNeeded THEN cookie policy should be TCP`() {
         val settings: Settings = mockk(relaxed = true)
         every { settings.enabledTotalCookieProtection } returns true
 
@@ -156,7 +156,7 @@ class TrackingProtectionPolicyFactoryTest {
         }
     }
 
-    fun `GIVEN TCP is NOT enabled by nimbus WHEN applyTCPIfNeeded THEN reuse cookie policy`() {
+    fun `GIVEN TCP is NOT enabled WHEN applyTCPIfNeeded THEN reuse cookie policy`() {
         val settings: Settings = mockk(relaxed = true)
 
         every { settings.enabledTotalCookieProtection } returns false

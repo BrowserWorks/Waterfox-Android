@@ -14,15 +14,12 @@ import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.service.fxa.manager.FxaAccountManager
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.components.appstate.AppAction.MessagingAction.UpdateMessageToShow
 import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.components.appstate.filterOut
 import net.waterfox.android.ext.components
@@ -88,16 +85,6 @@ class AppStoreTest {
         appStore.dispatch(AppAction.ModeChange(Mode.Normal)).join()
         assertEquals(Mode.Normal, appStore.state.mode)
     }
-
-    @Test
-    fun `GIVEN a new value for messageToShow WHEN NimbusMessageChange is called THEN update the current value`() =
-        runTest {
-            assertNull(appStore.state.messaging.messageToShow)
-
-            appStore.dispatch(UpdateMessageToShow(mockk())).join()
-
-            assertNotNull(appStore.state.messaging.messageToShow)
-        }
 
     @Test
     fun `Test changing the collections in AppStore`() = runTest {
