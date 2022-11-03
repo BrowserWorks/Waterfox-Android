@@ -5,8 +5,6 @@
 package net.waterfox.android.tabstray.browser
 
 import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.lifecycle.LifecycleOwner
@@ -16,10 +14,7 @@ import mozilla.components.browser.tabstray.SelectableTabViewHolder
 import mozilla.components.browser.tabstray.TabsAdapter.Companion.PAYLOAD_DONT_HIGHLIGHT_SELECTED_ITEM
 import mozilla.components.browser.tabstray.TabsAdapter.Companion.PAYLOAD_HIGHLIGHT_SELECTED_ITEM
 import mozilla.components.browser.thumbnails.loader.ThumbnailLoader
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.components.Components
-import net.waterfox.android.databinding.TabTrayGridItemBinding
-import net.waterfox.android.databinding.TabTrayItemBinding
 import net.waterfox.android.ext.components
 import net.waterfox.android.selection.SelectionHolder
 import net.waterfox.android.tabstray.TabsTrayStore
@@ -45,10 +40,8 @@ class BrowserTabsAdapter(
      * The layout types for the tabs.
      */
     enum class ViewType(val layoutRes: Int) {
-        LIST(BrowserTabViewHolder.ListViewHolder.LAYOUT_ID),
-        COMPOSE_LIST(ComposeListViewHolder.LAYOUT_ID),
-        GRID(BrowserTabViewHolder.GridViewHolder.LAYOUT_ID),
-        COMPOSE_GRID(ComposeGridViewHolder.LAYOUT_ID)
+        LIST(ComposeListViewHolder.LAYOUT_ID),
+        GRID(ComposeGridViewHolder.LAYOUT_ID)
     }
 
     /**
@@ -59,86 +52,32 @@ class BrowserTabsAdapter(
     private val selectedItemAdapterBinding = SelectedItemAdapterBinding(store, this)
     private val imageLoader = ThumbnailLoader(context.components.core.thumbnailStorage)
 
-    override fun getItemViewType(position: Int): Int {
-        return when {
-            context.components.settings.gridTabView -> {
-                if (FeatureFlags.composeTabsTray) {
-                    ViewType.COMPOSE_GRID.layoutRes
-                } else {
-                    ViewType.GRID.layoutRes
-                }
-            }
-            else -> {
-                if (FeatureFlags.composeTabsTray) {
-                    ViewType.COMPOSE_LIST.layoutRes
-                } else {
-                    ViewType.LIST.layoutRes
-                }
-            }
-        }
-    }
+    override fun getItemViewType(position: Int) =
+        if (context.components.settings.gridTabView) ViewType.GRID.layoutRes
+        else ViewType.LIST.layoutRes
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectableTabViewHolder {
-        return when (viewType) {
-            ViewType.COMPOSE_LIST.layoutRes ->
-                ComposeListViewHolder(
-                    interactor = interactor,
-                    tabsTrayStore = store,
-                    selectionHolder = selectionHolder,
-                    composeItemView = ComposeView(parent.context),
-                    viewLifecycleOwner = viewLifecycleOwner
-                )
-            ViewType.COMPOSE_GRID.layoutRes ->
-                ComposeGridViewHolder(
-                    interactor = interactor,
-                    store = store,
-                    selectionHolder = selectionHolder,
-                    composeItemView = ComposeView(parent.context),
-                    viewLifecycleOwner = viewLifecycleOwner
-                )
-            else -> {
-                val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
-                if (viewType == ViewType.GRID.layoutRes) {
-                    BrowserTabViewHolder.GridViewHolder(
-                        imageLoader,
-                        interactor,
-                        store,
-                        selectionHolder,
-                        view
-                    )
-                } else {
-                    BrowserTabViewHolder.ListViewHolder(
-                        imageLoader,
-                        interactor,
-                        store,
-                        selectionHolder,
-                        view
-                    )
-                }
-            }
-        }
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        if (viewType == ViewType.LIST.layoutRes) ComposeListViewHolder(
+            interactor = interactor,
+            tabsTrayStore = store,
+            selectionHolder = selectionHolder,
+            composeItemView = ComposeView(parent.context),
+            viewLifecycleOwner = viewLifecycleOwner
+        )
+        else ComposeGridViewHolder(
+            interactor = interactor,
+            store = store,
+            selectionHolder = selectionHolder,
+            composeItemView = ComposeView(parent.context),
+            viewLifecycleOwner = viewLifecycleOwner
+        )
 
     override fun onBindViewHolder(holder: SelectableTabViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
-        var selectedMaskView: View? = null
         holder.tab?.let { tab ->
-            when (getItemViewType(position)) {
-                ViewType.GRID.layoutRes -> {
-                    val gridBinding = TabTrayGridItemBinding.bind(holder.itemView)
-                    selectedMaskView = gridBinding.checkboxInclude.selectedMask
-                    gridBinding.mozacBrowserTabstrayClose.setOnClickListener { interactor.close(tab) }
-                }
-                ViewType.LIST.layoutRes -> {
-                    val listBinding = TabTrayItemBinding.bind(holder.itemView)
-                    selectedMaskView = listBinding.checkboxInclude.selectedMask
-                    listBinding.mozacBrowserTabstrayClose.setOnClickListener { interactor.close(tab) }
-                }
-            }
-
             selectionHolder?.let {
                 holder.showTabIsMultiSelectEnabled(
-                    selectedMaskView,
+                    null,
                     (it.selectedItems.map { item -> item.id }).contains(tab.id)
                 )
             }
@@ -167,19 +106,8 @@ class BrowserTabsAdapter(
         }
 
         selectionHolder?.let {
-            var selectedMaskView: View? = null
-            when (getItemViewType(position)) {
-                ViewType.GRID.layoutRes -> {
-                    val gridBinding = TabTrayGridItemBinding.bind(holder.itemView)
-                    selectedMaskView = gridBinding.checkboxInclude.selectedMask
-                }
-                ViewType.LIST.layoutRes -> {
-                    val listBinding = TabTrayItemBinding.bind(holder.itemView)
-                    selectedMaskView = listBinding.checkboxInclude.selectedMask
-                }
-            }
             holder.showTabIsMultiSelectEnabled(
-                selectedMaskView,
+                null,
                 it.selectedItems.map { item -> item.id }.contains(tab.id)
             )
         }

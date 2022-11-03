@@ -52,7 +52,7 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     ) {
         HistoryDataSource(
             historyProvider = historyProvider,
-            isRemote = if (FeatureFlags.showSyncedHistory) args.isSyncedHistory else null,
+            isRemote = args.isSyncedHistory,
         )
     }.flow
 
@@ -207,10 +207,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
                 }
         } else {
             inflater.inflate(R.menu.history_menu, menu)
-        }
-
-        if (!FeatureFlags.historyImprovementFeatures) {
-            menu.findItem(R.id.history_search)?.isVisible = false
         }
     }
 

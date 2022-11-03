@@ -8,7 +8,6 @@ import android.os.Bundle
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
@@ -43,7 +42,6 @@ class SecretSettingsFragment : PreferenceFragmentCompat() {
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_show_unified_search).apply {
-            isVisible = FeatureFlags.unifiedSearchFeature
             isChecked = context.settings().showUnifiedSearchFeature
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }

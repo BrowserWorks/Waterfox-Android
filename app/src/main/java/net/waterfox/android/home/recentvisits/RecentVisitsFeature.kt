@@ -17,7 +17,6 @@ import mozilla.components.concept.storage.HistoryHighlightWeights
 import mozilla.components.concept.storage.HistoryMetadata
 import mozilla.components.concept.storage.HistoryMetadataStorage
 import mozilla.components.support.base.feature.LifecycleAwareFeature
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.home.HomeFragment
@@ -50,7 +49,7 @@ class RecentVisitsFeature(
     private val historyHighlightsStorage: Lazy<PlacesHistoryStorage>,
     private val scope: CoroutineScope,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO,
-    private val historyImprovementFeatures: Boolean = FeatureFlags.historyImprovementFeatures,
+    private val historyImprovementFeatures: Boolean = true,
 ) : LifecycleAwareFeature {
 
     private var job: Job? = null

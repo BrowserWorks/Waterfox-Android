@@ -11,7 +11,6 @@ import mozilla.components.concept.storage.HistoryMetadataKey
 import mozilla.components.concept.storage.VisitInfo
 import mozilla.components.concept.storage.VisitType
 import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.library.history.History
 import net.waterfox.android.library.history.HistoryItemTimeGroup
 import net.waterfox.android.utils.Settings.Companion.SEARCH_GROUP_MINIMUM_SITES
@@ -86,7 +85,7 @@ interface PagedHistoryProvider {
  */
 class DefaultPagedHistoryProvider(
     private val historyStorage: PlacesHistoryStorage,
-    private val historyImprovementFeatures: Boolean = FeatureFlags.historyImprovementFeatures,
+    private val historyImprovementFeatures: Boolean = true,
 ) : PagedHistoryProvider {
 
     /**

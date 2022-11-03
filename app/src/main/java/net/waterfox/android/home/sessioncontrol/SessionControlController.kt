@@ -27,7 +27,6 @@ import mozilla.components.feature.tabs.TabsUseCases
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.support.ktx.android.view.showKeyboard
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserFragmentDirections
@@ -409,12 +408,10 @@ class DefaultSessionControlController(
     }
 
     override fun handleShowOnboardingDialog() {
-        if (FeatureFlags.showHomeOnboarding) {
-            navController.nav(
-                R.id.homeFragment,
-                HomeFragmentDirections.actionGlobalHomeOnboardingDialog()
-            )
-        }
+        navController.nav(
+            R.id.homeFragment,
+            HomeFragmentDirections.actionGlobalHomeOnboardingDialog()
+        )
     }
 
     override fun handleReadPrivacyNoticeClicked() {

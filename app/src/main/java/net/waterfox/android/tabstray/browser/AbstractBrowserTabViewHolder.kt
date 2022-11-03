@@ -29,7 +29,6 @@ import mozilla.components.browser.toolbar.MAX_URI_LENGTH
 import mozilla.components.concept.base.images.ImageLoadRequest
 import mozilla.components.concept.base.images.ImageLoader
 import mozilla.components.concept.engine.mediasession.MediaSession
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.ext.*
 import net.waterfox.android.selection.SelectionHolder
@@ -233,7 +232,7 @@ abstract class AbstractBrowserTabViewHolder(
                     val touchStart = touchStartPoint
                     val selected = holder.selectedItems
                     val selectsOnlyThis = (selected.size == 1 && selected.contains(item))
-                    if (FeatureFlags.tabReorderingFeature && selectsOnlyThis && touchStart != null) {
+                    if (selectsOnlyThis && touchStart != null) {
                         // If the parent is null then return early and mark the event as unhandled
                         val parent = itemView.parent as? AbstractBrowserTrayList ?: return@setOnTouchListener false
 

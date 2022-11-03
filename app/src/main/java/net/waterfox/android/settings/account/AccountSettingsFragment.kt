@@ -30,7 +30,6 @@ import mozilla.components.service.fxa.sync.SyncReason
 import mozilla.components.service.fxa.sync.SyncStatusObserver
 import mozilla.components.service.fxa.sync.getLastSynced
 import mozilla.components.support.ktx.android.content.getColorFromAttr
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.components.WaterfoxSnackbar
@@ -299,7 +298,6 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
             isChecked = syncEnginesStatus.getOrElse(SyncEngine.Tabs) { true }
         }
         requirePreference<CheckBoxPreference>(R.string.pref_key_sync_address).apply {
-            isVisible = FeatureFlags.syncAddressesFeature
             isEnabled = syncEnginesStatus.containsKey(SyncEngine.Addresses)
             isChecked = syncEnginesStatus.getOrElse(SyncEngine.Addresses) { true }
         }
