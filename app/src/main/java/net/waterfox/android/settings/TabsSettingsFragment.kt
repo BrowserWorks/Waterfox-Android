@@ -8,7 +8,6 @@ import android.os.Bundle
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
@@ -48,7 +47,6 @@ class TabsSettingsFragment : PreferenceFragmentCompat() {
         listRadioButton = requirePreference(R.string.pref_key_tab_view_list_do_not_use)
         gridRadioButton = requirePreference(R.string.pref_key_tab_view_grid)
         searchTermTabGroups = requirePreference<SwitchPreference>(R.string.pref_key_search_term_tab_groups).also {
-            it.isVisible = FeatureFlags.tabGroupFeature
             it.isChecked = it.context.settings().searchTermTabGroupsAreEnabled
             it.onPreferenceChangeListener = SharedPreferenceUpdater()
         }
@@ -64,7 +62,6 @@ class TabsSettingsFragment : PreferenceFragmentCompat() {
         }
 
         inactiveTabsCategory = requirePreference<PreferenceCategory>(R.string.pref_key_inactive_tabs_category).also {
-            it.isVisible = FeatureFlags.inactiveTabs
             it.isEnabled = !(it.context.settings().closeTabsAfterOneDay || it.context.settings().closeTabsAfterOneWeek)
         }
 

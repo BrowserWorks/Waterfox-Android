@@ -21,17 +21,12 @@ import mozilla.components.feature.sitepermissions.SitePermissionsRules.Action
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.AutoplayAction
 import mozilla.components.service.contile.ContileTopSitesProvider
 import mozilla.components.support.ktx.android.content.*
-import mozilla.components.support.locale.LocaleManager
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.Config
-import net.waterfox.android.FeatureFlags
-import net.waterfox.android.FeatureFlags.historyImprovementFeatures
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.components.metrics.MozillaProductDetector
 import net.waterfox.android.components.settings.counterPreference
-import net.waterfox.android.components.settings.featureFlagPreference
-import net.waterfox.android.components.settings.lazyFeatureFlagPreference
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.getPreferenceKey
@@ -73,7 +68,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
         /**
          * The minimum number a search groups should contain.
-         * Filtering is applied depending on the [historyImprovementFeatures] flag value.
          */
         const val SEARCH_GROUP_MINIMUM_SITES: Int = 2
 
@@ -122,10 +116,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     /**
      * Indicates whether or not top sites should be shown on the home screen.
      */
-    var showTopSitesFeature by lazyFeatureFlagPreference(
+    var showTopSitesFeature by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_show_top_sites),
-        featureFlag = true,
-        default = { true },
+        default = true
     )
 
     var numberOfAppLaunches by intPreference(
@@ -345,10 +338,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     /**
      * Indicates if the user has enabled the inactive tabs feature.
      */
-    var inactiveTabsAreEnabled by featureFlagPreference(
+    var inactiveTabsAreEnabled by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_inactive_tabs),
-        default = FeatureFlags.inactiveTabs,
-        featureFlag = FeatureFlags.inactiveTabs
+        default = true
     )
 
     /**
@@ -357,16 +349,15 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var shouldAnimateWaterfoxLogo by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_show_logo_animation),
-        default = true,
+        default = true
     )
 
     /**
      * Indicates if the user has enabled the search term tab groups feature.
      */
-    var searchTermTabGroupsAreEnabled by lazyFeatureFlagPreference(
+    var searchTermTabGroupsAreEnabled by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_search_term_tab_groups),
-        default = { true },
-        featureFlag = FeatureFlags.tabGroupFeature
+        default = true
     )
 
     @VisibleForTesting
@@ -1095,54 +1086,32 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
-    var addressFeature by featureFlagPreference(
+    var addressFeature by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_show_address_feature),
-        default = true,
-        featureFlag = isAddressFeatureEnabled(appContext)
+        default = true
     )
 
-    /**
-     * Show the Addresses autofill feature.
-     */
-    private fun isAddressFeatureEnabled(context: Context): Boolean {
-        val langTag = LocaleManager.getCurrentLocale(context)
-            ?.toLanguageTag() ?: LocaleManager.getSystemDefault().toLanguageTag()
-        return listOf(
-            "en-US",
-            "en-CA",
-            "fr-CA"
-        ).contains(langTag)
-    }
-
-    private var isHistoryMetadataEnabled by booleanPreference(
+    var historyMetadataUIFeature by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_history_metadata_feature),
-        default = false
-    )
-
-    var historyMetadataUIFeature by lazyFeatureFlagPreference(
-        appContext.getPreferenceKey(R.string.pref_key_history_metadata_feature),
-        default = { true },
-        featureFlag = FeatureFlags.historyMetadataUIFeature || isHistoryMetadataEnabled
+        default = true
     )
 
     /**
      * Indicates if the recent tabs functionality should be visible.
-     * Returns true if the [FeatureFlags.showRecentTabsFeature] and [R.string.pref_key_recent_tabs] are true.
+     * Returns true if [R.string.pref_key_recent_tabs] is true.
      */
-    var showRecentTabsFeature by lazyFeatureFlagPreference(
+    var showRecentTabsFeature by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_recent_tabs),
-        featureFlag = FeatureFlags.showRecentTabsFeature,
-        default = { true },
+        default = true,
     )
 
     /**
      * Indicates if the recent saved bookmarks functionality should be visible.
-     * Returns true if the [FeatureFlags.showRecentTabsFeature] and [R.string.pref_key_recent_bookmarks] are true.
+     * Returns true if [R.string.pref_key_recent_bookmarks] is true.
      */
-    var showRecentBookmarksFeature by lazyFeatureFlagPreference(
+    var showRecentBookmarksFeature by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_recent_bookmarks),
-        default = { true },
-        featureFlag = FeatureFlags.recentBookmarksFeature
+        default = true
     )
 
     /**
@@ -1184,28 +1153,25 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     /**
      * Indicates if the Contile functionality should be visible.
      */
-    var showContileFeature by lazyFeatureFlagPreference(
+    var showContileFeature by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_contile),
-        default = { true },
-        featureFlag = true,
+        default = true
     )
 
     /**
      * Indicates if the Task Continuity enhancements are enabled.
      */
-    var enableTaskContinuityEnhancements by featureFlagPreference(
+    var enableTaskContinuityEnhancements by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_task_continuity),
-        default = FeatureFlags.taskContinuityFeature,
-        featureFlag = FeatureFlags.taskContinuityFeature,
+        default = true
     )
 
     /**
      * Indicates if the Unified Search feature should be visible.
      */
-    var showUnifiedSearchFeature by lazyFeatureFlagPreference(
+    var showUnifiedSearchFeature by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_show_unified_search),
-        default = { false },
-        featureFlag = FeatureFlags.unifiedSearchFeature
+        default = false
     )
 
     /**

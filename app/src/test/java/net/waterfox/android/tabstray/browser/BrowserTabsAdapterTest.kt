@@ -53,45 +53,4 @@ class BrowserTabsAdapterTest {
         verify { holder.updateSelectedTabIndicator(false) }
     }
 
-    @Test
-    fun `WHEN the selection holder is set THEN update the selected tab`() {
-        every { testContext.components.core.thumbnailStorage } returns mockk()
-        every { testContext.components.core.store } returns BrowserStore()
-        every { testContext.components.analytics } returns mockk(relaxed = true)
-        every { testContext.components.settings } returns mockk(relaxed = true)
-        val adapter = BrowserTabsAdapter(context, interactor, store, mockk())
-        val binding = TabTrayItemBinding.inflate(LayoutInflater.from(testContext))
-        val holder = spyk(
-            BrowserTabViewHolder.ListViewHolder(
-                imageLoader = mockk(),
-                browserTrayInteractor = interactor,
-                store = store,
-                selectionHolder = null,
-                itemView = binding.root
-            )
-        )
-        val tab = createTab(url = "url", id = "tab1")
-
-        every { holder.tab }.answers { tab }
-
-        testSelectionHolder.internalState.add(tab)
-        adapter.selectionHolder = testSelectionHolder
-
-        adapter.updateTabs(
-            listOf(tab),
-            null,
-            selectedTabId = "tab1"
-        )
-
-        adapter.onBindViewHolder(holder, 0, listOf(PAYLOAD_DONT_HIGHLIGHT_SELECTED_ITEM))
-
-        verify { holder.showTabIsMultiSelectEnabled(any(), true) }
-    }
-
-    private val testSelectionHolder = object : SelectionHolder<TabSessionState> {
-        override val selectedItems: Set<TabSessionState>
-            get() = internalState
-
-        val internalState = mutableSetOf<TabSessionState>()
-    }
 }

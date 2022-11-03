@@ -26,7 +26,6 @@ import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.support.base.feature.UserInteractionHandler
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
@@ -161,10 +160,6 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
             is BookmarkFragmentState.Mode.Normal -> {
                 if (mode.showMenu) {
                     inflater.inflate(R.menu.bookmarks_menu, menu)
-                }
-
-                if (!FeatureFlags.historyImprovementFeatures) {
-                    menu.findItem(R.id.bookmark_search)?.isVisible = false
                 }
             }
             is BookmarkFragmentState.Mode.Selecting -> {

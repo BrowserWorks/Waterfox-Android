@@ -11,7 +11,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.ext.requireComponents
@@ -118,7 +117,6 @@ class CustomizationFragment : PreferenceFragmentCompat() {
 
     private fun setupGesturesCategory() {
         requirePreference<SwitchPreference>(R.string.pref_key_website_pull_to_refresh).apply {
-            isVisible = FeatureFlags.pullToRefreshEnabled
             isChecked = context.settings().isPullToRefreshEnabledInBrowser
             onPreferenceChangeListener = SharedPreferenceUpdater()
         }

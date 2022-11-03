@@ -7,7 +7,6 @@ package net.waterfox.android.library.history.viewholders
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.databinding.HistoryListItemBinding
 import net.waterfox.android.ext.components
@@ -128,7 +127,7 @@ class HistoryListItemViewHolder(
         binding.recentlyClosedNavEmpty.recentlyClosedNav.isVisible = showTopContent
         binding.topSpacer.isVisible = showTopContent
         binding.bottomSpacer.isVisible = showTopContent
-        binding.syncedHistoryNavEmpty.syncedHistoryNav.isVisible = showTopContent && FeatureFlags.showSyncedHistory
+        binding.syncedHistoryNavEmpty.syncedHistoryNav.isVisible = showTopContent
 
         if (showTopContent) {
             val numRecentTabs = itemView.context.components.core.store.state.closedTabs.size
@@ -153,15 +152,13 @@ class HistoryListItemViewHolder(
                 }
             }
 
-            if (FeatureFlags.showSyncedHistory) {
-                binding.syncedHistoryNavEmpty.syncedHistoryNav.run {
-                    if (isNormalMode) {
-                        isEnabled = true
-                        alpha = 1f
-                    } else {
-                        isEnabled = false
-                        alpha = DISABLED_BUTTON_ALPHA
-                    }
+            binding.syncedHistoryNavEmpty.syncedHistoryNav.run {
+                if (isNormalMode) {
+                    isEnabled = true
+                    alpha = 1f
+                } else {
+                    isEnabled = false
+                    alpha = DISABLED_BUTTON_ALPHA
                 }
             }
         }

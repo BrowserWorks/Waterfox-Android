@@ -12,7 +12,6 @@ import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
 import mozilla.components.support.base.feature.UserInteractionHandler
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentHistoryBinding
 import net.waterfox.android.ext.components
@@ -147,8 +146,7 @@ class HistoryView(
             syncedHistoryNav.setOnClickListener {
                 interactor.onSyncedHistoryClicked()
             }
-            syncedHistoryNav.isVisible =
-                !isSyncedHistory && FeatureFlags.showSyncedHistory && !userHasHistory
+            syncedHistoryNav.isVisible = !isSyncedHistory && !userHasHistory
         }
 
         if (!userHasHistory) {

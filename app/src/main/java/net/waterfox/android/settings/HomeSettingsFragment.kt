@@ -10,7 +10,6 @@ import androidx.preference.CheckBoxPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
@@ -41,17 +40,14 @@ class HomeSettingsFragment : PreferenceFragmentCompat() {
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_recent_tabs).apply {
-            isVisible = FeatureFlags.showRecentTabsFeature
             isChecked = context.settings().showRecentTabsFeature
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_recent_bookmarks).apply {
-            isVisible = FeatureFlags.recentBookmarksFeature
             isChecked = context.settings().showRecentBookmarksFeature
         }
 
         requirePreference<SwitchPreference>(R.string.pref_key_history_metadata_feature).apply {
-            isVisible = FeatureFlags.historyMetadataUIFeature
             isChecked = context.settings().historyMetadataUIFeature
         }
 

@@ -32,7 +32,6 @@ import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStor
 import mozilla.components.service.sync.logins.SyncableLoginsStorage
 import mozilla.components.support.utils.RunWhenReadyQueue
 import net.waterfox.android.Config
-import net.waterfox.android.FeatureFlags
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
 import net.waterfox.android.perf.StrictModeManager
@@ -90,7 +89,7 @@ class BackgroundServices(
             SyncEngine.Passwords,
             SyncEngine.Tabs,
             SyncEngine.CreditCards,
-            if (FeatureFlags.syncAddressesFeature) SyncEngine.Addresses else null
+            SyncEngine.Addresses
         )
     private val syncConfig =
         SyncConfig(supportedEngines, PeriodicSyncConfig(periodMinutes = 240)) // four hours
@@ -112,9 +111,7 @@ class BackgroundServices(
             storePair = SyncEngine.CreditCards to creditCardsStorage,
             keyProvider = lazy { creditCardKeyProvider }
         )
-        if (FeatureFlags.syncAddressesFeature) {
-            GlobalSyncableStoreProvider.configureStore(SyncEngine.Addresses to creditCardsStorage)
-        }
+        GlobalSyncableStoreProvider.configureStore(SyncEngine.Addresses to creditCardsStorage)
     }
 
     val accountAbnormalities = AccountAbnormalities(context, crashReporter, strictMode)
