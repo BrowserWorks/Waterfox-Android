@@ -144,11 +144,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
-    var contileContextId by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_contile_context_id),
-        default = ""
-    )
-
     var currentWallpaper by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_current_wallpaper),
         default = WallpaperManager.defaultWallpaper.name
@@ -194,8 +189,12 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
-    // WATERFOX
-    val isCrashReportingEnabled = false
+    val isCrashReportingEnabled: Boolean
+        get() = isCrashReportEnabledInBuild &&
+                preferences.getBoolean(
+                    appContext.getPreferenceKey(R.string.pref_key_crash_reporter),
+                    true,
+                )
 
     val isRemoteDebuggingEnabled by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_remote_debugging),
@@ -372,27 +371,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
     enum class TabView {
         GRID, LIST
-    }
-
-    fun getTabViewPingString() = if (gridTabView) TabView.GRID.name else TabView.LIST.name
-
-    enum class TabTimout {
-        ONE_DAY, ONE_WEEK, ONE_MONTH, MANUAL
-    }
-
-    fun getTabTimeoutPingString(): String = when {
-        closeTabsAfterOneDay -> {
-            TabTimout.ONE_DAY.name
-        }
-        closeTabsAfterOneWeek -> {
-            TabTimout.ONE_WEEK.name
-        }
-        closeTabsAfterOneMonth -> {
-            TabTimout.ONE_MONTH.name
-        }
-        else -> {
-            TabTimout.MANUAL.name
-        }
     }
 
     fun getTabTimeoutString(): String = when {
@@ -727,7 +705,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var hasShownHomeOnboardingDialog by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_has_shown_home_onboarding),
-        default = false
+        default = true
     )
 
     fun incrementVisitedInstallableCount() = pwaInstallableVisitCount.increment()

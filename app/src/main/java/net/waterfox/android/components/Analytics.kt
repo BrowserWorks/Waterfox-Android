@@ -8,10 +8,11 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import mozilla.components.concept.base.crash.Breadcrumb
+import mozilla.components.lib.crash.Crash
 import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.lib.crash.sentry.SentryService
 import mozilla.components.lib.crash.service.CrashReporterService
-import mozilla.components.lib.crash.service.MozillaSocorroService
 import net.waterfox.android.*
 import net.waterfox.android.perf.lazyMonitored
 import org.mozilla.geckoview.BuildConfig.*
@@ -24,26 +25,16 @@ class Analytics(
 ) {
     val crashReporter: CrashReporter by lazyMonitored {
         val services = mutableListOf<CrashReporterService>()
-        val distributionId = when (Config.channel.isMozillaOnline) {
-            true -> "MozillaOnline"
-            false -> "Mozilla"
-        }
 
-        // TODO: [Waterfox] Do we want to keep Sentry?
         if (isSentryEnabled()) {
-            // We treat caught exceptions similar to debug logging.
-            // On the release channel volume of these is too high for our Sentry instances, and
-            // we get most value out of nightly/beta logging anyway.
-            val shouldSendCaughtExceptions = when (Config.channel) {
-                ReleaseChannel.Release -> false
-                else -> true
-            }
+            val shouldSendCaughtExceptions = Config.channel == ReleaseChannel.Release
+
             val sentryService = SentryService(
                 context,
                 BuildConfig.SENTRY_TOKEN,
                 tags = mapOf(
                     "geckoview" to "$MOZ_APP_VERSION-$MOZ_APP_BUILDID",
-                    "waterfox.git" to BuildConfig.GIT_HASH,
+                    "waterfox.git" to BuildConfig.GIT_HASH
                 ),
                 environment = BuildConfig.BUILD_TYPE,
                 sendEventForNativeCrashes = false, // Do not send native crashes to Sentry
@@ -52,16 +43,11 @@ class Analytics(
             )
 
             services.add(sentryService)
+        } else {
+            // At least one service needs to be added to the services list,
+            // so we add a No Op implementation if Sentry is disabled (like in case of debug builds).
+            services.add(NoOpCrashReporterService)
         }
-
-        // The name "Waterfox" here matches the product name on Socorro and is unrelated to the actual app name:
-        // https://bugzilla.mozilla.org/show_bug.cgi?id=1523284
-        val socorroService = MozillaSocorroService(
-            context, appName = "Waterfox",
-            version = MOZ_APP_VERSION, buildId = MOZ_APP_BUILDID, vendor = MOZ_APP_VENDOR,
-            releaseChannel = MOZ_UPDATE_CHANNEL, distributionId = distributionId
-        )
-        services.add(socorroService)
 
         val intent = Intent(context, HomeActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -84,7 +70,7 @@ class Analytics(
             shouldPrompt = CrashReporter.Prompt.ALWAYS,
             promptConfiguration = CrashReporter.PromptConfiguration(
                 appName = context.getString(R.string.app_name),
-                organizationName = "Mozilla"
+                organizationName = "Waterfox Project"
             ),
             enabled = true,
             nonFatalCrashIntent = pendingIntent
@@ -95,9 +81,21 @@ class Analytics(
 private fun isSentryEnabled() = !BuildConfig.SENTRY_TOKEN.isNullOrEmpty()
 
 private fun getSentryProjectUrl(): String? {
+    // TODO: [Waterfox] change this URL to an own one
     val baseUrl = "https://sentry.io/organizations/mozilla/issues"
     return when (Config.channel) {
+        // TODO: [Waterfox] change this project ID to an own one
         ReleaseChannel.Release -> "$baseUrl/?project=6375561"
         else -> null
     }
+}
+
+object NoOpCrashReporterService : CrashReporterService {
+    override val id: String = ""
+    override val name: String = ""
+
+    override fun createCrashReportUrl(identifier: String): String? = null
+    override fun report(throwable: Throwable, breadcrumbs: ArrayList<Breadcrumb>): String? = null
+    override fun report(crash: Crash.NativeCodeCrash): String? = null
+    override fun report(crash: Crash.UncaughtExceptionCrash): String? = null
 }
