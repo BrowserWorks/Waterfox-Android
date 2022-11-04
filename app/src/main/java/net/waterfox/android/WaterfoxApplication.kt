@@ -284,10 +284,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
     }
 
     private fun setupCrashReporting() {
-        components
-            .analytics
-            .crashReporter
-            .install(this)
+        components.analytics.crashReporter.install(this)
     }
 
     /**
