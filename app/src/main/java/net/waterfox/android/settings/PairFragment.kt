@@ -19,7 +19,6 @@ import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import net.waterfox.android.R
 import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
 
 class PairFragment : Fragment(R.layout.fragment_pair), UserInteractionHandler {
@@ -69,14 +68,7 @@ class PairFragment : Fragment(R.layout.fragment_pair), UserInteractionHandler {
                         false
                     )
                 },
-                scanMessage =
-                if (requireContext().settings().allowDomesticChinaFxaServer &&
-                    net.waterfox.android.Config.channel.isMozillaOnline
-                ) {
-                    R.string.pair_instructions_2_cn
-                } else {
-                    R.string.pair_instructions_2
-                }
+                scanMessage = R.string.pair_instructions_2
             ),
             owner = this,
             view = view

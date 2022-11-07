@@ -20,7 +20,6 @@ import mozilla.components.concept.sync.OAuthAccount
 import mozilla.components.support.ktx.android.content.hasCamera
 import mozilla.components.support.ktx.android.content.isPermissionGranted
 import mozilla.components.support.ktx.android.view.hideKeyboard
-import net.waterfox.android.Config
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
@@ -110,11 +109,7 @@ class TurnOnSyncFragment : Fragment(), AccountObserver {
         binding.signInScanButton.setOnClickListener(paringClickListener)
         binding.signInEmailButton.setOnClickListener(signInClickListener)
         binding.signInInstructions.text = HtmlCompat.fromHtml(
-            if (requireContext().settings().allowDomesticChinaFxaServer && Config.channel.isMozillaOnline) {
-                getString(R.string.sign_in_instructions_cn)
-            } else {
-                getString(R.string.sign_in_instructions)
-            },
+            getString(R.string.sign_in_instructions),
             HtmlCompat.FROM_HTML_MODE_LEGACY
         )
 

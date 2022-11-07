@@ -24,7 +24,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -83,8 +82,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             scope = lifecycleScope,
             accountManager = requireComponents.backgroundServices.accountManager,
             httpClient = requireComponents.core.client,
-            updateFxASyncOverrideMenu = ::updateFxASyncOverrideMenu,
-            updateFxAAllowDomesticChinaServerMenu = :: updateFxAAllowDomesticChinaServerMenu
+            updateFxASyncOverrideMenu = ::updateFxASyncOverrideMenu
         )
 
         // Observe account changes to keep the UI up-to-date.
@@ -422,7 +420,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 (requireContext().components.core.engine.profiler?.isProfilerActive() != null)
         }
         setupAmoCollectionOverridePreference(requireContext().settings())
-        setupAllowDomesticChinaFxaServerPreference()
         setupHttpsOnlyPreferences()
     }
 
@@ -455,22 +452,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             scrollBarSize = 0
             delay(SCROLL_INDICATOR_DELAY)
             scrollBarSize = originalSize
-        }
-    }
-
-    private fun updateFxAAllowDomesticChinaServerMenu() {
-        val settings = requireContext().settings()
-        val preferenceAllowDomesticChinaServer =
-            findPreference<SwitchPreference>(getPreferenceKey(R.string.pref_key_allow_domestic_china_fxa_server))
-        // Only enable changes to these prefs when the user isn't connected to an account.
-        val enabled =
-            requireComponents.backgroundServices.accountManager.authenticatedAccount() == null
-        val checked = settings.allowDomesticChinaFxaServer
-        val visible = Config.channel.isMozillaOnline
-        preferenceAllowDomesticChinaServer?.apply {
-            isEnabled = enabled
-            isChecked = checked
-            isVisible = visible
         }
     }
 
@@ -511,36 +492,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         preferenceAmoCollectionOverride?.apply {
             isVisible = show
             summary = settings.overrideAmoCollection.ifEmpty { null }
-        }
-    }
-
-    private fun setupAllowDomesticChinaFxaServerPreference() {
-        val allowDomesticChinaFxAServer = getPreferenceKey(R.string.pref_key_allow_domestic_china_fxa_server)
-        val preferenceAllowDomesticChinaFxAServer = findPreference<SwitchPreference>(allowDomesticChinaFxAServer)
-        val visible = Config.channel.isMozillaOnline
-
-        preferenceAllowDomesticChinaFxAServer?.apply {
-            isVisible = visible
-        }
-
-        if (visible) {
-            preferenceAllowDomesticChinaFxAServer?.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { preference, newValue ->
-                    preference.context.settings().preferences.edit()
-                        .putBoolean(preference.key, newValue as Boolean).apply()
-                    updateFxAAllowDomesticChinaServerMenu()
-                    Toast.makeText(
-                        context,
-                        getString(R.string.toast_override_fxa_sync_server_done),
-                        Toast.LENGTH_LONG
-                    ).show()
-                    Handler(Looper.getMainLooper()).postDelayed(
-                        {
-                            exitProcess(0)
-                        },
-                        FXA_SYNC_OVERRIDE_EXIT_DELAY
-                    )
-                }
         }
     }
 
