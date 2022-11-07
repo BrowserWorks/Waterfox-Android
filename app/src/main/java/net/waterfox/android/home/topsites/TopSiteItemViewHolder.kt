@@ -91,26 +91,7 @@ class TopSiteItemViewHolder(
                 }
             }
         } else {
-            when (topSite.url) {
-                SupportUtils.BAIDU_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_baidu))
-                }
-                SupportUtils.JD_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_jd))
-                }
-                SupportUtils.PDD_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_pdd))
-                }
-                SupportUtils.TC_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_tc))
-                }
-                SupportUtils.MEITUAN_URL -> {
-                    binding.faviconImage.setImageDrawable(getDrawable(itemView.context, R.drawable.ic_meituan))
-                }
-                else -> {
-                    itemView.context.components.core.icons.loadIntoView(binding.faviconImage, topSite.url)
-                }
-            }
+            itemView.context.components.core.icons.loadIntoView(binding.faviconImage, topSite.url)
         }
 
         this.topSite = topSite

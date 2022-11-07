@@ -66,7 +66,6 @@ import mozilla.components.lib.state.ext.flow
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
-import net.waterfox.android.Config
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator.Companion.getToolbarNavOptions
@@ -78,7 +77,6 @@ import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.toolbar.ToolbarPosition
 import net.waterfox.android.databinding.FragmentHomeBinding
 import net.waterfox.android.ext.*
-import net.waterfox.android.home.mozonline.showPrivacyPopWindow
 import net.waterfox.android.home.recentbookmarks.RecentBookmarksFeature
 import net.waterfox.android.home.recentbookmarks.controller.DefaultRecentBookmarksController
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabFeature
@@ -163,13 +161,6 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         bundleArgs = args.toBundle()
-
-        if (!onboarding.userHasBeenOnboarded() &&
-            requireContext().settings().shouldShowPrivacyPopWindow &&
-            Config.channel.isMozillaOnline
-        ) {
-            showPrivacyPopWindow(requireContext(), requireActivity())
-        }
 
         // DO NOT MOVE ANYTHING BELOW THIS addMarker CALL!
         requireComponents.core.engine.profiler?.addMarker(
