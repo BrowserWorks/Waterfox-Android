@@ -2,7 +2,6 @@ import net.waterfox.android.gradle.tasks.ApkSizeTask
 
 plugins {
     id "com.jetbrains.python.envs" version "0.0.26"
-    id "com.google.protobuf" version "0.8.17"
 }
 
 apply plugin: 'com.android.application'
@@ -182,7 +181,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.androidx_compose
+        kotlinCompilerExtensionVersion = Versions.androidx_compose_compiler
     }
 
 }
@@ -327,7 +326,7 @@ configurations {
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
-        freeCompilerArgs += "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
+        freeCompilerArgs += "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
     }
 }
 
@@ -459,10 +458,11 @@ dependencies {
     implementation Deps.androidx_transition
     implementation Deps.androidx_work_ktx
     implementation Deps.androidx_datastore
-    implementation Deps.protobuf_javalite
     implementation Deps.google_material
 
-    implementation Deps.google_play_store // Required for in-app reviews
+    // Required for in-app reviews
+    implementation Deps.google_play_review
+    implementation Deps.google_play_review_ktx
 
     androidTestImplementation Deps.uiautomator
     androidTestImplementation "tools.fastlane:screengrab:2.0.0"
@@ -516,31 +516,6 @@ dependencies {
     testImplementation Deps.mockk
 
     lintChecks project(":mozilla-lint-rules")
-}
-
-protobuf {
-    // Mac M1 workaround until we can bump the version. Dependent on A-S.
-    // See https://github.com/mozilla-mobile/fenix/issues/22321
-    protoc {
-        if (osdetector.os == "osx") {
-            artifact = "${Deps.protobuf_compiler}:osx-x86_64"
-        } else {
-            artifact = Deps.protobuf_compiler
-        }
-    }
-
-    // Generates the java Protobuf-lite code for the Protobufs in this project. See
-    // https://github.com/google/protobuf-gradle-plugin#customizing-protobuf-compilation
-    // for more information.
-    generateProtoTasks {
-        all().each { task ->
-            task.builtins {
-                java {
-                    option 'lite'
-                }
-            }
-        }
-    }
 }
 
 if (project.hasProperty("coverage")) {

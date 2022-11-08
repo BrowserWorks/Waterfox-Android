@@ -7,7 +7,7 @@ package net.waterfox.android.tabstray.browser
 import android.content.Context
 import android.util.AttributeSet
 import androidx.annotation.VisibleForTesting
-import androidx.annotation.VisibleForTesting.PACKAGE_PRIVATE
+import androidx.annotation.VisibleForTesting.Companion.PACKAGE_PRIVATE
 import net.waterfox.android.ext.components
 
 class PrivateBrowserTrayList @JvmOverloads constructor(
