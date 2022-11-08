@@ -4,6 +4,7 @@
 
 package net.waterfox.android.components
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import android.content.Intent
@@ -126,12 +127,8 @@ class Components(private val context: Context) {
     @Suppress("MagicNumber")
     val supportedAddonsChecker by lazyMonitored {
         DefaultSupportedAddonsChecker(
-            context, Frequency(12, TimeUnit.HOURS),
-            onNotificationClickIntent = Intent(context, HomeActivity::class.java).apply {
-                action = Intent.ACTION_VIEW
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                data = "${BuildConfig.DEEP_LINK_SCHEME}://settings_addon_manager".toUri()
-            }
+            context,
+            Frequency(12, TimeUnit.HOURS)
         )
     }
 
@@ -172,6 +169,7 @@ class Components(private val context: Context) {
         )
     }
 
+    @delegate:SuppressLint("NewApi")
     val autofillConfiguration by lazyMonitored {
         AutofillConfiguration(
             storage = core.passwordsStorage,

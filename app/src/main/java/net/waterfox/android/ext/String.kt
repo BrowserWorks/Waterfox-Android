@@ -11,9 +11,9 @@ import android.util.Patterns
 import android.webkit.URLUtil
 import androidx.compose.runtime.Composable
 import androidx.core.net.toUri
-import mozilla.components.browser.toolbar.MAX_URI_LENGTH
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
 import mozilla.components.support.ktx.android.net.hostWithoutCommonPrefixes
+import mozilla.components.support.ktx.kotlin.MAX_URI_LENGTH
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.inComposePreview
 import java.net.IDN

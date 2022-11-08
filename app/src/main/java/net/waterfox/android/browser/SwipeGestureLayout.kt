@@ -106,7 +106,7 @@ class SwipeGestureLayout @JvmOverloads constructor(
         listeners.add(listener)
     }
 
-    override fun onInterceptTouchEvent(event: MotionEvent?): Boolean {
+    override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
         return when (event?.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
                 handledInitialScroll = false
@@ -117,7 +117,7 @@ class SwipeGestureLayout @JvmOverloads constructor(
         }
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
+    override fun onTouchEvent(event: MotionEvent): Boolean {
         return when (event?.actionMasked) {
             MotionEvent.ACTION_CANCEL, MotionEvent.ACTION_UP -> {
                 gestureDetector.onTouchEvent(event)

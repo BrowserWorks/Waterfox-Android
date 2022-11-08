@@ -81,7 +81,7 @@ import mozilla.components.support.base.feature.PermissionsFeature
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.view.enterToImmersiveMode
-import mozilla.components.support.ktx.android.view.exitImmersiveModeIfNeeded
+import mozilla.components.support.ktx.android.view.exitImmersiveMode
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.kotlin.getOrigin
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
@@ -1340,7 +1340,7 @@ abstract class BaseBrowserFragment :
             // Without this, fullscreen has a margin at the top.
             binding.engineView.setVerticalClipping(0)
         } else {
-            activity?.exitImmersiveModeIfNeeded()
+            activity?.exitImmersiveMode()
             (activity as? HomeActivity)?.let { activity ->
                 activity.themeManager.applyStatusBarTheme(activity)
             }
