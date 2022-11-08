@@ -1128,7 +1128,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     var showContileFeature by booleanPreference(
         key = appContext.getPreferenceKey(R.string.pref_key_enable_contile),
-        default = true
+        default = false
     )
 
     /**
