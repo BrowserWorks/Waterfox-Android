@@ -236,8 +236,7 @@ android.applicationVariants.all { variant ->
     buildConfigField 'String', 'SENTRY_TOKEN', 'null'
     if (!isDebug) {
         buildConfigField 'boolean', 'CRASH_REPORTING', 'true'
-        // TODO: [Waterfox] provide Sentry token
-        // Reading sentry token from local file (if it exists). In a release task on taskcluster it will be available.
+        // Reading sentry token from local file (if it exists). In a release task on Fastlane it will be available.
         try {
             def token = new File("${rootDir}/.sentry_token").text.trim()
             buildConfigField 'String', 'SENTRY_TOKEN', '"' + token + '"'

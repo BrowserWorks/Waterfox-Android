@@ -80,15 +80,9 @@ class Analytics(
 
 private fun isSentryEnabled() = !BuildConfig.SENTRY_TOKEN.isNullOrEmpty()
 
-private fun getSentryProjectUrl(): String? {
-    // TODO: [Waterfox] change this URL to an own one
-    val baseUrl = "https://sentry.io/organizations/mozilla/issues"
-    return when (Config.channel) {
-        // TODO: [Waterfox] change this project ID to an own one
-        ReleaseChannel.Release -> "$baseUrl/?project=6375561"
-        else -> null
-    }
-}
+private fun getSentryProjectUrl() =
+    if (Config.channel == ReleaseChannel.Release) "https://sentry.io/organizations/system1/issues/?project=4504101698142208"
+    else null
 
 object NoOpCrashReporterService : CrashReporterService {
     override val id: String = ""
