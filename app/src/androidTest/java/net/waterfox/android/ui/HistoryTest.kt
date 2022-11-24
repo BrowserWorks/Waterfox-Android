@@ -21,6 +21,7 @@ import net.waterfox.android.R
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
 import net.waterfox.android.helpers.RecyclerViewIdlingResource
 import net.waterfox.android.helpers.TestAssetHelper
@@ -40,6 +41,7 @@ class HistoryTest {
     private lateinit var mDevice: UiDevice
     private var historyListIdlingResource: RecyclerViewIdlingResource? = null
     private var recentlyClosedTabsListIdlingResource: RecyclerViewIdlingResource? = null
+    private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
     val activityTestRule = HomeActivityTestRule()
@@ -54,11 +56,14 @@ class HistoryTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
     fun tearDown() {
         mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
         // Clearing all history data after each test to avoid overlapping data
         val applicationContext: Context = activityTestRule.activity.applicationContext
         val historyStorage = PlacesHistoryStorage(applicationContext)
@@ -152,6 +157,29 @@ class HistoryTest {
 
     @SmokeTest
     @Test
+    fun cancelDeleteAllHistoryTest() {
+        val firstWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(firstWebPage.url) {
+            mDevice.waitForIdle()
+        }.openThreeDotMenu {
+        }.openHistory {
+            verifyHistoryListExists()
+            historyListIdlingResource =
+                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
+            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
+            clickDeleteAllHistoryButton()
+            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
+            verifyDeleteConfirmationMessage()
+            selectEverythingOption()
+            cancelDeleteHistory()
+            verifyHistoryItemExists(true, firstWebPage.url.toString())
+        }
+    }
+
+    @SmokeTest
+    @Test
     fun deleteAllHistoryTest() {
         val firstWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -167,6 +195,7 @@ class HistoryTest {
             clickDeleteAllHistoryButton()
             IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
             verifyDeleteConfirmationMessage()
+            selectEverythingOption()
             confirmDeleteAllHistory()
             verifyDeleteSnackbarText("Browsing data deleted")
             verifyEmptyHistoryView()

@@ -76,6 +76,7 @@ import net.waterfox.android.library.history.HistoryFragmentDirections
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentDirections
 import net.waterfox.android.library.recentlyclosed.RecentlyClosedFragmentDirections
 import net.waterfox.android.onboarding.DefaultBrowserNotificationWorker
+import net.waterfox.android.onboarding.WaterfoxOnboarding
 import net.waterfox.android.perf.*
 import net.waterfox.android.search.SearchDialogFragmentDirections
 import net.waterfox.android.session.PrivateNotificationService
@@ -94,6 +95,7 @@ import net.waterfox.android.theme.DefaultThemeManager
 import net.waterfox.android.theme.ThemeManager
 import net.waterfox.android.trackingprotection.TrackingProtectionPanelDialogFragmentDirections
 import net.waterfox.android.utils.BrowsersCache
+import net.waterfox.android.utils.ManufacturerCodes
 import net.waterfox.android.utils.Settings
 import java.lang.ref.WeakReference
 
@@ -129,6 +131,8 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
     private val navHost by lazy {
         supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
     }
+
+    private val onboarding by lazy { WaterfoxOnboarding(applicationContext) }
 
     private val externalSourceIntentProcessors by lazy {
         listOf(
@@ -208,6 +212,10 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             navigateToBrowserOnColdStart()
         }
 
+        if (settings().showHomeOnboardingDialog && onboarding.userHasBeenOnboarded()) {
+            navHost.navController.navigate(NavGraphDirections.actionGlobalHomeOnboardingDialog())
+        }
+
         Performance.processIntentIfPerformanceTest(intent, this)
 
         supportActionBar?.hide()
@@ -225,6 +233,15 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
         if (settings().showContileFeature) {
             components.core.contileTopSitesUpdater.startPeriodicWork()
+        }
+
+        components.backgroundServices.accountManagerAvailableQueue.runIfReadyOrQueue {
+            lifecycleScope.launch(IO) {
+                // If we're authenticated, kick-off a sync and a device state refresh.
+                components.backgroundServices.accountManager.authenticatedAccount()?.let {
+                    components.backgroundServices.accountManager.syncNow(reason = SyncReason.Startup)
+                }
+            }
         }
 
         components.core.engine.profiler?.addMarker(
@@ -251,18 +268,6 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         breadcrumb(
             message = "onResume()"
         )
-
-        components.backgroundServices.accountManagerAvailableQueue.runIfReadyOrQueue {
-            lifecycleScope.launch {
-                // If we're authenticated, kick-off a sync and a device state refresh.
-                components.backgroundServices.accountManager.authenticatedAccount()?.let {
-                    components.backgroundServices.accountManager.syncNow(
-                        SyncReason.Startup,
-                        debounce = true
-                    )
-                }
-            }
-        }
 
         lifecycleScope.launch(IO) {
             try {
@@ -530,8 +535,7 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             Build.VERSION.SDK_INT == Build.VERSION_CODES.N || Build.VERSION.SDK_INT == Build.VERSION_CODES.N_MR1
         // Huawei devices seem to have problems with onKeyLongPress
         // See https://github.com/mozilla-mobile/fenix/issues/13498
-        val isHuawei = Build.MANUFACTURER.equals("huawei", ignoreCase = true)
-        return isAndroidN || isHuawei
+        return isAndroidN || ManufacturerCodes.isHuawei
     }
 
     private fun handleBackLongPress(): Boolean {

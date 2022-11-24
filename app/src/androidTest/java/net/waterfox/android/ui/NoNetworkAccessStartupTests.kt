@@ -7,11 +7,13 @@ package net.waterfox.android.ui
 import androidx.core.net.toUri
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.After
+import org.junit.Before
 import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import net.waterfox.android.R
 import net.waterfox.android.ext.settings
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
 import net.waterfox.android.helpers.TestHelper.packageName
 import net.waterfox.android.helpers.TestHelper.setNetworkEnabled
@@ -30,10 +32,18 @@ class NoNetworkAccessStartupTests {
     @get:Rule
     val activityTestRule = HomeActivityTestRule(launchActivity = false)
 
+    private val featureSettingsHelper = FeatureSettingsHelper()
+
+    @Before
+    fun setUp() {
+        featureSettingsHelper.setTCPCFREnabled(false)
+    }
+
     @After
     fun tearDown() {
         // Restoring network connection
         setNetworkEnabled(true)
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @Test

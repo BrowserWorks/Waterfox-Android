@@ -351,14 +351,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
-    /**
-     * Indicates if the user has enabled the search term tab groups feature.
-     */
-    var searchTermTabGroupsAreEnabled by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_search_term_tab_groups),
-        default = true
-    )
-
     @VisibleForTesting
     internal fun timeNowInMillis(): Long = System.currentTimeMillis()
 
@@ -495,9 +487,17 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
     val enabledTotalCookieProtection: Boolean = true
 
+    /**
+     * Indicates if the total cookie protection CRF should be shown.
+     */
+    var shouldShowTotalCookieProtectionCFR by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_should_show_total_cookie_protection_popup),
+        default = true
+    )
+
     val blockCookiesSelectionInCustomTrackingProtection by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_tracking_protection_custom_cookies_select),
-        appContext.getString(R.string.social)
+        key = appContext.getPreferenceKey(R.string.pref_key_tracking_protection_custom_cookies_select),
+        default = appContext.getString(R.string.total_protection)
     )
 
     val blockTrackingContentInCustomTrackingProtection by booleanPreference(
@@ -701,10 +701,10 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     )
 
     /**
-     * Indicates if the home onboarding dialog has already shown before.
+     * Indicates if home onboarding dialog should be shown.
      */
-    var hasShownHomeOnboardingDialog by booleanPreference(
-        appContext.getPreferenceKey(R.string.pref_key_has_shown_home_onboarding),
+    var showHomeOnboardingDialog by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_should_show_home_onboarding_dialog),
         default = true
     )
 
@@ -1008,8 +1008,8 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     )
 
     /**
-     *  URLs from the user's history that contain this search param will be hidden
-     * from the top sites. The value is a string with one of the following forms:
+     *  URLs from the user's history that contain this search param will be hidden.
+     *  The value is a string with one of the following forms:
      * - "" (empty) - Disable this feature
      * - "key" - Search param named "key" with any or no value
      * - "key=" - Search param named "key" with no value
@@ -1017,7 +1017,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
      */
     val frecencyFilterQuery by stringPreference(
         appContext.getPreferenceKey(R.string.pref_key_frecency_filter_query),
-        default = "mfadid=adm"
+        default = "mfadid=adm" // Parameter provided by adM
     )
 
     private var savedLoginsSortingStrategyString by stringPreference(

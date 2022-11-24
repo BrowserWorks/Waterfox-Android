@@ -15,6 +15,7 @@ import org.junit.Test
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
 import net.waterfox.android.helpers.RetryTestRule
 import net.waterfox.android.helpers.TestAssetHelper
@@ -47,6 +48,8 @@ class ContextMenusTest {
     @JvmField
     val retryTestRule = RetryTestRule(3)
 
+    private val featureSettingsHelper = FeatureSettingsHelper()
+
     @Before
     fun setUp() {
         activityIntentTestRule.activity.applicationContext.settings().shouldShowJumpBackInCFR = false
@@ -55,11 +58,14 @@ class ContextMenusTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
     fun tearDown() {
         mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @SmokeTest

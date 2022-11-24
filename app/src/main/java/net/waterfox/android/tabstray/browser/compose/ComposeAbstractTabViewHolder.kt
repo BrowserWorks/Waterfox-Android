@@ -15,6 +15,7 @@ import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.tabstray.SelectableTabViewHolder
 import net.waterfox.android.compose.ComposeViewHolder
 import net.waterfox.android.theme.WaterfoxTheme
+import net.waterfox.android.theme.Theme
 
 /**
  * [RecyclerView.ViewHolder] used for Jetpack Compose UI content .
@@ -38,7 +39,7 @@ abstract class ComposeAbstractTabViewHolder(
      */
     fun bind(tab: TabSessionState) {
         composeView.setContent {
-            WaterfoxTheme {
+            WaterfoxTheme(theme = Theme.getTheme(allowPrivateTheme = tab.content.private)) {
                 Content(tab)
             }
         }

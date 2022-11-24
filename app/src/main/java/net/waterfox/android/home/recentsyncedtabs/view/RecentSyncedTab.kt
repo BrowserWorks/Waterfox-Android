@@ -4,9 +4,10 @@
 
 package net.waterfox.android.home.recentsyncedtabs.view
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,11 +22,20 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.DropdownMenu
+import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -34,9 +44,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import mozilla.components.concept.sync.DeviceType
 import net.waterfox.android.R
+import net.waterfox.android.compose.Image
 import net.waterfox.android.compose.ThumbnailCard
 import net.waterfox.android.compose.button.Button
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
+import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
 
@@ -46,19 +58,32 @@ import net.waterfox.android.theme.Theme
  * @param tab The [RecentSyncedTab] to display.
  * @param onRecentSyncedTabClick Invoked when the user clicks on the recent synced tab.
  * @param onSeeAllSyncedTabsButtonClick Invoked when user clicks on the "See all" button in the synced tab card.
+ * @param onRemoveSyncedTab Invoked when user clicks on the "Remove" dropdown menu option.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Suppress("LongMethod")
 @Composable
 fun RecentSyncedTab(
     tab: RecentSyncedTab?,
     onRecentSyncedTabClick: (RecentSyncedTab) -> Unit,
     onSeeAllSyncedTabsButtonClick: () -> Unit,
+    onRemoveSyncedTab: (RecentSyncedTab) -> Unit,
 ) {
+    var isDropdownExpanded by remember { mutableStateOf(false) }
+
+    fun removeSyncedTab(recentSyncedTab: RecentSyncedTab) {
+        isDropdownExpanded = false
+        onRemoveSyncedTab(recentSyncedTab)
+    }
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
-            .clickable { tab?.let { onRecentSyncedTabClick(tab) } },
+            .combinedClickable(
+                onClick = { tab?.let { onRecentSyncedTabClick(tab) } },
+                onLongClick = { isDropdownExpanded = true }
+            ),
         shape = RoundedCornerShape(8.dp),
         backgroundColor = WaterfoxTheme.colors.layer2,
         elevation = 6.dp
@@ -68,13 +93,23 @@ fun RecentSyncedTab(
                 if (tab == null) {
                     RecentTabImagePlaceholder()
                 } else {
-                    ThumbnailCard(
-                        url = tab.url,
-                        key = tab.url.hashCode().toString(),
-                        modifier = Modifier
-                            .size(108.dp, 80.dp)
-                            .clip(RoundedCornerShape(8.dp))
-                    )
+                    val imageModifier = Modifier
+                        .size(108.dp, 80.dp)
+                        .clip(RoundedCornerShape(8.dp))
+
+                    if (tab.previewImageUrl != null) {
+                        Image(
+                            url = tab.previewImageUrl,
+                            contentScale = ContentScale.Crop,
+                            modifier = imageModifier
+                        )
+                    } else {
+                        ThumbnailCard(
+                            url = tab.url,
+                            key = tab.url.hashCode().toString(),
+                            modifier = imageModifier
+                        )
+                    }
                 }
 
                 Spacer(modifier = Modifier.width(16.dp))
@@ -148,6 +183,8 @@ fun RecentSyncedTab(
             )
         }
     }
+
+    SyncedTabDropdown(isDropdownExpanded, tab, ::removeSyncedTab) { isDropdownExpanded = false }
 }
 
 /**
@@ -190,6 +227,48 @@ private fun TextLinePlaceHolder() {
     )
 }
 
+/**
+ * Long click dropdown menu shown for a [RecentSyncedTab].
+ *
+ * @param showMenu Whether this is currently open and visible to the user.
+ * @param tab The [RecentTab.Tab] for which this menu is shown.
+ * @param onRemove Called when the user interacts with the `Remove` option.
+ * @param onDismiss Called when the user chooses a menu option or requests to dismiss the menu.
+ */
+@Composable
+private fun SyncedTabDropdown(
+    showMenu: Boolean,
+    tab: RecentSyncedTab?,
+    onRemove: (RecentSyncedTab) -> Unit,
+    onDismiss: () -> Unit,
+) {
+    DisposableEffect(LocalConfiguration.current.orientation) {
+        onDispose { onDismiss() }
+    }
+
+    DropdownMenu(
+        expanded = showMenu && tab != null,
+        onDismissRequest = { onDismiss() },
+        modifier = Modifier
+            .background(color = WaterfoxTheme.colors.layer2)
+    ) {
+        DropdownMenuItem(
+            onClick = {
+                tab?.let { onRemove(it) }
+            }
+        ) {
+            Text(
+                text = stringResource(id = R.string.recent_synced_tab_menu_item_remove),
+                color = WaterfoxTheme.colors.textPrimary,
+                maxLines = 1,
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .align(Alignment.CenterVertically)
+            )
+        }
+    }
+}
+
 @Preview
 @Composable
 private fun LoadedRecentSyncedTab() {
@@ -198,13 +277,14 @@ private fun LoadedRecentSyncedTab() {
         deviceType = DeviceType.DESKTOP,
         title = "This is a long site title",
         url = "https://waterfox.net",
-        iconUrl = "https://waterfox.net",
+        previewImageUrl = "https://waterfox.net",
     )
     WaterfoxTheme(theme = Theme.getTheme()) {
         RecentSyncedTab(
             tab = tab,
             onRecentSyncedTabClick = {},
             onSeeAllSyncedTabsButtonClick = {},
+            onRemoveSyncedTab = {},
         )
     }
 }
@@ -217,6 +297,7 @@ private fun LoadingRecentSyncedTab() {
             tab = null,
             onRecentSyncedTabClick = {},
             onSeeAllSyncedTabsButtonClick = {},
+            onRemoveSyncedTab = {},
         )
     }
 }

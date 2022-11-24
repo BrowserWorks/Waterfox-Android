@@ -43,6 +43,7 @@ class SettingsAdvancedTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After

@@ -61,7 +61,6 @@
     <string name="pref_key_last_browse_activity_time" translatable="false">pref_key_last_browse_activity_time</string>
     <string name="pref_key_last_cfr_shown_time" translatable="false">pref_key_last_cfr_shown_time</string>
     <string name="pref_key_should_show_default_browser_notification" translatable="false">pref_key_should_show_default_browser_notification</string>
-    <string name="pref_key_has_shown_home_onboarding" translatable="false">pref_key_has_shown_home_onboarding</string>
     <string name="pref_key_home_blocklist">pref_key_home_blocklist</string>
 
     <!-- Data Choices -->
@@ -222,6 +221,10 @@
     <string name="pref_key_has_inactive_tabs_auto_close_dialog_dismissed" translatable="false">pref_key_has_inactive_tabs_auto_close_dialog_dismissed</string>
     <!-- A value  of `true` means the jump back in onboarding popup has not been shown yet -->
     <string name="pref_key_should_show_jump_back_in_tabs_popup" translatable="false">pref_key_should_show_jump_back_in_tabs_popup</string>
+    <!-- A value  of `true` means the home onboarding dialog have not been shown yet -->
+    <string name="pref_key_should_show_home_onboarding_dialog" translatable="false">pref_key_should_show_home_onboarding_dialog</string>
+    <!-- A value  of `true` means the total cookie protection popup has not been shown yet -->
+    <string name="pref_key_should_show_total_cookie_protection_popup" translatable="false">pref_key_should_show_total_cookie_protection_popup</string>
 
     <string name="pref_key_debug_settings" translatable="false">pref_key_debug_settings</string>
 
@@ -255,7 +258,6 @@
     <string name="pref_key_camera_permissions_needed" translatable="false">pref_key_camera_permissions_needed</string>
     <string name="pref_key_inactive_tabs_category" translatable="false">pref_key_inactive_tabs_category</string>
     <string name="pref_key_inactive_tabs" translatable="false">pref_key_inactive_tabs</string>
-    <string name="pref_key_search_term_tab_groups" translatable="false">pref_key_search_term_tab_groups</string>
 
     <string name="pref_key_return_to_browser" translatable="false">pref_key_return_to_browser</string>
 

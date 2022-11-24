@@ -16,7 +16,9 @@ import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.helpers.AndroidAssetDispatcher
 import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
-import net.waterfox.android.helpers.TestAssetHelper
+import net.waterfox.android.helpers.RetryTestRule
+import net.waterfox.android.helpers.TestAssetHelper.getGenericAsset
+import net.waterfox.android.helpers.TestHelper.generateRandomString
 import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.ui.robots.browserScreen
 import net.waterfox.android.ui.robots.homeScreen
@@ -39,6 +41,9 @@ class TopSitesTest {
     @get:Rule
     val activityIntentTestRule = HomeActivityIntentTestRule(skipOnboarding = true)
 
+    @get:Rule
+    val retryTestRule = RetryTestRule(3)
+
     @Before
     fun setUp() {
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
@@ -48,6 +53,7 @@ class TopSitesTest {
         }
 
         featureSettingsHelper.setJumpBackCFREnabled(false)
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
@@ -59,8 +65,7 @@ class TopSitesTest {
     @SmokeTest
     @Test
     fun verifyAddToWaterfoxHome() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
@@ -71,14 +76,13 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
+            verifyExistingTopSitesTabs(defaultWebPage.title)
         }
     }
 
     @Test
     fun verifyOpenTopSiteNormalTab() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
@@ -89,13 +93,13 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openTopSiteTabWithTitle(title = defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openTopSiteTabWithTitle(title = defaultWebPage.title) {
             verifyUrl(defaultWebPage.url.toString().replace("http://", ""))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openContextMenuOnTopSitesWithTitle(defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openContextMenuOnTopSitesWithTitle(defaultWebPage.title) {
             verifyTopSiteContextMenuItems()
         }
 
@@ -105,8 +109,7 @@ class TopSitesTest {
 
     @Test
     fun verifyOpenTopSitePrivateTab() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
@@ -117,8 +120,8 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openContextMenuOnTopSitesWithTitle(defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openContextMenuOnTopSitesWithTitle(defaultWebPage.title) {
             verifyTopSiteContextMenuItems()
         }.openTopSiteInPrivateTab {
             verifyCurrentPrivateSession(activityIntentTestRule.activity.applicationContext)
@@ -127,12 +130,12 @@ class TopSitesTest {
 
     @Test
     fun verifyRenameTopSite() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
-        val defaultWebPageTitleNew = "Test_Page_2"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
+        val newPageTitle = generateRandomString(5)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
+            waitForPageToLoad()
         }.openThreeDotMenu {
             expandMenu()
             verifyAddToTopSitesButton()
@@ -140,19 +143,18 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openContextMenuOnTopSitesWithTitle(defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openContextMenuOnTopSitesWithTitle(defaultWebPage.title) {
             verifyTopSiteContextMenuItems()
-        }.renameTopSite(defaultWebPageTitleNew) {
+        }.renameTopSite(newPageTitle) {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitleNew)
+            verifyExistingTopSitesTabs(newPageTitle)
         }
     }
 
     @Test
     fun verifyRemoveTopSite() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
@@ -163,18 +165,17 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openContextMenuOnTopSitesWithTitle(defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openContextMenuOnTopSitesWithTitle(defaultWebPage.title) {
             verifyTopSiteContextMenuItems()
         }.removeTopSite {
-            verifyNotExistingTopSitesList(defaultWebPageTitle)
+            verifyNotExistingTopSitesList(defaultWebPage.title)
         }
     }
 
     @Test
     fun verifyRemoveTopSiteFromMainMenu() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val defaultWebPageTitle = "Test_Page_1"
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         navigationToolbar {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
@@ -185,13 +186,13 @@ class TopSitesTest {
             verifySnackBarText(getStringResource(R.string.snackbar_added_to_shortcuts))
         }.goToHomescreen {
             verifyExistingTopSitesList()
-            verifyExistingTopSitesTabs(defaultWebPageTitle)
-        }.openTopSiteTabWithTitle(defaultWebPageTitle) {
+            verifyExistingTopSitesTabs(defaultWebPage.title)
+        }.openTopSiteTabWithTitle(defaultWebPage.title) {
         }.openThreeDotMenu {
             verifyRemoveFromShortcutsButton()
         }.clickRemoveFromShortcuts {
         }.goToHomescreen {
-            verifyNotExistingTopSitesList(defaultWebPageTitle)
+            verifyNotExistingTopSitesList(defaultWebPage.title)
         }
     }
 
@@ -217,13 +218,13 @@ class TopSitesTest {
     @SmokeTest
     @Test
     fun addAndRemoveMostViewedTopSiteTest() {
-        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
+        val defaultWebPage = getGenericAsset(mockWebServer, 1)
 
         for (i in 0..1) {
             navigationToolbar {
             }.enterURLAndEnterToBrowser(defaultWebPage.url) {
-                mDevice.waitForIdle()
                 waitForPageToLoad()
+                verifyPageContent(defaultWebPage.content)
             }
         }
 
@@ -236,6 +237,25 @@ class TopSitesTest {
         }.openThreeDotMenu {
         }.openHistory {
             verifyEmptyHistoryView()
+        }
+    }
+
+    @SmokeTest
+    @Test
+    fun verifySponsoredShortcutsListTest() {
+        homeScreen {
+        }.openThreeDotMenu {
+        }.openCustomizeHome {
+            verifySponsoredShortcutsCheckBox(true)
+        }.goBack {
+            verifyExistingSponsoredTopSitesTabs(2)
+            verifyExistingSponsoredTopSitesTabs(3)
+        }.openThreeDotMenu {
+        }.openCustomizeHome {
+            clickSponsoredShortcuts()
+            verifySponsoredShortcutsCheckBox(false)
+        }.goBack {
+            verifyNotExistingSponsoredTopSitesList()
         }
     }
 }

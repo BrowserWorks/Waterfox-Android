@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.savedstate.SavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import net.waterfox.android.theme.WaterfoxTheme
+import net.waterfox.android.theme.Theme
 
 /**
  * [RecyclerView.ViewHolder] used for Jetpack Compose UI content .
@@ -31,12 +32,17 @@ abstract class ComposeViewHolder(
     @Composable
     abstract fun Content()
 
+    /**
+     * Optional override used to disable private browsing theming and only obey dark/light theming.
+     */
+    open val allowPrivateTheme: Boolean = true
+
     init {
         composeView.setViewCompositionStrategy(
             ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
         )
         composeView.setContent {
-            WaterfoxTheme {
+            WaterfoxTheme(theme = Theme.getTheme(allowPrivateTheme = allowPrivateTheme)) {
                 Content()
             }
         }

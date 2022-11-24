@@ -5,6 +5,7 @@
 package net.waterfox.android
 
 import android.annotation.SuppressLint
+import android.net.Uri
 import android.os.Build
 import android.os.Build.VERSION.SDK_INT
 import android.os.StrictMode
@@ -191,7 +192,10 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
                             totalSites = components.settings.topSitesMaxLimit,
                             frecencyConfig = TopSitesFrecencyConfig(
                                 FrecencyThresholdOption.SKIP_ONE_TIME_PAGES
-                            ) { !it.containsQueryParameters(components.settings.frecencyFilterQuery) },
+                            ) {
+                                !Uri.parse(it.url)
+                                    .containsQueryParameters(components.settings.frecencyFilterQuery)
+                            },
                             providerConfig = TopSitesProviderConfig(
                                 showProviderTopSites = components.settings.showContileFeature,
                                 maxThreshold = TOP_SITES_PROVIDER_MAX_THRESHOLD

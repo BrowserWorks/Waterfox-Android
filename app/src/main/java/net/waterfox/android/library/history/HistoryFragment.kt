@@ -16,7 +16,6 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
@@ -51,12 +50,10 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         null
     ) {
         HistoryDataSource(
-            historyProvider = historyProvider,
-            isRemote = args.isSyncedHistory,
+            historyProvider = historyProvider
         )
     }.flow
 
-    private val args: HistoryFragmentArgs by navArgs()
     private var _historyView: HistoryView? = null
     private val historyView: HistoryView
         get() = _historyView!!
@@ -112,8 +109,7 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
                 historyStore.dispatch(
                     HistoryFragmentAction.ChangeEmptyState(it)
                 )
-            },
-            isSyncedHistory = args.isSyncedHistory,
+            }
         )
 
         return view

@@ -33,10 +33,6 @@ class HistoryListItemViewHolder(
             historyInteractor.onRecentlyClosedClicked()
         }
 
-        binding.syncedHistoryNavEmpty.syncedHistoryNav.setOnClickListener {
-            historyInteractor.onSyncedHistoryClicked()
-        }
-
         binding.historyLayout.overflowView.apply {
             setImageResource(R.drawable.ic_close)
             contentDescription = view.context.getString(R.string.history_delete_item)
@@ -117,17 +113,15 @@ class HistoryListItemViewHolder(
         } else {
             binding.headerTitle.visibility = View.GONE
         }
+        binding.bottomSpacer.isVisible = headerText != null
     }
 
-    @Suppress("NestedBlockDepth")
     private fun toggleTopContent(
         showTopContent: Boolean,
         isNormalMode: Boolean,
     ) {
         binding.recentlyClosedNavEmpty.recentlyClosedNav.isVisible = showTopContent
         binding.topSpacer.isVisible = showTopContent
-        binding.bottomSpacer.isVisible = showTopContent
-        binding.syncedHistoryNavEmpty.syncedHistoryNav.isVisible = showTopContent
 
         if (showTopContent) {
             val numRecentTabs = itemView.context.components.core.store.state.closedTabs.size
@@ -143,16 +137,6 @@ class HistoryListItemViewHolder(
             )
 
             binding.recentlyClosedNavEmpty.recentlyClosedNav.run {
-                if (isNormalMode) {
-                    isEnabled = true
-                    alpha = 1f
-                } else {
-                    isEnabled = false
-                    alpha = DISABLED_BUTTON_ALPHA
-                }
-            }
-
-            binding.syncedHistoryNavEmpty.syncedHistoryNav.run {
                 if (isNormalMode) {
                     isEnabled = true
                     alpha = 1f

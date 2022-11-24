@@ -7,6 +7,7 @@ package net.waterfox.android.ui
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import net.waterfox.android.customannotations.SmokeTest
@@ -42,6 +43,7 @@ class SettingsHomepageTest {
             start()
         }
         featureSettingsHelper.setJumpBackCFREnabled(false)
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
@@ -141,6 +143,7 @@ class SettingsHomepageTest {
         }
     }
 
+    @Ignore("Intermittent test: https://github.com/mozilla-mobile/fenix/issues/26559")
     @SmokeTest
     @Test
     fun setWallpaperTest() {

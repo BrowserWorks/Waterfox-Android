@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import mozilla.components.support.images.compose.loader.ImageLoader
 import mozilla.components.support.images.compose.loader.WithImage
 import net.waterfox.android.components.components
+import net.waterfox.android.theme.WaterfoxTheme
 
 /**
  * A composable that lays out and draws the image from a given URL while showing a default placeholder
@@ -46,33 +47,39 @@ fun Image(
     alignment: Alignment = Alignment.Center,
     contentScale: ContentScale = ContentScale.Fit,
 ) {
-    ImageLoader(
-        url = url,
-        client = components.core.client,
-        private = private,
-        targetSize = targetSize
-    ) {
-        WithImage { painter ->
-            androidx.compose.foundation.Image(
-                painter = painter,
-                modifier = modifier,
-                contentDescription = contentDescription,
-                alignment = alignment,
-                contentScale = contentScale
-            )
+    if (inComposePreview) {
+        DefaultImagePlaceholder(modifier = modifier)
+    } else {
+        ImageLoader(
+            url = url,
+            client = components.core.client,
+            private = private,
+            targetSize = targetSize
+        ) {
+            WithImage { painter ->
+                androidx.compose.foundation.Image(
+                    painter = painter,
+                    modifier = modifier,
+                    contentDescription = contentDescription,
+                    alignment = alignment,
+                    contentScale = contentScale
+                )
+            }
+
+            WithDefaultPlaceholder(modifier, contentDescription)
+
+            WithDefaultFallback(modifier, contentDescription)
         }
-
-        WithDefaultPlaceholder(modifier, contentDescription)
-
-        WithDefaultFallback(modifier, contentDescription)
     }
 }
 
 @Composable
 @Preview
 private fun ImagePreview() {
-    Image(
-        "https://mozilla.com",
-        Modifier.height(100.dp).width(200.dp)
-    )
+    WaterfoxTheme {
+        Image(
+            "https://mozilla.com",
+            Modifier.height(100.dp).width(200.dp)
+        )
+    }
 }

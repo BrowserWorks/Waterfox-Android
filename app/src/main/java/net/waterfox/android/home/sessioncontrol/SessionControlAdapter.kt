@@ -22,6 +22,7 @@ import net.waterfox.android.home.collections.CollectionViewHolder
 import net.waterfox.android.home.collections.TabInCollectionViewHolder
 import net.waterfox.android.home.recentbookmarks.view.RecentBookmarksHeaderViewHolder
 import net.waterfox.android.home.recentbookmarks.view.RecentBookmarksViewHolder
+import net.waterfox.android.home.recentsyncedtabs.view.RecentSyncedTabViewHolder
 import net.waterfox.android.home.recenttabs.view.RecentTabViewHolder
 import net.waterfox.android.home.recenttabs.view.RecentTabsHeaderViewHolder
 import net.waterfox.android.home.recentvisits.view.RecentVisitsHeaderViewHolder
@@ -156,6 +157,11 @@ sealed class AdapterItem(@LayoutRes val viewType: Int) {
     object RecentTabsHeader : AdapterItem(RecentTabsHeaderViewHolder.LAYOUT_ID)
     object RecentTabItem : AdapterItem(RecentTabViewHolder.LAYOUT_ID)
 
+    /**
+     * Adapter item to hold homescreen synced tabs view.
+     */
+    object RecentSyncedTabItem : AdapterItem(RecentSyncedTabViewHolder.LAYOUT_ID)
+
     object RecentVisitsHeader : AdapterItem(RecentVisitsHeaderViewHolder.LAYOUT_ID)
     object RecentVisitsItems : AdapterItem(RecentlyVisitedViewHolder.LAYOUT_ID)
 
@@ -220,6 +226,10 @@ class SessionControlAdapter(
                 composeView = ComposeView(parent.context),
                 viewLifecycleOwner = viewLifecycleOwner,
                 recentTabInteractor = interactor,
+            )
+            RecentSyncedTabViewHolder.LAYOUT_ID -> return RecentSyncedTabViewHolder(
+                composeView = ComposeView(parent.context),
+                viewLifecycleOwner = viewLifecycleOwner,
                 recentSyncedTabInteractor = interactor,
             )
             RecentlyVisitedViewHolder.LAYOUT_ID -> return RecentlyVisitedViewHolder(
@@ -302,6 +312,7 @@ class SessionControlAdapter(
             is RecentBookmarksViewHolder,
             is RecentBookmarksHeaderViewHolder,
             is RecentTabViewHolder,
+            is RecentSyncedTabViewHolder,
             is RecentTabsHeaderViewHolder,
             is PrivateBrowsingDescriptionViewHolder -> {
                 // no op
@@ -369,7 +380,8 @@ class SessionControlAdapter(
             is OnboardingManualSignInViewHolder -> holder.bind()
             is RecentlyVisitedViewHolder,
             is RecentBookmarksViewHolder,
-            is RecentTabViewHolder -> {
+            is RecentTabViewHolder,
+            is RecentSyncedTabViewHolder -> {
                 // no-op. This ViewHolder receives the HomeStore as argument and will observe that
                 // without the need for us to manually update from here the data to be displayed.
             }

@@ -15,6 +15,7 @@ import net.waterfox.android.R
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
 import net.waterfox.android.helpers.RecyclerViewIdlingResource
 import net.waterfox.android.helpers.TestAssetHelper.getEnhancedTrackingProtectionAsset
@@ -32,6 +33,7 @@ class SettingsAddonsTest {
     private lateinit var mockWebServer: MockWebServer
     private var addonsListIdlingResource: RecyclerViewIdlingResource? = null
     private var addonContainerIdlingResource: ViewVisibilityIdlingResource? = null
+    private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
     val activityTestRule = HomeActivityIntentTestRule()
@@ -42,6 +44,8 @@ class SettingsAddonsTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
@@ -55,6 +59,8 @@ class SettingsAddonsTest {
         if (addonContainerIdlingResource != null) {
             IdlingRegistry.getInstance().unregister(addonContainerIdlingResource!!)
         }
+
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     // Walks through settings add-ons menu to ensure all items are present

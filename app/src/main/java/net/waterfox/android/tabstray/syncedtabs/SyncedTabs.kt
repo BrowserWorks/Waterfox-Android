@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -35,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import mozilla.components.browser.storage.sync.TabEntry
 import mozilla.components.feature.syncedtabs.view.SyncedTabsView
 import net.waterfox.android.R
+import net.waterfox.android.compose.Divider
 import net.waterfox.android.compose.button.PrimaryButton
 import net.waterfox.android.compose.ext.dashedBorder
 import net.waterfox.android.compose.list.ExpandableListHeader
@@ -170,7 +170,7 @@ fun SyncedTabsSectionHeader(
             onClick = onClick,
         )
 
-        Divider(color = WaterfoxTheme.colors.borderPrimary)
+        Divider()
     }
 }
 
