@@ -25,7 +25,6 @@ import net.waterfox.android.ext.showToolbar
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.about.AboutItemType.*
 import net.waterfox.android.utils.Do
-import net.waterfox.android.whatsnew.WhatsNew
 import org.mozilla.geckoview.BuildConfig as GeckoViewBuildConfig
 
 /**
@@ -132,13 +131,6 @@ class AboutFragment : Fragment(), AboutPageListener {
         return listOf(
             AboutPageItem(
                 AboutItem.ExternalLink(
-                    WHATS_NEW,
-                    SupportUtils.getWhatsNewUrl(context)
-                ),
-                getString(R.string.about_whats_new, getString(R.string.app_name))
-            ),
-            AboutPageItem(
-                AboutItem.ExternalLink(
                     SUPPORT,
                     SupportUtils.getSumoURLForTopic(context, SupportUtils.SumoTopic.HELP)
                 ),
@@ -189,11 +181,6 @@ class AboutFragment : Fragment(), AboutPageListener {
     override fun onAboutItemClicked(item: AboutItem) {
         Do exhaustive when (item) {
             is AboutItem.ExternalLink -> {
-                when (item.type) {
-                    WHATS_NEW -> WhatsNew.userViewedWhatsNew(requireContext())
-                    SUPPORT, PRIVACY_NOTICE, LICENSING_INFO, RIGHTS -> Unit
-                }
-
                 openLinkInNormalTab(item.url)
             }
             is AboutItem.Libraries -> {
