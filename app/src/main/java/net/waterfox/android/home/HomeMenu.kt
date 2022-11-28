@@ -5,7 +5,6 @@
 package net.waterfox.android.home
 
 import android.content.Context
-import androidx.core.content.ContextCompat.getColor
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
@@ -29,7 +28,6 @@ import net.waterfox.android.components.accounts.WaterfoxAccountManager
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.theme.ThemeManager
-import net.waterfox.android.whatsnew.WhatsNew
 
 @Suppress("LargeClass", "LongMethod")
 class HomeMenu(
@@ -45,7 +43,6 @@ class HomeMenu(
         object Downloads : Item()
         object Extensions : Item()
         data class SyncAccount(val accountState: AccountState) : Item()
-        object WhatsNew : Item()
         object Help : Item()
         object CustomizeHome : Item()
         object Settings : Item()
@@ -155,18 +152,6 @@ class HomeMenu(
             onItemTapped.invoke(Item.Extensions)
         }
 
-        val whatsNewItem = BrowserMenuHighlightableItem(
-            context.getString(R.string.browser_menu_whats_new),
-            R.drawable.ic_whats_new,
-            iconTintColorResource = primaryTextColor,
-            highlight = BrowserMenuHighlight.LowPriority(
-                notificationTint = getColor(context, R.color.fx_mobile_icon_color_information)
-            ),
-            isHighlighted = { WhatsNew.shouldHighlightWhatsNew(context) }
-        ) {
-            onItemTapped.invoke(Item.WhatsNew)
-        }
-
         val helpItem = BrowserMenuImageText(
             context.getString(R.string.browser_menu_help),
             R.drawable.mozac_ic_help,
@@ -212,7 +197,6 @@ class HomeMenu(
             BrowserMenuDivider(),
             desktopItem,
             BrowserMenuDivider(),
-            whatsNewItem,
             helpItem,
             customizeHomeItem,
             settingsItem,

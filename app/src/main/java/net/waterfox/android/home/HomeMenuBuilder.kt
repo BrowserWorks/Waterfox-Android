@@ -24,7 +24,6 @@ import net.waterfox.android.ext.settings
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.theme.ThemeManager
-import net.waterfox.android.whatsnew.WhatsNew
 import java.lang.ref.WeakReference
 
 /**
@@ -130,15 +129,6 @@ class HomeMenuBuilder(
                         context = context,
                         topic = SupportUtils.SumoTopic.HELP
                     ),
-                    newTab = true,
-                    from = BrowserDirection.FromHome
-                )
-            }
-            HomeMenu.Item.WhatsNew -> {
-                WhatsNew.userViewedWhatsNew(context)
-
-                homeActivity.openToBrowserAndLoad(
-                    searchTermOrURL = SupportUtils.getWhatsNewUrl(context),
                     newTab = true,
                     from = BrowserDirection.FromHome
                 )

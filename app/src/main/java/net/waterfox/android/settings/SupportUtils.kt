@@ -33,7 +33,6 @@ object SupportUtils {
         YOUR_RIGHTS("your-rights"),
         TRACKING_PROTECTION("tracking-protection-waterfox-android"),
         TOTAL_COOKIE_PROTECTION("enhanced-tracking-protection-android"),
-        WHATS_NEW("whats-new-waterfox-android"),
         SEND_TABS("send-tab-preview"),
         SET_AS_DEFAULT_BROWSER("set-waterfox-android-default"),
         SEARCH_SUGGESTION("how-search-waterfox-android"),
@@ -85,8 +84,6 @@ object SupportUtils {
         val langTag = getLanguageTag(locale)
         return "https://www.waterfox.net/docs/$path"
     }
-
-    fun getWhatsNewUrl(context: Context) = getSumoURLForTopic(context, SumoTopic.WHATS_NEW)
 
     fun createCustomTabIntent(context: Context, url: String): Intent = CustomTabsIntent.Builder()
         .setInstantAppsEnabled(false)
