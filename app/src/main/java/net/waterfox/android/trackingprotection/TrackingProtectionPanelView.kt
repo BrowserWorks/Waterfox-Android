@@ -23,6 +23,7 @@ import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentTrackingProtectionPanelBinding
 import net.waterfox.android.ext.addUnderline
+import net.waterfox.android.ext.settings
 import net.waterfox.android.trackingprotection.TrackingProtectionCategory.*
 
 /**
@@ -121,6 +122,9 @@ class TrackingProtectionPanelView(
         binding.notBlockingHeader.isGone = bucketedTrackers.loadedIsEmpty()
         binding.blockingHeader.isGone = bucketedTrackers.blockedIsEmpty()
 
+        binding.crossSiteTracking.text = containerView.context.getString(R.string.etp_cookies_title_2)
+        binding.crossSiteTrackingLoaded.text = containerView.context.getString(R.string.etp_cookies_title_2)
+
         updateCategoryVisibility()
         focusAccessibilityLastUsedCategory(state.lastAccessedCategory)
     }
@@ -132,7 +136,14 @@ class TrackingProtectionPanelView(
         val containASmartBlockItem = bucketedTrackers.get(category, categoryBlocked).any { it.unBlockedBySmartBlock }
         binding.normalMode.visibility = View.GONE
         binding.detailsMode.visibility = View.VISIBLE
-        binding.categoryTitle.setText(category.title)
+
+        if (category == CROSS_SITE_TRACKING_COOKIES) {
+            binding.categoryTitle.setText(R.string.etp_cookies_title_2)
+            binding.categoryDescription.setText(R.string.etp_cookies_description_2)
+        } else {
+            binding.categoryTitle.setText(category.title)
+            binding.categoryDescription.setText(category.description)
+        }
 
         binding.smartblockDescription.isVisible = containASmartBlockItem
         binding.smartblockLearnMore.isVisible = containASmartBlockItem
@@ -151,7 +162,6 @@ class TrackingProtectionPanelView(
                 setOnClickListener { interactor.onLearnMoreClicked() }
             }
         }
-        binding.categoryDescription.setText(category.description)
         binding.detailsBlockingHeader.setText(
             if (categoryBlocked) {
                 R.string.enhanced_tracking_protection_blocked

@@ -14,6 +14,7 @@ import org.junit.Test
 import net.waterfox.android.IntentReceiverActivity
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
 import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.helpers.TestHelper.createCustomTabIntent
@@ -43,6 +44,8 @@ class CustomTabsTest {
         IntentReceiverActivity::class.java, true, false
     )
 
+    private val featureSettingsHelper = FeatureSettingsHelper()
+
     @Before
     fun setUp() {
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
@@ -50,11 +53,14 @@ class CustomTabsTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
     fun tearDown() {
         mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @SmokeTest

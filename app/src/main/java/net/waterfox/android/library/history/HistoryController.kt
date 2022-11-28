@@ -20,6 +20,7 @@ import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.history.DefaultPagedHistoryProvider
 import net.waterfox.android.ext.components
+import net.waterfox.android.ext.navigateSafe
 import net.waterfox.android.library.history.HistoryFragment.DeleteConfirmationDialogFragment
 import net.waterfox.android.utils.Settings
 
@@ -46,11 +47,6 @@ interface HistoryController {
     fun handleDeleteTimeRangeConfirmed(timeFrame: RemoveTimeFrame?)
     fun handleRequestSync()
     fun handleEnterRecentlyClosed()
-
-    /**
-     * Navigates to [HistoryFragment] that would display history synced from other devices.
-     */
-    fun handleEnterSyncedHistory()
 }
 
 @Suppress("TooManyFunctions", "LongParameterList")
@@ -123,7 +119,7 @@ class DefaultHistoryController(
             HistoryFragmentDirections.actionGlobalHistorySearchDialog()
         }
 
-        navController.navigate(directions)
+        navController.navigateSafe(R.id.historyFragment, directions)
     }
 
     override fun handleDeleteTimeRange() {
@@ -202,9 +198,5 @@ class DefaultHistoryController(
             HistoryFragmentDirections.actionGlobalRecentlyClosed(),
             NavOptions.Builder().setPopUpTo(R.id.recentlyClosedFragment, true).build()
         )
-    }
-
-    override fun handleEnterSyncedHistory() {
-        navController.navigate(HistoryFragmentDirections.actionSyncedHistoryFragment())
     }
 }

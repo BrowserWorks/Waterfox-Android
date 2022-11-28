@@ -11,7 +11,7 @@ import androidx.preference.DropDownPreference
 import androidx.preference.ListPreference
 import net.waterfox.android.R
 
-class DropDownListPreference @JvmOverloads constructor(
+open class DropDownListPreference @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : DropDownPreference(context, attrs) {

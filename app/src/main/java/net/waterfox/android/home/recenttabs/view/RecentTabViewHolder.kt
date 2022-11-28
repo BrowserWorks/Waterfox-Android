@@ -5,23 +5,15 @@
 package net.waterfox.android.home.recenttabs.view
 
 import android.view.View
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.lifecycle.LifecycleOwner
 import mozilla.components.lib.state.ext.observeAsComposableState
 import net.waterfox.android.R
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.ComposeViewHolder
-import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
 import net.waterfox.android.home.recenttabs.interactor.RecentTabInteractor
-import net.waterfox.android.home.recentsyncedtabs.interactor.RecentSyncedTabInteractor
-import net.waterfox.android.home.recentsyncedtabs.view.RecentSyncedTab
 
 /**
  * View holder for a recent tab item.
@@ -29,14 +21,11 @@ import net.waterfox.android.home.recentsyncedtabs.view.RecentSyncedTab
  * @param composeView [ComposeView] which will be populated with Jetpack Compose UI content.
  * @param recentTabInteractor [RecentTabInteractor] which will have delegated to all user recent
  * tab interactions.
- * @param recentSyncedTabInteractor [RecentSyncedTabInteractor] which will have delegated to all user
- * recent synced tab interactions.
  */
 class RecentTabViewHolder(
     composeView: ComposeView,
     viewLifecycleOwner: LifecycleOwner,
     private val recentTabInteractor: RecentTabInteractor,
-    private val recentSyncedTabInteractor: RecentSyncedTabInteractor,
 ) : ComposeViewHolder(composeView, viewLifecycleOwner) {
 
     init {
@@ -52,40 +41,16 @@ class RecentTabViewHolder(
     @Composable
     override fun Content() {
         val recentTabs = components.appStore.observeAsComposableState { state -> state.recentTabs }
-        val recentSyncedTabState = components.appStore.observeAsComposableState { state -> state.recentSyncedTabState }
 
-        Column {
-            RecentTabs(
-                recentTabs = recentTabs.value ?: emptyList(),
-                onRecentTabClick = { recentTabInteractor.onRecentTabClicked(it) },
-                menuItems = listOf(
-                    RecentTabMenuItem(
-                        title = stringResource(id = R.string.recent_tab_menu_item_remove),
-                        onClick = { tab -> recentTabInteractor.onRemoveRecentTab(tab) }
-                    )
+        RecentTabs(
+            recentTabs = recentTabs.value ?: emptyList(),
+            onRecentTabClick = { recentTabInteractor.onRecentTabClicked(it) },
+            menuItems = listOf(
+                RecentTabMenuItem(
+                    title = stringResource(id = R.string.recent_tab_menu_item_remove),
+                    onClick = { tab -> recentTabInteractor.onRemoveRecentTab(tab) }
                 )
             )
-
-            recentSyncedTabState.value?.let {
-                if (components.settings.enableTaskContinuityEnhancements && it != RecentSyncedTabState.None) {
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    val syncedTab = when (it) {
-                        RecentSyncedTabState.None,
-                        RecentSyncedTabState.Loading -> null
-                        is RecentSyncedTabState.Success -> it.tab
-                    }
-                    RecentSyncedTab(
-                        tab = syncedTab,
-                        onRecentSyncedTabClick = { tab ->
-                            recentSyncedTabInteractor.onRecentSyncedTabClicked(tab)
-                        },
-                        onSeeAllSyncedTabsButtonClick = {
-                            recentSyncedTabInteractor.onSyncedTabShowAllClicked()
-                        },
-                    )
-                }
-            }
-        }
+        )
     }
 }

@@ -24,6 +24,7 @@ import org.junit.Test
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
 import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.helpers.TestHelper.mDevice
@@ -39,6 +40,7 @@ import tools.fastlane.screengrab.locale.LocaleTestRule
 class MenuScreenShotTest : ScreenshotTest() {
     private lateinit var mockWebServer: MockWebServer
     private lateinit var mDevice: UiDevice
+    private val featureSettingsHelper = FeatureSettingsHelper()
 
     @Rule
     @JvmField
@@ -54,10 +56,13 @@ class MenuScreenShotTest : ScreenshotTest() {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
     fun tearDown() {
+        featureSettingsHelper.resetAllFeatureFlags()
         mActivityTestRule.getActivity().finishAndRemoveTask()
         mockWebServer.shutdown()
     }

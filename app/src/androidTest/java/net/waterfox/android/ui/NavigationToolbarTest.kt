@@ -11,8 +11,8 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
 import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.ui.robots.navigationToolbar
@@ -34,6 +34,7 @@ class NavigationToolbarTest {
     /* ktlint-disable no-blank-line-before-rbrace */ // This imposes unreadable grouping.
     @get:Rule
     val activityTestRule = HomeActivityTestRule()
+    private val featureSettingsHelper = FeatureSettingsHelper()
 
     @Before
     fun setUp() {
@@ -42,13 +43,14 @@ class NavigationToolbarTest {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
-        val settings = activityTestRule.activity.settings()
-        settings.shouldShowJumpBackInCFR = false
+        featureSettingsHelper.setJumpBackCFREnabled(false)
+        featureSettingsHelper.setTCPCFREnabled(false)
     }
 
     @After
     fun tearDown() {
         mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @Test

@@ -16,16 +16,22 @@ import org.junit.Before
 import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
+import net.waterfox.android.R
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
 import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
 import net.waterfox.android.helpers.TestAssetHelper
+import net.waterfox.android.helpers.TestAssetHelper.getStorageTestAsset
 import net.waterfox.android.helpers.TestHelper
 import net.waterfox.android.helpers.TestHelper.appContext
+import net.waterfox.android.helpers.TestHelper.exitMenu
+import net.waterfox.android.helpers.TestHelper.generateRandomString
+import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.helpers.TestHelper.openAppFromExternalLink
 import net.waterfox.android.helpers.TestHelper.restartApp
+import net.waterfox.android.helpers.TestHelper.setNetworkEnabled
 import net.waterfox.android.ui.robots.addToHomeScreen
 import net.waterfox.android.ui.robots.browserScreen
 import net.waterfox.android.ui.robots.homeScreen
@@ -42,11 +48,11 @@ class SettingsPrivacyTest {
 
     private lateinit var mDevice: UiDevice
     private lateinit var mockWebServer: MockWebServer
-    private val pageShortcutName = "TestShortcut"
+    private val pageShortcutName = generateRandomString(5)
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
-    val activityTestRule = HomeActivityIntentTestRule()
+    val activityTestRule = HomeActivityIntentTestRule(skipOnboarding = true)
 
     @Before
     fun setUp() {
@@ -57,6 +63,7 @@ class SettingsPrivacyTest {
         }
 
         featureSettingsHelper.setJumpBackCFREnabled(false)
+        featureSettingsHelper.setTCPCFREnabled(false)
         featureSettingsHelper.disablePwaCFR(true)
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.R) {
@@ -69,6 +76,7 @@ class SettingsPrivacyTest {
     @After
     fun tearDown() {
         mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @Test
@@ -588,16 +596,16 @@ class SettingsPrivacyTest {
 
     @SmokeTest
     @Test
-    fun deleteDeleteBrowsingHistoryDataTest() {
-        val firstWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
-        val secondWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 2)
+    fun deleteBrowsingHistoryAndSiteDataTest() {
+        val storageWritePage = getStorageTestAsset(mockWebServer, "storage_write.html").url
+        val storageCheckPage = getStorageTestAsset(mockWebServer, "storage_check.html").url
 
         navigationToolbar {
-        }.enterURLAndEnterToBrowser(firstWebPage.url) {
-            mDevice.waitForIdle()
+        }.enterURLAndEnterToBrowser(storageWritePage) {
         }.openNavigationToolbar {
-        }.enterURLAndEnterToBrowser(secondWebPage.url) {
-            mDevice.waitForIdle()
+        }.enterURLAndEnterToBrowser(storageCheckPage) {
+            verifyPageContent("Session storage has value")
+            verifyPageContent("Local storage has value")
         }.openThreeDotMenu {
         }.openSettings {
         }.openSettingsSubMenuDeleteBrowsingData {
@@ -609,15 +617,73 @@ class SettingsPrivacyTest {
             clickDeleteBrowsingDataButton()
             confirmDeletionAndAssertSnackbar()
             verifyBrowsingHistoryDetails("0")
-        }.goBack {
-            verifyGeneralHeading()
-        }.goBack {
+            exitMenu()
         }
         navigationToolbar {
         }.openThreeDotMenu {
         }.openHistory {
             verifyEmptyHistoryView()
+            mDevice.pressBack()
         }
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(storageCheckPage) {
+            verifyPageContent("Session storage empty")
+            verifyPageContent("Local storage empty")
+        }
+    }
+
+    @SmokeTest
+    @Test
+    fun deleteCookiesTest() {
+        val cookiesTestPage = getStorageTestAsset(mockWebServer, "storage_write.html").url
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(cookiesTestPage) {
+            verifyPageContent("No cookies set")
+            clickSetCookiesButton()
+            verifyPageContent("user=android")
+        }.openThreeDotMenu {
+        }.openSettings {
+        }.openSettingsSubMenuDeleteBrowsingData {
+            selectOnlyCookiesCheckBox()
+            clickDeleteBrowsingDataButton()
+            confirmDeletionAndAssertSnackbar()
+            exitMenu()
+        }
+        browserScreen {
+        }.openThreeDotMenu {
+        }.refreshPage {
+            verifyPageContent("No cookies set")
+        }
+    }
+
+    @SmokeTest
+    @Test
+    fun deleteCachedFilesTest() {
+        homeScreen {
+            verifyExistingTopSitesTabs("Wikipedia")
+        }.openTopSiteTabWithTitle("Wikipedia") {
+            waitForPageToLoad()
+        }.openTabDrawer {
+        }.openNewTab {
+        }.submitQuery("about:cache") {
+            // disabling wifi to prevent downloads in the background
+            setNetworkEnabled(enabled = false)
+        }.openThreeDotMenu {
+        }.openSettings {
+        }.openSettingsSubMenuDeleteBrowsingData {
+            selectOnlyCachedFilesCheckBox()
+            clickDeleteBrowsingDataButton()
+            confirmDeletionAndAssertSnackbar()
+            exitMenu()
+        }
+        browserScreen {
+        }.openThreeDotMenu {
+        }.refreshPage {
+            verifyNetworkCacheIsEmpty("memory")
+            verifyNetworkCacheIsEmpty("disk")
+        }
+        setNetworkEnabled(enabled = true)
     }
 
     @SmokeTest

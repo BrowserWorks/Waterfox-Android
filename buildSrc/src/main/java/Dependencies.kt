@@ -200,6 +200,8 @@ object Deps {
     const val google_material = "com.google.android.material:material:${Versions.google_material}"
     const val google_accompanist_drawablepainter =
         "com.google.accompanist:accompanist-drawablepainter:${Versions.accompanist_drawablepainter}"
+    const val google_accompanist_insets =
+        "com.google.accompanist:accompanist-insets:${Versions.accompanist_drawablepainter}"
 
     const val jna = "net.java.dev.jna:jna:${Versions.jna}@jar"
 

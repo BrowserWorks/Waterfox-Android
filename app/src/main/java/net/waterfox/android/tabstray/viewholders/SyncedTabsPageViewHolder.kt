@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import mozilla.components.lib.state.ext.observeAsComposableState
 import net.waterfox.android.ext.settings
 import net.waterfox.android.tabstray.NavigationInteractor
-import net.waterfox.android.tabstray.TabsTrayStore
 import net.waterfox.android.tabstray.TabsTrayState
+import net.waterfox.android.tabstray.TabsTrayStore
 import net.waterfox.android.tabstray.syncedtabs.SyncedTabsList
 import net.waterfox.android.theme.WaterfoxTheme
+import net.waterfox.android.theme.Theme
 
 /**
  * Temporary ViewHolder to render [SyncedTabsList] until all of the Tabs Tray is written in Compose.
@@ -31,7 +32,7 @@ class SyncedTabsPageViewHolder(
     fun bind() {
         composeView.setContent {
             val tabs = tabsTrayStore.observeAsComposableState { state -> state.syncedTabs }.value
-            WaterfoxTheme {
+            WaterfoxTheme(theme = Theme.getTheme(allowPrivateTheme = false)) {
                 SyncedTabsList(
                     syncedTabs = tabs ?: emptyList(),
                     taskContinuityEnabled = composeView.context.settings().enableTaskContinuityEnhancements,

@@ -8,12 +8,17 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.Visibility
 import androidx.test.espresso.matcher.ViewMatchers.hasSibling
+import androidx.test.espresso.matcher.ViewMatchers.isChecked
+import androidx.test.espresso.matcher.ViewMatchers.isNotChecked
+import androidx.test.espresso.matcher.ViewMatchers.withChild
+import androidx.test.espresso.matcher.ViewMatchers.withClassName
 import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.uiautomator.UiSelector
 import org.hamcrest.CoreMatchers.allOf
+import org.hamcrest.CoreMatchers.endsWith
 import org.junit.Assert.assertTrue
 import net.waterfox.android.R
 import net.waterfox.android.helpers.TestAssetHelper.waitingTimeShort
@@ -36,6 +41,8 @@ class SettingsSubMenuHomepageRobot {
         assertHomepageAfterFourHoursButton()
     }
 
+    fun clickSponsoredShortcuts() = sponsoredShortcuts().click()
+
     fun clickJumpBackInButton() = jumpBackInButton().click()
 
     fun clickRecentBookmarksButton() = recentBookmarksButton().click()
@@ -56,6 +63,38 @@ class SettingsSubMenuHomepageRobot {
                     .textContains(expectedText)
             ).waitForExists(waitingTimeShort)
         )
+
+    fun verifySponsoredShortcutsCheckBox(checked: Boolean) {
+        if (checked) {
+            sponsoredShortcuts()
+                .check(
+                    matches(
+                        hasSibling(
+                            withChild(
+                                allOf(
+                                    withClassName(endsWith("CheckBox")),
+                                    isChecked()
+                                )
+                            )
+                        )
+                    )
+                )
+        } else {
+            sponsoredShortcuts()
+                .check(
+                    matches(
+                        hasSibling(
+                            withChild(
+                                allOf(
+                                    withClassName(endsWith("CheckBox")),
+                                    isNotChecked()
+                                )
+                            )
+                        )
+                    )
+                )
+        }
+    }
 
     class Transition {
 
@@ -79,6 +118,9 @@ class SettingsSubMenuHomepageRobot {
 
 private fun mostVisitedTopSitesButton() =
     onView(allOf(withText(R.string.top_sites_toggle_top_recent_sites_4)))
+
+private fun sponsoredShortcuts() =
+    onView(allOf(withText(R.string.customize_toggle_contile)))
 
 private fun jumpBackInButton() =
     onView(allOf(withText(R.string.customize_toggle_jump_back_in)))

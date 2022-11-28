@@ -27,7 +27,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
-import androidx.compose.material.Divider
 import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
@@ -47,6 +46,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import net.waterfox.android.R
+import net.waterfox.android.compose.Divider
 import net.waterfox.android.compose.EagerFlingBehavior
 import net.waterfox.android.compose.Favicon
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
@@ -174,7 +174,7 @@ private fun RecentlyVisitedHistoryGroup(
             )
 
             if (showDividerLine) {
-                RecentlyVisitedDivider()
+                Divider()
             }
         }
 
@@ -228,7 +228,7 @@ private fun RecentlyVisitedHistoryHighlight(
             )
 
             if (showDividerLine) {
-                RecentlyVisitedDivider(modifier = Modifier.align(Alignment.BottomCenter))
+                Divider(modifier = Modifier.align(Alignment.BottomCenter))
             }
         }
 
@@ -337,22 +337,6 @@ private fun RecentlyVisitedMenu(
             }
         }
     }
-}
-
-/**
- * A recent item divider.
- *
- * @param modifier [Modifier] allowing to perfectly place this.
- */
-@Composable
-private fun RecentlyVisitedDivider(
-    modifier: Modifier = Modifier
-) {
-    Divider(
-        modifier = modifier,
-        color = WaterfoxTheme.colors.borderPrimary,
-        thickness = 0.5.dp
-    )
 }
 
 /**

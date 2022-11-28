@@ -21,9 +21,10 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.NavGraphDirections
+import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.history.DefaultPagedHistoryProvider
+import net.waterfox.android.ext.navigateSafe
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.utils.Settings
 
@@ -136,8 +137,9 @@ class HistoryControllerTest {
 
         controller.handleSearch()
         verify {
-            navController.navigate(
-                NavGraphDirections.actionGlobalHistorySearchDialog()
+            navController.navigateSafe(
+                R.id.historyFragment,
+                HistoryFragmentDirections.actionGlobalHistorySearchDialog()
             )
         }
     }

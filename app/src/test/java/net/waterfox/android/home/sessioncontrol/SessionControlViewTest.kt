@@ -28,94 +28,6 @@ import net.waterfox.android.utils.Settings
 class SessionControlViewTest {
 
     @Test
-    fun `GIVEN recent Bookmarks WHEN calling shouldShowHomeOnboardingDialog THEN show the dialog `() {
-        val recentBookmarks = listOf(RecentBookmark())
-        val settings: Settings = mockk()
-
-        every { settings.hasShownHomeOnboardingDialog } returns false
-
-        val state = AppState(recentBookmarks = recentBookmarks)
-
-        assertTrue(state.shouldShowHomeOnboardingDialog(settings))
-    }
-
-    @Test
-    fun `GIVEN recentTabs WHEN calling shouldShowHomeOnboardingDialog THEN show the dialog `() {
-        val recentTabs = listOf<RecentTab>(mockk())
-        val settings: Settings = mockk()
-
-        every { settings.hasShownHomeOnboardingDialog } returns false
-
-        val state = AppState(recentTabs = recentTabs)
-
-        assertTrue(state.shouldShowHomeOnboardingDialog(settings))
-    }
-
-    @Test
-    fun `GIVEN historyMetadata WHEN calling shouldShowHomeOnboardingDialog THEN show the dialog `() {
-        val historyMetadata = listOf(RecentHistoryGroup("title", emptyList()))
-        val settings: Settings = mockk()
-
-        every { settings.hasShownHomeOnboardingDialog } returns false
-
-        val state = AppState(recentHistory = historyMetadata)
-
-        assertTrue(state.shouldShowHomeOnboardingDialog(settings))
-    }
-
-    @Test
-    fun `GIVEN the home onboading dialog has been shown before WHEN calling shouldShowHomeOnboardingDialog THEN DO NOT showthe dialog `() {
-        val settings: Settings = mockk()
-
-        every { settings.hasShownHomeOnboardingDialog } returns true
-
-        val state = AppState()
-
-        assertFalse(state.shouldShowHomeOnboardingDialog(settings))
-    }
-
-    @Test
-    fun `GIVENs updates WHEN sections recentTabs, recentBookmarks or historyMetadata are available THEN show the dialog`() {
-        every { testContext.components.settings } returns mockk(relaxed = true)
-        val interactor = mockk<SessionControlInteractor>(relaxed = true)
-        val view = RecyclerView(testContext)
-        val controller = SessionControlView(
-            view,
-            mockk(relaxed = true),
-            interactor
-        )
-        val recentTabs = listOf<RecentTab>(mockk(relaxed = true))
-
-        val state = AppState(recentTabs = recentTabs)
-
-        controller.update(state)
-
-        verify {
-            interactor.showOnboardingDialog()
-        }
-    }
-
-    @Test
-    fun `GIVENs updates WHEN sections recentTabs, recentBookmarks or historyMetadata are NOT available THEN DO NOT show the dialog`() {
-        every { testContext.components.settings } returns mockk(relaxed = true)
-        val interactor = mockk<SessionControlInteractor>(relaxed = true)
-        val view = RecyclerView(testContext)
-        val controller = SessionControlView(
-            view,
-            mockk(relaxed = true),
-            interactor
-        )
-
-        val state = AppState()
-
-        controller.update(state)
-
-        verify(exactly = 0) {
-            interactor.showOnboardingDialog()
-        }
-    }
-
-    @Test
     fun `GIVEN recent Bookmarks WHEN normalModeAdapterItems is called THEN add a customize home button`() {
         val settings: Settings = mockk()
         val topSites = emptyList<TopSite>()
@@ -137,7 +49,8 @@ class SessionControlViewTest {
             recentBookmarks,
             false,
             false,
-            historyMetadata
+            showRecentSyncedTab = false,
+            recentVisits = historyMetadata
         )
 
         assertTrue(results[0] is AdapterItem.TopPlaceholderItem)
@@ -168,6 +81,7 @@ class SessionControlViewTest {
             recentBookmarks,
             false,
             true,
+            showRecentSyncedTab = false,
             historyMetadata
         )
 
@@ -199,7 +113,9 @@ class SessionControlViewTest {
             recentBookmarks,
             false,
             false,
-            historyMetadata
+            showRecentSyncedTab = false,
+            historyMetadata,
+            true
         )
 
         assertTrue(results[0] is AdapterItem.TopPlaceholderItem)
@@ -230,6 +146,7 @@ class SessionControlViewTest {
             recentBookmarks,
             false,
             false,
+            showRecentSyncedTab = false,
             historyMetadata
         )
         assertEquals(results.size, 2)
@@ -261,6 +178,7 @@ class SessionControlViewTest {
             recentBookmarks,
             false,
             true,
+            showRecentSyncedTab = true,
             historyMetadata
         )
 

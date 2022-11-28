@@ -8,6 +8,7 @@ import android.annotation.SuppressLint
 import android.content.res.Configuration
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.os.StrictMode
 import android.view.*
@@ -21,7 +22,6 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.constraintlayout.widget.ConstraintSet.*
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.doOnPreDraw
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
@@ -218,10 +218,12 @@ class HomeFragment : Fragment() {
             if (requireContext().settings().enableTaskContinuityEnhancements) {
                 recentSyncedTabFeature.set(
                     feature = RecentSyncedTabFeature(
+                        context = requireContext(),
                         appStore = requireComponents.appStore,
                         syncStore = requireComponents.backgroundServices.syncStore,
                         storage = requireComponents.backgroundServices.syncedTabsStorage,
                         accountManager = requireComponents.backgroundServices.accountManager,
+                        historyStorage = requireComponents.core.historyStorage,
                         coroutineScope = viewLifecycleOwner.lifecycleScope,
                     ),
                     owner = viewLifecycleOwner,
@@ -283,9 +285,10 @@ class HomeFragment : Fragment() {
                 appStore = components.appStore,
             ),
             recentSyncedTabController = DefaultRecentSyncedTabController(
-                addNewTabUseCase = requireComponents.useCases.tabsUseCases.addTab,
+                tabsUseCase = requireComponents.useCases.tabsUseCases,
                 navController = findNavController(),
                 accessPoint = TabsTrayAccessPoint.HomeRecentSyncedTab,
+                appStore = components.appStore,
             ),
             recentBookmarksController = DefaultRecentBookmarksController(
                 activity = activity,
@@ -304,9 +307,10 @@ class HomeFragment : Fragment() {
 
         updateLayout(binding.root)
         sessionControlView = SessionControlView(
-            binding.sessionControlRecyclerView,
-            viewLifecycleOwner,
-            sessionControlInteractor
+            containerView = binding.sessionControlRecyclerView,
+            viewLifecycleOwner = viewLifecycleOwner,
+            interactor = sessionControlInteractor,
+            onboarding = onboarding,
         )
 
         updateSessionControlView()
@@ -316,10 +320,6 @@ class HomeFragment : Fragment() {
         activity.themeManager.applyStatusBarTheme(activity)
 
         displayWallpaperIfEnabled()
-
-        binding.root.doOnPreDraw {
-            requireComponents.appStore.dispatch(AppAction.UpdateFirstFrameDrawn(drawn = true))
-        }
 
         // DO NOT MOVE ANYTHING BELOW THIS addMarker CALL!
         requireComponents.core.engine.profiler?.addMarker(
@@ -345,7 +345,7 @@ class HomeFragment : Fragment() {
             totalSites = settings.topSitesMaxLimit,
             frecencyConfig = TopSitesFrecencyConfig(
                 FrecencyThresholdOption.SKIP_ONE_TIME_PAGES
-            ) { !it.containsQueryParameters(settings.frecencyFilterQuery) },
+            ) { !Uri.parse(it.url).containsQueryParameters(settings.frecencyFilterQuery) },
             providerConfig = TopSitesProviderConfig(
                 showProviderTopSites = settings.showContileFeature,
                 maxThreshold = TOP_SITES_PROVIDER_MAX_THRESHOLD,

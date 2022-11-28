@@ -6,6 +6,7 @@ package net.waterfox.android.trackingprotection
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.VisibleForTesting
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
@@ -19,11 +20,18 @@ class TrackingProtectionBlockingFragment :
 
     private val args: TrackingProtectionBlockingFragmentArgs by navArgs()
     private val settings by lazy { requireContext().settings() }
+    @VisibleForTesting
+    internal lateinit var binding: FragmentTrackingProtectionBlockingBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val binding = FragmentTrackingProtectionBlockingBinding.bind(view)
+        binding = FragmentTrackingProtectionBlockingBinding.bind(view)
+        binding.categoryCookies.apply {
+            trackingProtectionCategoryTitle.text = getText(R.string.etp_cookies_title_2)
+            trackingProtectionCategoryItemDescription.text = getText(R.string.etp_cookies_description_2)
+        }
+
         when (args.protectionMode) {
             TrackingProtectionMode.STANDARD -> {
                 binding.categoryTrackingContent.isVisible = false

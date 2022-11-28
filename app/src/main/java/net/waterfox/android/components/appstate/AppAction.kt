@@ -15,6 +15,7 @@ import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
 import net.waterfox.android.library.history.PendingDeletionHistory
+import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
 import net.waterfox.android.wallpapers.Wallpaper
 
 /**
@@ -38,7 +39,8 @@ sealed class AppAction : Action {
         val showCollectionPlaceholder: Boolean,
         val recentTabs: List<RecentTab>,
         val recentBookmarks: List<RecentBookmark>,
-        val recentHistory: List<RecentlyVisitedItem>
+        val recentHistory: List<RecentlyVisitedItem>,
+        val recentSyncedTabState: RecentSyncedTabState,
     ) :
         AppAction()
 
@@ -71,6 +73,12 @@ sealed class AppAction : Action {
      * Updates the [RecentSyncedTabState] with the given [state].
      */
     data class RecentSyncedTabStateChange(val state: RecentSyncedTabState) : AppAction()
+
+    /**
+     * Add a [RecentSyncedTab] url to the homescreen blocklist and remove it
+     * from the recent synced tabs list.
+     */
+    data class RemoveRecentSyncedTab(val syncedTab: RecentSyncedTab) : AppAction()
 
     /**
      * [Action]s related to interactions with the wallpapers feature.

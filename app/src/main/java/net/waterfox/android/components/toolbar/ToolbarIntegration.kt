@@ -5,6 +5,7 @@
 package net.waterfox.android.components.toolbar
 
 import android.content.Context
+import androidx.annotation.VisibleForTesting
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
 import mozilla.components.browser.domains.autocomplete.DomainAutocompleteProvider
@@ -52,6 +53,15 @@ abstract class ToolbarIntegration(
         MenuPresenter(toolbar, context.components.core.store, sessionId)
 
     private val toolbarController = ToolbarBehaviorController(toolbar, store, sessionId)
+
+    @VisibleForTesting
+    internal var cfrPresenter = BrowserToolbarCFRPresenter(
+        context = context,
+        browserStore = context.components.core.store,
+        settings = context.settings(),
+        toolbar = toolbar,
+        sessionId = sessionId
+    )
 
     init {
         toolbar.display.menuBuilder = toolbarMenu.menuBuilder
@@ -149,5 +159,15 @@ class DefaultToolbarIntegration(
                 addHistoryStorageProvider(historyStorage)
             }
         }
+    }
+
+    override fun start() {
+        super.start()
+        cfrPresenter.start()
+    }
+
+    override fun stop() {
+        cfrPresenter.stop()
+        super.stop()
     }
 }

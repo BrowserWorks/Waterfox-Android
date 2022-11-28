@@ -4,11 +4,13 @@
 
 package net.waterfox.android.trackingprotection
 
+import android.content.Context
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.mockkStatic
 import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
@@ -19,6 +21,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
+import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.trackingprotection.TrackingProtectionCategory.CROSS_SITE_TRACKING_COOKIES
 import net.waterfox.android.trackingprotection.TrackingProtectionCategory.SOCIAL_MEDIA_TRACKERS
@@ -47,12 +50,29 @@ class TrackingProtectionPanelViewTest {
 
     @Test
     fun testNormalModeUi() {
-        view.update(baseState.copy(mode = TrackingProtectionState.Mode.Normal))
-        assertFalse(view.binding.detailsMode.isVisible)
-        assertTrue(view.binding.normalMode.isVisible)
-        assertTrue(view.binding.protectionSettings.isVisible)
-        assertFalse(view.binding.notBlockingHeader.isVisible)
-        assertFalse(view.binding.blockingHeader.isVisible)
+        mockkStatic("org.mozilla.fenix.ext.ContextKt") {
+            every { any<Context>().settings() } returns mockk(relaxed = true)
+
+            view.update(baseState.copy(mode = TrackingProtectionState.Mode.Normal))
+            assertFalse(view.binding.detailsMode.isVisible)
+            assertTrue(view.binding.normalMode.isVisible)
+            assertTrue(view.binding.protectionSettings.isVisible)
+            assertFalse(view.binding.notBlockingHeader.isVisible)
+            assertFalse(view.binding.blockingHeader.isVisible)
+        }
+    }
+
+    @Test
+    fun testNormalModeUiCookiesWithTotalCookieProtectionEnabled() {
+        mockkStatic("net.waterfox.android.ext.ContextKt") {
+            every { any<Context>().settings() } returns mockk {}
+            val expectedTitle = testContext.getString(R.string.etp_cookies_title_2)
+
+            view.update(baseState.copy(mode = TrackingProtectionState.Mode.Normal))
+
+            assertEquals(expectedTitle, view.binding.crossSiteTracking.text)
+            assertEquals(expectedTitle, view.binding.crossSiteTrackingLoaded.text)
+        }
     }
 
     @Test
@@ -79,6 +99,27 @@ class TrackingProtectionPanelViewTest {
             testContext.getString(R.string.enhanced_tracking_protection_allowed),
             view.binding.detailsBlockingHeader.text
         )
+    }
+
+    @Test
+    fun testPrivateModeUiCookiesWithTotalCookieProtectionEnabled() {
+        mockkStatic("net.waterfox.android.ext.ContextKt") {
+            every { any<Context>().settings() } returns mockk {}
+            val expectedTitle = testContext.getString(R.string.etp_cookies_title_2)
+            val expectedDescription = testContext.getString(R.string.etp_cookies_description_2)
+
+            view.update(
+                baseState.copy(
+                    mode = TrackingProtectionState.Mode.Details(
+                        selectedCategory = CROSS_SITE_TRACKING_COOKIES,
+                        categoryBlocked = false
+                    )
+                )
+            )
+
+            assertEquals(expectedTitle, view.binding.categoryTitle.text)
+            assertEquals(expectedDescription, view.binding.categoryDescription.text)
+        }
     }
 
     @Test

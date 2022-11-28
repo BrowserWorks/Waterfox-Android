@@ -7,6 +7,8 @@ package net.waterfox.android.home.recentsyncedtabs.controller
 import androidx.navigation.NavController
 import mozilla.components.feature.tabs.TabsUseCases
 import net.waterfox.android.R
+import net.waterfox.android.components.AppStore
+import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
 import net.waterfox.android.home.recentsyncedtabs.interactor.RecentSyncedTabInteractor
@@ -26,21 +28,29 @@ interface RecentSyncedTabController {
      * @see [RecentSyncedTabInteractor.onRecentSyncedTabClicked]
      */
     fun handleSyncedTabShowAllClicked()
+
+    /**
+     * Handle removing the synced tab from the homescreen.
+     *
+     * @param tab The recent synced tab to be removed.
+     */
+    fun handleRecentSyncedTabRemoved(tab: RecentSyncedTab)
 }
 
 /**
  * The default implementation of [RecentSyncedTabController].
  *
- * @property addNewTabUseCase Use case to open the synced tab when clicked.
+ * @property tabsUseCase Use cases to open the synced tab when clicked.
  * @property navController [NavController] to navigate to synced tabs tray.
  */
 class DefaultRecentSyncedTabController(
-    private val addNewTabUseCase: TabsUseCases.AddNewTabUseCase,
+    private val tabsUseCase: TabsUseCases,
     private val navController: NavController,
     private val accessPoint: TabsTrayAccessPoint,
+    private val appStore: AppStore,
 ) : RecentSyncedTabController {
     override fun handleRecentSyncedTabClick(tab: RecentSyncedTab) {
-        addNewTabUseCase.invoke(tab.url)
+        tabsUseCase.selectOrAddTab(tab.url)
         navController.navigate(R.id.browserFragment)
     }
 
@@ -51,5 +61,9 @@ class DefaultRecentSyncedTabController(
                 accessPoint = accessPoint
             )
         )
+    }
+
+    override fun handleRecentSyncedTabRemoved(tab: RecentSyncedTab) {
+        appStore.dispatch(AppAction.RemoveRecentSyncedTab(tab))
     }
 }
