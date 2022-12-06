@@ -114,15 +114,15 @@ class Core(
             enterpriseRootsEnabled = context.settings().allowThirdPartyRootCerts,
             clearColor = ContextCompat.getColor(
                 context,
-                R.color.fx_mobile_layer_color_1
+                R.color.fx_mobile_layer_color_1,
             ),
-            httpsOnlyMode = context.settings().getHttpsOnlyMode()
+            httpsOnlyMode = context.settings().getHttpsOnlyMode(),
         )
 
         GeckoEngine(
             context,
             defaultSettings,
-            geckoRuntime
+            geckoRuntime,
         ).also {
             WebCompatFeature.install(it)
 
@@ -153,7 +153,7 @@ class Core(
     val client: Client by lazyMonitored {
         GeckoViewFetchClient(
             context,
-            geckoRuntime
+            geckoRuntime,
         )
     }
 
@@ -162,7 +162,7 @@ class Core(
             context,
             lazyAutofillStorage,
             lazyPasswordsStorage,
-            trackingProtectionPolicyFactory.createTrackingProtectionPolicy()
+            trackingProtectionPolicyFactory.createTrackingProtectionPolicy(),
         )
     }
 
@@ -221,7 +221,7 @@ class Core(
                 SearchMiddleware(
                     context,
                     additionalBundledSearchEngineIds = listOf("startpage"),
-                    migration = SearchMigration(context)
+                    migration = SearchMigration(context),
                 ),
                 RecordingDevicesMiddleware(context),
                 PromptMiddleware(),
@@ -238,7 +238,7 @@ class Core(
                     } else {
                         emptyList()
                     },
-                )
+                ),
             ),
             middleware = middlewareList + EngineMiddleware.create(
                 engine,
@@ -249,15 +249,19 @@ class Core(
                 // https://github.com/mozilla-mobile/fenix/issues/12731
                 // https://github.com/mozilla-mobile/android-components/issues/11300
                 // https://github.com/mozilla-mobile/android-components/issues/11653
-                trimMemoryAutomatically = false
-            )
+                trimMemoryAutomatically = false,
+            ),
         ).apply {
             // Install the "icons" WebExtension to automatically load icons for every visited website.
             icons.install(engine, this)
 
             WebNotificationFeature(
-                context, engine, icons, R.drawable.ic_status_logo,
-                permissionStorage.permissionsStorage, IntentReceiverActivity::class.java
+                context,
+                engine,
+                icons,
+                R.drawable.ic_status_logo,
+                permissionStorage.permissionsStorage,
+                IntentReceiverActivity::class.java,
             )
 
             MediaSessionFeature(context, MediaSessionService::class.java, this).start()
@@ -297,7 +301,7 @@ class Core(
         WebAppShortcutManager(
             context,
             client,
-            webAppManifestStorage
+            webAppManifestStorage,
         )
     }
 
@@ -309,14 +313,16 @@ class Core(
     val lazyHistoryStorage = lazyMonitored { PlacesHistoryStorage(context, crashReporter) }
     val lazyBookmarksStorage = lazyMonitored { PlacesBookmarksStorage(context) }
     val lazyPasswordsStorage = lazyMonitored { SyncableLoginsStorage(context, lazySecurePrefs) }
-    val lazyAutofillStorage = lazyMonitored { AutofillCreditCardsAddressesStorage(context, lazySecurePrefs) }
+    val lazyAutofillStorage =
+        lazyMonitored { AutofillCreditCardsAddressesStorage(context, lazySecurePrefs) }
 
     /**
      * The storage component to sync and persist tabs in a Waterfox Sync account.
      */
     val lazyRemoteTabsStorage = lazyMonitored { RemoteTabsStorage(context) }
 
-    val recentlyClosedTabsStorage = lazyMonitored { RecentlyClosedTabsStorage(context, engine, crashReporter) }
+    val recentlyClosedTabsStorage =
+        lazyMonitored { RecentlyClosedTabsStorage(context, engine, crashReporter) }
 
     // For most other application code (non-startup), these wrappers are perfectly fine and more ergonomic.
     val historyStorage: PlacesHistoryStorage get() = lazyHistoryStorage.value
@@ -327,7 +333,7 @@ class Core(
     val tabCollectionStorage by lazyMonitored {
         TabCollectionStorage(
             context,
-            strictMode
+            strictMode,
         )
     }
 
@@ -342,7 +348,7 @@ class Core(
         ContileTopSitesProvider(
             context = context,
             client = client,
-            maxCacheAgeInMinutes = CONTILE_MAX_CACHE_AGE
+            maxCacheAgeInMinutes = CONTILE_MAX_CACHE_AGE,
         )
     }
 
@@ -351,7 +357,7 @@ class Core(
         ContileTopSitesUpdater(
             context = context,
             provider = contileTopSitesProvider,
-            frequency = Frequency(3, TimeUnit.HOURS)
+            frequency = Frequency(3, TimeUnit.HOURS),
         )
     }
 
@@ -363,14 +369,14 @@ class Core(
                 defaultTopSites.add(
                     Pair(
                         context.getString(R.string.default_top_site_google),
-                        SupportUtils.GOOGLE_URL
+                        SupportUtils.GOOGLE_URL,
                     )
                 )
 
                 defaultTopSites.add(
                     Pair(
                         context.getString(R.string.default_top_site_wikipedia),
-                        SupportUtils.WIKIPEDIA_URL
+                        SupportUtils.WIKIPEDIA_URL,
                     )
                 )
 
@@ -382,7 +388,7 @@ class Core(
             pinnedSitesStorage = pinnedSiteStorage,
             historyStorage = historyStorage,
             topSitesProvider = contileTopSitesProvider,
-            defaultTopSites = defaultTopSites
+            defaultTopSites = defaultTopSites,
         )
     }
 
@@ -402,7 +408,7 @@ class Core(
         SecureAbove22Preferences(
             context = context,
             name = KEY_STORAGE_NAME,
-            forceInsecure = !Config.channel.isDebug
+            forceInsecure = !Config.channel.isDebug,
         )
 
     // Temporary. See https://github.com/mozilla-mobile/fenix/issues/19155
@@ -436,6 +442,7 @@ class Core(
 
         // Maximum number of suggestions returned from the history search engine source.
         const val METADATA_HISTORY_SUGGESTION_LIMIT = 100
+
         // Maximum number of suggestions returned from shortcut search engine.
         const val METADATA_SHORTCUT_SUGGESTION_LIMIT = 20
     }

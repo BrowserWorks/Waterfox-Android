@@ -22,17 +22,6 @@
     <issue
         id="UnusedAttribute"
         message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 21)"
-        errorLine1="    android:foreground=&quot;?android:attr/selectableItemBackground&quot;>"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/collection_home_list_row.xml"
-            line="17"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 21)"
         errorLine1="        android:foreground=&quot;@drawable/rounded_ripple&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -138,39 +127,6 @@
             file="src/main/res/layout/fragment_onboarding_home_dialog.xml"
             line="201"
             column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 21)"
-        errorLine1="        android:foreground=&quot;?android:attr/selectableItemBackground&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/inactive_header_item.xml"
-            line="27"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 21)"
-        errorLine1="            android:foreground=&quot;?android:attr/selectableItemBackground&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/inactive_header_item.xml"
-            line="63"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="UnusedAttribute"
-        message="Attribute `android:foreground` has no effect on API levels lower than 23 (current min is 21)"
-        errorLine1="        android:foreground=&quot;?android:attr/selectableItemBackground&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="src/main/res/layout/inactive_tab_list_item.xml"
-            line="20"
-            column="9"/>
     </issue>
 
     <issue
@@ -394,6 +350,28 @@
     </issue>
 
     <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="                    .inflate(R.layout.delete_history_time_range_dialog, null)"
+        errorLine2="                                                                        ~~~~">
+        <location
+            file="src/main/java/net/waterfox/android/library/history/HistoryFragment.kt"
+            line="379"
+            column="73"/>
+    </issue>
+
+    <issue
+        id="MissingLicense"
+        message="The file must start with a comment containing the license"
+        errorLine1="package net.waterfox.android.ext"
+        errorLine2="~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/waterfox/android/ext/Bitmap.kt"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
         id="VectorRaster"
         message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
         errorLine1="    android:width=&quot;1889dp&quot;"
@@ -405,13 +383,46 @@
     </issue>
 
     <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:aapt=&quot;http://schemas.android.com/aapt&quot; android:width=&quot;235dp&quot; android:height=&quot;298dp&quot; android:viewportWidth=&quot;235&quot; android:viewportHeight=&quot;298&quot;>"
+        errorLine2="                                                                                                                               ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_onboarding_sync.xml"
+            line="1"
+            column="128"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:aapt=&quot;http://schemas.android.com/aapt&quot; android:width=&quot;223dp&quot; android:height=&quot;345dp&quot; android:viewportWidth=&quot;223&quot; android:viewportHeight=&quot;345&quot;>"
+        errorLine2="                                                                                                                               ~~~~~">
+        <location
+            file="src/main/res/drawable/ic_onboarding_welcome.xml"
+            line="1"
+            column="128"/>
+    </issue>
+
+    <issue
+        id="VisibleForTests"
+        message="This method should only be accessed from tests or within private scope"
+        errorLine1="                recentTabs = state.recentTabs.filterOutTab(action.recentTab)"
+        errorLine2="                                              ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/waterfox/android/components/appstate/AppStoreReducer.kt"
+            line="74"
+            column="47"/>
+    </issue>
+
+    <issue
         id="VisibleForTests"
         message="This method should only be accessed from tests or within private scope"
         errorLine1="                isInPrimaryState = { getCurrentTab()?.content?.canGoBack ?: false },"
         errorLine2="                                     ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="96"
+            line="91"
             column="38"/>
     </issue>
 
@@ -422,7 +433,7 @@
         errorLine2="                                     ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="118"
+            line="113"
             column="38"/>
     </issue>
 
@@ -433,7 +444,7 @@
         errorLine2="                    ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="141"
+            line="136"
             column="21"/>
     </issue>
 
@@ -444,7 +455,7 @@
         errorLine2="                        ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="155"
+            line="150"
             column="25"/>
     </issue>
 
@@ -455,7 +466,7 @@
         errorLine2="                           ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="183"
+            line="178"
             column="28"/>
     </issue>
 
@@ -466,8 +477,19 @@
         errorLine2="        ~~~~~~~~~~~~~">
         <location
             file="src/main/java/net/waterfox/android/browser/BrowserFragment.kt"
-            line="273"
+            line="264"
             column="9"/>
+    </issue>
+
+    <issue
+        id="VisibleForTests"
+        message="This method should only be accessed from tests or within private scope"
+        errorLine1="            } + searchSelectorMenu.menuItems()"
+        errorLine2="                                   ~~~~~~~~~">
+        <location
+            file="src/main/java/net/waterfox/android/search/SearchDialogFragment.kt"
+            line="714"
+            column="36"/>
     </issue>
 
     <issue

@@ -73,18 +73,18 @@ class SmokeTest {
     private lateinit var browserStore: BrowserStore
     private val featureSettingsHelper = FeatureSettingsHelper()
 
-    @get:Rule
+    @get:Rule(order = 0)
     val activityTestRule = AndroidComposeTestRule(
         HomeActivityIntentTestRule(),
         { it.activity }
     )
 
-    @get: Rule
+    @get:Rule(order = 1)
     val intentReceiverActivityTestRule = ActivityTestRule(
         IntentReceiverActivity::class.java, true, false
     )
 
-    @Rule
+    @Rule(order = 2)
     @JvmField
     val retryTestRule = RetryTestRule(3)
 
@@ -217,6 +217,7 @@ class SmokeTest {
         }
     }
 
+    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/26711")
     @Test
     // Verifies the list of items in a tab's 3 dot menu
     fun verifyPageMainMenuItemsTest() {
@@ -435,7 +436,7 @@ class SmokeTest {
         }
     }
 
-    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/25345")
+    @Ignore("Permanent failure: https://github.com/mozilla-mobile/fenix/issues/27312")
     @Test
     fun customTrackingProtectionSettingsTest() {
         val genericWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
@@ -915,6 +916,7 @@ class SmokeTest {
         mDevice.pressBack()
     }
 
+    @Ignore("Failing: https://github.com/mozilla-mobile/fenix/issues/26884")
     @Test
     fun copyTextTest() {
         val genericURL = TestAssetHelper.getGenericAsset(mockWebServer, 1)
@@ -934,6 +936,7 @@ class SmokeTest {
         }
     }
 
+    @Ignore("Failing: https://github.com/mozilla-mobile/fenix/issues/26884")
     @Test
     fun selectAllAndCopyTextTest() {
         val genericURL = TestAssetHelper.getGenericAsset(mockWebServer, 1)

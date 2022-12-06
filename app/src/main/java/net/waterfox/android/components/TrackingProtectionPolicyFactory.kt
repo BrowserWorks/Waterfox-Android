@@ -5,10 +5,8 @@
 package net.waterfox.android.components
 
 import android.content.res.Resources
-import androidx.annotation.VisibleForTesting
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy.CookiePolicy
-import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicyForSessionTypes
 import net.waterfox.android.R
 import net.waterfox.android.utils.Settings
 
@@ -17,7 +15,7 @@ import net.waterfox.android.utils.Settings
  */
 class TrackingProtectionPolicyFactory(
     private val settings: Settings,
-    private val resources: Resources
+    private val resources: Resources,
 ) {
 
     /**
@@ -32,7 +30,7 @@ class TrackingProtectionPolicyFactory(
     @Suppress("ComplexMethod")
     fun createTrackingProtectionPolicy(
         normalMode: Boolean = settings.shouldUseTrackingProtection,
-        privateMode: Boolean = settings.shouldUseTrackingProtection
+        privateMode: Boolean = settings.shouldUseTrackingProtection,
     ): TrackingProtectionPolicy {
         val trackingProtectionPolicy =
             when {
@@ -42,24 +40,18 @@ class TrackingProtectionPolicyFactory(
             }
 
         return when {
-            normalMode && privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings)
-            normalMode && !privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings).forRegularSessionsOnly()
-            !normalMode && privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings).forPrivateSessionsOnly()
+            normalMode && privateMode -> trackingProtectionPolicy
+            normalMode && !privateMode -> trackingProtectionPolicy.forRegularSessionsOnly()
+            !normalMode && privateMode -> trackingProtectionPolicy.forPrivateSessionsOnly()
             else -> TrackingProtectionPolicy.none()
         }
     }
 
     private fun createCustomTrackingProtectionPolicy(): TrackingProtectionPolicy {
-        val cookiePolicy = if (settings.enabledTotalCookieProtection) {
-            CookiePolicy.ACCEPT_FIRST_PARTY_AND_ISOLATE_OTHERS
-        } else {
-            getCustomCookiePolicy()
-        }
-
         return TrackingProtectionPolicy.select(
-            cookiePolicy = cookiePolicy,
+            cookiePolicy = getCustomCookiePolicy(),
             trackingCategories = getCustomTrackingCategories(),
-            cookiePurging = getCustomCookiePurgingPolicy()
+            cookiePurging = getCustomCookiePurgingPolicy(),
         ).let {
             if (settings.blockTrackingContentSelectionInCustomTrackingProtection == "private") {
                 it.forPrivateSessionsOnly()
@@ -89,7 +81,7 @@ class TrackingProtectionPolicyFactory(
             TrackingProtectionPolicy.TrackingCategory.AD,
             TrackingProtectionPolicy.TrackingCategory.ANALYTICS,
             TrackingProtectionPolicy.TrackingCategory.SOCIAL,
-            TrackingProtectionPolicy.TrackingCategory.MOZILLA_SOCIAL
+            TrackingProtectionPolicy.TrackingCategory.MOZILLA_SOCIAL,
         )
 
         if (settings.blockTrackingContentInCustomTrackingProtection) {
@@ -110,21 +102,4 @@ class TrackingProtectionPolicyFactory(
     private fun getCustomCookiePurgingPolicy(): Boolean {
         return settings.blockRedirectTrackersInCustomTrackingProtection
     }
-}
-
-@VisibleForTesting
-internal fun TrackingProtectionPolicyForSessionTypes.applyTCPIfNeeded(settings: Settings):
-    TrackingProtectionPolicyForSessionTypes {
-    val updatedCookiePolicy = if (settings.enabledTotalCookieProtection) {
-        CookiePolicy.ACCEPT_FIRST_PARTY_AND_ISOLATE_OTHERS
-    } else {
-        cookiePolicy
-    }
-
-    return TrackingProtectionPolicy.select(
-        trackingCategories = trackingCategories,
-        cookiePolicy = updatedCookiePolicy,
-        strictSocialTrackingProtection = strictSocialTrackingProtection,
-        cookiePurging = cookiePurging
-    )
 }

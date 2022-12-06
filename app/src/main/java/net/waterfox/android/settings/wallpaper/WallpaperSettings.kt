@@ -4,6 +4,7 @@
 
 package net.waterfox.android.settings.wallpaper
 
+import android.annotation.SuppressLint
 import android.graphics.Bitmap
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -72,6 +73,7 @@ import net.waterfox.android.wallpapers.WallpaperManager
  * @param tapLogoSwitchChecked Enabled state for switch controlling taps to change wallpaper.
  * @param onTapLogoSwitchCheckedChange Callback for when state of above switch is updated.
  */
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 @Suppress("LongParameterList")
 fun WallpaperSettings(
@@ -169,28 +171,26 @@ private fun WallpaperThumbnails(
     numColumns: Int = 3,
     onSelectWallpaper: (Wallpaper) -> Unit,
 ) {
-    Surface(color = WaterfoxTheme.colors.layer2) {
-        Column(modifier = Modifier.padding(vertical = 30.dp, horizontal = 20.dp)) {
-            val numRows = (wallpapers.size + numColumns - 1) / numColumns
-            for (rowIndex in 0 until numRows) {
-                Row {
-                    for (columnIndex in 0 until numColumns) {
-                        val itemIndex = rowIndex * numColumns + columnIndex
-                        if (itemIndex < wallpapers.size) {
-                            Box(
-                                modifier = Modifier.weight(1f, fill = true).padding(4.dp),
-                            ) {
-                                WallpaperThumbnailItem(
-                                    wallpaper = wallpapers[itemIndex],
-                                    defaultWallpaper = defaultWallpaper,
-                                    loadWallpaperResource = loadWallpaperResource,
-                                    isSelected = selectedWallpaper == wallpapers[itemIndex],
-                                    onSelect = onSelectWallpaper
-                                )
-                            }
-                        } else {
-                            Spacer(Modifier.weight(1f))
+    Column(modifier = Modifier.padding(vertical = 30.dp, horizontal = 20.dp)) {
+        val numRows = (wallpapers.size + numColumns - 1) / numColumns
+        for (rowIndex in 0 until numRows) {
+            Row {
+                for (columnIndex in 0 until numColumns) {
+                    val itemIndex = rowIndex * numColumns + columnIndex
+                    if (itemIndex < wallpapers.size) {
+                        Box(
+                            modifier = Modifier.weight(1f, fill = true).padding(4.dp),
+                        ) {
+                            WallpaperThumbnailItem(
+                                wallpaper = wallpapers[itemIndex],
+                                defaultWallpaper = defaultWallpaper,
+                                loadWallpaperResource = loadWallpaperResource,
+                                isSelected = selectedWallpaper == wallpapers[itemIndex],
+                                onSelect = onSelectWallpaper
+                            )
                         }
+                    } else {
+                        Spacer(Modifier.weight(1f))
                     }
                 }
             }

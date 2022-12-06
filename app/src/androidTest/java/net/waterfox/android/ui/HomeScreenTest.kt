@@ -8,15 +8,17 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
-import net.waterfox.android.ext.settings
+import okhttp3.mockwebserver.MockWebServer
+import net.waterfox.android.helpers.AndroidAssetDispatcher
+import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
 import net.waterfox.android.helpers.RetryTestRule
+import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
 import net.waterfox.android.helpers.ext.waitNotNull
 import net.waterfox.android.ui.robots.homeScreen
+import net.waterfox.android.ui.robots.navigationToolbar
+import org.junit.*
 
 /**
  *  Tests for verifying the presence of home screen and first-run homescreen elements
@@ -29,6 +31,8 @@ class HomeScreenTest {
     /* ktlint-disable no-blank-line-before-rbrace */ // This imposes unreadable grouping.
 
     private lateinit var mDevice: UiDevice
+    private lateinit var mockWebServer: MockWebServer
+    private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
     val activityTestRule = HomeActivityTestRule()
@@ -40,6 +44,19 @@ class HomeScreenTest {
     @Before
     fun setUp() {
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+
+        mockWebServer = MockWebServer().apply {
+            dispatcher = AndroidAssetDispatcher()
+            start()
+        }
+
+        featureSettingsHelper.setTCPCFREnabled(false)
+    }
+
+    @After
+    fun tearDown() {
+        mockWebServer.shutdown()
+        featureSettingsHelper.resetAllFeatureFlags()
     }
 
     @Test
@@ -129,8 +146,8 @@ class HomeScreenTest {
 
     @Test
     fun dismissOnboardingUsingHelpTest() {
-        val settings = activityTestRule.activity.applicationContext.settings()
-        settings.shouldShowJumpBackInCFR = false
+        featureSettingsHelper.setJumpBackCFREnabled(false)
+
         homeScreen {
             verifyWelcomeHeader()
         }.openThreeDotMenu {
@@ -151,6 +168,29 @@ class HomeScreenTest {
             verifyKeyboardVisibility()
         }.dismissSearchBar {
             verifyWelcomeHeader()
+        }
+    }
+
+    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/26932")
+    @Test
+    fun verifyCustomizeHomepageTest() {
+        val defaultWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
+        featureSettingsHelper.setJumpBackCFREnabled(false)
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(defaultWebPage.url) {
+        }.goToHomescreen {
+        }.openCustomizeHomepage {
+            clickJumpBackInButton()
+            clickRecentBookmarksButton()
+            clickRecentSearchesButton()
+        }.goBack {
+            verifyCustomizeHomepageButton(false)
+        }.openThreeDotMenu {
+        }.openCustomizeHome {
+            clickJumpBackInButton()
+        }.goBack {
+            verifyCustomizeHomepageButton(true)
         }
     }
 }

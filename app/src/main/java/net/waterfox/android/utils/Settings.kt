@@ -73,6 +73,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
         // The maximum number of top sites to display.
         const val TOP_SITES_MAX_COUNT = 16
+
         /**
          * Only fetch top sites from the [ContileTopSitesProvider] when the number of default and
          * pinned sites are below this maximum threshold.
@@ -419,7 +420,8 @@ class Settings(private val appContext: Context) : PreferencesHolder {
     fun checkIfWaterfoxIsDefaultBrowserOnAppResume(): Boolean {
         val prefKey = appContext.getPreferenceKey(R.string.pref_key_default_browser)
         val isDefaultBrowserNow = isDefaultBrowserBlocking()
-        val wasDefaultBrowserOnLastResume = this.preferences.getBoolean(prefKey, isDefaultBrowserNow)
+        val wasDefaultBrowserOnLastResume =
+            this.preferences.getBoolean(prefKey, isDefaultBrowserNow)
         this.preferences.edit().putBoolean(prefKey, isDefaultBrowserNow).apply()
         return isDefaultBrowserNow && !wasDefaultBrowserOnLastResume
     }
@@ -484,8 +486,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         appContext.getPreferenceKey(R.string.pref_key_tracking_protection_custom_cookies),
         true
     )
-
-    val enabledTotalCookieProtection: Boolean = true
 
     /**
      * Indicates if the total cookie protection CRF should be shown.
@@ -788,6 +788,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = true
     )
 
+    /**
+     *  Returns a sitePermissions action for the provided [feature].
+     */
     fun getSitePermissionsPhoneFeatureAction(
         feature: PhoneFeature,
         default: Action = Action.ASK_TO_ALLOW
@@ -825,6 +828,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default: AutoplayAction = AutoplayAction.BLOCKED
     ) = preferences.getInt(feature.getPreferenceKey(appContext), default.toInt()).toAutoplayAction()
 
+    /**
+     *  Sets a sitePermissions action for the provided [feature].
+     */
     fun setSitePermissionsPhoneFeatureAction(
         feature: PhoneFeature,
         value: Action

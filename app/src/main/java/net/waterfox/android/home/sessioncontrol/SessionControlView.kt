@@ -21,7 +21,6 @@ import net.waterfox.android.home.Mode
 import net.waterfox.android.home.OnboardingState
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
-import net.waterfox.android.onboarding.WaterfoxOnboarding
 import net.waterfox.android.onboarding.JumpBackInCFRDialog
 import net.waterfox.android.utils.Settings
 
@@ -115,7 +114,6 @@ private fun onboardingAdapterItems(onboardingState: OnboardingState): List<Adapt
         listOf(
             AdapterItem.OnboardingThemePicker,
             AdapterItem.OnboardingToolbarPositionPicker,
-            AdapterItem.OnboardingTrackingProtection
         )
     )
     // Customize FxA items based on where we are with the account state:
@@ -132,6 +130,7 @@ private fun onboardingAdapterItems(onboardingState: OnboardingState): List<Adapt
 
     items.addAll(
         listOf(
+            AdapterItem.OnboardingTrackingProtection,
             AdapterItem.OnboardingPrivacyNotice,
             AdapterItem.OnboardingFinish,
             AdapterItem.BottomSpacer
@@ -170,14 +169,11 @@ private fun collectionTabItems(collection: TabCollection) =
  * @param viewLifecycleOwner [LifecycleOwner] for the view.
  * @property interactor [SessionControlInteractor] which will have delegated to all user
  * interactions.
- * @property onboarding [FenixOnboarding] that is used to determine whether or not the user has
- * been onboarded.
  */
 class SessionControlView(
     containerView: View,
     viewLifecycleOwner: LifecycleOwner,
     private val interactor: SessionControlInteractor,
-    private val onboarding: WaterfoxOnboarding,
 ) {
 
     val view: RecyclerView = containerView as RecyclerView
