@@ -50,7 +50,7 @@ class TrackingProtectionPanelViewTest {
 
     @Test
     fun testNormalModeUi() {
-        mockkStatic("org.mozilla.fenix.ext.ContextKt") {
+        mockkStatic("net.waterfox.android.ext.ContextKt") {
             every { any<Context>().settings() } returns mockk(relaxed = true)
 
             view.update(baseState.copy(mode = TrackingProtectionState.Mode.Normal))

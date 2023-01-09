@@ -27,10 +27,6 @@ class SupportUtilsTest {
             "https://support.mozilla.org/1/mobile/20/Android/fr/tracking-protection-firefox-android",
             SupportUtils.getSumoURLForTopic(mockContext("2 0"), SupportUtils.SumoTopic.TRACKING_PROTECTION, Locale("fr"))
         )
-        assertEquals(
-            "https://support.mozilla.org/1/mobile/three/Android/es-CL/whats-new-firefox-preview",
-            SupportUtils.getSumoURLForTopic(mockContext("three"), SupportUtils.SumoTopic.WHATS_NEW, Locale("es", "CL"))
-        )
     }
 
     @Test

@@ -4,23 +4,16 @@
 
 package net.waterfox.android.home.sessioncontrol
 
-import androidx.recyclerview.widget.RecyclerView
 import io.mockk.every
 import io.mockk.mockk
-import io.mockk.verify
 import mozilla.components.feature.tab.collections.TabCollection
 import mozilla.components.feature.top.sites.TopSite
-import mozilla.components.support.test.robolectric.testContext
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.components.appstate.AppState
-import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
-import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem.RecentHistoryGroup
 import net.waterfox.android.utils.Settings
 

@@ -24,13 +24,6 @@ import net.waterfox.android.settings.about.viewholders.AboutItemViewHolder
 class AboutPageAdapterTest {
     private val aboutList: List<AboutPageItem> =
         listOf(
-            AboutPageItem(
-                AboutItem.ExternalLink(
-                    AboutItemType.WHATS_NEW,
-                    "https://mozilla.org"
-                ),
-                "Libraries"
-            ),
             AboutPageItem(AboutItem.Libraries, "Libraries"),
             AboutPageItem(AboutItem.Crashes, "Crashes")
         )
@@ -49,7 +42,7 @@ class AboutPageAdapterTest {
 
         adapter.submitList(aboutList)
 
-        assertEquals(3, adapter.itemCount)
+        assertEquals(2, adapter.itemCount)
     }
 
     @Test

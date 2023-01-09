@@ -6,7 +6,6 @@ package net.waterfox.android.components.toolbar
 
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import io.mockk.confirmVerified
-
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.spyk

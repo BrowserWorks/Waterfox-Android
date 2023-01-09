@@ -15,11 +15,9 @@ import io.mockk.unmockkStatic
 import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
 import org.junit.After
-import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.R
 import net.waterfox.android.databinding.OnboardingManualSigninBinding
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
@@ -46,16 +44,6 @@ class OnboardingManualSignInViewHolderTest {
     @After
     fun teardown() {
         unmockkStatic(Navigation::class)
-    }
-
-    @Test
-    fun `bind header text`() {
-        OnboardingManualSignInViewHolder(binding.root).bind()
-        val string = testContext.getString(R.string.onboarding_account_sign_in_header_1)
-        assertEquals(
-            string,
-            binding.headerText.text
-        )
     }
 
     @Test

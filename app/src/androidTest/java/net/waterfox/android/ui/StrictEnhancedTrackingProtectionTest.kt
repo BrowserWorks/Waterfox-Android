@@ -163,8 +163,8 @@ class StrictEnhancedTrackingProtectionTest {
         }
     }
 
+    @Ignore("Permanent failure: https://github.com/mozilla-mobile/fenix/issues/27312")
     @Test
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun testStrictVisitSheetDetails() {
         val genericPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
         val trackingProtectionTest =

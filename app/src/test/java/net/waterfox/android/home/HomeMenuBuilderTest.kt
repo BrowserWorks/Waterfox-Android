@@ -26,7 +26,6 @@ import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.Settings
-import net.waterfox.android.whatsnew.WhatsNew
 import java.lang.ref.WeakReference
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -158,21 +157,6 @@ class HomeMenuBuilderTest {
                     context = testContext,
                     topic = SupportUtils.SumoTopic.HELP
                 ),
-                newTab = true,
-                from = BrowserDirection.FromHome
-            )
-        }
-    }
-
-    @Test
-    fun `WHEN Whats New menu item is tapped THEN open the browser to the SUMO whats new page`() {
-        homeMenuBuilder.onItemTapped(HomeMenu.Item.WhatsNew)
-
-        verify {
-            WhatsNew.userViewedWhatsNew(testContext)
-
-            homeActivity.openToBrowserAndLoad(
-                searchTermOrURL = SupportUtils.getWhatsNewUrl(testContext),
                 newTab = true,
                 from = BrowserDirection.FromHome
             )
