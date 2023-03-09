@@ -40,7 +40,6 @@ import net.waterfox.android.utils.allowUndo
 @SuppressWarnings("TooManyFunctions", "LargeClass")
 class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHandler {
     private lateinit var downloadStore: DownloadFragmentStore
-    private lateinit var downloadView: DownloadView
     private lateinit var downloadInteractor: DownloadInteractor
 
     private var _binding: FragmentDownloadsBinding? = null
@@ -71,10 +70,8 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
             ::invalidateOptionsMenu,
             ::deleteDownloadItems
         )
-        downloadInteractor = DownloadInteractor(
-            downloadController
-        )
-        downloadView = DownloadView(binding.downloadsLayout, downloadInteractor)
+        downloadInteractor = DownloadInteractor(downloadController)
+        binding.downloadContent.interactor = downloadInteractor
 
         return binding.root
     }
@@ -140,8 +137,19 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        consumeFrom(downloadStore) {
-            downloadView.update(it)
+        consumeFrom(downloadStore) { state ->
+            binding.downloadContent.updateState(state)
+            when (state.mode) {
+                is DownloadFragmentState.Mode.Normal -> setUiForNormalMode(
+                    context?.getString(R.string.library_downloads)
+                )
+                is DownloadFragmentState.Mode.Editing -> setUiForSelectingMode(
+                    context?.getString(
+                        R.string.download_multi_select_title,
+                        state.mode.selectedItems.size,
+                    )
+                )
+            }
         }
     }
 
@@ -201,7 +209,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
     }
 
     override fun onBackPressed(): Boolean {
-        return downloadView.onBackPressed()
+        return binding.downloadContent.onBackPressed()
     }
 
     private fun openItem(item: DownloadItem, mode: BrowsingMode? = null) {

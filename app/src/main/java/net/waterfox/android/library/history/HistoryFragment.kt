@@ -23,7 +23,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.mapNotNull
-import kotlinx.coroutines.launch
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flowScoped
@@ -54,9 +53,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         )
     }.flow
 
-    private var _historyView: HistoryView? = null
-    private val historyView: HistoryView
-        get() = _historyView!!
     private var _binding: FragmentHistoryBinding? = null
     private val binding get() = _binding!!
 
@@ -97,20 +93,13 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
         historyInteractor = DefaultHistoryInteractor(
             historyController
         )
-        _historyView = HistoryView(
-            binding.historyLayout,
-            historyInteractor,
-            onZeroItemsLoaded = {
-                historyStore.dispatch(
-                    HistoryFragmentAction.ChangeEmptyState(isEmpty = true)
-                )
-            },
-            onEmptyStateChanged = {
-                historyStore.dispatch(
-                    HistoryFragmentAction.ChangeEmptyState(it)
-                )
-            }
-        )
+        binding.historyContent.interactor = historyInteractor
+        binding.historyContent.onZeroItemsLoaded = {
+            historyStore.dispatch(HistoryFragmentAction.ChangeEmptyState(isEmpty = true))
+        }
+        binding.historyContent.onEmptyStateChanged = {
+            historyStore.dispatch(HistoryFragmentAction.ChangeEmptyState(it))
+        }
 
         return view
     }
@@ -157,7 +146,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
 
     private fun onTimeFrameDeleted() {
         runIfFragmentIsAttached {
-            historyView.historyAdapter.refresh()
             showSnackBar(
                 binding.root,
                 getString(R.string.preferences_delete_browsing_data_snackbar)
@@ -168,8 +156,18 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        consumeFrom(historyStore) {
-            historyView.update(it)
+        consumeFrom(historyStore) { state ->
+            when (state.mode) {
+                is HistoryFragmentState.Mode.Normal -> setUiForNormalMode(context?.getString(R.string.library_history))
+                is HistoryFragmentState.Mode.Editing -> setUiForSelectingMode(
+                    context?.getString(
+                        R.string.history_multi_select_title,
+                        state.mode.selectedItems.size,
+                    ),
+                )
+                else -> Unit
+            }
+            binding.historyContent.updateState(state)
         }
 
         requireContext().components.appStore.flowScoped(viewLifecycleOwner) { flow ->
@@ -180,11 +178,7 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
             }
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            history.collect {
-                historyView.historyAdapter.submitData(it)
-            }
-        }
+        binding.historyContent.history = history
     }
 
     override fun onResume() {
@@ -297,12 +291,11 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     }
 
     override fun onBackPressed(): Boolean {
-        return historyView.onBackPressed()
+        return binding.historyContent.onBackPressed()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _historyView = null
         _binding = null
     }
 
@@ -338,7 +331,6 @@ class HistoryFragment : LibraryPageFragment<History>(), UserInteractionHandler {
     private suspend fun syncHistory() {
         val accountManager = requireComponents.backgroundServices.accountManager
         accountManager.syncNow(SyncReason.User)
-        historyView.historyAdapter.refresh()
     }
 
     internal class DeleteConfirmationDialogFragment(

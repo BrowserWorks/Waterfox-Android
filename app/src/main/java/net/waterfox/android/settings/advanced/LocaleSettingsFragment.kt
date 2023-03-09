@@ -26,7 +26,6 @@ class LocaleSettingsFragment : Fragment() {
 
     private lateinit var localeSettingsStore: LocaleSettingsStore
     private lateinit var interactor: LocaleSettingsInteractor
-    private lateinit var localeView: LocaleSettingsView
 
     private var _binding: FragmentLocaleSettingsBinding? = null
     private val binding get() = _binding!!
@@ -42,7 +41,6 @@ class LocaleSettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLocaleSettingsBinding.inflate(inflater, container, false)
-        val view = binding.root
 
         val browserStore = requireContext().components.core.store
         val localeUseCase = LocaleUseCases(browserStore)
@@ -59,8 +57,9 @@ class LocaleSettingsFragment : Fragment() {
                 localeUseCase = localeUseCase
             )
         )
-        localeView = LocaleSettingsView(binding.root, interactor)
-        return view
+        binding.localeSettingsContent.interactor = interactor
+
+        return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -85,7 +84,6 @@ class LocaleSettingsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        localeView.onResume()
         showToolbar(getString(R.string.preferences_language))
     }
 
@@ -97,13 +95,13 @@ class LocaleSettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         consumeFrom(localeSettingsStore) {
-            localeView.update(it)
+            binding.localeSettingsContent.update(it)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-
         _binding = null
     }
+
 }

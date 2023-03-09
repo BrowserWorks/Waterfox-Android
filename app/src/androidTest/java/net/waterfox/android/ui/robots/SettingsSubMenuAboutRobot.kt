@@ -7,11 +7,15 @@
 package net.waterfox.android.ui.robots
 
 import android.os.Build
-import android.widget.TextView
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.core.content.pm.PackageInfoCompat
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.ViewAssertion
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
@@ -21,17 +25,16 @@ import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.uiautomator.UiScrollable
 import androidx.test.uiautomator.UiSelector
 import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Assert.assertTrue
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.R
-import net.waterfox.android.helpers.Constants.LISTS_MAXSWIPES
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
 import net.waterfox.android.helpers.TestHelper
 import net.waterfox.android.helpers.TestHelper.appName
+import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.helpers.TestHelper.mDevice
 import net.waterfox.android.helpers.TestHelper.packageName
 import net.waterfox.android.settings.SupportUtils
@@ -43,11 +46,11 @@ import java.util.Calendar
 import java.util.Date
 
 /**
- * Implementation of Robot Pattern for the settings search sub menu.
+ * Implementation of Robot Pattern for the settings about sub menu.
  */
 class SettingsSubMenuAboutRobot {
 
-    fun verifyAboutWaterfoxPreview() = assertWaterfoxPreviewPage()
+    fun verifyAboutWaterfoxPreview(rule: ComposeTestRule) = assertWaterfoxPreviewPage(rule)
 
     class Transition {
         fun goBack(interact: SettingsRobot.() -> Unit): SettingsRobot.Transition {
@@ -59,31 +62,12 @@ class SettingsSubMenuAboutRobot {
     }
 }
 
-private fun assertWaterfoxPreviewPage() {
-    assertVersionNumber()
-    assertProductCompany()
-    assertCurrentTimestamp()
-    verifyListElements()
-}
-
-private fun navigateBackToAboutPage(itemToInteract: () -> Unit) {
-    navigationToolbar {
-    }.openThreeDotMenu {
-    }.openSettings {
-    }.openAboutWaterfoxPreview {
-        itemToInteract()
-    }
-}
-
-private fun verifyListElements() {
+private fun assertWaterfoxPreviewPage(rule: ComposeTestRule) {
     assertAboutToolbar()
-    assertWhatIsNewInWaterfoxPreview()
-    navigateBackToAboutPage(::assertSupport)
-    assertCrashes()
-    navigateBackToAboutPage(::assertPrivacyNotice)
-    navigateBackToAboutPage(::assertKnowYourRights)
-    navigateBackToAboutPage(::assertLicensingInformation)
-    navigateBackToAboutPage(::assertLibrariesUsed)
+    assertProductCompany(rule)
+    assertVersionNumber(rule)
+    assertCurrentTimestamp(rule)
+    verifyListElements(rule)
 }
 
 private fun assertAboutToolbar() =
@@ -94,73 +78,70 @@ private fun assertAboutToolbar() =
         )
     ).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 
-private fun assertVersionNumber() {
+private fun assertProductCompany(rule: ComposeTestRule) {
+    rule.onNodeWithText("$appName is produced by Waterfox Project.")
+        .assertIsDisplayed()
+}
+
+private fun assertVersionNumber(rule: ComposeTestRule) {
     val context = InstrumentationRegistry.getInstrumentation().targetContext
 
     val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
     val versionCode = PackageInfoCompat.getLongVersionCode(packageInfo).toString()
 
-    val buildNVersion = "${packageInfo.versionName} (Build #$versionCode)\n"
+    val buildVersion = "${packageInfo.versionName} (Build #$versionCode)\n"
     val componentsVersion =
         "${mozilla.components.Build.version}, ${mozilla.components.Build.gitHash}"
     val geckoVersion =
         org.mozilla.geckoview.BuildConfig.MOZ_APP_VERSION + "-" + org.mozilla.geckoview.BuildConfig.MOZ_APP_BUILDID
     val asVersion = mozilla.components.Build.applicationServicesVersion
 
-    onView(withId(R.id.about_text))
-        .check(matches(withText(containsString(buildNVersion))))
-        .check(matches(withText(containsString(componentsVersion))))
-        .check(matches(withText(containsString(geckoVersion))))
-        .check(matches(withText(containsString(asVersion))))
+    rule.onNodeWithText(buildVersion, substring = true).assertIsDisplayed()
+    rule.onNodeWithText(componentsVersion, substring = true).assertIsDisplayed()
+    rule.onNodeWithText(geckoVersion, substring = true).assertIsDisplayed()
+    rule.onNodeWithText(asVersion, substring = true).assertIsDisplayed()
 }
 
-private fun assertProductCompany() {
-    onView(withId(R.id.about_content))
-        .check(matches(withText(containsString("$appName is produced by Mozilla."))))
-}
-
-private fun assertCurrentTimestamp() {
-    onView(withId(R.id.build_date))
-        // Currently UI tests run against debug builds, which display a hard-coded string 'debug build'
+private fun assertCurrentTimestamp(rule: ComposeTestRule) {
+    rule
+        // When running tests against debug builds, they display a hard-coded string 'debug build'
         // instead of the date. See https://github.com/mozilla-mobile/fenix/pull/10812#issuecomment-633746833
-        .check(matches(withText(containsString("debug build"))))
-    // This assertion should be valid for non-debug build types.
-    // .check(BuildDateAssertion.isDisplayedDateAccurate())
+        // .onNodeWithText("debug build").assertIsDisplayed()
+        // This assertion should be valid for non-debug build types.
+        .onNodeWithTag("about.build.date").assertDisplayedDate()
 }
 
-private fun assertWhatIsNewInWaterfoxPreview() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
-
-    onView(withText("What’s new in $appName"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+private fun verifyListElements(rule: ComposeTestRule) {
+    assertSupport(rule)
+    navigateBackToAboutPage(::assertCrashes, rule)
+    navigateBackToAboutPage(::assertPrivacyNotice, rule)
+    navigateBackToAboutPage(::assertKnowYourRights, rule)
+    navigateBackToAboutPage(::assertLicensingInformation, rule)
+    navigateBackToAboutPage(::assertLibrariesUsed, rule)
 }
 
-private fun assertSupport() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
+private fun assertSupport(rule: ComposeTestRule) {
+    val supportLabel = getStringResource(R.string.about_support)
+    aboutMenuList(rule).performScrollToNode(hasText(supportLabel))
 
-    onView(withText("Support"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(supportLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     TestHelper.verifyUrl(
-        "support.mozilla.org",
-        "net.waterfox.android.debug:id/mozac_browser_toolbar_url_view",
+        "waterfox.net/docs/support",
+        "$packageName:id/mozac_browser_toolbar_url_view",
         R.id.mozac_browser_toolbar_url_view
     )
 }
 
-private fun assertCrashes() {
-    navigationToolbar {
-    }.openThreeDotMenu {
-    }.openSettings {
-    }.openAboutWaterfoxPreview {}
+private fun assertCrashes(rule: ComposeTestRule) {
+    val crashesLabel = getStringResource(R.string.about_crashes)
+    aboutMenuList(rule).performScrollToNode(hasText(crashesLabel))
 
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
-
-    onView(withText("Crashes"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(crashesLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     assertTrue(
         mDevice.findObject(
@@ -168,92 +149,127 @@ private fun assertCrashes() {
         ).waitForExists(waitingTime)
     )
 
-    for (i in 1..3) {
+    repeat(3) {
         Espresso.pressBack()
     }
 }
 
-private fun assertPrivacyNotice() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
+private fun assertPrivacyNotice(rule: ComposeTestRule) {
+    val privacyNoticeLabel = getStringResource(R.string.about_privacy_notice)
+    aboutMenuList(rule).performScrollToNode(hasText(privacyNoticeLabel))
 
-    onView(withText("Privacy notice"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(privacyNoticeLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     TestHelper.verifyUrl(
-        "/privacy/waterfox",
-        "net.waterfox.android.debug:id/mozac_browser_toolbar_url_view",
+        "waterfox.net/docs/policies/privacy",
+        "$packageName:id/mozac_browser_toolbar_url_view",
         R.id.mozac_browser_toolbar_url_view
     )
 }
 
-private fun assertKnowYourRights() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
+private fun assertKnowYourRights(rule: ComposeTestRule) {
+    val knowYourRightsLabel = getStringResource(R.string.about_know_your_rights)
+    aboutMenuList(rule).performScrollToNode(hasText(knowYourRightsLabel))
 
-    onView(withText("Know your rights"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(knowYourRightsLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     TestHelper.verifyUrl(
         SupportUtils.SumoTopic.YOUR_RIGHTS.topicStr,
-        "net.waterfox.android.debug:id/mozac_browser_toolbar_url_view",
+        "$packageName:id/mozac_browser_toolbar_url_view",
         R.id.mozac_browser_toolbar_url_view
     )
 }
 
-private fun assertLicensingInformation() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
+private fun assertLicensingInformation(rule: ComposeTestRule) {
+    val licensingInformationLabel = getStringResource(R.string.about_licensing_information)
+    aboutMenuList(rule).performScrollToNode(hasText(licensingInformationLabel))
 
-    onView(withText("Licensing information"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(licensingInformationLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     TestHelper.verifyUrl(
         "about:license",
-        "net.waterfox.android.debug:id/mozac_browser_toolbar_url_view",
+        "$packageName:id/mozac_browser_toolbar_url_view",
         R.id.mozac_browser_toolbar_url_view
     )
 }
 
-private fun assertLibrariesUsed() {
-    aboutMenuList.scrollToEnd(LISTS_MAXSWIPES)
+private fun assertLibrariesUsed(rule: ComposeTestRule) {
+    val librariesThatWeUseLabel = getStringResource(R.string.about_other_open_source_libraries)
+    aboutMenuList(rule).performScrollToNode(hasText(librariesThatWeUseLabel))
 
-    onView(withText("Libraries that we use"))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-        .perform(click())
+    rule.onNodeWithText(librariesThatWeUseLabel)
+        .assertIsDisplayed()
+        .performClick()
 
     onView(withId(R.id.navigationToolbar)).check(matches(hasDescendant(withText(containsString("$appName | OSS Libraries")))))
+
+    rule.onNodeWithTag("about.library.list")
+        .performScrollToNode(hasText("org.mozilla.geckoview:geckoview", substring = true))
+        .performClick()
+
+    rule.onNode(isDialog()).assertExists()
+    // TODO: [Waterfox] fix this, "MPL" substring should be present in license URL
+//    rule.onNodeWithText("MPL", substring = true).assertIsDisplayed()
     Espresso.pressBack()
+    rule.onNode(isDialog()).assertDoesNotExist()
 }
 
-private val aboutMenuList = UiScrollable(UiSelector().resourceId("$packageName:id/about_layout"))
+private fun navigateBackToAboutPage(
+    itemToInteract: (ComposeTestRule) -> Unit,
+    rule: ComposeTestRule
+) {
+    navigationToolbar {
+    }.openThreeDotMenu {
+    }.openSettings {
+    }.openAboutWaterfoxPreview {
+        itemToInteract(rule)
+    }
+}
+
+private fun aboutMenuList(rule: ComposeTestRule) = rule.onNodeWithTag("about.list")
 
 private fun goBackButton() =
     onView(withContentDescription("Navigate up"))
+
+fun SemanticsNodeInteraction.assertDisplayedDate(): SemanticsNodeInteraction =
+    assert(isDisplayedDateAccurate())
+
+private fun isDisplayedDateAccurate(): SemanticsMatcher = SemanticsMatcher(
+    "${SemanticsProperties.Text.name} is within range"
+) {
+    val textLayoutResults = mutableListOf<TextLayoutResult>()
+    it.config.getOrNull(SemanticsActions.GetTextLayoutResult)
+        ?.action
+        ?.invoke(textLayoutResults)
+    return@SemanticsMatcher if (textLayoutResults.isEmpty()) {
+        false
+    } else {
+        BuildDateAssertion.isDisplayedDateAccurate(
+            textLayoutResults.first<TextLayoutResult>().layoutInput.text.text
+        )
+    }
+}
 
 class BuildDateAssertion {
     // When the app is built on firebase, there are times where the BuildDate is off by a few seconds or a few minutes.
     // To compensate for that slight discrepancy, this assertion was added to see if the Build Date shown
     // is within a reasonable amount of time from when the app was built.
     companion object {
-        // this pattern represents the following date format: "Monday 12/30 @ 6:49 PM"
-        private const val DATE_PATTERN = "EEEE M/d @ h:m a"
-        //
+        // this pattern represents the following date format: "2023-02-08T13:15:59.431324"
+        private const val DATE_PATTERN = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+
         private const val NUM_OF_HOURS = 1
 
-        fun isDisplayedDateAccurate(): ViewAssertion {
-            return ViewAssertion { view, noViewFoundException ->
-                if (noViewFoundException != null) throw noViewFoundException
+        fun isDisplayedDateAccurate(date: String) = verifyDateIsWithinRange(date, NUM_OF_HOURS)
 
-                val textFromView = (view as TextView).text
-                    ?: throw AssertionError("This view is not of type TextView")
-
-                verifyDateIsWithinRange(textFromView.toString(), NUM_OF_HOURS)
-            }
-        }
-
-        private fun verifyDateIsWithinRange(dateText: String, hours: Int) {
-            // This assertion checks whether has defined a range of tim
+        private fun verifyDateIsWithinRange(dateText: String, hours: Int): Boolean {
+            // This assertion checks whether has defined a range of time
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.N_MR1) {
                 val simpleDateFormat = SimpleDateFormat(DATE_PATTERN)
                 val date = simpleDateFormat.parse(dateText)
@@ -270,6 +286,7 @@ class BuildDateAssertion {
                     throw AssertionError("$textviewDate is not equal to the date within the build config: $buildConfigDate, and are not within a reasonable amount of time from each other.")
                 }
             }
+            return true
         }
 
         private fun Date.isWithinRangeOf(hours: Int): Boolean {

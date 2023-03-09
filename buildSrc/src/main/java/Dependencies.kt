@@ -18,6 +18,7 @@ object Versions {
     const val jna = "5.12.1"
 
     const val androidx_compose = "1.2.1"
+    const val androidx_compose_paging = "1.0.0-alpha17"
     const val androidx_compose_compiler = "1.3.2"
     const val androidx_appcompat = "1.3.0"
     const val androidx_benchmark = "1.0.0"
@@ -172,6 +173,7 @@ object Deps {
     const val androidx_compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.androidx_compose}"
     const val androidx_compose_foundation = "androidx.compose.foundation:foundation:${Versions.androidx_compose}"
     const val androidx_compose_material = "androidx.compose.material:material:${Versions.androidx_compose}"
+    const val androidx_compose_paging = "androidx.paging:paging-compose:${Versions.androidx_compose_paging}"
     const val androidx_annotation = "androidx.annotation:annotation:${Versions.androidx_annotation}"
     const val androidx_benchmark_junit4 = "androidx.benchmark:benchmark-junit4:${Versions.androidx_benchmark}"
     const val androidx_biometric = "androidx.biometric:biometric:${Versions.androidx_biometric}"
@@ -202,6 +204,8 @@ object Deps {
         "com.google.accompanist:accompanist-drawablepainter:${Versions.accompanist_drawablepainter}"
     const val google_accompanist_insets =
         "com.google.accompanist:accompanist-insets:${Versions.accompanist_drawablepainter}"
+    const val google_accompanist_swiperefresh =
+        "com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist_drawablepainter}"
 
     const val jna = "net.java.dev.jna:jna:${Versions.jna}@jar"
 

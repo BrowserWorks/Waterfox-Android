@@ -439,7 +439,8 @@ private fun tabMediaControlButton() =
     mDevice.findObject(UiSelector().resourceId("$packageName:id/play_pause_button"))
 
 private fun closeTabButton() =
-    mDevice.findObject(UiSelector().resourceId("$packageName:id/mozac_browser_tabstray_close"))
+    mDevice.findObject(UiSelector().descriptionContains("Close tab"))
+
 private fun assertCloseTabsButton(title: String) =
     assertTrue(
         mDevice.findObject(
@@ -477,13 +478,13 @@ private fun assertExistingOpenTabs(vararg tabTitles: String) {
 
 private fun assertExistingTabList() {
     mDevice.findObject(
-        UiSelector().resourceId("$packageName:id/tabsTray")
+        UiSelector().resourceId("$packageName:id/tabsTray"),
     ).waitForExists(waitingTime)
 
     assertTrue(
         mDevice.findObject(
-            UiSelector().resourceId("$packageName:id/tab_item")
-        ).waitForExists(waitingTime)
+            UiSelector().resourceId("$packageName:id/tray_list_item"),
+        ).waitForExists(waitingTime),
     )
 }
 

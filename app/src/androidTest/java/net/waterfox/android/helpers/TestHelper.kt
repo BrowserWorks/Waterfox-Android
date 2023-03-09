@@ -17,6 +17,13 @@ import android.net.Uri
 import android.os.Build
 import android.view.View
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.SemanticsNodeInteraction
+import androidx.compose.ui.test.assert
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.IdlingRegistry
@@ -105,6 +112,12 @@ object TestHelper {
             Until.findObjects(By.res(resourceName)),
             waitingTime
         )
+    }
+
+    fun waitUntilSnackbarGone() {
+        mDevice.findObject(
+            UiSelector().resourceId("$packageName:id/snackbar_layout"),
+        ).waitUntilGone(waitingTime)
     }
 
     fun verifyUrl(urlSubstring: String, resourceName: String, resId: Int) {
@@ -324,4 +337,22 @@ object TestHelper {
             .map { kotlin.random.Random.nextInt(0, charPool.size) }
             .map(charPool::get)
             .joinToString("")
+
+    fun SemanticsNodeInteraction.assertTextColor(
+        color: androidx.compose.ui.graphics.Color
+    ): SemanticsNodeInteraction = assert(isOfColor(color))
+
+    private fun isOfColor(color: androidx.compose.ui.graphics.Color): SemanticsMatcher = SemanticsMatcher(
+        "${SemanticsProperties.Text.name} is of color '$color'"
+    ) {
+        val textLayoutResults = mutableListOf<TextLayoutResult>()
+        it.config.getOrNull(SemanticsActions.GetTextLayoutResult)
+            ?.action
+            ?.invoke(textLayoutResults)
+        return@SemanticsMatcher if (textLayoutResults.isEmpty()) {
+            false
+        } else {
+            textLayoutResults.first().layoutInput.style.color == color
+        }
+    }
 }

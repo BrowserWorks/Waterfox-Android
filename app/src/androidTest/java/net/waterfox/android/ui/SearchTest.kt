@@ -234,7 +234,7 @@ class SearchTest {
             verifyCurrentSearchGroupIsDisplayed(false, "test search", 3)
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryItemExists(false, "3 sites")
+            verifyHistoryItemExists(false, "3 sites", activityTestRule)
         }
     }
 
@@ -308,7 +308,7 @@ class SearchTest {
         }.closeAllTabs {
             verifyRecentlyVisitedSearchGroupDisplayed(true, "test search", 3)
         }.openRecentlyVisitedSearchGroupHistoryList("test search") {
-            clickDeleteHistoryButton(firstPage)
+            clickDeleteHistoryButton(firstPage, activityTestRule)
             longTapSelectItem(secondPage.toUri())
             multipleSelectionToolbar {
                 openActionBarOverflowOrOptionsMenu(activityTestRule.activity)

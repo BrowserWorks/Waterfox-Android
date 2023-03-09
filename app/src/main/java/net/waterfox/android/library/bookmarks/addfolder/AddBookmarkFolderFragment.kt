@@ -49,10 +49,7 @@ class AddBookmarkFolderFragment : Fragment(R.layout.fragment_edit_bookmark) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentEditBookmarkBinding.bind(view)
 
-        binding.bookmarkUrlLabel.visibility = GONE
-        binding.bookmarkUrlEdit.visibility = GONE
-        binding.inputLayoutBookmarkUrl.visibility = GONE
-        binding.bookmarkNameEdit.showKeyboard()
+        binding.bookmarkContent.bookmarkUrlVisible = false
     }
 
     override fun onResume() {
@@ -66,9 +63,9 @@ class AddBookmarkFolderFragment : Fragment(R.layout.fragment_edit_bookmark) {
                     ?: requireComponents.core.bookmarksStorage.getBookmark(BookmarkRoot.Mobile.id)
             }
 
-            binding.bookmarkParentFolderSelector.text =
+            binding.bookmarkContent.bookmarkParentFolder =
                 friendlyRootTitle(context, sharedViewModel.selectedFolder!!)
-            binding.bookmarkParentFolderSelector.setOnClickListener {
+            binding.bookmarkContent.onBookmarkParentFolderClick = {
                 nav(
                     R.id.bookmarkAddFolderFragment,
                     AddBookmarkFolderFragmentDirections
@@ -82,7 +79,7 @@ class AddBookmarkFolderFragment : Fragment(R.layout.fragment_edit_bookmark) {
 
     override fun onPause() {
         super.onPause()
-        binding.bookmarkNameEdit.hideKeyboard()
+        binding.bookmarkContent.hideKeyboard()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -92,16 +89,16 @@ class AddBookmarkFolderFragment : Fragment(R.layout.fragment_edit_bookmark) {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.confirm_add_folder_button -> {
-                if (binding.bookmarkNameEdit.text.isNullOrBlank()) {
-                    binding.bookmarkNameEdit.error =
+                if (binding.bookmarkContent.bookmarkName.isNullOrBlank()) {
+                    binding.bookmarkContent.bookmarkNameErrorMessage =
                         getString(R.string.bookmark_empty_title_error)
                     return true
                 }
-                this.view?.hideKeyboard()
+                binding.bookmarkContent.hideKeyboard()
                 viewLifecycleOwner.lifecycleScope.launch(IO) {
                     val newGuid = requireComponents.core.bookmarksStorage.addFolder(
                         sharedViewModel.selectedFolder!!.guid,
-                        binding.bookmarkNameEdit.text.toString(),
+                        binding.bookmarkContent.bookmarkName.toString(),
                         null
                     )
                     sharedViewModel.selectedFolder =

@@ -5,6 +5,7 @@
 package net.waterfox.android.ui
 
 import android.os.Build
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.core.net.toUri
 import androidx.test.filters.SdkSuppress
 import androidx.test.platform.app.InstrumentationRegistry
@@ -12,7 +13,6 @@ import androidx.test.runner.permission.PermissionRequester
 import androidx.test.uiautomator.UiDevice
 import org.junit.After
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TestRule
@@ -43,7 +43,9 @@ class DownloadTest {
     private var downloadFile: String = ""
 
     @get:Rule
-    val activityTestRule = HomeActivityIntentTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityIntentTestRule()
+    ) { it.activity }
 
     @get: Rule
     // Making sure to grant storage access for this test running on API 28
@@ -85,7 +87,6 @@ class DownloadTest {
         }
     }
 
-    @Ignore("Failing with frequent ANR: https://github.com/mozilla-mobile/fenix/issues/25926")
     @Test
     fun testDownloadPrompt() {
         downloadFile = "web_icon.png"
@@ -98,9 +99,11 @@ class DownloadTest {
         }.clickDownload {
             verifyDownloadNotificationPopup()
         }.clickOpen("image/png") {}
+
         downloadRobot {
             verifyPhotosAppOpens()
         }
+
         mDevice.pressBack()
     }
 
@@ -116,7 +119,7 @@ class DownloadTest {
         }.closePrompt {
         }.openThreeDotMenu {
         }.openDownloadsManager {
-            verifyEmptyDownloadsList()
+            verifyEmptyDownloadsList(composeTestRule)
         }
     }
 
@@ -131,7 +134,8 @@ class DownloadTest {
             verifyDownloadPrompt(downloadFile)
         }.clickDownload {
             verifyDownloadNotificationPopup()
-        }.closePrompt { }
+        }.closePrompt {}
+
         mDevice.openNotification()
         notificationShade {
             verifySystemNotificationExists("Download completed")
@@ -150,6 +154,7 @@ class DownloadTest {
         }.clickDownloadLink(downloadFile) {
             verifyDownloadPrompt(downloadFile)
         }.clickDownload {}
+
         mDevice.openNotification()
         notificationShade {
             verifySystemNotificationExists("Firefox Fenix")
@@ -159,10 +164,11 @@ class DownloadTest {
             clickDownloadNotificationControlButton("CANCEL")
             mDevice.pressBack()
         }
+
         browserScreen {
         }.openThreeDotMenu {
         }.openDownloadsManager {
-            verifyEmptyDownloadsList()
+            verifyEmptyDownloadsList(composeTestRule)
         }
     }
 
@@ -184,20 +190,21 @@ class DownloadTest {
         }.clickDownload {
             verifyDownloadNotificationPopup()
         }
+
         browserScreen {
         }.openThreeDotMenu {
         }.openDownloadsManager {
-            waitForDownloadsListToExist()
-            verifyDownloadedFileName(downloadFile)
-            verifyDownloadedFileIcon()
-            openDownloadedFile(downloadFile)
+            verifyDownloadsList(composeTestRule)
+            verifyDownloadedFileName(downloadFile, composeTestRule)
+            verifyDownloadedFileIcon(composeTestRule)
+            openDownloadedFile(downloadFile, composeTestRule)
             verifyPhotosAppOpens()
             deleteDownloadFromStorage()
-            waitForDownloadsListToExist()
+            verifyDownloadsList(composeTestRule)
         }.exitDownloadsManagerToBrowser {
         }.openThreeDotMenu {
         }.openDownloadsManager {
-            verifyEmptyDownloadsList()
+            verifyEmptyDownloadsList(composeTestRule)
         }
     }
 }

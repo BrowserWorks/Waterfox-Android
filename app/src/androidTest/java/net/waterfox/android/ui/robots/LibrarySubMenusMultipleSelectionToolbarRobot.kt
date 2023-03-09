@@ -6,14 +6,14 @@ package net.waterfox.android.ui.robots
 
 import android.net.Uri
 import android.widget.TextView
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.espresso.matcher.ViewMatchers.withParent
-import androidx.test.espresso.matcher.ViewMatchers.withChild
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
@@ -21,7 +21,6 @@ import net.waterfox.android.R
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
 import net.waterfox.android.helpers.click
 import net.waterfox.android.helpers.ext.waitNotNull
-import org.hamcrest.Matchers.allOf
 import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.helpers.TestHelper.mDevice
 import net.waterfox.android.helpers.TestHelper.packageName
@@ -31,9 +30,9 @@ import net.waterfox.android.helpers.TestHelper.packageName
  */
 class LibrarySubMenusMultipleSelectionToolbarRobot {
 
-    fun verifyMultiSelectionCheckmark() = assertMultiSelectionCheckmark()
+    fun verifyMultiSelectionCheckmark(rule: ComposeTestRule) = assertMultiSelectionCheckmark(rule)
 
-    fun verifyMultiSelectionCheckmark(url: Uri) = assertMultiSelectionCheckmark(url)
+    fun verifyMultiSelectionCheckmark(url: Uri, rule: ComposeTestRule) = assertMultiSelectionCheckmark(url, rule)
 
     fun verifyMultiSelectionCounter() = assertMultiSelectionCounter()
 
@@ -125,7 +124,6 @@ class LibrarySubMenusMultipleSelectionToolbarRobot {
 }
 
 fun multipleSelectionToolbar(interact: LibrarySubMenusMultipleSelectionToolbarRobot.() -> Unit): LibrarySubMenusMultipleSelectionToolbarRobot.Transition {
-
     LibrarySubMenusMultipleSelectionToolbarRobot().interact()
     return LibrarySubMenusMultipleSelectionToolbarRobot.Transition()
 }
@@ -142,24 +140,14 @@ private fun openInPrivateTabButton() = onView(withText("Open in private tab"))
 
 private fun deleteButton() = onView(withText("Delete"))
 
-private fun assertMultiSelectionCheckmark() =
-    onView(withId(R.id.checkmark))
-        .check(matches(isDisplayed()))
+private fun assertMultiSelectionCheckmark(rule: ComposeTestRule) =
+    rule.onNodeWithTag("library.site.item.checkmark", useUnmergedTree = true)
+        .assertIsDisplayed()
 
-private fun assertMultiSelectionCheckmark(url: Uri) =
-    onView(
-        allOf(
-            withId(R.id.checkmark),
-            withParent(withParent(withChild(allOf(withId(R.id.url), withText(url.toString()))))),
-
-            // This is used as part of the `multiSelectionToolbarItemsTest` test. Somehow, in the view hierarchy,
-            // the match above is finding two checkmark views - one visible, one hidden, which is throwing off
-            // the matcher. This 'isDisplayed' check is a hacky workaround for this, we're explicitly ignoring
-            // the hidden one. Why are there two to begin with, though?
-            isDisplayed()
-        )
-    )
-        .check(matches(isDisplayed()))
+private fun assertMultiSelectionCheckmark(url: Uri, rule: ComposeTestRule) =
+    rule.onAllNodesWithTag("library.site.item.checkmark", useUnmergedTree = true)
+        .filterToOne(hasParent(hasAnySibling(hasText(url.toString()))))
+        .assertIsDisplayed()
 
 private fun assertMultiSelectionCounter() =
     onView(withText("1 selected")).check(matches(isDisplayed()))

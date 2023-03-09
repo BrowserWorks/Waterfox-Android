@@ -4,6 +4,7 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
@@ -26,11 +27,13 @@ class ThreeDotMenuMainTest {
     private lateinit var mockWebServer: MockWebServer
 
     @get:Rule
-    val activityTestRule = HomeActivityTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityTestRule()
+    ) { it.activity }
 
     @Before
     fun setUp() {
-        activityTestRule.activity.applicationContext.settings().shouldShowJumpBackInCFR = false
+        composeTestRule.activity.applicationContext.settings().shouldShowJumpBackInCFR = false
         mockWebServer = MockWebServer().apply {
             dispatcher = AndroidAssetDispatcher()
             start()
@@ -63,7 +66,7 @@ class ThreeDotMenuMainTest {
         }.goBack {
         }.openThreeDotMenu {
         }.openCustomizeHome {
-            verifyHomePageView()
+            verifyHomePageView(composeTestRule)
         }.goBack {
         }.openThreeDotMenu {
         }.openHelp {

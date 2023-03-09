@@ -7,7 +7,8 @@
 package net.waterfox.android.ui.robots
 
 import android.content.Intent
-import android.util.Log
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.intent.Intents
@@ -45,34 +46,23 @@ class DownloadRobot {
 
     fun verifyPhotosAppOpens() = assertExternalAppOpens(GOOGLE_APPS_PHOTOS)
 
-    fun verifyDownloadedFileName(fileName: String) {
-        assertTrue(
-            "$fileName not found in Downloads list",
-            mDevice.findObject(UiSelector().text(fileName))
-                .waitForExists(waitingTime)
-        )
-    }
+    fun verifyDownloadedFileName(fileName: String, rule: ComposeTestRule) =
+        rule.onAllNodesWithTag("library.site.item.title", useUnmergedTree = true)
+            .filterToOne(hasText(fileName))
+            .assertIsDisplayed()
 
-    fun verifyDownloadedFileIcon() = assertDownloadedFileIcon()
+    fun verifyDownloadedFileIcon(rule: ComposeTestRule) = assertDownloadedFileIcon(rule)
 
-    fun verifyEmptyDownloadsList() {
-        mDevice.findObject(UiSelector().resourceId("$packageName:id/download_empty_view"))
-            .waitForExists(waitingTime)
-        onView(withText("No downloaded files")).check(matches(isDisplayed()))
-    }
+    fun verifyEmptyDownloadsList(rule: ComposeTestRule) =
+        rule.onNodeWithText("No downloaded files").assertIsDisplayed()
 
-    fun waitForDownloadsListToExist() =
-        assertTrue(
-            "Downloads list either empty or not displayed",
-            mDevice.findObject(UiSelector().resourceId("$packageName:id/download_list"))
-                .waitForExists(waitingTime)
-        )
+    fun verifyDownloadsList(rule: ComposeTestRule) =
+        rule.onNodeWithTag("download.list").assertIsDisplayed()
 
-    fun openDownloadedFile(fileName: String) {
-        downloadedFile(fileName)
-            .check(matches(isDisplayed()))
-            .click()
-    }
+    fun openDownloadedFile(fileName: String, rule: ComposeTestRule) =
+        downloadedFile(fileName, rule)
+            .assertIsDisplayed()
+            .performClick()
 
     class Transition {
         fun clickDownload(interact: DownloadRobot.() -> Unit): Transition {
@@ -148,7 +138,7 @@ private fun assertDownloadPrompt(fileName: String) {
 
             break
         } catch (e: AssertionError) {
-            Log.e("DOWNLOAD_ROBOT", "Failed to find locator: ${e.localizedMessage}")
+            android.util.Log.e("DOWNLOAD_ROBOT", "Failed to find locator: ${e.localizedMessage}")
 
             browserScreen {
             }.clickDownloadLink(fileName) {
@@ -187,11 +177,8 @@ private fun openDownloadButton() =
     onView(withId(R.id.download_dialog_action_button))
         .check(matches(isDisplayed()))
 
-private fun downloadedFile(fileName: String) = onView(withText(fileName))
+private fun downloadedFile(fileName: String, rule: ComposeTestRule) =
+    rule.onNodeWithText(fileName)
 
-private fun assertDownloadedFileIcon() =
-    assertTrue(
-        "Downloaded file icon not found",
-        mDevice.findObject(UiSelector().resourceId("$packageName:id/favicon"))
-            .exists()
-    )
+private fun assertDownloadedFileIcon(rule: ComposeTestRule) =
+    rule.onNodeWithTag("library.site.item.favicon", useUnmergedTree = true).assertExists()

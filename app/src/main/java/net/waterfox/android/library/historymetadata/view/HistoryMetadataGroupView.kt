@@ -14,7 +14,7 @@ import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentHistoryMetadataGroupBinding
 import net.waterfox.android.library.LibraryPageView
 import net.waterfox.android.library.historymetadata.HistoryMetadataGroupFragmentState
-import net.waterfox.android.library.historymetadata.interactor.HistoryMetadataGroupInteractor
+import net.waterfox.android.library.historymetadata.HistoryMetadataGroupInteractor
 
 /**
  * Shows a list of history metadata items.

@@ -4,8 +4,10 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
+import net.waterfox.android.components.components
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
@@ -38,7 +40,9 @@ class DeepLinkTest {
     private val robot = DeepLinkRobot()
 
     @get:Rule
-    val activityIntentTestRule = HomeActivityIntentTestRule()
+    val activityIntentTestRule = AndroidComposeTestRule(
+        HomeActivityIntentTestRule()
+    ) { it.activity }
 
     @Before
     fun setUp() {
@@ -78,7 +82,7 @@ class DeepLinkTest {
     fun openBookmarks() {
         robot.openBookmarks {
             // verify we can see headings.
-            verifyFolderTitle("Desktop Bookmarks")
+            verifyFolderTitle("Desktop Bookmarks", activityIntentTestRule)
         }
     }
 

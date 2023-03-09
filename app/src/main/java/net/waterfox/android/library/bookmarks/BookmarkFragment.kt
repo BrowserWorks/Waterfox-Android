@@ -27,6 +27,7 @@ import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.support.base.feature.UserInteractionHandler
 import net.waterfox.android.HomeActivity
+import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.StoreProvider
@@ -43,7 +44,6 @@ import net.waterfox.android.utils.allowUndo
 class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHandler {
 
     private lateinit var bookmarkStore: BookmarkFragmentStore
-    private lateinit var bookmarkView: BookmarkView
     private var _bookmarkInteractor: BookmarkFragmentInteractor? = null
     private val bookmarkInteractor: BookmarkFragmentInteractor
         get() = _bookmarkInteractor!!
@@ -87,8 +87,10 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
             )
         )
 
-        bookmarkView = BookmarkView(binding.bookmarkLayout, bookmarkInteractor, findNavController())
-        bookmarkView.binding.bookmarkFoldersSignIn.visibility = View.GONE
+        binding.bookmarkContent.interactor = bookmarkInteractor
+        binding.bookmarkContent.onSignInButtonClick = {
+            findNavController().navigate(NavGraphDirections.actionGlobalTurnOnSync())
+        }
 
         viewLifecycleOwner.lifecycle.addObserver(
             BookmarkDeselectNavigationListener(
@@ -99,6 +101,12 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
         )
 
         return binding.root
+    }
+
+    private fun setUiForNormalMode(root: BookmarkNode?) {
+        super.setUiForNormalMode(
+            if (BookmarkRoot.Mobile.id == root?.guid) getString(R.string.library_bookmarks) else root?.title
+        )
     }
 
     private fun showSnackBarWithText(text: String) {
@@ -114,15 +122,25 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val accountManager = requireComponents.backgroundServices.accountManager
-        consumeFrom(bookmarkStore) {
-            bookmarkView.update(it)
+        consumeFrom(bookmarkStore) { state ->
+            binding.bookmarkContent.updateState(state)
+            when (state.mode) {
+                is BookmarkFragmentState.Mode.Normal -> setUiForNormalMode(state.tree)
+                is BookmarkFragmentState.Mode.Selecting -> setUiForSelectingMode(
+                    context?.getString(
+                        R.string.bookmarks_multi_select_title,
+                        state.mode.selectedItems.size,
+                    ),
+                )
+                else -> Unit
+            }
 
             // Only display the sign-in prompt if we're inside of the virtual "Desktop Bookmarks" node.
             // Don't want to pester user too much with it, and if there are lots of bookmarks present,
             // it'll just get visually lost. Inside of the "Desktop Bookmarks" node, it'll nicely stand-out,
             // since there are always only three other items in there. It's also the right place contextually.
-            bookmarkView.binding.bookmarkFoldersSignIn.isVisible =
-                it.tree?.guid == BookmarkRoot.Root.id && accountManager.authenticatedAccount() == null
+            binding.bookmarkContent.signInButtonVisible =
+                state.tree?.guid == BookmarkRoot.Root.id && accountManager.authenticatedAccount() == null
         }
     }
 
@@ -241,7 +259,7 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
 
     override fun onBackPressed(): Boolean {
         sharedViewModel.selectedFolder = null
-        return bookmarkView.onBackPressed()
+        return binding.bookmarkContent.onBackPressed()
     }
 
     private suspend fun loadBookmarkNode(guid: String): BookmarkNode? = withContext(IO) {

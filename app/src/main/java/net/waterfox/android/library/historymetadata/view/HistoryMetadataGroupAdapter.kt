@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import net.waterfox.android.library.history.History
 import net.waterfox.android.library.history.PendingDeletionHistory
-import net.waterfox.android.library.historymetadata.interactor.HistoryMetadataGroupInteractor
+import net.waterfox.android.library.historymetadata.HistoryMetadataGroupInteractor
 import net.waterfox.android.selection.SelectionHolder
 
 /**

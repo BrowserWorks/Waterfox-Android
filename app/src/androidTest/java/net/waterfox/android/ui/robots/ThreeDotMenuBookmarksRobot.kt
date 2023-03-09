@@ -6,54 +6,76 @@
 
 package net.waterfox.android.ui.robots
 
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.matcher.ViewMatchers.withText
-import net.waterfox.android.helpers.click
+import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.ComposeTestRule
+import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.performClick
+import mozilla.components.ui.colors.PhotonColors
+import net.waterfox.android.helpers.TestHelper.assertTextColor
 
 /**
  * Implementation of Robot Pattern for the Bookmarks three dot menu.
  */
 class ThreeDotMenuBookmarksRobot {
 
+    fun verifyEditButton(rule: ComposeTestRule) = editButton(rule).assertIsDisplayed()
+
+    fun verifyCopyButton(rule: ComposeTestRule) = copyButton(rule).assertIsDisplayed()
+
+    fun verifyShareButton(rule: ComposeTestRule) = shareButton(rule).assertIsDisplayed()
+
+    fun verifyOpenInNewTabButton(rule: ComposeTestRule) =
+        openInNewTabButton(rule).assertIsDisplayed()
+
+    fun verifyOpenInPrivateTabButton(rule: ComposeTestRule) =
+        openInPrivateTabButton(rule).assertIsDisplayed()
+
+    fun verifyDeleteButton(rule: ComposeTestRule) = deleteButton(rule).assertIsDisplayed()
+
+    fun verifyDeleteButtonStyle(rule: ComposeTestRule) =
+        deleteButton(rule)
+            .assertIsDisplayed()
+            .assertTextColor(PhotonColors.Red70)
+
     class Transition {
 
-        fun clickEdit(interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
-            editButton().click()
+        fun clickEdit(rule: ComposeTestRule, interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
+            editButton(rule).performClick()
 
             BookmarksRobot().interact()
             return BookmarksRobot.Transition()
         }
 
-        fun clickCopy(interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
-            copyButton().click()
+        fun clickCopy(rule: ComposeTestRule, interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
+            copyButton(rule).performClick()
 
             BookmarksRobot().interact()
             return BookmarksRobot.Transition()
         }
 
-        fun clickShare(interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
-            shareButton().click()
+        fun clickShare(rule: ComposeTestRule, interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
+            shareButton(rule).performClick()
 
             BookmarksRobot().interact()
             return BookmarksRobot.Transition()
         }
 
-        fun clickOpenInNewTab(interact: TabDrawerRobot.() -> Unit): TabDrawerRobot.Transition {
-            openInNewTabButton().click()
+        fun clickOpenInNewTab(rule: ComposeTestRule, interact: TabDrawerRobot.() -> Unit): TabDrawerRobot.Transition {
+            openInNewTabButton(rule).performClick()
 
             TabDrawerRobot().interact()
             return TabDrawerRobot.Transition()
         }
 
-        fun clickOpenInPrivateTab(interact: TabDrawerRobot.() -> Unit): TabDrawerRobot.Transition {
-            openInPrivateTabButton().click()
+        fun clickOpenInPrivateTab(rule: ComposeTestRule, interact: TabDrawerRobot.() -> Unit): TabDrawerRobot.Transition {
+            openInPrivateTabButton(rule).performClick()
 
             TabDrawerRobot().interact()
             return TabDrawerRobot.Transition()
         }
 
-        fun clickDelete(interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
-            deleteButton().click()
+        fun clickDelete(rule: ComposeTestRule, interact: BookmarksRobot.() -> Unit): BookmarksRobot.Transition {
+            deleteButton(rule).performClick()
 
             BookmarksRobot().interact()
             return BookmarksRobot.Transition()
@@ -61,14 +83,14 @@ class ThreeDotMenuBookmarksRobot {
     }
 }
 
-private fun editButton() = onView(withText("Edit"))
+private fun editButton(rule: ComposeTestRule) = rule.onNodeWithText("Edit")
 
-private fun copyButton() = onView(withText("Copy"))
+private fun copyButton(rule: ComposeTestRule) = rule.onNodeWithText("Copy")
 
-private fun shareButton() = onView(withText("Share"))
+private fun shareButton(rule: ComposeTestRule) = rule.onNodeWithText("Share")
 
-private fun openInNewTabButton() = onView(withText("Open in new tab"))
+private fun openInNewTabButton(rule: ComposeTestRule) = rule.onNodeWithText("Open in new tab")
 
-private fun openInPrivateTabButton() = onView(withText("Open in private tab"))
+private fun openInPrivateTabButton(rule: ComposeTestRule) = rule.onNodeWithText("Open in private tab")
 
-private fun deleteButton() = onView(withText("Delete"))
+private fun deleteButton(rule: ComposeTestRule) = rule.onNodeWithText("Delete")

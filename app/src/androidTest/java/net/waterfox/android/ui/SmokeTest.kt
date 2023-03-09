@@ -23,6 +23,7 @@ import org.junit.Rule
 import org.junit.Test
 import net.waterfox.android.IntentReceiverActivity
 import net.waterfox.android.R
+import net.waterfox.android.components.components
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.AndroidAssetDispatcher
@@ -75,9 +76,8 @@ class SmokeTest {
 
     @get:Rule(order = 0)
     val activityTestRule = AndroidComposeTestRule(
-        HomeActivityIntentTestRule(),
-        { it.activity }
-    )
+        HomeActivityIntentTestRule()
+    ) { it.activity }
 
     @get:Rule(order = 1)
     val intentReceiverActivityTestRule = ActivityTestRule(
@@ -240,7 +240,7 @@ class SmokeTest {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
+            verifyHistoryListExists(activityTestRule)
         }
     }
 
@@ -539,7 +539,6 @@ class SmokeTest {
 
     @Test
     // Verifies that a recently closed item is properly opened
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun openRecentlyClosedItemTest() {
         val website = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -551,20 +550,14 @@ class SmokeTest {
             closeTab()
         }.openTabDrawer {
         }.openRecentlyClosedTabs {
-            waitForListToExist()
-            recentlyClosedTabsListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.recently_closed_list), 1)
-            IdlingRegistry.getInstance().register(recentlyClosedTabsListIdlingResource!!)
             verifyRecentlyClosedTabsMenuView()
-            IdlingRegistry.getInstance().unregister(recentlyClosedTabsListIdlingResource!!)
-        }.clickRecentlyClosedItem("Test_Page_1") {
+        }.clickRecentlyClosedItem("Test_Page_1", activityTestRule) {
             verifyUrl(website.url.toString())
         }
     }
 
     @Test
     // Verifies that tapping the "x" button removes a recently closed item from the list
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun deleteRecentlyClosedTabsItemTest() {
         val website = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -576,14 +569,9 @@ class SmokeTest {
             closeTab()
         }.openTabDrawer {
         }.openRecentlyClosedTabs {
-            waitForListToExist()
-            recentlyClosedTabsListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.recently_closed_list), 1)
-            IdlingRegistry.getInstance().register(recentlyClosedTabsListIdlingResource!!)
             verifyRecentlyClosedTabsMenuView()
-            IdlingRegistry.getInstance().unregister(recentlyClosedTabsListIdlingResource!!)
-            clickDeleteRecentlyClosedTabs()
-            verifyEmptyRecentlyClosedTabsList()
+            clickDeleteRecentlyClosedTabs(activityTestRule)
+            verifyEmptyRecentlyClosedTabsList(activityTestRule)
         }
     }
 
@@ -596,34 +584,34 @@ class SmokeTest {
             createBookmark(website.url)
         }.openThreeDotMenu {
         }.openBookmarks {
-            verifyBookmarkTitle("Test_Page_1")
-            createFolder("My Folder")
-            verifyFolderTitle("My Folder")
-        }.openThreeDotMenu("Test_Page_1") {
-        }.clickEdit {
-            clickParentFolderSelector()
-            selectFolder("My Folder")
+            verifyBookmarkTitle("Test_Page_1", activityTestRule)
+            createFolder("My Folder", activityTestRule)
+            verifyFolderTitle("My Folder", activityTestRule)
+        }.openThreeDotMenu("Test_Page_1", activityTestRule) {
+        }.clickEdit(activityTestRule) {
+            clickParentFolderSelector(activityTestRule)
+            selectFolder("My Folder", activityTestRule)
             navigateUp()
             saveEditBookmark()
-            createFolder("My Folder 2")
-            verifyFolderTitle("My Folder 2")
-        }.openThreeDotMenu("My Folder 2") {
-        }.clickEdit {
-            clickParentFolderSelector()
-            selectFolder("My Folder")
+            createFolder("My Folder 2", activityTestRule)
+            verifyFolderTitle("My Folder 2", activityTestRule)
+        }.openThreeDotMenu("My Folder 2", activityTestRule) {
+        }.clickEdit(activityTestRule) {
+            clickParentFolderSelector(activityTestRule)
+            selectFolder("My Folder", activityTestRule)
             navigateUp()
             saveEditBookmark()
-        }.openThreeDotMenu("My Folder") {
-        }.clickDelete {
+        }.openThreeDotMenu("My Folder", activityTestRule) {
+        }.clickDelete(activityTestRule) {
             cancelFolderDeletion()
-            verifyFolderTitle("My Folder")
-        }.openThreeDotMenu("My Folder") {
-        }.clickDelete {
+            verifyFolderTitle("My Folder", activityTestRule)
+        }.openThreeDotMenu("My Folder", activityTestRule) {
+        }.clickDelete(activityTestRule) {
             confirmDeletion()
             verifyDeleteSnackBarText()
-            verifyBookmarkIsDeleted("My Folder")
-            verifyBookmarkIsDeleted("My Folder 2")
-            verifyBookmarkIsDeleted("Test_Page_1")
+            verifyBookmarkIsDeleted("My Folder", activityTestRule)
+            verifyBookmarkIsDeleted("My Folder 2", activityTestRule)
+            verifyBookmarkIsDeleted("Test_Page_1", activityTestRule)
             navigateUp()
         }
 
@@ -722,7 +710,7 @@ class SmokeTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyEmptyHistoryView()
+            verifyEmptyHistoryView(activityTestRule)
         }
     }
 
@@ -957,24 +945,18 @@ class SmokeTest {
     }
 
     @Test
+    @Ignore("Waterfox: Not applicable. Currently no other languages than English are supported.")
     fun switchLanguageTest() {
         homeScreen {
         }.openThreeDotMenu {
         }.openSettings {
         }.openLanguageSubMenu {
-            localeListIdlingResource =
-                RecyclerViewIdlingResource(
-                    activityTestRule.activity.findViewById(R.id.locale_list),
-                    2
-                )
-            IdlingRegistry.getInstance().register(localeListIdlingResource)
-            selectLanguage("Romanian")
+            selectLanguage("Romanian", activityTestRule)
             verifyLanguageHeaderIsTranslated(ROMANIAN_LANGUAGE_HEADER)
-            selectLanguage("Français")
+            selectLanguage("Français", activityTestRule)
             verifyLanguageHeaderIsTranslated(FRENCH_LANGUAGE_HEADER)
-            selectLanguage(FRENCH_SYSTEM_LOCALE_OPTION)
+            selectLanguage(FRENCH_SYSTEM_LOCALE_OPTION, activityTestRule)
             verifyLanguageHeaderIsTranslated("Language")
-            IdlingRegistry.getInstance().unregister(localeListIdlingResource)
         }
     }
 
@@ -1051,9 +1033,9 @@ class SmokeTest {
         }.openThreeDotMenu {
         }.openSettings {
         }.openTabsSubMenu {
-            verifyTabViewOptions()
-            verifyCloseTabsOptions()
-            verifyMoveOldTabsToInactiveOptions()
+            verifyTabViewOptions(activityTestRule)
+            verifyCloseTabsOptions(activityTestRule)
+            verifyMoveOldTabsToInactiveOptions(activityTestRule)
         }
     }
 }

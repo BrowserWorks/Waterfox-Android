@@ -4,20 +4,14 @@
 
 package net.waterfox.android.settings.about
 
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.util.Linkify
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import net.waterfox.android.R
 import net.waterfox.android.databinding.FragmentAboutLibrariesBinding
 import net.waterfox.android.ext.showToolbar
 import java.nio.charset.Charset
-import java.util.Locale
+import java.util.*
 
 /**
  * Displays the licenses of all the libraries used by Waterfox.
@@ -37,25 +31,13 @@ class AboutLibrariesFragment : Fragment(R.layout.fragment_about_libraries) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val binding = FragmentAboutLibrariesBinding.bind(view)
-        setupLibrariesListView(binding.aboutLibrariesListview)
+        binding.aboutLibrariesContent.libraries = parseLibraries()
     }
 
     override fun onResume() {
         super.onResume()
         val appName = getString(R.string.app_name)
         showToolbar(getString(R.string.open_source_licenses_title, appName))
-    }
-
-    private fun setupLibrariesListView(listView: ListView) {
-        val libraries = parseLibraries()
-        listView.adapter = ArrayAdapter(
-            listView.context,
-            android.R.layout.simple_list_item_1,
-            libraries
-        )
-        listView.setOnItemClickListener { _, _, position, _ ->
-            showLicenseDialog(libraries[position])
-        }
     }
 
     private fun parseLibraries(): List<LibraryItem> {
@@ -92,28 +74,8 @@ class AboutLibrariesFragment : Fragment(R.layout.fragment_about_libraries) {
             LibraryItem(name, licenseText)
         }.sortedBy { item -> item.name.lowercase(Locale.ROOT) }
     }
-
-    private fun showLicenseDialog(libraryItem: LibraryItem) {
-        val dialog = AlertDialog.Builder(requireContext())
-            .setTitle(libraryItem.name)
-            .setMessage(libraryItem.license)
-            .create()
-        dialog.show()
-
-        val textView = dialog.findViewById<TextView>(android.R.id.message)!!
-        Linkify.addLinks(textView, Linkify.ALL)
-        textView.linksClickable = true
-        textView.textSize = LICENSE_TEXT_SIZE
-        textView.typeface = Typeface.MONOSPACE
-    }
-
-    companion object {
-        private const val LICENSE_TEXT_SIZE = 10F
-    }
 }
 
-private class LibraryItem(val name: String, val license: String) {
-    override fun toString(): String {
-        return name
-    }
+class LibraryItem(val name: String, val license: String) {
+    override fun toString() = name
 }

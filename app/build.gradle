@@ -339,6 +339,7 @@ dependencies {
     implementation Deps.androidx_coordinatorlayout
     implementation Deps.google_accompanist_drawablepainter
     implementation Deps.google_accompanist_insets
+    implementation Deps.google_accompanist_swiperefresh
 
     implementation Deps.sentry
 
@@ -432,6 +433,7 @@ dependencies {
     implementation Deps.androidx_compose_ui_tooling
     implementation Deps.androidx_compose_foundation
     implementation Deps.androidx_compose_material
+    implementation Deps.androidx_compose_paging
     implementation Deps.androidx_legacy
     implementation Deps.androidx_biometric
     implementation Deps.androidx_paging

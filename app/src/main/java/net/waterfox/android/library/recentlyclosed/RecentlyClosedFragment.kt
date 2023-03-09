@@ -29,9 +29,9 @@ import net.waterfox.android.library.LibraryPageFragment
 @Suppress("TooManyFunctions")
 class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserInteractionHandler {
     private lateinit var recentlyClosedFragmentStore: RecentlyClosedFragmentStore
-    private var _recentlyClosedFragmentView: RecentlyClosedFragmentView? = null
-    private val recentlyClosedFragmentView: RecentlyClosedFragmentView
-        get() = _recentlyClosedFragmentView!!
+
+    private var _binding: FragmentRecentlyClosedTabsBinding? = null
+    private val binding get() = _binding!!
 
     private lateinit var recentlyClosedInteractor: RecentlyClosedFragmentInteractor
     private lateinit var recentlyClosedController: RecentlyClosedController
@@ -91,7 +91,7 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = FragmentRecentlyClosedTabsBinding.inflate(inflater, container, false)
+        _binding = FragmentRecentlyClosedTabsBinding.inflate(inflater, container, false)
         recentlyClosedFragmentStore = StoreProvider.get(this) {
             RecentlyClosedFragmentStore(
                 RecentlyClosedFragmentState(
@@ -111,16 +111,13 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
             openToBrowser = ::openItem
         )
         recentlyClosedInteractor = RecentlyClosedFragmentInteractor(recentlyClosedController)
-        _recentlyClosedFragmentView = RecentlyClosedFragmentView(
-            binding.recentlyClosedLayout,
-            recentlyClosedInteractor
-        )
+        binding.recentlyClosedContent.interactor = recentlyClosedInteractor
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _recentlyClosedFragmentView = null
+        _binding = null
     }
 
     private fun openItem(url: String, mode: BrowsingMode? = null) {
@@ -135,7 +132,17 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         consumeFrom(recentlyClosedFragmentStore) { state ->
-            recentlyClosedFragmentView.update(state)
+            binding.recentlyClosedContent.updateState(state)
+            if (state.selectedTabs.isEmpty()) {
+                setUiForNormalMode(context?.getString(R.string.library_recently_closed_tabs))
+            } else {
+                setUiForSelectingMode(
+                    context?.getString(
+                        R.string.history_multi_select_title,
+                        state.selectedTabs.size,
+                    ),
+                )
+            }
             activity?.invalidateOptionsMenu()
         }
 

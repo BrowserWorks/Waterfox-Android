@@ -696,7 +696,7 @@
 
     <fragment
         android:id="@+id/accessibilityFragment"
-        android:name="net.waterfox.android.settings.AccessibilityFragment"
+        android:name="net.waterfox.android.settings.accessibility.AccessibilityFragment"
         android:label="@string/preferences_accessibility" />
     <fragment
         android:id="@+id/accountSettingsFragment"

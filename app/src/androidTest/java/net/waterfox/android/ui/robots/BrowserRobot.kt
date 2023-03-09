@@ -40,6 +40,7 @@ import net.waterfox.android.R
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.Constants.LONG_CLICK_DURATION
 import net.waterfox.android.helpers.Constants.RETRY_COUNT
+import net.waterfox.android.helpers.MatcherHelper
 import net.waterfox.android.helpers.SessionLoadedIdlingResource
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
 import net.waterfox.android.helpers.TestAssetHelper.waitingTimeLong
@@ -807,12 +808,32 @@ class BrowserRobot {
         }
 
         fun openTabDrawer(interact: TabDrawerRobot.() -> Unit): TabDrawerRobot.Transition {
-            mDevice.findObject(
-                UiSelector().descriptionContains("Tap to switch tabs.")
-            ).waitForExists(waitingTime)
+            for (i in 1..RETRY_COUNT) {
+                try {
+                    mDevice.waitForObjects(
+                        mDevice.findObject(
+                            UiSelector()
+                                .resourceId("$packageName:id/mozac_browser_toolbar_browser_actions"),
+                        ),
+                        waitingTime,
+                    )
 
-            tabsCounter().click()
-            mDevice.waitNotNull(Until.findObject(By.res("$packageName:id/tab_layout")))
+                    tabsCounter().click()
+                    assertTrue(
+                        MatcherHelper.itemWithResId("$packageName:id/new_tab_button")
+                            .waitForExists(waitingTime),
+                    )
+
+                    break
+                } catch (e: AssertionError) {
+                    if (i == RETRY_COUNT) {
+                        throw e
+                    } else {
+                        mDevice.waitForIdle()
+                    }
+                }
+            }
+            assertTrue(MatcherHelper.itemWithResId("$packageName:id/new_tab_button").waitForExists(waitingTime))
 
             TabDrawerRobot().interact()
             return TabDrawerRobot.Transition()

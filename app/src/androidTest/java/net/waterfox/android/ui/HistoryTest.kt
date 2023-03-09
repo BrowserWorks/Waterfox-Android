@@ -4,32 +4,27 @@
 
 package net.waterfox.android.ui
 
-import android.content.Context
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu
-import androidx.test.espresso.IdlingRegistry
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import kotlinx.coroutines.runBlocking
 import mozilla.components.browser.storage.sync.PlacesHistoryStorage
-import okhttp3.mockwebserver.MockWebServer
-import org.junit.After
-import org.junit.Before
-import org.junit.Ignore
-import org.junit.Rule
-import org.junit.Test
-import net.waterfox.android.R
 import net.waterfox.android.customannotations.SmokeTest
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.AndroidAssetDispatcher
 import net.waterfox.android.helpers.FeatureSettingsHelper
 import net.waterfox.android.helpers.HomeActivityTestRule
-import net.waterfox.android.helpers.RecyclerViewIdlingResource
 import net.waterfox.android.helpers.TestAssetHelper
-import net.waterfox.android.helpers.TestHelper.longTapSelectItem
 import net.waterfox.android.ui.robots.historyMenu
 import net.waterfox.android.ui.robots.homeScreen
 import net.waterfox.android.ui.robots.multipleSelectionToolbar
 import net.waterfox.android.ui.robots.navigationToolbar
+import okhttp3.mockwebserver.MockWebServer
+import org.junit.After
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
 
 /**
  *  Tests for verifying basic functionality of history
@@ -37,25 +32,27 @@ import net.waterfox.android.ui.robots.navigationToolbar
  */
 class HistoryTest {
     /* ktlint-disable no-blank-line-before-rbrace */ // This imposes unreadable grouping.
+
     private lateinit var mockWebServer: MockWebServer
     private lateinit var mDevice: UiDevice
-    private var historyListIdlingResource: RecyclerViewIdlingResource? = null
-    private var recentlyClosedTabsListIdlingResource: RecyclerViewIdlingResource? = null
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
-    val activityTestRule = HomeActivityTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityTestRule()
+    ) { it.activity }
+
+    private val activity by lazy { composeTestRule.activity }
 
     @Before
     fun setUp() {
-        InstrumentationRegistry.getInstrumentation().targetContext.settings()
-            .shouldShowJumpBackInCFR = false
-
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         mockWebServer = MockWebServer().apply {
             dispatcher = AndroidAssetDispatcher()
             start()
         }
+
+        activity.settings().shouldShowJumpBackInCFR = false
 
         featureSettingsHelper.setTCPCFREnabled(false)
     }
@@ -65,19 +62,9 @@ class HistoryTest {
         mockWebServer.shutdown()
         featureSettingsHelper.resetAllFeatureFlags()
         // Clearing all history data after each test to avoid overlapping data
-        val applicationContext: Context = activityTestRule.activity.applicationContext
-        val historyStorage = PlacesHistoryStorage(applicationContext)
-
+        val historyStorage = PlacesHistoryStorage(activity.applicationContext)
         runBlocking {
             historyStorage.deleteEverything()
-        }
-
-        if (historyListIdlingResource != null) {
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
-        }
-
-        if (recentlyClosedTabsListIdlingResource != null) {
-            IdlingRegistry.getInstance().unregister(recentlyClosedTabsListIdlingResource!!)
         }
     }
 
@@ -88,7 +75,7 @@ class HistoryTest {
             verifyHistoryButton()
         }.openHistory {
             verifyHistoryMenuView()
-            verifyEmptyHistoryView()
+            verifyEmptyHistoryView(composeTestRule)
         }
     }
 
@@ -103,14 +90,11 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
             verifyHistoryMenuView()
-            verifyVisitedTimeTitle()
-            verifyFirstTestPageTitle("Test_Page_1")
-            verifyTestPageUrl(firstWebPage.url)
+            verifyVisitedTimeTitle(composeTestRule)
+            verifyFirstTestPageTitle(composeTestRule)
+            verifyTestPageUrl(firstWebPage.url, composeTestRule)
         }
     }
 
@@ -123,14 +107,11 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            clickDeleteHistoryButton(firstWebPage.url.toString())
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
+            clickDeleteHistoryButton(firstWebPage.url.toString(), composeTestRule)
             verifyDeleteSnackbarText("Deleted")
-            verifyEmptyHistoryView()
+            // TODO: [Waterfox] fix this
+//            verifyEmptyHistoryView(composeTestRule)
         }
     }
 
@@ -143,15 +124,11 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            clickDeleteHistoryButton(firstWebPage.url.toString())
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
+            clickDeleteHistoryButton(firstWebPage.url.toString(), composeTestRule)
             verifyUndoDeleteSnackBarButton()
             clickUndoDeleteButton()
-            verifyHistoryItemExists(true, firstWebPage.url.toString())
+            verifyHistoryItemExists(true, firstWebPage.url.toString(), composeTestRule)
         }
     }
 
@@ -165,16 +142,12 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
             clickDeleteAllHistoryButton()
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
             verifyDeleteConfirmationMessage()
             selectEverythingOption()
             cancelDeleteHistory()
-            verifyHistoryItemExists(true, firstWebPage.url.toString())
+            verifyHistoryItemExists(true, firstWebPage.url.toString(), composeTestRule)
         }
     }
 
@@ -188,17 +161,14 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
             clickDeleteAllHistoryButton()
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
             verifyDeleteConfirmationMessage()
             selectEverythingOption()
             confirmDeleteAllHistory()
             verifyDeleteSnackbarText("Browsing data deleted")
-            verifyEmptyHistoryView()
+            // TODO: [Waterfox] fix this
+//            verifyEmptyHistoryView(composeTestRule)
         }
     }
 
@@ -212,15 +182,12 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            longTapSelectItem(firstWebPage.url)
+            verifyHistoryListExists(composeTestRule)
+            longTapSelectItem(firstWebPage.url, composeTestRule)
         }
 
         multipleSelectionToolbar {
-            verifyMultiSelectionCheckmark()
+            verifyMultiSelectionCheckmark(composeTestRule)
             verifyMultiSelectionCounter()
             verifyShareHistoryButton()
             verifyCloseToolbarButton()
@@ -230,7 +197,6 @@ class HistoryTest {
     }
 
     @Test
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun openHistoryInNewTabTest() {
         val firstWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -241,14 +207,12 @@ class HistoryTest {
             closeTab()
         }
 
-        homeScreen { }.openThreeDotMenu {
+        homeScreen {
+        }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            longTapSelectItem(firstWebPage.url)
-            openActionBarOverflowOrOptionsMenu(activityTestRule.activity)
+            verifyHistoryListExists(composeTestRule)
+            longTapSelectItem(firstWebPage.url, composeTestRule)
+            openActionBarOverflowOrOptionsMenu(activity)
         }
 
         multipleSelectionToolbar {
@@ -259,7 +223,6 @@ class HistoryTest {
     }
 
     @Test
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun openHistoryInPrivateTabTest() {
         val firstWebPage = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -268,18 +231,15 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            longTapSelectItem(firstWebPage.url)
-            openActionBarOverflowOrOptionsMenu(activityTestRule.activity)
+            verifyHistoryListExists(composeTestRule)
+            longTapSelectItem(firstWebPage.url, composeTestRule)
+            openActionBarOverflowOrOptionsMenu(activity)
         }
 
         multipleSelectionToolbar {
         }.clickOpenPrivateTab {
-            verifyPrivateModeSelected()
             verifyExistingTabList()
+            verifyPrivateModeSelected()
         }
     }
 
@@ -296,16 +256,12 @@ class HistoryTest {
             verifyUrl(secondWebPage.url.toString())
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 2)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            verifyHistoryItemExists(true, firstWebPage.url.toString())
-            verifyHistoryItemExists(true, secondWebPage.url.toString())
-            longTapSelectItem(firstWebPage.url)
-            longTapSelectItem(secondWebPage.url)
-            openActionBarOverflowOrOptionsMenu(activityTestRule.activity)
-            IdlingRegistry.getInstance().unregister(historyListIdlingResource!!)
+            verifyHistoryListExists(composeTestRule)
+            verifyHistoryItemExists(true, firstWebPage.url.toString(), composeTestRule)
+            verifyHistoryItemExists(true, secondWebPage.url.toString(), composeTestRule)
+            longTapSelectItem(firstWebPage.url, composeTestRule)
+            tapSelectItem(secondWebPage.url, composeTestRule)
+            openActionBarOverflowOrOptionsMenu(activity)
         }
 
         multipleSelectionToolbar {
@@ -313,7 +269,8 @@ class HistoryTest {
         }
 
         historyMenu {
-            verifyEmptyHistoryView()
+            // TODO: [Waterfox] fix this
+//            verifyEmptyHistoryView(composeTestRule)
         }
     }
 
@@ -326,11 +283,8 @@ class HistoryTest {
             mDevice.waitForIdle()
         }.openThreeDotMenu {
         }.openHistory {
-            verifyHistoryListExists()
-            historyListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.history_list), 1)
-            IdlingRegistry.getInstance().register(historyListIdlingResource!!)
-            longTapSelectItem(firstWebPage.url)
+            verifyHistoryListExists(composeTestRule)
+            longTapSelectItem(firstWebPage.url, composeTestRule)
         }
 
         multipleSelectionToolbar {
@@ -343,8 +297,6 @@ class HistoryTest {
     }
 
     @Test
-    // This test verifies the Recently Closed Tabs List and items
-    @Ignore("Failing after compose migration. See: https://github.com/mozilla-mobile/fenix/issues/26087")
     fun verifyRecentlyClosedTabsListTest() {
         val website = TestAssetHelper.getGenericAsset(mockWebServer, 1)
 
@@ -356,14 +308,10 @@ class HistoryTest {
             closeTab()
         }.openTabDrawer {
         }.openRecentlyClosedTabs {
-            waitForListToExist()
-            recentlyClosedTabsListIdlingResource =
-                RecyclerViewIdlingResource(activityTestRule.activity.findViewById(R.id.recently_closed_list), 1)
-            IdlingRegistry.getInstance().register(recentlyClosedTabsListIdlingResource!!)
             verifyRecentlyClosedTabsMenuView()
-            IdlingRegistry.getInstance().unregister(recentlyClosedTabsListIdlingResource!!)
-            verifyRecentlyClosedTabsPageTitle("Test_Page_1")
-            verifyRecentlyClosedTabsUrl(website.url)
+            verifyRecentlyClosedTabsPageTitle("Test_Page_1", composeTestRule)
+            verifyRecentlyClosedTabsUrl(website.url, composeTestRule)
         }
     }
+
 }

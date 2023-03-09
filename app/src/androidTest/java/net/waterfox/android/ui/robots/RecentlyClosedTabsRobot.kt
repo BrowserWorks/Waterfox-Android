@@ -5,21 +5,15 @@
 package net.waterfox.android.ui.robots
 
 import android.net.Uri
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.Visibility
-import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withParent
-import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.uiautomator.UiSelector
-import org.hamcrest.Matchers
-import org.hamcrest.Matchers.allOf
+import androidx.test.espresso.matcher.ViewMatchers.*
 import net.waterfox.android.R
-import net.waterfox.android.helpers.TestAssetHelper
+import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.helpers.TestHelper.mDevice
-import net.waterfox.android.helpers.TestHelper.packageName
-import net.waterfox.android.helpers.click
+import org.hamcrest.Matchers.allOf
 
 /**
  * Implementation of Robot Pattern for the recently closed tabs menu.
@@ -27,25 +21,27 @@ import net.waterfox.android.helpers.click
 
 class RecentlyClosedTabsRobot {
 
-    fun waitForListToExist() =
-        mDevice.findObject(UiSelector().resourceId("$packageName:id/recently_closed_list"))
-            .waitForExists(
-                TestAssetHelper.waitingTime
-            )
-
     fun verifyRecentlyClosedTabsMenuView() = assertRecentlyClosedTabsMenuView()
 
-    fun verifyEmptyRecentlyClosedTabsList() = assertEmptyRecentlyClosedTabsList()
+    fun verifyEmptyRecentlyClosedTabsList(rule: ComposeTestRule) =
+        assertEmptyRecentlyClosedTabsList(rule)
 
-    fun verifyRecentlyClosedTabsPageTitle(title: String) = assertRecentlyClosedTabsPageTitle(title)
+    fun verifyRecentlyClosedTabsPageTitle(title: String, rule: ComposeTestRule) =
+        assertRecentlyClosedTabsPageTitle(title, rule)
 
-    fun verifyRecentlyClosedTabsUrl(expectedUrl: Uri) = assertPageUrl(expectedUrl)
+    fun verifyRecentlyClosedTabsUrl(expectedUrl: Uri, rule: ComposeTestRule) =
+        assertPageUrl(expectedUrl, rule)
 
-    fun clickDeleteRecentlyClosedTabs() = recentlyClosedTabsDeleteButton().click()
+    fun clickDeleteRecentlyClosedTabs(rule: ComposeTestRule) =
+        recentlyClosedTabsDeleteButton(rule).performClick()
 
     class Transition {
-        fun clickRecentlyClosedItem(title: String, interact: BrowserRobot.() -> Unit): BrowserRobot.Transition {
-            recentlyClosedTabsPageTitle(title).click()
+        fun clickRecentlyClosedItem(
+            title: String,
+            rule: ComposeTestRule,
+            interact: BrowserRobot.() -> Unit,
+        ): BrowserRobot.Transition {
+            recentlyClosedTabsPageTitle(title, rule).performClick()
             mDevice.waitForIdle()
 
             BrowserRobot().interact()
@@ -58,55 +54,31 @@ private fun assertRecentlyClosedTabsMenuView() {
     onView(
         allOf(
             withText("Recently closed tabs"),
-            withParent(withId(R.id.navigationToolbar))
-        )
+            withParent(withId(R.id.navigationToolbar)),
+        ),
     )
         .check(
-            matches(withEffectiveVisibility(Visibility.VISIBLE))
+            matches(withEffectiveVisibility(Visibility.VISIBLE)),
         )
 }
 
-private fun assertEmptyRecentlyClosedTabsList() {
-    mDevice.waitForIdle()
+private fun assertEmptyRecentlyClosedTabsList(rule: ComposeTestRule) =
+    rule.onNodeWithText(getStringResource(R.string.recently_closed_empty_message))
+        .assertIsDisplayed()
 
-    onView(
-        allOf(
-            withId(R.id.recently_closed_empty_view),
-            withText(R.string.recently_closed_empty_message)
-        )
-    ).check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-}
+private fun assertPageUrl(expectedUrl: Uri, rule: ComposeTestRule) = rule.onNode(
+    hasTestTag("library.site.item.url") and hasText(expectedUrl.toString()),
+    useUnmergedTree = true,
+).assertIsDisplayed()
 
-private fun assertPageUrl(expectedUrl: Uri) = onView(
-    allOf(
-        withId(R.id.url),
-        withEffectiveVisibility(
-            Visibility.VISIBLE
-        )
-    )
-)
-    .check(
-        matches(withText(Matchers.containsString(expectedUrl.toString())))
+private fun recentlyClosedTabsPageTitle(title: String, rule: ComposeTestRule) =
+    rule.onNode(
+        hasTestTag("library.site.item.title") and hasText(title),
+        useUnmergedTree = true,
     )
 
-private fun recentlyClosedTabsPageTitle(title: String) = onView(
-    allOf(
-        withId(R.id.title),
-        withText(title)
-    )
-)
+private fun assertRecentlyClosedTabsPageTitle(title: String, rule: ComposeTestRule) =
+    recentlyClosedTabsPageTitle(title, rule).assertIsDisplayed()
 
-private fun assertRecentlyClosedTabsPageTitle(title: String) {
-    recentlyClosedTabsPageTitle(title)
-        .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
-}
-
-private fun recentlyClosedTabsDeleteButton() =
-    onView(
-        allOf(
-            withId(R.id.overflow_menu),
-            withEffectiveVisibility(
-                Visibility.VISIBLE
-            )
-        )
-    )
+private fun recentlyClosedTabsDeleteButton(rule: ComposeTestRule) =
+    rule.onNodeWithTag("library.site.item.trailing.icon")

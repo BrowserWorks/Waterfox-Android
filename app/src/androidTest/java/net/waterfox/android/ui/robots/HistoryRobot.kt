@@ -5,30 +5,24 @@
 package net.waterfox.android.ui.robots
 
 import android.net.Uri
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.RootMatchers.isDialog
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.hasSibling
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withParent
-import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.uiautomator.By
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.uiautomator.UiSelector
-import androidx.test.uiautomator.Until
-import org.hamcrest.Matchers
-import org.hamcrest.Matchers.allOf
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
 import net.waterfox.android.R
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
 import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.helpers.TestHelper.mDevice
 import net.waterfox.android.helpers.TestHelper.packageName
 import net.waterfox.android.helpers.click
-import net.waterfox.android.helpers.ext.waitNotNull
+import org.hamcrest.Matchers
+import org.hamcrest.Matchers.allOf
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 
 /**
  * Implementation of Robot Pattern for the history menu.
@@ -37,31 +31,18 @@ class HistoryRobot {
 
     fun verifyHistoryMenuView() = assertHistoryMenuView()
 
-    fun verifyEmptyHistoryView() {
-        mDevice.findObject(
-            UiSelector().text("No history here")
-        ).waitForExists(waitingTime)
+    fun verifyEmptyHistoryView(rule: ComposeTestRule) = assertEmptyHistoryView(rule)
 
-        assertEmptyHistoryView()
-    }
+    fun verifyHistoryListExists(rule: ComposeTestRule) = assertHistoryListExists(rule)
 
-    fun verifyHistoryListExists() = assertHistoryListExists()
+    fun verifyVisitedTimeTitle(rule: ComposeTestRule) = assertVisitedTimeTitle(rule)
 
-    fun verifyVisitedTimeTitle() {
-        mDevice.waitNotNull(
-            Until.findObject(
-                By.text("Today")
-            ),
-            waitingTime
-        )
-        assertVisitedTimeTitle()
-    }
+    fun verifyHistoryItemExists(shouldExist: Boolean, item: String, rule: ComposeTestRule) =
+        assertHistoryItemExists(shouldExist, item, rule)
 
-    fun verifyHistoryItemExists(shouldExist: Boolean, item: String) = assertHistoryItemExists(shouldExist, item)
+    fun verifyFirstTestPageTitle(rule: ComposeTestRule) = assertTestPageTitle(rule)
 
-    fun verifyFirstTestPageTitle(title: String) = assertTestPageTitle(title)
-
-    fun verifyTestPageUrl(expectedUrl: Uri) = assertPageUrl(expectedUrl)
+    fun verifyTestPageUrl(expectedUrl: Uri, rule: ComposeTestRule) = assertPageUrl(expectedUrl, rule)
 
     fun verifyCopySnackBarText() = assertCopySnackBarText()
 
@@ -69,8 +50,8 @@ class HistoryRobot {
 
     fun verifyHomeScreen() = HomeScreenRobot().verifyHomeScreen()
 
-    fun clickDeleteHistoryButton(item: String) {
-        deleteButton(item).click()
+    fun clickDeleteHistoryButton(item: String, rule: ComposeTestRule) {
+        deleteButton(item, rule).performClick()
     }
 
     fun clickDeleteAllHistoryButton() = deleteButton().click()
@@ -88,7 +69,7 @@ class HistoryRobot {
         mDevice
             .findObject(
                 UiSelector()
-                    .textContains(getStringResource(R.string.delete_browsing_data_prompt_cancel))
+                    .textContains(getStringResource(R.string.delete_browsing_data_prompt_cancel)),
             ).click()
 
     fun verifyDeleteSnackbarText(text: String) = assertSnackBarText(text)
@@ -98,6 +79,16 @@ class HistoryRobot {
     fun clickUndoDeleteButton() {
         snackBarUndoButton().click()
     }
+
+    fun longTapSelectItem(url: Uri, rule: ComposeTestRule) =
+        rule.onAllNodesWithTag("library.site.item.url", useUnmergedTree = true)
+            .filterToOne(hasText(url.toString()))
+            .performTouchInput { longClick() }
+
+    fun tapSelectItem(url: Uri, rule: ComposeTestRule) =
+        rule.onAllNodesWithTag("library.site.item.url", useUnmergedTree = true)
+            .filterToOne(hasText(url.toString()))
+            .performClick()
 
     class Transition {
         fun goBackToBrowser(interact: BrowserRobot.() -> Unit): BrowserRobot.Transition {
@@ -114,12 +105,9 @@ fun historyMenu(interact: HistoryRobot.() -> Unit): HistoryRobot.Transition {
     return HistoryRobot.Transition()
 }
 
-private fun testPageTitle() = onView(allOf(withId(R.id.title), withText("Test_Page_1")))
-
-private fun pageUrl() = onView(withId(R.id.url))
-
-private fun deleteButton(title: String) =
-    onView(allOf(withId(R.id.overflow_menu), hasSibling(withText(title))))
+private fun deleteButton(title: String, rule: ComposeTestRule) =
+    rule.onAllNodesWithTag("library.site.item.trailing.icon")
+        .filterToOne(hasAnyAncestor(hasText(title)))
 
 private fun deleteButton() = onView(withId(R.id.history_delete))
 
@@ -127,41 +115,37 @@ private fun snackBarText() = onView(withId(R.id.snackbar_text))
 
 private fun assertHistoryMenuView() {
     onView(
-        allOf(withText("History"), withParent(withId(R.id.navigationToolbar)))
+        allOf(withText("History"), withParent(withId(R.id.navigationToolbar))),
     )
         .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 }
 
-private fun assertEmptyHistoryView() =
-    onView(
-        allOf(
-            withId(R.id.history_empty_view),
-            withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)
-        )
-    )
-        .check(matches(withText("No history here")))
+private fun assertEmptyHistoryView(rule: ComposeTestRule) =
+    rule.onNodeWithText("No history here").assertIsDisplayed()
 
-private fun assertHistoryListExists() =
-    mDevice.findObject(UiSelector().resourceId("R.id.history_list")).waitForExists(waitingTime)
+private fun assertHistoryListExists(rule: ComposeTestRule) =
+    rule.onNodeWithTag("history.list").assertExists()
 
-private fun assertHistoryItemExists(shouldExist: Boolean, item: String) {
+private fun assertHistoryItemExists(shouldExist: Boolean, item: String, rule: ComposeTestRule) {
     if (shouldExist) {
-        assertTrue(mDevice.findObject(UiSelector().textContains(item)).waitForExists(waitingTime))
+        rule.onNodeWithText(item).assertIsDisplayed()
     } else {
-        assertFalse(mDevice.findObject(UiSelector().textContains(item)).waitForExists(waitingTime))
+        rule.onNodeWithText(item).assertIsNotDisplayed()
     }
 }
 
-private fun assertVisitedTimeTitle() =
-    onView(withId(R.id.header_title)).check(matches(withText("Today")))
+private fun assertVisitedTimeTitle(rule: ComposeTestRule) =
+    rule.onNodeWithText("Today").assertIsDisplayed()
 
-private fun assertTestPageTitle(title: String) = testPageTitle()
-    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
-    .check(matches(withText(title)))
+private fun assertTestPageTitle(rule: ComposeTestRule) = rule.onNode(
+    hasTestTag("library.site.item.title") and hasText("Test_Page_1"),
+    useUnmergedTree = true,
+).assertIsDisplayed()
 
-private fun assertPageUrl(expectedUrl: Uri) = pageUrl()
-    .check(matches(ViewMatchers.isCompletelyDisplayed()))
-    .check(matches(withText(Matchers.containsString(expectedUrl.toString()))))
+private fun assertPageUrl(expectedUrl: Uri, rule: ComposeTestRule) = rule.onNode(
+    hasTestTag("library.site.item.url") and hasText(expectedUrl.toString()),
+    useUnmergedTree = true
+).assertIsDisplayed()
 
 private fun assertDeleteConfirmationMessage() {
     assertTrue(deleteHistoryPromptTitle().waitForExists(waitingTime))
@@ -183,7 +167,7 @@ private fun deleteHistoryPromptTitle() =
         .findObject(
             UiSelector()
                 .textContains(getStringResource(R.string.delete_history_prompt_title))
-                .resourceId("$packageName:id/title")
+                .resourceId("$packageName:id/title"),
         )
 
 private fun deleteHistoryPromptSummary() =
@@ -191,7 +175,7 @@ private fun deleteHistoryPromptSummary() =
         .findObject(
             UiSelector()
                 .textContains(getStringResource(R.string.delete_history_prompt_body))
-                .resourceId("$packageName:id/body")
+                .resourceId("$packageName:id/body"),
         )
 
 private fun deleteHistoryEverythingOption() =
@@ -199,5 +183,5 @@ private fun deleteHistoryEverythingOption() =
         .findObject(
             UiSelector()
                 .textContains(getStringResource(R.string.delete_history_prompt_button_everything))
-                .resourceId("$packageName:id/everything_button")
+                .resourceId("$packageName:id/everything_button"),
         )

@@ -5,6 +5,7 @@
 package net.waterfox.android.library
 
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import mozilla.components.support.ktx.android.content.getColorFromAttr
 import androidx.navigation.fragment.findNavController
@@ -36,6 +37,37 @@ abstract class LibraryPageFragment<T> : Fragment() {
         (activity as HomeActivity).browsingModeManager.mode = BrowsingMode.fromBoolean(private)
     }
 
+    protected fun setUiForNormalMode(title: String?) {
+        context?.let { context ->
+            updateToolbar(
+                title = title,
+                foregroundColor = context.getColorFromAttr(R.attr.textPrimary),
+                backgroundColor = context.getColorFromAttr(R.attr.layer1)
+            )
+        }
+    }
+
+    protected fun setUiForSelectingMode(title: String?) {
+        context?.let { context ->
+            updateToolbar(
+                title = title,
+                foregroundColor = ContextCompat.getColor(
+                    context,
+                    R.color.fx_mobile_text_color_oncolor_primary
+                ),
+                backgroundColor = context.getColorFromAttr(R.attr.accent)
+            )
+        }
+    }
+
+    private fun updateToolbar(title: String?, foregroundColor: Int, backgroundColor: Int) {
+        activity?.title = title
+        val toolbar = activity?.findViewById<Toolbar>(R.id.navigationToolbar)
+        toolbar?.setToolbarColors(foregroundColor, backgroundColor)
+        toolbar?.setNavigationIcon(R.drawable.ic_back_button)
+        toolbar?.navigationIcon?.setTint(foregroundColor)
+    }
+
     override fun onDetach() {
         super.onDetach()
         context?.let {
@@ -45,4 +77,5 @@ abstract class LibraryPageFragment<T> : Fragment() {
             )
         }
     }
+
 }

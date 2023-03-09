@@ -5,32 +5,22 @@
 package net.waterfox.android.settings.about
 
 import android.content.Context
-import android.view.View
 import android.widget.Toast
-import io.mockk.CapturingSlot
-import io.mockk.MockKAnnotations
-import io.mockk.Runs
-import io.mockk.every
+import io.mockk.*
 import io.mockk.impl.annotations.MockK
-import io.mockk.just
-import io.mockk.mockk
-import io.mockk.mockkStatic
-import io.mockk.slot
-import io.mockk.unmockkStatic
-import io.mockk.verify
+import net.waterfox.android.R
+import net.waterfox.android.utils.Settings
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import net.waterfox.android.R
-import net.waterfox.android.utils.Settings
 
 class SecretDebugMenuTriggerTest {
 
-    @MockK private lateinit var logoView: View
+    @MockK private lateinit var logoView: AboutComposeView
     @MockK private lateinit var context: Context
     @MockK private lateinit var settings: Settings
     @MockK(relaxUnitFun = true) private lateinit var toast: Toast
-    private lateinit var clickListener: CapturingSlot<View.OnClickListener>
+    private lateinit var clickListener: CapturingSlot<() -> Unit>
 
     @Before
     fun setup() {
@@ -38,7 +28,7 @@ class SecretDebugMenuTriggerTest {
         mockkStatic(Toast::class)
         clickListener = slot()
 
-        every { logoView.setOnClickListener(capture(clickListener)) } just Runs
+        every { logoView.onLogoClick = capture(clickListener) } just Runs
         every { logoView.context } returns context
         every {
             context.getString(R.string.about_debug_menu_toast_progress, any())
@@ -57,7 +47,7 @@ class SecretDebugMenuTriggerTest {
     @Test
     fun `toast is not displayed on first click`() {
         SecretDebugMenuTrigger(logoView, settings)
-        clickListener.captured.onClick(logoView)
+        clickListener.captured.invoke()
 
         verify(inverse = true) { Toast.makeText(context, any<String>(), any()) }
         verify(inverse = true) { toast.show() }
@@ -66,8 +56,8 @@ class SecretDebugMenuTriggerTest {
     @Test
     fun `toast is displayed on second click`() {
         SecretDebugMenuTrigger(logoView, settings)
-        clickListener.captured.onClick(logoView)
-        clickListener.captured.onClick(logoView)
+        clickListener.captured.invoke()
+        clickListener.captured.invoke()
 
         verify { context.getString(R.string.about_debug_menu_toast_progress, 3) }
         verify { Toast.makeText(context, any<String>(), Toast.LENGTH_SHORT) }
@@ -78,10 +68,10 @@ class SecretDebugMenuTriggerTest {
     fun `clearClickCounter resets counter`() {
         val trigger = SecretDebugMenuTrigger(logoView, settings)
 
-        clickListener.captured.onClick(logoView)
+        clickListener.captured.invoke()
         trigger.onResume(mockk())
 
-        clickListener.captured.onClick(logoView)
+        clickListener.captured.invoke()
 
         verify(inverse = true) { Toast.makeText(context, any<String>(), any()) }
         verify(inverse = true) { toast.show() }
@@ -90,11 +80,11 @@ class SecretDebugMenuTriggerTest {
     @Test
     fun `toast is displayed on fifth click`() {
         SecretDebugMenuTrigger(logoView, settings)
-        clickListener.captured.onClick(logoView)
-        clickListener.captured.onClick(logoView)
-        clickListener.captured.onClick(logoView)
-        clickListener.captured.onClick(logoView)
-        clickListener.captured.onClick(logoView)
+        clickListener.captured.invoke()
+        clickListener.captured.invoke()
+        clickListener.captured.invoke()
+        clickListener.captured.invoke()
+        clickListener.captured.invoke()
 
         verify {
             Toast.makeText(
@@ -112,6 +102,6 @@ class SecretDebugMenuTriggerTest {
         every { settings.showSecretDebugMenuThisSession } returns true
         SecretDebugMenuTrigger(logoView, settings)
 
-        verify(inverse = true) { logoView.setOnClickListener(any()) }
+        verify(inverse = true) { logoView.onLogoClick = any() }
     }
 }
