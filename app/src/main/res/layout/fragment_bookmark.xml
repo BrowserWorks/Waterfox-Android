@@ -8,9 +8,8 @@
     android:layout_height="match_parent"
     tools:context="net.waterfox.android.library.bookmarks.BookmarkFragment">
 
-    <LinearLayout
-        android:id="@+id/bookmarkLayout"
+    <net.waterfox.android.library.bookmarks.BookmarkComposeView
+        android:id="@+id/bookmark_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" />
+        android:layout_height="match_parent" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

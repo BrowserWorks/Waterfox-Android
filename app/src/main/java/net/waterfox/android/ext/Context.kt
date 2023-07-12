@@ -39,6 +39,18 @@ fun Context.asActivity() = (this as? ContextThemeWrapper)?.baseContext as? Activ
 fun Context.getPreferenceKey(@StringRes resourceId: Int): String =
     resources.getString(resourceId)
 
+fun Context.readBooleanPreference(key: String, defaultValue: Boolean) =
+    settings().preferences.getBoolean(key, defaultValue)
+
+fun Context.writeBooleanPreference(key: String, value: Boolean) =
+    settings().preferences.edit().putBoolean(key, value).apply()
+
+fun Context.readFloatPreference(key: String, defaultValue: Float) =
+    settings().preferences.getFloat(key, defaultValue)
+
+fun Context.writeFloatPreference(key: String, value: Float) =
+    settings().preferences.edit().putFloat(key, value).apply()
+
 /**
  * Gets the Root View with an activity context
  *

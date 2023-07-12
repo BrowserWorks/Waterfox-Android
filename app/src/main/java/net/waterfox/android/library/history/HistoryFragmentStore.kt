@@ -12,6 +12,7 @@ import mozilla.components.lib.state.Action
 import mozilla.components.lib.state.State
 import mozilla.components.lib.state.Store
 import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
+import net.waterfox.android.selection.SelectionHolder
 
 /**
  * Class representing a history entry.
@@ -146,8 +147,8 @@ data class HistoryFragmentState(
     val isEmpty: Boolean,
     val isDeletingItems: Boolean
 ) : State {
-    sealed class Mode {
-        open val selectedItems = emptySet<History>()
+    sealed class Mode : SelectionHolder<History> {
+        override val selectedItems = emptySet<History>()
 
         object Normal : Mode()
         object Syncing : Mode()

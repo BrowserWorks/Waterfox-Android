@@ -9,12 +9,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.SpannableString
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
@@ -31,18 +26,9 @@ import net.waterfox.android.addons.showSnackBar
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.databinding.FragmentHistoryMetadataGroupBinding
-import net.waterfox.android.ext.nav
-import net.waterfox.android.ext.requireComponents
-import net.waterfox.android.ext.setTextColor
-import net.waterfox.android.ext.showToolbar
-import net.waterfox.android.ext.components
-import net.waterfox.android.ext.runIfFragmentIsAttached
-import net.waterfox.android.ext.toShortUrl
+import net.waterfox.android.ext.*
 import net.waterfox.android.library.LibraryPageFragment
 import net.waterfox.android.library.history.History
-import net.waterfox.android.library.historymetadata.controller.DefaultHistoryMetadataGroupController
-import net.waterfox.android.library.historymetadata.interactor.DefaultHistoryMetadataGroupInteractor
-import net.waterfox.android.library.historymetadata.interactor.HistoryMetadataGroupInteractor
 import net.waterfox.android.library.historymetadata.view.HistoryMetadataGroupView
 import net.waterfox.android.utils.allowUndo
 

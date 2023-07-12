@@ -5,10 +5,7 @@
 package net.waterfox.android.library.bookmarks.edit
 
 import android.content.DialogInterface
-import android.content.res.ColorStateList
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -16,7 +13,6 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -32,8 +28,6 @@ import mozilla.components.concept.storage.BookmarkInfo
 import mozilla.components.concept.storage.BookmarkNode
 import mozilla.components.concept.storage.BookmarkNodeType
 import mozilla.components.support.ktx.android.content.getColorFromAttr
-import mozilla.components.support.ktx.android.view.hideKeyboard
-import mozilla.components.support.ktx.android.view.showKeyboard
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
@@ -92,9 +86,7 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
             when (bookmarkNode?.type) {
                 BookmarkNodeType.FOLDER -> {
                     activity?.title = getString(R.string.edit_bookmark_folder_fragment_title)
-                    binding.inputLayoutBookmarkUrl.visibility = View.GONE
-                    binding.bookmarkUrlEdit.visibility = View.GONE
-                    binding.bookmarkUrlLabel.visibility = View.GONE
+                    binding.bookmarkContent.bookmarkUrlVisible = false
                 }
                 BookmarkNodeType.ITEM -> {
                     activity?.title = getString(R.string.edit_bookmark_fragment_title)
@@ -104,15 +96,15 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
 
             val currentBookmarkNode = bookmarkNode
             if (currentBookmarkNode != null && currentBookmarkNode != bookmarkNodeBeforeReload) {
-                binding.bookmarkNameEdit.setText(currentBookmarkNode.title)
-                binding.bookmarkUrlEdit.setText(currentBookmarkNode.url)
+                binding.bookmarkContent.bookmarkName = currentBookmarkNode.title
+                binding.bookmarkContent.bookmarkUrl = currentBookmarkNode.url
             }
 
             bookmarkParent?.let { node ->
-                binding.bookmarkParentFolderSelector.text = friendlyRootTitle(context, node)
+                binding.bookmarkContent.bookmarkParentFolder = friendlyRootTitle(context, node)
             }
 
-            binding.bookmarkParentFolderSelector.setOnClickListener {
+            binding.bookmarkContent.onBookmarkParentFolderClick = {
                 sharedViewModel.selectedFolder = null
                 nav(
                     R.id.bookmarkEditFragment,
@@ -127,29 +119,6 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
                         )
                 )
             }
-
-            binding.bookmarkNameEdit.apply {
-                requestFocus()
-                placeCursorAtEnd()
-                showKeyboard()
-            }
-
-            binding.bookmarkUrlEdit.addTextChangedListener(object : TextWatcher {
-                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                    // NOOP
-                }
-
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                    binding.bookmarkUrlEdit.onTextChanged(s)
-
-                    binding.inputLayoutBookmarkUrl.error = null
-                    binding.inputLayoutBookmarkUrl.errorIconDrawable = null
-                }
-
-                override fun afterTextChanged(s: Editable?) {
-                    // NOOP
-                }
-            })
         }
     }
 
@@ -166,9 +135,8 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
 
     override fun onPause() {
         super.onPause()
-        binding.bookmarkNameEdit.hideKeyboard()
-        binding.bookmarkUrlEdit.hideKeyboard()
-        binding.progressBarBookmark.visibility = View.GONE
+        binding.bookmarkContent.hideKeyboard()
+        binding.bookmarkContent.progressBarVisible = false
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -230,9 +198,9 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
     }
 
     private fun updateBookmarkFromTextChanges() {
-        binding.progressBarBookmark.visibility = View.VISIBLE
-        val nameText = binding.bookmarkNameEdit.text.toString()
-        val urlText = binding.bookmarkUrlEdit.text.toString()
+        binding.bookmarkContent.progressBarVisible = true
+        val nameText = binding.bookmarkContent.bookmarkName
+        val urlText = binding.bookmarkContent.bookmarkUrl
         updateBookmarkNode(nameText, urlText)
     }
 
@@ -254,24 +222,19 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
                     )
                 }
                 withContext(Main) {
-                    binding.inputLayoutBookmarkUrl.error = null
-                    binding.inputLayoutBookmarkUrl.errorIconDrawable = null
+                    binding.bookmarkContent.bookmarkUrlErrorMessage = null
+                    binding.bookmarkContent.bookmarkUrlErrorDrawable = null
 
                     findNavController().popBackStack()
                 }
             } catch (e: PlacesException.UrlParseFailed) {
                 withContext(Main) {
-                    binding.inputLayoutBookmarkUrl.error = getString(R.string.bookmark_invalid_url_error)
-                    binding.inputLayoutBookmarkUrl.setErrorIconDrawable(R.drawable.mozac_ic_warning_with_bottom_padding)
-                    binding.inputLayoutBookmarkUrl.setErrorIconTintList(
-                        ColorStateList.valueOf(
-                            ContextCompat.getColor(requireContext(), R.color.fx_mobile_text_color_warning)
-                        )
-                    )
+                    binding.bookmarkContent.bookmarkUrlErrorMessage = getString(R.string.bookmark_invalid_url_error)
+                    binding.bookmarkContent.bookmarkUrlErrorDrawable = R.drawable.mozac_ic_warning
                 }
             }
         }
-        binding.progressBarBookmark.visibility = View.INVISIBLE
+        binding.bookmarkContent.progressBarVisible = false
     }
 
     override fun onDestroyView() {

@@ -4,6 +4,7 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
@@ -30,7 +31,9 @@ class SettingsHomepageTest {
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
-    val activityIntentTestRule = HomeActivityIntentTestRule(skipOnboarding = true)
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityIntentTestRule(skipOnboarding = true)
+    ) { it.activity }
 
     @Rule
     @JvmField
@@ -65,7 +68,7 @@ class SettingsHomepageTest {
             verifyJumpBackInSectionIsDisplayed()
         }.openThreeDotMenu {
         }.openCustomizeHome {
-            clickJumpBackInButton()
+            clickJumpBackInButton(composeTestRule)
         }.goBack {
             verifyJumpBackInSectionIsNotDisplayed()
         }
@@ -84,7 +87,7 @@ class SettingsHomepageTest {
             verifyRecentBookmarksSectionIsDisplayed()
         }.openThreeDotMenu {
         }.openCustomizeHome {
-            clickRecentBookmarksButton()
+            clickRecentBookmarksButton(composeTestRule)
         }.goBack {
             verifyRecentBookmarksSectionIsNotDisplayed()
         }
@@ -100,10 +103,10 @@ class SettingsHomepageTest {
         }.openThreeDotMenu {
         }.openSettings {
         }.openHomepageSubMenu {
-            clickStartOnHomepageButton()
+            clickStartOnHomepageButton(composeTestRule)
         }
 
-        restartApp(activityIntentTestRule)
+        restartApp(composeTestRule.activityRule)
 
         homeScreen {
             verifyHomeScreen()
@@ -119,10 +122,10 @@ class SettingsHomepageTest {
         }.openThreeDotMenu {
         }.openSettings {
         }.openHomepageSubMenu {
-            clickStartOnHomepageButton()
+            clickStartOnHomepageButton(composeTestRule)
         }
 
-        restartApp(activityIntentTestRule)
+        restartApp(composeTestRule.activityRule)
 
         homeScreen {
             verifyHomeScreen()
@@ -133,10 +136,10 @@ class SettingsHomepageTest {
         }.goToHomescreen {
         }.openThreeDotMenu {
         }.openCustomizeHome {
-            clickStartOnLastTabButton()
+            clickStartOnLastTabButton(composeTestRule)
         }
 
-        restartApp(activityIntentTestRule)
+        restartApp(composeTestRule.activityRule)
 
         browserScreen {
             verifyUrl(firstWebPage.url.toString())

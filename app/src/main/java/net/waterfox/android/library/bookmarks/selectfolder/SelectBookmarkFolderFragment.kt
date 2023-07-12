@@ -5,12 +5,7 @@
 package net.waterfox.android.library.bookmarks.selectfolder
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -66,9 +61,14 @@ class SelectBookmarkFolderFragment : Fragment() {
                     .getTree(BookmarkRoot.Root.id, recursive = true)
                     ?.let { DesktopFolders(context, showMobileRoot = true).withOptionalDesktopFolders(it) }
             }
-            val adapter = SelectBookmarkFolderAdapter(sharedViewModel)
-            binding.recylerViewBookmarkFolders.adapter = adapter
-            adapter.updateData(bookmarkNode, args.hideFolderGuid)
+
+            binding.bookmarkContent.updateFolderList(bookmarkNode, args.hideFolderGuid)
+        }
+
+        binding.bookmarkContent.onFolderClick = { folder ->
+            sharedViewModel.selectedFolder =
+                if (sharedViewModel.selectedFolder == folder) null else folder
+            binding.bookmarkContent.selectedFolderGuid = sharedViewModel.selectedFolder?.guid
         }
     }
 

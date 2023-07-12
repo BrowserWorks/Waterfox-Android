@@ -5,6 +5,10 @@
 package net.waterfox.android.settings
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
@@ -13,37 +17,29 @@ import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
 
-class SecretSettingsFragment : PreferenceFragmentCompat() {
+class SecretSettingsFragment : Fragment() {
+
+    lateinit var view: SecretSettingsComposeView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        view = SecretSettingsComposeView(requireContext())
+        return view
+    }
 
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_debug_settings))
+        setupPreferences()
     }
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.secret_settings_preferences, rootKey)
-
-        requirePreference<SwitchPreference>(R.string.pref_key_allow_third_party_root_certs).apply {
-            isVisible = true
-            isChecked = context.settings().allowThirdPartyRootCerts
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    context.components.core.engine.settings.enterpriseRootsEnabled =
-                        newValue as Boolean
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_enable_task_continuity).apply {
-            isVisible = true
-            isChecked = context.settings().enableTaskContinuityEnhancements
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_show_unified_search).apply {
-            isChecked = context.settings().showUnifiedSearchFeature
-            onPreferenceChangeListener = SharedPreferenceUpdater()
+    private fun setupPreferences() {
+        view.onAllowThirdPartyRootCertsChange = { allow ->
+            requireContext().components.core.engine.settings.enterpriseRootsEnabled = allow
         }
     }
+
 }

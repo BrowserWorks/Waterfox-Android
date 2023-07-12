@@ -3,16 +3,8 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<LinearLayout
+<net.waterfox.android.settings.about.AboutLibrariesComposeView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/about_libraries"
+    android:id="@+id/about_libraries_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="net.waterfox.android.settings.about.AboutLibrariesFragment">
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/about_libraries_listview" />
-</LinearLayout>
+    android:layout_height="match_parent" />

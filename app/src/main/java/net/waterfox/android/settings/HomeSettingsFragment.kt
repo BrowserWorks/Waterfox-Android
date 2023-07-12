@@ -5,23 +5,28 @@
 package net.waterfox.android.settings
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.preference.CheckBoxPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
 import net.waterfox.android.R
-import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
-import net.waterfox.android.utils.view.addToRadioGroup
 
 /**
  * Lets the user customize the home screen.
  */
-class HomeSettingsFragment : PreferenceFragmentCompat() {
+class HomeSettingsFragment : Fragment() {
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.home_preferences, rootKey)
+    lateinit var view: HomeSettingsComposeView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        view = HomeSettingsComposeView(requireContext())
+        return view
     }
 
     override fun onResume() {
@@ -31,46 +36,11 @@ class HomeSettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun setupPreferences() {
-        requirePreference<SwitchPreference>(R.string.pref_key_show_top_sites).apply {
-            isChecked = context.settings().showTopSitesFeature
+        view.onWallpapersClick = {
+            view.findNavController().navigate(
+                HomeSettingsFragmentDirections.actionHomeSettingsFragmentToWallpaperSettingsFragment()
+            )
         }
-
-        requirePreference<CheckBoxPreference>(R.string.pref_key_enable_contile).apply {
-            isChecked = context.settings().showContileFeature
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_recent_tabs).apply {
-            isChecked = context.settings().showRecentTabsFeature
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_recent_bookmarks).apply {
-            isChecked = context.settings().showRecentBookmarksFeature
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_history_metadata_feature).apply {
-            isChecked = context.settings().historyMetadataUIFeature
-        }
-
-        val openingScreenRadioHomepage =
-            requirePreference<RadioButtonPreference>(R.string.pref_key_start_on_home_always)
-        val openingScreenLastTab =
-            requirePreference<RadioButtonPreference>(R.string.pref_key_start_on_home_never)
-        val openingScreenAfterFourHours =
-            requirePreference<RadioButtonPreference>(R.string.pref_key_start_on_home_after_four_hours)
-
-        requirePreference<Preference>(R.string.pref_key_wallpapers).apply {
-            setOnPreferenceClickListener {
-                view?.findNavController()?.navigate(
-                    HomeSettingsFragmentDirections.actionHomeSettingsFragmentToWallpaperSettingsFragment()
-                )
-                true
-            }
-        }
-
-        addToRadioGroup(
-            openingScreenRadioHomepage,
-            openingScreenLastTab,
-            openingScreenAfterFourHours
-        )
     }
+
 }

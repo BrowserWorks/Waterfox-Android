@@ -56,19 +56,24 @@ class SwipeGestureLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
+    /**
+     * Controls whether the swiping functionality is active or not.
+     */
+    var isSwipeEnabled = true
+
     private val gestureListener = object : GestureDetector.SimpleOnGestureListener() {
-        override fun onDown(e: MotionEvent?): Boolean {
+        override fun onDown(e: MotionEvent): Boolean {
             return true
         }
 
         override fun onScroll(
-            e1: MotionEvent?,
-            e2: MotionEvent?,
+            e1: MotionEvent,
+            e2: MotionEvent,
             distanceX: Float,
-            distanceY: Float
+            distanceY: Float,
         ): Boolean {
-            val start = e1?.let { event -> PointF(event.rawX, event.rawY) } ?: return false
-            val next = e2?.let { event -> PointF(event.rawX, event.rawY) } ?: return false
+            val start = e1.let { event -> PointF(event.rawX, event.rawY) }
+            val next = e2.let { event -> PointF(event.rawX, event.rawY) }
 
             if (activeListener == null && !handledInitialScroll) {
                 activeListener = listeners.firstOrNull { listener ->
@@ -81,10 +86,10 @@ class SwipeGestureLayout @JvmOverloads constructor(
         }
 
         override fun onFling(
-            e1: MotionEvent?,
-            e2: MotionEvent?,
+            e1: MotionEvent,
+            e2: MotionEvent,
             velocityX: Float,
-            velocityY: Float
+            velocityY: Float,
         ): Boolean {
             activeListener?.onSwipeFinished(velocityX, velocityY)
             return if (activeListener != null) {
@@ -107,7 +112,11 @@ class SwipeGestureLayout @JvmOverloads constructor(
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
-        return when (event?.actionMasked) {
+        if (!isSwipeEnabled) {
+            return false
+        }
+
+        return when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
                 handledInitialScroll = false
                 gestureDetector.onTouchEvent(event)
@@ -118,14 +127,14 @@ class SwipeGestureLayout @JvmOverloads constructor(
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        return when (event?.actionMasked) {
+        return when (event.actionMasked) {
             MotionEvent.ACTION_CANCEL, MotionEvent.ACTION_UP -> {
                 gestureDetector.onTouchEvent(event)
                 // If the active listener is not null here, then we haven't detected a fling
                 // so notify the listener that the swipe was finished with 0 velocity
                 activeListener?.onSwipeFinished(
                     velocityX = 0f,
-                    velocityY = 0f
+                    velocityY = 0f,
                 )
                 activeListener = null
                 false

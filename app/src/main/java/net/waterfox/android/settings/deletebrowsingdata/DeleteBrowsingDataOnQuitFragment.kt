@@ -5,75 +5,72 @@
 package net.waterfox.android.settings.deletebrowsingdata
 
 import android.os.Bundle
-import androidx.preference.CheckBoxPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import net.waterfox.android.R
+import net.waterfox.android.ext.readBooleanPreference
 import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
-import net.waterfox.android.settings.SharedPreferenceUpdater
-import net.waterfox.android.settings.requirePreference
+import net.waterfox.android.ext.writeBooleanPreference
 
-class DeleteBrowsingDataOnQuitFragment : PreferenceFragmentCompat() {
+class DeleteBrowsingDataOnQuitFragment : Fragment() {
 
-    private val checkboxes by lazy {
-        val context = requireContext()
-        DeleteBrowsingDataOnQuitType.values()
-            .asSequence()
-            .mapNotNull { type ->
-                findPreference<CheckBoxPreference>(type.getPreferenceKey(context))?.let { pref ->
-                    type to pref
-                }
-            }
-            .toMap()
+    lateinit var view: DeleteBrowsingDataOnQuitComposeView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        view = DeleteBrowsingDataOnQuitComposeView(requireContext())
+        return view
     }
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.delete_browsing_data_quit_preferences, rootKey)
-    }
-
-    @Suppress("ComplexMethod")
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_delete_browsing_data_on_quit))
+        setupPreferences()
+    }
 
-        // Delete Browsing Data on Quit Switch
-        val deleteOnQuitPref = requirePreference<SwitchPreference>(
-            R.string.pref_key_delete_browsing_data_on_quit
+    private fun setupPreferences() {
+        view.onDeleteBrowsingDataOnQuitChange = { checked ->
+            setAllCheckboxes(checked)
+            view.checkboxesEnabled = checked
+        }
+        view.onTabsChange = ::checkboxUpdater
+        view.onHistoryChange = ::checkboxUpdater
+        view.onCookiesChange = ::checkboxUpdater
+        view.onCacheChange = ::checkboxUpdater
+        view.onPermissionsChange = ::checkboxUpdater
+        view.onDownloadsChange = ::checkboxUpdater
+
+        view.checkboxesEnabled = view.context.readBooleanPreference(
+            getString(R.string.pref_key_delete_browsing_data_on_quit),
+            true
         )
-        deleteOnQuitPref.apply {
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    setAllCheckboxes(newValue as Boolean)
-                    return super.onPreferenceChange(preference, newValue)
-                }
-            }
-            isChecked = context.settings().shouldDeleteBrowsingDataOnQuit
-        }
+    }
 
-        val checkboxUpdater = object : SharedPreferenceUpdater() {
-            override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                super.onPreferenceChange(preference, newValue)
-                val settings = preference.context.settings()
-
-                if (!settings.shouldDeleteAnyDataOnQuit()) {
-                    deleteOnQuitPref.isChecked = false
-                    settings.shouldDeleteBrowsingDataOnQuit = false
-                }
-                return true
-            }
-        }
-
-        checkboxes.forEach { (_, pref) ->
-            pref.onPreferenceChangeListener = checkboxUpdater
+    private fun setAllCheckboxes(checked: Boolean) {
+        val context = view.context
+        DeleteBrowsingDataOnQuitType.values().forEach { type ->
+            context.writeBooleanPreference(type.getPreferenceKey(context), checked)
+            context.settings().setDeleteDataOnQuit(type, checked)
         }
     }
 
-    private fun setAllCheckboxes(newValue: Boolean) {
-        checkboxes.forEach { (type, pref) ->
-            pref.isChecked = newValue
-            pref.context.settings().setDeleteDataOnQuit(type, newValue)
+    private fun checkboxUpdater(@Suppress("UNUSED_PARAMETER") checked: Boolean) {
+        val settings = view.context.settings()
+        if (!settings.shouldDeleteAnyDataOnQuit()) {
+            view.context.writeBooleanPreference(
+                getString(R.string.pref_key_delete_browsing_data_on_quit),
+                false
+            )
+            settings.shouldDeleteBrowsingDataOnQuit = false
+            // TODO: refresh
+            view.checkboxesEnabled = false
         }
     }
+
 }

@@ -4,6 +4,7 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
@@ -35,7 +36,9 @@ class HomeScreenTest {
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
-    val activityTestRule = HomeActivityTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityTestRule()
+    ) { it.activity }
 
     @Rule
     @JvmField
@@ -181,14 +184,14 @@ class HomeScreenTest {
         }.enterURLAndEnterToBrowser(defaultWebPage.url) {
         }.goToHomescreen {
         }.openCustomizeHomepage {
-            clickJumpBackInButton()
-            clickRecentBookmarksButton()
-            clickRecentSearchesButton()
+            clickJumpBackInButton(composeTestRule)
+            clickRecentBookmarksButton(composeTestRule)
+            clickRecentSearchesButton(composeTestRule)
         }.goBack {
             verifyCustomizeHomepageButton(false)
         }.openThreeDotMenu {
         }.openCustomizeHome {
-            clickJumpBackInButton()
+            clickJumpBackInButton(composeTestRule)
         }.goBack {
             verifyCustomizeHomepageButton(true)
         }

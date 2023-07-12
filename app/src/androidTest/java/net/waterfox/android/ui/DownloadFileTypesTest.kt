@@ -4,6 +4,7 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.core.net.toUri
 import org.junit.After
 import org.junit.Before
@@ -30,7 +31,9 @@ class DownloadFileTypesTest(fileName: String) {
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get:Rule
-    val activityTestRule = HomeActivityIntentTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityIntentTestRule()
+    ) { it.activity }
 
     companion object {
         // Creating test data. The test will take each file name as a parameter and run it individually.
@@ -75,9 +78,9 @@ class DownloadFileTypesTest(fileName: String) {
         }.closePrompt {
         }.openThreeDotMenu {
         }.openDownloadsManager {
-            waitForDownloadsListToExist()
-            verifyDownloadedFileName(downloadFile)
-            verifyDownloadedFileIcon()
+            verifyDownloadsList(composeTestRule)
+            verifyDownloadedFileName(downloadFile, composeTestRule)
+            verifyDownloadedFileIcon(composeTestRule)
         }.exitDownloadsManagerToBrowser { }
     }
 }

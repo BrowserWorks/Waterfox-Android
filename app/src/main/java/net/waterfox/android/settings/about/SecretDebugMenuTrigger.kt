@@ -4,7 +4,6 @@
 
 package net.waterfox.android.settings.about
 
-import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -15,16 +14,16 @@ import net.waterfox.android.utils.Settings
  * Triggers the "secret" debug menu when logoView is tapped 5 times.
  */
 class SecretDebugMenuTrigger(
-    logoView: View,
+    val composeView: AboutComposeView,
     private val settings: Settings
-) : View.OnClickListener, DefaultLifecycleObserver {
+) : DefaultLifecycleObserver {
 
     private var secretDebugMenuClicks = 0
     private var lastDebugMenuToast: Toast? = null
 
     init {
         if (!settings.showSecretDebugMenuThisSession) {
-            logoView.setOnClickListener(this)
+            composeView.onLogoClick = ::onLogoClick
         }
     }
 
@@ -35,7 +34,7 @@ class SecretDebugMenuTrigger(
         secretDebugMenuClicks = 0
     }
 
-    override fun onClick(v: View) {
+    private fun onLogoClick() {
         // Because the user will mostly likely tap the logo in rapid succession,
         // we ensure only 1 toast is shown at any given time.
         lastDebugMenuToast?.cancel()
@@ -44,8 +43,8 @@ class SecretDebugMenuTrigger(
             in 2 until SECRET_DEBUG_MENU_CLICKS -> {
                 val clicksLeft = SECRET_DEBUG_MENU_CLICKS - secretDebugMenuClicks
                 val toast = Toast.makeText(
-                    v.context,
-                    v.context.getString(R.string.about_debug_menu_toast_progress, clicksLeft),
+                    composeView.context,
+                    composeView.context.getString(R.string.about_debug_menu_toast_progress, clicksLeft),
                     Toast.LENGTH_SHORT
                 )
                 toast.show()
@@ -53,7 +52,7 @@ class SecretDebugMenuTrigger(
             }
             SECRET_DEBUG_MENU_CLICKS -> {
                 Toast.makeText(
-                    v.context,
+                    composeView.context,
                     R.string.about_debug_menu_toast_done,
                     Toast.LENGTH_LONG
                 ).show()

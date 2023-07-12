@@ -12,7 +12,7 @@ import net.waterfox.android.databinding.HistoryMetadataGroupListItemBinding
 import net.waterfox.android.ext.hideAndDisable
 import net.waterfox.android.ext.showAndEnable
 import net.waterfox.android.library.history.History
-import net.waterfox.android.library.historymetadata.interactor.HistoryMetadataGroupInteractor
+import net.waterfox.android.library.historymetadata.HistoryMetadataGroupInteractor
 import net.waterfox.android.selection.SelectionHolder
 
 /**

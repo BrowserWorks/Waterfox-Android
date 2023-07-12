@@ -13,7 +13,6 @@ import android.view.ViewGroup
 import androidx.core.content.pm.PackageInfoCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.HomeActivity
@@ -30,10 +29,9 @@ import org.mozilla.geckoview.BuildConfig as GeckoViewBuildConfig
 /**
  * Displays the logo and information about the app, including library versions.
  */
-class AboutFragment : Fragment(), AboutPageListener {
+class AboutFragment : Fragment() {
 
     private lateinit var appName: String
-    private var aboutPageAdapter: AboutPageAdapter? = AboutPageAdapter(this)
     private var _binding: FragmentAboutBinding? = null
 
     private val binding get() = _binding!!
@@ -50,29 +48,15 @@ class AboutFragment : Fragment(), AboutPageListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        if (aboutPageAdapter == null) {
-            aboutPageAdapter = AboutPageAdapter(this)
-        }
-
-        binding.aboutList.run {
-            adapter = aboutPageAdapter
-            addItemDecoration(
-                DividerItemDecoration(
-                    context,
-                    DividerItemDecoration.VERTICAL
-                )
-            )
-        }
-
         lifecycle.addObserver(
             SecretDebugMenuTrigger(
-                logoView = binding.wordmark,
+                composeView = binding.aboutContent,
                 settings = view.context.settings()
             )
         )
 
         populateAboutHeader()
-        aboutPageAdapter?.submitList(populateAboutList())
+        populateAboutList()
     }
 
     override fun onResume() {
@@ -82,7 +66,6 @@ class AboutFragment : Fragment(), AboutPageListener {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        aboutPageAdapter = null
         _binding = null
     }
 
@@ -91,7 +74,8 @@ class AboutFragment : Fragment(), AboutPageListener {
             val packageInfo =
                 requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
             val versionCode = PackageInfoCompat.getLongVersionCode(packageInfo).toString()
-            val maybeWaterfoxGitHash = if (BuildConfig.GIT_HASH.isNotBlank()) ", ${BuildConfig.GIT_HASH}" else ""
+            val maybeWaterfoxGitHash =
+                if (BuildConfig.GIT_HASH.isNotBlank()) ", ${BuildConfig.GIT_HASH}" else ""
             val componentsAbbreviation = getString(R.string.components_abbreviation)
             val componentsVersion =
                 mozilla.components.Build.version + ", " + mozilla.components.Build.gitHash
@@ -117,18 +101,15 @@ class AboutFragment : Fragment(), AboutPageListener {
             ""
         }
 
-        val content = getString(R.string.about_content, appName)
-        val buildDate = BuildConfig.BUILD_DATE
-
-        binding.aboutText.text = aboutText
-        binding.aboutContent.text = content
-        binding.buildDate.text = buildDate
+        binding.aboutContent.producedByText = getString(R.string.about_content, appName)
+        binding.aboutContent.buildVersionsText = aboutText
+        binding.aboutContent.buildDateText = BuildConfig.BUILD_DATE
     }
 
-    private fun populateAboutList(): List<AboutPageItem> {
+    private fun populateAboutList() {
         val context = requireContext()
 
-        return listOf(
+        val pageItems = listOf(
             AboutPageItem(
                 AboutItem.ExternalLink(
                     SUPPORT,
@@ -163,6 +144,9 @@ class AboutFragment : Fragment(), AboutPageListener {
                 getString(R.string.about_other_open_source_libraries)
             )
         )
+
+        binding.aboutContent.pageItems = pageItems
+        binding.aboutContent.onPageItemClick = ::onAboutItemClicked
     }
 
     private fun openLinkInNormalTab(url: String) {
@@ -178,7 +162,7 @@ class AboutFragment : Fragment(), AboutPageListener {
         navController.navigate(R.id.action_aboutFragment_to_aboutLibrariesFragment)
     }
 
-    override fun onAboutItemClicked(item: AboutItem) {
+    fun onAboutItemClicked(item: AboutItem) {
         Do exhaustive when (item) {
             is AboutItem.ExternalLink -> {
                 openLinkInNormalTab(item.url)

@@ -4,22 +4,19 @@
 
 package net.waterfox.android.ui
 
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiSelector
-import okhttp3.mockwebserver.MockWebServer
-import org.junit.After
-import org.junit.Before
-import org.junit.Ignore
-import org.junit.Rule
-import org.junit.Test
 import net.waterfox.android.ext.settings
-import net.waterfox.android.helpers.AndroidAssetDispatcher
 import net.waterfox.android.helpers.HomeActivityIntentTestRule
 import net.waterfox.android.helpers.RetryTestRule
 import net.waterfox.android.helpers.TestHelper.mDevice
 import net.waterfox.android.ui.robots.clickRateButtonGooglePlay
 import net.waterfox.android.ui.robots.homeScreen
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
 
 /**
  *  Tests for verifying the main three dot menu options
@@ -30,10 +27,11 @@ class SettingsAboutTest {
     /* ktlint-disable no-blank-line-before-rbrace */ // This imposes unreadable grouping.
 
     private lateinit var mDevice: UiDevice
-    private lateinit var mockWebServer: MockWebServer
 
     @get:Rule
-    val activityIntentTestRule = HomeActivityIntentTestRule()
+    val activityIntentTestRule = AndroidComposeTestRule(
+        HomeActivityIntentTestRule()
+    ) { it.activity }
 
     @Rule
     @JvmField
@@ -42,15 +40,6 @@ class SettingsAboutTest {
     @Before
     fun setUp() {
         mDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        mockWebServer = MockWebServer().apply {
-            dispatcher = AndroidAssetDispatcher()
-            start()
-        }
-    }
-
-    @After
-    fun tearDown() {
-        mockWebServer.shutdown()
     }
 
     @Test
@@ -81,16 +70,17 @@ class SettingsAboutTest {
         }
     }
 
-    @Ignore("Failing, see: https://github.com/mozilla-mobile/fenix/issues/25355")
     @Test
     fun verifyAboutWaterfoxPreview() {
         val settings = activityIntentTestRule.activity.settings()
         settings.shouldShowJumpBackInCFR = false
+        settings.shouldShowTotalCookieProtectionCFR = false
+
         homeScreen {
         }.openThreeDotMenu {
         }.openSettings {
         }.openAboutWaterfoxPreview {
-            verifyAboutWaterfoxPreview()
+            verifyAboutWaterfoxPreview(activityIntentTestRule)
         }
     }
 }

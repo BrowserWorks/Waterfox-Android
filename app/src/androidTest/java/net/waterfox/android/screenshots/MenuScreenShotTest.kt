@@ -7,33 +7,24 @@
 package net.waterfox.android.screenshots
 
 import android.os.SystemClock
+import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.rule.ActivityTestRule
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.Until
-import okhttp3.mockwebserver.MockWebServer
-import org.junit.After
-import org.junit.Before
-import org.junit.Ignore
-import org.junit.Rule
-import org.junit.Test
-import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
-import net.waterfox.android.helpers.AndroidAssetDispatcher
-import net.waterfox.android.helpers.FeatureSettingsHelper
-import net.waterfox.android.helpers.HomeActivityTestRule
-import net.waterfox.android.helpers.TestAssetHelper
+import net.waterfox.android.helpers.*
 import net.waterfox.android.helpers.TestHelper.mDevice
-import net.waterfox.android.helpers.click
 import net.waterfox.android.helpers.ext.waitNotNull
 import net.waterfox.android.ui.robots.bookmarksMenu
 import net.waterfox.android.ui.robots.homeScreen
 import net.waterfox.android.ui.robots.navigationToolbar
 import net.waterfox.android.ui.robots.swipeToBottom
+import okhttp3.mockwebserver.MockWebServer
+import org.junit.*
 import tools.fastlane.screengrab.Screengrab
 import tools.fastlane.screengrab.locale.LocaleTestRule
 
@@ -47,7 +38,11 @@ class MenuScreenShotTest : ScreenshotTest() {
     val localeTestRule = LocaleTestRule()
 
     @get:Rule
-    var mActivityTestRule: ActivityTestRule<HomeActivity> = HomeActivityTestRule()
+    val composeTestRule = AndroidComposeTestRule(
+        HomeActivityTestRule()
+    ) { it.activity }
+
+    private val activity by lazy { composeTestRule.activity }
 
     @Before
     fun setUp() {
@@ -63,7 +58,7 @@ class MenuScreenShotTest : ScreenshotTest() {
     @After
     fun tearDown() {
         featureSettingsHelper.resetAllFeatureFlags()
-        mActivityTestRule.getActivity().finishAndRemoveTask()
+        activity.finishAndRemoveTask()
         mockWebServer.shutdown()
     }
 
@@ -135,9 +130,9 @@ class MenuScreenShotTest : ScreenshotTest() {
             Screengrab.screenshot("BookmarksRobot_add-folder-view")
             saveNewFolder()
             Screengrab.screenshot("BookmarksRobot_error-empty-folder-name")
-            addNewFolderName("test")
+            addNewFolderName("test", composeTestRule)
             saveNewFolder()
-        }.openThreeDotMenu("test") {
+        }.openThreeDotMenu("test", composeTestRule) {
             Screengrab.screenshot("ThreeDotMenuBookmarksRobot_folder-menu")
         }
         editBookmarkFolder()
@@ -145,7 +140,7 @@ class MenuScreenShotTest : ScreenshotTest() {
         // It may be needed to wait here to have the screenshot
         bookmarksMenu {
             navigateUp()
-        }.openThreeDotMenu("test") {
+        }.openThreeDotMenu("test", composeTestRule) {
             deleteBookmarkFolder()
             Screengrab.screenshot("ThreeDotMenuBookmarksRobot_delete-bookmark-folder-menu")
         }

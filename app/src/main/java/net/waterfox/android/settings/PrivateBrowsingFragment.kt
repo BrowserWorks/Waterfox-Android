@@ -5,56 +5,49 @@
 package net.waterfox.android.settings
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.SwitchPreference
+import androidx.fragment.app.Fragment
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.PrivateShortcutCreateManager
-import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.showToolbar
 
 /**
  * Lets the user customize Private browsing options.
  */
-class PrivateBrowsingFragment : PreferenceFragmentCompat() {
+class PrivateBrowsingFragment : Fragment() {
+
+    lateinit var view: PrivateBrowsingComposeView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        view = PrivateBrowsingComposeView(requireContext())
+        return view
+    }
+
     override fun onResume() {
         super.onResume()
         showToolbar(getString(R.string.preferences_private_browsing_options))
+        setupPreferences()
     }
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.private_browsing_preferences, rootKey)
-        updatePreferences()
-    }
-
-    private fun updatePreferences() {
-        requirePreference<Preference>(R.string.pref_key_add_private_browsing_shortcut).apply {
-            setOnPreferenceClickListener {
-                PrivateShortcutCreateManager.createPrivateShortcut(requireContext())
-                true
-            }
+    private fun setupPreferences() {
+        view.onAddShortcutClick = {
+            PrivateShortcutCreateManager.createPrivateShortcut(requireContext())
         }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_open_links_in_a_private_tab).apply {
-            onPreferenceChangeListener = SharedPreferenceUpdater()
-            isChecked = context.settings().openLinksInAPrivateTab
-        }
-
-        requirePreference<SwitchPreference>(R.string.pref_key_allow_screenshots_in_private_mode).apply {
-            onPreferenceChangeListener = object : SharedPreferenceUpdater() {
-                override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-                    if ((activity as? HomeActivity)?.browsingModeManager?.mode?.isPrivate == true &&
-                        newValue == false
-                    ) {
-                        activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
-                    } else {
-                        activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_SECURE)
-                    }
-                    return super.onPreferenceChange(preference, newValue)
-                }
+        view.onAllowScreenshotsChange = { allow ->
+            if ((activity as? HomeActivity)?.browsingModeManager?.mode?.isPrivate == true && !allow) {
+                activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
+            } else {
+                activity?.window?.clearFlags(WindowManager.LayoutParams.FLAG_SECURE)
             }
         }
     }
+
 }

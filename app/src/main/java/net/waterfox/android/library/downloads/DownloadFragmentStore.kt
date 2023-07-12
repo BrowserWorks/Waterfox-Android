@@ -8,6 +8,7 @@ import mozilla.components.browser.state.state.content.DownloadState
 import mozilla.components.lib.state.Action
 import mozilla.components.lib.state.State
 import mozilla.components.lib.state.Store
+import net.waterfox.android.selection.SelectionHolder
 
 /**
  * Class representing a downloads entry
@@ -60,11 +61,11 @@ data class DownloadFragmentState(
     val pendingDeletionIds: Set<String>,
     val isDeletingItems: Boolean
 ) : State {
-    sealed class Mode {
-        open val selectedItems = emptySet<DownloadItem>()
+    sealed class Mode : SelectionHolder<DownloadItem> {
+        override val selectedItems = emptySet<DownloadItem>()
 
         object Normal : Mode()
-        data class Editing(override val selectedItems: Set<DownloadItem>) : DownloadFragmentState.Mode()
+        data class Editing(override val selectedItems: Set<DownloadItem>) : Mode()
     }
 }
 

@@ -7,37 +7,26 @@
 package net.waterfox.android.ui.robots
 
 import android.net.Uri
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.ComposeTestRule
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.clearText
-import androidx.test.espresso.action.ViewActions.longClick
-import androidx.test.espresso.action.ViewActions.replaceText
-import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.doesNotExist
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.RootMatchers
-import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withChild
-import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
-import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withParent
-import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.uiautomator.By
-import androidx.test.uiautomator.By.res
 import androidx.test.uiautomator.UiSelector
 import androidx.test.uiautomator.Until
-import org.hamcrest.Matchers.allOf
-import org.hamcrest.Matchers.containsString
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
 import net.waterfox.android.R
-import net.waterfox.android.helpers.TestAssetHelper
 import net.waterfox.android.helpers.TestAssetHelper.waitingTime
+import net.waterfox.android.helpers.TestHelper.getStringResource
 import net.waterfox.android.helpers.TestHelper.mDevice
 import net.waterfox.android.helpers.TestHelper.packageName
 import net.waterfox.android.helpers.click
 import net.waterfox.android.helpers.ext.waitNotNull
+import org.hamcrest.Matchers.allOf
+import org.hamcrest.Matchers.containsString
+import org.junit.Assert.assertEquals
 
 /**
  * Implementation of Robot Pattern for the bookmarks menu.
@@ -46,7 +35,7 @@ class BookmarksRobot {
 
     fun verifyBookmarksMenuView() {
         mDevice.findObject(
-            UiSelector().text("Bookmarks")
+            UiSelector().text("Bookmarks"),
         ).waitForExists(waitingTime)
 
         assertBookmarksView()
@@ -58,23 +47,22 @@ class BookmarksRobot {
 
     fun verifyDeleteMultipleBookmarksSnackBar() = assertSnackBarText("Bookmarks deleted")
 
-    fun verifyBookmarkFavicon(forUrl: Uri) = assertBookmarkFavicon(forUrl)
+    fun verifyEmptyFolder(rule: ComposeTestRule) = assertEmptyBookmarksView(rule)
 
-    fun verifyBookmarkedURL(url: String) = assertBookmarkURL(url)
+    fun verifyBookmarkFavicon(forUrl: Uri, rule: ComposeTestRule) =
+        assertBookmarkFavicon(forUrl, rule)
 
-    fun verifyFolderTitle(title: String) {
-        mDevice.findObject(UiSelector().text(title)).waitForExists(waitingTime)
-        assertFolderTitle(title)
-    }
+    fun verifyBookmarkedUrl(url: String, rule: ComposeTestRule) = assertBookmarkUrl(url, rule)
 
-    fun verifyBookmarkFolderIsNotCreated(title: String) = assertBookmarkFolderIsNotCreated(title)
+    fun verifyFolderTitle(title: String, rule: ComposeTestRule) = assertFolderTitle(title, rule)
 
-    fun verifyBookmarkTitle(title: String) {
-        mDevice.findObject(UiSelector().text(title)).waitForExists(waitingTime)
-        assertBookmarkTitle(title)
-    }
+    fun verifyBookmarkFolderIsNotCreated(title: String, rule: ComposeTestRule) =
+        assertBookmarkFolderIsNotCreated(title, rule)
 
-    fun verifyBookmarkIsDeleted(expectedTitle: String) = assertBookmarkIsDeleted(expectedTitle)
+    fun verifyBookmarkTitle(title: String, rule: ComposeTestRule) = assertBookmarkTitle(title, rule)
+
+    fun verifyBookmarkIsDeleted(expectedTitle: String, rule: ComposeTestRule) =
+        assertBookmarkIsDeleted(expectedTitle, rule)
 
     fun verifyDeleteSnackBarText() = assertSnackBarText("Deleted")
 
@@ -83,7 +71,7 @@ class BookmarksRobot {
     fun verifySnackBarHidden() {
         mDevice.waitNotNull(
             Until.gone(By.text("UNDO")),
-            TestAssetHelper.waitingTime
+            waitingTime,
         )
         onView(withId(R.id.snackbar_layout)).check(doesNotExist())
     }
@@ -92,15 +80,21 @@ class BookmarksRobot {
 
     fun verifyEditBookmarksView() = assertEditBookmarksView()
 
-    fun verifyBookmarkNameEditBox() = assertBookmarkNameEditBox()
+    fun verifyBookmarkNameEditBox(rule: ComposeTestRule) =
+        assertBookmarkNameEditBox(rule)
 
-    fun verifyBookmarkURLEditBox() = assertBookmarkURLEditBox()
+    fun verifyBookmarkUrlEditBox(rule: ComposeTestRule) =
+        assertBookmarkUrlEditBox(rule)
 
-    fun verifyParentFolderSelector() = assertBookmarkFolderSelector()
+    fun verifyParentFolderSelector(rule: ComposeTestRule) =
+        assertBookmarkFolderSelector(rule)
 
     fun verifyKeyboardHidden() = assertKeyboardVisibility(isExpectedToBeVisible = false)
 
     fun verifyKeyboardVisible() = assertKeyboardVisibility(isExpectedToBeVisible = true)
+
+    fun verifyBookmarkItemPosition(title: String, position: Int, rule: ComposeTestRule) =
+        assertBookmarkItemPosition(title, position, rule)
 
     fun verifyShareOverlay() = assertShareOverlay()
 
@@ -115,15 +109,15 @@ class BookmarksRobot {
     fun verifyCurrentFolderTitle(title: String) {
         mDevice.findObject(
             UiSelector().resourceId("$packageName:id/navigationToolbar")
-                .textContains(title)
+                .textContains(title),
         )
             .waitForExists(waitingTime)
 
         onView(
             allOf(
                 withText(title),
-                withParent(withId(R.id.navigationToolbar))
-            )
+                withParent(withId(R.id.navigationToolbar)),
+            ),
         )
             .check(matches(isDisplayed()))
     }
@@ -131,15 +125,15 @@ class BookmarksRobot {
     fun waitForBookmarksFolderContentToExist(parentFolderName: String, childFolderName: String) {
         mDevice.findObject(
             UiSelector().resourceId("$packageName:id/navigationToolbar")
-                .textContains(parentFolderName)
+                .textContains(parentFolderName),
         )
             .waitForExists(waitingTime)
 
         mDevice.waitNotNull(Until.findObject(By.text(childFolderName)), waitingTime)
     }
 
-    fun verifySignInToSyncButton() =
-        signInToSyncButton().check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+    fun verifySignInToSyncButton(rule: ComposeTestRule) =
+        signInToSyncButton(rule).assertIsDisplayed()
 
     fun verifyDeleteFolderConfirmationMessage() = assertDeleteFolderConfirmationMessage()
 
@@ -150,25 +144,22 @@ class BookmarksRobot {
             .click()
     }
 
-    fun createFolder(name: String) {
+    fun createFolder(name: String, rule: ComposeTestRule) {
         clickAddFolderButton()
-        addNewFolderName(name)
+        addNewFolderName(name, rule)
         saveNewFolder()
     }
 
     fun clickAddFolderButton() {
         mDevice.waitNotNull(
             Until.findObject(By.desc("Add folder")),
-            TestAssetHelper.waitingTime
+            waitingTime,
         )
         addFolderButton().click()
     }
 
-    fun addNewFolderName(name: String) {
-        addFolderTitleField()
-            .click()
-            .perform(replaceText(name))
-    }
+    fun addNewFolderName(name: String, rule: ComposeTestRule) =
+        addFolderTitleField(rule).performTextInput(name)
 
     fun saveNewFolder() {
         saveFolderButton().click()
@@ -182,28 +173,37 @@ class BookmarksRobot {
         snackBarUndoButton().click()
     }
 
-    fun changeBookmarkTitle(newTitle: String) {
-        bookmarkNameEditBox()
-            .perform(clearText())
-            .perform(typeText(newTitle))
+    fun changeBookmarkTitle(newTitle: String, rule: ComposeTestRule) {
+        bookmarkNameEditBox(rule).performTextReplacement(newTitle)
     }
 
-    fun changeBookmarkUrl(newUrl: String) {
-        bookmarkURLEditBox()
-            .perform(clearText())
-            .perform(typeText(newUrl))
+    fun changeBookmarkUrl(newUrl: String, rule: ComposeTestRule) {
+        bookmarkUrlEditBox(rule).performTextReplacement(newUrl)
     }
 
     fun saveEditBookmark() {
         saveBookmarkButton().click()
-        mDevice.findObject(UiSelector().resourceId("net.waterfox.android.debug:id/bookmark_list")).waitForExists(waitingTime)
     }
 
-    fun clickParentFolderSelector() = bookmarkFolderSelector().click()
+    fun clickParentFolderSelector(rule: ComposeTestRule) =
+        bookmarkFolderSelector(rule).performClick()
 
-    fun selectFolder(title: String) = onView(withText(title)).click()
+    fun selectFolder(title: String, rule: ComposeTestRule) =
+        rule.onNodeWithText(title).performClick()
 
-    fun longTapDesktopFolder(title: String) = onView(withText(title)).perform(longClick())
+    fun longTapDesktopFolder(rule: ComposeTestRule) =
+        rule.onNodeWithText("Desktop Bookmarks")
+            .performTouchInput { longClick() }
+
+    fun longTapSelectItem(url: Uri, rule: ComposeTestRule) =
+        rule.onAllNodesWithTag("library.site.item.url", useUnmergedTree = true)
+            .filterToOne(hasText(url.toString()))
+            .performTouchInput { longClick() }
+
+    fun tapSelectItem(url: Uri, rule: ComposeTestRule) =
+        rule.onAllNodesWithTag("library.site.item.url", useUnmergedTree = true)
+            .filterToOne(hasText(url.toString()))
+            .performClick()
 
     fun cancelDeletion() {
         val cancelButton = mDevice.findObject(UiSelector().textContains("CANCEL"))
@@ -228,23 +228,33 @@ class BookmarksRobot {
             return Transition()
         }
 
-        fun openThreeDotMenu(bookmarkTitle: String, interact: ThreeDotMenuBookmarksRobot.() -> Unit): ThreeDotMenuBookmarksRobot.Transition {
-            mDevice.waitNotNull(Until.findObject(res("$packageName:id/overflow_menu")))
-            threeDotMenu(bookmarkTitle).click()
+        fun openThreeDotMenu(
+            bookmarkTitle: String,
+            rule: ComposeTestRule,
+            interact: ThreeDotMenuBookmarksRobot.() -> Unit,
+        ): ThreeDotMenuBookmarksRobot.Transition {
+            threeDotMenu(bookmarkTitle, rule).performClick()
 
             ThreeDotMenuBookmarksRobot().interact()
             return ThreeDotMenuBookmarksRobot.Transition()
         }
 
-        fun openThreeDotMenu(bookmarkUrl: Uri, interact: ThreeDotMenuBookmarksRobot.() -> Unit): ThreeDotMenuBookmarksRobot.Transition {
-            threeDotMenu(bookmarkUrl).click()
+        fun openThreeDotMenu(
+            bookmarkUrl: Uri,
+            rule: ComposeTestRule,
+            interact: ThreeDotMenuBookmarksRobot.() -> Unit,
+        ): ThreeDotMenuBookmarksRobot.Transition {
+            threeDotMenu(bookmarkUrl, rule).performClick()
 
             ThreeDotMenuBookmarksRobot().interact()
             return ThreeDotMenuBookmarksRobot.Transition()
         }
 
-        fun clickSingInToSyncButton(interact: SettingsTurnOnSyncRobot.() -> Unit): SettingsTurnOnSyncRobot.Transition {
-            signInToSyncButton().click()
+        fun clickSingInToSyncButton(
+            rule: ComposeTestRule,
+            interact: SettingsTurnOnSyncRobot.() -> Unit,
+        ): SettingsTurnOnSyncRobot.Transition {
+            signInToSyncButton(rule).performClick()
 
             SettingsTurnOnSyncRobot().interact()
             return SettingsTurnOnSyncRobot.Transition()
@@ -261,118 +271,82 @@ private fun closeButton() = onView(withId(R.id.close_bookmarks))
 
 private fun goBackButton() = onView(withContentDescription("Navigate up"))
 
-private fun bookmarkFavicon(url: String) = onView(
-    allOf(
-        withId(R.id.favicon),
-        withParent(
-            withParent(
-                withChild(allOf(withId(R.id.url), withText(url)))
-            )
-        )
-    )
-)
-
-private fun bookmarkURL(url: String) = onView(allOf(withId(R.id.url), withText(containsString(url))))
-
 private fun addFolderButton() = onView(withId(R.id.add_bookmark_folder))
 
-private fun addFolderTitleField() = onView(withId(R.id.bookmarkNameEdit))
+private fun addFolderTitleField(rule: ComposeTestRule) = bookmarkNameEditBox(rule)
 
 private fun saveFolderButton() = onView(withId(R.id.confirm_add_folder_button))
 
-private fun threeDotMenu(bookmarkUrl: Uri) = onView(
-    allOf(
-        withId(R.id.overflow_menu),
-        withParent(withChild(allOf(withId(R.id.url), withText(bookmarkUrl.toString()))))
-    )
-)
+private fun threeDotMenu(bookmarkUrl: Uri, rule: ComposeTestRule) = rule
+    .onAllNodesWithTag("library.site.item.overflow.menu")
+    .filterToOne(hasAnyAncestor(hasText(bookmarkUrl.toString())))
 
-private fun threeDotMenu(bookmarkTitle: String) = onView(
-    allOf(
-        withId(R.id.overflow_menu),
-        withParent(withChild(allOf(withId(R.id.title), withText(bookmarkTitle))))
-    )
-)
+private fun threeDotMenu(bookmarkTitle: String, rule: ComposeTestRule) = rule
+    .onAllNodesWithTag("library.site.item.overflow.menu")
+    .filterToOne(hasAnyAncestor(hasText(bookmarkTitle)))
 
 private fun snackBarText() = onView(withId(R.id.snackbar_text))
 
 private fun snackBarUndoButton() = onView(withId(R.id.snackbar_btn))
 
-private fun bookmarkNameEditBox() = onView(withId(R.id.bookmarkNameEdit))
+private fun bookmarkNameEditBox(rule: ComposeTestRule) =
+    rule.onNodeWithTag("edit.bookmark.name")
 
-private fun bookmarkFolderSelector() = onView(withId(R.id.bookmarkParentFolderSelector))
+private fun bookmarkUrlEditBox(rule: ComposeTestRule) =
+    rule.onNodeWithTag("edit.bookmark.url")
 
-private fun bookmarkURLEditBox() = onView(withId(R.id.bookmarkUrlEdit))
+private fun bookmarkFolderSelector(rule: ComposeTestRule) =
+    rule.onNodeWithTag("edit.bookmark.parent.folder")
 
 private fun saveBookmarkButton() = onView(withId(R.id.save_bookmark_button))
 
 private fun deleteInEditModeButton() = onView(withId(R.id.delete_bookmark_button))
 
-private fun signInToSyncButton() = onView(withId(R.id.bookmark_folders_sign_in))
+private fun signInToSyncButton(rule: ComposeTestRule) =
+    rule.onNodeWithText(getStringResource(R.string.bookmark_sign_in_button))
 
 private fun assertBookmarksView() {
     onView(
         allOf(
             withText("Bookmarks"),
-            withParent(withId(R.id.navigationToolbar))
-        )
+            withParent(withId(R.id.navigationToolbar)),
+        ),
     )
         .check(matches(isDisplayed()))
 }
 
 private fun assertAddFolderButton() =
-    addFolderButton().check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+    addFolderButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
-private fun assertCloseButton() = closeButton().check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+private fun assertCloseButton() =
+    closeButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
-private fun assertEmptyBookmarksList() =
-    onView(withId(R.id.bookmarks_empty_view)).check(matches(withText("No bookmarks here")))
+private fun assertEmptyBookmarksView(rule: ComposeTestRule) =
+    rule.onNodeWithText("No bookmarks here").assertIsDisplayed()
 
-private fun assertBookmarkFolderIsNotCreated(title: String) {
-    mDevice.findObject(
-        UiSelector()
-            .resourceId("$packageName:id/bookmarks_wrapper")
-    ).waitForExists(waitingTime)
+private fun assertBookmarkFavicon(forUrl: Uri, rule: ComposeTestRule) =
+    rule.onAllNodesWithTag("library.site.item.favicon", useUnmergedTree = true)
+        .filterToOne(hasAnyAncestor(hasAnyChild(hasText(forUrl.toString()))))
+        .assertIsDisplayed()
 
-    assertFalse(
-        mDevice.findObject(
-            UiSelector()
-                .textContains(title)
-        ).waitForExists(waitingTime)
-    )
-}
+private fun assertBookmarkUrl(expectedUrl: String, rule: ComposeTestRule) =
+    rule.onAllNodesWithTag("library.site.item.url", useUnmergedTree = true)
+        .filterToOne(hasText(expectedUrl))
+        .assertIsDisplayed()
 
-private fun assertBookmarkFavicon(forUrl: Uri) = bookmarkFavicon(forUrl.toString()).check(
-    matches(
-        withEffectiveVisibility(
-            ViewMatchers.Visibility.VISIBLE
-        )
-    )
-)
+private fun assertFolderTitle(expectedTitle: String, rule: ComposeTestRule) =
+    rule.onNodeWithText(expectedTitle).assertIsDisplayed()
 
-private fun assertBookmarkURL(expectedURL: String) =
-    bookmarkURL(expectedURL).check(matches(isDisplayed()))
+private fun assertBookmarkTitle(expectedTitle: String, rule: ComposeTestRule) =
+    rule.onNodeWithText(expectedTitle).assertIsDisplayed()
 
-private fun assertFolderTitle(expectedTitle: String) =
-    onView(withText(expectedTitle)).check(matches(isDisplayed()))
+private fun assertBookmarkFolderIsNotCreated(title: String, rule: ComposeTestRule) =
+    rule.onNodeWithText(title).assertDoesNotExist()
 
-private fun assertBookmarkTitle(expectedTitle: String) =
-    onView(withText(expectedTitle)).check(matches(isDisplayed()))
+private fun assertBookmarkIsDeleted(expectedTitle: String, rule: ComposeTestRule) =
+    rule.onNode(hasTestTag("library.site.item.title") and hasText(expectedTitle))
+        .assertDoesNotExist()
 
-private fun assertBookmarkIsDeleted(expectedTitle: String) {
-    mDevice.findObject(
-        UiSelector()
-            .resourceId("$packageName:id/bookmarks_wrapper")
-    ).waitForExists(waitingTime)
-
-    assertFalse(
-        mDevice.findObject(
-            UiSelector()
-                .resourceId("$packageName:id/title")
-                .textContains(expectedTitle)
-        ).waitForExists(waitingTime)
-    )
-}
 private fun assertUndoDeleteSnackBarButton() =
     snackBarUndoButton().check(matches(withText("UNDO")))
 
@@ -380,27 +354,29 @@ private fun assertSnackBarText(text: String) =
     snackBarText().check(matches(withText(containsString(text))))
 
 private fun assertEditBookmarksView() = onView(withText("Edit bookmark"))
-    .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+    .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
-private fun assertBookmarkNameEditBox() =
-    onView(withId(R.id.bookmarkNameEdit))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+private fun assertBookmarkNameEditBox(rule: ComposeTestRule) =
+    bookmarkNameEditBox(rule).assertIsDisplayed()
 
-private fun assertBookmarkFolderSelector() =
-    onView(withId(R.id.bookmarkParentFolderSelector))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+private fun assertBookmarkUrlEditBox(rule: ComposeTestRule) =
+    bookmarkUrlEditBox(rule).assertIsDisplayed()
 
-private fun assertBookmarkURLEditBox() =
-    onView(withId(R.id.bookmarkUrlEdit))
-        .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+private fun assertBookmarkFolderSelector(rule: ComposeTestRule) =
+    bookmarkFolderSelector(rule).assertIsDisplayed()
 
 private fun assertKeyboardVisibility(isExpectedToBeVisible: Boolean) =
     assertEquals(
         isExpectedToBeVisible,
         mDevice
             .executeShellCommand("dumpsys input_method | grep mInputShown")
-            .contains("mInputShown=true")
+            .contains("mInputShown=true"),
     )
+
+private fun assertBookmarkItemPosition(expectedTitle: String, expectedPosition: Int, rule: ComposeTestRule) =
+    rule.onNodeWithTag("bookmark.list")
+        .onChildAt(expectedPosition)
+        .assertTextContains(expectedTitle)
 
 private fun assertShareOverlay() =
     onView(withId(R.id.shareWrapper)).check(matches(isDisplayed()))
