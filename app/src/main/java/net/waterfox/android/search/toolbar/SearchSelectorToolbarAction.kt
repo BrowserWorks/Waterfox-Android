@@ -49,7 +49,7 @@ class SearchSelectorToolbarAction(
                     Orientation.DOWN
                 }
 
-                menu.menuController.show(anchor = it, orientation = orientation, forceOrientation = true)
+                menu.menuController.show(anchor = it, orientation = orientation)
             }
 
             setBackgroundResource(

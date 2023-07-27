@@ -719,13 +719,20 @@
         <action
             android:id="@+id/action_turnOnSyncFragment_to_pairFragment"
             app:destination="@id/pairFragment" />
+        <argument
+            android:name="entrypoint"
+            app:argType="net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint" />
     </fragment>
 
     <fragment
         android:id="@+id/pairFragment"
         android:name="net.waterfox.android.settings.PairFragment"
         android:label="@string/preferences_sync_2"
-        tools:layout="@layout/fragment_pair" />
+        tools:layout="@layout/fragment_pair" >
+        <argument
+            android:name="entrypoint"
+            app:argType="net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint" />
+    </fragment>
 
     <fragment
         android:id="@+id/aboutFragment"
@@ -891,6 +898,9 @@
         <action
             android:id="@+id/action_accountProblemFragment_to_signOutFragment"
             app:destination="@id/signOutFragment" />
+        <argument
+            android:name="entrypoint"
+            app:argType="net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint" />
     </fragment>
     <dialog
         android:id="@+id/signOutFragment"

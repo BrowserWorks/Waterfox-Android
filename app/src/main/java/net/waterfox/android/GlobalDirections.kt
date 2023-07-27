@@ -6,6 +6,7 @@ package net.waterfox.android
 
 import androidx.navigation.NavDirections
 import mozilla.appservices.places.BookmarkRoot
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 
 /**
  * Used with [HomeActivity] global navigation to indicate which fragment is being opened.
@@ -28,7 +29,7 @@ enum class GlobalDirections(val navDirections: NavDirections, val destinationId:
         R.id.settingsFragment
     ),
     Sync(
-        NavGraphDirections.actionGlobalTurnOnSync(),
+        NavGraphDirections.actionGlobalTurnOnSync(entrypoint = WaterfoxFxAEntryPoint.DeepLink),
         R.id.turnOnSyncFragment
     ),
     SearchEngine(

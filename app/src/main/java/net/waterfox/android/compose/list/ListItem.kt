@@ -5,6 +5,7 @@
 package net.waterfox.android.compose.list
 
 import android.content.res.Configuration
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -87,6 +88,7 @@ fun TextListItem(
  *
  * @param label The label in the list item.
  * @param description An optional description text below the label.
+ * @param faviconPainter Optional painter to use when fetching a new favicon is unnecessary.
  * @param onClick Called when the user clicks on the item.
  * @param url Website [url] for which the favicon will be shown.
  * @param iconPainter [Painter] used to display an [IconButton] after the list item.
@@ -97,6 +99,7 @@ fun TextListItem(
 fun FaviconListItem(
     label: String,
     description: String? = null,
+    faviconPainter: Painter? = null,
     onClick: (() -> Unit)? = null,
     url: String,
     iconPainter: Painter? = null,
@@ -108,11 +111,21 @@ fun FaviconListItem(
         description = description,
         onClick = onClick,
         beforeListAction = {
-            Favicon(
-                url = url,
-                size = ICON_SIZE,
-                modifier = Modifier.padding(horizontal = 16.dp),
-            )
+            if (faviconPainter != null) {
+                Image(
+                    painter = faviconPainter,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp)
+                        .size(ICON_SIZE),
+                )
+            } else {
+                Favicon(
+                    url = url,
+                    size = ICON_SIZE,
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                )
+            }
         },
         afterListAction = {
             if (iconPainter != null && onIconClick != null) {
@@ -326,7 +339,7 @@ private fun IconListItemWithRightIconPreview() {
 )
 private fun FaviconListItemPreview() {
     WaterfoxTheme(theme = Theme.getTheme()) {
-        Box(Modifier.background(WaterfoxTheme.colors.layer1)) {
+        Column(Modifier.background(WaterfoxTheme.colors.layer1)) {
             FaviconListItem(
                 label = "Favicon + right icon + clicks",
                 description = "Description text",
@@ -334,6 +347,14 @@ private fun FaviconListItemPreview() {
                 url = "",
                 iconPainter = painterResource(R.drawable.ic_menu),
                 onIconClick = { println("icon click") },
+            )
+
+            FaviconListItem(
+                label = "Favicon + painter",
+                description = "Description text",
+                faviconPainter = painterResource(id = R.drawable.ic_tab_collection),
+                onClick = { println("list item click") },
+                url = "",
             )
         }
     }

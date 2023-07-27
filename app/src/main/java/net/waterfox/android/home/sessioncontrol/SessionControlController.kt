@@ -209,7 +209,7 @@ class DefaultSessionControlController(
         dismissSearchDialogIfDisplayed()
 
         restoreUseCase.invoke(
-            activity,
+            activity.filesDir,
             engine,
             tab,
             onTabRestored = {
@@ -229,7 +229,7 @@ class DefaultSessionControlController(
 
     override fun handleCollectionOpenTabsTapped(collection: TabCollection) {
         restoreUseCase.invoke(
-            activity,
+            activity.filesDir,
             engine,
             collection,
             onFailure = { url ->

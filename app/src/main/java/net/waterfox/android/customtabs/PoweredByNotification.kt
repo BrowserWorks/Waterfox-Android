@@ -20,8 +20,9 @@ import androidx.lifecycle.LifecycleOwner
 import mozilla.components.browser.state.selector.findCustomTab
 import mozilla.components.browser.state.state.ExternalAppType
 import mozilla.components.browser.state.store.BrowserStore
+import mozilla.components.support.base.android.NotificationsDelegate
+import mozilla.components.support.base.ids.SharedIdsHelper
 import mozilla.components.support.base.ids.cancel
-import mozilla.components.support.base.ids.notify
 import net.waterfox.android.R
 
 /**
@@ -30,13 +31,17 @@ import net.waterfox.android.R
 class PoweredByNotification(
     private val applicationContext: Context,
     private val store: BrowserStore,
-    private val customTabId: String
+    private val customTabId: String,
+    private val notificationsDelegate: NotificationsDelegate,
 ) : DefaultLifecycleObserver {
 
     override fun onResume(owner: LifecycleOwner) {
         if (store.state.findCustomTab(customTabId)?.config?.externalAppType === ExternalAppType.TRUSTED_WEB_ACTIVITY) {
-            NotificationManagerCompat.from(applicationContext)
-                .notify(applicationContext, NOTIFICATION_TAG, buildNotification())
+            notificationsDelegate.notify(
+                NOTIFICATION_TAG,
+                SharedIdsHelper.getIdForTag(applicationContext, NOTIFICATION_TAG),
+                buildNotification(),
+            )
         }
     }
 

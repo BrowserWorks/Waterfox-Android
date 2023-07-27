@@ -14,11 +14,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.menu.view.MenuButton
+import mozilla.components.concept.sync.FxAEntryPoint
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.accounts.AccountState
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.nav
 import net.waterfox.android.ext.settings
 import net.waterfox.android.settings.SupportUtils
@@ -47,6 +49,7 @@ class HomeMenuBuilder(
     private val navController: NavController,
     private val menuButton: WeakReference<MenuButton>,
     private val hideOnboardingIfNeeded: () -> Unit,
+    private val fxaEntrypoint: FxAEntryPoint = WaterfoxFxAEntryPoint.HomeMenu,
 ) {
 
     /**
@@ -99,9 +102,13 @@ class HomeMenuBuilder(
                         AccountState.AUTHENTICATED ->
                             HomeFragmentDirections.actionGlobalAccountSettingsFragment()
                         AccountState.NEEDS_REAUTHENTICATION ->
-                            HomeFragmentDirections.actionGlobalAccountProblemFragment()
+                            HomeFragmentDirections.actionGlobalAccountProblemFragment(
+                                entrypoint = fxaEntrypoint as WaterfoxFxAEntryPoint,
+                            )
                         AccountState.NO_ACCOUNT ->
-                            HomeFragmentDirections.actionGlobalTurnOnSync()
+                            HomeFragmentDirections.actionGlobalTurnOnSync(
+                                entrypoint = fxaEntrypoint as WaterfoxFxAEntryPoint,
+                            )
                     }
                 )
             }
@@ -149,7 +156,9 @@ class HomeMenuBuilder(
             HomeMenu.Item.ReconnectSync -> {
                 navController.nav(
                     R.id.homeFragment,
-                    HomeFragmentDirections.actionGlobalAccountProblemFragment()
+                    HomeFragmentDirections.actionGlobalAccountProblemFragment(
+                        entrypoint = fxaEntrypoint as WaterfoxFxAEntryPoint,
+                    ),
                 )
             }
             HomeMenu.Item.Extensions -> {

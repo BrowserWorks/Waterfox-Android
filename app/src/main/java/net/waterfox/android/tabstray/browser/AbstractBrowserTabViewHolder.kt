@@ -100,11 +100,7 @@ abstract class AbstractBrowserTabViewHolder(
             }
         }
 
-        if (tab.content.thumbnail != null) {
-            thumbnailView.setImageBitmap(tab.content.thumbnail)
-        } else {
-            loadIntoThumbnailView(thumbnailView, tab.id)
-        }
+        loadIntoThumbnailView(thumbnailView, tab.id)
     }
 
     override fun showTabIsMultiSelectEnabled(selectedMaskView: View?, isSelected: Boolean) {

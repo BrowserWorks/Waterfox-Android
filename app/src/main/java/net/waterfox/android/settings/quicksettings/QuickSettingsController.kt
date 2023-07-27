@@ -114,6 +114,7 @@ class DefaultQuickSettingsController(
     private val displayPermissions: () -> Unit,
     private val engine: Engine = context.components.core.engine,
 ) : QuickSettingsController {
+
     override fun handlePermissionsShown() {
         displayPermissions()
     }
@@ -164,7 +165,7 @@ class DefaultQuickSettingsController(
             }
             val sitePermissions =
                 autoplayValue.createSitePermissionsFromCustomRules(origin, settings)
-            handleAutoplayAdd(sitePermissions)
+            handleAutoplayAdd(sitePermissions, tab?.content?.private ?: false)
             sitePermissions
         } else {
             val newPermission = autoplayValue.updateSitePermissions(permissions)
@@ -262,16 +263,19 @@ class DefaultQuickSettingsController(
      */
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun handlePermissionsChange(updatedPermissions: SitePermissions) {
+        val tab = requireNotNull(browserStore.state.findTabOrCustomTab(sessionId)) {
+            "A session is required to update permission"
+        }
         ioScope.launch {
-            permissionStorage.updateSitePermissions(updatedPermissions)
+            permissionStorage.updateSitePermissions(updatedPermissions, tab.content.private)
             reload(sessionId)
         }
     }
 
     @VisibleForTesting
-    internal fun handleAutoplayAdd(sitePermissions: SitePermissions) {
+    internal fun handleAutoplayAdd(sitePermissions: SitePermissions, private: Boolean) {
         ioScope.launch {
-            permissionStorage.add(sitePermissions)
+            permissionStorage.add(sitePermissions, private)
             reload(sessionId)
         }
     }

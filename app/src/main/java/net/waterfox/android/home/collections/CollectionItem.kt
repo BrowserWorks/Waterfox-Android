@@ -4,7 +4,6 @@
 
 package net.waterfox.android.home.collections
 
-import android.content.Context
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -47,6 +46,7 @@ import net.waterfox.android.compose.list.FaviconListItem
 import net.waterfox.android.ext.toShortUrl
 import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
+import java.io.File
 
 /**
  * Rectangular shape with only right angles used to display a middle tab.
@@ -234,7 +234,7 @@ private val tabPreview = object : Tab {
     override val url = "https://www.waterfox.net/en-US/waterfox/whats-new-in-last-version"
 
     override fun restore(
-        context: Context,
+        filesDir: File,
         engine: Engine,
         restoreSessionId: Boolean
     ): RecoverableTab? = null

@@ -29,7 +29,8 @@ import androidx.compose.ui.window.PopupProperties
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.marginStart
-import androidx.lifecycle.ViewTreeLifecycleOwner
+import androidx.lifecycle.findViewTreeLifecycleOwner
+import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.savedstate.findViewTreeSavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import mozilla.components.support.ktx.android.util.dpToPx
@@ -106,7 +107,7 @@ internal class CFRPopupFullscreenLayout(
         private set
 
     init {
-        ViewTreeLifecycleOwner.set(this, ViewTreeLifecycleOwner.get(anchor))
+        setViewTreeLifecycleOwner(anchor.findViewTreeLifecycleOwner())
         this.setViewTreeSavedStateRegistryOwner(anchor.findViewTreeSavedStateRegistryOwner())
         GeckoScreenOrientation.getInstance().addListener(orientationChangeListener)
         anchor.addOnAttachStateChangeListener(anchorDetachedListener)
@@ -335,7 +336,7 @@ internal class CFRPopupFullscreenLayout(
         anchor.removeOnAttachStateChangeListener(anchorDetachedListener)
         GeckoScreenOrientation.getInstance().removeListener(orientationChangeListener)
         disposeComposition()
-        ViewTreeLifecycleOwner.set(this, null)
+        setViewTreeLifecycleOwner(null)
         this.setViewTreeSavedStateRegistryOwner(null)
         windowManager.removeViewImmediate(this)
     }

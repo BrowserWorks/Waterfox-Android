@@ -11,6 +11,7 @@ import android.content.Intent
 import android.os.StrictMode
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.net.toUri
 import com.google.android.play.core.review.ReviewManagerFactory
 import mozilla.components.feature.addons.AddonManager
@@ -19,6 +20,7 @@ import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
 import mozilla.components.feature.addons.update.DefaultAddonUpdater
 import mozilla.components.feature.autofill.AutofillConfiguration
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
+import mozilla.components.support.base.android.NotificationsDelegate
 import mozilla.components.support.base.worker.Frequency
 import mozilla.components.support.locale.LocaleManager
 import net.waterfox.android.BuildConfig
@@ -86,6 +88,14 @@ class Components(private val context: Context) {
         )
     }
 
+    private val notificationManagerCompat = NotificationManagerCompat.from(context)
+
+    val notificationsDelegate: NotificationsDelegate by lazyMonitored {
+        NotificationsDelegate(
+            notificationManagerCompat,
+        )
+    }
+
     val intentProcessors by lazyMonitored {
         IntentProcessors(
             context,
@@ -121,7 +131,7 @@ class Components(private val context: Context) {
 
     @Suppress("MagicNumber")
     val addonUpdater by lazyMonitored {
-        DefaultAddonUpdater(context, Frequency(12, TimeUnit.HOURS))
+        DefaultAddonUpdater(context, Frequency(12, TimeUnit.HOURS), notificationsDelegate)
     }
 
     @Suppress("MagicNumber")

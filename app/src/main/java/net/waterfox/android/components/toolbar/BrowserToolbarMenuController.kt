@@ -37,6 +37,7 @@ import net.waterfox.android.collections.SaveCollectionStep
 import net.waterfox.android.components.TabCollectionStorage
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.accounts.AccountState
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.*
 import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.utils.Do
@@ -219,9 +220,11 @@ class DefaultBrowserToolbarMenuController(
                     AccountState.AUTHENTICATED ->
                         BrowserFragmentDirections.actionGlobalAccountSettingsFragment()
                     AccountState.NEEDS_REAUTHENTICATION ->
-                        BrowserFragmentDirections.actionGlobalAccountProblemFragment()
+                        BrowserFragmentDirections.actionGlobalAccountProblemFragment(
+                            entrypoint = WaterfoxFxAEntryPoint.BrowserToolbar,
+                        )
                     AccountState.NO_ACCOUNT ->
-                        BrowserFragmentDirections.actionGlobalTurnOnSync()
+                        BrowserFragmentDirections.actionGlobalTurnOnSync(entrypoint = WaterfoxFxAEntryPoint.BrowserToolbar)
                 }
                 browserAnimator.captureEngineViewAndDrawStatically {
                     navController.nav(

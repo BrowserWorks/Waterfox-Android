@@ -38,7 +38,7 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import mozilla.appservices.places.BookmarkRoot
-import mozilla.appservices.places.uniffi.PlacesException
+import mozilla.appservices.places.uniffi.PlacesApiException
 import mozilla.components.browser.state.action.ContentAction
 import mozilla.components.browser.state.selector.*
 import mozilla.components.browser.state.state.CustomTabSessionState
@@ -51,12 +51,13 @@ import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.feature.accounts.FxaCapability
 import mozilla.components.feature.accounts.FxaWebChannelFeature
+import mozilla.components.feature.addons.update.DefaultAddonUpdater
 import mozilla.components.feature.app.links.AppLinksFeature
 import mozilla.components.feature.contextmenu.ContextMenuCandidate
 import mozilla.components.feature.contextmenu.ContextMenuFeature
 import mozilla.components.feature.downloads.DownloadsFeature
 import mozilla.components.feature.downloads.manager.FetchDownloadManager
-import mozilla.components.feature.downloads.share.ShareDownloadFeature
+import mozilla.components.feature.downloads.temporary.ShareDownloadFeature
 import mozilla.components.feature.intent.ext.EXTRA_SESSION_ID
 import mozilla.components.feature.media.fullscreen.MediaSessionFullscreenFeature
 import mozilla.components.feature.privatemode.feature.SecureWindowFeature
@@ -443,7 +444,8 @@ abstract class BaseBrowserFragment :
             downloadManager = FetchDownloadManager(
                 context.applicationContext,
                 store,
-                DownloadService::class
+                DownloadService::class,
+                notificationsDelegate = context.components.notificationsDelegate,
             ),
             shouldForwardToThirdParties = {
                 PreferenceManager.getDefaultSharedPreferences(context).getBoolean(
@@ -769,7 +771,8 @@ abstract class BaseBrowserFragment :
                     requireComponents.core.store,
                     context.components.useCases.sessionUseCases.reload,
                     binding.swipeRefresh,
-                    customTabSessionId
+                    null,
+                    customTabSessionId,
                 ),
                 owner = this,
                 view = view
@@ -1210,7 +1213,7 @@ abstract class BaseBrowserFragment :
         viewLifecycleOwner.lifecycleScope.launch(Main) {
             val sitePermissions: SitePermissions? = tab.content.url.getOrigin()?.let { origin ->
                 val storage = requireComponents.core.permissionStorage
-                storage.findSitePermissionsBy(origin)
+                storage.findSitePermissionsBy(origin, tab.content.private)
             }
 
             view?.let {
@@ -1275,7 +1278,7 @@ abstract class BaseBrowserFragment :
                             .show()
                     }
                 }
-            } catch (e: PlacesException.UrlParseFailed) {
+            } catch (e: PlacesApiException.UrlParseFailed) {
                 withContext(Main) {
 
                     view?.let {

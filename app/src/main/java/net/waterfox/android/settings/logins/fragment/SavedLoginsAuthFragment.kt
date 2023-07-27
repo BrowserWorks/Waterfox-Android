@@ -26,6 +26,7 @@ import mozilla.components.feature.autofill.preference.AutofillPreference
 import mozilla.components.service.fxa.SyncEngine
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.*
 import net.waterfox.android.settings.SharedPreferenceUpdater
 import net.waterfox.android.settings.SyncPreferenceView
@@ -141,12 +142,16 @@ class SavedLoginsAuthFragment : PreferenceFragmentCompat() {
                 .getString(R.string.preferences_passwords_sync_logins),
             onSignInToSyncClicked = {
                 val directions =
-                    SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment()
+                    SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment(
+                        entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                    )
                 findNavController().navigate(directions)
             },
             onReconnectClicked = {
                 val directions =
-                    SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment()
+                    SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment(
+                        entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                    )
                 findNavController().navigate(directions)
             }
         )

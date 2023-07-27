@@ -16,6 +16,7 @@ import mozilla.components.browser.storage.sync.RemoteTabsStorage
 import mozilla.components.concept.sync.*
 import mozilla.components.feature.accounts.push.FxaPushSupportFeature
 import mozilla.components.feature.accounts.push.SendTabFeature
+import mozilla.components.feature.syncedtabs.SyncedTabsAutocompleteProvider
 import mozilla.components.feature.syncedtabs.storage.SyncedTabsStorage
 import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.service.fxa.PeriodicSyncConfig
@@ -128,6 +129,9 @@ class BackgroundServices(
 
     val syncedTabsStorage by lazyMonitored {
         SyncedTabsStorage(accountManager, context.components.core.store, remoteTabsStorage.value)
+    }
+    val syncedTabsAutocompleteProvider by lazyMonitored {
+        SyncedTabsAutocompleteProvider(syncedTabsStorage)
     }
 
     @VisibleForTesting(otherwise = PRIVATE)

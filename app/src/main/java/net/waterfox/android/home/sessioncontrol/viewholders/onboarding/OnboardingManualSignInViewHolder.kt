@@ -8,6 +8,7 @@ import android.view.View
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.databinding.OnboardingManualSigninBinding
 import net.waterfox.android.home.HomeFragmentDirections
 
@@ -16,7 +17,9 @@ class OnboardingManualSignInViewHolder(view: View) : RecyclerView.ViewHolder(vie
 
     init {
         binding.fxaSignInButton.setOnClickListener {
-            val directions = HomeFragmentDirections.actionGlobalTurnOnSync()
+            val directions = HomeFragmentDirections.actionGlobalTurnOnSync(
+                entrypoint = WaterfoxFxAEntryPoint.OnboardingManualSignIn,
+            )
             Navigation.findNavController(view).navigate(directions)
         }
     }

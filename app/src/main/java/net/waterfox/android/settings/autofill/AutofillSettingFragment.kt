@@ -29,6 +29,7 @@ import mozilla.components.service.sync.autofill.AutofillCreditCardsAddressesStor
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
 import net.waterfox.android.components.StoreProvider
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.requireComponents
 import net.waterfox.android.ext.runIfFragmentIsAttached
 import net.waterfox.android.ext.secure
@@ -164,12 +165,14 @@ class AutofillSettingFragment : BiometricPromptPreferenceFragment() {
                 .getString(R.string.preferences_credit_cards_sync_cards),
             onSignInToSyncClicked = {
                 findNavController().navigate(
-                    NavGraphDirections.actionGlobalTurnOnSync()
+                    NavGraphDirections.actionGlobalTurnOnSync(entrypoint = WaterfoxFxAEntryPoint.AutofillSetting),
                 )
             },
             onReconnectClicked = {
                 findNavController().navigate(
-                    AutofillSettingFragmentDirections.actionGlobalAccountProblemFragment()
+                    AutofillSettingFragmentDirections.actionGlobalAccountProblemFragment(
+                        entrypoint = WaterfoxFxAEntryPoint.AutofillSetting,
+                    ),
                 )
             }
         )

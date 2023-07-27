@@ -50,6 +50,8 @@ object Versions {
     const val robolectric = "4.9"
 
     const val google_play_review_version = "2.0.0"
+
+    const val mozilla_glean = "52.7.0"
 }
 
 @Suppress("unused")
@@ -252,7 +254,7 @@ object Deps {
     const val junitEngine = "org.junit.jupiter:junit-jupiter-engine:${Versions.junit}"
 
     // TODO: [Waterfox] remove Glean dependency
-    const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_android_components}"
+    const val mozilla_service_glean = "org.mozilla.components:service-glean:${Versions.mozilla_glean}"
 }
 
 /**

@@ -14,6 +14,7 @@ import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.lib.crash.sentry.SentryService
 import mozilla.components.lib.crash.service.CrashReporterService
 import net.waterfox.android.*
+import net.waterfox.android.ext.components
 import net.waterfox.android.perf.lazyMonitored
 import org.mozilla.geckoview.BuildConfig.*
 
@@ -73,7 +74,8 @@ class Analytics(
                 organizationName = "Waterfox Project"
             ),
             enabled = true,
-            nonFatalCrashIntent = pendingIntent
+            nonFatalCrashIntent = pendingIntent,
+            notificationsDelegate = context.components.notificationsDelegate,
         )
     }
 }

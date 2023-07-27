@@ -55,7 +55,7 @@ import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.ui.colors.PhotonColors
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.Image
-import net.waterfox.android.compose.ThumbnailCard
+import net.waterfox.android.compose.TabThumbnail
 import net.waterfox.android.compose.inComposePreview
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.theme.WaterfoxTheme
@@ -182,17 +182,14 @@ private fun RecentTabItem(
  * @param tab [RecentTab] that was recently viewed.
  * @param modifier [Modifier] used to draw the image content.
  * @param contentScale [ContentScale] used to draw image content.
- * @param alignment [Alignment] used to draw the image content.
  */
 @Composable
 fun RecentTabImage(
     tab: RecentTab.Tab,
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.FillWidth,
-    alignment: Alignment = Alignment.TopCenter
 ) {
     val previewImageUrl = tab.state.content.previewImageUrl
-    val thumbnail = tab.state.content.thumbnail
 
     when {
         !previewImageUrl.isNullOrEmpty() -> {
@@ -203,18 +200,8 @@ fun RecentTabImage(
                 contentScale = ContentScale.Crop
             )
         }
-        thumbnail != null -> {
-            Image(
-                painter = BitmapPainter(thumbnail.asImageBitmap()),
-                contentDescription = null,
-                modifier = modifier,
-                contentScale = contentScale,
-                alignment = alignment
-            )
-        }
-        else -> ThumbnailCard(
-            url = tab.state.content.url,
-            key = tab.state.id,
+        else -> TabThumbnail(
+            tab = tab.state,
             modifier = modifier,
             contentScale = contentScale,
         )

@@ -11,6 +11,8 @@ import android.os.StrictMode
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
+import mozilla.components.browser.domains.autocomplete.BaseDomainAutocompleteProvider
+import mozilla.components.browser.domains.autocomplete.ShippedDomainsProvider
 import mozilla.components.browser.engine.gecko.GeckoEngine
 import mozilla.components.browser.engine.gecko.fetch.GeckoViewFetchClient
 import mozilla.components.browser.engine.gecko.permission.GeckoSitePermissionsStorage
@@ -32,6 +34,7 @@ import mozilla.components.concept.engine.DefaultSettings
 import mozilla.components.concept.engine.Engine
 import mozilla.components.concept.engine.mediaquery.PreferredColorScheme
 import mozilla.components.concept.fetch.Client
+import mozilla.components.feature.awesomebar.provider.SessionAutocompleteProvider
 import mozilla.components.feature.customtabs.store.CustomTabsServiceStore
 import mozilla.components.feature.downloads.DownloadMiddleware
 import mozilla.components.feature.logins.exceptions.LoginExceptionStorage
@@ -70,6 +73,7 @@ import mozilla.components.support.base.worker.Frequency
 import net.waterfox.android.*
 import net.waterfox.android.components.search.SearchMigration
 import net.waterfox.android.downloads.DownloadService
+import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import net.waterfox.android.gecko.GeckoProvider
 import net.waterfox.android.historymetadata.DefaultHistoryMetadataService
@@ -223,7 +227,7 @@ class Core(
                     additionalBundledSearchEngineIds = listOf("startpage"),
                     migration = SearchMigration(context),
                 ),
-                RecordingDevicesMiddleware(context),
+                RecordingDevicesMiddleware(context, context.components.notificationsDelegate),
                 PromptMiddleware(),
                 LastMediaAccessMiddleware(),
                 HistoryMetadataMiddleware(historyMetadataService),
@@ -262,6 +266,7 @@ class Core(
                 R.drawable.ic_status_logo,
                 permissionStorage.permissionsStorage,
                 IntentReceiverActivity::class.java,
+                notificationsDelegate = context.components.notificationsDelegate
             )
 
             MediaSessionFeature(context, MediaSessionService::class.java, this).start()
@@ -315,6 +320,16 @@ class Core(
     val lazyPasswordsStorage = lazyMonitored { SyncableLoginsStorage(context, lazySecurePrefs) }
     val lazyAutofillStorage =
         lazyMonitored { AutofillCreditCardsAddressesStorage(context, lazySecurePrefs) }
+    val lazyDomainsAutocompleteProvider = lazyMonitored {
+        // Assume this is used together with other autocomplete providers (like history) which have priority 0
+        // and set priority 1 for the domains provider to ensure other providers' results are shown first.
+        ShippedDomainsProvider(1).also { shippedDomainsProvider ->
+            shippedDomainsProvider.initialize(context)
+        }
+    }
+    val lazySessionAutocompleteProvider = lazyMonitored {
+        SessionAutocompleteProvider(store)
+    }
 
     /**
      * The storage component to sync and persist tabs in a Waterfox Sync account.
@@ -329,6 +344,8 @@ class Core(
     val bookmarksStorage: PlacesBookmarksStorage get() = lazyBookmarksStorage.value
     val passwordsStorage: SyncableLoginsStorage get() = lazyPasswordsStorage.value
     val autofillStorage: AutofillCreditCardsAddressesStorage get() = lazyAutofillStorage.value
+    val domainsAutocompleteProvider: BaseDomainAutocompleteProvider get() = lazyDomainsAutocompleteProvider.value
+    val sessionAutocompleteProvider: SessionAutocompleteProvider get() = lazySessionAutocompleteProvider.value
 
     val tabCollectionStorage by lazyMonitored {
         TabCollectionStorage(
@@ -348,7 +365,7 @@ class Core(
         ContileTopSitesProvider(
             context = context,
             client = client,
-            maxCacheAgeInMinutes = CONTILE_MAX_CACHE_AGE,
+            maxCacheAgeInSeconds = CONTILE_MAX_CACHE_AGE,
         )
     }
 

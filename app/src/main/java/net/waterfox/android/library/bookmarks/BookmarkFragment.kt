@@ -30,6 +30,7 @@ import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.NavHostActivity
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.databinding.FragmentBookmarkBinding
@@ -89,7 +90,9 @@ class BookmarkFragment : LibraryPageFragment<BookmarkNode>(), UserInteractionHan
 
         binding.bookmarkContent.interactor = bookmarkInteractor
         binding.bookmarkContent.onSignInButtonClick = {
-            findNavController().navigate(NavGraphDirections.actionGlobalTurnOnSync())
+            findNavController().navigate(
+                NavGraphDirections.actionGlobalTurnOnSync(entrypoint = WaterfoxFxAEntryPoint.BookmarkView),
+            )
         }
 
         viewLifecycleOwner.lifecycle.addObserver(

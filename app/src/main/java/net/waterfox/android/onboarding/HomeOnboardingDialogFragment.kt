@@ -17,6 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.accompanist.insets.ProvideWindowInsets
 import mozilla.components.lib.state.ext.observeAsComposableState
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.components.components
 import net.waterfox.android.ext.nav
 import net.waterfox.android.ext.settings
@@ -59,7 +60,9 @@ class HomeOnboardingDialogFragment : DialogFragment() {
                         onSignInButtonClick = {
                             findNavController().nav(
                                 R.id.homeOnboardingDialogFragment,
-                                HomeOnboardingDialogFragmentDirections.actionGlobalTurnOnSync(),
+                                HomeOnboardingDialogFragmentDirections.actionGlobalTurnOnSync(
+                                    entrypoint = WaterfoxFxAEntryPoint.HomeOnboardingDialog,
+                                ),
                             )
                             onDismiss()
                         },

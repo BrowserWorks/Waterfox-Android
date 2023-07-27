@@ -135,17 +135,19 @@ class ExternalAppBrowserFragment : BaseBrowserFragment(), UserInteractionHandler
                         requireComponents.core.store,
                         requireComponents.useCases.sessionUseCases.reload,
                         customTabSessionId,
-                        manifest
-                    )
-                )
+                        manifest,
+                    ),
+                    notificationsDelegate = requireComponents.notificationsDelegate,
+                ),
             )
         } else {
             viewLifecycleOwner.lifecycle.addObserver(
                 PoweredByNotification(
                     activity.applicationContext,
                     requireComponents.core.store,
-                    customTabSessionId
-                )
+                    customTabSessionId,
+                    requireComponents.notificationsDelegate,
+                ),
             )
         }
     }

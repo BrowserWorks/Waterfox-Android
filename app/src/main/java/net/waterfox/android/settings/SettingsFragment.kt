@@ -37,6 +37,7 @@ import net.waterfox.android.BrowserDirection
 import net.waterfox.android.Config
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.databinding.AmoCollectionOverrideDialogBinding
 import net.waterfox.android.ext.*
 import net.waterfox.android.perf.ProfilerViewModel
@@ -190,7 +191,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         val directions: NavDirections? = when (preference.key) {
             resources.getString(R.string.pref_key_sign_in) -> {
-                SettingsFragmentDirections.actionSettingsFragmentToTurnOnSyncFragment()
+                SettingsFragmentDirections.actionSettingsFragmentToTurnOnSyncFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SettingsMenu,
+                )
             }
             resources.getString(R.string.pref_key_tabs) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToTabsSettingsFragment()
@@ -260,7 +263,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 SettingsFragmentDirections.actionSettingsFragmentToAccountSettingsFragment()
             }
             resources.getString(R.string.pref_key_account_auth_error) -> {
-                SettingsFragmentDirections.actionSettingsFragmentToAccountProblemFragment()
+                SettingsFragmentDirections.actionSettingsFragmentToAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SettingsMenu,
+                )
             }
             resources.getString(R.string.pref_key_delete_browsing_data) -> {
                 SettingsFragmentDirections.actionSettingsFragmentToDeleteBrowsingDataFragment()

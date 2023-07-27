@@ -139,8 +139,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     lintOptions {
@@ -323,7 +323,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 
 dependencies {
     // TODO: [Waterfox] remove Glean dependency
-    implementation(Deps.mozilla_service_glean)
+    implementation Deps.mozilla_service_glean
 
     jnaForTest Deps.jna
     testImplementation files(configurations.jnaForTest.copyRecursive().files)

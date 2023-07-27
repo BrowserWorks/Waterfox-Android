@@ -19,6 +19,7 @@ import net.waterfox.android.collections.CollectionsDialog
 import net.waterfox.android.collections.show
 import net.waterfox.android.components.TabCollectionStorage
 import net.waterfox.android.components.bookmarks.BookmarksUseCase
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.tabstray.ext.getTabSessionState
 import net.waterfox.android.tabstray.ext.isActiveDownload
@@ -122,7 +123,7 @@ class DefaultNavigationInteractor(
         val direction = if (isSignedIn) {
             TabsTrayFragmentDirections.actionGlobalAccountSettingsFragment()
         } else {
-            TabsTrayFragmentDirections.actionGlobalTurnOnSync()
+            TabsTrayFragmentDirections.actionGlobalTurnOnSync(entrypoint = WaterfoxFxAEntryPoint.NavigationInteraction)
         }
         navController.navigate(direction)
     }

@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.sp
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.state.createTab
 import net.waterfox.android.R
-import net.waterfox.android.compose.ThumbnailCard
+import net.waterfox.android.compose.TabThumbnail
 import net.waterfox.android.ext.toShortUrl
 import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
@@ -133,9 +133,8 @@ private fun Thumbnail(
     onMediaIconClicked: ((TabSessionState) -> Unit)
 ) {
     Box {
-        ThumbnailCard(
-            url = tab.content.url,
-            key = tab.id,
+        TabThumbnail(
+            tab = tab,
             modifier = Modifier.size(width = 92.dp, height = 72.dp),
             contentDescription = stringResource(id = R.string.mozac_browser_tabstray_open_tab),
         )

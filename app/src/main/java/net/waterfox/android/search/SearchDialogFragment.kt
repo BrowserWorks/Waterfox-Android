@@ -33,7 +33,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import mozilla.components.browser.domains.autocomplete.ShippedDomainsProvider
 import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.state.state.searchEngines
 import mozilla.components.browser.toolbar.BrowserToolbar
@@ -43,7 +42,6 @@ import mozilla.components.concept.menu.candidate.TextMenuCandidate
 import mozilla.components.concept.storage.HistoryStorage
 import mozilla.components.concept.toolbar.Toolbar
 import mozilla.components.feature.qr.QrFeature
-import mozilla.components.feature.toolbar.ToolbarAutocompleteFeature
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.support.base.coroutines.Dispatchers
@@ -197,29 +195,13 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         toolbarView = ToolbarView(
             requireContext(),
             requireContext().settings(),
+            requireComponents,
             interactor,
             isPrivate,
             binding.toolbar,
             fromHomeFragment
         ).also {
             inlineAutocompleteEditText = it.view.findViewById(R.id.mozac_browser_toolbar_edit_url_view)
-        }
-
-        if (requireContext().settings().shouldAutocompleteInAwesomebar) {
-            val engineForSpeculativeConnects = if (!isPrivate) requireComponents.core.engine else null
-
-            ToolbarAutocompleteFeature(
-                binding.toolbar,
-                engineForSpeculativeConnects,
-                { store.state.searchEngineSource.searchEngine?.type != SearchEngine.Type.APPLICATION }
-            ).apply {
-                addDomainProvider(
-                    ShippedDomainsProvider().also { shippedDomainsProvider ->
-                        shippedDomainsProvider.initialize(requireContext())
-                    }
-                )
-                historyStorageProvider()?.also(::addHistoryStorageProvider)
-            }
         }
 
         val awesomeBar = binding.awesomeBar
@@ -572,10 +554,21 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
         }
     }
 
-    private fun historyStorageProvider(): HistoryStorage? {
-        return if (requireContext().settings().shouldShowHistorySuggestions) {
-            requireComponents.core.historyStorage
-        } else null
+    private fun dismissDialogAndGoBack() {
+        // In case we're displaying search results, we wouldn't have navigated to home, and
+        // so we don't need to navigate "back to" browser fragment.
+        // See mirror of this logic in BrowserToolbarController#handleToolbarClick.
+        if (store.state.searchTerms.isBlank()) {
+            val args by navArgs<SearchDialogFragmentArgs>()
+            args.sessionId?.let {
+                findNavController().navigate(
+                    SearchDialogFragmentDirections.actionGlobalBrowser(null),
+                )
+            }
+        }
+
+        view?.hideKeyboard()
+        dismissAllowingStateLoss()
     }
 
     @Suppress("DEPRECATION")

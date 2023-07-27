@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import mozilla.components.feature.syncedtabs.view.SyncedTabsView
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.tabstray.syncedtabs.SyncedTabsListItem
 
 /**
@@ -40,7 +41,11 @@ fun SyncedTabsView.ErrorType.toSyncedTabsListItem(context: Context, navControlle
                 errorButton = SyncedTabsListItem.ErrorButton(
                     buttonText = context.getString(R.string.synced_tabs_sign_in_button)
                 ) {
-                    navController.navigate(NavGraphDirections.actionGlobalTurnOnSync())
+                    navController.navigate(
+                        NavGraphDirections.actionGlobalTurnOnSync(
+                            entrypoint = WaterfoxFxAEntryPoint.SyncedTabsMenu,
+                        ),
+                    )
                 },
             )
     }

@@ -6,10 +6,10 @@ package net.waterfox.android.browser
 
 import android.view.View
 import androidx.annotation.StringRes
-import mozilla.components.feature.contextmenu.ContextMenuCandidate
+import mozilla.components.ui.widgets.SnackbarDelegate
 import net.waterfox.android.components.WaterfoxSnackbar
 
-class WaterfoxSnackbarDelegate(private val view: View) : ContextMenuCandidate.SnackbarDelegate {
+class WaterfoxSnackbarDelegate(private val view: View) : SnackbarDelegate {
 
     override fun show(
         snackBarParentView: View,
