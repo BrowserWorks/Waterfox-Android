@@ -59,9 +59,7 @@ object SupportUtils {
     ): String {
         val escapedTopic = getEncodedTopicUTF8(topic.topicStr)
         // Remove the whitespace so a search is not triggered:
-        val appVersion = context.appVersionName?.replace(" ", "")
         val osTarget = "android"
-        val langTag = getLanguageTag(locale)
         return "https://www.waterfox.net/docs/support/$osTarget/$escapedTopic"
     }
 
