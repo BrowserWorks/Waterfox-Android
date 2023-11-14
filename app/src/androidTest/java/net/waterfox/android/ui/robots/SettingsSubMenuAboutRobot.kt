@@ -79,7 +79,7 @@ private fun assertAboutToolbar() =
     ).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 
 private fun assertProductCompany(rule: ComposeTestRule) {
-    rule.onNodeWithText("$appName is produced by Waterfox Project.")
+    rule.onNodeWithText("$appName is made by BrowserWorks.")
         .assertIsDisplayed()
 }
 
