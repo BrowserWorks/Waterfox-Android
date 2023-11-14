@@ -63,7 +63,7 @@ class SettingsSyncTest {
         // Open 3dot (main) menu
         // Select settings
         // Click on "Turn on Sync"
-        // Open Waterfox on laptop and go to https://waterfox.net/pair
+        // Open Waterfox on laptop and go to https://firefox.com/pair
         // Pair with QR code and/or alternate method
         // Verify pairing
     }

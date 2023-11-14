@@ -532,7 +532,7 @@
 
     <!-- Pairing Feature strings -->
     <!-- Instructions on how to access pairing -->
-    <string name="pair_instructions_2"><![CDATA[Scan the QR code shown at <b>waterfox.net/pair</b>]]></string>
+    <string name="pair_instructions_2"><![CDATA[Scan the QR code shown at <b>firefox.com/pair</b>]]></string>
 
     <!-- Toolbar Preferences -->
     <!-- Preference for using top toolbar -->
@@ -1193,7 +1193,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scan the code</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[On your computer open Waterfox and go to <b>https://waterfox.net/pair</b>]]></string>
+    <string name="sign_in_instructions"><![CDATA[[Waterfox relies on a Mozilla account to sync data between mobile and desktop. On your computer open Waterfox and go to <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ready to scan</string>
     <!-- Text shown for settings option for sign with pairing -->
