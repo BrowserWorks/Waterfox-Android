@@ -1117,9 +1117,9 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome header. -->
-    <string name="onboarding_header_2">Welcome to a better internet</string>
+    <string name="onboarding_header_2">Welcome to a more private web</string>
     <!-- Text for the onboarding welcome message. -->
-    <string name="onboarding_message">A browser built for people, not profits.</string>
+    <string name="onboarding_message">A grassroots, independent browser.</string>
     <!-- Text for the Waterfox account onboarding sign in card header. -->
     <string name="onboarding_account_sign_in_header">Pick up where you left off</string>
     <!-- Text for the button to learn more about signing in to your Waterfox account. -->
@@ -1147,7 +1147,7 @@
     <!-- Text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header_1">You control your data</string>
     <!-- Text for the privacy notice onboarding card description. -->
-    <string name="onboarding_privacy_notice_description">Waterfox gives you control over what you share online and what you share with us.</string>
+    <string name="onboarding_privacy_notice_description">Waterfox doesn't collect any telemetry and gives you control over your data.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Read our privacy notice</string>
     <!-- Text for the conclusion onboarding message -->
