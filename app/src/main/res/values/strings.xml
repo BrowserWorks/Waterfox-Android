@@ -1147,7 +1147,7 @@
     <!-- Text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header_1">You control your data</string>
     <!-- Text for the privacy notice onboarding card description. -->
-    <string name="onboarding_privacy_notice_description">Waterfox doesn't collect any telemetry and gives you control over your data.</string>
+    <string name="onboarding_privacy_notice_description">Waterfox doesn\'t collect any telemetry and gives you control over your data.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Read our privacy notice</string>
     <!-- Text for the conclusion onboarding message -->
