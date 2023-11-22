@@ -230,8 +230,8 @@ private fun TabInCollectionPreview() {
 
 private val tabPreview = object : Tab {
     override val id = 2L
-    override val title = "WaterfoxCo-Waterfox"
-    override val url = "https://www.waterfox.net/en-US/waterfox/whats-new-in-last-version"
+    override val title = "BrowserWorks-Waterfox"
+    override val url = "https://www.waterfox.net/support/android/whats-new-in-last-version"
 
     override fun restore(
         filesDir: File,

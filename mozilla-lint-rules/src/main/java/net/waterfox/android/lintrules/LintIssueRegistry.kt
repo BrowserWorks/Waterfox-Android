@@ -24,7 +24,7 @@ class LintIssueRegistry : IssueRegistry() {
         LicenseDetector.ISSUE_INVALID_LICENSE_FORMAT
     ) + ConstraintLayoutPerfDetector.ISSUES + ContextCompatDetector.ISSUES
     override val vendor: Vendor = Vendor(
-        vendorName = "WaterfoxCo",
+        vendorName = "BrowserWorks",
         identifier = "waterfox-android"
     )
 }
