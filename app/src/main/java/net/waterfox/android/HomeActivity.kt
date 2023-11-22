@@ -247,6 +247,9 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         components.core.engine.profiler?.addMarker(
             MarkersActivityLifecycleCallbacks.MARKER_NAME, startTimeProfiler, "HomeActivity.onCreate"
         )
+
+        components.notificationsDelegate.bindToActivity(this)
+
         StartupTimeline.onActivityCreateEndHome(this) // DO NOT MOVE ANYTHING BELOW HERE.
     }
 
@@ -384,6 +387,7 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
         components.core.contileTopSitesUpdater.stopPeriodicWork()
         privateNotificationObserver?.stop()
+        components.notificationsDelegate.unBindActivity(this)
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
