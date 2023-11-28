@@ -1,9 +1,9 @@
 {
   "default": {
     "searchDefault": "Bing",
-    "searchOrder": ["Bing", "Startpage"],
+    "searchOrder": ["Bing", "Startpage", "Google"],
     "visibleDefaultEngines": [
-      "bing", "startpage"
+      "bing", "google", "startpage"
     ]
   },
   "regionOverrides": {},
