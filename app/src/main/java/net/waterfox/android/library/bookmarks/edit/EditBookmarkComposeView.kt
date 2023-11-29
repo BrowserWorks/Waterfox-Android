@@ -74,7 +74,9 @@ class EditBookmarkComposeView @JvmOverloads constructor(
         _bookmarkName = rememberSaveable { mutableStateOf("") }
         _bookmarkUrl = rememberSaveable { mutableStateOf("") }
         _keyboardController = LocalSoftwareKeyboardController.current
-        val bookmarkNameFocusRequester = remember { FocusRequester.Default }
+        val bookmarkNameFocusRequester = remember {
+            FocusRequester()
+        }
 
         WaterfoxTheme(theme = Theme.getTheme()) {
             Column {
@@ -158,7 +160,7 @@ class EditBookmarkComposeView @JvmOverloads constructor(
             }
         }
 
-        LaunchedEffect(Unit) {
+        LaunchedEffect(bookmarkNameFocusRequester) {
             bookmarkNameFocusRequester.requestFocus()
         }
     }
