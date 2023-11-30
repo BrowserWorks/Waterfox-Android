@@ -83,7 +83,7 @@ class Analytics(
 private fun isSentryEnabled() = !BuildConfig.SENTRY_TOKEN.isNullOrEmpty()
 
 private fun getSentryProjectUrl() =
-    if (Config.channel == ReleaseChannel.Release) "https://sentry.io/organizations/system1/issues/?project=4504101698142208"
+    if (Config.channel == ReleaseChannel.Release) "https://sentry.io/organizations/browserworks/issues/?project=4506314635280384"
     else null
 
 object NoOpCrashReporterService : CrashReporterService {
