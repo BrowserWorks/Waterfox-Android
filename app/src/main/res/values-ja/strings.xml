@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">プライベート %s</string>
+    
+    <string name="app_name_private_4">s（プライベート）</string>
+
+    
+    
+    <string name="content_description_menu">その他のオプション</string>
+    
+    <string name="content_description_private_browsing_button">プライベートブラウジングを有効にする</string>
+    
+    <string name="content_description_disable_private_browsing_button">プライベートブラウジングを無効にする</string>
+    
+    <string name="search_hint">住所を検索または入力</string>
+    
+    <string name="application_search_hint">検索条件を入力</string>
+    
+    <string name="no_open_tabs_description">開いているタブはここに表示されます。</string>
+    
+    <string name="no_private_tabs_description">プライベートタブはここに表示されます。</string>
+    
+    <string name="tab_tray_multi_select_title">選択された %1$d</string>
+    
+    <string name="tab_tray_add_new_collection">新しいコレクションを追加する</string>
+    
+    <string name="tab_tray_add_new_collection_name">名称</string>
+    
+    <string name="tab_tray_select_collection">コレクションを選択</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">マルチセレクトモードを終了する</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">選択したタブをコレクションに保存</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">厳選された</string>
+
+    
+    
+    <string name="recently_saved_title">最近保存したもの</string>
+    
+    <string name="recently_saved_show_all_content_description_2">保存したブックマークをすべて表示する</string>
+    
+    <string name="recently_saved_menu_item_remove">削除</string>
+
+    
+    <string name="about_content">1$sはBrowserWorks製です。</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">1$sは、プライベートタブを閉じたりアプリを終了すると、プライベートタブの検索履歴や閲覧履歴を消去します。これにより、ウェブサイトやインターネットサービスプロバイダに対して匿名になるわけではありませんが、このデバイスを使用する他の誰からもオンラインで行うことを簡単に非公開にすることができます。</string>
+    <string name="private_browsing_common_myths">プライベート・ブラウジングに関する俗説</string>
+
+    
+    
+    <string name="cfr_message">ホーム画面からプライベートタブを開くショートカットを追加。</string>
+    
+    <string name="cfr_pos_button_text">ショートカットの追加</string>
+    
+    <string name="cfr_neg_button_text">遠慮する</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">アプリのリンクを自動的に開くように、%1$sを設定できます。</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">設定に進む</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">解散</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">解散</string>
+
+    
+    
+    <string name="tcp_cfr_message">私たちの最も強力なプライバシー機能は、クロスサイト・トラッカーを隔離します。</string>
+    
+    <string name="tcp_cfr_learn_more">クッキープロテクションについて</string>
+
+    
+    <string name="camera_permissions_needed_message">カメラへのアクセスが必要です。Androidの設定を開き、アクセス許可をタップし、許可するをタップします。</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">設定に進む</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">解散</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">過去1日、1週間、1ヶ月に一度も表示されていない開いているタブを自動的に閉じるように設定します。</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">オプションを見る</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">解散</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">2週間見ていないタブはここに移動する。</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">設定でオフにする</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">1ヶ月後に自動閉鎖？</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">1$sは、過去1ヶ月閲覧していないタブを閉じることができます。</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">閉じる</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">オートクローズをオンにする</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">新しいタブ</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">新しいプライベートタブ</string>
+
+    
+    
+    <string name="recent_tabs_header">戻る</string>
+    
+    <string name="recent_tabs_show_all">すべて表示</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">最近のタブをすべて表示するボタン</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Your search for \"%1$s"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">dサイト</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">すべての同期タブを見る</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">同期デバイス</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">削除</string>
+    
+    <string name="recent_tab_menu_item_remove">削除</string>
+
+    
+    
+    <string name="history_metadata_header_2">最近訪問</string>
+    
+    <string name="recently_visited_menu_item_remove">削除</string>
+    
+    <string name="past_explorations_show_all_content_description_2">過去の探検をすべて表示する</string>
+
+    
+    
+    <string name="browser_menu_back">バック</string>
+    
+    <string name="browser_menu_forward">フォワード</string>
+    
+    <string name="browser_menu_refresh">リフレッシュ</string>
+    
+    <string name="browser_menu_stop">ストップ</string>
+    
+    <string name="browser_menu_add_ons">アドオン</string>
+    
+    <string name="no_add_ons">アドオンなし</string>
+    
+    <string name="browser_menu_help">ヘルプ</string>
+    
+    <string name="browser_menu_settings">設定</string>
+    
+    <string name="browser_menu_library">図書館</string>
+    
+    <string name="browser_menu_desktop_site">デスクトップサイト</string>
+    
+    <string name="browser_menu_add_to_homescreen">ホーム画面に追加</string>
+    
+    <string name="browser_menu_install_on_homescreen">インストール</string>
+    
+    <string name="resync_button_content_description">再同期</string>
+    
+    <string name="browser_menu_find_in_page">ページ内で検索</string>
+    
+    <string name="browser_menu_save_to_collection_2">コレクションに保存</string>
+    
+    <string name="browser_menu_share">シェア</string>
+    
+    <string name="browser_menu_open_in_waterfox">1$sで開く</string>
+    
+    <string name="browser_menu_powered_by">POWERED BY %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">読者ビュー</string>
+    
+    <string name="browser_menu_read_close">読者を閉じる</string>
+    
+    <string name="browser_menu_open_app_link">アプリで開く</string>
+    
+    <string name="browser_menu_customize_reader_view">読者ビューのカスタマイズ</string>
+    
+    <string name="browser_menu_add">追加</string>
+    
+    <string name="browser_menu_edit">編集</string>
+    
+    <string name="browser_menu_customize_home_1">ホームページのカスタマイズ</string>
+    
+    
+    <string name="browser_toolbar_home">ホーム画面</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">選択された言語</string>
+    
+    <string name="default_locale_text">デバイスの言語に従う</string>
+    
+    <string name="locale_search_hint">検索言語</string>
+
+    
+    
+    <string name="search_scan_button">スキャン</string>
+    
+    <string name="search_engine_button">検索エンジン</string>
+    
+    <string name="search_shortcuts_engine_settings">検索エンジンの設定</string>
+    
+    <string name="awesomebar_clipboard_title">クリップボードからリンクを埋める</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">許可する</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">を許してはならない。</string>
+    
+    <string name="search_suggestions_onboarding_title">プライベート・セッションで検索候補を許可するか？</string>
+    
+    <string name="search_suggestions_onboarding_text">sは、アドレスバーに入力したすべてをデフォルトの検索エンジンと共有します。</string>
+    
+    <string name="search_engine_suggestions_title">検索 %s</string>
+    
+    <string name="search_engine_suggestions_description">アドレスバーから直接検索</string>
+    
+    <string name="search_settings_menu_item">検索設定</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">中断したところから再開するのが簡単になった。</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">開いているタブ、ブックマーク、閲覧履歴にジャンプ。</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">すっきりと整理されたタブ</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">改善されたレイアウトと自動クローズタブで、タブの乱雑さを一掃。</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">最近の検索</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">ホームページやタブで最新の検索を再確認。</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">パーソナライズされたホームページをご紹介します。最近のタブ、ブックマーク、検索結果がここに表示されます。</string>
+    
+    <string name="onboarding_home_welcome_title_2">よりパーソナルなインターネットへようこそ</string>
+    
+    <string name="onboarding_home_welcome_description">より多くの色。より良いプライバシー。利益よりも人々への同じコミットメント。</string>
+    
+    <string name="onboarding_home_sync_title_3">携帯電話からノートパソコンへの往復</string>
+    
+    <string name="onboarding_home_sync_description">他のデバイスのタブがあなたのホームページに表示されるようになりました。</string>
+    
+    <string name="onboarding_home_get_started_button">スタート</string>
+    
+    <string name="onboarding_home_sign_in_button">ログイン</string>
+    
+    <string name="onboarding_home_skip_button">スキップ</string>
+    
+    <string name="onboarding_home_content_description_close_button">閉じる</string>
+
+    
+    
+    <string name="search_widget_content_description_2">新しいタブ %1$s を開く</string>
+    
+    <string name="search_widget_text_short">検索</string>
+    
+    <string name="search_widget_text_long">ウェブ検索</string>
+    
+    <string name="search_widget_voice">音声検索</string>
+
+    
+    
+    <string name="settings">設定</string>
+    
+    <string name="preferences_category_general">一般</string>
+    
+    <string name="preferences_category_about">について</string>
+    
+    <string name="preferences_default_search_engine">デフォルトの検索エンジン</string>
+    
+    <string name="preferences_search">検索</string>
+    
+    <string name="preferences_search_address_bar">アドレスバー</string>
+    
+    <string name="preferences_rate">Google Playで評価</string>
+    
+    <string name="preferences_about">1$sについて</string>
+    
+    <string name="preferences_set_as_default_browser">デフォルトブラウザに設定</string>
+    
+    <string name="preferences_category_advanced">上級</string>
+    
+    <string name="preferences_category_privacy_security">プライバシーとセキュリティ</string>
+    
+    <string name="preferences_site_permissions">サイトの許可</string>
+    
+    <string name="preferences_private_browsing_options">プライベート・ブラウジング</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">リンクをプライベートタブで開く</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">プライベートブラウジングでスクリーンショットを許可する</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">許可されている場合、複数のアプリを開いているときにもプライベートタブが表示されます。</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">プライベートブラウジングのショートカットを追加</string>
+    
+    <string name="preferences_https_only_title">HTTPS専用モード</string>
+    
+    <string name="preferences_https_only_summary">セキュリティ強化のため、HTTPS暗号化プロトコルを使用するサイトへの接続を自動的に試みます。</string>
+    
+    <string name="preferences_https_only_on">オン</string>
+    
+    <string name="preferences_https_only_off">オフ</string>
+    
+    <string name="preferences_http_only_learn_more">さらに詳しく</string>
+    
+    <string name="preferences_https_only_in_all_tabs">すべてのタブで有効にする</string>
+    
+    <string name="preferences_https_only_in_private_tabs">プライベートタブでのみ有効</string>
+    
+    <string name="errorpage_httpsonly_title">セキュアサイトは利用できません</string>
+    
+    <string name="errorpage_httpsonly_message_title">ほとんどの場合、ウェブサイトがHTTPSをサポートしていないだけです。</string>
+    
+    <string name="errorpage_httpsonly_message_summary">しかし、攻撃者が関与している可能性もある。ウェブサイトに進む場合は、機密情報を入力しないようにしてください。続行すると、サイトのHTTPS-Onlyモードが一時的にオフになります。</string>
+    
+    <string name="preferences_accessibility">アクセシビリティ</string>
+    
+    <string name="preferences_override_fxa_server">カスタムWaterfoxアカウントサーバー</string>
+    
+    <string name="preferences_override_sync_tokenserver">カスタム・シンク・サーバー</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Waterfox アカウント/同期サーバを変更しました。アプリケーションを終了して変更を適用...</string>
+    
+    <string name="preferences_category_account">アカウント</string>
+    
+    <string name="preferences_toolbar">ツールバー</string>
+    
+    <string name="preferences_theme">テーマ</string>
+    
+    <string name="preferences_home_2">ホームページ</string>
+    
+    <string name="preferences_gestures">ジェスチャー</string>
+    
+    <string name="preferences_customize">カスタマイズ</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">ブックマーク、履歴などをWaterfoxアカウントと同期</string>
+    
+    <string name="preferences_sign_in_description_2">サインインしてタブ、ブックマーク、パスワードなどを同期。</string>
+    
+    <string name="preferences_account_default_name">ウォーターフォックスアカウント</string>
+    
+    <string name="preferences_account_sync_error">再接続して同期を再開する</string>
+    
+    <string name="preferences_language">言語</string>
+    
+    <string name="preferences_remote_debugging">USB経由のリモートデバッグ</string>
+    
+    <string name="preferences_show_search_engines">検索エンジンを表示する</string>
+    
+    <string name="preferences_show_search_suggestions">検索候補の表示</string>
+    
+    <string name="preferences_show_voice_search">音声検索を表示する</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">プライベート・セッション</string>
+    
+    <string name="preferences_show_clipboard_suggestions">クリップボード候補の表示</string>
+    
+    <string name="preferences_search_browsing_history">検索閲覧履歴</string>
+    
+    <string name="preferences_search_bookmarks">ブックマーク検索</string>
+    
+    <string name="preferences_search_synced_tabs">同期タブの検索</string>
+    
+    <string name="preferences_account_settings">アカウント設定</string>
+    
+    <string name="preferences_enable_autocomplete_urls">オートコンプリートURL</string>
+    
+    <string name="preferences_open_links_in_apps">アプリでリンクを開く</string>
+    
+    <string name="preferences_external_download_manager">外部ダウンロードマネージャー</string>
+    
+    <string name="preferences_addons">アドオン</string>
+    
+    <string name="preferences_notifications">お知らせ</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">カスタムアドオンコレクション</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">キャンセル</string>
+    
+    <string name="customize_addon_collection_hint">コレクション名</string>
+    
+    <string name="customize_addon_collection_user_hint">コレクション所有者（ユーザーID）</string>
+    
+    <string name="toast_customize_addon_collection_done">アドオンコレクションが変更されました。アプリケーションを終了して変更を適用...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">戻る</string>
+    
+    <string name="customize_toggle_recent_bookmarks">最近のブックマーク</string>
+    
+    <string name="customize_toggle_recently_visited">最近訪問</string>
+    
+    <string name="customize_wallpapers">壁紙</string>
+    
+    <string name="customize_toggle_contile">スポンサー付きショートカット</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">壁紙アイテム: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">壁紙を更新しました！</string>
+    
+    <string name="wallpaper_updated_snackbar_action">表示</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfoxのホームページロゴをタップして壁紙を変更する</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfoxロゴ - 壁紙の変更、ボタン</string>
+
+    
+    
+    <string name="addon_not_supported_error">アドオンはサポートされていません</string>
+    
+    <string name="addon_already_installed">アドオンはすでにインストールされている</string>
+
+    
+    
+    <string name="preferences_sync_now">今すぐ同期</string>
+    
+    <string name="preferences_sync_category">同期するものを選ぶ</string>
+    
+    <string name="preferences_sync_history">歴史</string>
+    
+    <string name="preferences_sync_bookmarks">ブックマーク</string>
+    
+    <string name="preferences_sync_logins">ログイン</string>
+    
+    <string name="preferences_sync_tabs_2">タブを開く</string>
+    
+    <string name="preferences_sign_out">サインアウト</string>
+    
+    <string name="preferences_sync_device_name">デバイス名</string>
+    
+    <string name="empty_device_name_error">デバイス名を空にすることはできません。</string>
+    
+    <string name="sync_syncing_in_progress">同期...</string>
+    
+    <string name="sync_failed_summary">同期に失敗しました。最後の成功: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">同期に失敗しました。最後に同期されたのは: never</string>
+    
+    <string name="sync_last_synced_summary">最後の同期: %s</string>
+    
+    <string name="sync_never_synced_summary">最終同期：一度もない</string>
+    
+    <string name="default_device_name_2">1$s on %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">クレジットカード</string>
+    
+    <string name="preferences_sync_address">住所</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">受信タブ</string>
+    
+    <string name="fxa_received_tab_channel_description">他のWaterfoxデバイスから受信したタブの通知。</string>
+    
+    <string name="fxa_tab_received_notification_name">タブ受信</string>
+    
+    <string name="fxa_tab_received_from_notification_name">sからのタブ</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">例外</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">すべてのサイトでオンにする</string>
+    
+    <string name="exceptions_empty_message_description">例外として、選択したサイトのトラッキング保護を無効にすることができます。</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">さらに詳しく</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">同期をオンにする</string>
+    
+    <string name="preferences_sync_2">データの同期と保存</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">サインインして再接続する</string>
+    
+    <string name="preferences_sync_remove_account">アカウント削除</string>
+
+    
+    
+    <string name="pair_instructions_2">&lt;b&gt;firefox.com/pair&lt;/b&gt;に表示されているQRコードを読み取ってください。</string>
+
+    
+    
+    <string name="preference_top_toolbar">トップ</string>
+    
+    <string name="preference_bottom_toolbar">ボトム</string>
+
+    
+    
+    <string name="preference_light_theme">ライト</string>
+    
+    <string name="preference_dark_theme">暗い</string>
+    
+    <string name="preference_auto_battery_theme">バッテリーセーバー</string>
+    
+    <string name="preference_follow_device_theme">デバイスのテーマに従う</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">引っ張ってリフレッシュ</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">スクロールしてツールバーを隠す</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">ツールバーを横にスワイプしてタブを切り替える</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">ツールバーを上にスワイプしてタブを開く</string>
+
+    
+    
+    <string name="library_downloads">ダウンロード</string>
+    
+    <string name="library_bookmarks">ブックマーク</string>
+    
+    <string name="library_desktop_bookmarks_root">デスクトップブックマーク</string>
+    
+    <string name="library_desktop_bookmarks_menu">ブックマークメニュー</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">ブックマークツールバー</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">その他のブックマーク</string>
+    
+    <string name="library_history">歴史</string>
+    
+    <string name="library_new_tab">新しいタブ</string>
+    
+    <string name="settings_title">設定</string>
+    
+    <string name="content_description_close_button">閉じる</string>
+
+    
+    <string name="history_search_group_site">dサイト</string>
+    
+    <string name="history_search_group_sites">dサイト</string>
+
+    
+    <string name="library_recently_closed_tabs">最近閉じたタブ</string>
+    
+    <string name="recently_closed_show_full_history">全履歴を表示</string>
+    
+    <string name="recently_closed_tabs">タブ</string>
+    
+    <string name="recently_closed_tab">dタブ</string>
+    
+    <string name="recently_closed_empty_message">最近閉じたタブはありません</string>
+
+    
+    
+    <string name="preferences_tabs">タブ</string>
+    
+    <string name="preferences_tab_view">タブビュー</string>
+    
+    <string name="tab_view_list">リスト</string>
+    
+    <string name="tab_view_grid">グリッド</string>
+    
+    <string name="preferences_close_tabs">タブを閉じる</string>
+    
+    <string name="close_tabs_manually">決して</string>
+    
+    <string name="close_tabs_after_one_day">1日後</string>
+    
+    <string name="close_tabs_after_one_week">1週間後</string>
+    
+    <string name="close_tabs_after_one_month">1ヶ月後</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">開いているタブを自動で閉じる</string>
+
+    
+    
+    <string name="preferences_opening_screen">オープニング画面</string>
+    
+    <string name="opening_screen_homepage">ホームページ</string>
+    
+    <string name="opening_screen_last_tab">最後のタブ</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">4時間放置後のホームページ</string>
+    
+    <string name="close_tabs_manually_summary">手動で閉じる</string>
+    
+    <string name="close_tabs_after_one_day_summary">1日で終了</string>
+    
+    <string name="close_tabs_after_one_week_summary">1週間後に閉じる</string>
+    
+    <string name="close_tabs_after_one_month_summary">1ヶ月後にクローズ</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">古いタブを非アクティブに移動する</string>
+    
+    <string name="preferences_inactive_tabs_title">2週間閲覧していないタブは非アクティブセクションに移動する。</string>
+
+    
+    
+    <string name="tab_header_label">タブを開く</string>
+    
+    <string name="tabs_header_private_tabs_title">プライベート・タブ</string>
+    
+    <string name="tabs_header_synced_tabs_title">同期タブ</string>
+    
+    <string name="add_tab">タブを追加する</string>
+    
+    <string name="add_private_tab">プライベートタブの追加</string>
+    
+    <string name="tab_drawer_fab_content">プライベート</string>
+    
+    <string name="tab_drawer_fab_sync">同期</string>
+    
+    <string name="tab_tray_menu_item_share">すべてのタブを共有する</string>
+    
+    <string name="tab_tray_menu_recently_closed">最近閉じたタブ</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">最近閉店</string>
+    
+    <string name="tab_tray_menu_account_settings">アカウント設定</string>
+    
+    <string name="tab_tray_menu_tab_settings">タブ設定</string>
+    
+    <string name="tab_tray_menu_item_close">すべてのタブを閉じる</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">ブックマーク</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">閉じる</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">選択したタブを共有する</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">選択したタブメニュー</string>
+    
+    <string name="remove_tab_from_collection">コレクションからタブを削除する</string>
+    
+    <string name="tabs_tray_select_tabs">タブを選択</string>
+    
+    <string name="close_tab">閉じるタブ</string>
+    
+    <string name="close_tab_title">タブ %s を閉じる</string>
+    
+    <string name="open_tabs_menu">タブメニューを開く</string>
+    
+    <string name="tabs_menu_save_to_collection1">タブをコレクションに保存</string>
+    
+    <string name="collection_delete">コレクションの削除</string>
+    
+    <string name="collection_rename">コレクション名の変更</string>
+    
+    <string name="collection_open_tabs">タブを開く</string>
+    
+    <string name="collection_name_hint">コレクション名</string>
+	
+	<string name="rename_top_site">名前変更</string>
+	
+	<string name="remove_top_site">削除</string>
+    
+    <string name="delete_from_history">履歴から削除</string>
+    
+    <string name="pwa_site_controls_title_private">1$s（プライベートモード）</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">その他のタブ</string>
+
+    
+    
+    <string name="history_search_1">検索条件を入力</string>
+    
+    <string name="history_delete_all">履歴の削除</string>
+    
+    <string name="history_delete_multiple_items_snackbar">歴史 削除</string>
+    
+    <string name="history_delete_single_item_snackbar">削除された %1$s</string>
+    
+    <string name="history_delete_item">削除</string>
+    
+    <string name="history_multi_select_title">選択された %1$d</string>
+    
+    <string name="history_today">今日</string>
+    
+    <string name="history_yesterday">昨日</string>
+    
+    <string name="history_7_days">直近7日間</string>
+    
+    <string name="history_30_days">過去30日間</string>
+    
+    <string name="history_older">古い</string>
+    
+    <string name="history_empty_message">ここに歴史はない</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">ダウンロード削除</string>
+    
+    <string name="download_delete_single_item_snackbar">削除された %1$s</string>
+    
+    <string name="download_empty_message_1">ダウンロードしたファイルがない</string>
+    
+    <string name="download_multi_select_title">選択された %1$d</string>
+    
+    <string name="download_delete_item_1">削除</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">申し訳ありません。1$sはそのページをロードできません。</string>
+    
+    <string name="tab_crash_send_report">クラッシュレポートをBrowserWorksに送信</string>
+    
+    <string name="tab_crash_close">閉じるタブ</string>
+    
+    <string name="tab_crash_restore">復元タブ</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">本当にこのフォルダを削除しますか？</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">sは選択された項目を削除します。</string>
+    
+    <string name="bookmark_delete_negative">キャンセル</string>
+    
+    <string name="bookmark_add_folder">フォルダを追加</string>
+    
+    <string name="bookmark_saved_snackbar">ブックマークを保存した！</string>
+    
+    <string name="edit_bookmark_snackbar_action">編集</string>
+    
+    <string name="bookmark_menu_edit_button">編集</string>
+    
+    <string name="bookmark_menu_copy_button">コピー</string>
+    
+    <string name="bookmark_menu_share_button">シェア</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">新しいタブで開く</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">プライベートタブで開く</string>
+    
+    <string name="bookmark_menu_delete_button">削除</string>
+    
+    <string name="bookmark_menu_save_button">セーブ</string>
+    
+    <string name="bookmarks_multi_select_title">選択された %1$d</string>
+    
+    <string name="edit_bookmark_fragment_title">ブックマークを編集する</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">編集フォルダ</string>
+    
+    <string name="bookmark_sign_in_button">サインインして同期されたブックマークを見る</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">フォルダ</string>
+    
+    <string name="bookmark_name_label">名前</string>
+    
+    <string name="bookmark_add_folder_fragment_label">フォルダを追加</string>
+    
+    <string name="bookmark_select_folder_fragment_label">フォルダを選択</string>
+    
+    <string name="bookmark_empty_title_error">タイトルが必要</string>
+    
+    <string name="bookmark_invalid_url_error">無効なURL</string>
+    
+    <string name="bookmarks_empty_message">ブックマークはありません</string>
+    
+    <string name="bookmark_deletion_snackbar_message">削除された %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">ブックマーク削除</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">選択したフォルダの削除</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">検索条件を入力</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">設定</string>
+    
+    <string name="quick_settings_sheet">クイック設定シート</string>
+    
+    <string name="phone_feature_recommended">おすすめ</string>
+    
+    <string name="clear_permissions">アクセス許可をクリアする</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">キャンセル</string>
+    
+    <string name="clear_permission">明確な許可</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">キャンセル</string>
+    
+    <string name="clear_permissions_on_all_sites">すべてのサイトのアクセス許可をクリアにする</string>
+    
+    <string name="preference_browser_feature_autoplay">オートプレイ</string>
+    
+    <string name="preference_phone_feature_camera">カメラ</string>
+    
+    <string name="preference_phone_feature_microphone">マイク</string>
+    
+    <string name="preference_phone_feature_location">所在地</string>
+    
+    <string name="preference_phone_feature_notification">お知らせ</string>
+    
+    <string name="preference_phone_feature_persistent_storage">永続ストレージ</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">クロスサイトクッキー</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM管理されたコンテンツ</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">許可を求める</string>
+    
+    <string name="preference_option_phone_feature_blocked">ブロック</string>
+    
+    <string name="preference_option_phone_feature_allowed">可</string>
+    
+    <string name="phone_feature_blocked_by_android">アンドロイドでブロック</string>
+    
+    <string name="preference_exceptions">例外</string>
+    
+    <string name="tracking_protection_on">オン</string>
+    
+    <string name="tracking_protection_off">オフ</string>
+    
+    <string name="preference_option_autoplay_allowed2">オーディオとビデオを許可する</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">オーディオとビデオを許可する</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">セルラーデータのみでオーディオとビデオをブロック</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">オーディオとビデオはWi-Fiで再生</string>
+    
+    <string name="preference_option_autoplay_block_audio2">オーディオのみブロック</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">オーディオのみブロック</string>
+    
+    <string name="preference_option_autoplay_blocked3">オーディオとビデオをブロック</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">オーディオとビデオをブロック</string>
+    
+    <string name="delete_browsing_data_quit_on">オン</string>
+    
+    <string name="delete_browsing_data_quit_off">オフ</string>
+    
+    <string name="https_only_on">オン</string>
+    
+    <string name="https_only_off">オフ</string>
+
+    
+    
+    <string name="collections_header">コレクション</string>
+    
+    <string name="collection_menu_button_content_description">コレクションメニュー</string>
+    
+    <string name="no_collections_description2">似たような検索、サイト、タブをグループ化して、後ですばやくアクセスできます。</string>
+    
+    <string name="create_collection_select_tabs">タブを選択</string>
+    
+    <string name="create_collection_select_collection">コレクションを選択</string>
+    
+    <string name="create_collection_name_collection">名前コレクション</string>
+    
+    <string name="create_collection_add_new_collection">新しいコレクションを追加する</string>
+    
+    <string name="create_collection_select_all">すべて選択</string>
+    
+    <string name="create_collection_deselect_all">すべて選択解除</string>
+    
+    <string name="create_collection_save_to_collection_empty">保存するタブを選択する</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">選択された %d タブ</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">選択された %d タブ</string>
+    
+    <string name="create_collection_tabs_saved">タブの保存！</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">コレクションは保存された！</string>
+    
+    <string name="create_collection_tab_saved">タブが保存された！</string>
+    
+    <string name="create_collection_close">閉じる</string>
+    
+    <string name="create_collection_save">セーブ</string>
+    
+    <string name="create_collection_view">表示</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">キャンセル</string>
+
+    
+    <string name="create_collection_default_name">コレクション %d</string>
+
+    
+    
+    <string name="share_header_2">シェア</string>
+    
+    <string name="share_button_content_description">シェア</string>
+    
+    <string name="share_device_subheader">デバイスに送信</string>
+    
+    <string name="share_link_all_apps_subheader">すべての行動</string>
+    
+    <string name="share_link_recent_apps_subheader">最近使用されたもの</string>
+    
+    <string name="share_copy_link_to_clipboard">クリップボードにコピー</string>
+    
+    <string name="toast_copy_link_to_clipboard">クリップボードにコピー</string>
+    
+    <string name="sync_menu_sign_in">サインインして同期する</string>
+    
+    <string name="sync_sign_in">シンクにサインイン</string>
+    
+    <string name="sync_send_to_all">すべてのデバイスに送信</string>
+    
+    <string name="sync_reconnect">同期への再接続</string>
+    
+    <string name="sync_offline">オフライン</string>
+    
+    <string name="sync_connect_device">別のデバイスを接続する</string>
+    
+    <string name="sync_connect_device_dialog">タブを送信するには、少なくとも1台の他のデバイスでWaterfoxにサインインしてください。</string>
+    
+    <string name="sync_confirmation_button">了解</string>
+    
+    <string name="share_error_snackbar">このアプリに共有できない</string>
+    
+    <string name="sync_add_new_device_title">デバイスに送信</string>
+    
+    <string name="sync_add_new_device_message">接続機器なし</string>
+    
+    <string name="sync_add_new_device_learn_button">タブの送信について...</string>
+    
+    <string name="sync_add_new_device_connect_button">別のデバイスを接続...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">プライベートタブを閉じる</string>
+    
+    <string name="notification_marketing_channel_name">マーケティング</string>
+    
+    <string name="notification_default_browser_title">1$sは速くてプライベート</string>
+    
+    <string name="notification_default_browser_text">1$s をデフォルトのブラウザにする</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">コレクション削除</string>
+    
+    <string name="snackbar_collection_renamed">コレクション名変更</string>
+    
+    <string name="snackbar_tab_closed">タブを閉じる</string>
+    
+    <string name="snackbar_tabs_closed">タブを閉じる</string>
+    
+    <string name="snackbar_message_bookmarks_saved">ブックマークの保存</string>
+    
+    <string name="snackbar_added_to_shortcuts">ショートカットに追加！</string>
+    
+    <string name="snackbar_private_tab_closed">プライベートタブを閉じる</string>
+    
+    <string name="snackbar_private_tabs_closed">プライベートタブを閉じる</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">サイト削除</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">1$s が %2$s を開くことを許可する。</string>
+    
+    <string name="qr_scanner_dialog_positive">許可する</string>
+    
+    <string name="qr_scanner_dialog_negative">拒否</string>
+    
+    <string name="qr_scanner_dialog_invalid">ウェブアドレスが無効です。</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">本当に%1$sを削除しますか？</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">このタブを削除すると、コレクション全体が削除されます。新しいコレクションはいつでも作成できます。</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">1$sを削除しますか？</string>
+    
+    <string name="tab_collection_dialog_positive">削除</string>
+    
+    <string name="full_screen_notification">フルスクリーンモードに入る</string>
+    
+    <string name="url_copied">URLをコピー</string>
+    
+    <string name="accessibility_text_size_sample_text_1">これはサンプルテキストです。この設定でサイズを大きくしたり小さくしたりしたときに、テキストがどのように表示されるかを示すためのものです。</string>
+    
+    <string name="preference_accessibility_text_size_summary">ウェブサイトの文字を大きくしたり小さくしたりする</string>
+    
+    <string name="preference_accessibility_font_size_title">文字サイズ</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">自動フォントサイジング</string>
+    
+    <string name="preference_accessibility_auto_size_summary">フォントサイズはAndroidの設定に合わせます。ここでフォントサイズの管理を無効にします。</string>
+
+    
+    <string name="preferences_delete_browsing_data">閲覧データの削除</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">タブを開く</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">タブ</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">閲覧履歴とサイトデータ</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">アドレス</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">クッキー</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">ほとんどのサイトからログアウトされます。</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">キャッシュされた画像とファイル</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">収納スペースを確保</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">サイトの許可</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">ダウンロード</string>
+    
+    <string name="preferences_delete_browsing_data_button">閲覧データの削除</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">終了時に閲覧データを削除</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">メインメニューから「終了」を選ぶと、自動的に閲覧データを削除します。</string>
+    
+    <string name="delete_browsing_data_on_quit_action">やめる</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">これにより、閲覧データがすべて削除されます。</string>
+    
+    <string name="delete_history_prompt_title">削除する時間範囲</string>
+    
+    <string name="delete_history_prompt_body">履歴（他のデバイスから同期された履歴を含む）、クッキー、およびその他の閲覧データを削除します。</string>
+    
+    <string name="delete_history_prompt_button_last_hour">最後の1時間</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">今日と昨日</string>
+    
+    <string name="delete_history_prompt_button_everything">すべて</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">sは選択された閲覧データを削除します。</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">キャンセル</string>
+    
+    <string name="delete_browsing_data_prompt_allow">削除</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">閲覧データの削除</string>
+    
+    <string name="deleting_browsing_data_in_progress">閲覧データの削除...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">s "のすべてのサイトを削除する</string>
+    
+    <string name="delete_history_group_prompt_cancel">キャンセル</string>
+    
+    <string name="delete_history_group_prompt_allow">削除</string>
+    
+    <string name="delete_history_group_snackbar">グループ削除</string>
+
+    
+    
+    <string name="onboarding_header_2">よりプライベートなウェブへようこそ</string>
+    
+    <string name="onboarding_message">草の根の独立系ブラウザ。</string>
+    
+    <string name="onboarding_account_sign_in_header">中断した場所を取り戻す</string>
+    
+    <string name="onboarding_manual_sign_in_description">デバイス間でタブとパスワードを同期し、シームレスな画面切り替えを実現。</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">ログイン</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">同期がオン</string>
+    
+    <string name="onboarding_tracking_protection_header">デフォルトのプライバシー保護</string>
+    
+    <string name="onboarding_tracking_protection_description">トラッカーがクッキーを使ってサイト間であなたをつけ回すのを阻止するTotal Cookie Protectionを搭載。</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">標準（デフォルト）</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">プライバシーとパフォーマンスのバランスページは正常に読み込まれます。</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">厳しい</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">より多くのトラッカーをブロックするため、ページの読み込みが速くなりますが、一部のページ上の機能が壊れる可能性があります。</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">ツールバーの配置を選ぶ</string>
+    
+    <string name="onboarding_toolbar_placement_description">このまま下に置くか、上に移動させるか。</string>
+    
+    <string name="onboarding_privacy_notice_header_1">データを管理する</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfoxは遠隔測定を収集せず、データをコントロールできます。</string>
+    
+    <string name="onboarding_privacy_notice_read_button">プライバシーポリシーを読む</string>
+    
+    <string name="onboarding_conclusion_header">素晴らしいインターネットを開く準備はできているか？</string>
+    
+    <string name="onboarding_finish">閲覧開始</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">テーマを選ぶ</string>
+    
+    <string name="onboarding_theme_picker_description_2">ダークモードでバッテリーと視力を節約。</string>
+    
+    <string name="onboarding_theme_automatic_title">自動</string>
+    
+    <string name="onboarding_theme_automatic_summary">デバイスの設定に適応</string>
+    
+    <string name="onboarding_theme_dark_title">ダークテーマ</string>
+    
+    <string name="onboarding_theme_light_title">ライトテーマ</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">タブが送られた！</string>
+    
+    <string name="sync_sent_tab_snackbar">タブが送られた！</string>
+    
+    <string name="sync_sent_tab_error_snackbar">送信できない</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">リトライ</string>
+    
+    <string name="sync_scan_code">コードをスキャンする</string>
+    
+    <string name="sign_in_instructions">&lt;br&gt;お使いのコンピュータでWaterfoxを起動し、&lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;MozillaはWaterfoxとは一切関係ありません&lt;/i&gt;。</string>
+    
+    <string name="sign_in_ready_for_scan">スキャン準備完了</string>
+    
+    <string name="sign_in_with_camera">カメラでサインイン</string>
+    
+    <string name="sign_in_with_email">代わりにEメールを使う</string>
+    
+    <string name="sign_in_create_account_text">アカウントをお持ちではないですか？&lt;u&gt;アカウントを作成&lt;/u&gt;すると、デバイス間で Waterfox を同期できます。</string>
+    
+    <string name="sign_out_confirmation_message_2">sはアカウントとの同期を停止しますが、このデバイス上の閲覧データは削除されません。</string>
+    
+    <string name="sign_out_disconnect">切断</string>
+    
+    <string name="sign_out_cancel">キャンセル</string>
+    
+    <string name="bookmark_cannot_edit_root">デフォルトのフォルダを編集できない</string>
+
+    
+    
+    <string name="etp_settings">プロテクション設定</string>
+    
+    <string name="preference_enhanced_tracking_protection">トラッキング保護の強化</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">尾行されずにブラウズする</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">自分のデータは自分で管理しましょう。sは、あなたがオンラインで行うことを追跡する最も一般的なトラッカーの多くからあなたを保護します。</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">さらに詳しく</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">標準（デフォルト）</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">プライバシーとパフォーマンスのバランスページは正常に読み込まれます。</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">標準的なトラッキング防止機能でブロックされるもの</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">厳しい</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">より多くのトラッカーをブロックするため、ページの読み込みが速くなりますが、一部のページ上の機能が壊れる可能性があります。</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">厳重なトラッキング保護でブロックされるもの</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">カスタム</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">ブロックするトラッカーとスクリプトを選択します。</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">カスタム・トラッキング・プロテクションでブロックされるもの</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">クッキー</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">クロスサイト・トラッカーとソーシャルメディア・トラッカー</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">未訪問サイトからのクッキー</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">すべてのサードパーティクッキー（ウェブサイトが壊れる可能性があります）</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">すべてのクッキー（ウェブサイトが壊れる原因になります）</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">クロスサイトクッキーを分離する</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">トラッキング・コンテンツ</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">すべてのタブで</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">プライベートタブのみ</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">クリプトミナーズ</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">フィンガープリンター</string>
+    
+    <string name="enhanced_tracking_protection_details">詳細</string>
+    
+    <string name="enhanced_tracking_protection_blocked">ブロック</string>
+    
+    <string name="enhanced_tracking_protection_allowed">可</string>
+    
+    <string name="etp_social_media_trackers_title">ソーシャルメディア・トラッカー</string>
+    
+    <string name="etp_social_media_trackers_description">ソーシャルネットワークがウェブ上でのあなたの閲覧行動を追跡する能力を制限する。</string>
+    
+    <string name="etp_cookies_title">クロスサイトトラッキングクッキー</string>
+    
+    <string name="etp_cookies_title_2">クロスサイトクッキー</string>
+    
+    <string name="etp_cookies_description">広告ネットワークやアナリティクス会社が、多くのサイトであなたの閲覧データを集計するために使用するクッキーをブロックします。</string>
+    
+    <string name="etp_cookies_description_2">トータル・クッキー・プロテクションは、クッキーを利用中のサイトに隔離するため、広告ネットワークなどのトラッカーは、クッキーを使ってサイト間であなたを追跡することができません。</string>
+    
+    <string name="etp_cryptominers_title">クリプトミナーズ</string>
+    
+    <string name="etp_cryptominers_description">悪意のあるスクリプトがあなたのデバイスにアクセスしてデジタル通貨を採掘するのを防ぎます。</string>
+    
+    <string name="etp_fingerprinters_title">フィンガープリンター</string>
+    
+    <string name="etp_fingerprinters_description">追跡目的に使用される可能性のある、お客様のデバイスに関する一意に識別可能なデータの収集を停止します。</string>
+    
+    <string name="etp_tracking_content_title">コンテンツの追跡</string>
+    
+    <string name="etp_tracking_content_description">トラッキングコードを含む外部の広告、ビデオ、その他のコンテンツの読み込みを停止します。一部のウェブサイトの機能に影響を与える可能性があります。</string>
+    
+    <string name="etp_panel_on">このサイトは保護されている</string>
+    
+    <string name="etp_panel_off">このサイトのプロテクションはオフ</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">以下のウェブサイトでは、トラッキング保護機能がオフになっています。</string>
+    
+    <string name="etp_back_button_content_description">戻る</string>
+    
+    <string name="open_source_licenses_title">s｜OSSライブラリ</string>
+    
+    <string name="etp_redirect_trackers_title">リダイレクト・トラッカー</string>
+    
+    <string name="etp_redirect_trackers_description">既知のトラッキングウェブサイトへのリダイレクトによって設定されたクッキーを消去します。</string>
+    
+    <string name="preference_etp_smartblock_description">下記のトラッカーは、このページで部分的にブロックが解除されています。</string>
+    
+    <string name="preference_etp_smartblock_learn_more">さらに詳しく</string>
+
+    
+    <string name="about_support">サポート</string>
+    
+    <string name="about_crashes">クラッシュ</string>
+    
+    <string name="about_privacy_notice">プライバシーポリシー</string>
+    
+    <string name="about_know_your_rights">自分の権利を知る</string>
+    
+    <string name="about_licensing_information">ライセンス情報</string>
+    
+    <string name="about_other_open_source_libraries">使用ライブラリ</string>
+    
+    <string name="about_debug_menu_toast_progress">デバッグ・メニュー：左にクリックすると有効になります。</string>
+    <string name="about_debug_menu_toast_done">デバッグメニューを有効にする</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">コピー</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">ペースト＆ゴー</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">ペースト</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">クリップボードにコピーされたURL</string>
+
+    
+    <string name="add_to_homescreen_title">ホーム画面に追加</string>
+    
+    <string name="add_to_homescreen_cancel">キャンセル</string>
+    
+    <string name="add_to_homescreen_add">追加</string>
+    
+    <string name="add_to_homescreen_continue">ウェブサイトへ</string>
+    
+    <string name="add_to_homescreen_text_placeholder">ショートカット名</string>
+    
+    <string name="add_to_homescreen_description_2">このウェブサイトをデバイスのホーム画面に追加すれば、すぐにアクセスでき、アプリのような体験でより速くブラウズできる。</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">ログインとパスワード</string>
+    
+    <string name="preferences_passwords_save_logins">ログインとパスワードの保存</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">保存を依頼する</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">保存しない</string>
+    
+    <string name="preferences_passwords_autofill2">1$sのオートフィル</string>
+    
+    <string name="preferences_passwords_autofill_description">1$sを使用している間、ウェブサイトのユーザー名とパスワードを入力して保存します。</string>
+    
+    <string name="preferences_android_autofill">他のアプリでの自動入力</string>
+    
+    <string name="preferences_android_autofill_description">デバイス上の他のアプリにユーザー名とパスワードを入力する。</string>
+    
+    <string name="preferences_logins_add_login">ログインを追加する</string>
+
+    
+    <string name="preferences_passwords_sync_logins">ログインの同期</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">デバイス間でログインを同期</string>
+    
+    <string name="preferences_passwords_saved_logins">保存されたログイン</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">sに保存または同期したログインはここに表示されます。</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">シンクについてもっと知る。</string>
+    
+    <string name="preferences_passwords_exceptions">例外</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">保存されていないログインとパスワードはここに表示されます。</string>
+    
+    <string name="preferences_passwords_exceptions_description">これらのサイトのログインとパスワードは保存されません。</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">すべての例外を削除する</string>
+    
+    <string name="preferences_passwords_saved_logins_search">検索ログイン</string>
+    
+    <string name="preferences_passwords_saved_logins_site">サイト</string>
+    
+    <string name="preferences_passwords_saved_logins_username">ユーザー名</string>
+    
+    <string name="preferences_passwords_saved_logins_password">パスワード</string>
+    
+    <string name="logins_password_copied">クリップボードにコピーされたパスワード</string>
+    
+    <string name="logins_username_copied">クリップボードにコピーされたユーザー名</string>
+    
+    <string name="saved_logins_copy_password">パスワードをコピーする</string>
+    
+    <string name="saved_logins_clear_password">クリアパスワード</string>
+    
+    <string name="saved_login_copy_username">ユーザー名をコピーする</string>
+    
+    <string name="saved_login_clear_username">クリアユーザー名</string>
+    
+    <string name="saved_login_clear_hostname">ホスト名を消去</string>
+    
+    <string name="saved_login_open_site">ブラウザでサイトを開く</string>
+    
+    <string name="saved_login_reveal_password">パスワードを表示する</string>
+    
+    <string name="saved_login_hide_password">パスワードを隠す</string>
+    
+    <string name="logins_biometric_prompt_message">ロックを解除して保存したログインを表示する</string>
+    
+    <string name="logins_warning_dialog_title">ログインとパスワードの保護</string>
+    
+    <string name="logins_warning_dialog_message">デバイスロックのパターン、PIN、またはパスワードを設定し、保存したログイン名やパスワードにアクセスできないようにします。</string>
+    
+    <string name="logins_warning_dialog_later">後日</string>
+    
+    <string name="logins_warning_dialog_set_up_now">セットアップ</string>
+    
+    <string name="logins_biometric_prompt_message_pin">デバイスのロックを解除する</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">すべてのウェブサイトにズームイン</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">このジェスチャーを禁止しているウェブサイトでも、ピンチとズームを許可するようにします。</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">名前（A-Z）</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">最後の使用</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">ログインメニューの並べ替え</string>
+
+    
+    
+    <string name="preferences_autofill">オートフィル</string>
+    
+    <string name="preferences_addresses">住所</string>
+    
+    <string name="preferences_credit_cards">クレジットカード</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">カードの保存とオートフィル</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">データは暗号化される</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">デバイス間でカードを同期</string>
+    
+    <string name="preferences_credit_cards_sync_cards">シンクカード</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">クレジットカードの追加</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">保存カードの管理</string>
+    
+    <string name="preferences_addresses_add_address">アドレスを追加</string>
+    
+    <string name="preferences_addresses_manage_addresses">アドレスの管理</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">アドレスの保存と自動入力</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">電話番号、Eメールアドレス、配送先住所などの情報を記載する。</string>
+
+    
+    <string name="credit_cards_add_card">カードを追加する</string>
+    
+    <string name="credit_cards_edit_card">編集カード</string>
+    
+    <string name="credit_cards_card_number">カード番号</string>
+    
+    <string name="credit_cards_expiration_date">有効期限</string>
+    
+    <string name="credit_cards_expiration_date_month">有効期限 月</string>
+    
+    <string name="credit_cards_expiration_date_year">有効期限 年</string>
+    
+    <string name="credit_cards_name_on_card">カード名義</string>
+    
+    <string name="credit_cards_menu_delete_card">カードの削除</string>
+    
+    <string name="credit_cards_delete_card_button">カードの削除</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">本当にこのクレジットカードを削除しますか？</string>
+    
+    <string name="credit_cards_delete_dialog_button">削除</string>
+    
+    <string name="credit_cards_menu_save">セーブ</string>
+    
+    <string name="credit_cards_save_button">セーブ</string>
+    
+    <string name="credit_cards_cancel_button">キャンセル</string>
+    
+    <string name="credit_cards_saved_cards">保存カード</string>
+    
+    <string name="credit_cards_number_validation_error_message">有効なクレジットカード番号を入力してください。</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">このフィールドに記入してください</string>
+    
+    <string name="credit_cards_biometric_prompt_message">ロックを解除して保存したカードを見る</string>
+    
+    <string name="credit_cards_warning_dialog_title">クレジットカードのセキュリティ</string>
+    
+    <string name="credit_cards_warning_dialog_message">デバイスロックのパターン、PIN、またはパスワードを設定し、他人があなたのデバイスを持っている場合に、保存したクレジットカードにアクセスされないように保護します。</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">セットアップ</string>
+    
+    <string name="credit_cards_warning_dialog_later">後日</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">デバイスのロックを解除する</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">保存されたクレジットカード情報の使用ロック解除</string>
+    
+    <string name="addresses_add_address">アドレスを追加</string>
+    
+    <string name="addresses_edit_address">アドレスの編集</string>
+    
+    <string name="addresses_manage_addresses">アドレスの管理</string>
+    
+    <string name="addresses_first_name">名前</string>
+    
+    <string name="addresses_middle_name">ミドルネーム</string>
+    
+    <string name="addresses_last_name">ラストネーム</string>
+    
+    <string name="addresses_street_address">住所</string>
+    
+    <string name="addresses_city">都市</string>
+    
+    <string name="addresses_state">州</string>
+    
+    <string name="addresses_province">州</string>
+    
+    <string name="addresses_zip">ジップ</string>
+    
+    <string name="addresses_country">国または地域</string>
+    
+    <string name="addresses_phone">電話</string>
+    
+    <string name="addresses_email">電子メール</string>
+    
+    <string name="addresses_save_button">セーブ</string>
+    
+    <string name="addresses_cancel_button">キャンセル</string>
+    
+    <string name="addressess_delete_address_button">アドレス削除</string>
+    
+    <string name="addressess_confirm_dialog_message">本当にこのアドレスを削除しますか？</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">削除</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">キャンセル</string>
+    
+    <string name="address_menu_save_address">アドレスの保存</string>
+    
+    <string name="address_menu_delete_address">アドレス削除</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">検索エンジンの追加</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">検索エンジンの編集</string>
+    
+    <string name="search_engine_add_button_content_description">追加</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">セーブ</string>
+    
+    <string name="search_engine_edit">編集</string>
+    
+    <string name="search_engine_delete">削除</string>
+
+    
+    <string name="search_add_custom_engine_label_other">その他</string>
+    
+    <string name="search_add_custom_engine_name_hint">名称</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">使用する検索文字列</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">クエリを"%s "で置き換えてください。例</string>
+    
+    <string name="search_add_custom_engine_form_description">カスタム検索エンジンの詳細</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">検索エンジン名を入力</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">検索文字列を入力</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">検索文字列が書式例に一致するか確認する</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">s "への接続エラー。</string>
+    
+    <string name="search_add_custom_engine_success_message">作成された %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">保存された %s</string>
+    
+    <string name="search_delete_search_engine_success_message">削除された %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">それを許すこと：</string>
+    
+    <string name="phone_feature_blocked_step_settings">1.アンドロイドの設定</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2.&lt;b&gt;アクセス許可&lt;/b&gt;をタップします。</string>
+    
+    <string name="phone_feature_blocked_step_feature">3.&lt;b&gt;%1$s&lt;/b&gt;をオンに切り替える。</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">接続は安全</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">接続が安全でない</string>
+    
+    <string name="clear_site_data">クッキーとサイトデータを消去する</string>
+    
+    <string name="confirm_clear_site_data">本当に&lt;b&gt;%s&lt;/b&gt;というサイトのクッキーとデータをすべて消去したいのですか？</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">本当にすべてのサイトのパーミッションをクリアしたいのですか？</string>
+    
+    <string name="confirm_clear_permissions_site">本当にこのサイトのすべてのパーミッションをクリアしたいのですか？</string>
+    
+    <string name="confirm_clear_permission_site">本当にこのサイトの許可をクリアしたいのですか？</string>
+    
+    <string name="no_site_exceptions">サイト例外なし</string>
+    
+    <string name="bookmark_deletion_confirmation">本当にこのブックマークを削除しますか？</string>
+    
+    <string name="browser_menu_add_to_shortcuts">ショートカットに追加する</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">ショートカットから削除する</string>
+    
+    <string name="certificate_info_verified_by">検証者: %1$s</string>
+    
+    <string name="login_menu_delete_button">削除</string>
+    
+    <string name="login_menu_edit_button">編集</string>
+    
+    <string name="login_deletion_confirmation">本当にこのログインを削除しますか？</string>
+    
+    <string name="dialog_delete_positive">削除</string>
+    
+    <string name="dialog_delete_negative">キャンセル</string>
+    
+    <string name="login_options_menu">ログインオプション</string>
+    
+    <string name="saved_login_hostname_description">ログインのウェブアドレスの編集可能なテキストフィールドです。</string>
+    
+    <string name="saved_login_username_description">ログイン時のユーザー名の編集可能なテキストフィールド。</string>
+    
+    <string name="saved_login_password_description">ログインパスワード用の編集可能なテキストフィールド。</string>
+    
+    <string name="save_changes_to_login">変更を保存してログインします。</string>
+    
+    <string name="edit">編集</string>
+    
+    <string name="add_login">新規ログインの追加</string>
+    
+    <string name="saved_login_password_required">パスワードが必要</string>
+    
+    <string name="saved_login_username_required">ユーザー名必須</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ホスト名必須</string>
+    
+    <string name="voice_search_content_description">音声検索</string>
+    
+    <string name="voice_search_explainer">今すぐ話す</string>
+    
+    <string name="saved_login_duplicate">そのユーザー名を持つログインがすでに存在する</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">ウェブアドレスは "https://"または "http://"を含むこと。</string>
+    
+    <string name="add_login_hostname_invalid_text_2">有効なホスト名が必要</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">別のデバイスを接続する。</string>
+    
+    <string name="synced_tabs_reauth">再認証してください。</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">タブの同期を有効にしてください。</string>
+    
+    <string name="synced_tabs_no_tabs">他のデバイスでWaterfoxのタブを開いていない。</string>
+    
+    <string name="synced_tabs_sign_in_message">他のデバイスのタブのリストを表示します。</string>
+    
+    <string name="synced_tabs_sign_in_button">サインインして同期する</string>
+    
+    <string name="synced_tabs_no_open_tabs">開いているタブがない</string>
+    
+    <string name="synced_tabs_expand_group">同期されたタブのグループを展開する</string>
+    
+    <string name="synced_tabs_collapse_group">同期したタブのグループを折りたたむ</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">ショートカットの制限に達した</string>
+    
+    <string name="shortcut_max_limit_content">新しいショートカットを追加するには、1つ削除します。サイトをタッチしたまま、削除を選択します。</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">了解</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">ショートカット</string>
+	
+	<string name="top_sites_rename_dialog_title">名称</string>
+    
+    <string name="shortcut_name_hint">ショートカット名</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">キャンセル</string>
+    
+    <string name="top_sites_menu_settings">設定</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">スポンサーとプライバシー</string>
+    
+    <string name="top_sites_sponsored_label">スポンサードリンク</string>
+
+    
+    
+    <string name="inactive_tabs_title">非アクティブ・タブ</string>
+    
+    <string name="inactive_tabs_delete_all">すべての非アクティブなタブを閉じる</string>
+    
+    <string name="inactive_tabs_expand_content_description">非アクティブなタブを展開する</string>
+    
+    <string name="inactive_tabs_collapse_content_description">非アクティブなタブを折りたたむ</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">1ヶ月後に自動閉鎖？</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfoxは、過去1ヶ月間閲覧していないタブを閉じることができる。</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">オートクローズをオンにする</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">オートクローズ有効</string>
+
+    
+    <string name="default_browser_experiment_card_text">Webサイト、メール、メッセージからのリンクをWaterfoxで自動的に開くように設定します。</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">削除</string>
+
+    
+    <string name="radio_preference_info_content_description">詳細はこちら</string>
+
+    
+    <string name="action_bar_up_description">上へナビゲート</string>
+
+    
+    <string name="privacy_content_close_button_content_description">閉じる</string>
+
+    <string name="waterfox_suggest_header">ウォーターフォックスの提案</string>
+</resources>

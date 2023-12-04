@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Privaatne %s</string>
+
+    <string name="app_name_private_4">%s (privaatne)</string>
+
+
+    <string name="content_description_menu">Rohkem võimalusi</string>
+
+    <string name="content_description_private_browsing_button">Võimaldage privaatne sirvimine</string>
+
+    <string name="content_description_disable_private_browsing_button">Privaatse sirvimise väljalülitamine</string>
+
+    <string name="search_hint">Otsi või sisesta aadress</string>
+
+    <string name="application_search_hint">Sisestage otsingusõnad</string>
+
+    <string name="no_open_tabs_description">Siin kuvatakse teie avatud vahekaardid.</string>
+
+    <string name="no_private_tabs_description">Teie isiklikud vahekaardid kuvatakse siin.</string>
+
+    <string name="tab_tray_multi_select_title">%1$d valitud</string>
+
+    <string name="tab_tray_add_new_collection">Lisa uus kollektsioon</string>
+
+    <string name="tab_tray_add_new_collection_name">Nimi</string>
+
+    <string name="tab_tray_select_collection">Valige kollektsioon</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Väljumine mitme valikuga režiimist</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Valitud vahekaartide salvestamine kollektsiooni</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Valitud</string>
+
+
+    <string name="recently_saved_title">Hiljuti salvestatud</string>
+
+    <string name="recently_saved_show_all_content_description_2">Näita kõiki salvestatud järjehoidjaid</string>
+
+    <string name="recently_saved_menu_item_remove">Eemaldage</string>
+
+
+    <string name="about_content">%1$s on tehtud BrowserWorks\'i poolt</string>
+
+
+    <string name="private_browsing_placeholder_description_2">%1$s kustutab teie otsingu- ja sirvimisajaloo privaatsetest vahekaartidest, kui sulgete need või lõpetate rakenduse. Kuigi see ei tee teid veebisaitide või internetiteenuse pakkuja jaoks anonüümseks, muudab see teie veebitegevust teiste seda seadet kasutavate isikute eest hõlpsamini privaatseks.</string>
+    <string name="private_browsing_common_myths">Levinud müüdid privaatse sirvimise kohta</string>
+
+
+    <string name="cfr_message">Lisage otsetee, et avada privaatsed vahekaardid oma Avakuva.</string>
+
+    <string name="cfr_pos_button_text">Lisa otsetee</string>
+
+    <string name="cfr_neg_button_text">Ei tänan</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">Saate määrata %1$s, et automaatselt avada lingid rakendustes.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Mine seadistustesse</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Lase lahti</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Lase lahti</string>
+
+
+    <string name="tcp_cfr_message">Meie seni kõige võimsam privaatsusfunktsioon isoleerib saidiülesed jälgimisseadmed.</string>
+
+    <string name="tcp_cfr_learn_more">Tutvu küpsiste täieliku kaitsega</string>
+
+
+    <string name="camera_permissions_needed_message">Vajalik on kaamera juurdepääs. Minge Androidi seadistustesse, koputage valikut õigused ja koputage valikut lubada.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Mine seadistustesse</string>
+
+    <string name="camera_permissions_needed_negative_button_text">Lase lahti</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Seadistage avatud vahekaardid, mida ei ole viimase päeva, nädala või kuu jooksul vaadatud, automaatselt sulgema.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Vaata võimalusi</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Lase lahti</string>
+
+    <string name="tab_tray_inactive_onboarding_message">Registrid, mida te pole kaks nädalat vaadanud, viiakse siia.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Väljalülitamine seadetes</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Automaatne sulgemine ühe kuu pärast?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s saab sulgeda vahekaardid, mida te pole viimase kuu jooksul vaadanud.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Sulge</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Automaatse sulgemise sisselülitamine</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Uus vahekaart</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Uus privaatne vahekaart</string>
+
+
+    <string name="recent_tabs_header">Hüppa tagasi</string>
+
+    <string name="recent_tabs_show_all">Näita kõiki</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Näita kõiki hiljutisi vahekaarte nuppu</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Teie otsing \"%1$s\"</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d saite</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Vaata kõiki sünkroonitud vahekaarte</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Sünkroonitud seade</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Eemaldage</string>
+
+    <string name="recent_tab_menu_item_remove">Eemaldage</string>
+
+
+    <string name="history_metadata_header_2">Hiljuti külastasime</string>
+
+    <string name="recently_visited_menu_item_remove">Eemaldage</string>
+
+    <string name="past_explorations_show_all_content_description_2">Näita kõiki varasemaid uuringuid</string>
+
+
+    <string name="browser_menu_back">Tagasi</string>
+
+    <string name="browser_menu_forward">Edasi</string>
+
+    <string name="browser_menu_refresh">Värskenda</string>
+
+    <string name="browser_menu_stop">Stop</string>
+
+    <string name="browser_menu_add_ons">Lisandid</string>
+
+    <string name="no_add_ons">Siin ei ole lisasid</string>
+
+    <string name="browser_menu_help">Abi</string>
+
+    <string name="browser_menu_settings">Seaded</string>
+
+    <string name="browser_menu_library">Raamatukogu</string>
+
+    <string name="browser_menu_desktop_site">Töölaua veebileht</string>
+
+    <string name="browser_menu_add_to_homescreen">Lisamine avakuvale</string>
+
+    <string name="browser_menu_install_on_homescreen">Paigaldage</string>
+
+    <string name="resync_button_content_description">Resync</string>
+
+    <string name="browser_menu_find_in_page">Leia leheküljelt</string>
+
+    <string name="browser_menu_save_to_collection_2">Salvesta kollektsiooni</string>
+
+    <string name="browser_menu_share">Jaga</string>
+
+    <string name="browser_menu_open_in_waterfox">Avatud %1$s</string>
+
+    <string name="browser_menu_powered_by">POWERED BY %1$s</string>
+
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+
+    <string name="browser_menu_read">Lugeja vaade</string>
+
+    <string name="browser_menu_read_close">Lähedane lugeja vaade</string>
+
+    <string name="browser_menu_open_app_link">Avatud rakenduses</string>
+
+    <string name="browser_menu_customize_reader_view">Kohandage lugeja vaade</string>
+
+    <string name="browser_menu_add">Lisa</string>
+
+    <string name="browser_menu_edit">Muuda</string>
+
+    <string name="browser_menu_customize_home_1">Kodulehe kohandamine</string>
+
+
+    <string name="browser_toolbar_home">Avakuva</string>
+
+
+    <string name="a11y_selected_locale_content_description">Valitud keel</string>
+
+    <string name="default_locale_text">Järgige seadme keelt</string>
+
+    <string name="locale_search_hint">Otsi keelt</string>
+
+
+    <string name="search_scan_button">Skaneeri</string>
+
+    <string name="search_engine_button">Otsingumootor</string>
+
+    <string name="search_shortcuts_engine_settings">Otsingumootori seaded</string>
+
+    <string name="awesomebar_clipboard_title">Linki täitmine lõikelauast</string>
+
+    <string name="search_suggestions_onboarding_allow_button">Luba</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">Ärge lubage</string>
+
+    <string name="search_suggestions_onboarding_title">Lubada otsingusoovitused privaatsetes seanssides?</string>
+
+    <string name="search_suggestions_onboarding_text">%s jagab kõike, mida sisestate aadressiribale, teie vaikimisi otsingumootoriga.</string>
+
+    <string name="search_engine_suggestions_title">Otsi %s</string>
+
+    <string name="search_engine_suggestions_description">Otsi otse aadressiribalt</string>
+
+    <string name="search_settings_menu_item">Otsingu seaded</string>
+
+
+    <string name="onboarding_home_screen_description_2">Nüüd on lihtsam jätkata sealt, kus te pooleli jäite.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Hüppa oma avatud vahekaartide, järjehoidjate ja sirvimisajaloo juurde.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Puhtad, korrastatud vahekaardid</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Puhastage vahekaartide segadus täiustatud paigutuse ja automaatselt sulguvate vahekaartide abil.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Viimased otsingud</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Vaadake uuesti oma viimaseid otsinguid oma avalehelt ja vahekaartidelt.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Tutvuge oma isikupärastatud kodulehega. Siin kuvatakse viimased vahekaardid, järjehoidjad ja otsingutulemused.</string>
+
+    <string name="onboarding_home_welcome_title_2">Tere tulemast isiklikumasse internetti</string>
+
+    <string name="onboarding_home_welcome_description">Rohkem värve. Parem privaatsus. Sama pühendumine inimestele, mitte kasumile.</string>
+
+    <string name="onboarding_home_sync_title_3">Hüppa telefonilt sülearvutile ja tagasi</string>
+
+    <string name="onboarding_home_sync_description">Jätkake sealt, kus te lõpetasite, sest nüüd on teiste seadmete vahekaardid teie avalehel.</string>
+
+    <string name="onboarding_home_get_started_button">Alusta</string>
+
+    <string name="onboarding_home_sign_in_button">Logi sisse</string>
+
+    <string name="onboarding_home_skip_button">Jäta  vahele.</string>
+
+    <string name="onboarding_home_content_description_close_button">Sulge</string>
+
+
+    <string name="search_widget_content_description_2">Ava uus vahekaart %1$s</string>
+
+    <string name="search_widget_text_short">Otsi</string>
+
+    <string name="search_widget_text_long">Otsi veebist</string>
+
+    <string name="search_widget_voice">Häälotsing</string>
+
+
+    <string name="settings">Seaded</string>
+
+    <string name="preferences_category_general">Üldine</string>
+
+    <string name="preferences_category_about">kohta</string>
+
+    <string name="preferences_default_search_engine">Vaikimisi otsingumootor</string>
+
+    <string name="preferences_search">Otsi</string>
+
+    <string name="preferences_search_address_bar">Aadressiriba</string>
+
+    <string name="preferences_rate">Hinda Google Play\'s</string>
+
+    <string name="preferences_about">Umbes %1$s</string>
+
+    <string name="preferences_set_as_default_browser">Määra vaikimisi brauseriks</string>
+
+    <string name="preferences_category_advanced">Täiustatud</string>
+
+    <string name="preferences_category_privacy_security">Privaatsus ja turvalisus</string>
+
+    <string name="preferences_site_permissions">Saidi load</string>
+
+    <string name="preferences_private_browsing_options">Privaatne sirvimine</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Linkide avamine privaatses vahekaardis</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Ekraanipiltide lubamine privaatses sirvimises</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Kui see on lubatud, on privaatsed vahekaardid nähtavad ka siis, kui mitu rakendust on avatud.</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Lisa privaatse sirvimise otsetee</string>
+
+    <string name="preferences_https_only_title">Ainult HTTPS-režiim</string>
+
+    <string name="preferences_https_only_summary">Püüab automaatselt luua ühenduse saitidega, mis kasutavad turvalisuse suurendamiseks HTTPS-krüpteerimisprotokolli.</string>
+
+    <string name="preferences_https_only_on">Veebilehel</string>
+
+    <string name="preferences_https_only_off">Väljaspool</string>
+
+    <string name="preferences_http_only_learn_more">Lisateave</string>
+
+    <string name="preferences_https_only_in_all_tabs">Lubatud kõikides vahekaartides</string>
+
+    <string name="preferences_https_only_in_private_tabs">Lubatud ainult privaatsetes vahekaartides</string>
+
+    <string name="errorpage_httpsonly_title">Turvaline sait ei ole saadaval</string>
+
+    <string name="errorpage_httpsonly_message_title">Tõenäoliselt ei toeta veebisait lihtsalt HTTPS-i.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Siiski on ka võimalik, et tegu on ründajaga. Kui jätkate veebisaidile minekut, ei tohiks sisestada mingit tundlikku infot. Kui jätkate, lülitatakse saidi jaoks ajutiselt välja HTTPS-Only-režiim.</string>
+
+    <string name="preferences_accessibility">Juurdepääsetavus</string>
+
+    <string name="preferences_override_fxa_server">Kohandatud Waterfox konto server</string>
+
+    <string name="preferences_override_sync_tokenserver">Kohandatud sünkroonimisserver</string>
+
+    <string name="toast_override_fxa_sync_server_done">Waterfoxi konto/sünkroonimisserver muudetud. Rakendusest väljumine muudatuste rakendamiseks...</string>
+
+    <string name="preferences_category_account">Konto</string>
+
+    <string name="preferences_toolbar">Tööriistariba</string>
+
+    <string name="preferences_theme">Teema</string>
+
+    <string name="preferences_home_2">Koduleht</string>
+
+    <string name="preferences_gestures">Žestid</string>
+
+    <string name="preferences_customize">Kohandada</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sünkroonige järjehoidjad, ajalugu ja muud andmed oma Waterfoxi kontoga</string>
+
+    <string name="preferences_sign_in_description_2">Logi sisse, et sünkroonida vahekaardid, järjehoidjad, paroolid ja muud.</string>
+
+    <string name="preferences_account_default_name">Waterfox konto</string>
+
+    <string name="preferences_account_sync_error">Ühendage uuesti, et jätkata sünkroonimist</string>
+
+    <string name="preferences_language">Keel</string>
+
+    <string name="preferences_remote_debugging">Kaugotsing USB kaudu</string>
+
+    <string name="preferences_show_search_engines">Näita otsingumootoreid</string>
+
+    <string name="preferences_show_search_suggestions">Näita otsingusoovitusi</string>
+
+    <string name="preferences_show_voice_search">Näita häälotsingut</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Näita privaatseid seansse</string>
+
+    <string name="preferences_show_clipboard_suggestions">Näita vahekaardi ettepanekuid</string>
+
+    <string name="preferences_search_browsing_history">Sirvimise ajalugu</string>
+
+    <string name="preferences_search_bookmarks">Otsi järjehoidjaid</string>
+
+    <string name="preferences_search_synced_tabs">Otsi sünkroonitud vahekaardid</string>
+
+    <string name="preferences_account_settings">Konto seaded</string>
+
+    <string name="preferences_enable_autocomplete_urls">Automaatselt täidetavad URL-d</string>
+
+    <string name="preferences_open_links_in_apps">Linkide avamine rakendustes</string>
+
+    <string name="preferences_external_download_manager">Väline allalaadimishaldur</string>
+
+    <string name="preferences_addons">Lisandid</string>
+
+    <string name="preferences_notifications">Teated</string>
+
+
+    <string name="preferences_customize_amo_collection">Kohandatud lisakollektsioon</string>
+
+    <string name="customize_addon_collection_ok">OK</string>
+
+    <string name="customize_addon_collection_cancel">Tühista</string>
+
+    <string name="customize_addon_collection_hint">Kollektsiooni nimi</string>
+
+    <string name="customize_addon_collection_user_hint">Kollektsiooni omanik (kasutajatunnus)</string>
+
+    <string name="toast_customize_addon_collection_done">Täiendav kollektsioon muudetud. Rakendusest väljumine muudatuste rakendamiseks...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Hüppa tagasi</string>
+
+    <string name="customize_toggle_recent_bookmarks">Viimased järjehoidjad</string>
+
+    <string name="customize_toggle_recently_visited">Hiljuti külastasime</string>
+
+    <string name="customize_wallpapers">Taustapildid</string>
+
+    <string name="customize_toggle_contile">Sponsoreeritud otseteed</string>
+
+
+    <string name="wallpapers_item_name_content_description">Taustapildi objekt: %1$s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Taustapilt uuendatud!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Vaata</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Vahetage taustapilti, koputades Waterfoxi kodulehe logo</string>
+
+    <string name="wallpaper_logo_content_description">Waterfoxi logo - muutke taustapilti, nuppu</string>
+
+
+    <string name="addon_not_supported_error">Lisa ei ole toetatud</string>
+
+    <string name="addon_already_installed">Lisa on juba paigaldatud</string>
+
+
+    <string name="preferences_sync_now">Sünkroniseeri nüüd</string>
+
+    <string name="preferences_sync_category">Valige, mida sünkroonida</string>
+
+    <string name="preferences_sync_history">Ajalugu</string>
+
+    <string name="preferences_sync_bookmarks">Järjehoidjad</string>
+
+    <string name="preferences_sync_logins">Logid</string>
+
+    <string name="preferences_sync_tabs_2">Avatud vahekaardid</string>
+
+    <string name="preferences_sign_out">Kirjutage välja</string>
+
+    <string name="preferences_sync_device_name">Seadme nimi</string>
+
+    <string name="empty_device_name_error">Seadme nimi ei saa olla tühi.</string>
+
+    <string name="sync_syncing_in_progress">Sünkroonimine...</string>
+
+    <string name="sync_failed_summary">Sünkroonimine ebaõnnestus. Viimane õnnestumine: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Sünkroonimine ebaõnnestus. Viimati sünkroonitud: mitte kunagi</string>
+
+    <string name="sync_last_synced_summary">Viimati sünkroonitud: %s</string>
+
+    <string name="sync_never_synced_summary">Viimati sünkroonitud: mitte kunagi</string>
+
+    <string name="default_device_name_2">%1$s on %2$s %3$s</string>
+
+    <string name="preferences_sync_credit_cards">Krediitkaardid</string>
+
+    <string name="preferences_sync_address">Aadressid</string>
+
+
+    <string name="fxa_received_tab_channel_name">Saadud vahekaardid</string>
+
+    <string name="fxa_received_tab_channel_description">Teated teistest Waterfoxi seadmetest saadud vahekaartide kohta.</string>
+
+    <string name="fxa_tab_received_notification_name">Registrileht Saadud</string>
+
+    <string name="fxa_tab_received_from_notification_name">Tab alates %s</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">Erandid</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Lülita sisse kõigi saitide jaoks</string>
+
+    <string name="exceptions_empty_message_description">Erandid võimaldavad teil keelata jälgimiskaitse valitud saitide puhul.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Lisateave</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Sünkroonimise sisselülitamine</string>
+
+    <string name="preferences_sync_2">Sünkroonige ja salvestage oma andmed</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Uuesti ühendamiseks logi sisse</string>
+
+    <string name="preferences_sync_remove_account">Konto eemaldamine</string>
+
+
+    <string name="pair_instructions_2">Skaneeri QR-kood, mis on esitatud aadressil &lt;b&gt;firefox.com/pair&lt;/b&gt;.</string>
+
+
+    <string name="preference_top_toolbar">Top</string>
+
+    <string name="preference_bottom_toolbar">Alumine</string>
+
+
+    <string name="preference_light_theme">Valgus</string>
+
+    <string name="preference_dark_theme">Tume</string>
+
+    <string name="preference_auto_battery_theme">Seadistab akusäästja</string>
+
+    <string name="preference_follow_device_theme">Järgige seadme teemat</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Tõmba värskendamiseks</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Tööriistariba peitmiseks kerige</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Tööriistariba nipsutamine külgsuunas vahekaartide vahetamiseks</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Tööriistariba avamiseks nipsake üles vahekaartide avamiseks</string>
+
+
+    <string name="library_downloads">Allalaadimine</string>
+
+    <string name="library_bookmarks">Järjehoidjad</string>
+
+    <string name="library_desktop_bookmarks_root">Töölaua järjehoidjad</string>
+
+    <string name="library_desktop_bookmarks_menu">Järjehoidjate menüü</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Järjehoidjate tööriistariba</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Muud järjehoidjad</string>
+
+    <string name="library_history">Ajalugu</string>
+
+    <string name="library_new_tab">Uus vahekaart</string>
+
+    <string name="settings_title">Seaded</string>
+
+    <string name="content_description_close_button">Sulge</string>
+
+
+    <string name="history_search_group_site">%d sait</string>
+
+    <string name="history_search_group_sites">%d saite</string>
+
+
+    <string name="library_recently_closed_tabs">Hiljuti suletud vahekaardid</string>
+
+    <string name="recently_closed_show_full_history">Näita kogu ajalugu</string>
+
+    <string name="recently_closed_tabs">%d vahekaardid</string>
+
+    <string name="recently_closed_tab">%d vahekaart</string>
+
+    <string name="recently_closed_empty_message">Siin ei ole hiljuti suletud vahekaarte</string>
+
+
+    <string name="preferences_tabs">Registrid</string>
+
+    <string name="preferences_tab_view">Vaade vahekaardil</string>
+
+    <string name="tab_view_list">Loetelu</string>
+
+    <string name="tab_view_grid">Võrk</string>
+
+    <string name="preferences_close_tabs">Sulge vahekaardid</string>
+
+    <string name="close_tabs_manually">Mitte kunagi</string>
+
+    <string name="close_tabs_after_one_day">Pärast ühte päeva</string>
+
+    <string name="close_tabs_after_one_week">Ühe nädala pärast</string>
+
+    <string name="close_tabs_after_one_month">Ühe kuu pärast</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Avatud vahekaartide automaatne sulgemine</string>
+
+
+    <string name="preferences_opening_screen">Avamisekraan</string>
+
+    <string name="opening_screen_homepage">Koduleht</string>
+
+    <string name="opening_screen_last_tab">Viimane vahekaart</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Koduleht pärast nelja tunni pikkust tegevusetust</string>
+
+    <string name="close_tabs_manually_summary">Sulge käsitsi</string>
+
+    <string name="close_tabs_after_one_day_summary">Sulge pärast ühte päeva</string>
+
+    <string name="close_tabs_after_one_week_summary">Sulgemine ühe nädala pärast</string>
+
+    <string name="close_tabs_after_one_month_summary">Sulgemine ühe kuu pärast</string>
+
+
+    <string name="preferences_inactive_tabs">Vanade vahekaartide liigutamine mitteaktiivseks</string>
+
+    <string name="preferences_inactive_tabs_title">Vahekaardid, mida te pole kaks nädalat vaadanud, viiakse mitteaktiivsesse sektsiooni.</string>
+
+
+    <string name="tab_header_label">Avatud vahekaardid</string>
+
+    <string name="tabs_header_private_tabs_title">Eraldi vahekaardid</string>
+
+    <string name="tabs_header_synced_tabs_title">Sünkroonitud vahekaardid</string>
+
+    <string name="add_tab">Lisa vahekaart</string>
+
+    <string name="add_private_tab">Lisa privaatne vahekaart</string>
+
+    <string name="tab_drawer_fab_content">Eraldi</string>
+
+    <string name="tab_drawer_fab_sync">Sünkroonimine</string>
+
+    <string name="tab_tray_menu_item_share">Jaga kõiki vahekaarte</string>
+
+    <string name="tab_tray_menu_recently_closed">Hiljuti suletud vahekaardid</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Hiljuti suletud</string>
+
+    <string name="tab_tray_menu_account_settings">Konto seaded</string>
+
+    <string name="tab_tray_menu_tab_settings">Registrilehe seaded</string>
+
+    <string name="tab_tray_menu_item_close">Sulge kõik vahekaardid</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Järjehoidja</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Sulge</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Valitud vahekaartide jagamine</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Valitud vahekaartide menüü</string>
+
+    <string name="remove_tab_from_collection">Eemalda vahekaart kollektsioonist</string>
+
+    <string name="tabs_tray_select_tabs">Valige vahekaardid</string>
+
+    <string name="close_tab">Sulge vahekaart</string>
+
+    <string name="close_tab_title">Sulge vahekaart %s</string>
+
+    <string name="open_tabs_menu">Avatud vahekaartide menüü</string>
+
+    <string name="tabs_menu_save_to_collection1">Salvesta vahekaardid kollektsiooni</string>
+
+    <string name="collection_delete">Kustuta kollektsioon</string>
+
+    <string name="collection_rename">Nimetage kollektsioon ümber</string>
+
+    <string name="collection_open_tabs">Avatud vahekaardid</string>
+
+    <string name="collection_name_hint">Kollektsiooni nimi</string>
+
+    <string name="rename_top_site">Nimetage ümber</string>
+
+    <string name="remove_top_site">Eemaldage</string>
+
+    <string name="delete_from_history">Kustuta ajaloost</string>
+
+    <string name="pwa_site_controls_title_private">%1$s (privaatne režiim)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Muud vahekaardid</string>
+
+
+    <string name="history_search_1">Sisestage otsingusõnad</string>
+
+    <string name="history_delete_all">Kustuta ajalugu</string>
+
+    <string name="history_delete_multiple_items_snackbar">Ajalugu Kustutatud</string>
+
+    <string name="history_delete_single_item_snackbar">Kustutatud %1$s</string>
+
+    <string name="history_delete_item">Kustuta</string>
+
+    <string name="history_multi_select_title">%1$d valitud</string>
+
+    <string name="history_today">Täna</string>
+
+    <string name="history_yesterday">Eile</string>
+
+    <string name="history_7_days">Viimased 7 päeva</string>
+
+    <string name="history_30_days">Viimased 30 päeva</string>
+
+    <string name="history_older">Vanemad</string>
+
+    <string name="history_empty_message">Siin puudub ajalugu</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">Allalaadimised eemaldatud</string>
+
+    <string name="download_delete_single_item_snackbar">Eemaldatud %1$s</string>
+
+    <string name="download_empty_message_1">Allalaaditud faile ei ole</string>
+
+    <string name="download_multi_select_title">%1$d valitud</string>
+
+    <string name="download_delete_item_1">Eemaldage</string>
+
+
+    <string name="tab_crash_title_2">Vabandust. %1$s ei saa seda lehekülge laadida.</string>
+
+    <string name="tab_crash_send_report">Saatke BrowserWorks\'ile krahhiaruanne</string>
+
+    <string name="tab_crash_close">Sulge vahekaart</string>
+
+    <string name="tab_crash_restore">Restaureerimise vahekaart</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Kas olete kindel, et soovite selle kausta kustutada?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s kustutab valitud elemendid.</string>
+
+    <string name="bookmark_delete_negative">Tühista</string>
+
+    <string name="bookmark_add_folder">Kausta lisamine</string>
+
+    <string name="bookmark_saved_snackbar">Järjehoidja salvestatud!</string>
+
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+
+    <string name="bookmark_menu_edit_button">Muuda</string>
+
+    <string name="bookmark_menu_copy_button">Koopia</string>
+
+    <string name="bookmark_menu_share_button">Jaga</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">Avaneb uues vahekaardis</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">Avage isiklikul vahekaardil</string>
+
+    <string name="bookmark_menu_delete_button">Kustuta</string>
+
+    <string name="bookmark_menu_save_button">Salvesta</string>
+
+    <string name="bookmarks_multi_select_title">%1$d valitud</string>
+
+    <string name="edit_bookmark_fragment_title">Redigeeri järjehoidjat</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Muuda kausta</string>
+
+    <string name="bookmark_sign_in_button">Sisene, et näha sünkroonitud järjehoidjaid</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">FOLDER</string>
+
+    <string name="bookmark_name_label">NIMI</string>
+
+    <string name="bookmark_add_folder_fragment_label">Kausta lisamine</string>
+
+    <string name="bookmark_select_folder_fragment_label">Valige kaust</string>
+
+    <string name="bookmark_empty_title_error">Peab olema pealkiri</string>
+
+    <string name="bookmark_invalid_url_error">Vale URL aadress</string>
+
+    <string name="bookmarks_empty_message">Siin ei ole järjehoidjaid</string>
+
+    <string name="bookmark_deletion_snackbar_message">Kustutatud %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Järjehoidjad kustutatud</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Valitud kaustade kustutamine</string>
+
+    <string name="bookmark_undo_deletion">UNDO</string>
+
+    <string name="bookmark_search">Sisestage otsingusõnad</string>
+
+
+    <string name="phone_feature_go_to_settings">Mine seadistustesse</string>
+
+    <string name="quick_settings_sheet">Kiirseadete leht</string>
+
+    <string name="phone_feature_recommended">Soovitatav</string>
+
+    <string name="clear_permissions">Tühjendage õigused</string>
+
+    <string name="clear_permissions_positive">OK</string>
+
+    <string name="clear_permissions_negative">Tühista</string>
+
+    <string name="clear_permission">Selge luba</string>
+
+    <string name="clear_permission_positive">OK</string>
+
+    <string name="clear_permission_negative">Tühista</string>
+
+    <string name="clear_permissions_on_all_sites">Tühjendage kõigi saitide õigused</string>
+
+    <string name="preference_browser_feature_autoplay">Automaatne mängimine</string>
+
+    <string name="preference_phone_feature_camera">Kaamera</string>
+
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <string name="preference_phone_feature_location">Asukoht</string>
+
+    <string name="preference_phone_feature_notification">Teavitamine</string>
+
+    <string name="preference_phone_feature_persistent_storage">Püsiv ladustamine</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Saitidevahelised küpsised</string>
+
+    <string name="preference_phone_feature_media_key_system_access">DRM-kontrollitud sisu</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">Paluge lubada</string>
+
+    <string name="preference_option_phone_feature_blocked">Blokeeritud</string>
+
+    <string name="preference_option_phone_feature_allowed">Lubatud</string>
+
+    <string name="phone_feature_blocked_by_android">Blokeeritud Androidiga</string>
+
+    <string name="preference_exceptions">Erandid</string>
+
+    <string name="tracking_protection_on">Veebilehel</string>
+
+    <string name="tracking_protection_off">Väljaspool</string>
+
+    <string name="preference_option_autoplay_allowed2">Lubage heli ja video</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Lubage heli ja video</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blokeerige heli ja video ainult mobiilside andmeside puhul</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Audio ja video mängitakse Wi-Fi kaudu</string>
+
+    <string name="preference_option_autoplay_block_audio2">Ainult heli blokeerimine</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Ainult heli blokeerimine</string>
+
+    <string name="preference_option_autoplay_blocked3">Blokeerib heli ja video</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Blokeerib heli ja video</string>
+
+    <string name="delete_browsing_data_quit_on">Veebilehel</string>
+
+    <string name="delete_browsing_data_quit_off">Väljaspool</string>
+
+    <string name="https_only_on">Veebilehel</string>
+
+    <string name="https_only_off">Väljaspool</string>
+
+
+    <string name="collections_header">Kollektsioonid</string>
+
+    <string name="collection_menu_button_content_description">Kollektsiooni menüü</string>
+
+    <string name="no_collections_description2">Koguge enda jaoks olulisi asju.\nRühmitage sarnaseid otsinguid, saite ja vahekaarte, et hiljem kiiresti juurde pääseda.</string>
+
+    <string name="create_collection_select_tabs">Valige vahekaardid</string>
+
+    <string name="create_collection_select_collection">Valige kollektsioon</string>
+
+    <string name="create_collection_name_collection">Nimekogu</string>
+
+    <string name="create_collection_add_new_collection">Lisa uus kollektsioon</string>
+
+    <string name="create_collection_select_all">Valige kõik</string>
+
+    <string name="create_collection_deselect_all">Tühjendage kõik valikud</string>
+
+    <string name="create_collection_save_to_collection_empty">Valige salvestamiseks vahekaardid</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">%d valitud vahekaardid</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">Valitud vahekaart %d</string>
+
+    <string name="create_collection_tabs_saved">Registrid salvestatud!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Kogumine päästetud!</string>
+
+    <string name="create_collection_tab_saved">Tab salvestatud!</string>
+
+    <string name="create_collection_close">Sulge</string>
+
+    <string name="create_collection_save">Salvesta</string>
+
+    <string name="create_collection_view">Vaata</string>
+
+    <string name="create_collection_positive">OK</string>
+
+    <string name="create_collection_negative">Tühista</string>
+
+
+    <string name="create_collection_default_name">Kollektsioon %d</string>
+
+
+    <string name="share_header_2">Jaga</string>
+
+    <string name="share_button_content_description">Jaga</string>
+
+    <string name="share_device_subheader">Saada seadmesse</string>
+
+    <string name="share_link_all_apps_subheader">Kõik tegevused</string>
+
+    <string name="share_link_recent_apps_subheader">Hiljuti kasutatud</string>
+
+    <string name="share_copy_link_to_clipboard">Kopeeri lõikelauale</string>
+
+    <string name="toast_copy_link_to_clipboard">Kopeeritud lõikelauale</string>
+
+    <string name="sync_menu_sign_in">Sünkroonimiseks sisse logida</string>
+
+    <string name="sync_sign_in">Logi sisse sünkroonimisse</string>
+
+    <string name="sync_send_to_all">Saada kõikidesse seadmetesse</string>
+
+    <string name="sync_reconnect">Uuesti ühendamine sünkroonimisega</string>
+
+    <string name="sync_offline">Offline</string>
+
+    <string name="sync_connect_device">Ühendage teine seade</string>
+
+    <string name="sync_connect_device_dialog">Voldiku saatmiseks logige Waterfoxi sisse vähemalt ühes teises seadmes.</string>
+
+    <string name="sync_confirmation_button">Sain selle</string>
+
+    <string name="share_error_snackbar">Ei saa seda rakendust jagada</string>
+
+    <string name="sync_add_new_device_title">Saada seadmesse</string>
+
+    <string name="sync_add_new_device_message">Ühendatud seadmeid ei ole</string>
+
+    <string name="sync_add_new_device_learn_button">Tutvuge vahekaartide saatmise kohta...</string>
+
+    <string name="sync_add_new_device_connect_button">Ühendage teine seade...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Sulge privaatsed vahekaardid</string>
+
+    <string name="notification_marketing_channel_name">Turundus</string>
+
+    <string name="notification_default_browser_title">%1$s on kiire ja privaatne</string>
+
+    <string name="notification_default_browser_text">Tee %1$s oma vaikimisi brauseriks</string>
+
+
+    <string name="snackbar_collection_deleted">Kollektsioon kustutatud</string>
+
+    <string name="snackbar_collection_renamed">Kollektsiooni ümbernimetamine</string>
+
+    <string name="snackbar_tab_closed">Tab suletud</string>
+
+    <string name="snackbar_tabs_closed">Voldikud suletud</string>
+
+    <string name="snackbar_message_bookmarks_saved">Järjehoidjad salvestatud!</string>
+
+    <string name="snackbar_added_to_shortcuts">Lisatud otseteedele!</string>
+
+    <string name="snackbar_private_tab_closed">Privaatne vahekaart suletud</string>
+
+    <string name="snackbar_private_tabs_closed">Privaatsed vahekaardid suletud</string>
+
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <string name="snackbar_top_site_removed">Sait eemaldatud</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">Luba %1$s avada %2$s</string>
+
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+
+    <string name="qr_scanner_dialog_negative">DENY</string>
+
+    <string name="qr_scanner_dialog_invalid">Veebiaadress ei kehti.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+
+    <string name="tab_collection_dialog_message">Kas olete kindel, et soovite kustutada %1$s?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">Selle vahekaardi kustutamine kustutab kogu kollektsiooni. Saate igal ajal luua uusi kollektsioone.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">Kustuta %1$s?</string>
+
+    <string name="tab_collection_dialog_positive">Kustuta</string>
+
+    <string name="full_screen_notification">Täisekraani režiimi sisenemine</string>
+
+    <string name="url_copied">URL kopeeritud</string>
+
+    <string name="accessibility_text_size_sample_text_1">See on näidistekst. See on siin selleks, et näidata, kuidas tekst ilmub, kui suurendate või vähendate selle seadistuse abil teksti suurust.</string>
+
+    <string name="preference_accessibility_text_size_summary">Teksti muutmine veebilehtedel suuremaks või väiksemaks</string>
+
+    <string name="preference_accessibility_font_size_title">Kirjasuurus</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Automaatne fondi suuruse määramine</string>
+
+    <string name="preference_accessibility_auto_size_summary">Kirjasuurus vastab teie Androidi seadetele. Lülitage siin kirjasuuruse haldamine välja.</string>
+
+
+    <string name="preferences_delete_browsing_data">Sirvimisandmete kustutamine</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Avatud vahekaardid</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d vahekaardid</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Sirvimisajalugu ja saidi andmed</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d aadressid</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Küpsised</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Teid logitakse enamus saitidest välja.</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Vaikimisi salvestatud pildid ja failid</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Vabastab hoiuruumi</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Saidi load</string>
+
+    <string name="preferences_delete_browsing_data_downloads">Allalaadimine</string>
+
+    <string name="preferences_delete_browsing_data_button">Sirvimisandmete kustutamine</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Sirvimisandmete kustutamine lõpetamisel</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Kustutab automaatselt sirvimisandmed, kui valite peamenüüst \"Lõpeta\".</string>
+
+    <string name="delete_browsing_data_on_quit_action">Lõpeta</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">See kustutab kõik teie sirvimisandmed.</string>
+
+    <string name="delete_history_prompt_title">Kustutatav ajavahemik</string>
+
+    <string name="delete_history_prompt_body">Eemaldab ajaloo (sealhulgas teistest seadmetest sünkroniseeritud ajaloo), küpsised ja muud sirvimisandmed.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Viimane tund</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Täna ja eile</string>
+
+    <string name="delete_history_prompt_button_everything">Kõik</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">%s kustutab valitud sirvimisandmed.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">Tühista</string>
+
+    <string name="delete_browsing_data_prompt_allow">Kustuta</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Sirvimisandmed kustutatud</string>
+
+    <string name="deleting_browsing_data_in_progress">Sirvimisandmete kustutamine...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">Kustuta kõik saite "%s"</string>
+
+    <string name="delete_history_group_prompt_cancel">Tühista</string>
+
+    <string name="delete_history_group_prompt_allow">Kustuta</string>
+
+    <string name="delete_history_group_snackbar">Rühm kustutatud</string>
+
+
+    <string name="onboarding_header_2">Tere tulemast privaatsemasse veebi</string>
+
+    <string name="onboarding_message">Rohujuuretasandi sõltumatu veebilehitseja.</string>
+
+    <string name="onboarding_account_sign_in_header">Jätka sealt, kus sa pooleli jätsid</string>
+
+    <string name="onboarding_manual_sign_in_description">Sünkroonige vahekaardid ja paroolid kõigis seadmetes, et ekraani vahetamine oleks sujuv.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Logi sisse</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">Sünkroonimine on sisse lülitatud</string>
+
+    <string name="onboarding_tracking_protection_header">Eraelu puutumatuse kaitse vaikimisi</string>
+
+    <string name="onboarding_tracking_protection_description">Täielik küpsiste kaitse, mis takistab jälgijatel küpsiste kasutamist teie jälgimiseks veebisaitidel.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Standard (vaikimisi)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Tasakaalustatud privaatsuse ja jõudluse tagamiseks. Leheküljed laadivad normaalselt.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Range</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokeerib rohkem jälgimisseadmeid, nii et leheküljed laadivad kiiremini, kuid mõned lehekülje funktsioonid võivad katkeda.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Valige oma tööriistariba paigutus</string>
+
+    <string name="onboarding_toolbar_placement_description">Hoidke see altpoolt või viige see ülevaltpoolt.</string>
+
+    <string name="onboarding_privacy_notice_header_1">Sa kontrollid oma andmeid</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox ei kogu telemeetriat ja annab teile kontrolli oma andmete üle.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Loe meie privaatsusteadet</string>
+
+    <string name="onboarding_conclusion_header">Kas oled valmis avama hämmastavat internetti?</string>
+
+    <string name="onboarding_finish">Alusta sirvimist</string>
+
+
+    <string name="onboarding_theme_picker_header">Valige oma teema</string>
+
+    <string name="onboarding_theme_picker_description_2">Säästke akut ja oma silmanägemist pimeda režiimi abil.</string>
+
+    <string name="onboarding_theme_automatic_title">Automaatne</string>
+
+    <string name="onboarding_theme_automatic_summary">Kohandub teie seadme seadetega</string>
+
+    <string name="onboarding_theme_dark_title">Tume teema</string>
+
+    <string name="onboarding_theme_light_title">Valgus teema</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Registrid saadetud!</string>
+
+    <string name="sync_sent_tab_snackbar">Tab saadetud!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Ei saa saata</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+
+    <string name="sync_scan_code">Skaneeri kood</string>
+
+    <string name="sign_in_instructions">Waterfox tugineb Mozilla kontole, et sünkroonida andmeid mobiil- ja töölauaarvuti vahel.&lt;br&gt; Avage oma arvutis Waterfox ja minge aadressile &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla ei ole kuidagi seotud Waterfoxiga.&lt;/i&gt;</string>
+
+    <string name="sign_in_ready_for_scan">Valmis skaneerimiseks</string>
+
+    <string name="sign_in_with_camera">Logi sisse oma kaameraga</string>
+
+    <string name="sign_in_with_email">Kasutage selle asemel e-kirja</string>
+
+    <string name="sign_in_create_account_text">Ei ole kontot? &lt;u&gt;Looge üks&lt;/u&gt;, et sünkroonida Waterfoxi seadmete vahel.</string>
+
+    <string name="sign_out_confirmation_message_2">%s lõpetab teie kontoga sünkroonimise, kuid ei kustuta ühtegi teie sirvimisandmestikku selles seadmes.</string>
+
+    <string name="sign_out_disconnect">Lahutage</string>
+
+    <string name="sign_out_cancel">Tühista</string>
+
+    <string name="bookmark_cannot_edit_root">Ei saa redigeerida vaikimisi kaustu</string>
+
+
+    <string name="etp_settings">Kaitse seaded</string>
+
+    <string name="preference_enhanced_tracking_protection">Täiustatud jälgimiskaitse</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Sirvi ilma jälgimiseta</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Hoidke oma andmed enda teada. %s kaitseb teid paljude kõige levinumate jälgimisseadmete eest, mis jälgivad, mida te internetis teete.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Lisateave</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (vaikimisi)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Tasakaalustatud privaatsuse ja jõudluse tagamiseks. Leheküljed laadivad normaalselt.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Mis on blokeeritud standardse jälgimiskaitsega</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Range</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokeerib rohkem jälgimisseadmeid, nii et leheküljed laadivad kiiremini, kuid mõned lehekülje funktsioonid võivad katkeda.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Mis on blokeeritud range jälgimiskaitsega</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Kohandatud</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Valige, milliseid jälgimisseadmeid ja skripte soovite blokeerida.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Mis on blokeeritud kohandatud jälgimiskaitsega</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Küpsised</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Saitidevahelised ja sotsiaalmeedia jälgimisseadmed</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Külastamata veebilehtede küpsised</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Kõik kolmanda osapoole küpsised (võivad põhjustada veebisaitide katkemist)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Kõik küpsised (põhjustavad veebilehtede katkemise)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Saitidevaheliste küpsiste isoleerimine</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Sisu jälgimine</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Kõikides vahekaartides</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Ainult eraviisilistes vahekaartides</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Sõrmejäljendajad</string>
+
+    <string name="enhanced_tracking_protection_details">Üksikasjad</string>
+
+    <string name="enhanced_tracking_protection_blocked">Blokeeritud</string>
+
+    <string name="enhanced_tracking_protection_allowed">Lubatud</string>
+
+    <string name="etp_social_media_trackers_title">Sotsiaalmeedia jälgimisseadmed</string>
+
+    <string name="etp_social_media_trackers_description">Piiratakse sotsiaalvõrgustike võimet jälgida teie sirvimistegevust veebis.</string>
+
+    <string name="etp_cookies_title">Saitidevahelised jälgimisküpsised</string>
+
+    <string name="etp_cookies_title_2">Saitidevahelised küpsised</string>
+
+    <string name="etp_cookies_description">Blokeerib küpsised, mida reklaamivõrgustikud ja analüüsifirmad kasutavad teie sirvimisandmete kogumiseks mitmetel saitidel.</string>
+
+    <string name="etp_cookies_description_2">Täielik küpsiste kaitse isoleerib küpsised veebisaidile, kus sa oled, nii et jälgijad, näiteks reklaamivõrgustikud, ei saa neid kasutada sinu jälgimiseks teistel saitidel.</string>
+
+    <string name="etp_cryptominers_title">Cryptominers</string>
+
+    <string name="etp_cryptominers_description">Vältib pahatahtlike skriptide juurdepääsu teie seadmele, et kaevandada digitaalset valuutat.</string>
+
+    <string name="etp_fingerprinters_title">Sõrmejäljendajad</string>
+
+    <string name="etp_fingerprinters_description">Peatab teie seadme kohta üheselt tuvastatavate andmete kogumise, mida saab kasutada jälgimise eesmärgil.</string>
+
+    <string name="etp_tracking_content_title">Sisu jälgimine</string>
+
+    <string name="etp_tracking_content_description">Peatab välise reklaami, videote ja muu jälgimiskoodi sisaldava sisu laadimise. Võib mõjutada mõnda veebisaidi funktsionaalsust.</string>
+
+    <string name="etp_panel_on">Selle saidi kaitse on sisse lülitatud</string>
+
+    <string name="etp_panel_off">Selle saidi kaitsed on välja lülitatud</string>
+
+    <string name="enhanced_tracking_protection_exceptions">Täiustatud jälgimiskaitse on nende veebisaitide puhul välja lülitatud</string>
+
+    <string name="etp_back_button_content_description">Navigeeri tagasi</string>
+
+    <string name="open_source_licenses_title">%s | OSS raamatukogud</string>
+
+    <string name="etp_redirect_trackers_title">Ümbersuunamise jälgimisseadmed</string>
+
+    <string name="etp_redirect_trackers_description">Tühjendab küpsised, mis on seatud teadaolevate jälgimisveebisaitide ümbersuunamiste abil.</string>
+
+    <string name="preference_etp_smartblock_description">Mõned allpool märgitud jälgijad on sellel lehel osaliselt blokeeritud, sest sa suhtlesid nendega *.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Lisateave</string>
+
+
+    <string name="about_support">Toetus</string>
+
+    <string name="about_crashes">Õnnetused</string>
+
+    <string name="about_privacy_notice">Andmekaitse teatis</string>
+
+    <string name="about_know_your_rights">Tunne oma õigusi</string>
+
+    <string name="about_licensing_information">Litsentseerimisega seotud teave</string>
+
+    <string name="about_other_open_source_libraries">Raamatukogud, mida me kasutame</string>
+
+    <string name="about_debug_menu_toast_progress">Veaotsingumenüü: %1$d klõps(ud) vasakule, et lubada</string>
+    <string name="about_debug_menu_toast_done">Debugimismenüü on sisse lülitatud</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Koopia</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Paste &amp; Go</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Paste</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL kopeeritud lõikelauale</string>
+
+
+    <string name="add_to_homescreen_title">Lisamine avakuvale</string>
+
+    <string name="add_to_homescreen_cancel">Tühista</string>
+
+    <string name="add_to_homescreen_add">Lisa</string>
+
+    <string name="add_to_homescreen_continue">Jätka veebilehele</string>
+
+    <string name="add_to_homescreen_text_placeholder">Lühinimi</string>
+
+    <string name="add_to_homescreen_description_2">Saate selle veebisaidi hõlpsasti lisada oma seadme avakuvale, et pääseda kohe ligi ja sirvida kiiremini, kasutades rakendustüüpi kogemust.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Loginid ja paroolid</string>
+
+    <string name="preferences_passwords_save_logins">Salvesta sisselogimisandmed ja paroolid</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Küsige, et salvestada</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Ärge kunagi säästke</string>
+
+    <string name="preferences_passwords_autofill2">Automaatne täitmine %1$s</string>
+
+    <string name="preferences_passwords_autofill_description">Täitke ja salvestage kasutajanimed ja paroolid veebisaitidel, kasutades %1$s.</string>
+
+    <string name="preferences_android_autofill">Automaatne täitmine teistes rakendustes</string>
+
+    <string name="preferences_android_autofill_description">Täitke oma seadme teistes rakendustes kasutajanimed ja paroolid.</string>
+
+    <string name="preferences_logins_add_login">Lisage sisselogimine</string>
+
+
+    <string name="preferences_passwords_sync_logins">Sünkroniseeri sisselogimised</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Sünkroonige sisselogimisi erinevates seadmetes</string>
+
+    <string name="preferences_passwords_saved_logins">Salvestatud sisselogimised</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">Siin kuvatakse salvestatud või sünkroonitud %s-i sisselogimised.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Lisateave Sync\'i kohta.</string>
+
+    <string name="preferences_passwords_exceptions">Erandid</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">Siin kuvatakse salvestamata sisselogimisi ja paroole.</string>
+
+    <string name="preferences_passwords_exceptions_description">Logisid ja paroole nende saitide jaoks ei salvestata.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Kustuta kõik erandid</string>
+
+    <string name="preferences_passwords_saved_logins_search">Otsi logisid</string>
+
+    <string name="preferences_passwords_saved_logins_site">Sait</string>
+
+    <string name="preferences_passwords_saved_logins_username">Kasutajanimi</string>
+
+    <string name="preferences_passwords_saved_logins_password">Parool</string>
+
+    <string name="logins_password_copied">Parool kopeeritakse lõikelauale</string>
+
+    <string name="logins_username_copied">Kasutajanimi kopeeritakse lõikelauale</string>
+
+    <string name="saved_logins_copy_password">Parooli kopeerimine</string>
+
+    <string name="saved_logins_clear_password">Tühista parool</string>
+
+    <string name="saved_login_copy_username">Kasutajanime kopeerimine</string>
+
+    <string name="saved_login_clear_username">Selge kasutajanimi</string>
+
+    <string name="saved_login_clear_hostname">Tühista hostinimi</string>
+
+    <string name="saved_login_open_site">Avage veebileht brauseris</string>
+
+    <string name="saved_login_reveal_password">Näita parooli</string>
+
+    <string name="saved_login_hide_password">Peida parool</string>
+
+    <string name="logins_biometric_prompt_message">Ava oma salvestatud sisselogimiste vaatamiseks</string>
+
+    <string name="logins_warning_dialog_title">Turvaline sisselogimine ja paroolid</string>
+
+    <string name="logins_warning_dialog_message">Seadistage seadme lukustusmuster, PIN-kood või parool, et kaitsta oma salvestatud sisselogimisi ja paroole juurdepääsu eest, kui teie seade on kellegi teise käes.</string>
+
+    <string name="logins_warning_dialog_later">Hiljem</string>
+
+    <string name="logins_warning_dialog_set_up_now">Seadistage nüüd</string>
+
+    <string name="logins_biometric_prompt_message_pin">Ava oma seade</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Suurendage kõiki veebisaite</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Lubage näpistamine ja suumimine, isegi veebisaitidel, mis seda žesti takistavad.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">Nimi (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Viimati kasutatud</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Sorteeri sisselogimise menüü</string>
+
+
+    <string name="preferences_autofill">Automaatne täitmine</string>
+
+    <string name="preferences_addresses">Aadressid</string>
+
+    <string name="preferences_credit_cards">Krediitkaardid</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Kaartide salvestamine ja automaatne täitmine</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Andmed on krüpteeritud</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Kaartide sünkroonimine seadmete vahel</string>
+
+    <string name="preferences_credit_cards_sync_cards">Sünkroonimiskaardid</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Lisa krediitkaart</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Halda salvestatud kaarte</string>
+
+    <string name="preferences_addresses_add_address">Lisa aadress</string>
+
+    <string name="preferences_addresses_manage_addresses">Aadresside haldamine</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Aadresside salvestamine ja automaatne täitmine</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Sisaldab teavet, nagu numbrid, e-posti ja tarneaadressid.</string>
+
+
+    <string name="credit_cards_add_card">Lisa kaart</string>
+
+    <string name="credit_cards_edit_card">Kaardi redigeerimine</string>
+
+    <string name="credit_cards_card_number">Kaardi number</string>
+
+    <string name="credit_cards_expiration_date">Kehtivuskuupäev</string>
+
+    <string name="credit_cards_expiration_date_month">Kehtivusaeg Kuu</string>
+
+    <string name="credit_cards_expiration_date_year">Kehtivusaeg Aasta</string>
+
+    <string name="credit_cards_name_on_card">Nimi kaardil</string>
+
+    <string name="credit_cards_menu_delete_card">Kaardi kustutamine</string>
+
+    <string name="credit_cards_delete_card_button">Kaardi kustutamine</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">Kas olete kindel, et soovite selle krediitkaardi kustutada?</string>
+
+    <string name="credit_cards_delete_dialog_button">Kustuta</string>
+
+    <string name="credit_cards_menu_save">Salvesta</string>
+
+    <string name="credit_cards_save_button">Salvesta</string>
+
+    <string name="credit_cards_cancel_button">Tühista</string>
+
+    <string name="credit_cards_saved_cards">Salvestatud kaardid</string>
+
+    <string name="credit_cards_number_validation_error_message">Palun sisestage kehtiv krediitkaardi number</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Palun täitke see väli</string>
+
+    <string name="credit_cards_biometric_prompt_message">Ava oma salvestatud kaartide vaatamiseks</string>
+
+    <string name="credit_cards_warning_dialog_title">Kindlustage oma krediitkaardid</string>
+
+    <string name="credit_cards_warning_dialog_message">Seadistage seadme lukustusmuster, PIN-kood või parool, et kaitsta salvestatud krediitkaarte juurdepääsu eest, kui teie seade on kellegi teise käes.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Seadistage nüüd</string>
+
+    <string name="credit_cards_warning_dialog_later">Hiljem</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Ava oma seade</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Salvestatud krediitkaardiandmete kasutamise avamine</string>
+
+    <string name="addresses_add_address">Lisa aadress</string>
+
+    <string name="addresses_edit_address">Muuda aadressi</string>
+
+    <string name="addresses_manage_addresses">Aadresside haldamine</string>
+
+    <string name="addresses_first_name">Eesnimi</string>
+
+    <string name="addresses_middle_name">Keskmine nimi</string>
+
+    <string name="addresses_last_name">Perekonnanimi</string>
+
+    <string name="addresses_street_address">Tänava aadress</string>
+
+    <string name="addresses_city">Linn</string>
+
+    <string name="addresses_state">Riik</string>
+
+    <string name="addresses_province">Provints</string>
+
+    <string name="addresses_zip">Zip</string>
+
+    <string name="addresses_country">Riik või piirkond</string>
+
+    <string name="addresses_phone">Telefon</string>
+
+    <string name="addresses_email">E-post</string>
+
+    <string name="addresses_save_button">Salvesta</string>
+
+    <string name="addresses_cancel_button">Tühista</string>
+
+    <string name="addressess_delete_address_button">Kustuta aadress</string>
+
+    <string name="addressess_confirm_dialog_message">Kas olete kindel, et soovite selle aadressi kustutada?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Kustuta</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">Tühista</string>
+
+    <string name="address_menu_save_address">Salvesta aadress</string>
+
+    <string name="address_menu_delete_address">Kustuta aadress</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Lisa otsingumootor</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Muuda otsingumootorit</string>
+
+    <string name="search_engine_add_button_content_description">Lisa</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Salvesta</string>
+
+    <string name="search_engine_edit">Muuda</string>
+
+    <string name="search_engine_delete">Kustuta</string>
+
+
+    <string name="search_add_custom_engine_label_other">Muud</string>
+
+    <string name="search_add_custom_engine_name_hint">Nimi</string>
+
+    <string name="search_add_custom_engine_search_string_hint">Kasutatav otsingustring</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Asenda päring sõnaga "%s". Näide:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Kohandatud otsingumootori andmed</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Sisestage otsingumootori nimi</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Sisestage otsingusõna</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Kontrolli, et otsingustring vastab näiteformaadile</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">Viga ühenduse loomisel "%s"</string>
+
+    <string name="search_add_custom_engine_success_message">Loodud %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Salvestatud %s</string>
+
+    <string name="search_delete_search_engine_success_message">Kustutatud %s</string>
+
+
+    <string name="phone_feature_blocked_intro">Et seda lubada:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Mine Androidi seadistustesse</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. Puudutage valikut &lt;b&gt;Load&lt;/b&gt;.</string>
+
+    <string name="phone_feature_blocked_step_feature">3. Lülitage &lt;b&gt;%1$s&lt;/b&gt; sisse.</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">Ühendus on turvaline</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">Ühendus ei ole turvaline</string>
+
+    <string name="clear_site_data">Küpsiste ja saidi andmete kustutamine</string>
+
+    <string name="confirm_clear_site_data">Kas olete kindel, et soovite kustutada kõik saidi &lt;b&gt;%s&lt;/b&gt; küpsised ja andmed?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Kas olete kindel, et soovite kõigi saitide kõik õigused kustutada?</string>
+
+    <string name="confirm_clear_permissions_site">Kas olete kindel, et soovite selle saidi kõik õigused kustutada?</string>
+
+    <string name="confirm_clear_permission_site">Kas olete kindel, et soovite selle saidi jaoks luba kustutada?</string>
+
+    <string name="no_site_exceptions">Erandeid ei tehta</string>
+
+    <string name="bookmark_deletion_confirmation">Kas olete kindel, et soovite selle järjehoidja kustutada?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Lisa otseteedele</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Eemaldage otseteedest</string>
+
+    <string name="certificate_info_verified_by">Kinnitanud: %1$s</string>
+
+    <string name="login_menu_delete_button">Kustuta</string>
+
+    <string name="login_menu_edit_button">Muuda</string>
+
+    <string name="login_deletion_confirmation">Kas olete kindel, et soovite selle sisselogimise kustutada?</string>
+
+    <string name="dialog_delete_positive">Kustuta</string>
+
+    <string name="dialog_delete_negative">Tühista</string>
+
+    <string name="login_options_menu">Sisselogimise võimalused</string>
+
+    <string name="saved_login_hostname_description">Sisselogimise veebiaadressi redigeeritav tekstiväli.</string>
+
+    <string name="saved_login_username_description">Sisselogimise kasutajanime redigeeritav tekstiväli.</string>
+
+    <string name="saved_login_password_description">Sisselogimise salasõna redigeeritav tekstiväli.</string>
+
+    <string name="save_changes_to_login">Salvesta muudatused sisselogimiseks.</string>
+
+    <string name="edit">Muuda</string>
+
+    <string name="add_login">Lisa uus sisselogimine</string>
+
+    <string name="saved_login_password_required">Nõutav salasõna</string>
+
+    <string name="saved_login_username_required">Kasutajanimi nõutav</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Nõutav hostinimi</string>
+
+    <string name="voice_search_content_description">Häälotsing</string>
+
+    <string name="voice_search_explainer">Räägi nüüd</string>
+
+    <string name="saved_login_duplicate">Selle kasutajanimega sisselogimine on juba olemas</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">Veebiaadress peab sisaldama "https://" või "http://".</string>
+
+    <string name="add_login_hostname_invalid_text_2">Nõutav kehtiv hostinimi</string>
+
+
+    <string name="synced_tabs_connect_another_device">Ühendage teine seade.</string>
+
+    <string name="synced_tabs_reauth">Palun autentige uuesti.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Palun lubage vahekaartide sünkroonimine.</string>
+
+    <string name="synced_tabs_no_tabs">Teil ei ole teistel seadmetel Waterfoxis ühtegi vahekaarti avatud.</string>
+
+    <string name="synced_tabs_sign_in_message">Vaadake oma teiste seadmete vahekaartide nimekirja.</string>
+
+    <string name="synced_tabs_sign_in_button">Sünkroonimiseks sisse logida</string>
+
+    <string name="synced_tabs_no_open_tabs">Avatud vahekaardid puuduvad</string>
+
+    <string name="synced_tabs_expand_group">Laiendage sünkroonitud vahekaartide rühma</string>
+
+    <string name="synced_tabs_collapse_group">Sünkroonitud vahekaartide rühma kokkuvarisemine</string>
+
+
+    <string name="shortcut_max_limit_title">Otsetee limiit on saavutatud</string>
+
+    <string name="shortcut_max_limit_content">Uue otsetee lisamiseks eemaldage üks otsetee. Puudutage ja hoidke saiti ning valige eemaldamine.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">Okei, sain selle</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Otseteed</string>
+
+    <string name="top_sites_rename_dialog_title">Nimi</string>
+
+    <string name="shortcut_name_hint">Lühinimi</string>
+
+    <string name="top_sites_rename_dialog_ok">OK</string>
+
+    <string name="top_sites_rename_dialog_cancel">Tühista</string>
+
+    <string name="top_sites_menu_settings">Seaded</string>
+
+    <string name="top_sites_menu_sponsor_privacy">Meie sponsorid ja teie privaatsus</string>
+
+    <string name="top_sites_sponsored_label">Sponsoreeritud</string>
+
+
+    <string name="inactive_tabs_title">Mitteaktiivsed vahekaardid</string>
+
+    <string name="inactive_tabs_delete_all">Sulge kõik mitteaktiivsed vahekaardid</string>
+
+    <string name="inactive_tabs_expand_content_description">Laiendage mitteaktiivseid vahekaarte</string>
+
+    <string name="inactive_tabs_collapse_content_description">Sulge mitteaktiivsed vahekaardid</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automaatne sulgemine ühe kuu pärast?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox suudab sulgeda vahekaardid, mida te pole viimase kuu jooksul vaadanud.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AUTOMAATSE SULGEMISE SISSELÜLITAMINE</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Automaatne sulgemine lubatud</string>
+
+
+    <string name="default_browser_experiment_card_text">Seadistage veebisaitide, e-kirjade ja sõnumite lingid automaatselt Waterfoxis avatavaks.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Eemaldage</string>
+
+
+    <string name="radio_preference_info_content_description">Klõpsake lisateabe saamiseks</string>
+
+
+    <string name="action_bar_up_description">Navigeeri ülespoole</string>
+
+
+    <string name="privacy_content_close_button_content_description">Sulge</string>
+
+    <string name="waterfox_suggest_header">Waterfox Soovitan</string>
+</resources>

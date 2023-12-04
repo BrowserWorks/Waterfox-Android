@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Zasebno %s</string>
+    
+    <string name="app_name_private_4">%s (zasebno)</string>
+
+    
+    
+    <string name="content_description_menu">Več možnosti</string>
+    
+    <string name="content_description_private_browsing_button">Omogočanje zasebnega brskanja</string>
+    
+    <string name="content_description_disable_private_browsing_button">Onemogočanje zasebnega brskanja</string>
+    
+    <string name="search_hint">Iskanje ali vnos naslova</string>
+    
+    <string name="application_search_hint">Vnesite iskalne izraze</string>
+    
+    <string name="no_open_tabs_description">Tu bodo prikazani odprti zavihki.</string>
+    
+    <string name="no_private_tabs_description">Tu bodo prikazani vaši zasebni zavihki.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d izbrano</string>
+    
+    <string name="tab_tray_add_new_collection">Dodajanje nove zbirke</string>
+    
+    <string name="tab_tray_add_new_collection_name">Ime</string>
+    
+    <string name="tab_tray_select_collection">Izberite zbirko</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Izhod iz načina več izbir</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Shranjevanje izbranih zavihkov v zbirko</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Izbrani</string>
+
+    
+    
+    <string name="recently_saved_title">Nedavno shranjeno</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Prikaži vse shranjene zaznamke</string>
+    
+    <string name="recently_saved_menu_item_remove">Odstranite</string>
+
+    
+    <string name="about_content">%1$s je izdelal BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s izbriše zgodovino iskanja in brskanja iz zasebnih zavihkov, ko jih zaprete ali opustite aplikacijo. Čeprav s tem ne postanete anonimni za spletna mesta ali svojega ponudnika internetnih storitev, pa lahko svoje spletno početje lažje ohranite zasebno pred vsemi drugimi, ki uporabljajo to napravo.</string>
+    <string name="private_browsing_common_myths">Pogosti miti o zasebnem brskanju</string>
+
+    
+    
+    <string name="cfr_message">Dodajte bližnjico za odpiranje zasebnih zavihkov z začetnega zaslona.</string>
+    
+    <string name="cfr_pos_button_text">Dodajanje bližnjice</string>
+    
+    <string name="cfr_neg_button_text">Ne, hvala.</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Nastavite lahko %1$s za samodejno odpiranje povezav v aplikacijah.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Pojdite v nastavitve</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Zavrnite</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Zavrnite</string>
+
+    
+    
+    <string name="tcp_cfr_message">Naša najmočnejša funkcija zasebnosti doslej izolira sledilnike med spletnimi mesti.</string>
+    
+    <string name="tcp_cfr_learn_more">Preberite več o celoviti zaščiti piškotkov</string>
+
+    
+    <string name="camera_permissions_needed_message">Potreben je dostop do fotoaparata. Pojdite v nastavitve sistema Android, tapnite Dovoljenja in tapnite Dovoli.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Pojdite v nastavitve</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Zavrnite</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Odprte zavihke, ki jih v zadnjem dnevu, tednu ali mesecu niste pregledali, nastavite tako, da se samodejno zaprejo.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Prikaži možnosti</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Zavrnite</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Zavihek, ki si ga niste ogledali že dva tedna, se premakne sem.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Izklop v nastavitvah</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Samodejno zaprtje po enem mesecu?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s lahko zaprete zavihke, ki si jih v zadnjem mesecu niste ogledali.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Zapri</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Vklop samodejnega zapiranja</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Nov zavihek</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Nov zasebni zavihek</string>
+
+    
+    
+    <string name="recent_tabs_header">Skočite nazaj</string>
+    
+    <string name="recent_tabs_show_all">Pokaži vse</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Prikaži vse nedavne zavihke</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Vaše iskanje \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d mest</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Oglejte si vse sinhronizirane zavihke</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Sinhronizirana naprava</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Odstranite</string>
+    
+    <string name="recent_tab_menu_item_remove">Odstranite</string>
+
+    
+    
+    <string name="history_metadata_header_2">Nedavno obiskani</string>
+    
+    <string name="recently_visited_menu_item_remove">Odstranite</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Prikaži vsa pretekla raziskovanja</string>
+
+    
+    
+    <string name="browser_menu_back">Nazaj</string>
+    
+    <string name="browser_menu_forward">Naprej</string>
+    
+    <string name="browser_menu_refresh">Osvežitev</string>
+    
+    <string name="browser_menu_stop">Ustavite</string>
+    
+    <string name="browser_menu_add_ons">Dodatki</string>
+    
+    <string name="no_add_ons">Tu ni dodatkov</string>
+    
+    <string name="browser_menu_help">Pomoč</string>
+    
+    <string name="browser_menu_settings">Nastavitve</string>
+    
+    <string name="browser_menu_library">Knjižnica</string>
+    
+    <string name="browser_menu_desktop_site">Namizno mesto</string>
+    
+    <string name="browser_menu_add_to_homescreen">Dodajanje v začetni zaslon</string>
+    
+    <string name="browser_menu_install_on_homescreen">Namestitev</string>
+    
+    <string name="resync_button_content_description">Ponovna sinhronizacija</string>
+    
+    <string name="browser_menu_find_in_page">Poiščite na strani</string>
+    
+    <string name="browser_menu_save_to_collection_2">Shrani v zbirko</string>
+    
+    <string name="browser_menu_share">Delite</string>
+    
+    <string name="browser_menu_open_in_waterfox">Odprto v %1$s</string>
+    
+    <string name="browser_menu_powered_by">NAPAJENI Z %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Poganja ga %1$s</string>
+    
+    <string name="browser_menu_read">Pogled bralca</string>
+    
+    <string name="browser_menu_read_close">Zapri pogled bralca</string>
+    
+    <string name="browser_menu_open_app_link">Odprite v aplikaciji</string>
+    
+    <string name="browser_menu_customize_reader_view">Prilagoditev pogleda bralnika</string>
+    
+    <string name="browser_menu_add">Dodaj</string>
+    
+    <string name="browser_menu_edit">Uredi</string>
+    
+    <string name="browser_menu_customize_home_1">Prilagodite domačo stran</string>
+    
+    
+    <string name="browser_toolbar_home">Začetni zaslon</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Izbrani jezik</string>
+    
+    <string name="default_locale_text">Upoštevajte jezik naprave</string>
+    
+    <string name="locale_search_hint">Jezik iskanja</string>
+
+    
+    
+    <string name="search_scan_button">Skeniranje</string>
+    
+    <string name="search_engine_button">Iskalnik</string>
+    
+    <string name="search_shortcuts_engine_settings">Nastavitve iskalnika</string>
+    
+    <string name="awesomebar_clipboard_title">Izpolnite povezavo iz odložišča</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Omogočite</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Ne dovolite</string>
+    
+    <string name="search_suggestions_onboarding_title">Dovolite predloge za iskanje v zasebnih sejah?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s bo vse, kar vnesete v naslovno vrstico, delil z vašim privzetim iskalnikom.</string>
+    
+    <string name="search_engine_suggestions_title">Iskanje %s</string>
+    
+    <string name="search_engine_suggestions_description">Iskanje neposredno iz naslovne vrstice</string>
+    
+    <string name="search_settings_menu_item">Nastavitve iskanja</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Zdaj lahko lažje nadaljujete z delom, ki ste ga končali.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Preskočite na odprte zavihke, zaznamke in zgodovino brskanja.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Čisti, urejeni zavihki</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Z izboljšano postavitvijo in samodejnim zapiranjem zavihkov se znebite nereda v zavihkih.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Nedavna iskanja</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Na domači strani in v zavihkih si lahko ponovno ogledate zadnja iskanja.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Spoznajte svojo prilagojeno domačo stran. Tu so prikazani zadnji zavihki, zaznamki in rezultati iskanja.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Dobrodošli v bolj osebnem internetu</string>
+    
+    <string name="onboarding_home_welcome_description">Več barv. Boljša zasebnost. Enaka zavezanost ljudem pred dobičkom.</string>
+    
+    <string name="onboarding_home_sync_title_3">Preskakovanje s telefona na prenosni računalnik in nazaj</string>
+    
+    <string name="onboarding_home_sync_description">Z zavihki iz drugih naprav, ki so zdaj na domači strani, lahko nadaljujete, kjer ste končali.</string>
+    
+    <string name="onboarding_home_get_started_button">Začnite</string>
+    
+    <string name="onboarding_home_sign_in_button">Prijavite se</string>
+    
+    <string name="onboarding_home_skip_button">Preskoči</string>
+    
+    <string name="onboarding_home_content_description_close_button">Zapri</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Odprite nov zavihek %1$s</string>
+    
+    <string name="search_widget_text_short">Iskanje</string>
+    
+    <string name="search_widget_text_long">Iskanje po spletu</string>
+    
+    <string name="search_widget_voice">Glasovno iskanje</string>
+
+    
+    
+    <string name="settings">Nastavitve</string>
+    
+    <string name="preferences_category_general">Splošno</string>
+    
+    <string name="preferences_category_about">O</string>
+    
+    <string name="preferences_default_search_engine">Privzet iskalnik</string>
+    
+    <string name="preferences_search">Iskanje</string>
+    
+    <string name="preferences_search_address_bar">Naslovna vrstica</string>
+    
+    <string name="preferences_rate">Ocenite v storitvi Google Play</string>
+    
+    <string name="preferences_about">O %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Nastavite kot privzeti brskalnik</string>
+    
+    <string name="preferences_category_advanced">Napredno</string>
+    
+    <string name="preferences_category_privacy_security">Zasebnost in varnost</string>
+    
+    <string name="preferences_site_permissions">Dovoljenja za lokacijo</string>
+    
+    <string name="preferences_private_browsing_options">Zasebno brskanje</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Odpiranje povezav v zasebnem zavihku</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Omogočanje posnetkov zaslona v zasebnem brskanju</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Če je dovoljeno, bodo zasebni zavihki vidni tudi, ko je odprtih več aplikacij.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Dodajanje bližnjice za zasebno brskanje</string>
+    
+    <string name="preferences_https_only_title">Način samo HTTPS</string>
+    
+    <string name="preferences_https_only_summary">Samodejno se poskuša povezati s spletnimi mesti, ki za večjo varnost uporabljajo šifrirni protokol HTTPS.</string>
+    
+    <string name="preferences_https_only_on">Na spletni strani</string>
+    
+    <string name="preferences_https_only_off">Izklopljeno</string>
+    
+    <string name="preferences_http_only_learn_more">Preberite več</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Omogoči v vseh zavihkih</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Omogočite samo v zasebnih zavihkih</string>
+    
+    <string name="errorpage_httpsonly_title">Varno spletno mesto ni na voljo</string>
+    
+    <string name="errorpage_httpsonly_message_title">Najverjetneje spletno mesto preprosto ne podpira protokola HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Vendar je mogoče, da je vpleten tudi napadalec. Če nadaljujete obisk spletnega mesta, ne vnašajte nobenih občutljivih podatkov. Če boste nadaljevali, bo način samo HTTPS za spletno mesto začasno izklopljen.</string>
+    
+    <string name="preferences_accessibility">Dostopnost</string>
+    
+    <string name="preferences_override_fxa_server">Strežnik računa Waterfox po meri</string>
+    
+    <string name="preferences_override_sync_tokenserver">Sinhronizacijski strežnik po meri</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Spremenjen strežnik računa/sinhronizacije Firefox. Za uporabo sprememb zaključite aplikacijo...</string>
+    
+    <string name="preferences_category_account">Račun</string>
+    
+    <string name="preferences_toolbar">Orodna vrstica</string>
+    
+    <string name="preferences_theme">Tema</string>
+    
+    <string name="preferences_home_2">Domača stran</string>
+    
+    <string name="preferences_gestures">Geste</string>
+    
+    <string name="preferences_customize">Prilagodite</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sinhronizirajte zaznamke, zgodovino in drugo s svojim računom Waterfox</string>
+    
+    <string name="preferences_sign_in_description_2">Prijavite se in sinhronizirajte zavihke, zaznamke, gesla in drugo.</string>
+    
+    <string name="preferences_account_default_name">Račun za lisico Waterfox</string>
+    
+    <string name="preferences_account_sync_error">Ponovno vzpostavite povezavo za nadaljevanje sinhronizacije</string>
+    
+    <string name="preferences_language">Jezik</string>
+    
+    <string name="preferences_remote_debugging">Oddaljeno razhroščevanje prek USB</string>
+    
+    <string name="preferences_show_search_engines">Prikaži iskalnike</string>
+    
+    <string name="preferences_show_search_suggestions">Prikaži predloge za iskanje</string>
+    
+    <string name="preferences_show_voice_search">Prikaži glasovno iskanje</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Prikaži v zasebnih sejah</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Prikaži predloge za odložišče</string>
+    
+    <string name="preferences_search_browsing_history">Iskanje zgodovine brskanja</string>
+    
+    <string name="preferences_search_bookmarks">Iskanje zaznamkov</string>
+    
+    <string name="preferences_search_synced_tabs">Iskanje sinhroniziranih zavihkov</string>
+    
+    <string name="preferences_account_settings">Nastavitve računa</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Samodejno dokončanje URL-jev</string>
+    
+    <string name="preferences_open_links_in_apps">Odpiranje povezav v aplikacijah</string>
+    
+    <string name="preferences_external_download_manager">Zunanji upravitelj prenosa</string>
+    
+    <string name="preferences_addons">Dodatki</string>
+    
+    <string name="preferences_notifications">Obvestila</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Zbirka dodatkov po meri</string>
+    
+    <string name="customize_addon_collection_ok">V REDU</string>
+    
+    <string name="customize_addon_collection_cancel">Prekliči</string>
+    
+    <string name="customize_addon_collection_hint">Ime zbirke</string>
+    
+    <string name="customize_addon_collection_user_hint">Lastnik zbirke (ID uporabnika)</string>
+    
+    <string name="toast_customize_addon_collection_done">Zbirka dodatkov je bila spremenjena. Opustitev aplikacije za uporabo sprememb...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Skočite nazaj</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Nedavni zaznamki</string>
+    
+    <string name="customize_toggle_recently_visited">Nedavno obiskani</string>
+    
+    <string name="customize_wallpapers">Ozadja</string>
+    
+    <string name="customize_toggle_contile">Sponzorirane bližnjice</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Tapeta Predmet: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Ozadje posodobljeno!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Oglejte si</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Tapeto spremenite tako, da tapnete logotip domače strani Waterfox</string>
+    
+    <string name="wallpaper_logo_content_description">Logotip Waterfox - spremenite ozadje, gumb</string>
+
+    
+    
+    <string name="addon_not_supported_error">Dodatek ni podprt</string>
+    
+    <string name="addon_already_installed">Dodatek je že nameščen</string>
+
+    
+    
+    <string name="preferences_sync_now">Sinhronizirajte zdaj</string>
+    
+    <string name="preferences_sync_category">Izberite, kaj želite sinhronizirati</string>
+    
+    <string name="preferences_sync_history">Zgodovina</string>
+    
+    <string name="preferences_sync_bookmarks">Zaznamki</string>
+    
+    <string name="preferences_sync_logins">Prijave</string>
+    
+    <string name="preferences_sync_tabs_2">Odprti zavihki</string>
+    
+    <string name="preferences_sign_out">Odjavite se</string>
+    
+    <string name="preferences_sync_device_name">Ime naprave</string>
+    
+    <string name="empty_device_name_error">Ime naprave ne sme biti prazno.</string>
+    
+    <string name="sync_syncing_in_progress">Sinhronizacija...</string>
+    
+    <string name="sync_failed_summary">Sinhronizacija ni uspela. Zadnji uspeh: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Sinhronizacija ni uspela. Zadnja sinhronizacija: nikoli</string>
+    
+    <string name="sync_last_synced_summary">Zadnja sinhronizacija: %s</string>
+    
+    <string name="sync_never_synced_summary">Zadnja sinhronizacija: nikoli</string>
+    
+    <string name="default_device_name_2">%1$s na %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kreditne kartice</string>
+    
+    <string name="preferences_sync_address">Naslovi</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Prejeti zavihki</string>
+    
+    <string name="fxa_received_tab_channel_description">Obvestila za zavihke, prejeta iz drugih naprav Waterfox.</string>
+    
+    <string name="fxa_tab_received_notification_name">Prejeta zavihek</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Zavihek iz %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Izjeme</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Vklopite za vsa spletna mesta</string>
+    
+    <string name="exceptions_empty_message_description">Z izjemami lahko onemogočite zaščito pred sledenjem za izbrana spletna mesta.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Preberite več</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Vklopite sinhronizacijo</string>
+    
+    <string name="preferences_sync_2">Sinhronizirajte in shranite svoje podatke</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Prijavite se in se ponovno povežite</string>
+    
+    <string name="preferences_sync_remove_account">Odstranitev računa</string>
+
+    
+    
+    <string name="pair_instructions_2">Skenirajte kodo QR, prikazano na &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Vrh</string>
+    
+    <string name="preference_bottom_toolbar">Spodnji del</string>
+
+    
+    
+    <string name="preference_light_theme">Svetloba</string>
+    
+    <string name="preference_dark_theme">Dark</string>
+    
+    <string name="preference_auto_battery_theme">Nastavljeno s programom za varčevanje z baterijo</string>
+    
+    <string name="preference_follow_device_theme">Sledite temi naprave</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Potegnite za osvežitev</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Pomikanje za skrivanje orodne vrstice</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Če želite preklopiti zavihke, potegnite orodno vrstico vstran</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Podrsnite orodno vrstico navzgor, da odprete zavihke</string>
+
+    
+    
+    <string name="library_downloads">Prenosi</string>
+    
+    <string name="library_bookmarks">Zaznamki</string>
+    
+    <string name="library_desktop_bookmarks_root">Zaznamki na namizju</string>
+    
+    <string name="library_desktop_bookmarks_menu">Meni z zaznamki</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Orodna vrstica zaznamkov</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Druge zaznamke</string>
+    
+    <string name="library_history">Zgodovina</string>
+    
+    <string name="library_new_tab">Nov zavihek</string>
+    
+    <string name="settings_title">Nastavitve</string>
+    
+    <string name="content_description_close_button">Zapri</string>
+
+    
+    <string name="history_search_group_site">%d mesto</string>
+    
+    <string name="history_search_group_sites">%d mest</string>
+
+    
+    <string name="library_recently_closed_tabs">Nedavno zaprti zavihki</string>
+    
+    <string name="recently_closed_show_full_history">Prikaži celotno zgodovino</string>
+    
+    <string name="recently_closed_tabs">%d zavihkov</string>
+    
+    <string name="recently_closed_tab">%d zavihek</string>
+    
+    <string name="recently_closed_empty_message">Tu ni nedavno zaprtih zavihkov</string>
+
+    
+    
+    <string name="preferences_tabs">Zavihki</string>
+    
+    <string name="preferences_tab_view">Pogled na zavihek</string>
+    
+    <string name="tab_view_list">Seznam</string>
+    
+    <string name="tab_view_grid">Mreža</string>
+    
+    <string name="preferences_close_tabs">Zapri zavihke</string>
+    
+    <string name="close_tabs_manually">Nikoli</string>
+    
+    <string name="close_tabs_after_one_day">Po enem dnevu</string>
+    
+    <string name="close_tabs_after_one_week">Po enem tednu</string>
+    
+    <string name="close_tabs_after_one_month">Po enem mesecu</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Samodejno zapiranje odprtih zavihkov</string>
+
+    
+    
+    <string name="preferences_opening_screen">Otvoritveni zaslon</string>
+    
+    <string name="opening_screen_homepage">Domača stran</string>
+    
+    <string name="opening_screen_last_tab">Zadnji zavihek</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Domača stran po štirih urah neaktivnosti</string>
+    
+    <string name="close_tabs_manually_summary">Ročno zaprite</string>
+    
+    <string name="close_tabs_after_one_day_summary">Zapri po enem dnevu</string>
+    
+    <string name="close_tabs_after_one_week_summary">Zapri po enem tednu</string>
+    
+    <string name="close_tabs_after_one_month_summary">Zapri po enem mesecu</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Stare zavihke premaknite v neaktivne</string>
+    
+    <string name="preferences_inactive_tabs_title">Zavihek, ki si ga niste ogledali dva tedna, se premakne v neaktivni razdelek.</string>
+
+    
+    
+    <string name="tab_header_label">Odprti zavihki</string>
+    
+    <string name="tabs_header_private_tabs_title">Zasebni zavihki</string>
+    
+    <string name="tabs_header_synced_tabs_title">Sinhronizirani zavihki</string>
+    
+    <string name="add_tab">Dodajanje zavihka</string>
+    
+    <string name="add_private_tab">Dodaj zasebni zavihek</string>
+    
+    <string name="tab_drawer_fab_content">Zasebno</string>
+    
+    <string name="tab_drawer_fab_sync">Sinhronizacija</string>
+    
+    <string name="tab_tray_menu_item_share">Skupna raba vseh zavihkov</string>
+    
+    <string name="tab_tray_menu_recently_closed">Nedavno zaprti zavihki</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Nedavno zaprto</string>
+    
+    <string name="tab_tray_menu_account_settings">Nastavitve računa</string>
+    
+    <string name="tab_tray_menu_tab_settings">Nastavitve zavihka</string>
+    
+    <string name="tab_tray_menu_item_close">Zapri vse zavihke</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Zaznamek</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Zapri</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Skupna raba izbranih zavihkov</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Meni z izbranimi zavihki</string>
+    
+    <string name="remove_tab_from_collection">Odstranitev zavihka iz zbirke</string>
+    
+    <string name="tabs_tray_select_tabs">Izberite zavihke</string>
+    
+    <string name="close_tab">Zapri zavihek</string>
+    
+    <string name="close_tab_title">Zapri zavihek %s</string>
+    
+    <string name="open_tabs_menu">Odprti meniji zavihkov</string>
+    
+    <string name="tabs_menu_save_to_collection1">Shranjevanje zavihkov v zbirko</string>
+    
+    <string name="collection_delete">Brisanje zbirke</string>
+    
+    <string name="collection_rename">Preimenovanje zbirke</string>
+    
+    <string name="collection_open_tabs">Odprti zavihki</string>
+    
+    <string name="collection_name_hint">Ime zbirke</string>
+	
+	<string name="rename_top_site">Preimenovanje</string>
+	
+	<string name="remove_top_site">Odstranite</string>
+    
+    <string name="delete_from_history">Brisanje iz zgodovine</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (zasebni način)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Drugi zavihki</string>
+
+    
+    
+    <string name="history_search_1">Vnesite iskalne izraze</string>
+    
+    <string name="history_delete_all">Brisanje zgodovine</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Zgodovina Izbrisano</string>
+    
+    <string name="history_delete_single_item_snackbar">Izbrisano %1$s</string>
+    
+    <string name="history_delete_item">Izbriši</string>
+    
+    <string name="history_multi_select_title">%1$d izbrano</string>
+    
+    <string name="history_today">Danes</string>
+    
+    <string name="history_yesterday">Včeraj</string>
+    
+    <string name="history_7_days">Zadnjih 7 dni</string>
+    
+    <string name="history_30_days">Zadnjih 30 dni</string>
+    
+    <string name="history_older">Starejši</string>
+    
+    <string name="history_empty_message">Tukaj ni zgodovine</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Odstranjeni prenosi</string>
+    
+    <string name="download_delete_single_item_snackbar">Odstranjeno %1$s</string>
+    
+    <string name="download_empty_message_1">Ni prenesenih datotek</string>
+    
+    <string name="download_multi_select_title">%1$d izbrano</string>
+    
+    <string name="download_delete_item_1">Odstranite</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Žal mi je. %1$s ne more naložiti te strani.</string>
+    
+    <string name="tab_crash_send_report">Pošljite poročilo o trku v brskalnik BrowserWorks</string>
+    
+    <string name="tab_crash_close">Zapri zavihek</string>
+    
+    <string name="tab_crash_restore">Zavihek Obnovitev</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Ste prepričani, da želite izbrisati to mapo?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s izbriše izbrane elemente.</string>
+    
+    <string name="bookmark_delete_negative">Prekliči</string>
+    
+    <string name="bookmark_add_folder">Dodajanje mape</string>
+    
+    <string name="bookmark_saved_snackbar">Zaznamek shranjen!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Uredi</string>
+    
+    <string name="bookmark_menu_copy_button">Kopiraj</string>
+    
+    <string name="bookmark_menu_share_button">Delite</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Odprite v novem zavihku</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Odprite v zasebnem zavihku</string>
+    
+    <string name="bookmark_menu_delete_button">Izbriši</string>
+    
+    <string name="bookmark_menu_save_button">Shrani</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d izbrano</string>
+    
+    <string name="edit_bookmark_fragment_title">Urejanje zaznamka</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Urejanje mape</string>
+    
+    <string name="bookmark_sign_in_button">Prijavite se in si oglejte sinhronizirane zaznamke</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">IME</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Dodajanje mape</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Izberite mapo</string>
+    
+    <string name="bookmark_empty_title_error">Imeti mora naslov</string>
+    
+    <string name="bookmark_invalid_url_error">Nepravilen URL</string>
+    
+    <string name="bookmarks_empty_message">Tukaj ni zaznamkov</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Izbrisano %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Brisanje zaznamkov</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Brisanje izbranih map</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Vnesite iskalne izraze</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Pojdite v Nastavitve</string>
+    
+    <string name="quick_settings_sheet">List s hitrimi nastavitvami</string>
+    
+    <string name="phone_feature_recommended">Priporočeno</string>
+    
+    <string name="clear_permissions">Očistite dovoljenja</string>
+    
+    <string name="clear_permissions_positive">V REDU</string>
+    
+    <string name="clear_permissions_negative">Prekliči</string>
+    
+    <string name="clear_permission">Jasno dovoljenje</string>
+    
+    <string name="clear_permission_positive">V REDU</string>
+    
+    <string name="clear_permission_negative">Prekliči</string>
+    
+    <string name="clear_permissions_on_all_sites">Jasna dovoljenja za vsa spletna mesta</string>
+    
+    <string name="preference_browser_feature_autoplay">Samodejno predvajanje</string>
+    
+    <string name="preference_phone_feature_camera">Fotoaparat</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+    
+    <string name="preference_phone_feature_location">Lokacija</string>
+    
+    <string name="preference_phone_feature_notification">Obvestilo</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Trajno shranjevanje</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Piškotki za različna spletna mesta</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">Vsebina z nadzorom DRM</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Prosite za dovoljenje</string>
+    
+    <string name="preference_option_phone_feature_blocked">Blokirana stran</string>
+    
+    <string name="preference_option_phone_feature_allowed">Dovoljeno</string>
+    
+    <string name="phone_feature_blocked_by_android">Blokira ga sistem Android</string>
+    
+    <string name="preference_exceptions">Izjeme</string>
+    
+    <string name="tracking_protection_on">Na spletni strani</string>
+    
+    <string name="tracking_protection_off">Izklopljeno</string>
+    
+    <string name="preference_option_autoplay_allowed2">Omogočanje zvoka in videoposnetkov</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Omogočanje zvoka in videoposnetkov</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blokiranje zvoka in videoposnetkov samo za mobilni prenos podatkov</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Zvok in video se predvajata v omrežju Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Blokirajte samo zvok</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Blokirajte samo zvok</string>
+    
+    <string name="preference_option_autoplay_blocked3">Blokiranje zvoka in videa</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Blokiranje zvoka in videa</string>
+    
+    <string name="delete_browsing_data_quit_on">Na spletni strani</string>
+    
+    <string name="delete_browsing_data_quit_off">Izklopljeno</string>
+    
+    <string name="https_only_on">Na spletni strani</string>
+    
+    <string name="https_only_off">Izklopljeno</string>
+
+    
+    
+    <string name="collections_header">Zbirke</string>
+    
+    <string name="collection_menu_button_content_description">Meni zbirke</string>
+    
+    <string name="no_collections_description2">Zberite stvari, ki so vam pomembne.\nSkupite podobna iskanja, spletna mesta in zavihke za hiter kasnejši dostop.</string>
+    
+    <string name="create_collection_select_tabs">Izberite zavihke</string>
+    
+    <string name="create_collection_select_collection">Izberite zbirko</string>
+    
+    <string name="create_collection_name_collection">Zbiranje imen</string>
+    
+    <string name="create_collection_add_new_collection">Dodajanje nove zbirke</string>
+    
+    <string name="create_collection_select_all">Izberite vse</string>
+    
+    <string name="create_collection_deselect_all">Izberi vse</string>
+    
+    <string name="create_collection_save_to_collection_empty">Izberite zavihke, ki jih želite shraniti</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d izbranih zavihkov</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">%d izbrani zavihek</string>
+    
+    <string name="create_collection_tabs_saved">Oznake so shranjene!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Zbirka shranjena!</string>
+    
+    <string name="create_collection_tab_saved">Klopka je shranjena!</string>
+    
+    <string name="create_collection_close">Zapri</string>
+    
+    <string name="create_collection_save">Shrani</string>
+    
+    <string name="create_collection_view">Oglejte si</string>
+    
+    <string name="create_collection_positive">V REDU</string>
+    
+    <string name="create_collection_negative">Prekliči</string>
+
+    
+    <string name="create_collection_default_name">Zbirka %d</string>
+
+    
+    
+    <string name="share_header_2">Delite</string>
+    
+    <string name="share_button_content_description">Delite</string>
+    
+    <string name="share_device_subheader">Pošlji v napravo</string>
+    
+    <string name="share_link_all_apps_subheader">Vsi ukrepi</string>
+    
+    <string name="share_link_recent_apps_subheader">Nedavno uporabljen</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopiranje v odložišče</string>
+    
+    <string name="toast_copy_link_to_clipboard">Kopiranje v odložišče</string>
+    
+    <string name="sync_menu_sign_in">Prijavite se za sinhronizacijo</string>
+    
+    <string name="sync_sign_in">Prijavite se v sinhronizacijo</string>
+    
+    <string name="sync_send_to_all">Pošlji v vse naprave</string>
+    
+    <string name="sync_reconnect">Ponovna povezava s sinhronizacijo</string>
+    
+    <string name="sync_offline">Brez povezave</string>
+    
+    <string name="sync_connect_device">Priključite drugo napravo</string>
+    
+    <string name="sync_connect_device_dialog">Če želite poslati zavihek, se prijavite v program Waterfox v vsaj eni drugi napravi.</string>
+    
+    <string name="sync_confirmation_button">Imam ga</string>
+    
+    <string name="share_error_snackbar">Ne morem deliti s to aplikacijo</string>
+    
+    <string name="sync_add_new_device_title">Pošlji v napravo</string>
+    
+    <string name="sync_add_new_device_message">Ni povezanih naprav</string>
+    
+    <string name="sync_add_new_device_learn_button">Več o pošiljanju zavihkov...</string>
+    
+    <string name="sync_add_new_device_connect_button">Priključite drugo napravo...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Zapri zasebne zavihke</string>
+    
+    <string name="notification_marketing_channel_name">Trženje</string>
+    
+    <string name="notification_default_browser_title">%1$s je hitro in zasebno</string>
+    
+    <string name="notification_default_browser_text">Naj bo %1$s vaš privzeti brskalnik</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Zbirka izbrisana</string>
+    
+    <string name="snackbar_collection_renamed">Preimenovanje zbirke</string>
+    
+    <string name="snackbar_tab_closed">Zavihek je zaprt</string>
+    
+    <string name="snackbar_tabs_closed">Zaprti zavihki</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Shranjene zaznamke!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Dodano v bližnjice!</string>
+    
+    <string name="snackbar_private_tab_closed">Zasebni zavihek je zaprt</string>
+    
+    <string name="snackbar_private_tabs_closed">Zasebni zavihki so zaprti</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Odstranjeno spletno mesto</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Dovolite %1$s odpreti %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">DOVOLITI</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Spletni naslov ni veljaven.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">V REDU</string>
+    
+    <string name="tab_collection_dialog_message">Ste prepričani, da želite izbrisati %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Če izbrišete ta zavihek, izbrišete celotno zbirko. Nove zbirke lahko ustvarite kadar koli.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Brisanje %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Izbriši</string>
+    
+    <string name="full_screen_notification">Vstop v celozaslonski način</string>
+    
+    <string name="url_copied">Prekopiran URL</string>
+    
+    <string name="accessibility_text_size_sample_text_1">To je vzorčno besedilo. Tukaj je prikazano, kako se besedilo prikaže, če s to nastavitvijo povečate ali zmanjšate velikost.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Povečanje ali pomanjšanje besedila na spletnih mestih</string>
+    
+    <string name="preference_accessibility_font_size_title">Velikost pisave</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Samodejno določanje velikosti pisave</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Velikost pisave bo ustrezala nastavitvam sistema Android. Tukaj onemogočite upravljanje velikosti pisave.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Brisanje podatkov o brskanju</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Odprti zavihki</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d zavihkov</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Zgodovina brskanja in podatki o spletnem mestu</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d naslovov</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Piškotki</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Odjavili se boste iz večine spletnih mest.</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Slike in datoteke v predpomnilniku</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Osvobodi prostor za shranjevanje</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Dovoljenja za lokacijo</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Prenosi</string>
+    
+    <string name="preferences_delete_browsing_data_button">Brisanje podatkov o brskanju</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Brisanje podatkov o brskanju ob zaključku</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Samodejno izbriše podatke o brskanju, ko v glavnem meniju izberete \"Quit\".</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Opustite</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">S tem boste izbrisali vse podatke o brskanju.</string>
+    
+    <string name="delete_history_prompt_title">Časovni razpon za brisanje</string>
+    
+    <string name="delete_history_prompt_body">Odstrani zgodovino (vključno z zgodovino, sinhronizirano iz drugih naprav), piškotke in druge podatke o brskanju.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Zadnja ura</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Danes in včeraj</string>
+    
+    <string name="delete_history_prompt_button_everything">Vse</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s izbriše izbrane podatke o brskanju.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Prekliči</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Izbriši</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Brisanje podatkov o brskanju</string>
+    
+    <string name="deleting_browsing_data_in_progress">Brisanje podatkov o brskanju...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Izbriši vsa spletna mesta v "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Prekliči</string>
+    
+    <string name="delete_history_group_prompt_allow">Izbriši</string>
+    
+    <string name="delete_history_group_snackbar">Izbrisana skupina</string>
+
+    
+    
+    <string name="onboarding_header_2">Dobrodošli v bolj zasebnem spletu</string>
+    
+    <string name="onboarding_message">Neodvisni brskalnik, ki deluje na lokalni ravni.</string>
+    
+    <string name="onboarding_account_sign_in_header">Nadaljujte, kjer ste končali</string>
+    
+    <string name="onboarding_manual_sign_in_description">Sinhronizirajte zavihke in gesla med napravami za nemoteno preklapljanje med zasloni.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Prijavite se</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Sinhronizacija je vklopljena</string>
+    
+    <string name="onboarding_tracking_protection_header">Privzeta zaščita zasebnosti</string>
+    
+    <string name="onboarding_tracking_protection_description">Vsebuje popolno zaščito pred piškotki, ki sledilnikom preprečuje, da bi vas s piškotki zasledovali na različnih spletnih mestih.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standardno (privzeto)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Uravnoteženo za zasebnost in zmogljivost. Strani se nalagajo normalno.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Strogo</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokira več sledilnikov, zato se strani nalagajo hitreje, vendar lahko pride do okvare nekaterih funkcij na strani.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Izberite umestitev orodne vrstice</string>
+    
+    <string name="onboarding_toolbar_placement_description">Naj ostane na dnu ali pa jo prestavite na vrh.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Nadzorujete svoje podatke</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox ne zbira nobene telemetrije in vam omogoča nadzor nad vašimi podatki.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Preberite naše obvestilo o zasebnosti</string>
+    
+    <string name="onboarding_conclusion_header">Ste pripravljeni odpreti neverjeten internet?</string>
+    
+    <string name="onboarding_finish">Začnite brskati</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Izberite temo</string>
+    
+    <string name="onboarding_theme_picker_description_2">S temnim načinom prihranite nekaj baterije in vida.</string>
+    
+    <string name="onboarding_theme_automatic_title">Samodejno</string>
+    
+    <string name="onboarding_theme_automatic_summary">Prilagaja se nastavitvam naprave</string>
+    
+    <string name="onboarding_theme_dark_title">Temna tema</string>
+    
+    <string name="onboarding_theme_light_title">Tema svetlobe</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Klopke poslane!</string>
+    
+    <string name="sync_sent_tab_snackbar">Tab poslal!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Ni mogoče poslati</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Skeniranje kode</string>
+    
+    <string name="sign_in_instructions">Waterfox se pri sinhronizaciji podatkov med mobilnim in namiznim računalnikom zanaša na račun Mozilla.&lt;br&gt; V računalniku odprite Waterfox in pojdite na &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla nikakor ni povezana z Waterfoxom.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Pripravljen za skeniranje</string>
+    
+    <string name="sign_in_with_camera">Prijavite se s fotoaparatom</string>
+    
+    <string name="sign_in_with_email">Namesto tega uporabite e-pošto</string>
+    
+    <string name="sign_in_create_account_text">Nimate računa? &lt;u&gt;Zaključite ga&lt;/u&gt; in sinhronizirajte Waterfox med napravami.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s bo prekinil sinhronizacijo z vašim računom, vendar ne bo izbrisal vaših podatkov o brskanju v tej napravi.</string>
+    
+    <string name="sign_out_disconnect">Odklop</string>
+    
+    <string name="sign_out_cancel">Prekliči</string>
+    
+    <string name="bookmark_cannot_edit_root">Ne morem urejati privzetih map</string>
+
+    
+    
+    <string name="etp_settings">Nastavitve zaščite</string>
+    
+    <string name="preference_enhanced_tracking_protection">Izboljšana zaščita pred sledenjem</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Brskajte, ne da bi vam sledili</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Svoje podatke obdržite zase. %s vas ščiti pred številnimi najpogostejšimi sledilniki, ki spremljajo vaše spletno početje.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Preberite več</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standardno (privzeto)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Uravnoteženo za zasebnost in zmogljivost. Strani se nalagajo normalno.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Kaj blokira standardna zaščita pred sledenjem</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Strogo</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokira več sledilnikov, zato se strani nalagajo hitreje, vendar lahko pride do okvare nekaterih funkcij na strani.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Kaj blokira stroga zaščita sledenja</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Po meri</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Izberite, katere sledilnike in skripte želite blokirati.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Kaj blokira zaščita sledenja po meri</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Piškotki</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">sledilniki med spletnimi mesti in družabnimi mediji</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Piškotki z neobiskanih spletnih mest</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">vsi piškotki tretjih oseb (lahko povzročijo okvare spletnih mest).</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Vsi piškotki (povzročijo okvare spletnih mest).</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Izoliranje piškotkov na različnih spletnih mestih</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Spremljanje vsebine</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">V vseh zavihkih</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Samo v zasebnih zavihkih</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Prstni odtisi</string>
+    
+    <string name="enhanced_tracking_protection_details">Podrobnosti</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Blokirana stran</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Dovoljeno</string>
+    
+    <string name="etp_social_media_trackers_title">Spremljevalci družabnih medijev</string>
+    
+    <string name="etp_social_media_trackers_description">Omejuje možnost družabnih omrežij, da sledijo vaši dejavnosti brskanja po spletu.</string>
+    
+    <string name="etp_cookies_title">Piškotki za sledenje med spletnimi mesti</string>
+    
+    <string name="etp_cookies_title_2">Piškotki na različnih spletnih mestih</string>
+    
+    <string name="etp_cookies_description">Blokira piškotke, ki jih oglaševalska omrežja in analitična podjetja uporabljajo za zbiranje podatkov o vašem brskanju po številnih spletnih mestih.</string>
+    
+    <string name="etp_cookies_description_2">Celovita zaščita piškotkov izolira piškotke na spletno mesto, na katerem ste, tako da jih sledilci, kot so oglaševalska omrežja, ne morejo uporabljati za sledenje na različnih spletnih mestih.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">preprečuje dostop zlonamernih skript do vaše naprave za rudarjenje digitalne valute.</string>
+    
+    <string name="etp_fingerprinters_title">Prstni odtisi</string>
+    
+    <string name="etp_fingerprinters_description">prepreči zbiranje podatkov o vaši napravi, ki jih je mogoče uporabiti za sledenje.</string>
+    
+    <string name="etp_tracking_content_title">Spremljanje vsebine</string>
+    
+    <string name="etp_tracking_content_description">prepreči nalaganje zunanjih oglasov, videoposnetkov in druge vsebine, ki vsebuje kodo za sledenje. Lahko vpliva na nekatere funkcije spletnega mesta.</string>
+    
+    <string name="etp_panel_on">Zaščita za to spletno mesto je vklopljena</string>
+    
+    <string name="etp_panel_off">Zaščita je za to spletno mesto izklopljena</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Izboljšana zaščita pred sledenjem je za ta spletna mesta izklopljena.</string>
+    
+    <string name="etp_back_button_content_description">Navigacija nazaj</string>
+    
+    <string name="open_source_licenses_title">%s | Knjižnice OSS</string>
+    
+    <string name="etp_redirect_trackers_title">Sledilci preusmeritev</string>
+    
+    <string name="etp_redirect_trackers_description">Izbriše piškotke, ki jih nastavijo preusmeritve na znana spletna mesta za sledenje.</string>
+    
+    <string name="preference_etp_smartblock_description">Nekateri spodaj označeni sledilniki so bili na tej strani delno odblokirani, ker ste z njimi komunicirali *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Preberite več</string>
+
+    
+    <string name="about_support">Podpora</string>
+    
+    <string name="about_crashes">Nesreče</string>
+    
+    <string name="about_privacy_notice">Obvestilo o zasebnosti</string>
+    
+    <string name="about_know_your_rights">Spoznajte svoje pravice</string>
+    
+    <string name="about_licensing_information">Informacije o licenciranju</string>
+    
+    <string name="about_other_open_source_libraries">Knjižnice, ki jih uporabljamo</string>
+    
+    <string name="about_debug_menu_toast_progress">Meni za odpravljanje napak: %1$d kliknite levo, da omogočite</string>
+    <string name="about_debug_menu_toast_done">Omogočen meni za odpravljanje napak</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopiraj</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Prilepi in pojdi</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Paste</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL, kopiran v odložišče</string>
+
+    
+    <string name="add_to_homescreen_title">Dodajanje v začetni zaslon</string>
+    
+    <string name="add_to_homescreen_cancel">Prekliči</string>
+    
+    <string name="add_to_homescreen_add">Dodaj</string>
+    
+    <string name="add_to_homescreen_continue">Nadaljuj na spletno stran</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Ime bližnjice</string>
+    
+    <string name="add_to_homescreen_description_2">To spletno mesto lahko preprosto dodate na začetni zaslon naprave, da boste imeli takojšen dostop in hitrejše brskanje z izkušnjo, podobno aplikaciji.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Prijave in gesla</string>
+    
+    <string name="preferences_passwords_save_logins">Shranjevanje prijavnih imen in gesel</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Prosite za shranjevanje</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Nikoli ne shranite</string>
+    
+    <string name="preferences_passwords_autofill2">Samodejno izpolnjevanje v %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Izpolnite in shranite uporabniška imena in gesla v spletnih mestih z uporabo %1$s.</string>
+    
+    <string name="preferences_android_autofill">Samodejno izpolnjevanje v drugih aplikacijah</string>
+    
+    <string name="preferences_android_autofill_description">Izpolnite uporabniška imena in gesla v drugih aplikacijah v napravi.</string>
+    
+    <string name="preferences_logins_add_login">Dodajanje prijave</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Sinhronizacija prijav</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Sinhronizacija prijav med napravami</string>
+    
+    <string name="preferences_passwords_saved_logins">Shranjene prijave</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Prijave, ki jih shranite ali sinhronizirate v %s, bodo prikazane tukaj.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Preberite več o storitvi Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Izjeme</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Tu bodo prikazana prijavna imena in gesla, ki niso shranjena.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Za ta spletna mesta se ne shranjujejo prijave in gesla.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Izbriši vse izjeme</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Prijave za iskanje</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Spletna stran</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Uporabniško ime</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Geslo</string>
+    
+    <string name="logins_password_copied">Kopiranje gesla v odložišče</string>
+    
+    <string name="logins_username_copied">Uporabniško ime, kopirano v odložišče</string>
+    
+    <string name="saved_logins_copy_password">Kopiranje gesla</string>
+    
+    <string name="saved_logins_clear_password">Izbriši geslo</string>
+    
+    <string name="saved_login_copy_username">Kopiranje uporabniškega imena</string>
+    
+    <string name="saved_login_clear_username">Jasno uporabniško ime</string>
+    
+    <string name="saved_login_clear_hostname">Počisti ime gostitelja</string>
+    
+    <string name="saved_login_open_site">Odprite spletno mesto v brskalniku</string>
+    
+    <string name="saved_login_reveal_password">Prikaži geslo</string>
+    
+    <string name="saved_login_hide_password">Skrijte geslo</string>
+    
+    <string name="logins_biometric_prompt_message">Odklepanje za ogled shranjenih prijav</string>
+    
+    <string name="logins_warning_dialog_title">Zagotovite si varne prijave in gesla</string>
+    
+    <string name="logins_warning_dialog_message">Nastavite vzorec za zaklepanje naprave, kodo PIN ali geslo, da zaščitite shranjene prijave in gesla pred dostopom, če ima vašo napravo kdo drug.</string>
+    
+    <string name="logins_warning_dialog_later">Pozneje</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Nastavite zdaj</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Odklepanje naprave</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Povečanje na vseh spletnih mestih</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Omogočite, da omogočite ščipanje in povečavo tudi na spletnih mestih, ki to gesto preprečujejo.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Ime (od A do Ž)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Nazadnje uporabljen</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Razvrsti meni za prijave</string>
+
+    
+    
+    <string name="preferences_autofill">Samodejno izpolnjevanje</string>
+    
+    <string name="preferences_addresses">Naslovi</string>
+    
+    <string name="preferences_credit_cards">Kreditne kartice</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Shranjevanje in samodejno izpolnjevanje kartic</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Podatki so šifrirani</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Sinhronizacija kartic med napravami</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Sinhronizacijske kartice</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Dodajanje kreditne kartice</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Upravljanje shranjenih kartic</string>
+    
+    <string name="preferences_addresses_add_address">Dodajte naslov</string>
+    
+    <string name="preferences_addresses_manage_addresses">Upravljanje naslovov</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Shranjevanje in samodejno izpolnjevanje naslovov</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Vključite podatke, kot so številke, e-poštni in dostavni naslovi.</string>
+
+    
+    <string name="credit_cards_add_card">Dodajte kartico</string>
+    
+    <string name="credit_cards_edit_card">Urejanje kartice</string>
+    
+    <string name="credit_cards_card_number">Številka kartice</string>
+    
+    <string name="credit_cards_expiration_date">Datum izteka veljavnosti</string>
+    
+    <string name="credit_cards_expiration_date_month">Datum izteka veljavnosti Mesec</string>
+    
+    <string name="credit_cards_expiration_date_year">Datum izteka veljavnosti Leto</string>
+    
+    <string name="credit_cards_name_on_card">Ime na kartici</string>
+    
+    <string name="credit_cards_menu_delete_card">Brisanje kartice</string>
+    
+    <string name="credit_cards_delete_card_button">Brisanje kartice</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Ste prepričani, da želite izbrisati to kreditno kartico?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Izbriši</string>
+    
+    <string name="credit_cards_menu_save">Shrani</string>
+    
+    <string name="credit_cards_save_button">Shrani</string>
+    
+    <string name="credit_cards_cancel_button">Prekliči</string>
+    
+    <string name="credit_cards_saved_cards">Shranjene kartice</string>
+    
+    <string name="credit_cards_number_validation_error_message">Vnesite veljavno številko kreditne kartice</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Izpolnite to polje</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Odklepanje za ogled shranjenih kartic</string>
+    
+    <string name="credit_cards_warning_dialog_title">Zavarujte svoje kreditne kartice</string>
+    
+    <string name="credit_cards_warning_dialog_message">Nastavite vzorec za zaklepanje naprave, kodo PIN ali geslo za zaščito shranjenih kreditnih kartic pred dostopom, če ima vašo napravo kdo drug.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Nastavite zdaj</string>
+    
+    <string name="credit_cards_warning_dialog_later">Pozneje</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Odklepanje naprave</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Odklepanje uporabe shranjenih podatkov o kreditni kartici</string>
+    
+    <string name="addresses_add_address">Dodajte naslov</string>
+    
+    <string name="addresses_edit_address">Urejanje naslova</string>
+    
+    <string name="addresses_manage_addresses">Upravljanje naslovov</string>
+    
+    <string name="addresses_first_name">Ime in priimek</string>
+    
+    <string name="addresses_middle_name">Srednje ime</string>
+    
+    <string name="addresses_last_name">Priimek</string>
+    
+    <string name="addresses_street_address">Naslov ulice</string>
+    
+    <string name="addresses_city">Mesto</string>
+    
+    <string name="addresses_state">Država</string>
+    
+    <string name="addresses_province">Pokrajina</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Država ali regija</string>
+    
+    <string name="addresses_phone">Telefon</string>
+    
+    <string name="addresses_email">E-pošta</string>
+    
+    <string name="addresses_save_button">Shrani</string>
+    
+    <string name="addresses_cancel_button">Prekliči</string>
+    
+    <string name="addressess_delete_address_button">Izbriši naslov</string>
+    
+    <string name="addressess_confirm_dialog_message">Ste prepričani, da želite izbrisati ta naslov?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Izbriši</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Prekliči</string>
+    
+    <string name="address_menu_save_address">Shranite naslov</string>
+    
+    <string name="address_menu_delete_address">Izbriši naslov</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Dodajanje iskalnika</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Urejanje iskalnika</string>
+    
+    <string name="search_engine_add_button_content_description">Dodaj</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Shrani</string>
+    
+    <string name="search_engine_edit">Uredi</string>
+    
+    <string name="search_engine_delete">Izbriši</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Drugo</string>
+    
+    <string name="search_add_custom_engine_name_hint">Ime</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Iskalni niz za uporabo</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Nadomestite poizvedbo z "%s". Primer:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Podrobnosti o iskalniku po meri</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Vnesite ime iskalnika</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Vnesite iskalni niz</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Preverite, ali se iskalni niz ujema z obliko primera</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Napaka pri vzpostavljanju povezave s storitvijo "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Ustvarjeno %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Shranjeno %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Izbrisano %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Dovoliti ga je treba:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Pojdite v Nastavitve sistema Android</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Tapnite &lt;b&gt;Pravice&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Preklopite &lt;b&gt;%1$s&lt;/b&gt; na ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Povezava je varna</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Povezava ni varna</string>
+    
+    <string name="clear_site_data">Brisanje piškotkov in podatkov o spletnem mestu</string>
+    
+    <string name="confirm_clear_site_data">Ali ste prepričani, da želite počistiti vse piškotke in podatke za spletno mesto &lt;b&gt;%s&lt;/b&gt;?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Ali ste prepričani, da želite počistiti vsa dovoljenja na vseh mestih?</string>
+    
+    <string name="confirm_clear_permissions_site">Ali ste prepričani, da želite počistiti vsa dovoljenja za to spletno mesto?</string>
+    
+    <string name="confirm_clear_permission_site">Ali ste prepričani, da želite to dovoljenje izbrisati za to spletno mesto?</string>
+    
+    <string name="no_site_exceptions">Brez izjem na lokaciji</string>
+    
+    <string name="bookmark_deletion_confirmation">Ste prepričani, da želite izbrisati to zaznamek?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Dodajanje med bližnjice</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Odstranite iz bližnjic</string>
+    
+    <string name="certificate_info_verified_by">Preveril: %1$s</string>
+    
+    <string name="login_menu_delete_button">Izbriši</string>
+    
+    <string name="login_menu_edit_button">Uredi</string>
+    
+    <string name="login_deletion_confirmation">Ste prepričani, da želite izbrisati to prijavo?</string>
+    
+    <string name="dialog_delete_positive">Izbriši</string>
+    
+    <string name="dialog_delete_negative">Prekliči</string>
+    
+    <string name="login_options_menu">Možnosti prijave</string>
+    
+    <string name="saved_login_hostname_description">Besedilno polje za spletni naslov prijave, ki ga je mogoče urejati.</string>
+    
+    <string name="saved_login_username_description">Besedilno polje za uporabniško ime prijave, ki ga je mogoče urejati.</string>
+    
+    <string name="saved_login_password_description">Besedilno polje za geslo prijave, ki ga je mogoče urejati.</string>
+    
+    <string name="save_changes_to_login">Shranite spremembe za prijavo.</string>
+    
+    <string name="edit">Uredi</string>
+    
+    <string name="add_login">Dodajte novo prijavo</string>
+    
+    <string name="saved_login_password_required">Zahteva se geslo</string>
+    
+    <string name="saved_login_username_required">Zahtevano uporabniško ime</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Zahtevano ime gostitelja</string>
+    
+    <string name="voice_search_content_description">Glasovno iskanje</string>
+    
+    <string name="voice_search_explainer">Govorite zdaj</string>
+    
+    <string name="saved_login_duplicate">Prijava s tem uporabniškim imenom že obstaja</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Spletni naslov mora vsebovati "https://" ali "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Zahteva se veljavno ime gostitelja</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Priključite drugo napravo.</string>
+    
+    <string name="synced_tabs_reauth">Ponovno preverite pristnost.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Omogočite sinhronizacijo zavihkov.</string>
+    
+    <string name="synced_tabs_no_tabs">V drugih napravah v programu Waterfox nimate odprtih nobenih zavihkov.</string>
+    
+    <string name="synced_tabs_sign_in_message">Oglejte si seznam zavihkov iz drugih naprav.</string>
+    
+    <string name="synced_tabs_sign_in_button">Prijavite se za sinhronizacijo</string>
+    
+    <string name="synced_tabs_no_open_tabs">Ni odprtih zavihkov</string>
+    
+    <string name="synced_tabs_expand_group">Razširite skupino sinhroniziranih zavihkov</string>
+    
+    <string name="synced_tabs_collapse_group">Zmanjšanje skupine sinhroniziranih zavihkov</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Omejitev bližnjic je dosežena</string>
+    
+    <string name="shortcut_max_limit_content">Če želite dodati novo bližnjico, eno odstranite. Dotaknite se mesta in ga pridržite ter izberite odstrani.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">V redu, razumem</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Bližnjice</string>
+	
+	<string name="top_sites_rename_dialog_title">Ime</string>
+    
+    <string name="shortcut_name_hint">Ime bližnjice</string>
+	
+	<string name="top_sites_rename_dialog_ok">V REDU</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Prekliči</string>
+    
+    <string name="top_sites_menu_settings">Nastavitve</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Naši sponzorji in vaša zasebnost</string>
+    
+    <string name="top_sites_sponsored_label">Sponzorirano</string>
+
+    
+    
+    <string name="inactive_tabs_title">Neaktivni zavihki</string>
+    
+    <string name="inactive_tabs_delete_all">Zapri vse neaktivne zavihke</string>
+    
+    <string name="inactive_tabs_expand_content_description">Razširite neaktivne zavihke</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Zbijanje neaktivnih zavihkov</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Samodejno zaprtje po enem mesecu?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Program Waterfox lahko zapre zavihke, ki si jih v zadnjem mesecu niste ogledali.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">VKLOP SAMODEJNEGA ZAPIRANJA</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Omogočeno samodejno zapiranje</string>
+
+    
+    <string name="default_browser_experiment_card_text">Nastavite povezave iz spletnih mest, e-poštnih sporočil in sporočil, da se samodejno odprejo v programu Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Odstranite</string>
+
+    
+    <string name="radio_preference_info_content_description">Kliknite za več podrobnosti</string>
+
+    
+    <string name="action_bar_up_description">Navigacija navzgor</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Zapri</string>
+
+    <string name="waterfox_suggest_header">Vodna lisica Predlagajte</string>
+</resources>

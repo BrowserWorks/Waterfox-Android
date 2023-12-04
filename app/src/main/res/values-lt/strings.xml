@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Privatus %s</string>
+    
+    <string name="app_name_private_4">%s (privatus)</string>
+
+    
+    
+    <string name="content_description_menu">Daugiau galimybių</string>
+    
+    <string name="content_description_private_browsing_button">Įgalinti privatų naršymą</string>
+    
+    <string name="content_description_disable_private_browsing_button">Išjungti privatų naršymą</string>
+    
+    <string name="search_hint">Paieška arba adreso įvedimas</string>
+    
+    <string name="application_search_hint">Įveskite paieškos terminus</string>
+    
+    <string name="no_open_tabs_description">Čia bus rodomi jūsų atidaryti skirtukai.</string>
+    
+    <string name="no_private_tabs_description">Čia bus rodomi jūsų privatūs skirtukai.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d pasirinkta</string>
+    
+    <string name="tab_tray_add_new_collection">Pridėti naują kolekciją</string>
+    
+    <string name="tab_tray_add_new_collection_name">Pavadinimas</string>
+    
+    <string name="tab_tray_select_collection">Pasirinkite kolekciją</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Išeiti iš daugiafunkcinio pasirinkimo režimo</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Įrašyti pasirinktus skirtukus į kolekciją</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Pasirinkta</string>
+
+    
+    
+    <string name="recently_saved_title">Neseniai išsaugotas</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Rodyti visas išsaugotas žymes</string>
+    
+    <string name="recently_saved_menu_item_remove">Pašalinti</string>
+
+    
+    <string name="about_content">%1$s sukūrė "BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s ištrina paieškos ir naršymo istoriją iš privačių skirtukų, kai juos uždarote arba išeinate iš programos. Nors tai nepadarys jūsų anonimiškumo svetainėms ar interneto paslaugų teikėjui, tačiau tai padės lengviau išsaugoti tai, ką darote internete, nuo visų kitų, kurie naudojasi šiuo prietaisu.</string>
+    <string name="private_browsing_common_myths">Dažniausiai pasitaikantys mitai apie privatų naršymą</string>
+
+    
+    
+    <string name="cfr_message">Pridėkite nuorodą, kad atidarytumėte privačius skirtukus iš Pradinis ekranas.</string>
+    
+    <string name="cfr_pos_button_text">Pridėti nuorodą</string>
+    
+    <string name="cfr_neg_button_text">Ne, ačiū</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Galite nustatyti, kad %1$s automatiškai atidarytų nuorodas programose.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Eikite į nustatymus</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Atmesti</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Atmesti</string>
+
+    
+    
+    <string name="tcp_cfr_message">Mūsų kol kas galingiausia privatumo funkcija izoliuoja kryžminius svetainių sekimo įrenginius.</string>
+    
+    <string name="tcp_cfr_learn_more">Sužinokite apie bendrą slapukų apsaugą</string>
+
+    
+    <string name="camera_permissions_needed_message">Reikalinga prieiga prie fotoaparato. Eikite į "Android" nustatymus, bakstelėkite leidimus ir bakstelėkite leisti.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Eikite į nustatymus</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Atmesti</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Nustatykite, kad automatiškai užsidarytų atidaryti skirtukai, kurie nebuvo peržiūrėti per pastarąją dieną, savaitę ar mėnesį.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Peržiūrėti parinktis</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Atmesti</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Čia perkeliami skirtukai, kurių neperžiūrėjote dvi savaites.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Išjungti nustatymuose</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automatinis uždarymas po mėnesio?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s gali uždaryti skirtukus, kurių neperžiūrėjote per pastarąjį mėnesį.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Uždaryti</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Įjunkite automatinio uždarymo funkciją</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Naujas skirtukas</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Naujas privatus skirtukas</string>
+
+    
+    
+    <string name="recent_tabs_header">Įšokti atgal</string>
+    
+    <string name="recent_tabs_show_all">Rodyti visus</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Rodyti visus naujausius skirtukus</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Jūsų paieška \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d svetainių</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Peržiūrėkite visus sinchronizuotus skirtukus</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Sinchronizuotas įrenginys</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Pašalinti</string>
+    
+    <string name="recent_tab_menu_item_remove">Pašalinti</string>
+
+    
+    
+    <string name="history_metadata_header_2">Neseniai aplankyta</string>
+    
+    <string name="recently_visited_menu_item_remove">Pašalinti</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Rodyti visus ankstesnius tyrinėjimus</string>
+
+    
+    
+    <string name="browser_menu_back">Atgal</string>
+    
+    <string name="browser_menu_forward">Pirmyn</string>
+    
+    <string name="browser_menu_refresh">Atnaujinti</string>
+    
+    <string name="browser_menu_stop">Sustabdyti</string>
+    
+    <string name="browser_menu_add_ons">Priedai</string>
+    
+    <string name="no_add_ons">Čia nėra priedų</string>
+    
+    <string name="browser_menu_help">Pagalba</string>
+    
+    <string name="browser_menu_settings">Nustatymai</string>
+    
+    <string name="browser_menu_library">Biblioteka</string>
+    
+    <string name="browser_menu_desktop_site">Darbalaukio svetainė</string>
+    
+    <string name="browser_menu_add_to_homescreen">Pridėti į pagrindinį ekraną</string>
+    
+    <string name="browser_menu_install_on_homescreen">Įdiekite</string>
+    
+    <string name="resync_button_content_description">Iš naujo sinchronizuoti</string>
+    
+    <string name="browser_menu_find_in_page">Rasti puslapyje</string>
+    
+    <string name="browser_menu_save_to_collection_2">Įrašyti į kolekciją</string>
+    
+    <string name="browser_menu_share">Dalintis</string>
+    
+    <string name="browser_menu_open_in_waterfox">Atidaryti %1$s</string>
+    
+    <string name="browser_menu_powered_by">ĮGYVENDINTA %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">Skaitytojo nuomonė</string>
+    
+    <string name="browser_menu_read_close">Uždaras skaitytojo vaizdas</string>
+    
+    <string name="browser_menu_open_app_link">Atidaryti programėlėje</string>
+    
+    <string name="browser_menu_customize_reader_view">Tinkinti skaitytojo rodinį</string>
+    
+    <string name="browser_menu_add">Pridėti</string>
+    
+    <string name="browser_menu_edit">Redaguoti</string>
+    
+    <string name="browser_menu_customize_home_1">Pritaikyti pagrindinį puslapį</string>
+    
+    
+    <string name="browser_toolbar_home">Pagrindinis ekranas</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Pasirinkta kalba</string>
+    
+    <string name="default_locale_text">Laikykitės įrenginio kalbos</string>
+    
+    <string name="locale_search_hint">Paieškos kalba</string>
+
+    
+    
+    <string name="search_scan_button">Skenuoti</string>
+    
+    <string name="search_engine_button">Paieškos sistema</string>
+    
+    <string name="search_shortcuts_engine_settings">Paieškos sistemos nustatymai</string>
+    
+    <string name="awesomebar_clipboard_title">Užpildykite nuorodą iš iškarpinės</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Leisti</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Neleiskite</string>
+    
+    <string name="search_suggestions_onboarding_title">Leisti paieškos pasiūlymus privačiose sesijose?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s bendrins viską, ką įvesite adreso juostoje, su numatytuoju paieškos varikliu.</string>
+    
+    <string name="search_engine_suggestions_title">Paieška %s</string>
+    
+    <string name="search_engine_suggestions_description">Paieška tiesiogiai iš adreso juostos</string>
+    
+    <string name="search_settings_menu_item">Paieškos nustatymai</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Dabar lengviau grįžti ten, kur baigėte.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Pereikite prie atidarytų skirtukų, žymeklių ir naršymo istorijos.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Švarūs, tvarkingi skirtukai</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Išvalykite skirtukus nuo netvarkos, naudodami patobulintą išdėstymą ir automatiškai užsidarančius skirtukus.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Naujausios paieškos</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Peržiūrėkite naujausias paieškas iš pagrindinio puslapio ir skirtukų.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Susipažinkite su savo asmeniniu pagrindiniu puslapiu. Čia bus rodomi naujausi skirtukai, žymės ir paieškos rezultatai.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Sveiki atvykę į asmeniškesnį internetą</string>
+    
+    <string name="onboarding_home_welcome_description">Daugiau spalvų. Geresnis privatumas. Tas pats įsipareigojimas žmonėms, o ne pelnui.</string>
+    
+    <string name="onboarding_home_sync_title_3">Peršokti nuo telefono prie nešiojamojo kompiuterio ir atgal</string>
+    
+    <string name="onboarding_home_sync_description">Pradėkite nuo ten, kur baigėte, o skirtukai iš kitų prietaisų dabar yra jūsų pagrindiniame puslapyje.</string>
+    
+    <string name="onboarding_home_get_started_button">Pradėkite</string>
+    
+    <string name="onboarding_home_sign_in_button">Prisijunkite</string>
+    
+    <string name="onboarding_home_skip_button">Praleisti</string>
+    
+    <string name="onboarding_home_content_description_close_button">Uždaryti</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Atidaryti naują %1$s skirtuką</string>
+    
+    <string name="search_widget_text_short">Paieška</string>
+    
+    <string name="search_widget_text_long">Paieška internete</string>
+    
+    <string name="search_widget_voice">Paieška balsu</string>
+
+    
+    
+    <string name="settings">Nustatymai</string>
+    
+    <string name="preferences_category_general">Bendra</string>
+    
+    <string name="preferences_category_about">Apie</string>
+    
+    <string name="preferences_default_search_engine">Numatytoji paieškos sistema</string>
+    
+    <string name="preferences_search">Paieška</string>
+    
+    <string name="preferences_search_address_bar">Adresų juosta</string>
+    
+    <string name="preferences_rate">Įvertinkite "Google Play</string>
+    
+    <string name="preferences_about">Apie %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Nustatyti kaip numatytąją naršyklę</string>
+    
+    <string name="preferences_category_advanced">Išplėstinė</string>
+    
+    <string name="preferences_category_privacy_security">Privatumas ir saugumas</string>
+    
+    <string name="preferences_site_permissions">Svetainės leidimai</string>
+    
+    <string name="preferences_private_browsing_options">Privatus naršymas</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Atidaryti nuorodas privačiame skirtuke</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Leidimas daryti ekrano nuotraukas privačiame naršyme</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Jei leidžiama, privatūs skirtukai bus matomi ir tada, kai bus atidarytos kelios programos.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Pridėti privataus naršymo nuorodą</string>
+    
+    <string name="preferences_https_only_title">Tik HTTPS režimas</string>
+    
+    <string name="preferences_https_only_summary">Automatiškai bando prisijungti prie svetainių, kuriose naudojamas HTTPS šifravimo protokolas, kad būtų užtikrintas didesnis saugumas.</string>
+    
+    <string name="preferences_https_only_on">Svetainėje</string>
+    
+    <string name="preferences_https_only_off">Išjungta</string>
+    
+    <string name="preferences_http_only_learn_more">Sužinokite daugiau</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Įjungti visuose skirtukuose</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Įjungti tik privačiuose skirtukuose</string>
+    
+    <string name="errorpage_httpsonly_title">Saugi svetainė neprieinama</string>
+    
+    <string name="errorpage_httpsonly_message_title">Labiausiai tikėtina, kad svetainė tiesiog nepalaiko HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Tačiau taip pat gali būti, kad su tuo susijęs užpuolikas. Jei toliau lankysitės svetainėje, neturėtumėte įvesti jokios jautrios informacijos. Jei tęsite, svetainėje bus laikinai išjungtas tik HTTPS režimas.</string>
+    
+    <string name="preferences_accessibility">Prieinamumas</string>
+    
+    <string name="preferences_override_fxa_server">Pasirinktinis "Waterfox" paskyros serveris</string>
+    
+    <string name="preferences_override_sync_tokenserver">Pasirinktinis sinchronizavimo serveris</string>
+    
+    <string name="toast_override_fxa_sync_server_done">"Waterfox" paskyra / sinchronizavimo serveris pakeistas. Programos užbaigimas, norint pritaikyti pakeitimus...</string>
+    
+    <string name="preferences_category_account">Sąskaita</string>
+    
+    <string name="preferences_toolbar">Įrankių juosta</string>
+    
+    <string name="preferences_theme">Tema</string>
+    
+    <string name="preferences_home_2">Pradžia</string>
+    
+    <string name="preferences_gestures">Gestai</string>
+    
+    <string name="preferences_customize">Tinkinti</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sinchronizuokite žymes, istoriją ir kt. su "Waterfox" paskyra</string>
+    
+    <string name="preferences_sign_in_description_2">Prisijunkite ir sinchronizuokite skirtukus, žymes, slaptažodžius ir dar daugiau.</string>
+    
+    <string name="preferences_account_default_name">"Waterfox" paskyra</string>
+    
+    <string name="preferences_account_sync_error">Vėl prisijungti, kad atnaujintumėte sinchronizavimą</string>
+    
+    <string name="preferences_language">Kalba</string>
+    
+    <string name="preferences_remote_debugging">Nuotolinis derinimas per USB</string>
+    
+    <string name="preferences_show_search_engines">Rodyti paieškos sistemas</string>
+    
+    <string name="preferences_show_search_suggestions">Rodyti paieškos pasiūlymus</string>
+    
+    <string name="preferences_show_voice_search">Rodyti paiešką balsu</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Rodyti privačiose sesijose</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Rodyti iškarpinės pasiūlymus</string>
+    
+    <string name="preferences_search_browsing_history">Paieška naršymo istorijoje</string>
+    
+    <string name="preferences_search_bookmarks">Paieškos žymės</string>
+    
+    <string name="preferences_search_synced_tabs">Sinchronizuotų skirtukų paieška</string>
+    
+    <string name="preferences_account_settings">Paskyros nustatymai</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Automatiškai užbaigti URL adresai</string>
+    
+    <string name="preferences_open_links_in_apps">Atidaryti nuorodas programose</string>
+    
+    <string name="preferences_external_download_manager">Išorinis atsisiuntimo tvarkytuvas</string>
+    
+    <string name="preferences_addons">Priedai</string>
+    
+    <string name="preferences_notifications">Pranešimai</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Pasirinktinė priedų kolekcija</string>
+    
+    <string name="customize_addon_collection_ok">GERAI</string>
+    
+    <string name="customize_addon_collection_cancel">Atšaukti</string>
+    
+    <string name="customize_addon_collection_hint">Kolekcijos pavadinimas</string>
+    
+    <string name="customize_addon_collection_user_hint">Kolekcijos savininkas (naudotojo ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">Pakeista papildinių kolekcija. Išėjimas iš programos, norint pritaikyti pakeitimus...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Įšokti atgal</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Naujausios žymės</string>
+    
+    <string name="customize_toggle_recently_visited">Neseniai aplankyta</string>
+    
+    <string name="customize_wallpapers">Užsklandos</string>
+    
+    <string name="customize_toggle_contile">Rėmėjų spartieji klavišai</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Tapetų elementas: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Tapetai atnaujintas!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Peržiūrėti</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Pakeiskite ekrano užsklandą bakstelėdami "Waterfox" pagrindinio puslapio logotipą</string>
+    
+    <string name="wallpaper_logo_content_description">"Waterfox" logotipas - pakeisti ekrano užsklandą, mygtuką</string>
+
+    
+    
+    <string name="addon_not_supported_error">Priedas nepalaikomas</string>
+    
+    <string name="addon_already_installed">Priedas jau įdiegtas</string>
+
+    
+    
+    <string name="preferences_sync_now">Sinchronizuoti dabar</string>
+    
+    <string name="preferences_sync_category">Pasirinkite, ką sinchronizuoti</string>
+    
+    <string name="preferences_sync_history">Istorija</string>
+    
+    <string name="preferences_sync_bookmarks">Žymos</string>
+    
+    <string name="preferences_sync_logins">Prisijungimai</string>
+    
+    <string name="preferences_sync_tabs_2">Atidaryti skirtukai</string>
+    
+    <string name="preferences_sign_out">Pasirašyti</string>
+    
+    <string name="preferences_sync_device_name">Įrenginio pavadinimas</string>
+    
+    <string name="empty_device_name_error">Įrenginio pavadinimas negali būti tuščias.</string>
+    
+    <string name="sync_syncing_in_progress">Sinchronizavimas...</string>
+    
+    <string name="sync_failed_summary">Sinchronizacija nepavyko. Paskutinė sėkmė: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Sinchronizacija nepavyko. Paskutinė sinchronizacija: niekada</string>
+    
+    <string name="sync_last_synced_summary">Paskutinė sinchronizacija: %s</string>
+    
+    <string name="sync_never_synced_summary">Paskutinį kartą sinchronizuota: niekada</string>
+    
+    <string name="default_device_name_2">%1$s %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kredito kortelės</string>
+    
+    <string name="preferences_sync_address">Adresai</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Gauti skirtukai</string>
+    
+    <string name="fxa_received_tab_channel_description">Iš kitų "Waterfox" įrenginių gauti skirtukų pranešimai.</string>
+    
+    <string name="fxa_tab_received_notification_name">Gautas skirtukas</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Skirtukas iš %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Išimtys</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Įjungti visoms svetainėms</string>
+    
+    <string name="exceptions_empty_message_description">Išimtys leidžia išjungti pasirinktų svetainių stebėjimo apsaugą.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Sužinokite daugiau</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Įjunkite sinchronizavimą</string>
+    
+    <string name="preferences_sync_2">Sinchronizuokite ir išsaugokite duomenis</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Prisijunkite, kad vėl prisijungtumėte</string>
+    
+    <string name="preferences_sync_remove_account">Pašalinti paskyrą</string>
+
+    
+    
+    <string name="pair_instructions_2">Nuskaitykite QR kodą, nurodytą &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Viršuje</string>
+    
+    <string name="preference_bottom_toolbar">Dugnas</string>
+
+    
+    
+    <string name="preference_light_theme">Šviesa</string>
+    
+    <string name="preference_dark_theme">Tamsus</string>
+    
+    <string name="preference_auto_battery_theme">Nustatyti pagal akumuliatoriaus taupyklę</string>
+    
+    <string name="preference_follow_device_theme">Sekite prietaiso temą</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Patraukite, kad atnaujintumėte</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Slinkti, kad paslėptumėte įrankių juostą</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Norėdami perjungti skirtukus, braukite įrankių juostą į šoną</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Perbraukite įrankių juostą aukštyn, kad atidarytumėte skirtukus</string>
+
+    
+    
+    <string name="library_downloads">Atsisiuntimai</string>
+    
+    <string name="library_bookmarks">Žymos</string>
+    
+    <string name="library_desktop_bookmarks_root">Darbalaukio žymės</string>
+    
+    <string name="library_desktop_bookmarks_menu">Meniu "Bookmarks</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Žymeklių įrankių juosta</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Kitos žymės</string>
+    
+    <string name="library_history">Istorija</string>
+    
+    <string name="library_new_tab">Naujas skirtukas</string>
+    
+    <string name="settings_title">Nustatymai</string>
+    
+    <string name="content_description_close_button">Uždaryti</string>
+
+    
+    <string name="history_search_group_site">%d svetainė</string>
+    
+    <string name="history_search_group_sites">%d svetainių</string>
+
+    
+    <string name="library_recently_closed_tabs">Neseniai uždaryti skirtukai</string>
+    
+    <string name="recently_closed_show_full_history">Rodyti visą istoriją</string>
+    
+    <string name="recently_closed_tabs">%d skirtukų</string>
+    
+    <string name="recently_closed_tab">%d skirtukas</string>
+    
+    <string name="recently_closed_empty_message">Čia nėra neseniai uždarytų skirtukų</string>
+
+    
+    
+    <string name="preferences_tabs">Skirtukai</string>
+    
+    <string name="preferences_tab_view">Skirtuko vaizdas</string>
+    
+    <string name="tab_view_list">Sąrašas</string>
+    
+    <string name="tab_view_grid">Tinklelis</string>
+    
+    <string name="preferences_close_tabs">Uždaryti skirtukus</string>
+    
+    <string name="close_tabs_manually">Niekada</string>
+    
+    <string name="close_tabs_after_one_day">Po vienos dienos</string>
+    
+    <string name="close_tabs_after_one_week">Po savaitės</string>
+    
+    <string name="close_tabs_after_one_month">Po vieno mėnesio</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatinis atidarytų skirtukų uždarymas</string>
+
+    
+    
+    <string name="preferences_opening_screen">Atidarymo ekranas</string>
+    
+    <string name="opening_screen_homepage">Pradžia</string>
+    
+    <string name="opening_screen_last_tab">Paskutinis skirtukas</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Pagrindinė svetainė po keturių valandų neveikimo</string>
+    
+    <string name="close_tabs_manually_summary">Uždaryti rankiniu būdu</string>
+    
+    <string name="close_tabs_after_one_day_summary">Uždaryti po vienos dienos</string>
+    
+    <string name="close_tabs_after_one_week_summary">Uždaryti po savaitės</string>
+    
+    <string name="close_tabs_after_one_month_summary">Uždaryti po vieno mėnesio</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Senų skirtukų perkėlimas į neaktyvius</string>
+    
+    <string name="preferences_inactive_tabs_title">Skirtukai, kurių neperžiūrėjote dvi savaites, perkeliami į neaktyvų skyrių.</string>
+
+    
+    
+    <string name="tab_header_label">Atidaryti skirtukai</string>
+    
+    <string name="tabs_header_private_tabs_title">Privatūs skirtukai</string>
+    
+    <string name="tabs_header_synced_tabs_title">Sinchronizuoti skirtukai</string>
+    
+    <string name="add_tab">Pridėti skirtuką</string>
+    
+    <string name="add_private_tab">Pridėti privatų skirtuką</string>
+    
+    <string name="tab_drawer_fab_content">Privatus</string>
+    
+    <string name="tab_drawer_fab_sync">Sinchronizavimas</string>
+    
+    <string name="tab_tray_menu_item_share">Bendrinti visus skirtukus</string>
+    
+    <string name="tab_tray_menu_recently_closed">Neseniai uždaryti skirtukai</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Neseniai uždarytas</string>
+    
+    <string name="tab_tray_menu_account_settings">Paskyros nustatymai</string>
+    
+    <string name="tab_tray_menu_tab_settings">Skirtuko nustatymai</string>
+    
+    <string name="tab_tray_menu_item_close">Uždaryti visus skirtukus</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Žymė</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Uždaryti</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Bendrinti pasirinktus skirtukus</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Pasirinktų skirtukų meniu</string>
+    
+    <string name="remove_tab_from_collection">Pašalinti skirtuką iš kolekcijos</string>
+    
+    <string name="tabs_tray_select_tabs">Pasirinkite skirtukus</string>
+    
+    <string name="close_tab">Uždaryti skirtuką</string>
+    
+    <string name="close_tab_title">Uždaryti skirtuką %s</string>
+    
+    <string name="open_tabs_menu">Atidaryti skirtukų meniu</string>
+    
+    <string name="tabs_menu_save_to_collection1">Įrašyti skirtukus į kolekciją</string>
+    
+    <string name="collection_delete">Ištrinti kolekciją</string>
+    
+    <string name="collection_rename">Kolekcijos pervadinimas</string>
+    
+    <string name="collection_open_tabs">Atidaryti skirtukai</string>
+    
+    <string name="collection_name_hint">Kolekcijos pavadinimas</string>
+	
+	<string name="rename_top_site">Pervadinti</string>
+	
+	<string name="remove_top_site">Pašalinti</string>
+    
+    <string name="delete_from_history">Ištrinti iš istorijos</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (privatus režimas)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Kiti skirtukai</string>
+
+    
+    
+    <string name="history_search_1">Įveskite paieškos terminus</string>
+    
+    <string name="history_delete_all">Ištrinti istoriją</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Panaikinta istorija</string>
+    
+    <string name="history_delete_single_item_snackbar">Ištrinta %1$s</string>
+    
+    <string name="history_delete_item">Ištrinti</string>
+    
+    <string name="history_multi_select_title">%1$d pasirinkta</string>
+    
+    <string name="history_today">Šiandien</string>
+    
+    <string name="history_yesterday">Vakar</string>
+    
+    <string name="history_7_days">Paskutinės 7 dienos</string>
+    
+    <string name="history_30_days">Paskutinės 30 dienų</string>
+    
+    <string name="history_older">Senesnis</string>
+    
+    <string name="history_empty_message">Čia nėra istorijos</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Pašalinti atsisiuntimai</string>
+    
+    <string name="download_delete_single_item_snackbar">Pašalinta %1$s</string>
+    
+    <string name="download_empty_message_1">Atsisiųstų failų nėra</string>
+    
+    <string name="download_multi_select_title">%1$d pasirinkta</string>
+    
+    <string name="download_delete_item_1">Pašalinti</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Atsiprašome. %1$s negali įkelti šio puslapio.</string>
+    
+    <string name="tab_crash_send_report">Siųsti pranešimą apie avariją "BrowserWorks</string>
+    
+    <string name="tab_crash_close">Uždaryti skirtuką</string>
+    
+    <string name="tab_crash_restore">Atkūrimo skirtukas</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Ar tikrai norite ištrinti šį aplanką?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s ištrins pasirinktus elementus.</string>
+    
+    <string name="bookmark_delete_negative">Atšaukti</string>
+    
+    <string name="bookmark_add_folder">Pridėti aplanką</string>
+    
+    <string name="bookmark_saved_snackbar">Išsaugota žyma!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Redaguoti</string>
+    
+    <string name="bookmark_menu_copy_button">Kopijuoti</string>
+    
+    <string name="bookmark_menu_share_button">Dalintis</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Atidaryti naujame skirtuke</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Atidaryti privačiame skirtuke</string>
+    
+    <string name="bookmark_menu_delete_button">Ištrinti</string>
+    
+    <string name="bookmark_menu_save_button">Išsaugoti</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d pasirinkta</string>
+    
+    <string name="edit_bookmark_fragment_title">Redaguoti žymą</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Redaguoti aplanką</string>
+    
+    <string name="bookmark_sign_in_button">Prisijunkite, kad pamatytumėte sinchronizuotas žymes</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDERIS</string>
+    
+    <string name="bookmark_name_label">NAME</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Pridėti aplanką</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Pasirinkite aplanką</string>
+    
+    <string name="bookmark_empty_title_error">Turi turėti pavadinimą</string>
+    
+    <string name="bookmark_invalid_url_error">Netinkamas URL adresas</string>
+    
+    <string name="bookmarks_empty_message">Čia nėra jokių žymų</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Ištrinta %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Ištrintos žymės</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Pasirinktų aplankų šalinimas</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Įveskite paieškos terminus</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Eikite į Nustatymai</string>
+    
+    <string name="quick_settings_sheet">Greitų nustatymų lapas</string>
+    
+    <string name="phone_feature_recommended">Rekomenduojama</string>
+    
+    <string name="clear_permissions">Išvalyti leidimus</string>
+    
+    <string name="clear_permissions_positive">GERAI</string>
+    
+    <string name="clear_permissions_negative">Atšaukti</string>
+    
+    <string name="clear_permission">Aiškus leidimas</string>
+    
+    <string name="clear_permission_positive">GERAI</string>
+    
+    <string name="clear_permission_negative">Atšaukti</string>
+    
+    <string name="clear_permissions_on_all_sites">Aiškūs leidimai visose svetainėse</string>
+    
+    <string name="preference_browser_feature_autoplay">Automatinis paleidimas</string>
+    
+    <string name="preference_phone_feature_camera">Fotoaparatas</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofonas</string>
+    
+    <string name="preference_phone_feature_location">Vieta</string>
+    
+    <string name="preference_phone_feature_notification">Pranešimas</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Nuolatinė saugykla</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Kryžminės svetainės slapukai</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM kontroliuojamas turinys</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Paprašykite leisti</string>
+    
+    <string name="preference_option_phone_feature_blocked">Užblokuotas</string>
+    
+    <string name="preference_option_phone_feature_allowed">Leidžiama</string>
+    
+    <string name="phone_feature_blocked_by_android">Užblokuota "Android</string>
+    
+    <string name="preference_exceptions">Išimtys</string>
+    
+    <string name="tracking_protection_on">Svetainėje</string>
+    
+    <string name="tracking_protection_off">Išjungta</string>
+    
+    <string name="preference_option_autoplay_allowed2">Leisti garso ir vaizdo įrašus</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Leisti garso ir vaizdo įrašus</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blokuoti garso ir vaizdo įrašus tik mobiliųjų duomenų perdavimo režimu</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Garso ir vaizdo įrašai bus atkuriami per "Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Blokuoti tik garsą</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Blokuoti tik garsą</string>
+    
+    <string name="preference_option_autoplay_blocked3">Blokuoti garso ir vaizdo įrašus</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Blokuoti garso ir vaizdo įrašus</string>
+    
+    <string name="delete_browsing_data_quit_on">Svetainėje</string>
+    
+    <string name="delete_browsing_data_quit_off">Išjungta</string>
+    
+    <string name="https_only_on">Svetainėje</string>
+    
+    <string name="https_only_off">Išjungta</string>
+
+    
+    
+    <string name="collections_header">Kolekcijos</string>
+    
+    <string name="collection_menu_button_content_description">Kolekcijos meniu</string>
+    
+    <string name="no_collections_description2">Rinkitės tai, kas jums svarbu.\nGrupuokite panašias paieškas, svetaines ir skirtukus, kad vėliau galėtumėte greitai pasiekti.</string>
+    
+    <string name="create_collection_select_tabs">Pasirinkite skirtukus</string>
+    
+    <string name="create_collection_select_collection">Pasirinkite kolekciją</string>
+    
+    <string name="create_collection_name_collection">Pavadinimų rinkimas</string>
+    
+    <string name="create_collection_add_new_collection">Pridėti naują kolekciją</string>
+    
+    <string name="create_collection_select_all">Pasirinkite visus</string>
+    
+    <string name="create_collection_deselect_all">Panaikinkite visų</string>
+    
+    <string name="create_collection_save_to_collection_empty">Pasirinkite skirtukus, kuriuos norite išsaugoti</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">Pasirinkta %d skirtukų</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">Pasirinktas %d skirtukas</string>
+    
+    <string name="create_collection_tabs_saved">Išsaugoti skirtukai!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Kolekcija išsaugota!</string>
+    
+    <string name="create_collection_tab_saved">Skirtukas išsaugotas!</string>
+    
+    <string name="create_collection_close">Uždaryti</string>
+    
+    <string name="create_collection_save">Išsaugoti</string>
+    
+    <string name="create_collection_view">Peržiūrėti</string>
+    
+    <string name="create_collection_positive">GERAI</string>
+    
+    <string name="create_collection_negative">Atšaukti</string>
+
+    
+    <string name="create_collection_default_name">Kolekcija %d</string>
+
+    
+    
+    <string name="share_header_2">Dalintis</string>
+    
+    <string name="share_button_content_description">Dalintis</string>
+    
+    <string name="share_device_subheader">Siųsti į įrenginį</string>
+    
+    <string name="share_link_all_apps_subheader">Visi veiksmai</string>
+    
+    <string name="share_link_recent_apps_subheader">Neseniai naudotas</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopijuoti į iškarpinę</string>
+    
+    <string name="toast_copy_link_to_clipboard">Nukopijuota į iškarpinę</string>
+    
+    <string name="sync_menu_sign_in">Prisijunkite prie sinchronizavimo</string>
+    
+    <string name="sync_sign_in">Prisijunkite prie "Sync</string>
+    
+    <string name="sync_send_to_all">Siųsti į visus įrenginius</string>
+    
+    <string name="sync_reconnect">Pakartotinai prisijunkite prie "Sync</string>
+    
+    <string name="sync_offline">Neprisijungus prie interneto</string>
+    
+    <string name="sync_connect_device">Prijunkite kitą įrenginį</string>
+    
+    <string name="sync_connect_device_dialog">Norėdami siųsti skirtuką, prisijunkite prie "Waterfox" bent viename kitame prietaise.</string>
+    
+    <string name="sync_confirmation_button">Turiu</string>
+    
+    <string name="share_error_snackbar">Negalima bendrinti su šia programa</string>
+    
+    <string name="sync_add_new_device_title">Siųsti į įrenginį</string>
+    
+    <string name="sync_add_new_device_message">Nėra prijungtų įrenginių</string>
+    
+    <string name="sync_add_new_device_learn_button">Sužinokite apie skirtukų siuntimą...</string>
+    
+    <string name="sync_add_new_device_connect_button">Prijungti kitą įrenginį...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Uždaryti privačius skirtukus</string>
+    
+    <string name="notification_marketing_channel_name">Rinkodara</string>
+    
+    <string name="notification_default_browser_title">%1$s yra greitas ir privatus</string>
+    
+    <string name="notification_default_browser_text">Nustatykite, kad %1$s būtų jūsų numatytoji naršyklė</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Ištrinta kolekcija</string>
+    
+    <string name="snackbar_collection_renamed">Kolekcijos pavadinimas pakeistas</string>
+    
+    <string name="snackbar_tab_closed">Uždarytas skirtukas</string>
+    
+    <string name="snackbar_tabs_closed">Uždaryti skirtukai</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Išsaugotos žymės!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Pridėta prie nuorodų!</string>
+    
+    <string name="snackbar_private_tab_closed">Uždarytas privatus skirtukas</string>
+    
+    <string name="snackbar_private_tabs_closed">Uždaryti privatūs skirtukai</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Svetainė pašalinta</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Leisti %1$s atidaryti %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Tinklalapio adresas negalioja.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">GERAI</string>
+    
+    <string name="tab_collection_dialog_message">Ar tikrai norite ištrinti %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Ištrynus šį skirtuką, bus ištrinta visa kolekcija. Naujas kolekcijas galite kurti bet kuriuo metu.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Ištrinti %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Ištrinti</string>
+    
+    <string name="full_screen_notification">Perėjimas į viso ekrano režimą</string>
+    
+    <string name="url_copied">Nukopijuotas URL adresas</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Tai teksto pavyzdys. Jis pateiktas siekiant parodyti, kaip tekstas bus rodomas, kai padidinsite arba sumažinsite dydį naudodami šį nustatymą.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Padidinkite arba sumažinkite svetainių tekstą</string>
+    
+    <string name="preference_accessibility_font_size_title">Šrifto dydis</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automatinis šrifto dydžio nustatymas</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Šrifto dydis atitiks jūsų "Android" nustatymus. Čia galite išjungti šrifto dydžio valdymą.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Ištrinti naršymo duomenis</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Atidaryti skirtukai</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d skirtukų</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Naršymo istorija ir svetainės duomenys</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adresų</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Slapukai</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Būsite išregistruotas iš daugumos svetainių</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Spartieji vaizdai ir failai</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Atlaisvina saugojimo vietą</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Svetainės leidimai</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Atsisiuntimai</string>
+    
+    <string name="preferences_delete_browsing_data_button">Ištrinti naršymo duomenis</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Ištrinti naršymo duomenis baigus darbą</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Automatiškai ištrina naršymo duomenis, kai pagrindiniame meniu pasirenkate \"Baigti\".</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Baigti</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Taip bus ištrinti visi jūsų naršymo duomenys.</string>
+    
+    <string name="delete_history_prompt_title">Laiko intervalas, kurį reikia ištrinti</string>
+    
+    <string name="delete_history_prompt_body">Pašalinama istorija (įskaitant iš kitų įrenginių sinchronizuotą istoriją), slapukai ir kiti naršymo duomenys.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Paskutinė valanda</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Šiandien ir vakar</string>
+    
+    <string name="delete_history_prompt_button_everything">Viskas</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s ištrins pasirinktus naršymo duomenis.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Atšaukti</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Ištrinti</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Ištrinti naršymo duomenys</string>
+    
+    <string name="deleting_browsing_data_in_progress">Naršymo duomenų ištrynimas...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Ištrinti visas svetaines, esančias "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Atšaukti</string>
+    
+    <string name="delete_history_group_prompt_allow">Ištrinti</string>
+    
+    <string name="delete_history_group_snackbar">Išbraukta grupė</string>
+
+    
+    
+    <string name="onboarding_header_2">Sveiki atvykę į privatesnį žiniatinklį</string>
+    
+    <string name="onboarding_message">Nepriklausoma naršyklė.</string>
+    
+    <string name="onboarding_account_sign_in_header">Tęskite darbą ten, kur baigėte</string>
+    
+    <string name="onboarding_manual_sign_in_description">Sinchronizuokite skirtukus ir slaptažodžius įvairiuose įrenginiuose, kad galėtumėte sklandžiai perjungti ekraną.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Prisijunkite</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Sinchronizavimas įjungtas</string>
+    
+    <string name="onboarding_tracking_protection_header">Privatumo apsauga pagal numatytuosius nustatymus</string>
+    
+    <string name="onboarding_tracking_protection_description">Įrengta bendra slapukų apsauga, kuri neleidžia sekimo programoms naudoti slapukų, kad persekiotų jus įvairiose svetainėse.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standartinis (numatytasis)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Subalansuota privatumo ir našumo atžvilgiu. Puslapiai įkeliami įprastai.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Griežtas</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokuojama daugiau sekimo įrenginių, todėl puslapiai įkeliami greičiau, tačiau kai kurios puslapio funkcijos gali sutrikti.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Pasirinkite įrankių juostos vietą</string>
+    
+    <string name="onboarding_toolbar_placement_description">Palikite jį apačioje arba perkelkite į viršų.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Jūs valdote savo duomenis</string>
+    
+    <string name="onboarding_privacy_notice_description">"Waterfox" nerenka jokių telemetrinių duomenų ir leidžia jums kontroliuoti savo duomenis.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Perskaitykite mūsų privatumo pranešimą</string>
+    
+    <string name="onboarding_conclusion_header">Ar esate pasirengę atverti nuostabų internetą?</string>
+    
+    <string name="onboarding_finish">Pradėkite naršyti</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Pasirinkite temą</string>
+    
+    <string name="onboarding_theme_picker_description_2">Taupykite akumuliatorių ir regėjimą naudodami tamsųjį režimą.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automatinis</string>
+    
+    <string name="onboarding_theme_automatic_summary">Prisitaiko prie jūsų įrenginio nustatymų</string>
+    
+    <string name="onboarding_theme_dark_title">Tamsi tema</string>
+    
+    <string name="onboarding_theme_light_title">Šviesos tema</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Išsiųsti skirtukai!</string>
+    
+    <string name="sync_sent_tab_snackbar">Išsiųstas skirtukas!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Nepavyksta išsiųsti</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Nuskaitykite kodą</string>
+    
+    <string name="sign_in_instructions">"Waterfox" remiasi "Mozilla" paskyra, kad būtų galima sinchronizuoti duomenis tarp mobiliojo ir darbalaukio.&lt;br&gt; Kompiuteryje atidarykite "Waterfox" ir eikite į &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;"Mozilla" niekaip nesusijusi su "Waterfox".&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Paruošta nuskaityti</string>
+    
+    <string name="sign_in_with_camera">Prisijunkite naudodami fotoaparatą</string>
+    
+    <string name="sign_in_with_email">Vietoj to naudokite el. paštą</string>
+    
+    <string name="sign_in_create_account_text">Nėra paskyros? &lt;u&gt;Susikurkite ją&lt;/u&gt;, kad galėtumėte sinchronizuoti "Waterfox" iš vieno įrenginio į kitą.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s bus nutrauktas sinchronizavimas su jūsų paskyra, tačiau nebus ištrinti jokie jūsų naršymo duomenys šiame prietaise.</string>
+    
+    <string name="sign_out_disconnect">Atjunkite</string>
+    
+    <string name="sign_out_cancel">Atšaukti</string>
+    
+    <string name="bookmark_cannot_edit_root">Negalima redaguoti numatytųjų aplankų</string>
+
+    
+    
+    <string name="etp_settings">Apsaugos nustatymai</string>
+    
+    <string name="preference_enhanced_tracking_protection">Patobulinta sekimo apsauga</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Naršykite nesekami</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Duomenis pasilikite sau. %s apsaugo jus nuo daugelio dažniausiai pasitaikančių sekimo priemonių, kurios seka jūsų veiksmus internete.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Sužinokite daugiau</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standartinis (numatytasis)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Subalansuota privatumo ir našumo atžvilgiu. Puslapiai įkeliami įprastai.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Ką blokuoja standartinė sekimo apsauga</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Griežtas</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokuojama daugiau sekimo įrenginių, todėl puslapiai įkeliami greičiau, tačiau kai kurios puslapio funkcijos gali sutrikti.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Ką blokuoja griežta sekimo apsauga</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Pasirinktinis</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Pasirinkite, kuriuos sekimo įrenginius ir scenarijus blokuoti.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Ką blokuoja pasirinktinė stebėjimo apsauga</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Slapukai</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Kryžminės svetainės ir socialinės medijos sekimo priemonės</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Slapukai iš nelankytų svetainių</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Visi trečiųjų šalių slapukai (dėl jų gali sutrikti svetainių veikimas)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Visi slapukai (dėl to neveikia svetainės)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Izoliuoti kryžminius svetainės slapukus</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Turinio stebėjimas</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Visuose skirtukuose</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Tik privačiuose skirtukuose</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Pirštų antspaudai</string>
+    
+    <string name="enhanced_tracking_protection_details">Išsami informacija</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Užblokuotas</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Leidžiama</string>
+    
+    <string name="etp_social_media_trackers_title">Socialinės žiniasklaidos sekimo priemonės</string>
+    
+    <string name="etp_social_media_trackers_description">Apriboja socialinių tinklų galimybę sekti jūsų naršymo internete veiklą.</string>
+    
+    <string name="etp_cookies_title">Kryžminio svetainių stebėjimo slapukai</string>
+    
+    <string name="etp_cookies_title_2">Kryžminės svetainės slapukai</string>
+    
+    <string name="etp_cookies_description">Blokuoja slapukus, kuriuos reklamos tinklai ir analizės bendrovės naudoja jūsų naršymo duomenims daugelyje svetainių kaupti.</string>
+    
+    <string name="etp_cookies_description_2">Visiška slapukų apsauga izoliuoja slapukus tik toje svetainėje, kurioje esate, todėl sekimo programos, pvz., skelbimų tinklai, negali jų naudoti jūsų sekimui įvairiose svetainėse.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Neleidžia kenkėjiškiems scenarijams gauti prieigą prie jūsų prietaiso ir išgauti skaitmeninės valiutos.</string>
+    
+    <string name="etp_fingerprinters_title">Pirštų antspaudai</string>
+    
+    <string name="etp_fingerprinters_description">Neleidžia rinkti unikalių jūsų įrenginio duomenų, kurie gali būti naudojami sekimo tikslais.</string>
+    
+    <string name="etp_tracking_content_title">Turinio stebėjimas</string>
+    
+    <string name="etp_tracking_content_description">Neleidžia įkelti išorinių skelbimų, vaizdo įrašų ir kito turinio, kuriame yra sekimo kodas. Gali turėti įtakos kai kurioms svetainės funkcijoms.</string>
+    
+    <string name="etp_panel_on">Apsauga šioje svetainėje įjungta</string>
+    
+    <string name="etp_panel_off">Apsaugos šioje svetainėje yra išjungtos</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Šiose svetainėse sustiprinta sekimo apsauga yra išjungta.</string>
+    
+    <string name="etp_back_button_content_description">Grįžti atgal</string>
+    
+    <string name="open_source_licenses_title">%s | OSS bibliotekos</string>
+    
+    <string name="etp_redirect_trackers_title">Peradresavimo stebėtojai</string>
+    
+    <string name="etp_redirect_trackers_description">ištrina slapukus, nustatomus nukreipiant į žinomas sekimo svetaines.</string>
+    
+    <string name="preference_etp_smartblock_description">Kai kurie toliau pažymėti sekimo įrenginiai šiame puslapyje buvo iš dalies atblokuoti, nes su jais sąveikavote *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Sužinokite daugiau</string>
+
+    
+    <string name="about_support">Parama</string>
+    
+    <string name="about_crashes">Avarijos</string>
+    
+    <string name="about_privacy_notice">Privatumo pranešimas</string>
+    
+    <string name="about_know_your_rights">Žinokite savo teises</string>
+    
+    <string name="about_licensing_information">Licencijavimo informacija</string>
+    
+    <string name="about_other_open_source_libraries">Naudojamos bibliotekos</string>
+    
+    <string name="about_debug_menu_toast_progress">Derinimo meniu: %1$d paspaudimas (-ai) į kairę, kad įjungtumėte</string>
+    <string name="about_debug_menu_toast_done">Įjungtas derinimo meniu</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopijuoti</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">"Paste &amp; Go</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Pasta</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL nukopijuotas į iškarpinę</string>
+
+    
+    <string name="add_to_homescreen_title">Pridėti į pagrindinį ekraną</string>
+    
+    <string name="add_to_homescreen_cancel">Atšaukti</string>
+    
+    <string name="add_to_homescreen_add">Pridėti</string>
+    
+    <string name="add_to_homescreen_continue">Tęsti į svetainę</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Spartusis pavadinimas</string>
+    
+    <string name="add_to_homescreen_description_2">Šią svetainę galite lengvai pridėti prie savo prietaiso pagrindinio ekrano, kad galėtumėte iš karto pasiekti ir naršyti greičiau, naudodami į programėlę panašią patirtį.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Prisijungimo vardai ir slaptažodžiai</string>
+    
+    <string name="preferences_passwords_save_logins">Išsaugoti prisijungimo vardus ir slaptažodžius</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Paprašykite išsaugoti</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Niekada neišsaugokite</string>
+    
+    <string name="preferences_passwords_autofill2">Automatinis užpildymas %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Užpildykite ir išsaugokite naudotojų vardus ir slaptažodžius svetainėse naudodami %1$s.</string>
+    
+    <string name="preferences_android_autofill">Automatinis pildymas kitose programose</string>
+    
+    <string name="preferences_android_autofill_description">Užpildykite naudotojo vardus ir slaptažodžius kitose prietaise esančiose programėlėse.</string>
+    
+    <string name="preferences_logins_add_login">Pridėti prisijungimą</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Sinchronizuoti prisijungimus</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Sinchronizuokite prisijungimus įvairiuose įrenginiuose</string>
+    
+    <string name="preferences_passwords_saved_logins">Išsaugoti prisijungimai</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Čia bus rodomi prisijungimai, kuriuos išsaugojote arba sinchronizavote su %s.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sužinokite daugiau apie "Sync".</string>
+    
+    <string name="preferences_passwords_exceptions">Išimtys</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Prisijungimo vardai ir slaptažodžiai, kurie nėra išsaugoti, bus rodomi čia.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Prisijungimo vardai ir slaptažodžiai šiose svetainėse nebus išsaugomi.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Ištrinti visas išimtis</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Paieškos prisijungimai</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Svetainė</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Vartotojo vardas</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Slaptažodis</string>
+    
+    <string name="logins_password_copied">Slaptažodis nukopijuotas į iškarpinę</string>
+    
+    <string name="logins_username_copied">Vartotojo vardas nukopijuotas į iškarpinę</string>
+    
+    <string name="saved_logins_copy_password">Kopijuoti slaptažodį</string>
+    
+    <string name="saved_logins_clear_password">Išvalyti slaptažodį</string>
+    
+    <string name="saved_login_copy_username">Nukopijuoti vartotojo vardą</string>
+    
+    <string name="saved_login_clear_username">Išvalyti vartotojo vardą</string>
+    
+    <string name="saved_login_clear_hostname">Išvalyti prieglobsčio vardą</string>
+    
+    <string name="saved_login_open_site">Atidarykite svetainę naršyklėje</string>
+    
+    <string name="saved_login_reveal_password">Rodyti slaptažodį</string>
+    
+    <string name="saved_login_hide_password">Paslėpti slaptažodį</string>
+    
+    <string name="logins_biometric_prompt_message">Atrakinti, jei norite peržiūrėti išsaugotus prisijungimus</string>
+    
+    <string name="logins_warning_dialog_title">Apsaugokite savo prisijungimo vardus ir slaptažodžius</string>
+    
+    <string name="logins_warning_dialog_message">Nustatykite prietaiso užrakinimo šabloną, PIN kodą arba slaptažodį, kad apsaugotumėte išsaugotus prisijungimo vardus ir slaptažodžius nuo prieigos, jei jūsų prietaisą turi kas nors kitas.</string>
+    
+    <string name="logins_warning_dialog_later">Vėliau</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Nustatykite dabar</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Atrakinkite savo prietaisą</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Visų svetainių priartinimas</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Įgalinkite, kad būtų leidžiama suspausti ir priartinti net ir tose svetainėse, kuriose šis gestas draudžiamas.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Pavadinimas (nuo A iki Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Paskutinį kartą naudotas</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Rūšiuoti prisijungimų meniu</string>
+
+    
+    
+    <string name="preferences_autofill">Automatinis pildymas</string>
+    
+    <string name="preferences_addresses">Adresai</string>
+    
+    <string name="preferences_credit_cards">Kredito kortelės</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Išsaugoti ir automatiškai užpildyti korteles</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Duomenys užšifruoti</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Sinchronizuokite korteles įvairiuose įrenginiuose</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Sinchronizavimo kortelės</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Pridėti kredito kortelę</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Tvarkykite išsaugotas korteles</string>
+    
+    <string name="preferences_addresses_add_address">Pridėti adresą</string>
+    
+    <string name="preferences_addresses_manage_addresses">Tvarkyti adresus</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Išsaugoti ir automatiškai užpildyti adresus</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Įtraukite tokią informaciją kaip numeriai, el. pašto ir pristatymo adresai.</string>
+
+    
+    <string name="credit_cards_add_card">Pridėti kortelę</string>
+    
+    <string name="credit_cards_edit_card">Redaguoti kortelę</string>
+    
+    <string name="credit_cards_card_number">Kortelės numeris</string>
+    
+    <string name="credit_cards_expiration_date">Galiojimo data</string>
+    
+    <string name="credit_cards_expiration_date_month">Galiojimo data Mėnuo</string>
+    
+    <string name="credit_cards_expiration_date_year">Galiojimo data Metai</string>
+    
+    <string name="credit_cards_name_on_card">Vardas ir pavardė kortelėje</string>
+    
+    <string name="credit_cards_menu_delete_card">Ištrinti kortelę</string>
+    
+    <string name="credit_cards_delete_card_button">Ištrinti kortelę</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Ar tikrai norite ištrinti šią kredito kortelę?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Ištrinti</string>
+    
+    <string name="credit_cards_menu_save">Išsaugoti</string>
+    
+    <string name="credit_cards_save_button">Išsaugoti</string>
+    
+    <string name="credit_cards_cancel_button">Atšaukti</string>
+    
+    <string name="credit_cards_saved_cards">Išsaugotos kortelės</string>
+    
+    <string name="credit_cards_number_validation_error_message">Įveskite galiojantį kredito kortelės numerį</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Užpildykite šį laukelį</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Atrakinti, kad galėtumėte peržiūrėti išsaugotas korteles</string>
+    
+    <string name="credit_cards_warning_dialog_title">Apsaugokite savo kredito korteles</string>
+    
+    <string name="credit_cards_warning_dialog_message">Nustatykite prietaiso užrakinimo šabloną, PIN kodą arba slaptažodį, kad apsaugotumėte išsaugotas kredito korteles nuo prieigos, jei jūsų prietaisą turi kas nors kitas.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Nustatykite dabar</string>
+    
+    <string name="credit_cards_warning_dialog_later">Vėliau</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Atrakinkite savo prietaisą</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Atrakinti, kad būtų galima naudoti saugomą kredito kortelės informaciją</string>
+    
+    <string name="addresses_add_address">Pridėti adresą</string>
+    
+    <string name="addresses_edit_address">Redaguoti adresą</string>
+    
+    <string name="addresses_manage_addresses">Tvarkyti adresus</string>
+    
+    <string name="addresses_first_name">Vardas</string>
+    
+    <string name="addresses_middle_name">Vidurinis vardas</string>
+    
+    <string name="addresses_last_name">Pavardė</string>
+    
+    <string name="addresses_street_address">Gatvės adresas</string>
+    
+    <string name="addresses_city">Miestas</string>
+    
+    <string name="addresses_state">Valstybė</string>
+    
+    <string name="addresses_province">Provincija</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Šalis arba regionas</string>
+    
+    <string name="addresses_phone">Telefonas</string>
+    
+    <string name="addresses_email">El. paštas</string>
+    
+    <string name="addresses_save_button">Išsaugoti</string>
+    
+    <string name="addresses_cancel_button">Atšaukti</string>
+    
+    <string name="addressess_delete_address_button">Ištrinti adresą</string>
+    
+    <string name="addressess_confirm_dialog_message">Ar tikrai norite ištrinti šį adresą?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Ištrinti</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Atšaukti</string>
+    
+    <string name="address_menu_save_address">Išsaugoti adresą</string>
+    
+    <string name="address_menu_delete_address">Ištrinti adresą</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Pridėti paieškos variklį</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Redaguoti paieškos variklį</string>
+    
+    <string name="search_engine_add_button_content_description">Pridėti</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Išsaugoti</string>
+    
+    <string name="search_engine_edit">Redaguoti</string>
+    
+    <string name="search_engine_delete">Ištrinti</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Kita</string>
+    
+    <string name="search_add_custom_engine_name_hint">Pavadinimas</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Naudojama paieškos eilutė</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Pakeiskite užklausą žodžiu "%s". Pavyzdys:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Pasirinktinės paieškos sistemos informacija</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Įveskite paieškos sistemos pavadinimą</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Įveskite paieškos eilutę</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Patikrinkite, ar paieškos eilutė atitinka pavyzdžio formatą</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Klaida jungiantis prie "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Sukurta %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Išsaugota %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Ištrinta %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Leisti:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Eikite į "Android" nustatymus</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Bakstelėkite &lt;b&gt;Įgaliojimai&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Perjunkite &lt;b&gt;%1$s&lt;/b&gt; į ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Ryšys yra saugus</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Ryšys nėra saugus</string>
+    
+    <string name="clear_site_data">Išvalykite slapukus ir svetainės duomenis</string>
+    
+    <string name="confirm_clear_site_data">Ar tikrai norite išvalyti visus svetainės &lt;b&gt;%s&lt;/b&gt; slapukus ir duomenis?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Ar tikrai norite išvalyti visų svetainių leidimus?</string>
+    
+    <string name="confirm_clear_permissions_site">Ar tikrai norite panaikinti visus šios svetainės leidimus?</string>
+    
+    <string name="confirm_clear_permission_site">Ar tikrai norite panaikinti leidimą šiai svetainei?</string>
+    
+    <string name="no_site_exceptions">Jokių išimčių svetainėje nėra</string>
+    
+    <string name="bookmark_deletion_confirmation">Ar tikrai norite ištrinti šią žymę?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Pridėti prie sparčiųjų klavišų</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Pašalinti iš sparčiųjų klavišų</string>
+    
+    <string name="certificate_info_verified_by">Patvirtino: %1$s</string>
+    
+    <string name="login_menu_delete_button">Ištrinti</string>
+    
+    <string name="login_menu_edit_button">Redaguoti</string>
+    
+    <string name="login_deletion_confirmation">Ar tikrai norite ištrinti šį prisijungimą?</string>
+    
+    <string name="dialog_delete_positive">Ištrinti</string>
+    
+    <string name="dialog_delete_negative">Atšaukti</string>
+    
+    <string name="login_options_menu">Prisijungimo parinktys</string>
+    
+    <string name="saved_login_hostname_description">Redaguojamo teksto laukas, kuriame nurodomas prisijungimo interneto adresas.</string>
+    
+    <string name="saved_login_username_description">Redaguojamas teksto laukas, skirtas prisijungimo vartotojo vardui.</string>
+    
+    <string name="saved_login_password_description">Redaguojamas teksto laukas, skirtas prisijungimo slaptažodžiui.</string>
+    
+    <string name="save_changes_to_login">Išsaugoti pakeitimus, kad prisijungtumėte.</string>
+    
+    <string name="edit">Redaguoti</string>
+    
+    <string name="add_login">Pridėti naują prisijungimą</string>
+    
+    <string name="saved_login_password_required">Reikalingas slaptažodis</string>
+    
+    <string name="saved_login_username_required">Reikalingas vartotojo vardas</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Reikalingas prieglobsčio vardas</string>
+    
+    <string name="voice_search_content_description">Paieška balsu</string>
+    
+    <string name="voice_search_explainer">Kalbėkite dabar</string>
+    
+    <string name="saved_login_duplicate">Prisijungimas su šiuo vartotojo vardu jau egzistuoja</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Tinklalapio adrese turi būti "https://" arba "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Reikalingas galiojantis prieglobsčio vardas</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Prijunkite kitą įrenginį.</string>
+    
+    <string name="synced_tabs_reauth">Pakartotinai patvirtinkite autentiškumą.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Įjunkite skirtukų sinchronizavimą.</string>
+    
+    <string name="synced_tabs_no_tabs">Kituose įrenginiuose neturite atidarytų "Waterfox" skirtukų.</string>
+    
+    <string name="synced_tabs_sign_in_message">Peržiūrėkite kitų prietaisų skirtukų sąrašą.</string>
+    
+    <string name="synced_tabs_sign_in_button">Prisijunkite prie sinchronizavimo</string>
+    
+    <string name="synced_tabs_no_open_tabs">Nėra atvirų skirtukų</string>
+    
+    <string name="synced_tabs_expand_group">Išskleisti sinchronizuotų skirtukų grupę</string>
+    
+    <string name="synced_tabs_collapse_group">Sinchronizuojamų skirtukų grupės sulankstymas</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Pasiektas trumpojo klavišo limitas</string>
+    
+    <string name="shortcut_max_limit_content">Jei norite pridėti naują nuorodą, vieną pašalinkite. Palieskite ir palaikykite svetainę ir pasirinkite pašalinti.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">Gerai, supratau</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Trumpieji keliai</string>
+	
+	<string name="top_sites_rename_dialog_title">Pavadinimas</string>
+    
+    <string name="shortcut_name_hint">Spartusis pavadinimas</string>
+	
+	<string name="top_sites_rename_dialog_ok">GERAI</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Atšaukti</string>
+    
+    <string name="top_sites_menu_settings">Nustatymai</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Mūsų rėmėjai ir jūsų privatumas</string>
+    
+    <string name="top_sites_sponsored_label">Rėmėjas</string>
+
+    
+    
+    <string name="inactive_tabs_title">Neaktyvūs skirtukai</string>
+    
+    <string name="inactive_tabs_delete_all">Uždaryti visus neaktyvius skirtukus</string>
+    
+    <string name="inactive_tabs_expand_content_description">Išskleisti neaktyvius skirtukus</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Sugriauti neaktyvius skirtukus</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatinis uždarymas po mėnesio?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">"Waterfox" gali uždaryti skirtukus, kurių neperžiūrėjote per pastarąjį mėnesį.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ĮJUNGTI AUTOMATINĮ UŽDARYMĄ</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Įjungtas automatinis uždarymas</string>
+
+    
+    <string name="default_browser_experiment_card_text">Nustatykite svetainių, el. laiškų ir pranešimų nuorodas automatiškai atidaryti "Waterfox".</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Pašalinti</string>
+
+    
+    <string name="radio_preference_info_content_description">Spustelėkite, jei norite gauti daugiau informacijos</string>
+
+    
+    <string name="action_bar_up_description">Keliaukite aukštyn</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Uždaryti</string>
+
+    <string name="waterfox_suggest_header">Vandens lapės pasiūlymas</string>
+</resources>

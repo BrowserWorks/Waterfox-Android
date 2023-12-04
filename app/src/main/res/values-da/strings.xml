@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Privat %s</string>
+    
+    <string name="app_name_private_4">%s (Privat)</string>
+
+    
+    
+    <string name="content_description_menu">Flere muligheder</string>
+    
+    <string name="content_description_private_browsing_button">Aktivér privat browsing</string>
+    
+    <string name="content_description_disable_private_browsing_button">Deaktiver privat browsing</string>
+    
+    <string name="search_hint">Søg eller indtast adresse</string>
+    
+    <string name="application_search_hint">Indtast søgeord</string>
+    
+    <string name="no_open_tabs_description">Dine åbne faner vil blive vist her.</string>
+    
+    <string name="no_private_tabs_description">Dine private faner vil blive vist her.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d valgt</string>
+    
+    <string name="tab_tray_add_new_collection">Tilføj ny samling</string>
+    
+    <string name="tab_tray_add_new_collection_name">Navn</string>
+    
+    <string name="tab_tray_select_collection">Vælg samling</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Afslut multiselect-tilstand</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Gem udvalgte faner i samlingen</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Udvalgt</string>
+
+    
+    
+    <string name="recently_saved_title">Gemt for nylig</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Vis alle gemte bogmærker</string>
+    
+    <string name="recently_saved_menu_item_remove">Fjern</string>
+
+    
+    <string name="about_content">%1$s er lavet af BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s sletter din søge- og browserhistorik fra private faner, når du lukker dem eller afslutter appen. Selvom det ikke gør dig anonym over for hjemmesider eller din internetudbyder, gør det det nemmere at holde det, du laver online, privat fra alle andre, der bruger denne enhed.</string>
+    <string name="private_browsing_common_myths">Almindelige myter om privat browsing</string>
+
+    
+    
+    <string name="cfr_message">Tilføj en genvej til at åbne private faner fra din startskærm.</string>
+    
+    <string name="cfr_pos_button_text">Tilføj genvej</string>
+    
+    <string name="cfr_neg_button_text">Nej tak</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Du kan indstille %1$s til automatisk at åbne links i apps.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Gå til indstillinger</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Afvis</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Afvis</string>
+
+    
+    
+    <string name="tcp_cfr_message">Vores hidtil stærkeste privatlivsfunktion isolerer cross-site trackere.</string>
+    
+    <string name="tcp_cfr_learn_more">Lær om total cookie-beskyttelse</string>
+
+    
+    <string name="camera_permissions_needed_message">Adgang til kameraet er nødvendig. Gå til Android-indstillinger, tryk på tilladelser, og tryk på tillad.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Gå til indstillinger</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Afvis</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Indstil åbne faner til at lukke automatisk, hvis de ikke er blevet vist den seneste dag, uge eller måned.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Se muligheder</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Afvis</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Faner, du ikke har set i to uger, bliver flyttet hertil.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Slå fra i indstillinger</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automatisk lukning efter en måned?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s kan lukke faner, du ikke har set den seneste måned.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Luk</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Slå automatisk lukning til</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Ny fane</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Ny privat fane</string>
+
+    
+    
+    <string name="recent_tabs_header">Hop ind igen</string>
+    
+    <string name="recent_tabs_show_all">Vis alle</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Knappen Vis alle seneste faner</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Din søgning efter \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d steder</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Se alle synkroniserede faner</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Synkroniseret enhed</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Fjern</string>
+    
+    <string name="recent_tab_menu_item_remove">Fjern</string>
+
+    
+    
+    <string name="history_metadata_header_2">For nylig besøgt</string>
+    
+    <string name="recently_visited_menu_item_remove">Fjern</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Vis alle tidligere udforskninger</string>
+
+    
+    
+    <string name="browser_menu_back">Tilbage</string>
+    
+    <string name="browser_menu_forward">Fremad</string>
+    
+    <string name="browser_menu_refresh">Opfrisk</string>
+    
+    <string name="browser_menu_stop">Stop</string>
+    
+    <string name="browser_menu_add_ons">Tilføjelser</string>
+    
+    <string name="no_add_ons">Ingen add-ons her</string>
+    
+    <string name="browser_menu_help">Hjælp</string>
+    
+    <string name="browser_menu_settings">Indstillinger</string>
+    
+    <string name="browser_menu_library">Bibliotek</string>
+    
+    <string name="browser_menu_desktop_site">Desktop-side</string>
+    
+    <string name="browser_menu_add_to_homescreen">Tilføj til startskærm</string>
+    
+    <string name="browser_menu_install_on_homescreen">Installer</string>
+    
+    <string name="resync_button_content_description">Resynkronisering</string>
+    
+    <string name="browser_menu_find_in_page">Find på siden</string>
+    
+    <string name="browser_menu_save_to_collection_2">Gem til samling</string>
+    
+    <string name="browser_menu_share">Del</string>
+    
+    <string name="browser_menu_open_in_waterfox">Åbn i %1$s</string>
+    
+    <string name="browser_menu_powered_by">drevet af %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Drevet af %1$s</string>
+    
+    <string name="browser_menu_read">Læservisning</string>
+    
+    <string name="browser_menu_read_close">Luk læserens syn</string>
+    
+    <string name="browser_menu_open_app_link">Åbn i app</string>
+    
+    <string name="browser_menu_customize_reader_view">Tilpas læserens visning</string>
+    
+    <string name="browser_menu_add">Tilføj</string>
+    
+    <string name="browser_menu_edit">Rediger</string>
+    
+    <string name="browser_menu_customize_home_1">Tilpas hjemmesiden</string>
+    
+    
+    <string name="browser_toolbar_home">Startskærm</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Udvalgt sprog</string>
+    
+    <string name="default_locale_text">Følg enhedens sprog</string>
+    
+    <string name="locale_search_hint">Søg på sprog</string>
+
+    
+    
+    <string name="search_scan_button">Scanning</string>
+    
+    <string name="search_engine_button">Søgemaskine</string>
+    
+    <string name="search_shortcuts_engine_settings">Indstillinger for søgemaskine</string>
+    
+    <string name="awesomebar_clipboard_title">Udfyld link fra udklipsholderen</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Tillad</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Tillad ikke</string>
+    
+    <string name="search_suggestions_onboarding_title">Tillad søgeforslag i private sessioner?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s vil dele alt, hvad du skriver i adresselinjen, med din standardsøgemaskine.</string>
+    
+    <string name="search_engine_suggestions_title">Søg %s</string>
+    
+    <string name="search_engine_suggestions_description">Søg direkte fra adresselinjen</string>
+    
+    <string name="search_settings_menu_item">Indstillinger for søgning</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Det er nu lettere at fortsætte, hvor du slap.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Hop til dine åbne faner, bogmærker og browserhistorik.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Rene, organiserede faner</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Fjern rod i fanebladene med forbedret layout og automatisk lukning af faneblade.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Seneste søgninger</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Gense dine seneste søgninger fra din startside og dine faner.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Mød din personlige startside. De seneste faner, bogmærker og søgeresultater vises her.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Velkommen til et mere personligt internet</string>
+    
+    <string name="onboarding_home_welcome_description">Flere farver. Bedre privatliv. Samme engagement i mennesker frem for profit.</string>
+    
+    <string name="onboarding_home_sync_title_3">Hop fra telefon til laptop og tilbage igen</string>
+    
+    <string name="onboarding_home_sync_description">Fortsæt, hvor du slap, med faner fra andre enheder nu på din startside.</string>
+    
+    <string name="onboarding_home_get_started_button">Kom godt i gang</string>
+    
+    <string name="onboarding_home_sign_in_button">Log ind</string>
+    
+    <string name="onboarding_home_skip_button">Spring over</string>
+    
+    <string name="onboarding_home_content_description_close_button">Luk</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Åbn en ny %1$s fane</string>
+    
+    <string name="search_widget_text_short">Søgning</string>
+    
+    <string name="search_widget_text_long">Søg på nettet</string>
+    
+    <string name="search_widget_voice">Stemmesøgning</string>
+
+    
+    
+    <string name="settings">Indstillinger</string>
+    
+    <string name="preferences_category_general">Generelt</string>
+    
+    <string name="preferences_category_about">Om</string>
+    
+    <string name="preferences_default_search_engine">Standard-søgemaskine</string>
+    
+    <string name="preferences_search">Søgning</string>
+    
+    <string name="preferences_search_address_bar">Adressebjælke</string>
+    
+    <string name="preferences_rate">Bedøm på Google Play</string>
+    
+    <string name="preferences_about">Om %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Indstil som standardbrowser</string>
+    
+    <string name="preferences_category_advanced">Avanceret</string>
+    
+    <string name="preferences_category_privacy_security">Privatliv og sikkerhed</string>
+    
+    <string name="preferences_site_permissions">Tilladelser til byggepladser</string>
+    
+    <string name="preferences_private_browsing_options">Privat browsing</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Åbn links i en privat fane</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Tillad skærmbilleder i privat browsing</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Hvis det er tilladt, vil private faner også være synlige, når flere apps er åbne.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Tilføj genvej til privat browsing</string>
+    
+    <string name="preferences_https_only_title">Kun HTTPS-tilstand</string>
+    
+    <string name="preferences_https_only_summary">Forsøger automatisk at oprette forbindelse til websteder, der bruger HTTPS-krypteringsprotokol for øget sikkerhed.</string>
+    
+    <string name="preferences_https_only_on">På</string>
+    
+    <string name="preferences_https_only_off">Af</string>
+    
+    <string name="preferences_http_only_learn_more">Få mere at vide</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Aktiver i alle faner</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Aktiveres kun i private faner</string>
+    
+    <string name="errorpage_httpsonly_title">Sikker side ikke tilgængelig</string>
+    
+    <string name="errorpage_httpsonly_message_title">Det mest sandsynlige er, at hjemmesiden simpelthen ikke understøtter HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Det er dog også muligt, at en angriber er involveret. Hvis du fortsætter til hjemmesiden, bør du ikke indtaste nogen følsomme oplysninger. Hvis du fortsætter, vil HTTPS-Only-tilstanden blive slået midlertidigt fra for webstedet.</string>
+    
+    <string name="preferences_accessibility">Tilgængelighed</string>
+    
+    <string name="preferences_override_fxa_server">Brugerdefineret server til Waterfox-konto</string>
+    
+    <string name="preferences_override_sync_tokenserver">Brugerdefineret synkroniseringsserver</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/Sync-server ændret. Afslutning af programmet for at anvende ændringer...</string>
+    
+    <string name="preferences_category_account">Konto</string>
+    
+    <string name="preferences_toolbar">Værktøjslinje</string>
+    
+    <string name="preferences_theme">Tema</string>
+    
+    <string name="preferences_home_2">Hjemmeside</string>
+    
+    <string name="preferences_gestures">Bevægelser</string>
+    
+    <string name="preferences_customize">Tilpas</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Synkroniser bogmærker, historik og meget mere med din Waterfox-konto</string>
+    
+    <string name="preferences_sign_in_description_2">Log ind for at synkronisere faner, bogmærker, adgangskoder og meget mere.</string>
+    
+    <string name="preferences_account_default_name">Waterfox-konto</string>
+    
+    <string name="preferences_account_sync_error">Forbind igen for at genoptage synkroniseringen</string>
+    
+    <string name="preferences_language">Sprog</string>
+    
+    <string name="preferences_remote_debugging">Fjernfejlfinding via USB</string>
+    
+    <string name="preferences_show_search_engines">Vis søgemaskiner</string>
+    
+    <string name="preferences_show_search_suggestions">Vis søgeforslag</string>
+    
+    <string name="preferences_show_voice_search">Vis stemmesøgning</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Vis i private sessioner</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Vis forslag til udklipsholder</string>
+    
+    <string name="preferences_search_browsing_history">Søg i browserhistorik</string>
+    
+    <string name="preferences_search_bookmarks">Søg i bogmærker</string>
+    
+    <string name="preferences_search_synced_tabs">Søg i synkroniserede faner</string>
+    
+    <string name="preferences_account_settings">Kontoindstillinger</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Autofuldfør webadresser</string>
+    
+    <string name="preferences_open_links_in_apps">Åbn links i apps</string>
+    
+    <string name="preferences_external_download_manager">Ekstern download manager</string>
+    
+    <string name="preferences_addons">Tilføjelser</string>
+    
+    <string name="preferences_notifications">Meddelelser</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Brugerdefineret tilføjelsessamling</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Annuller</string>
+    
+    <string name="customize_addon_collection_hint">Kollektionens navn</string>
+    
+    <string name="customize_addon_collection_user_hint">Samlingens ejer (bruger-ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">Add-on-samling ændret. Afslutning af programmet for at anvende ændringer...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Hop ind igen</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Seneste bogmærker</string>
+    
+    <string name="customize_toggle_recently_visited">For nylig besøgt</string>
+    
+    <string name="customize_wallpapers">Baggrunde</string>
+    
+    <string name="customize_toggle_contile">Sponsorerede genveje</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Baggrundsartikel: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Tapet opdateret!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Se</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Skift tapet ved at trykke på Waterfox-hjemmesidens logo</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfox-logo - skift tapet, knap</string>
+
+    
+    
+    <string name="addon_not_supported_error">Add-on understøttes ikke</string>
+    
+    <string name="addon_already_installed">Add-on er allerede installeret</string>
+
+    
+    
+    <string name="preferences_sync_now">Synkroniser nu</string>
+    
+    <string name="preferences_sync_category">Vælg, hvad der skal synkroniseres</string>
+    
+    <string name="preferences_sync_history">Historie</string>
+    
+    <string name="preferences_sync_bookmarks">Bogmærker</string>
+    
+    <string name="preferences_sync_logins">Log ind</string>
+    
+    <string name="preferences_sync_tabs_2">Åbne faner</string>
+    
+    <string name="preferences_sign_out">Log ud</string>
+    
+    <string name="preferences_sync_device_name">Enhedens navn</string>
+    
+    <string name="empty_device_name_error">Enhedsnavnet må ikke være tomt.</string>
+    
+    <string name="sync_syncing_in_progress">Synkronisering...</string>
+    
+    <string name="sync_failed_summary">Synkronisering mislykkedes. Sidste succes: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Synkronisering mislykkedes. Sidst synkroniseret: aldrig</string>
+    
+    <string name="sync_last_synced_summary">Sidst synkroniseret: %s</string>
+    
+    <string name="sync_never_synced_summary">Sidst synkroniseret: aldrig</string>
+    
+    <string name="default_device_name_2">%1$s på %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kreditkort</string>
+    
+    <string name="preferences_sync_address">Adresser</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Modtagne faner</string>
+    
+    <string name="fxa_received_tab_channel_description">Notifikationer for faner modtaget fra andre Waterfox-enheder.</string>
+    
+    <string name="fxa_tab_received_notification_name">Faneblad Modtaget</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Fane fra %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Undtagelser</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Tænd for alle websteder</string>
+    
+    <string name="exceptions_empty_message_description">Undtagelser giver dig mulighed for at deaktivere sporingsbeskyttelse for udvalgte sider.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Få mere at vide</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Slå synkronisering til</string>
+    
+    <string name="preferences_sync_2">Synkroniser og gem dine data</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Log ind for at genoprette forbindelsen</string>
+    
+    <string name="preferences_sync_remove_account">Fjern konto</string>
+
+    
+    
+    <string name="pair_instructions_2">Scan QR-koden, der vises på &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Top</string>
+    
+    <string name="preference_bottom_toolbar">Bund</string>
+
+    
+    
+    <string name="preference_light_theme">Lys</string>
+    
+    <string name="preference_dark_theme">Mørk</string>
+    
+    <string name="preference_auto_battery_theme">Indstillet af batterisparer</string>
+    
+    <string name="preference_follow_device_theme">Følg enhedens tema</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Træk for at opdatere</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Rul for at skjule værktøjslinjen</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Stryg værktøjslinjen sidelæns for at skifte fane</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Stryg værktøjslinjen op for at åbne faner</string>
+
+    
+    
+    <string name="library_downloads">Downloads</string>
+    
+    <string name="library_bookmarks">Bogmærker</string>
+    
+    <string name="library_desktop_bookmarks_root">Bogmærker på skrivebordet</string>
+    
+    <string name="library_desktop_bookmarks_menu">Menuen Bogmærker</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Værktøjslinjen Bogmærker</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Andre bogmærker</string>
+    
+    <string name="library_history">Historie</string>
+    
+    <string name="library_new_tab">Ny fane</string>
+    
+    <string name="settings_title">Indstillinger</string>
+    
+    <string name="content_description_close_button">Luk</string>
+
+    
+    <string name="history_search_group_site">%d websted</string>
+    
+    <string name="history_search_group_sites">%d steder</string>
+
+    
+    <string name="library_recently_closed_tabs">Nyligt lukkede faner</string>
+    
+    <string name="recently_closed_show_full_history">Vis hele historien</string>
+    
+    <string name="recently_closed_tabs">%d faner</string>
+    
+    <string name="recently_closed_tab">%d fane</string>
+    
+    <string name="recently_closed_empty_message">Ingen nyligt lukkede faner her</string>
+
+    
+    
+    <string name="preferences_tabs">Faneblade</string>
+    
+    <string name="preferences_tab_view">Fanevisning</string>
+    
+    <string name="tab_view_list">Liste</string>
+    
+    <string name="tab_view_grid">Gitter</string>
+    
+    <string name="preferences_close_tabs">Luk faner</string>
+    
+    <string name="close_tabs_manually">Aldrig</string>
+    
+    <string name="close_tabs_after_one_day">Efter en dag</string>
+    
+    <string name="close_tabs_after_one_week">Efter en uge</string>
+    
+    <string name="close_tabs_after_one_month">Efter en måned</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Luk åbne faner automatisk</string>
+
+    
+    
+    <string name="preferences_opening_screen">Åbningsskærm</string>
+    
+    <string name="opening_screen_homepage">Hjemmeside</string>
+    
+    <string name="opening_screen_last_tab">Sidste fane</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Hjemmeside efter fire timers inaktivitet</string>
+    
+    <string name="close_tabs_manually_summary">Luk manuelt</string>
+    
+    <string name="close_tabs_after_one_day_summary">Luk efter en dag</string>
+    
+    <string name="close_tabs_after_one_week_summary">Luk efter en uge</string>
+    
+    <string name="close_tabs_after_one_month_summary">Luk efter en måned</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Flyt gamle faner til inaktive</string>
+    
+    <string name="preferences_inactive_tabs_title">Faner, du ikke har set i to uger, bliver flyttet til den inaktive sektion.</string>
+
+    
+    
+    <string name="tab_header_label">Åbne faner</string>
+    
+    <string name="tabs_header_private_tabs_title">Private faner</string>
+    
+    <string name="tabs_header_synced_tabs_title">Synkroniserede faner</string>
+    
+    <string name="add_tab">Tilføj fane</string>
+    
+    <string name="add_private_tab">Tilføj privat fane</string>
+    
+    <string name="tab_drawer_fab_content">Privat</string>
+    
+    <string name="tab_drawer_fab_sync">Synkronisering</string>
+    
+    <string name="tab_tray_menu_item_share">Del alle faner</string>
+    
+    <string name="tab_tray_menu_recently_closed">Nyligt lukkede faner</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">For nylig lukket</string>
+    
+    <string name="tab_tray_menu_account_settings">Kontoindstillinger</string>
+    
+    <string name="tab_tray_menu_tab_settings">Faneindstillinger</string>
+    
+    <string name="tab_tray_menu_item_close">Luk alle faner</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Bogmærke</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Luk</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Del udvalgte faner</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Menu for valgte faner</string>
+    
+    <string name="remove_tab_from_collection">Fjern fanen fra samlingen</string>
+    
+    <string name="tabs_tray_select_tabs">Vælg faner</string>
+    
+    <string name="close_tab">Luk fanen</string>
+    
+    <string name="close_tab_title">Luk fanen %s</string>
+    
+    <string name="open_tabs_menu">Åbn menuen med faner</string>
+    
+    <string name="tabs_menu_save_to_collection1">Gem faner til samling</string>
+    
+    <string name="collection_delete">Slet samling</string>
+    
+    <string name="collection_rename">Omdøb samling</string>
+    
+    <string name="collection_open_tabs">Åbne faner</string>
+    
+    <string name="collection_name_hint">Kollektionens navn</string>
+	
+	<string name="rename_top_site">Omdøb</string>
+	
+	<string name="remove_top_site">Fjern</string>
+    
+    <string name="delete_from_history">Slet fra historik</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (privat tilstand)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Andre faner</string>
+
+    
+    
+    <string name="history_search_1">Indtast søgeord</string>
+    
+    <string name="history_delete_all">Slet historik</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Historie slettet</string>
+    
+    <string name="history_delete_single_item_snackbar">Slettet %1$s</string>
+    
+    <string name="history_delete_item">Slet</string>
+    
+    <string name="history_multi_select_title">%1$d valgt</string>
+    
+    <string name="history_today">I dag</string>
+    
+    <string name="history_yesterday">I går</string>
+    
+    <string name="history_7_days">De sidste 7 dage</string>
+    
+    <string name="history_30_days">De sidste 30 dage</string>
+    
+    <string name="history_older">Ældre</string>
+    
+    <string name="history_empty_message">Ingen historie her</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Downloads fjernet</string>
+    
+    <string name="download_delete_single_item_snackbar">Fjernet %1$s</string>
+    
+    <string name="download_empty_message_1">Ingen downloadede filer</string>
+    
+    <string name="download_multi_select_title">%1$d valgt</string>
+    
+    <string name="download_delete_item_1">Fjern</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Jeg er ked af det. %1$s kan ikke indlæse den side.</string>
+    
+    <string name="tab_crash_send_report">Send crash-rapport til BrowserWorks</string>
+    
+    <string name="tab_crash_close">Luk fanen</string>
+    
+    <string name="tab_crash_restore">Gendan-fanen</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Er du sikker på, at du vil slette denne mappe?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s vil slette de valgte elementer.</string>
+    
+    <string name="bookmark_delete_negative">Annuller</string>
+    
+    <string name="bookmark_add_folder">Tilføj mappe</string>
+    
+    <string name="bookmark_saved_snackbar">Bogmærke gemt!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Rediger</string>
+    
+    <string name="bookmark_menu_copy_button">Kopi</string>
+    
+    <string name="bookmark_menu_share_button">Del</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Åbn i ny fane</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Åbn i privat fane</string>
+    
+    <string name="bookmark_menu_delete_button">Slet</string>
+    
+    <string name="bookmark_menu_save_button">Gem</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d valgt</string>
+    
+    <string name="edit_bookmark_fragment_title">Rediger bogmærke</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Rediger mappe</string>
+    
+    <string name="bookmark_sign_in_button">Log ind for at se synkroniserede bogmærker</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">NAVN</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Tilføj mappe</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Vælg mappe</string>
+    
+    <string name="bookmark_empty_title_error">Skal have en titel</string>
+    
+    <string name="bookmark_invalid_url_error">Ugyldig URL</string>
+    
+    <string name="bookmarks_empty_message">Ingen bogmærker her</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Slettet %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Bogmærker slettet</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Sletning af valgte mapper</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Indtast søgeord</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Gå til Indstillinger</string>
+    
+    <string name="quick_settings_sheet">Ark med hurtige indstillinger</string>
+    
+    <string name="phone_feature_recommended">Anbefalet</string>
+    
+    <string name="clear_permissions">Ryd tilladelser</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Annuller</string>
+    
+    <string name="clear_permission">Klar tilladelse</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Annuller</string>
+    
+    <string name="clear_permissions_on_all_sites">Klare tilladelser på alle sider</string>
+    
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
+    
+    <string name="preference_phone_feature_camera">Kamera</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+    
+    <string name="preference_phone_feature_location">Placering</string>
+    
+    <string name="preference_phone_feature_notification">Meddelelse</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Vedvarende opbevaring</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookies på tværs af websteder</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM-kontrolleret indhold</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Bed om at tillade</string>
+    
+    <string name="preference_option_phone_feature_blocked">Blokeret</string>
+    
+    <string name="preference_option_phone_feature_allowed">Tilladt</string>
+    
+    <string name="phone_feature_blocked_by_android">Blokeret af Android</string>
+    
+    <string name="preference_exceptions">Undtagelser</string>
+    
+    <string name="tracking_protection_on">På</string>
+    
+    <string name="tracking_protection_off">Af</string>
+    
+    <string name="preference_option_autoplay_allowed2">Tillad lyd og video</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Tillad lyd og video</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Bloker lyd og video kun på mobildata</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Lyd og video afspilles på Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Bloker kun lyd</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Bloker kun lyd</string>
+    
+    <string name="preference_option_autoplay_blocked3">Bloker lyd og video</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Bloker lyd og video</string>
+    
+    <string name="delete_browsing_data_quit_on">På</string>
+    
+    <string name="delete_browsing_data_quit_off">Af</string>
+    
+    <string name="https_only_on">På</string>
+    
+    <string name="https_only_off">Af</string>
+
+    
+    
+    <string name="collections_header">Samlinger</string>
+    
+    <string name="collection_menu_button_content_description">Samlingsmenu</string>
+    
+    <string name="no_collections_description2">Saml de ting, der betyder noget for dig.\nGruppér lignende søgninger, websteder og faner for at få hurtig adgang senere.</string>
+    
+    <string name="create_collection_select_tabs">Vælg faner</string>
+    
+    <string name="create_collection_select_collection">Vælg samling</string>
+    
+    <string name="create_collection_name_collection">Navnesamling</string>
+    
+    <string name="create_collection_add_new_collection">Tilføj ny samling</string>
+    
+    <string name="create_collection_select_all">Vælg alle</string>
+    
+    <string name="create_collection_deselect_all">Fravælg alle</string>
+    
+    <string name="create_collection_save_to_collection_empty">Vælg faner, der skal gemmes</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d faner valgt</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">%d fane valgt</string>
+    
+    <string name="create_collection_tabs_saved">Faner gemt!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Samlingen er reddet!</string>
+    
+    <string name="create_collection_tab_saved">Fanen er reddet!</string>
+    
+    <string name="create_collection_close">Luk</string>
+    
+    <string name="create_collection_save">Gem</string>
+    
+    <string name="create_collection_view">Se</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Annuller</string>
+
+    
+    <string name="create_collection_default_name">Samling %d</string>
+
+    
+    
+    <string name="share_header_2">Del</string>
+    
+    <string name="share_button_content_description">Del</string>
+    
+    <string name="share_device_subheader">Send til enhed</string>
+    
+    <string name="share_link_all_apps_subheader">Alle handlinger</string>
+    
+    <string name="share_link_recent_apps_subheader">Nyligt brugt</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopier til udklipsholder</string>
+    
+    <string name="toast_copy_link_to_clipboard">Kopieret til udklipsholder</string>
+    
+    <string name="sync_menu_sign_in">Log ind for at synkronisere</string>
+    
+    <string name="sync_sign_in">Log ind for at synkronisere</string>
+    
+    <string name="sync_send_to_all">Send til alle enheder</string>
+    
+    <string name="sync_reconnect">Opret forbindelse til Sync igen</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Tilslut en anden enhed</string>
+    
+    <string name="sync_connect_device_dialog">For at sende en fane skal du logge ind på Waterfox på mindst én anden enhed.</string>
+    
+    <string name="sync_confirmation_button">Jeg har den</string>
+    
+    <string name="share_error_snackbar">Kan ikke dele til denne app</string>
+    
+    <string name="sync_add_new_device_title">Send til enhed</string>
+    
+    <string name="sync_add_new_device_message">Ingen enheder tilsluttet</string>
+    
+    <string name="sync_add_new_device_learn_button">Lær om at sende faner...</string>
+    
+    <string name="sync_add_new_device_connect_button">Tilslut en anden enhed...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Luk private faner</string>
+    
+    <string name="notification_marketing_channel_name">Markedsføring</string>
+    
+    <string name="notification_default_browser_title">%1$s er hurtig og privat</string>
+    
+    <string name="notification_default_browser_text">Gør %1$s til din standardbrowser</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Samling slettet</string>
+    
+    <string name="snackbar_collection_renamed">Samling omdøbt</string>
+    
+    <string name="snackbar_tab_closed">Fanen er lukket</string>
+    
+    <string name="snackbar_tabs_closed">Faner lukket</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Bogmærker gemt!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Tilføjet til genveje!</string>
+    
+    <string name="snackbar_private_tab_closed">Privat fane lukket</string>
+    
+    <string name="snackbar_private_tabs_closed">Private faner lukket</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Webstedet er fjernet</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Tillad %1$s at åbne %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">TILLAD</string>
+    
+    <string name="qr_scanner_dialog_negative">AFVIS</string>
+    
+    <string name="qr_scanner_dialog_invalid">Webadressen er ikke gyldig.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Er du sikker på, at du vil slette %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Hvis du sletter denne fane, slettes hele samlingen. Du kan til enhver tid oprette nye samlinger.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Slet %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Slet</string>
+    
+    <string name="full_screen_notification">Gå ind i fuldskærmstilstand</string>
+    
+    <string name="url_copied">URL kopieret</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Dette er en eksempeltekst. Den er her for at vise, hvordan teksten vil se ud, når du øger eller mindsker størrelsen med denne indstilling.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Gør tekst på hjemmesider større eller mindre</string>
+    
+    <string name="preference_accessibility_font_size_title">Skriftstørrelse</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automatisk skriftstørrelse</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Skriftstørrelsen vil matche dine Android-indstillinger. Deaktiver for at styre skriftstørrelsen her.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Slet browserdata</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Åbne faner</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d faner</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Browsinghistorik og webstedsdata</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adresser</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Småkager</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Du vil blive logget ud af de fleste sider</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Cachelagrede billeder og filer</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Frigør lagerplads</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Tilladelser til byggepladser</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Downloads</string>
+    
+    <string name="preferences_delete_browsing_data_button">Slet browserdata</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Slet browserdata ved afslutning</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Sletter automatisk browserdata, når du vælger "Afslut" i hovedmenuen.</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Stop</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Dette vil slette alle dine browserdata.</string>
+    
+    <string name="delete_history_prompt_title">Tidsinterval, der skal slettes</string>
+    
+    <string name="delete_history_prompt_body">Fjerner historik (inklusive historik synkroniseret fra andre enheder), cookies og andre browserdata.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Sidste time</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">I dag og i går</string>
+    
+    <string name="delete_history_prompt_button_everything">Det hele</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s vil slette de valgte browserdata.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Annuller</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Slet</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Browsing-data slettet</string>
+    
+    <string name="deleting_browsing_data_in_progress">Sletning af browserdata...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Slet alle sider i "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Annuller</string>
+    
+    <string name="delete_history_group_prompt_allow">Slet</string>
+    
+    <string name="delete_history_group_snackbar">Gruppe slettet</string>
+
+    
+    
+    <string name="onboarding_header_2">Velkommen til et mere privat web</string>
+    
+    <string name="onboarding_message">En græsrodsbaseret, uafhængig browser.</string>
+    
+    <string name="onboarding_account_sign_in_header">Fortsæt, hvor du slap</string>
+    
+    <string name="onboarding_manual_sign_in_description">Synkroniser faner og adgangskoder på tværs af enheder, så du kan skifte skærm uden problemer.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Log ind</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Synkronisering er slået til</string>
+    
+    <string name="onboarding_tracking_protection_header">Privatlivsbeskyttelse som standard</string>
+    
+    <string name="onboarding_tracking_protection_description">Med Total Cookie Protection, der forhindrer trackere i at bruge cookies til at forfølge dig på tværs af hjemmesider.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standard (standard)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Afbalanceret for privatliv og ydeevne. Siderne indlæses normalt.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Streng</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokerer flere trackere, så siderne indlæses hurtigere, men nogle funktioner på siderne kan blive ødelagt.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Vælg din værktøjslinjes placering</string>
+    
+    <string name="onboarding_toolbar_placement_description">Behold den i bunden, eller flyt den til toppen.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Du kontrollerer dine data</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox indsamler ingen telemetri og giver dig kontrol over dine data.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Læs vores privatlivspolitik</string>
+    
+    <string name="onboarding_conclusion_header">Klar til at åbne op for et fantastisk internet?</string>
+    
+    <string name="onboarding_finish">Begynd at gennemse</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Vælg dit tema</string>
+    
+    <string name="onboarding_theme_picker_description_2">Spar lidt batteri og dit syn med dark mode.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automatisk</string>
+    
+    <string name="onboarding_theme_automatic_summary">Tilpasser sig din enheds indstillinger</string>
+    
+    <string name="onboarding_theme_dark_title">Mørkt tema</string>
+    
+    <string name="onboarding_theme_light_title">Lys tema</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Tabs sendt!</string>
+    
+    <string name="sync_sent_tab_snackbar">Fanen er sendt!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Kan ikke sende</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETUR</string>
+    
+    <string name="sync_scan_code">Scan koden</string>
+    
+    <string name="sign_in_instructions">Waterfox er afhængig af en Mozilla-konto for at synkronisere data mellem mobil og computer.&lt;br&gt; Åbn Waterfox på din computer, og gå til &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla er på ingen måde tilknyttet Waterfox.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Klar til at scanne</string>
+    
+    <string name="sign_in_with_camera">Log ind med dit kamera</string>
+    
+    <string name="sign_in_with_email">Brug e-mail i stedet</string>
+    
+    <string name="sign_in_create_account_text">Ingen konto? &lt;u&gt;Opret en&lt;/u&gt; for at synkronisere Waterfox mellem enheder.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s vil stoppe synkroniseringen med din konto, men vil ikke slette nogen af dine browserdata på denne enhed.</string>
+    
+    <string name="sign_out_disconnect">Afbryd forbindelsen</string>
+    
+    <string name="sign_out_cancel">Annuller</string>
+    
+    <string name="bookmark_cannot_edit_root">Kan ikke redigere standardmapper</string>
+
+    
+    
+    <string name="etp_settings">Indstillinger for beskyttelse</string>
+    
+    <string name="preference_enhanced_tracking_protection">Forbedret beskyttelse mod sporing</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Browse uden at blive fulgt</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Hold dine data for dig selv. %s beskytter dig mod mange af de mest almindelige trackere, der følger med i, hvad du laver online.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Få mere at vide</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (standard)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Afbalanceret for privatliv og ydeevne. Siderne indlæses normalt.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Hvad er blokeret af standard sporingsbeskyttelse</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Streng</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokerer flere trackere, så siderne indlæses hurtigere, men nogle funktioner på siderne kan blive ødelagt.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Hvad er blokeret af streng sporingsbeskyttelse</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Brugerdefineret</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Vælg, hvilke trackere og scripts der skal blokeres.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Hvad er blokeret af tilpasset sporingsbeskyttelse</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Småkager</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Cross-site- og social media-trackere</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookies fra ubesøgte websteder</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Alle tredjepartscookies (kan få hjemmesider til at bryde sammen)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Alle cookies (vil få hjemmesider til at bryde sammen)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Isolér cross-site cookies</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Sporing af indhold</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">I alle faner</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Kun i private faner</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Fingeraftrykkere</string>
+    
+    <string name="enhanced_tracking_protection_details">Detaljer</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Blokeret</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Tilladt</string>
+    
+    <string name="etp_social_media_trackers_title">Trackere til sociale medier</string>
+    
+    <string name="etp_social_media_trackers_description">Begrænser sociale netværks mulighed for at spore din browsingaktivitet på nettet.</string>
+    
+    <string name="etp_cookies_title">Cookies til sporing på tværs af websteder</string>
+    
+    <string name="etp_cookies_title_2">Cookies på tværs af websteder</string>
+    
+    <string name="etp_cookies_description">Blokerer cookies, som annoncenetværk og analysefirmaer bruger til at indsamle dine browserdata på tværs af mange hjemmesider.</string>
+    
+    <string name="etp_cookies_description_2">Total Cookie Protection isolerer cookies til den side, du er på, så trackere som annoncenetværk ikke kan bruge dem til at følge dig på tværs af sider.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Forhindrer ondsindede scripts i at få adgang til din enhed for at udvinde digital valuta.</string>
+    
+    <string name="etp_fingerprinters_title">Fingeraftrykkere</string>
+    
+    <string name="etp_fingerprinters_description">Stopper indsamling af unikt identificerbare data om din enhed, som kan bruges til sporingsformål.</string>
+    
+    <string name="etp_tracking_content_title">Sporing af indhold</string>
+    
+    <string name="etp_tracking_content_description">Stopper eksterne annoncer, videoer og andet indhold fra at blive indlæst, som indeholder sporingskode. Kan påvirke nogle af hjemmesidens funktioner.</string>
+    
+    <string name="etp_panel_on">Beskyttelsen er slået til for dette site</string>
+    
+    <string name="etp_panel_off">Beskyttelsen er slået fra på dette websted</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Enhanced Tracking Protection er slået fra for disse hjemmesider</string>
+    
+    <string name="etp_back_button_content_description">Naviger tilbage</string>
+    
+    <string name="open_source_licenses_title">%s | OSS-biblioteker</string>
+    
+    <string name="etp_redirect_trackers_title">Omdirigeringssporere</string>
+    
+    <string name="etp_redirect_trackers_description">Sletter cookies, der er sat af omdirigeringer til kendte sporingswebsteder.</string>
+    
+    <string name="preference_etp_smartblock_description">Nogle trackere markeret nedenfor er blevet delvist blokeret på denne side, fordi du interagerede med dem *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Få mere at vide</string>
+
+    
+    <string name="about_support">Støtte</string>
+    
+    <string name="about_crashes">Nedbrud</string>
+    
+    <string name="about_privacy_notice">Meddelelse om beskyttelse af personlige oplysninger</string>
+    
+    <string name="about_know_your_rights">Kend dine rettigheder</string>
+    
+    <string name="about_licensing_information">Licensoplysninger</string>
+    
+    <string name="about_other_open_source_libraries">Biblioteker, som vi bruger</string>
+    
+    <string name="about_debug_menu_toast_progress">Fejlsøgningsmenu: %1$d klik til venstre for at aktivere</string>
+    <string name="about_debug_menu_toast_done">Fejlfindingsmenu aktiveret</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopi</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Indsæt og gå</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Indsæt</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL kopieret til udklipsholder</string>
+
+    
+    <string name="add_to_homescreen_title">Tilføj til startskærm</string>
+    
+    <string name="add_to_homescreen_cancel">Annuller</string>
+    
+    <string name="add_to_homescreen_add">Tilføj</string>
+    
+    <string name="add_to_homescreen_continue">Fortsæt til hjemmesiden</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Navn på genvej</string>
+    
+    <string name="add_to_homescreen_description_2">Du kan nemt tilføje denne hjemmeside til din enheds startskærm for at få øjeblikkelig adgang og browse hurtigere med en app-lignende oplevelse.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Logins og adgangskoder</string>
+    
+    <string name="preferences_passwords_save_logins">Gem logins og adgangskoder</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Bed om at gemme</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Gem aldrig</string>
+    
+    <string name="preferences_passwords_autofill2">Autofyld i %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Udfyld og gem brugernavne og adgangskoder på hjemmesider, mens du bruger %1$s.</string>
+    
+    <string name="preferences_android_autofill">Autofyld i andre apps</string>
+    
+    <string name="preferences_android_autofill_description">Udfyld brugernavne og adgangskoder i andre apps på din enhed.</string>
+    
+    <string name="preferences_logins_add_login">Tilføj login</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Synkroniser logins</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Synkroniser logins på tværs af enheder</string>
+    
+    <string name="preferences_passwords_saved_logins">Gemte logins</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">De logins, du gemmer eller synkroniserer med %s, vises her.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Få mere at vide om Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Undtagelser</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Logins og passwords, der ikke er gemt, vises her.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Logins og passwords gemmes ikke til disse sider.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Slet alle undtagelser</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Søg i logins</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Sted</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Brugernavn</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Adgangskode</string>
+    
+    <string name="logins_password_copied">Adgangskode kopieret til udklipsholder</string>
+    
+    <string name="logins_username_copied">Brugernavn kopieret til udklipsholder</string>
+    
+    <string name="saved_logins_copy_password">Kopier adgangskode</string>
+    
+    <string name="saved_logins_clear_password">Ryd adgangskode</string>
+    
+    <string name="saved_login_copy_username">Kopier brugernavn</string>
+    
+    <string name="saved_login_clear_username">Ryd brugernavn</string>
+    
+    <string name="saved_login_clear_hostname">Ryd værtsnavn</string>
+    
+    <string name="saved_login_open_site">Åbn siden i browseren</string>
+    
+    <string name="saved_login_reveal_password">Vis adgangskode</string>
+    
+    <string name="saved_login_hide_password">Skjul adgangskode</string>
+    
+    <string name="logins_biometric_prompt_message">Lås op for at se dine gemte logins</string>
+    
+    <string name="logins_warning_dialog_title">Beskyt dine logins og adgangskoder</string>
+    
+    <string name="logins_warning_dialog_message">Opsæt et låsemønster, en pinkode eller en adgangskode til enheden for at beskytte dine gemte logins og adgangskoder mod at blive åbnet, hvis en anden har din enhed.</string>
+    
+    <string name="logins_warning_dialog_later">Senere</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Sæt op nu</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Lås din enhed op</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Zoom på alle hjemmesider</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Aktiver for at tillade knib og zoom, selv på hjemmesider, der forhindrer denne bevægelse.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Navn (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Sidst brugt</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Sorter logins-menuen</string>
+
+    
+    
+    <string name="preferences_autofill">Autofyld</string>
+    
+    <string name="preferences_addresses">Adresser</string>
+    
+    <string name="preferences_credit_cards">Kreditkort</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Gem og udfyld kort automatisk</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Data er krypteret</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Synkroniser kort på tværs af enheder</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Synkroniser kort</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Tilføj kreditkort</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Administrer gemte kort</string>
+    
+    <string name="preferences_addresses_add_address">Tilføj adresse</string>
+    
+    <string name="preferences_addresses_manage_addresses">Administrer adresser</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Gem og udfyld adresser automatisk</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Inkluder oplysninger som numre, e-mail og leveringsadresser.</string>
+
+    
+    <string name="credit_cards_add_card">Tilføj kort</string>
+    
+    <string name="credit_cards_edit_card">Rediger kort</string>
+    
+    <string name="credit_cards_card_number">Kortnummer</string>
+    
+    <string name="credit_cards_expiration_date">Udløbsdato</string>
+    
+    <string name="credit_cards_expiration_date_month">Udløbsdato Måned</string>
+    
+    <string name="credit_cards_expiration_date_year">Udløbsdato År</string>
+    
+    <string name="credit_cards_name_on_card">Navn på kort</string>
+    
+    <string name="credit_cards_menu_delete_card">Slet kort</string>
+    
+    <string name="credit_cards_delete_card_button">Slet kort</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Er du sikker på, at du vil slette dette kreditkort?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Slet</string>
+    
+    <string name="credit_cards_menu_save">Gem</string>
+    
+    <string name="credit_cards_save_button">Gem</string>
+    
+    <string name="credit_cards_cancel_button">Annuller</string>
+    
+    <string name="credit_cards_saved_cards">Gemte kort</string>
+    
+    <string name="credit_cards_number_validation_error_message">Indtast venligst et gyldigt kreditkortnummer</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Udfyld venligst dette felt</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Lås op for at se dine gemte kort</string>
+    
+    <string name="credit_cards_warning_dialog_title">Beskyt dine kreditkort</string>
+    
+    <string name="credit_cards_warning_dialog_message">Opsæt et låsemønster, en pinkode eller en adgangskode for at beskytte dine gemte kreditkort mod at blive åbnet, hvis en anden har din enhed.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Sæt op nu</string>
+    
+    <string name="credit_cards_warning_dialog_later">Senere</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Lås din enhed op</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Lås op for at bruge gemte kreditkortoplysninger</string>
+    
+    <string name="addresses_add_address">Tilføj adresse</string>
+    
+    <string name="addresses_edit_address">Rediger adresse</string>
+    
+    <string name="addresses_manage_addresses">Administrer adresser</string>
+    
+    <string name="addresses_first_name">Fornavn</string>
+    
+    <string name="addresses_middle_name">Mellemnavn</string>
+    
+    <string name="addresses_last_name">Efternavn</string>
+    
+    <string name="addresses_street_address">Gadeadresse</string>
+    
+    <string name="addresses_city">By</string>
+    
+    <string name="addresses_state">Stat</string>
+    
+    <string name="addresses_province">Provinsen</string>
+    
+    <string name="addresses_zip">Lynlås</string>
+    
+    <string name="addresses_country">Land eller region</string>
+    
+    <string name="addresses_phone">Telefon</string>
+    
+    <string name="addresses_email">E-mail</string>
+    
+    <string name="addresses_save_button">Gem</string>
+    
+    <string name="addresses_cancel_button">Annuller</string>
+    
+    <string name="addressess_delete_address_button">Slet adresse</string>
+    
+    <string name="addressess_confirm_dialog_message">Er du sikker på, at du vil slette denne adresse?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Slet</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Annuller</string>
+    
+    <string name="address_menu_save_address">Gem adresse</string>
+    
+    <string name="address_menu_delete_address">Slet adresse</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Tilføj søgemaskine</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Rediger søgemaskine</string>
+    
+    <string name="search_engine_add_button_content_description">Tilføj</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Gem</string>
+    
+    <string name="search_engine_edit">Rediger</string>
+    
+    <string name="search_engine_delete">Slet</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Andet</string>
+    
+    <string name="search_add_custom_engine_name_hint">Navn</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Søgestreng, der skal bruges</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Erstat forespørgslen med "%s". Eksempel:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Detaljer om brugerdefineret søgemaskine</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Indtast søgemaskinens navn</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Indtast en søgestreng</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Kontroller, at søgestrengen matcher Eksempelformat</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Fejl ved tilslutning til "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Oprettet %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Gemt %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Slettet %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">At tillade det:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Gå til Android-indstillinger</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Tryk på &lt;b&gt;Tilladelser&lt;/b&gt;.</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Skift &lt;b&gt;%1$s&lt;/b&gt; til ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Forbindelsen er sikker</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Forbindelsen er ikke sikker</string>
+    
+    <string name="clear_site_data">Ryd cookies og webstedsdata</string>
+    
+    <string name="confirm_clear_site_data">Er du sikker på, at du vil slette alle cookies og data for webstedet &lt;b&gt;%s&lt;/b&gt;?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Er du sikker på, at du vil slette alle tilladelser på alle sider?</string>
+    
+    <string name="confirm_clear_permissions_site">Er du sikker på, at du vil slette alle tilladelser for dette websted?</string>
+    
+    <string name="confirm_clear_permission_site">Er du sikker på, at du vil fjerne denne tilladelse til dette websted?</string>
+    
+    <string name="no_site_exceptions">Ingen undtagelser på stedet</string>
+    
+    <string name="bookmark_deletion_confirmation">Er du sikker på, at du vil slette dette bogmærke?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Tilføj til genveje</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Fjern fra genveje</string>
+    
+    <string name="certificate_info_verified_by">Bekræftet af: %1$s</string>
+    
+    <string name="login_menu_delete_button">Slet</string>
+    
+    <string name="login_menu_edit_button">Rediger</string>
+    
+    <string name="login_deletion_confirmation">Er du sikker på, at du vil slette dette login?</string>
+    
+    <string name="dialog_delete_positive">Slet</string>
+    
+    <string name="dialog_delete_negative">Annuller</string>
+    
+    <string name="login_options_menu">Login-muligheder</string>
+    
+    <string name="saved_login_hostname_description">Det redigerbare tekstfelt til webadressen for login.</string>
+    
+    <string name="saved_login_username_description">Det redigerbare tekstfelt til brugernavnet for login.</string>
+    
+    <string name="saved_login_password_description">Det redigerbare tekstfelt til adgangskoden til login.</string>
+    
+    <string name="save_changes_to_login">Gem ændringer for at logge ind.</string>
+    
+    <string name="edit">Rediger</string>
+    
+    <string name="add_login">Tilføj nyt login</string>
+    
+    <string name="saved_login_password_required">Adgangskode påkrævet</string>
+    
+    <string name="saved_login_username_required">Brugernavn påkrævet</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Værtsnavn påkrævet</string>
+    
+    <string name="voice_search_content_description">Stemmesøgning</string>
+    
+    <string name="voice_search_explainer">Tal nu</string>
+    
+    <string name="saved_login_duplicate">Der findes allerede et login med det brugernavn</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Webadressen skal indeholde "https://" eller "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Gyldigt værtsnavn påkrævet</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Tilslut en anden enhed.</string>
+    
+    <string name="synced_tabs_reauth">Autentificer venligst igen.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Aktiver synkronisering af faneblade.</string>
+    
+    <string name="synced_tabs_no_tabs">Du har ikke nogen faner åbne i Waterfox på dine andre enheder.</string>
+    
+    <string name="synced_tabs_sign_in_message">Se en liste over faner fra dine andre enheder.</string>
+    
+    <string name="synced_tabs_sign_in_button">Log ind for at synkronisere</string>
+    
+    <string name="synced_tabs_no_open_tabs">Ingen åbne faner</string>
+    
+    <string name="synced_tabs_expand_group">Udvid gruppen af synkroniserede faner</string>
+    
+    <string name="synced_tabs_collapse_group">Skjul gruppe af synkroniserede faner</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Genvejsgrænse nået</string>
+    
+    <string name="shortcut_max_limit_content">For at tilføje en ny genvej skal du fjerne en. Tryk og hold på siden, og vælg fjern.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">Okay, jeg har det</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Genveje</string>
+	
+	<string name="top_sites_rename_dialog_title">Navn</string>
+    
+    <string name="shortcut_name_hint">Navn på genvej</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Annuller</string>
+    
+    <string name="top_sites_menu_settings">Indstillinger</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Vores sponsorer og dit privatliv</string>
+    
+    <string name="top_sites_sponsored_label">Sponsoreret</string>
+
+    
+    
+    <string name="inactive_tabs_title">Inaktive faner</string>
+    
+    <string name="inactive_tabs_delete_all">Luk alle inaktive faner</string>
+    
+    <string name="inactive_tabs_expand_content_description">Udvid inaktive faner</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Skjul inaktive faner</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatisk lukning efter en måned?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox kan lukke faner, du ikke har set i løbet af den seneste måned.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">SLÅ AUTOMATISK LUKNING TIL</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Automatisk lukning aktiveret</string>
+
+    
+    <string name="default_browser_experiment_card_text">Indstil links fra hjemmesider, e-mails og beskeder til at åbne automatisk i Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Fjern</string>
+
+    
+    <string name="radio_preference_info_content_description">Klik for flere detaljer</string>
+
+    
+    <string name="action_bar_up_description">Naviger op</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Luk</string>
+
+    <string name="waterfox_suggest_header">Waterfox foreslår</string>
+</resources>

@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Частный %s</string>
+    
+    <string name="app_name_private_4">%s (Частное лицо)</string>
+
+    
+    
+    <string name="content_description_menu">Другие варианты</string>
+    
+    <string name="content_description_private_browsing_button">Включите приватный просмотр</string>
+    
+    <string name="content_description_disable_private_browsing_button">Отключение приватного просмотра</string>
+    
+    <string name="search_hint">Поиск или ввод адреса</string>
+    
+    <string name="application_search_hint">Введите условия поиска</string>
+    
+    <string name="no_open_tabs_description">Здесь будут показаны ваши открытые вкладки.</string>
+    
+    <string name="no_private_tabs_description">Здесь будут отображаться ваши личные вкладки.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d выбран</string>
+    
+    <string name="tab_tray_add_new_collection">Добавить новую коллекцию</string>
+    
+    <string name="tab_tray_add_new_collection_name">Имя</string>
+    
+    <string name="tab_tray_select_collection">Выберите коллекцию</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Выход из режима мультиселектора</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Сохранить выбранные вкладки в коллекции</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Избранное</string>
+
+    
+    
+    <string name="recently_saved_title">Недавно сохраненные</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Показать все сохраненные закладки</string>
+    
+    <string name="recently_saved_menu_item_remove">Удалить</string>
+
+    
+    <string name="about_content">%1$s создано компанией BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s очищает историю поиска и просмотра из личных вкладок, когда вы закрываете их или выходите из приложения. Хотя это не делает вас анонимным для веб-сайтов или вашего интернет-провайдера, это позволяет сохранить конфиденциальность ваших действий в Интернете от всех, кто использует это устройство.</string>
+    <string name="private_browsing_common_myths">Распространенные мифы о частном просмотре</string>
+
+    
+    
+    <string name="cfr_message">Добавьте ярлык для открытия личных вкладок с главного экрана.</string>
+    
+    <string name="cfr_pos_button_text">Добавить ярлык</string>
+    
+    <string name="cfr_neg_button_text">Нет, спасибо</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Вы можете настроить %1$s на автоматическое открытие ссылок в приложениях.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Перейдите к настройкам</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Увольте</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Увольте</string>
+
+    
+    
+    <string name="tcp_cfr_message">Наша самая мощная функция конфиденциальности изолирует межсайтовые трекеры.</string>
+    
+    <string name="tcp_cfr_learn_more">Узнайте о полной защите файлов cookie</string>
+
+    
+    <string name="camera_permissions_needed_message">Необходим доступ к камере. Зайдите в настройки Android, выберите пункт "Разрешения" и нажмите "Разрешить".</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Перейдите к настройкам</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Увольте</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Установите автоматическое закрытие открытых вкладок, которые не просматривались в течение последнего дня, недели или месяца.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Просмотр вариантов</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Увольте</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Вкладки, которые вы не просматривали в течение двух недель, перемещаются сюда.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Отключить в настройках</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Автоматическое закрытие через месяц?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$ может закрывать вкладки, которые вы не просматривали в течение последнего месяца.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Закрыть</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Включить автозакрытие</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Новая вкладка</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Новая личная вкладка</string>
+
+    
+    
+    <string name="recent_tabs_header">Прыжок назад</string>
+    
+    <string name="recent_tabs_show_all">Показать все</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Кнопка "Показать все недавние вкладки</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Ваш поиск \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d сайтов</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Посмотреть все синхронизированные вкладки</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Синхронизированное устройство</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Удалить</string>
+    
+    <string name="recent_tab_menu_item_remove">Удалить</string>
+
+    
+    
+    <string name="history_metadata_header_2">Недавно посетили</string>
+    
+    <string name="recently_visited_menu_item_remove">Удалить</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Показать все прошлые исследования</string>
+
+    
+    
+    <string name="browser_menu_back">Назад</string>
+    
+    <string name="browser_menu_forward">Вперед</string>
+    
+    <string name="browser_menu_refresh">Обновить</string>
+    
+    <string name="browser_menu_stop">Остановите</string>
+    
+    <string name="browser_menu_add_ons">Дополнения</string>
+    
+    <string name="no_add_ons">Никаких дополнений</string>
+    
+    <string name="browser_menu_help">Помощь</string>
+    
+    <string name="browser_menu_settings">Настройки</string>
+    
+    <string name="browser_menu_library">Библиотека</string>
+    
+    <string name="browser_menu_desktop_site">Сайт для рабочего стола</string>
+    
+    <string name="browser_menu_add_to_homescreen">Добавить на главный экран</string>
+    
+    <string name="browser_menu_install_on_homescreen">Установите</string>
+    
+    <string name="resync_button_content_description">Resync</string>
+    
+    <string name="browser_menu_find_in_page">Найти на странице</string>
+    
+    <string name="browser_menu_save_to_collection_2">Сохранить в коллекции</string>
+    
+    <string name="browser_menu_share">Поделиться</string>
+    
+    <string name="browser_menu_open_in_waterfox">Открыть в %1$s</string>
+    
+    <string name="browser_menu_powered_by">ПОЛУЧАЕТСЯ %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Работает на %1$s</string>
+    
+    <string name="browser_menu_read">Мнение читателя</string>
+    
+    <string name="browser_menu_read_close">Закрыть обзор читателя</string>
+    
+    <string name="browser_menu_open_app_link">Открыть в приложении</string>
+    
+    <string name="browser_menu_customize_reader_view">Настройка представления читателя</string>
+    
+    <string name="browser_menu_add">Добавить</string>
+    
+    <string name="browser_menu_edit">Редактировать</string>
+    
+    <string name="browser_menu_customize_home_1">Настройте домашнюю страницу</string>
+    
+    
+    <string name="browser_toolbar_home">Главный экран</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Избранный язык</string>
+    
+    <string name="default_locale_text">Следуйте языку устройства</string>
+    
+    <string name="locale_search_hint">Язык поиска</string>
+
+    
+    
+    <string name="search_scan_button">Сканирование</string>
+    
+    <string name="search_engine_button">Поисковая система</string>
+    
+    <string name="search_shortcuts_engine_settings">Настройки поисковой системы</string>
+    
+    <string name="awesomebar_clipboard_title">Заполнение ссылки из буфера обмена</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Разрешить</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Не позволяйте</string>
+    
+    <string name="search_suggestions_onboarding_title">Разрешить поисковые предложения в частных сеансах?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s будет передавать все, что вы вводите в адресную строку, поисковой системе по умолчанию.</string>
+    
+    <string name="search_engine_suggestions_title">Поиск %s</string>
+    
+    <string name="search_engine_suggestions_description">Поиск непосредственно из адресной строки</string>
+    
+    <string name="search_settings_menu_item">Настройки поиска</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Теперь вам будет проще вернуться к тому, на чем вы остановились.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Переход к открытым вкладкам, закладкам и истории просмотров.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Чистые, упорядоченные вкладки</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Устраните беспорядок во вкладках благодаря улучшенной компоновке и автозакрытию вкладок.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Последние поиски</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Просматривайте последние поисковые запросы с домашней страницы и вкладок.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Познакомьтесь с вашей персонализированной домашней страницей. Здесь будут отображаться последние вкладки, закладки и результаты поиска.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Добро пожаловать в более персональный интернет</string>
+    
+    <string name="onboarding_home_welcome_description">Больше цветов. Больше конфиденциальности. То же стремление к людям, а не к прибыли.</string>
+    
+    <string name="onboarding_home_sync_title_3">Переходите с телефона на ноутбук и обратно</string>
+    
+    <string name="onboarding_home_sync_description">Вкладки с других устройств, на которых вы остановились, теперь на вашей домашней странице.</string>
+    
+    <string name="onboarding_home_get_started_button">Начать</string>
+    
+    <string name="onboarding_home_sign_in_button">Войти</string>
+    
+    <string name="onboarding_home_skip_button">Скип</string>
+    
+    <string name="onboarding_home_content_description_close_button">Закрыть</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Открыть новую вкладку %1$s</string>
+    
+    <string name="search_widget_text_short">Поиск</string>
+    
+    <string name="search_widget_text_long">Поиск в Интернете</string>
+    
+    <string name="search_widget_voice">Голосовой поиск</string>
+
+    
+    
+    <string name="settings">Настройки</string>
+    
+    <string name="preferences_category_general">Общие сведения</string>
+    
+    <string name="preferences_category_about">О сайте</string>
+    
+    <string name="preferences_default_search_engine">Поисковая система по умолчанию</string>
+    
+    <string name="preferences_search">Поиск</string>
+    
+    <string name="preferences_search_address_bar">Адресная строка</string>
+    
+    <string name="preferences_rate">Оцените в Google Play</string>
+    
+    <string name="preferences_about">О %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Установите браузер по умолчанию</string>
+    
+    <string name="preferences_category_advanced">Расширенный</string>
+    
+    <string name="preferences_category_privacy_security">Конфиденциальность и безопасность</string>
+    
+    <string name="preferences_site_permissions">Разрешения на строительство</string>
+    
+    <string name="preferences_private_browsing_options">Частный просмотр</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Открывать ссылки в закрытой вкладке</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Разрешите делать скриншоты в режиме приватного просмотра</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Если разрешено, личные вкладки будут видны и при открытии нескольких приложений</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Добавьте ярлык частного просмотра</string>
+    
+    <string name="preferences_https_only_title">Режим только HTTPS</string>
+    
+    <string name="preferences_https_only_summary">Автоматически пытается подключиться к сайтам, использующим протокол шифрования HTTPS для повышения безопасности.</string>
+    
+    <string name="preferences_https_only_on">На сайте</string>
+    
+    <string name="preferences_https_only_off">С сайта</string>
+    
+    <string name="preferences_http_only_learn_more">Узнать больше</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Включить во всех вкладках</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Включить только в личных вкладках</string>
+    
+    <string name="errorpage_httpsonly_title">Безопасный сайт недоступен</string>
+    
+    <string name="errorpage_httpsonly_message_title">Скорее всего, сайт просто не поддерживает HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Однако не исключено, что здесь замешан злоумышленник. Если вы продолжите посещение сайта, не вводите никакой конфиденциальной информации. Если вы продолжите, режим HTTPS-Only будет временно отключен для сайта.</string>
+    
+    <string name="preferences_accessibility">Доступность</string>
+    
+    <string name="preferences_override_fxa_server">Пользовательский сервер учетных записей Waterfox</string>
+    
+    <string name="preferences_override_sync_tokenserver">Пользовательский сервер синхронизации</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Учетная запись Waterfox/сервер синхронизации изменены. Выход из приложения для применения изменений...</string>
+    
+    <string name="preferences_category_account">Счет</string>
+    
+    <string name="preferences_toolbar">Панель инструментов</string>
+    
+    <string name="preferences_theme">Тема</string>
+    
+    <string name="preferences_home_2">Домашняя страница</string>
+    
+    <string name="preferences_gestures">Жесты</string>
+    
+    <string name="preferences_customize">Настроить</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Синхронизируйте закладки, историю и многое другое с вашей учетной записью Waterfox</string>
+    
+    <string name="preferences_sign_in_description_2">Войдите в систему, чтобы синхронизировать вкладки, закладки, пароли и многое другое.</string>
+    
+    <string name="preferences_account_default_name">Аккаунт Waterfox</string>
+    
+    <string name="preferences_account_sync_error">Подключитесь снова, чтобы возобновить синхронизацию</string>
+    
+    <string name="preferences_language">Язык</string>
+    
+    <string name="preferences_remote_debugging">Удаленная отладка через USB</string>
+    
+    <string name="preferences_show_search_engines">Показать поисковые системы</string>
+    
+    <string name="preferences_show_search_suggestions">Показать предложения по поиску</string>
+    
+    <string name="preferences_show_voice_search">Показать голосовой поиск</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Показать на частных сеансах</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Показать предложения буфера обмена</string>
+    
+    <string name="preferences_search_browsing_history">История просмотра поисковых запросов</string>
+    
+    <string name="preferences_search_bookmarks">Поиск закладок</string>
+    
+    <string name="preferences_search_synced_tabs">Поиск по синхронизированным вкладкам</string>
+    
+    <string name="preferences_account_settings">Настройки учетной записи</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Автозаполнение URL-адресов</string>
+    
+    <string name="preferences_open_links_in_apps">Открывайте ссылки в приложениях</string>
+    
+    <string name="preferences_external_download_manager">Внешний менеджер загрузок</string>
+    
+    <string name="preferences_addons">Дополнения</string>
+    
+    <string name="preferences_notifications">Уведомления</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Пользовательская коллекция дополнений</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Отмена</string>
+    
+    <string name="customize_addon_collection_hint">Название коллекции</string>
+    
+    <string name="customize_addon_collection_user_hint">Владелец коллекции (идентификатор пользователя)</string>
+    
+    <string name="toast_customize_addon_collection_done">Коллекция дополнений изменена. Выход из приложения для применения изменений...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Прыжок назад</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Последние закладки</string>
+    
+    <string name="customize_toggle_recently_visited">Недавно посетили</string>
+    
+    <string name="customize_wallpapers">Обои</string>
+    
+    <string name="customize_toggle_contile">Спонсорские ярлыки</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Обои Артикул: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Обои обновлены!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Посмотреть</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Смените обои, коснувшись логотипа домашней страницы Waterfox.</string>
+    
+    <string name="wallpaper_logo_content_description">Логотип Waterfox - смена обоев, кнопка</string>
+
+    
+    
+    <string name="addon_not_supported_error">Дополнение не поддерживается</string>
+    
+    <string name="addon_already_installed">Дополнение уже установлено</string>
+
+    
+    
+    <string name="preferences_sync_now">Синхронизация сейчас</string>
+    
+    <string name="preferences_sync_category">Выберите, что синхронизировать</string>
+    
+    <string name="preferences_sync_history">История</string>
+    
+    <string name="preferences_sync_bookmarks">Закладки</string>
+    
+    <string name="preferences_sync_logins">Логины</string>
+    
+    <string name="preferences_sync_tabs_2">Открытые вкладки</string>
+    
+    <string name="preferences_sign_out">Выйти</string>
+    
+    <string name="preferences_sync_device_name">Имя устройства</string>
+    
+    <string name="empty_device_name_error">Имя устройства не может быть пустым.</string>
+    
+    <string name="sync_syncing_in_progress">Синхронизация...</string>
+    
+    <string name="sync_failed_summary">Синхронизация не удалась. Последний успех: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Синхронизация не удалась. Последняя синхронизация: никогда</string>
+    
+    <string name="sync_last_synced_summary">Последняя синхронизация: %s</string>
+    
+    <string name="sync_never_synced_summary">Последняя синхронизация: никогда</string>
+    
+    <string name="default_device_name_2">%1$s на %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Кредитные карты</string>
+    
+    <string name="preferences_sync_address">Адреса</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Полученные вкладки</string>
+    
+    <string name="fxa_received_tab_channel_description">Уведомления о вкладках, полученных с других устройств Waterfox.</string>
+    
+    <string name="fxa_tab_received_notification_name">Вкладка Получено</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Вкладка из %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Исключения</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Включить для всех сайтов</string>
+    
+    <string name="exceptions_empty_message_description">Исключения позволяют отключить защиту от слежения для выбранных сайтов.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Узнать больше</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Включите синхронизацию</string>
+    
+    <string name="preferences_sync_2">Синхронизация и сохранение данных</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Войдите в систему, чтобы восстановить связь</string>
+    
+    <string name="preferences_sync_remove_account">Удалить аккаунт</string>
+
+    
+    
+    <string name="pair_instructions_2">Отсканируйте QR-код, показанный на сайте &lt;b&gt;firefox.com/pair&lt;/b&gt;.</string>
+
+    
+    
+    <string name="preference_top_toolbar">Топ</string>
+    
+    <string name="preference_bottom_toolbar">Дно</string>
+
+    
+    
+    <string name="preference_light_theme">Свет</string>
+    
+    <string name="preference_dark_theme">Темнота</string>
+    
+    <string name="preference_auto_battery_theme">Устанавливается с помощью функции экономии заряда батареи</string>
+    
+    <string name="preference_follow_device_theme">Следуйте тематике устройства</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Потяните, чтобы обновить</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Прокрутка, чтобы скрыть панель инструментов</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Проведите пальцем по панели инструментов в сторону, чтобы переключить вкладки</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Проведите пальцем по панели инструментов вверх, чтобы открыть вкладки</string>
+
+    
+    
+    <string name="library_downloads">Скачать</string>
+    
+    <string name="library_bookmarks">Закладки</string>
+    
+    <string name="library_desktop_bookmarks_root">Закладки для рабочего стола</string>
+    
+    <string name="library_desktop_bookmarks_menu">Меню закладок</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Панель инструментов Закладки</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Другие закладки</string>
+    
+    <string name="library_history">История</string>
+    
+    <string name="library_new_tab">Новая вкладка</string>
+    
+    <string name="settings_title">Настройки</string>
+    
+    <string name="content_description_close_button">Закрыть</string>
+
+    
+    <string name="history_search_group_site">%d сайт</string>
+    
+    <string name="history_search_group_sites">%d сайтов</string>
+
+    
+    <string name="library_recently_closed_tabs">Недавно закрытые вкладки</string>
+    
+    <string name="recently_closed_show_full_history">Показать всю историю</string>
+    
+    <string name="recently_closed_tabs">%d табуляции</string>
+    
+    <string name="recently_closed_tab">%d вкладка</string>
+    
+    <string name="recently_closed_empty_message">Здесь нет недавно закрытых вкладок</string>
+
+    
+    
+    <string name="preferences_tabs">Табы</string>
+    
+    <string name="preferences_tab_view">Вид вкладки</string>
+    
+    <string name="tab_view_list">Список</string>
+    
+    <string name="tab_view_grid">Сетка</string>
+    
+    <string name="preferences_close_tabs">Закрыть вкладки</string>
+    
+    <string name="close_tabs_manually">Никогда</string>
+    
+    <string name="close_tabs_after_one_day">Через день</string>
+    
+    <string name="close_tabs_after_one_week">Через неделю</string>
+    
+    <string name="close_tabs_after_one_month">Через месяц</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Автоматическое закрытие открытых вкладок</string>
+
+    
+    
+    <string name="preferences_opening_screen">Открывающийся экран</string>
+    
+    <string name="opening_screen_homepage">Домашняя страница</string>
+    
+    <string name="opening_screen_last_tab">Последняя вкладка</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Домашняя страница после четырех часов бездействия</string>
+    
+    <string name="close_tabs_manually_summary">Закрыть вручную</string>
+    
+    <string name="close_tabs_after_one_day_summary">Закрыть через день</string>
+    
+    <string name="close_tabs_after_one_week_summary">Закрыть через неделю</string>
+    
+    <string name="close_tabs_after_one_month_summary">Закрыть через месяц</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Переместите старые вкладки в неактивные</string>
+    
+    <string name="preferences_inactive_tabs_title">Вкладки, которые вы не просматривали в течение двух недель, перемещаются в раздел неактивных.</string>
+
+    
+    
+    <string name="tab_header_label">Открытые вкладки</string>
+    
+    <string name="tabs_header_private_tabs_title">Личные вкладки</string>
+    
+    <string name="tabs_header_synced_tabs_title">Синхронизированные вкладки</string>
+    
+    <string name="add_tab">Добавить вкладку</string>
+    
+    <string name="add_private_tab">Добавить приватную вкладку</string>
+    
+    <string name="tab_drawer_fab_content">Частный</string>
+    
+    <string name="tab_drawer_fab_sync">Сайт</string>
+    
+    <string name="tab_tray_menu_item_share">Поделиться всеми вкладками</string>
+    
+    <string name="tab_tray_menu_recently_closed">Недавно закрытые вкладки</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Недавно закрыто</string>
+    
+    <string name="tab_tray_menu_account_settings">Настройки учетной записи</string>
+    
+    <string name="tab_tray_menu_tab_settings">Настройки вкладки</string>
+    
+    <string name="tab_tray_menu_item_close">Закрыть все вкладки</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Закладка</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Закрыть</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Поделиться выбранными вкладками</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Меню выбранных вкладок</string>
+    
+    <string name="remove_tab_from_collection">Удалить вкладку из коллекции</string>
+    
+    <string name="tabs_tray_select_tabs">Выберите вкладки</string>
+    
+    <string name="close_tab">Закрыть вкладку</string>
+    
+    <string name="close_tab_title">Закройте вкладку %s</string>
+    
+    <string name="open_tabs_menu">Меню открытых вкладок</string>
+    
+    <string name="tabs_menu_save_to_collection1">Сохранить вкладки в коллекции</string>
+    
+    <string name="collection_delete">Удалить коллекцию</string>
+    
+    <string name="collection_rename">Переименовать коллекцию</string>
+    
+    <string name="collection_open_tabs">Открытые вкладки</string>
+    
+    <string name="collection_name_hint">Название коллекции</string>
+	
+	<string name="rename_top_site">Переименовать</string>
+	
+	<string name="remove_top_site">Удалить</string>
+    
+    <string name="delete_from_history">Удалить из истории</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (частный режим)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Другие вкладки</string>
+
+    
+    
+    <string name="history_search_1">Введите условия поиска</string>
+    
+    <string name="history_delete_all">Удалить историю</string>
+    
+    <string name="history_delete_multiple_items_snackbar">История удалена</string>
+    
+    <string name="history_delete_single_item_snackbar">Удалено %1$s</string>
+    
+    <string name="history_delete_item">Удалить</string>
+    
+    <string name="history_multi_select_title">%1$d выбран</string>
+    
+    <string name="history_today">Сегодня</string>
+    
+    <string name="history_yesterday">Вчера</string>
+    
+    <string name="history_7_days">Последние 7 дней</string>
+    
+    <string name="history_30_days">Последние 30 дней</string>
+    
+    <string name="history_older">Старше</string>
+    
+    <string name="history_empty_message">Здесь нет истории</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Удаленные загрузки</string>
+    
+    <string name="download_delete_single_item_snackbar">Удалено %1$s</string>
+    
+    <string name="download_empty_message_1">Нет загруженных файлов</string>
+    
+    <string name="download_multi_select_title">%1$d выбран</string>
+    
+    <string name="download_delete_item_1">Удалить</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Извините. %1$s не может загрузить эту страницу.</string>
+    
+    <string name="tab_crash_send_report">Отправьте отчет о сбое в BrowserWorks</string>
+    
+    <string name="tab_crash_close">Закрыть вкладку</string>
+    
+    <string name="tab_crash_restore">Вкладка "Восстановление</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Вы уверены, что хотите удалить эту папку?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s удалит выбранные элементы.</string>
+    
+    <string name="bookmark_delete_negative">Отмена</string>
+    
+    <string name="bookmark_add_folder">Добавить папку</string>
+    
+    <string name="bookmark_saved_snackbar">Закладка сохранена!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Редактировать</string>
+    
+    <string name="bookmark_menu_copy_button">Копировать</string>
+    
+    <string name="bookmark_menu_share_button">Поделиться</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Открыть в новой вкладке</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Открыть в личной вкладке</string>
+    
+    <string name="bookmark_menu_delete_button">Удалить</string>
+    
+    <string name="bookmark_menu_save_button">Сохранить</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d выбран</string>
+    
+    <string name="edit_bookmark_fragment_title">Редактировать закладку</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Редактировать папку</string>
+    
+    <string name="bookmark_sign_in_button">Войдите в систему, чтобы увидеть синхронизированные закладки</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">ПАПКА</string>
+    
+    <string name="bookmark_name_label">ИМЯ</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Добавить папку</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Выберите папку</string>
+    
+    <string name="bookmark_empty_title_error">Должен иметь титул</string>
+    
+    <string name="bookmark_invalid_url_error">Недопустимый URL</string>
+    
+    <string name="bookmarks_empty_message">Здесь нет закладок</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Удалено %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Закладки удалены</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Удаление выбранных папок</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Введите условия поиска</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Перейдите в раздел Настройки</string>
+    
+    <string name="quick_settings_sheet">Лист быстрых настроек</string>
+    
+    <string name="phone_feature_recommended">Рекомендуем</string>
+    
+    <string name="clear_permissions">Очистить разрешения</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Отмена</string>
+    
+    <string name="clear_permission">Четкое разрешение</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Отмена</string>
+    
+    <string name="clear_permissions_on_all_sites">Четкие разрешения на всех объектах</string>
+    
+    <string name="preference_browser_feature_autoplay">Автоигра</string>
+    
+    <string name="preference_phone_feature_camera">Камера</string>
+    
+    <string name="preference_phone_feature_microphone">Микрофон</string>
+    
+    <string name="preference_phone_feature_location">Расположение</string>
+    
+    <string name="preference_phone_feature_notification">Уведомление</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Постоянное хранилище</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Межсайтовые файлы cookie</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">Контент с DRM-контролем</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Попросите разрешить</string>
+    
+    <string name="preference_option_phone_feature_blocked">Заблокировано</string>
+    
+    <string name="preference_option_phone_feature_allowed">Разрешено</string>
+    
+    <string name="phone_feature_blocked_by_android">Заблокировано Android</string>
+    
+    <string name="preference_exceptions">Исключения</string>
+    
+    <string name="tracking_protection_on">На сайте</string>
+    
+    <string name="tracking_protection_off">С сайта</string>
+    
+    <string name="preference_option_autoplay_allowed2">Разрешить аудио и видео</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Разрешить аудио и видео</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Блокировка аудио и видео только для сотовых данных</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Аудио и видео будут воспроизводиться по Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Блокировать только аудио</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Блокировать только аудио</string>
+    
+    <string name="preference_option_autoplay_blocked3">Блокировка аудио и видео</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Блокировка аудио и видео</string>
+    
+    <string name="delete_browsing_data_quit_on">На сайте</string>
+    
+    <string name="delete_browsing_data_quit_off">С сайта</string>
+    
+    <string name="https_only_on">На сайте</string>
+    
+    <string name="https_only_off">С сайта</string>
+
+    
+    
+    <string name="collections_header">Коллекции</string>
+    
+    <string name="collection_menu_button_content_description">Меню коллекции</string>
+    
+    <string name="no_collections_description2">Собирайте то, что для вас важно.\nСгруппируйте похожие поисковые запросы, сайты и вкладки для быстрого доступа к ним в дальнейшем.</string>
+    
+    <string name="create_collection_select_tabs">Выберите вкладки</string>
+    
+    <string name="create_collection_select_collection">Выберите коллекцию</string>
+    
+    <string name="create_collection_name_collection">Коллекция имен</string>
+    
+    <string name="create_collection_add_new_collection">Добавить новую коллекцию</string>
+    
+    <string name="create_collection_select_all">Выбрать все</string>
+    
+    <string name="create_collection_deselect_all">Отмените выбор всех</string>
+    
+    <string name="create_collection_save_to_collection_empty">Выберите вкладки для сохранения</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">Выбрано %d вкладок</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">Выбрана %d вкладка</string>
+    
+    <string name="create_collection_tabs_saved">Вкладки сохранены!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Коллекция спасена!</string>
+    
+    <string name="create_collection_tab_saved">Вкладка сохранена!</string>
+    
+    <string name="create_collection_close">Закрыть</string>
+    
+    <string name="create_collection_save">Сохранить</string>
+    
+    <string name="create_collection_view">Посмотреть</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Отмена</string>
+
+    
+    <string name="create_collection_default_name">Коллекция %d</string>
+
+    
+    
+    <string name="share_header_2">Поделиться</string>
+    
+    <string name="share_button_content_description">Поделиться</string>
+    
+    <string name="share_device_subheader">Отправить на устройство</string>
+    
+    <string name="share_link_all_apps_subheader">Все действия</string>
+    
+    <string name="share_link_recent_apps_subheader">Недавно использованные</string>
+    
+    <string name="share_copy_link_to_clipboard">Копировать в буфер обмена</string>
+    
+    <string name="toast_copy_link_to_clipboard">Скопировано в буфер обмена</string>
+    
+    <string name="sync_menu_sign_in">Войти для синхронизации</string>
+    
+    <string name="sync_sign_in">Войти в систему Sync</string>
+    
+    <string name="sync_send_to_all">Отправить на все устройства</string>
+    
+    <string name="sync_reconnect">Повторное подключение к синхронизации</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Подключите другое устройство</string>
+    
+    <string name="sync_connect_device_dialog">Чтобы отправить вкладку, войдите в Waterfox хотя бы на одном другом устройстве.</string>
+    
+    <string name="sync_confirmation_button">Есть</string>
+    
+    <string name="share_error_snackbar">Невозможно поделиться с этим приложением</string>
+    
+    <string name="sync_add_new_device_title">Отправить на устройство</string>
+    
+    <string name="sync_add_new_device_message">Нет подключенных устройств</string>
+    
+    <string name="sync_add_new_device_learn_button">Узнайте об отправке вкладок...</string>
+    
+    <string name="sync_add_new_device_connect_button">Подключите другое устройство...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Закрыть личные вкладки</string>
+    
+    <string name="notification_marketing_channel_name">Маркетинг</string>
+    
+    <string name="notification_default_browser_title">%1$s - это быстро и конфиденциально</string>
+    
+    <string name="notification_default_browser_text">Сделайте %1$s браузером по умолчанию</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Коллекция удалена</string>
+    
+    <string name="snackbar_collection_renamed">Коллекция переименована</string>
+    
+    <string name="snackbar_tab_closed">Вкладка закрыта</string>
+    
+    <string name="snackbar_tabs_closed">Вкладки закрыты</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Закладки сохранены!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Добавьте в ярлыки!</string>
+    
+    <string name="snackbar_private_tab_closed">Личная вкладка закрыта</string>
+    
+    <string name="snackbar_private_tabs_closed">Личные вкладки закрыты</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Сайт удален</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Разрешите %1$s открыть %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">РАЗРЕШИТЬ</string>
+    
+    <string name="qr_scanner_dialog_negative">ОТКАЗАТЬСЯ</string>
+    
+    <string name="qr_scanner_dialog_invalid">Веб-адрес недействителен.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Вы уверены, что хотите удалить %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Удаление этой вкладки приведет к удалению всей коллекции. Вы можете создавать новые коллекции в любое время.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Удалить %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Удалить</string>
+    
+    <string name="full_screen_notification">Вход в полноэкранный режим</string>
+    
+    <string name="url_copied">Скопированный URL</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Это образец текста. Он показан для того, чтобы продемонстрировать, как будет выглядеть текст при увеличении или уменьшении размера с помощью этой настройки.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Делайте текст на веб-сайтах больше или меньше</string>
+    
+    <string name="preference_accessibility_font_size_title">Размер шрифта</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Автоматическое изменение размера шрифта</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Размер шрифта будет соответствовать настройкам Android. Отключите управление размером шрифта здесь.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Удаление данных просмотра</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Открытые вкладки</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d табуляции</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">История посещений и данные сайта</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d адресов</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Печенье</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Вы будете выходить из большинства сайтов</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Кэшированные изображения и файлы</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Освобождает место для хранения</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Разрешения на строительство</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Скачать</string>
+    
+    <string name="preferences_delete_browsing_data_button">Удаление данных просмотра</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Удаление данных просмотра при выходе из системы</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Автоматическое удаление данных просмотра при выборе \"Выйти\" в главном меню</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Увольнение</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Это приведет к удалению всех данных о просмотре веб-страниц.</string>
+    
+    <string name="delete_history_prompt_title">Диапазон времени для удаления</string>
+    
+    <string name="delete_history_prompt_body">Удаляет историю (включая историю, синхронизированную с другими устройствами), файлы cookie и другие данные о просмотре веб-страниц.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Последний час</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Сегодня и вчера</string>
+    
+    <string name="delete_history_prompt_button_everything">Все</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s удалит выбранные данные просмотра.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Отмена</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Удалить</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Удаление данных просмотра</string>
+    
+    <string name="deleting_browsing_data_in_progress">Удаление данных просмотра...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Удалите все сайты в "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Отмена</string>
+    
+    <string name="delete_history_group_prompt_allow">Удалить</string>
+    
+    <string name="delete_history_group_snackbar">Группа удалена</string>
+
+    
+    
+    <string name="onboarding_header_2">Добро пожаловать в более приватную сеть</string>
+    
+    <string name="onboarding_message">Низовой, независимый браузер.</string>
+    
+    <string name="onboarding_account_sign_in_header">Продолжайте, где остановились</string>
+    
+    <string name="onboarding_manual_sign_in_description">Синхронизируйте вкладки и пароли на разных устройствах для плавного переключения между экранами.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Войти</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Синхронизация включена</string>
+    
+    <string name="onboarding_tracking_protection_header">Защита конфиденциальности по умолчанию</string>
+    
+    <string name="onboarding_tracking_protection_description">Функция Total Cookie Protection предотвращает использование файлов cookie трекерами для слежки за вами на разных сайтах.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Стандартный (по умолчанию)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Сбалансирован для обеспечения конфиденциальности и производительности. Страницы загружаются нормально.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Строгий</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Блокирует больше трекеров, поэтому страницы загружаются быстрее, но некоторые функции на странице могут быть нарушены.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Выберите расположение панели инструментов</string>
+    
+    <string name="onboarding_toolbar_placement_description">Оставьте его внизу или переместите наверх.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Вы контролируете свои данные</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox не собирает телеметрию и предоставляет вам контроль над вашими данными.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Прочтите наше уведомление о конфиденциальности</string>
+    
+    <string name="onboarding_conclusion_header">Готовы открыть удивительный интернет?</string>
+    
+    <string name="onboarding_finish">Начните просмотр</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Выберите тему</string>
+    
+    <string name="onboarding_theme_picker_description_2">Сохраните заряд батареи и зрение с помощью темного режима.</string>
+    
+    <string name="onboarding_theme_automatic_title">Автоматический</string>
+    
+    <string name="onboarding_theme_automatic_summary">Адаптируется к настройкам вашего устройства</string>
+    
+    <string name="onboarding_theme_dark_title">Темная тема</string>
+    
+    <string name="onboarding_theme_light_title">Светлая тема</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Табы отправлены!</string>
+    
+    <string name="sync_sent_tab_snackbar">Таб отправлен!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Невозможно отправить</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Отсканируйте код</string>
+    
+    <string name="sign_in_instructions">Waterfox использует учетную запись Mozilla для синхронизации данных между мобильным и настольным компьютерами.&lt;br&gt; На компьютере откройте Waterfox и перейдите по адресу &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla никак не связана с Waterfox.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Готовность к сканированию</string>
+    
+    <string name="sign_in_with_camera">Войдите в систему с помощью камеры</string>
+    
+    <string name="sign_in_with_email">Вместо этого используйте электронную почту</string>
+    
+    <string name="sign_in_create_account_text">Нет учетной записи? &lt;Создайте ее, чтобы синхронизировать Waterfox между устройствами.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s прекратит синхронизацию с вашей учетной записью, но не удалит все ваши данные о просмотре на этом устройстве.</string>
+    
+    <string name="sign_out_disconnect">Отключить</string>
+    
+    <string name="sign_out_cancel">Отмена</string>
+    
+    <string name="bookmark_cannot_edit_root">Невозможно редактировать папки по умолчанию</string>
+
+    
+    
+    <string name="etp_settings">Настройки защиты</string>
+    
+    <string name="preference_enhanced_tracking_protection">Усиленная защита от слежения</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Просматривайте информацию без слежки</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Держите свои данные при себе. %s защищает вас от многих наиболее распространенных устройств слежения, которые следят за тем, что вы делаете в Интернете.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Узнать больше</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Стандартный (по умолчанию)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Сбалансирован для обеспечения конфиденциальности и производительности. Страницы загружаются нормально.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Что блокируется стандартной защитой от слежения</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Строгий</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Блокирует больше трекеров, поэтому страницы загружаются быстрее, но некоторые функции на странице могут быть нарушены.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Что блокируется строгой защитой от слежения</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Пользовательское</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Выберите, какие трекеры и скрипты блокировать.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Что блокируется пользовательской защитой от слежения</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Печенье</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Межсайтовые и социальные медиа-трекеры</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Файлы cookie с непосещаемых сайтов</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Все сторонние файлы cookie (могут вызывать сбои в работе веб-сайтов).</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Все файлы cookie (приводят к поломке веб-сайтов)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Изолируйте межсайтовые файлы cookie</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Отслеживание содержимого</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Во всех вкладках</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Только в приватных вкладках</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Криптомайнеры</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Fingerprinters</string>
+    
+    <string name="enhanced_tracking_protection_details">Подробности</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Заблокировано</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Разрешено</string>
+    
+    <string name="etp_social_media_trackers_title">Трекеры социальных сетей</string>
+    
+    <string name="etp_social_media_trackers_description">Ограничивает возможность социальных сетей отслеживать вашу активность в Интернете.</string>
+    
+    <string name="etp_cookies_title">Файлы cookie для межсайтового отслеживания</string>
+    
+    <string name="etp_cookies_title_2">Межсайтовые файлы cookie</string>
+    
+    <string name="etp_cookies_description">Блокирует файлы cookie, которые рекламные сети и аналитические компании используют для сбора данных о вашем просмотре на многих сайтах.</string>
+    
+    <string name="etp_cookies_description_2">Total Cookie Protection изолирует файлы cookie от сайта, на котором вы находитесь, поэтому такие трекеры, как рекламные сети, не могут использовать их для слежки за вами на разных сайтах.</string>
+    
+    <string name="etp_cryptominers_title">Криптомайнеры</string>
+    
+    <string name="etp_cryptominers_description">Предотвращает получение вредоносными скриптами доступа к вашему устройству для добычи цифровой валюты.</string>
+    
+    <string name="etp_fingerprinters_title">Fingerprinters</string>
+    
+    <string name="etp_fingerprinters_description">Прекращение сбора уникальных идентифицируемых данных о вашем устройстве, которые могут быть использованы в целях отслеживания.</string>
+    
+    <string name="etp_tracking_content_title">Отслеживание содержимого</string>
+    
+    <string name="etp_tracking_content_description">Препятствует загрузке внешних рекламных объявлений, видеороликов и другого контента, содержащего код отслеживания. Может влиять на некоторые функции сайта.</string>
+    
+    <string name="etp_panel_on">Защита включена для этого сайта</string>
+    
+    <string name="etp_panel_off">Защита отключена для этого сайта</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Усиленная защита от слежения отключена для этих сайтов</string>
+    
+    <string name="etp_back_button_content_description">Навигация назад</string>
+    
+    <string name="open_source_licenses_title">%s | Библиотеки OSS</string>
+    
+    <string name="etp_redirect_trackers_title">Трекеры перенаправления</string>
+    
+    <string name="etp_redirect_trackers_description">Очищает файлы cookie, установленные при перенаправлении на известные веб-сайты для отслеживания.</string>
+    
+    <string name="preference_etp_smartblock_description">Некоторые трекеры, отмеченные ниже, были частично разблокированы на этой странице, потому что вы взаимодействовали с ними *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Узнать больше</string>
+
+    
+    <string name="about_support">Поддержка</string>
+    
+    <string name="about_crashes">Аварии</string>
+    
+    <string name="about_privacy_notice">Уведомление о конфиденциальности</string>
+    
+    <string name="about_know_your_rights">Знайте свои права</string>
+    
+    <string name="about_licensing_information">Информация о лицензировании</string>
+    
+    <string name="about_other_open_source_libraries">Библиотеки, которые мы используем</string>
+    
+    <string name="about_debug_menu_toast_progress">Меню отладки: %1$d щелчок(ов) слева для включения</string>
+    <string name="about_debug_menu_toast_done">Включено меню отладки</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Копировать</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Паста и движение</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Паста</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL, скопированный в буфер обмена</string>
+
+    
+    <string name="add_to_homescreen_title">Добавить на главный экран</string>
+    
+    <string name="add_to_homescreen_cancel">Отмена</string>
+    
+    <string name="add_to_homescreen_add">Добавить</string>
+    
+    <string name="add_to_homescreen_continue">Перейти на сайт</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Имя ярлыка</string>
+    
+    <string name="add_to_homescreen_description_2">Вы можете легко добавить этот сайт на главный экран своего устройства, чтобы иметь мгновенный доступ к нему и быстрее просматривать страницы с помощью приложения.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Логины и пароли</string>
+    
+    <string name="preferences_passwords_save_logins">Сохраняйте логины и пароли</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Попросите сохранить</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Никогда не экономьте</string>
+    
+    <string name="preferences_passwords_autofill2">Автозаполнение в %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Заполняйте и сохраняйте имена пользователей и пароли на сайтах, используя %1$s.</string>
+    
+    <string name="preferences_android_autofill">Автозаполнение в других приложениях</string>
+    
+    <string name="preferences_android_autofill_description">Введите имена пользователей и пароли в других приложениях на вашем устройстве.</string>
+    
+    <string name="preferences_logins_add_login">Добавить логин</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Синхронизация логинов</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Синхронизируйте логины на разных устройствах</string>
+    
+    <string name="preferences_passwords_saved_logins">Сохраненные логины</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Здесь будут отображаться логины, которые вы сохранили или синхронизировали с %s.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Узнайте больше о синхронизации.</string>
+    
+    <string name="preferences_passwords_exceptions">Исключения</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Здесь будут показаны логины и пароли, которые не сохранились.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Логины и пароли для этих сайтов не сохраняются.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Удалить все исключения</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Поиск логинов</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Сайт</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Имя пользователя</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Пароль</string>
+    
+    <string name="logins_password_copied">Пароль скопирован в буфер обмена</string>
+    
+    <string name="logins_username_copied">Имя пользователя скопировано в буфер обмена</string>
+    
+    <string name="saved_logins_copy_password">Копирование пароля</string>
+    
+    <string name="saved_logins_clear_password">Очистить пароль</string>
+    
+    <string name="saved_login_copy_username">Скопируйте имя пользователя</string>
+    
+    <string name="saved_login_clear_username">Очистить имя пользователя</string>
+    
+    <string name="saved_login_clear_hostname">Очистить имя хоста</string>
+    
+    <string name="saved_login_open_site">Откройте сайт в браузере</string>
+    
+    <string name="saved_login_reveal_password">Показать пароль</string>
+    
+    <string name="saved_login_hide_password">Скрыть пароль</string>
+    
+    <string name="logins_biometric_prompt_message">Разблокировка для просмотра сохраненных логинов</string>
+    
+    <string name="logins_warning_dialog_title">Защитите свои логины и пароли</string>
+    
+    <string name="logins_warning_dialog_message">Установите шаблон блокировки устройства, PIN-код или пароль, чтобы защитить сохраненные логины и пароли от доступа, если ваше устройство окажется у кого-то другого.</string>
+    
+    <string name="logins_warning_dialog_later">Позже</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Установите сейчас</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Разблокируйте устройство</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Увеличьте масштаб всех веб-сайтов</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Включите, чтобы разрешить щепотку и масштабирование даже на сайтах, которые не допускают этого жеста.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Имя (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Последнее использование</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Меню сортировки логинов</string>
+
+    
+    
+    <string name="preferences_autofill">Автозаполнение</string>
+    
+    <string name="preferences_addresses">Адреса</string>
+    
+    <string name="preferences_credit_cards">Кредитные карты</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Сохранение и автозаполнение карт</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Данные зашифрованы</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Синхронизация карт на разных устройствах</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Карты синхронизации</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Добавить кредитную карту</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Управление сохраненными картами</string>
+    
+    <string name="preferences_addresses_add_address">Добавить адрес</string>
+    
+    <string name="preferences_addresses_manage_addresses">Управление адресами</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Сохранение и автозаполнение адресов</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Включите информацию о номерах, адресах электронной почты и доставки.</string>
+
+    
+    <string name="credit_cards_add_card">Добавить карту</string>
+    
+    <string name="credit_cards_edit_card">Редактировать карту</string>
+    
+    <string name="credit_cards_card_number">Номер карты</string>
+    
+    <string name="credit_cards_expiration_date">Дата истечения срока действия</string>
+    
+    <string name="credit_cards_expiration_date_month">Дата истечения срока действия Месяц</string>
+    
+    <string name="credit_cards_expiration_date_year">Дата истечения срока действия Год</string>
+    
+    <string name="credit_cards_name_on_card">Имя на карте</string>
+    
+    <string name="credit_cards_menu_delete_card">Удалить карту</string>
+    
+    <string name="credit_cards_delete_card_button">Удалить карту</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Вы уверены, что хотите удалить эту кредитную карту?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Удалить</string>
+    
+    <string name="credit_cards_menu_save">Сохранить</string>
+    
+    <string name="credit_cards_save_button">Сохранить</string>
+    
+    <string name="credit_cards_cancel_button">Отмена</string>
+    
+    <string name="credit_cards_saved_cards">Сохраненные карты</string>
+    
+    <string name="credit_cards_number_validation_error_message">Введите действительный номер кредитной карты</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Пожалуйста, заполните это поле</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Разблокировка для просмотра сохраненных карт</string>
+    
+    <string name="credit_cards_warning_dialog_title">Защитите свои кредитные карты</string>
+    
+    <string name="credit_cards_warning_dialog_message">Установите шаблон блокировки устройства, PIN-код или пароль, чтобы защитить сохраненные кредитные карты от доступа, если ваше устройство окажется у кого-то другого.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Установите сейчас</string>
+    
+    <string name="credit_cards_warning_dialog_later">Позже</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Разблокируйте устройство</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Разблокировка для использования сохраненной информации о кредитной карте</string>
+    
+    <string name="addresses_add_address">Добавить адрес</string>
+    
+    <string name="addresses_edit_address">Редактировать адрес</string>
+    
+    <string name="addresses_manage_addresses">Управление адресами</string>
+    
+    <string name="addresses_first_name">Имя</string>
+    
+    <string name="addresses_middle_name">Среднее имя</string>
+    
+    <string name="addresses_last_name">Фамилия</string>
+    
+    <string name="addresses_street_address">Адрес улицы</string>
+    
+    <string name="addresses_city">Город</string>
+    
+    <string name="addresses_state">Государство</string>
+    
+    <string name="addresses_province">Провинция</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Страна или регион</string>
+    
+    <string name="addresses_phone">Телефон</string>
+    
+    <string name="addresses_email">Электронная почта</string>
+    
+    <string name="addresses_save_button">Сохранить</string>
+    
+    <string name="addresses_cancel_button">Отмена</string>
+    
+    <string name="addressess_delete_address_button">Удалить адрес</string>
+    
+    <string name="addressess_confirm_dialog_message">Вы уверены, что хотите удалить этот адрес?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Удалить</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Отмена</string>
+    
+    <string name="address_menu_save_address">Сохранить адрес</string>
+    
+    <string name="address_menu_delete_address">Удалить адрес</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Добавить поисковую систему</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Редактирование поисковой системы</string>
+    
+    <string name="search_engine_add_button_content_description">Добавить</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Сохранить</string>
+    
+    <string name="search_engine_edit">Редактировать</string>
+    
+    <string name="search_engine_delete">Удалить</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Другие</string>
+    
+    <string name="search_add_custom_engine_name_hint">Имя</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Используемая строка поиска</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Замените запрос на "%s". Пример:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Детали пользовательской поисковой системы</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Введите название поисковой системы</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Введите строку поиска</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Проверьте соответствие строки поиска Пример формата</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Ошибка при подключении к "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Создано %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Сохранено %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Удалено %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Разрешить:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Перейдите в Настройки Android</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Нажмите &lt;b&gt;Разрешения&lt;/b&gt;.</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Переключите &lt;b&gt;%1$s&lt;/b&gt; в положение ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Соединение безопасно</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Соединение небезопасно</string>
+    
+    <string name="clear_site_data">Очистить файлы cookie и данные сайта</string>
+    
+    <string name="confirm_clear_site_data">Вы уверены, что хотите очистить все файлы cookie и данные для сайта &lt;b&gt;%s&lt;/b&gt;?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Вы уверены, что хотите очистить все разрешения на всех сайтах?</string>
+    
+    <string name="confirm_clear_permissions_site">Вы уверены, что хотите снять все разрешения для этого сайта?</string>
+    
+    <string name="confirm_clear_permission_site">Вы уверены, что хотите очистить это разрешение для этого сайта?</string>
+    
+    <string name="no_site_exceptions">Никаких исключений из правил</string>
+    
+    <string name="bookmark_deletion_confirmation">Вы уверены, что хотите удалить эту закладку?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Добавить в ярлыки</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Удалить из ярлыков</string>
+    
+    <string name="certificate_info_verified_by">Проверено: %1$s</string>
+    
+    <string name="login_menu_delete_button">Удалить</string>
+    
+    <string name="login_menu_edit_button">Редактировать</string>
+    
+    <string name="login_deletion_confirmation">Вы уверены, что хотите удалить этот логин?</string>
+    
+    <string name="dialog_delete_positive">Удалить</string>
+    
+    <string name="dialog_delete_negative">Отмена</string>
+    
+    <string name="login_options_menu">Параметры входа в систему</string>
+    
+    <string name="saved_login_hostname_description">Редактируемое текстовое поле для веб-адреса входа в систему.</string>
+    
+    <string name="saved_login_username_description">Редактируемое текстовое поле для имени пользователя при входе в систему.</string>
+    
+    <string name="saved_login_password_description">Редактируемое текстовое поле для пароля логина.</string>
+    
+    <string name="save_changes_to_login">Сохраните изменения для входа в систему.</string>
+    
+    <string name="edit">Редактировать</string>
+    
+    <string name="add_login">Добавить новый логин</string>
+    
+    <string name="saved_login_password_required">Требуется пароль</string>
+    
+    <string name="saved_login_username_required">Имя пользователя обязательно</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Требуется имя хоста</string>
+    
+    <string name="voice_search_content_description">Голосовой поиск</string>
+    
+    <string name="voice_search_explainer">Говорите сейчас</string>
+    
+    <string name="saved_login_duplicate">Логин с таким именем пользователя уже существует</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Веб-адрес должен содержать "https://" или "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Требуется действительное имя хоста</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Подключите другое устройство.</string>
+    
+    <string name="synced_tabs_reauth">Пожалуйста, пройдите повторную аутентификацию.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Пожалуйста, включите синхронизацию вкладок.</string>
+    
+    <string name="synced_tabs_no_tabs">На других устройствах у вас нет открытых вкладок в Waterfox.</string>
+    
+    <string name="synced_tabs_sign_in_message">Просмотр списка вкладок с других устройств.</string>
+    
+    <string name="synced_tabs_sign_in_button">Войти для синхронизации</string>
+    
+    <string name="synced_tabs_no_open_tabs">Нет открытых вкладок</string>
+    
+    <string name="synced_tabs_expand_group">Разверните группу синхронизированных вкладок</string>
+    
+    <string name="synced_tabs_collapse_group">Свернуть группу синхронизированных вкладок</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Достигнут предел быстрого доступа</string>
+    
+    <string name="shortcut_max_limit_content">Чтобы добавить новый ярлык, удалите один. Нажмите и удерживайте сайт, затем выберите удалить.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">Хорошо, понял.</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Ярлыки</string>
+	
+	<string name="top_sites_rename_dialog_title">Имя</string>
+    
+    <string name="shortcut_name_hint">Имя ярлыка</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Отмена</string>
+    
+    <string name="top_sites_menu_settings">Настройки</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Наши спонсоры и ваша конфиденциальность</string>
+    
+    <string name="top_sites_sponsored_label">Спонсор</string>
+
+    
+    
+    <string name="inactive_tabs_title">Неактивные вкладки</string>
+    
+    <string name="inactive_tabs_delete_all">Закройте все неактивные вкладки</string>
+    
+    <string name="inactive_tabs_expand_content_description">Развернуть неактивные вкладки</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Свернуть неактивные вкладки</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Автоматическое закрытие через месяц?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox может закрывать вкладки, которые вы не просматривали в течение последнего месяца.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ВКЛЮЧЕНИЕ АВТОМАТИЧЕСКОГО ЗАКРЫТИЯ</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Автоматическое закрытие включено</string>
+
+    
+    <string name="default_browser_experiment_card_text">Установите автоматическое открытие ссылок с веб-сайтов, электронных писем и сообщений в Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Удалить</string>
+
+    
+    <string name="radio_preference_info_content_description">Нажмите для получения дополнительной информации</string>
+
+    
+    <string name="action_bar_up_description">Перейдите вверх</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Закрыть</string>
+
+    <string name="waterfox_suggest_header">Waterfox Suggest</string>
+</resources>

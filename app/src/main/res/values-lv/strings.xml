@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Privāts %s</string>
+    
+    <string name="app_name_private_4">%s (privāts)</string>
+
+    
+    
+    <string name="content_description_menu">Vairāk iespēju</string>
+    
+    <string name="content_description_private_browsing_button">Privātas pārlūkošanas iespējošana</string>
+    
+    <string name="content_description_disable_private_browsing_button">Privātās pārlūkošanas atspējošana</string>
+    
+    <string name="search_hint">Meklēt vai ievadiet adresi</string>
+    
+    <string name="application_search_hint">Ievadiet meklēšanas noteikumus</string>
+    
+    <string name="no_open_tabs_description">Šeit tiks parādītas jūsu atvērtās cilnes.</string>
+    
+    <string name="no_private_tabs_description">Šeit tiks rādītas jūsu privātās cilnes.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d izvēlēts</string>
+    
+    <string name="tab_tray_add_new_collection">Pievienot jaunu kolekciju</string>
+    
+    <string name="tab_tray_add_new_collection_name">Nosaukums</string>
+    
+    <string name="tab_tray_select_collection">Izvēlieties kolekciju</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Iziet no multiselect režīma</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Saglabāt atlasītās cilnes kolekcijā</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Atlasīts</string>
+
+    
+    
+    <string name="recently_saved_title">Nesen saglabāts</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Rādīt visas saglabātās grāmatzīmes</string>
+    
+    <string name="recently_saved_menu_item_remove">Noņemt</string>
+
+    
+    <string name="about_content">%1$s ir izgatavots ar BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s dzēš meklēšanas un pārlūkošanas vēsturi no privātajām cilnēm, kad tās aizverat vai izejat no programmas. Lai gan tas nepadara jūs anonīmu tīmekļa vietnēm vai jūsu interneta pakalpojumu sniedzējam, tas atvieglo jūsu darbību tiešsaistē konfidencialitāti no ikviena cita, kas izmanto šo ierīci.</string>
+    <string name="private_browsing_common_myths">Biežāk sastopamie mīti par privāto pārlūkošanu</string>
+
+    
+    
+    <string name="cfr_message">Pievienojiet īsceļu, lai atvērtu privātas cilnes no sākuma ekrāna.</string>
+    
+    <string name="cfr_pos_button_text">Pievienot īsceļu</string>
+    
+    <string name="cfr_neg_button_text">Nē, paldies</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Varat iestatīt %1$s, lai automātiski atvērtu saites lietotnēs.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Iet uz iestatījumiem</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Atbrīvot</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Atbrīvot</string>
+
+    
+    
+    <string name="tcp_cfr_message">Mūsu līdz šim jaudīgākā konfidencialitātes funkcija ļauj izolēt vietņu savstarpējās izsekošanas meklētājus.</string>
+    
+    <string name="tcp_cfr_learn_more">Uzziniet vairāk par pilnīgu sīkfailu aizsardzību</string>
+
+    
+    <string name="camera_permissions_needed_message">Nepieciešama piekļuve kamerai. Dodieties uz Android iestatījumiem, pieskarieties pie Atļaujas un pieskarieties pie Atļaut.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Iet uz iestatījumiem</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Atbrīvot</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Iestatiet, lai automātiski aizveras atvērtas cilnes, kas nav skatītas pēdējo dienu, nedēļu vai mēnešu laikā.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Pārskatīt opcijas</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Atbrīvot</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Šeit tiek pārvietotas cilnes, kuras neesat skatījis divas nedēļas.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Izslēgt iestatījumos</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automātiska slēgšana pēc mēneša?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s var aizvērt cilnes, kuras pēdējā mēneša laikā neesat skatījis.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Aizvērt</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Ieslēgt automātisko aizvēršanu</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Jauna cilne</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Jauna privāta cilne</string>
+
+    
+    
+    <string name="recent_tabs_header">Atgriezieties atpakaļ</string>
+    
+    <string name="recent_tabs_show_all">Rādīt visu</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Rādīt visas nesenās cilnes poga</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Jūsu meklēšana pēc \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d vietnes</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Skatīt visas sinhronizētās cilnes</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Sinhronizētā ierīce</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Noņemt</string>
+    
+    <string name="recent_tab_menu_item_remove">Noņemt</string>
+
+    
+    
+    <string name="history_metadata_header_2">Nesen apmeklēts</string>
+    
+    <string name="recently_visited_menu_item_remove">Noņemt</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Rādīt visus iepriekšējos pētījumus</string>
+
+    
+    
+    <string name="browser_menu_back">Atpakaļ</string>
+    
+    <string name="browser_menu_forward">Uz priekšu</string>
+    
+    <string name="browser_menu_refresh">Atjaunināt</string>
+    
+    <string name="browser_menu_stop">Pārtraukt</string>
+    
+    <string name="browser_menu_add_ons">Papildinājumi</string>
+    
+    <string name="no_add_ons">Šeit nav papildinājumu</string>
+    
+    <string name="browser_menu_help">Palīdzība</string>
+    
+    <string name="browser_menu_settings">Iestatījumi</string>
+    
+    <string name="browser_menu_library">Bibliotēka</string>
+    
+    <string name="browser_menu_desktop_site">Darbvirsmas vietne</string>
+    
+    <string name="browser_menu_add_to_homescreen">Pievienot sākuma ekrānam</string>
+    
+    <string name="browser_menu_install_on_homescreen">Uzstādīt</string>
+    
+    <string name="resync_button_content_description">Atkārtota sinhronizācija</string>
+    
+    <string name="browser_menu_find_in_page">Atrast lapā</string>
+    
+    <string name="browser_menu_save_to_collection_2">Saglabāt kolekcijā</string>
+    
+    <string name="browser_menu_share">Dalīties</string>
+    
+    <string name="browser_menu_open_in_waterfox">Atvērt %1$s</string>
+    
+    <string name="browser_menu_powered_by">IEKĀRTOTS AR %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">Lasītāju skats</string>
+    
+    <string name="browser_menu_read_close">Aizvērt lasītāja skatu</string>
+    
+    <string name="browser_menu_open_app_link">Atvērt lietotnē</string>
+    
+    <string name="browser_menu_customize_reader_view">Pielāgot lasītāja skatu</string>
+    
+    <string name="browser_menu_add">Pievienot</string>
+    
+    <string name="browser_menu_edit">Rediģēt</string>
+    
+    <string name="browser_menu_customize_home_1">Pielāgot sākumlapu</string>
+    
+    
+    <string name="browser_toolbar_home">Sākuma ekrāns</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Izvēlētā valoda</string>
+    
+    <string name="default_locale_text">Ievērojiet ierīces valodu</string>
+    
+    <string name="locale_search_hint">Meklēšanas valoda</string>
+
+    
+    
+    <string name="search_scan_button">Skenēt</string>
+    
+    <string name="search_engine_button">Meklētājprogramma</string>
+    
+    <string name="search_shortcuts_engine_settings">Meklētājprogrammas iestatījumi</string>
+    
+    <string name="awesomebar_clipboard_title">Aizpildiet saiti no starpliktuves</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Atļaut</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Neļaujiet</string>
+    
+    <string name="search_suggestions_onboarding_title">Atļaut meklēšanas ieteikumus privātās sesijās?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s kopīgos visu, ko ievadīsiet adreses joslā, ar jūsu noklusējuma meklētājprogrammu.</string>
+    
+    <string name="search_engine_suggestions_title">Meklēt %s</string>
+    
+    <string name="search_engine_suggestions_description">Meklēt tieši no adreses joslas</string>
+    
+    <string name="search_settings_menu_item">Meklēšanas iestatījumi</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Tagad ir vieglāk turpināt darbu tur, kur esat pārtraucis.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Pāriet uz atvērtajām cilnēm, grāmatzīmēm un pārlūkošanas vēsturi.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Tīras, sakārtotas cilnes</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Atbrīvojiet cilnes no jucekļa ar uzlabotu izkārtojumu un automātiski aizveramām cilnēm.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Jaunākās meklēšanas</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Atkārtoti skatiet jaunākos meklējumus no sākuma lapas un cilnēm.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Iepazīstieties ar personalizēto sākuma lapu. Šeit būs redzamas jaunākās cilnes, grāmatzīmes un meklēšanas rezultāti.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Laipni lūgti personīgākā internetā</string>
+    
+    <string name="onboarding_home_welcome_description">Vairāk krāsu. Labāks privātums. Tāda pati apņemšanās rūpēties par cilvēkiem, nevis peļņu.</string>
+    
+    <string name="onboarding_home_sync_title_3">Pārlēkšana no tālruņa uz klēpjdatoru un atpakaļ</string>
+    
+    <string name="onboarding_home_sync_description">Turpiniet darbu tur, kur esat beidzis, jo cilnes no citām ierīcēm tagad ir jūsu sākuma lapā.</string>
+    
+    <string name="onboarding_home_get_started_button">Sākt</string>
+    
+    <string name="onboarding_home_sign_in_button">Pierakstīties</string>
+    
+    <string name="onboarding_home_skip_button">Izlaist</string>
+    
+    <string name="onboarding_home_content_description_close_button">Aizvērt</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Atvērt jaunu cilni %1$s</string>
+    
+    <string name="search_widget_text_short">Meklēšana</string>
+    
+    <string name="search_widget_text_long">Meklēšana tīmeklī</string>
+    
+    <string name="search_widget_voice">Meklēšana ar balsi</string>
+
+    
+    
+    <string name="settings">Iestatījumi</string>
+    
+    <string name="preferences_category_general">Vispārīgi</string>
+    
+    <string name="preferences_category_about">Par</string>
+    
+    <string name="preferences_default_search_engine">Noklusējuma meklētājprogramma</string>
+    
+    <string name="preferences_search">Meklēšana</string>
+    
+    <string name="preferences_search_address_bar">Adrešu josla</string>
+    
+    <string name="preferences_rate">Novērtējiet Google Play</string>
+    
+    <string name="preferences_about">Par %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Iestatīt kā noklusējuma pārlūkprogrammu</string>
+    
+    <string name="preferences_category_advanced">Advanced</string>
+    
+    <string name="preferences_category_privacy_security">Konfidencialitāte un drošība</string>
+    
+    <string name="preferences_site_permissions">Vietnes atļaujas</string>
+    
+    <string name="preferences_private_browsing_options">Privātā pārlūkošana</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Saites atvēršana privātā cilnē</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Atļaut ekrānšāviņus privātajā pārlūkošanā</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Ja tas ir atļauts, privātās cilnes būs redzamas arī tad, ja ir atvērtas vairākas programmas.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Privātas pārlūkošanas īsceļu pievienošana</string>
+    
+    <string name="preferences_https_only_title">Tikai HTTPS režīms</string>
+    
+    <string name="preferences_https_only_summary">Automātiski mēģina izveidot savienojumu ar vietnēm, kas izmanto HTTPS šifrēšanas protokolu, lai nodrošinātu lielāku drošību.</string>
+    
+    <string name="preferences_https_only_on">Uz</string>
+    
+    <string name="preferences_https_only_off">Izslēgts</string>
+    
+    <string name="preferences_http_only_learn_more">Uzzināt vairāk</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Ieslēgt visās cilnēs</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Ieslēgt tikai privātajās cilnēs</string>
+    
+    <string name="errorpage_httpsonly_title">Droša vietne nav pieejama</string>
+    
+    <string name="errorpage_httpsonly_message_title">Visticamāk, tīmekļa vietne vienkārši neatbalsta HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Tomēr iespējams, ka ir iesaistīts arī uzbrucējs. Turpinot apmeklēt tīmekļa vietni, nevajadzētu ievadīt nekādu sensitīvu informāciju. Ja turpināsiet, vietnei uz laiku tiks izslēgts tikai HTTPS režīms.</string>
+    
+    <string name="preferences_accessibility">Pieejamība</string>
+    
+    <string name="preferences_override_fxa_server">Pielāgotais Waterfox konta serveris</string>
+    
+    <string name="preferences_override_sync_tokenserver">Pielāgotais sinhronizācijas serveris</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Pārveidots Waterfox konts/Sync serveris. Iziet no programmas, lai piemērotu izmaiņas...</string>
+    
+    <string name="preferences_category_account">Konts</string>
+    
+    <string name="preferences_toolbar">Rīkjosla</string>
+    
+    <string name="preferences_theme">Tēma</string>
+    
+    <string name="preferences_home_2">Mājas lapa</string>
+    
+    <string name="preferences_gestures">Žesti</string>
+    
+    <string name="preferences_customize">Pielāgojiet</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sinhronizējiet grāmatzīmes, vēsturi un citus datus ar savu Waterfox kontu</string>
+    
+    <string name="preferences_sign_in_description_2">Pierakstieties, lai sinhronizētu cilnes, grāmatzīmes, paroles un daudz ko citu.</string>
+    
+    <string name="preferences_account_default_name">Waterfox konts</string>
+    
+    <string name="preferences_account_sync_error">Savienojuma atjaunošana, lai atsāktu sinhronizēšanu</string>
+    
+    <string name="preferences_language">Valoda</string>
+    
+    <string name="preferences_remote_debugging">Attālā atkļūdošana, izmantojot USB</string>
+    
+    <string name="preferences_show_search_engines">Rādīt meklētājprogrammas</string>
+    
+    <string name="preferences_show_search_suggestions">Rādīt meklēšanas ieteikumus</string>
+    
+    <string name="preferences_show_voice_search">Rādīt balss meklēšanu</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Rādīt privātās sesijās</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Rādīt starpliktuves ieteikumus</string>
+    
+    <string name="preferences_search_browsing_history">Meklēšanas pārlūkošanas vēsture</string>
+    
+    <string name="preferences_search_bookmarks">Meklēt grāmatzīmes</string>
+    
+    <string name="preferences_search_synced_tabs">Sinhronizēto cilņu meklēšana</string>
+    
+    <string name="preferences_account_settings">Konta iestatījumi</string>
+    
+    <string name="preferences_enable_autocomplete_urls">URL automātiskā papildināšana</string>
+    
+    <string name="preferences_open_links_in_apps">Saites atvēršana lietotnēs</string>
+    
+    <string name="preferences_external_download_manager">Ārējais lejupielādes pārvaldnieks</string>
+    
+    <string name="preferences_addons">Papildinājumi</string>
+    
+    <string name="preferences_notifications">Paziņojumi</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Pielāgota papildinājumu kolekcija</string>
+    
+    <string name="customize_addon_collection_ok">LABI</string>
+    
+    <string name="customize_addon_collection_cancel">Atcelt</string>
+    
+    <string name="customize_addon_collection_hint">Kolekcijas nosaukums</string>
+    
+    <string name="customize_addon_collection_user_hint">Kolekcijas īpašnieks (lietotāja ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">Papildinājumu kolekcija modificēta. Iziet no programmas, lai piemērotu izmaiņas...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Atgriezieties atpakaļ</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Jaunākās grāmatzīmes</string>
+    
+    <string name="customize_toggle_recently_visited">Nesen apmeklēts</string>
+    
+    <string name="customize_wallpapers">Tapetes</string>
+    
+    <string name="customize_toggle_contile">Sponsorētie īsceļi</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Tapetes Vienums: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Tapetes atjaunināts!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Skatīt</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Tapetes maiņa, pieskaroties Waterfox sākumlapas logotipam</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfox logo - mainīt fonu, pogu</string>
+
+    
+    
+    <string name="addon_not_supported_error">Papildinājums nav atbalstīts</string>
+    
+    <string name="addon_already_installed">Papildinājums jau ir instalēts</string>
+
+    
+    
+    <string name="preferences_sync_now">Sinhronizēt tagad</string>
+    
+    <string name="preferences_sync_category">Izvēlieties, ko sinhronizēt</string>
+    
+    <string name="preferences_sync_history">Vēsture</string>
+    
+    <string name="preferences_sync_bookmarks">Grāmatzīmes</string>
+    
+    <string name="preferences_sync_logins">Pieteikšanās</string>
+    
+    <string name="preferences_sync_tabs_2">Atvērt cilnes</string>
+    
+    <string name="preferences_sign_out">Izrakstīties</string>
+    
+    <string name="preferences_sync_device_name">Ierīces nosaukums</string>
+    
+    <string name="empty_device_name_error">Ierīces nosaukums nedrīkst būt tukšs.</string>
+    
+    <string name="sync_syncing_in_progress">Sinhronizēšana...</string>
+    
+    <string name="sync_failed_summary">Sinhronizācija neizdevās. Pēdējā veiksme: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Sinhronizācija neizdevās. Pēdējo reizi sinhronizēts: nekad</string>
+    
+    <string name="sync_last_synced_summary">Pēdējo reizi sinhronizēts: %s</string>
+    
+    <string name="sync_never_synced_summary">Pēdējo reizi sinhronizēts: nekad</string>
+    
+    <string name="default_device_name_2">%1$s par %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kredītkartes</string>
+    
+    <string name="preferences_sync_address">Adreses</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Saņemtās cilnes</string>
+    
+    <string name="fxa_received_tab_channel_description">Paziņojumi par cilnēm, kas saņemti no citām Waterfox ierīcēm.</string>
+    
+    <string name="fxa_tab_received_notification_name">Saņemtā cilne</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Cilne no %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Izņēmumi</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Ieslēgt visām vietnēm</string>
+    
+    <string name="exceptions_empty_message_description">Izņēmumi ļauj atslēgt atlasīto vietņu izsekošanas aizsardzību.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Uzzināt vairāk</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Ieslēgt sinhronizāciju</string>
+    
+    <string name="preferences_sync_2">Datu sinhronizēšana un saglabāšana</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Pierakstīties, lai atjaunotu savienojumu</string>
+    
+    <string name="preferences_sync_remove_account">Konta noņemšana</string>
+
+    
+    
+    <string name="pair_instructions_2">Skenējiet QR kodu, kas parādīts vietnē &lt;b&gt;firefox.com/pair&lt;/b&gt;.</string>
+
+    
+    
+    <string name="preference_top_toolbar">Top</string>
+    
+    <string name="preference_bottom_toolbar">Apakšējā daļa</string>
+
+    
+    
+    <string name="preference_light_theme">Gaisma</string>
+    
+    <string name="preference_dark_theme">Tumšs</string>
+    
+    <string name="preference_auto_battery_theme">Iestatīt pēc akumulatora taupītāja</string>
+    
+    <string name="preference_follow_device_theme">Sekojiet ierīces tēmai</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Pavelciet, lai atsvaidzinātu</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Ritiniet, lai paslēptu rīkjoslu</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Pārvelciet rīkjoslu uz sāniem, lai pārslēgtu cilnes</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Pārvelciet rīkjoslu uz augšu, lai atvērtu cilnes</string>
+
+    
+    
+    <string name="library_downloads">Lejupielādes</string>
+    
+    <string name="library_bookmarks">Grāmatzīmes</string>
+    
+    <string name="library_desktop_bookmarks_root">Darbvirsmas grāmatzīmes</string>
+    
+    <string name="library_desktop_bookmarks_menu">Grāmatzīmes Izvēlne</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Grāmatzīmju rīkjosla</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Citas grāmatzīmes</string>
+    
+    <string name="library_history">Vēsture</string>
+    
+    <string name="library_new_tab">Jauna cilne</string>
+    
+    <string name="settings_title">Iestatījumi</string>
+    
+    <string name="content_description_close_button">Aizvērt</string>
+
+    
+    <string name="history_search_group_site">%d vietne</string>
+    
+    <string name="history_search_group_sites">%d vietnes</string>
+
+    
+    <string name="library_recently_closed_tabs">Nesen slēgtās cilnes</string>
+    
+    <string name="recently_closed_show_full_history">Rādīt pilnu vēsturi</string>
+    
+    <string name="recently_closed_tabs">%d cilnes</string>
+    
+    <string name="recently_closed_tab">%d cilne</string>
+    
+    <string name="recently_closed_empty_message">Šeit nav nesen slēgtu cilņu</string>
+
+    
+    
+    <string name="preferences_tabs">Cilnes</string>
+    
+    <string name="preferences_tab_view">Cilnes skats</string>
+    
+    <string name="tab_view_list">Saraksts</string>
+    
+    <string name="tab_view_grid">Tīkls</string>
+    
+    <string name="preferences_close_tabs">Aizvērt cilnes</string>
+    
+    <string name="close_tabs_manually">Nekad</string>
+    
+    <string name="close_tabs_after_one_day">Pēc vienas dienas</string>
+    
+    <string name="close_tabs_after_one_week">Pēc nedēļas</string>
+    
+    <string name="close_tabs_after_one_month">Pēc viena mēneša</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automātiska atvērto cilņu aizvēršana</string>
+
+    
+    
+    <string name="preferences_opening_screen">Atvēršanas ekrāns</string>
+    
+    <string name="opening_screen_homepage">Mājas lapa</string>
+    
+    <string name="opening_screen_last_tab">Pēdējā cilne</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Mājaslapa pēc četru stundu bezdarbības</string>
+    
+    <string name="close_tabs_manually_summary">Aizvērt manuāli</string>
+    
+    <string name="close_tabs_after_one_day_summary">Aizvērt pēc vienas dienas</string>
+    
+    <string name="close_tabs_after_one_week_summary">Aizvērt pēc vienas nedēļas</string>
+    
+    <string name="close_tabs_after_one_month_summary">Aizvērt pēc viena mēneša</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Pārvietot vecās cilnes uz neaktīvajām</string>
+    
+    <string name="preferences_inactive_tabs_title">Ailītes, kuras neesat skatījis divas nedēļas, tiek pārvietotas uz neaktīvo sadaļu.</string>
+
+    
+    
+    <string name="tab_header_label">Atvērt cilnes</string>
+    
+    <string name="tabs_header_private_tabs_title">Privātās cilnes</string>
+    
+    <string name="tabs_header_synced_tabs_title">Sinhronizētas cilnes</string>
+    
+    <string name="add_tab">Pievienot cilni</string>
+    
+    <string name="add_private_tab">Pievienot privātu cilni</string>
+    
+    <string name="tab_drawer_fab_content">Privāts</string>
+    
+    <string name="tab_drawer_fab_sync">Sinhronizēt</string>
+    
+    <string name="tab_tray_menu_item_share">Kopīgojiet visas cilnes</string>
+    
+    <string name="tab_tray_menu_recently_closed">Nesen slēgtās cilnes</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Nesen slēgts</string>
+    
+    <string name="tab_tray_menu_account_settings">Konta iestatījumi</string>
+    
+    <string name="tab_tray_menu_tab_settings">Cilnes iestatījumi</string>
+    
+    <string name="tab_tray_menu_item_close">Aizvērt visas cilnes</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Grāmatzīme</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Aizvērt</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Kopīgojiet atlasītās cilnes</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Izvēlēto cilņu izvēlne</string>
+    
+    <string name="remove_tab_from_collection">Noņemt cilni no kolekcijas</string>
+    
+    <string name="tabs_tray_select_tabs">Atlasiet cilnes</string>
+    
+    <string name="close_tab">Aizvērt cilni</string>
+    
+    <string name="close_tab_title">Aizvērt cilni %s</string>
+    
+    <string name="open_tabs_menu">Atvērt cilņu izvēlni</string>
+    
+    <string name="tabs_menu_save_to_collection1">Saglabāt cilnes kolekcijā</string>
+    
+    <string name="collection_delete">Dzēst kolekciju</string>
+    
+    <string name="collection_rename">Pārdēvēt kolekciju</string>
+    
+    <string name="collection_open_tabs">Atvērt cilnes</string>
+    
+    <string name="collection_name_hint">Kolekcijas nosaukums</string>
+	
+	<string name="rename_top_site">Pārdēvēt</string>
+	
+	<string name="remove_top_site">Noņemt</string>
+    
+    <string name="delete_from_history">Dzēst no vēstures</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (privātais režīms)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Citas cilnes</string>
+
+    
+    
+    <string name="history_search_1">Ievadiet meklēšanas noteikumus</string>
+    
+    <string name="history_delete_all">Dzēst vēsturi</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Vēstures izdzēšana</string>
+    
+    <string name="history_delete_single_item_snackbar">Dzēsts %1$s</string>
+    
+    <string name="history_delete_item">Dzēst</string>
+    
+    <string name="history_multi_select_title">%1$d izvēlēts</string>
+    
+    <string name="history_today">Šodien</string>
+    
+    <string name="history_yesterday">Vakar</string>
+    
+    <string name="history_7_days">Pēdējās 7 dienas</string>
+    
+    <string name="history_30_days">Pēdējās 30 dienas</string>
+    
+    <string name="history_older">Vecāks</string>
+    
+    <string name="history_empty_message">Šeit nav vēstures</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Noņemtās lejupielādes</string>
+    
+    <string name="download_delete_single_item_snackbar">Noņemts %1$s</string>
+    
+    <string name="download_empty_message_1">Nav lejupielādētu failu</string>
+    
+    <string name="download_multi_select_title">%1$d izvēlēts</string>
+    
+    <string name="download_delete_item_1">Noņemt</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Atvainojiet. %1$s nevar ielādēt šo lapu.</string>
+    
+    <string name="tab_crash_send_report">Ziņojuma par avāriju nosūtīšana pārlūkprogrammai BrowserWorks</string>
+    
+    <string name="tab_crash_close">Aizvērt cilni</string>
+    
+    <string name="tab_crash_restore">Cilne Atjaunot</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Vai esat pārliecināts, ka vēlaties dzēst šo mapi?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s izdzēsīs atlasītos vienumus.</string>
+    
+    <string name="bookmark_delete_negative">Atcelt</string>
+    
+    <string name="bookmark_add_folder">Pievienot mapi</string>
+    
+    <string name="bookmark_saved_snackbar">Grāmatzīme saglabāta!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Rediģēt</string>
+    
+    <string name="bookmark_menu_copy_button">Kopēt</string>
+    
+    <string name="bookmark_menu_share_button">Dalīties</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Atvērt jaunā cilnē</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Atvērt privātā cilnē</string>
+    
+    <string name="bookmark_menu_delete_button">Dzēst</string>
+    
+    <string name="bookmark_menu_save_button">Saglabāt</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d izvēlēts</string>
+    
+    <string name="edit_bookmark_fragment_title">Rediģēt grāmatzīmi</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Rediģēt mapi</string>
+    
+    <string name="bookmark_sign_in_button">Pierakstieties, lai redzētu sinhronizētās grāmatzīmes</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">NAME</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Pievienot mapi</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Atlasiet mapi</string>
+    
+    <string name="bookmark_empty_title_error">Jābūt nosaukumam</string>
+    
+    <string name="bookmark_invalid_url_error">Nederīgs URL</string>
+    
+    <string name="bookmarks_empty_message">Šeit nav grāmatzīmju</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Dzēsts %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Dzēstas grāmatzīmes</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Atlasīto mapju dzēšana</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Ievadiet meklēšanas noteikumus</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Dodieties uz Iestatījumi</string>
+    
+    <string name="quick_settings_sheet">Ātro iestatījumu lapa</string>
+    
+    <string name="phone_feature_recommended">Ieteicamais</string>
+    
+    <string name="clear_permissions">Notīriet atļaujas</string>
+    
+    <string name="clear_permissions_positive">LABI</string>
+    
+    <string name="clear_permissions_negative">Atcelt</string>
+    
+    <string name="clear_permission">Skaidra atļauja</string>
+    
+    <string name="clear_permission_positive">LABI</string>
+    
+    <string name="clear_permission_negative">Atcelt</string>
+    
+    <string name="clear_permissions_on_all_sites">Skaidras atļaujas visās vietnēs</string>
+    
+    <string name="preference_browser_feature_autoplay">Automātiskā atskaņošana</string>
+    
+    <string name="preference_phone_feature_camera">Kamera</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofons</string>
+    
+    <string name="preference_phone_feature_location">Atrašanās vieta</string>
+    
+    <string name="preference_phone_feature_notification">Paziņojums</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Pastāvīgā glabāšana</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Vietņu savstarpēji saistīti sīkfaili</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM kontrolēts saturs</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Lūdziet atļaut</string>
+    
+    <string name="preference_option_phone_feature_blocked">Bloķēts</string>
+    
+    <string name="preference_option_phone_feature_allowed">Atļauts</string>
+    
+    <string name="phone_feature_blocked_by_android">Bloķēts ar Android</string>
+    
+    <string name="preference_exceptions">Izņēmumi</string>
+    
+    <string name="tracking_protection_on">Uz</string>
+    
+    <string name="tracking_protection_off">Izslēgts</string>
+    
+    <string name="preference_option_autoplay_allowed2">Atļaut audio un video</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Atļaut audio un video</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Bloķēt audio un video tikai mobilo datu tīklā</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Audio un video tiks atskaņoti, izmantojot Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Bloķēt tikai audio</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Bloķēt tikai audio</string>
+    
+    <string name="preference_option_autoplay_blocked3">Bloķēt audio un video</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Bloķēt audio un video</string>
+    
+    <string name="delete_browsing_data_quit_on">Uz</string>
+    
+    <string name="delete_browsing_data_quit_off">Izslēgts</string>
+    
+    <string name="https_only_on">Uz</string>
+    
+    <string name="https_only_off">Izslēgts</string>
+
+    
+    
+    <string name="collections_header">Kolekcijas</string>
+    
+    <string name="collection_menu_button_content_description">Kolekcijas izvēlne</string>
+    
+    <string name="no_collections_description2">Apkopojiet sev svarīgās lietas.\nGrupējiet līdzīgus meklējumus, vietnes un cilnes, lai vēlāk varētu ātri piekļūt.</string>
+    
+    <string name="create_collection_select_tabs">Atlasiet cilnes</string>
+    
+    <string name="create_collection_select_collection">Izvēlieties kolekciju</string>
+    
+    <string name="create_collection_name_collection">Vārdu kolekcija</string>
+    
+    <string name="create_collection_add_new_collection">Pievienot jaunu kolekciju</string>
+    
+    <string name="create_collection_select_all">Atlasiet visus</string>
+    
+    <string name="create_collection_deselect_all">Atcelt visu</string>
+    
+    <string name="create_collection_save_to_collection_empty">Izvēlieties cilnes, lai saglabātu</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">atlasītas %d cilnes</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">Izvēlēta %d cilne</string>
+    
+    <string name="create_collection_tabs_saved">Saglabātas cilnes!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Kolekcija saglabāta!</string>
+    
+    <string name="create_collection_tab_saved">Cilne saglabāta!</string>
+    
+    <string name="create_collection_close">Aizvērt</string>
+    
+    <string name="create_collection_save">Saglabāt</string>
+    
+    <string name="create_collection_view">Skatīt</string>
+    
+    <string name="create_collection_positive">LABI</string>
+    
+    <string name="create_collection_negative">Atcelt</string>
+
+    
+    <string name="create_collection_default_name">Kolekcija %d</string>
+
+    
+    
+    <string name="share_header_2">Dalīties</string>
+    
+    <string name="share_button_content_description">Dalīties</string>
+    
+    <string name="share_device_subheader">Nosūtīt uz ierīci</string>
+    
+    <string name="share_link_all_apps_subheader">Visas darbības</string>
+    
+    <string name="share_link_recent_apps_subheader">Nesen izmantots</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopēt uz starpliktuvi</string>
+    
+    <string name="toast_copy_link_to_clipboard">Kopēts uz starpliktuvi</string>
+    
+    <string name="sync_menu_sign_in">Pierakstīties, lai sinhronizētu</string>
+    
+    <string name="sync_sign_in">Pierakstīties, lai veiktu sinhronizāciju</string>
+    
+    <string name="sync_send_to_all">Sūtīt uz visām ierīcēm</string>
+    
+    <string name="sync_reconnect">Atkārtoti izveidojiet savienojumu ar sinhronizāciju</string>
+    
+    <string name="sync_offline">Bezsaistes režīmā</string>
+    
+    <string name="sync_connect_device">Citas ierīces pievienošana</string>
+    
+    <string name="sync_connect_device_dialog">Lai nosūtītu cilni, pierakstieties programmā Waterfox vismaz vienā citā ierīcē.</string>
+    
+    <string name="sync_confirmation_button">Sapratu.</string>
+    
+    <string name="share_error_snackbar">Nevar kopīgot ar šo lietotni</string>
+    
+    <string name="sync_add_new_device_title">Nosūtīt uz ierīci</string>
+    
+    <string name="sync_add_new_device_message">Nav pievienotu ierīču</string>
+    
+    <string name="sync_add_new_device_learn_button">Uzziniet vairāk par cilņu sūtīšanu...</string>
+    
+    <string name="sync_add_new_device_connect_button">Citas ierīces pievienošana...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Aizvērt privātas cilnes</string>
+    
+    <string name="notification_marketing_channel_name">Mārketings</string>
+    
+    <string name="notification_default_browser_title">%1$s ir ātrs un privāts</string>
+    
+    <string name="notification_default_browser_text">Iestatiet %1$s kā noklusējuma pārlūkprogrammu</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Kolekcija dzēsta</string>
+    
+    <string name="snackbar_collection_renamed">Kolekcijas pārdēvēšana</string>
+    
+    <string name="snackbar_tab_closed">Cilne ir slēgta</string>
+    
+    <string name="snackbar_tabs_closed">Aizvērtās cilnes</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Grāmatzīmes saglabātas!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Pievienots īsceļiem!</string>
+    
+    <string name="snackbar_private_tab_closed">Privātā cilne ir slēgta</string>
+    
+    <string name="snackbar_private_tabs_closed">Privātās cilnes ir slēgtas</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Vietne ir noņemta</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Atļaut %1$s atvērt %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Web adrese nav derīga.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">LABI</string>
+    
+    <string name="tab_collection_dialog_message">Vai esat pārliecināts, ka vēlaties dzēst %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Dzēšot šo cilni, tiks dzēsta visa kolekcija. Jebkurā laikā varat izveidot jaunas kolekcijas.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Dzēst %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Dzēst</string>
+    
+    <string name="full_screen_notification">Ievadīšana pilnekrāna režīmā</string>
+    
+    <string name="url_copied">URL kopēts</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Šis ir teksta paraugs. Tas ir šeit, lai parādītu, kā parādīsies teksts, ja ar šo iestatījumu palielināsiet vai samazināsiet izmēru.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Veidojiet lielāku vai mazāku tekstu tīmekļa vietnēs</string>
+    
+    <string name="preference_accessibility_font_size_title">Fonta lielums</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automātiska fontu izmēru noteikšana</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Fonta lielums būs atbilstošs jūsu Android iestatījumiem. Izslēgt, lai pārvaldītu fonta lielumu šeit.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Pārlūkošanas datu dzēšana</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Atvērt cilnes</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d cilnes</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Pārlūkošanas vēsture un vietnes dati</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adreses</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Sīkfaili</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Jūs tiksiet atreģistrēts no vairuma vietņu.</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Kešētie attēli un faili</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Atbrīvo uzglabāšanas vietu</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Vietnes atļaujas</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Lejupielādes</string>
+    
+    <string name="preferences_delete_browsing_data_button">Pārlūkošanas datu dzēšana</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Izdzēst pārlūkošanas datus, kad tiek pārtraukta darbība</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Automātiski dzēš pārlūkošanas datus, kad galvenajā izvēlnē izvēlaties \"Iziet\".</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Pārtraukt</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Tādējādi tiks dzēsti visi jūsu pārlūkošanas dati.</string>
+    
+    <string name="delete_history_prompt_title">Dzēšamais laika diapazons</string>
+    
+    <string name="delete_history_prompt_body">Dzēš vēsturi (tostarp no citām ierīcēm sinhronizēto vēsturi), sīkfailus un citus pārlūkošanas datus.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Pēdējā stunda</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Šodien un vakar</string>
+    
+    <string name="delete_history_prompt_button_everything">Viss</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s izdzēsīs atlasītos pārlūkošanas datus.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Atcelt</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Dzēst</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Pārlūkošanas datu dzēšana</string>
+    
+    <string name="deleting_browsing_data_in_progress">Pārlūkošanas datu dzēšana...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Dzēst visas vietnes "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Atcelt</string>
+    
+    <string name="delete_history_group_prompt_allow">Dzēst</string>
+    
+    <string name="delete_history_group_snackbar">Izdzēsta grupa</string>
+
+    
+    
+    <string name="onboarding_header_2">Laipni lūgti privātā tīmeklī</string>
+    
+    <string name="onboarding_message">Neatkarīgs vietējais pārlūks.</string>
+    
+    <string name="onboarding_account_sign_in_header">Turpiniet darbu tur, kur esat beidzis</string>
+    
+    <string name="onboarding_manual_sign_in_description">Sinhronizējiet cilnes un paroles visās ierīcēs, lai nodrošinātu vienmērīgu ekrāna pārslēgšanu.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Pierakstīties</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Sinhronizācija ir ieslēgta</string>
+    
+    <string name="onboarding_tracking_protection_header">Privātuma aizsardzība pēc noklusējuma</string>
+    
+    <string name="onboarding_tracking_protection_description">Pilnīga sīkfailu aizsardzība, kas neļauj izsekotājiem izmantot sīkfailus, lai jūs vajātu dažādās vietnēs.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standarta (noklusējuma)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Sabalansēts privātuma un veiktspējas nodrošināšanai. Lapas ielādējas normāli.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Stingri</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Bloķē vairāk izsekotāju, tāpēc lapas ielādējas ātrāk, bet dažas lapas funkcionalitātes var tikt traucētas.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Izvēlieties rīkjoslas izvietojumu</string>
+    
+    <string name="onboarding_toolbar_placement_description">Atstājiet to apakšā vai pārvietojiet to uz augšu.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Jūs kontrolējat savus datus</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox neuzkrāj telemetriju un ļauj jums kontrolēt savus datus.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Izlasiet mūsu konfidencialitātes paziņojumu</string>
+    
+    <string name="onboarding_conclusion_header">Vai esat gatavi atvērt pārsteidzošu internetu?</string>
+    
+    <string name="onboarding_finish">Sākt pārlūkošanu</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Izvēlieties tēmu</string>
+    
+    <string name="onboarding_theme_picker_description_2">Ietaupiet akumulatoru un redzi, izmantojot tumšo režīmu.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automātiskais</string>
+    
+    <string name="onboarding_theme_automatic_summary">Pielāgojas ierīces iestatījumiem</string>
+    
+    <string name="onboarding_theme_dark_title">Tumšais temats</string>
+    
+    <string name="onboarding_theme_light_title">Gaismas tēma</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Tabs nosūtīti!</string>
+    
+    <string name="sync_sent_tab_snackbar">Nosūtīta cilne!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Nevar nosūtīt</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Koda skenēšana</string>
+    
+    <string name="sign_in_instructions">Waterfox izmanto Mozilla kontu, lai sinhronizētu datus starp mobilo ierīci un datoru.&lt;br&gt; Datorā atveriet Waterfox un dodieties uz &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla nekādā veidā nav saistīta ar Waterfox.&lt;/i&gt;.</string>
+    
+    <string name="sign_in_ready_for_scan">Gatavs skenēšanai</string>
+    
+    <string name="sign_in_with_camera">Pierakstīties ar kameru</string>
+    
+    <string name="sign_in_with_email">Tā vietā izmantojiet e-pastu</string>
+    
+    <string name="sign_in_create_account_text">Konta nav? &lt;u&gt;Izveidojiet kontu&lt;/u&gt;, lai sinhronizētu Waterfox starp ierīcēm.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s tiks pārtraukta sinhronizācija ar jūsu kontu, taču netiks dzēsti jūsu pārlūkošanas dati šajā ierīcē.</string>
+    
+    <string name="sign_out_disconnect">Atvienojiet</string>
+    
+    <string name="sign_out_cancel">Atcelt</string>
+    
+    <string name="bookmark_cannot_edit_root">Nevar rediģēt noklusējuma mapes</string>
+
+    
+    
+    <string name="etp_settings">Aizsardzības iestatījumi</string>
+    
+    <string name="preference_enhanced_tracking_protection">Uzlabota izsekošanas aizsardzība</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Pārlūkojiet, nesekojot</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Saglabājiet savus datus sev. %s aizsargā jūs no daudziem visbiežāk sastopamajiem izsekotājiem, kas seko jūsu darbībām tiešsaistē.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Uzzināt vairāk</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standarta (noklusējuma)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Sabalansēts privātuma un veiktspējas nodrošināšanai. Lapas ielādējas normāli.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Kas tiek bloķēts ar standarta izsekošanas aizsardzību</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Stingri</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Bloķē vairāk izsekotāju, tāpēc lapas ielādējas ātrāk, bet dažas lapas funkcionalitātes var tikt traucētas.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Ko bloķē stingra izsekošanas aizsardzība</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Pielāgots</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Izvēlieties, kurus izsekotājus un skriptus bloķēt.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Ko bloķē pielāgotā izsekošanas aizsardzība</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Sīkfaili</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Starp vietnēm un sociālajiem plašsaziņas līdzekļiem izsekojamie</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Sīkfaili no neapmeklētām vietnēm</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Visi trešo pušu sīkfaili (var izraisīt tīmekļa vietņu darbības traucējumus).</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Visi sīkfaili (izraisīs tīmekļa vietņu darbības traucējumus)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Izolēt starp vietņu sīkfailus</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Satura izsekošana</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Visās cilnēs</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Tikai privātajās cilnēs</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Pirkstu nospiedumi</string>
+    
+    <string name="enhanced_tracking_protection_details">Sīkāka informācija</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Bloķēts</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Atļauts</string>
+    
+    <string name="etp_social_media_trackers_title">Sociālo plašsaziņas līdzekļu izsekotāji</string>
+    
+    <string name="etp_social_media_trackers_description">ierobežo sociālo tīklu iespējas izsekot jūsu pārlūkošanas aktivitātes tīmeklī.</string>
+    
+    <string name="etp_cookies_title">Vietņu savstarpējās izsekošanas sīkfaili</string>
+    
+    <string name="etp_cookies_title_2">Starpvietņu sīkfaili</string>
+    
+    <string name="etp_cookies_description">Bloķē sīkfailus, ko reklāmas tīkli un analītiskie uzņēmumi izmanto, lai apkopotu jūsu pārlūkošanas datus daudzās vietnēs.</string>
+    
+    <string name="etp_cookies_description_2">Pilnīga sīkfailu aizsardzība norobežo sīkfailus no vietnes, kurā atrodaties, lai izsekotāji, piemēram, reklāmas tīkli, nevarētu tos izmantot, lai sekotu jums dažādās vietnēs.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Novērš ļaunprātīgu skriptu piekļuvi jūsu ierīcei, lai iegūtu digitālo valūtu.</string>
+    
+    <string name="etp_fingerprinters_title">Pirkstu nospiedumi</string>
+    
+    <string name="etp_fingerprinters_description">Novērš unikāli identificējamu datu vākšanu par jūsu ierīci, kurus var izmantot izsekošanas nolūkos.</string>
+    
+    <string name="etp_tracking_content_title">Satura izsekošana</string>
+    
+    <string name="etp_tracking_content_description">Neļauj ielādēt ārējās reklāmas, videoklipus un citu saturu, kas satur izsekošanas kodu. Var ietekmēt dažas vietnes funkcijas.</string>
+    
+    <string name="etp_panel_on">Aizsardzība šajā vietnē ir ieslēgta</string>
+    
+    <string name="etp_panel_off">Aizsardzība šajā vietnē ir izslēgta</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Šīm vietnēm ir izslēgta uzlabota izsekošanas aizsardzība.</string>
+    
+    <string name="etp_back_button_content_description">Virzīties atpakaļ</string>
+    
+    <string name="open_source_licenses_title">%s | OSS bibliotēkas</string>
+    
+    <string name="etp_redirect_trackers_title">Pārvirzīšanas izsekotāji</string>
+    
+    <string name="etp_redirect_trackers_description">Dzēš sīkfailus, kas iestatīti, novirzot uz zināmām izsekošanas vietnēm.</string>
+    
+    <string name="preference_etp_smartblock_description">Daži turpmāk atzīmētie izsekotāji šajā lapā ir daļēji atbloķēti, jo jūs ar tiem mijiedarbojāties *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Uzzināt vairāk</string>
+
+    
+    <string name="about_support">Atbalsts</string>
+    
+    <string name="about_crashes">Avārijas</string>
+    
+    <string name="about_privacy_notice">Paziņojums par konfidencialitāti</string>
+    
+    <string name="about_know_your_rights">Ziniet savas tiesības</string>
+    
+    <string name="about_licensing_information">Informācija par licencēšanu</string>
+    
+    <string name="about_other_open_source_libraries">Mūsu izmantotās bibliotēkas</string>
+    
+    <string name="about_debug_menu_toast_progress">Debug izvēlne: %1$d klikšķis(-i) pa kreisi, lai iespējotu</string>
+    <string name="about_debug_menu_toast_done">Ieslēgta atkļūdošanas izvēlne</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopēt</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Paste &amp; Go</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Paste</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">Uz starpliktuvi kopēts URL</string>
+
+    
+    <string name="add_to_homescreen_title">Pievienot sākuma ekrānam</string>
+    
+    <string name="add_to_homescreen_cancel">Atcelt</string>
+    
+    <string name="add_to_homescreen_add">Pievienot</string>
+    
+    <string name="add_to_homescreen_continue">Turpināt apmeklēt tīmekļa vietni</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Īsais nosaukums</string>
+    
+    <string name="add_to_homescreen_description_2">Varat viegli pievienot šo vietni ierīces sākumekrānam, lai nodrošinātu tūlītēju piekļuvi un ātrāku pārlūkošanu, izmantojot lietotnei līdzīgu pieredzi.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Pieteikšanās un paroles</string>
+    
+    <string name="preferences_passwords_save_logins">Pieslēgvārdu un paroļu saglabāšana</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Jautājiet, lai saglabātu</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Nekad nesaglabājiet</string>
+    
+    <string name="preferences_passwords_autofill2">Automātiskā aizpildīšana %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Aizpildiet un saglabājiet lietotājvārdus un paroles vietnēs, izmantojot %1$s.</string>
+    
+    <string name="preferences_android_autofill">Automātiskā aizpildīšana citās lietotnēs</string>
+    
+    <string name="preferences_android_autofill_description">Aizpildiet lietotājvārdus un paroles citās ierīcē esošajās lietotnēs.</string>
+    
+    <string name="preferences_logins_add_login">Pievienot pieteikšanos</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Sinhronizēt pieteikumus</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Sinhronizēt pieteikumus dažādās ierīcēs</string>
+    
+    <string name="preferences_passwords_saved_logins">Saglabātie pieteikumi</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Šeit būs redzami saglabātie vai sinhronizētie pieteikumi %s.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Uzziniet vairāk par funkciju Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Izņēmumi</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Šeit tiks rādīti pieteikšanās vārdi un paroles, kas nav saglabātas.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Šīm vietnēm netiks saglabāti pieteikšanās vārdi un paroles.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Dzēst visus izņēmumus</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Meklēšanas pieteikšanās</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Vietne</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Lietotājvārds</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Parole</string>
+    
+    <string name="logins_password_copied">Paroles kopēšana uz starpliktuvi</string>
+    
+    <string name="logins_username_copied">Lietotājvārds kopēts uz starpliktuvi</string>
+    
+    <string name="saved_logins_copy_password">Kopēt paroli</string>
+    
+    <string name="saved_logins_clear_password">Dzēst paroli</string>
+    
+    <string name="saved_login_copy_username">Kopēt lietotājvārdu</string>
+    
+    <string name="saved_login_clear_username">Skaidrs lietotājvārds</string>
+    
+    <string name="saved_login_clear_hostname">Notīrīt viesvietas nosaukumu</string>
+    
+    <string name="saved_login_open_site">Atvērt vietni pārlūkprogrammā</string>
+    
+    <string name="saved_login_reveal_password">Rādīt paroli</string>
+    
+    <string name="saved_login_hide_password">Paslēpt paroli</string>
+    
+    <string name="logins_biometric_prompt_message">Atbloķēšana, lai skatītu saglabātos pieteikumus</string>
+    
+    <string name="logins_warning_dialog_title">Piesakāmo vārdu un paroļu aizsardzība</string>
+    
+    <string name="logins_warning_dialog_message">Iestatiet ierīces bloķēšanas modeli, PIN kodu vai paroli, lai aizsargātu saglabātos pieteikumus un paroles no piekļuves, ja jūsu ierīce ir citai personai.</string>
+    
+    <string name="logins_warning_dialog_later">Vēlāk</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Iestatīšana tagad</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Ierīces atbloķēšana</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Visu vietņu tālummaiņa</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Ļaujiet veikt saspiešanu un tālummaiņu pat vietnēs, kurās šis žests ir aizliegts.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Nosaukums (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Pēdējo reizi izmantots</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Kārtot pieteikšanās izvēlni</string>
+
+    
+    
+    <string name="preferences_autofill">Automātiskā aizpildīšana</string>
+    
+    <string name="preferences_addresses">Adreses</string>
+    
+    <string name="preferences_credit_cards">Kredītkartes</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Karšu saglabāšana un automātiskā aizpildīšana</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Dati ir šifrēti</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Karšu sinhronizēšana dažādās ierīcēs</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Sinhronizācijas kartes</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Pievienot kredītkarti</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Saglabāto karšu pārvaldība</string>
+    
+    <string name="preferences_addresses_add_address">Pievienot adresi</string>
+    
+    <string name="preferences_addresses_manage_addresses">Pārvaldīt adreses</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Adrešu saglabāšana un automātiskā aizpildīšana</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Iekļaut informāciju, piemēram, numurus, e-pasta un piegādes adreses.</string>
+
+    
+    <string name="credit_cards_add_card">Pievienot karti</string>
+    
+    <string name="credit_cards_edit_card">Rediģēt karti</string>
+    
+    <string name="credit_cards_card_number">Kartes numurs</string>
+    
+    <string name="credit_cards_expiration_date">Derīguma termiņš</string>
+    
+    <string name="credit_cards_expiration_date_month">Derīguma termiņš Mēnesis</string>
+    
+    <string name="credit_cards_expiration_date_year">Derīguma termiņš Gads</string>
+    
+    <string name="credit_cards_name_on_card">Vārds uz kartes</string>
+    
+    <string name="credit_cards_menu_delete_card">Dzēst karti</string>
+    
+    <string name="credit_cards_delete_card_button">Dzēst karti</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Vai esat pārliecināts, ka vēlaties dzēst šo kredītkarti?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Dzēst</string>
+    
+    <string name="credit_cards_menu_save">Saglabāt</string>
+    
+    <string name="credit_cards_save_button">Saglabāt</string>
+    
+    <string name="credit_cards_cancel_button">Atcelt</string>
+    
+    <string name="credit_cards_saved_cards">Saglabātās kartes</string>
+    
+    <string name="credit_cards_number_validation_error_message">Lūdzu, ievadiet derīgu kredītkartes numuru</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Lūdzu, aizpildiet šo lauku</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Atbloķēšana, lai skatītu saglabātās kartes</string>
+    
+    <string name="credit_cards_warning_dialog_title">Nodrošiniet savas kredītkartes</string>
+    
+    <string name="credit_cards_warning_dialog_message">Iestatiet ierīces bloķēšanas modeli, PIN kodu vai paroli, lai aizsargātu saglabātās kredītkartes no piekļuves, ja jūsu ierīce ir citai personai.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Iestatīšana tagad</string>
+    
+    <string name="credit_cards_warning_dialog_later">Vēlāk</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Ierīces atbloķēšana</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Atbloķēšana, lai izmantotu saglabāto kredītkartes informāciju</string>
+    
+    <string name="addresses_add_address">Pievienot adresi</string>
+    
+    <string name="addresses_edit_address">Rediģēt adresi</string>
+    
+    <string name="addresses_manage_addresses">Pārvaldīt adreses</string>
+    
+    <string name="addresses_first_name">Vārds</string>
+    
+    <string name="addresses_middle_name">Vidējais vārds</string>
+    
+    <string name="addresses_last_name">Uzvārds</string>
+    
+    <string name="addresses_street_address">Ielas adrese</string>
+    
+    <string name="addresses_city">Pilsēta</string>
+    
+    <string name="addresses_state">Valsts</string>
+    
+    <string name="addresses_province">Province</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Valsts vai reģions</string>
+    
+    <string name="addresses_phone">Tālrunis</string>
+    
+    <string name="addresses_email">E-pasts</string>
+    
+    <string name="addresses_save_button">Saglabāt</string>
+    
+    <string name="addresses_cancel_button">Atcelt</string>
+    
+    <string name="addressess_delete_address_button">Dzēst adresi</string>
+    
+    <string name="addressess_confirm_dialog_message">Vai esat pārliecināts, ka vēlaties dzēst šo adresi?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Dzēst</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Atcelt</string>
+    
+    <string name="address_menu_save_address">Saglabāt adresi</string>
+    
+    <string name="address_menu_delete_address">Dzēst adresi</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Pievienot meklētājprogrammu</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Rediģēt meklētājprogrammu</string>
+    
+    <string name="search_engine_add_button_content_description">Pievienot</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Saglabāt</string>
+    
+    <string name="search_engine_edit">Rediģēt</string>
+    
+    <string name="search_engine_delete">Dzēst</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Citi</string>
+    
+    <string name="search_add_custom_engine_name_hint">Nosaukums</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Izmantojamā meklēšanas virkne</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Aizstāt vaicājumu ar "%s". Piemērs:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Pielāgota meklētājprogrammas informācija</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Ievadiet meklētājprogrammas nosaukumu</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Ievadiet meklēšanas virkni</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Pārbaudiet, vai meklēšanas virkne atbilst Piemēra formāts</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Kļūda, savienojoties ar "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Izveidots %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Saglabāts %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Dzēsts %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Lai to atļautu:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Dodieties uz Android Iestatījumi</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Pieskarieties pie &lt;b&gt;Patļaujas&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Pārslēdziet &lt;b&gt;%1$s&lt;/b&gt; uz ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Savienojums ir drošs</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Savienojums nav drošs</string>
+    
+    <string name="clear_site_data">Dzēst sīkfailus un vietnes datus</string>
+    
+    <string name="confirm_clear_site_data">Vai esat pārliecināts, ka vēlaties izdzēst visus vietnes &lt;b&gt;%s&lt;/b&gt; sīkfailus un datus?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Vai esat pārliecināts, ka vēlaties dzēst visas atļaujas visās vietnēs?</string>
+    
+    <string name="confirm_clear_permissions_site">Vai esat pārliecināts, ka vēlaties dzēst visas šīs vietnes atļaujas?</string>
+    
+    <string name="confirm_clear_permission_site">Vai esat pārliecināts, ka vēlaties dzēst šo atļauju šai vietnei?</string>
+    
+    <string name="no_site_exceptions">Izņēmumi no vietnes nav pieļaujami</string>
+    
+    <string name="bookmark_deletion_confirmation">Vai esat pārliecināts, ka vēlaties dzēst šo grāmatzīmi?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Pievienot īsceļiem</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Noņemt no saīsnēm</string>
+    
+    <string name="certificate_info_verified_by">Pārbaudīja: %1$s</string>
+    
+    <string name="login_menu_delete_button">Dzēst</string>
+    
+    <string name="login_menu_edit_button">Rediģēt</string>
+    
+    <string name="login_deletion_confirmation">Vai esat pārliecināts, ka vēlaties dzēst šo pieteikšanos?</string>
+    
+    <string name="dialog_delete_positive">Dzēst</string>
+    
+    <string name="dialog_delete_negative">Atcelt</string>
+    
+    <string name="login_options_menu">Pieteikšanās opcijas</string>
+    
+    <string name="saved_login_hostname_description">Rediģējams teksta lauks, kurā norādīta pieteikšanās tīmekļa adrese.</string>
+    
+    <string name="saved_login_username_description">Rediģējams teksta lauks, kurā norādīts pieteikšanās lietotājvārds.</string>
+    
+    <string name="saved_login_password_description">Rediģējams teksta lauks pieteikšanās parolei.</string>
+    
+    <string name="save_changes_to_login">Saglabāt izmaiņas, lai pieteiktos.</string>
+    
+    <string name="edit">Rediģēt</string>
+    
+    <string name="add_login">Pievienot jaunu pieteikšanos</string>
+    
+    <string name="saved_login_password_required">Nepieciešama parole</string>
+    
+    <string name="saved_login_username_required">Nepieciešams lietotājvārds</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Nepieciešams lietotāja nosaukums</string>
+    
+    <string name="voice_search_content_description">Meklēšana ar balsi</string>
+    
+    <string name="voice_search_explainer">Runājiet tagad</string>
+    
+    <string name="saved_login_duplicate">Pieteikšanās ar šo lietotājvārdu jau pastāv</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Tīmekļa adresē jānorāda "https://" vai "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Nepieciešams derīgs resursvietas nosaukums</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Pievienojiet citu ierīci.</string>
+    
+    <string name="synced_tabs_reauth">Lūdzu, atkārtoti autentificējieties.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Lūdzu, iespējojiet cilnes sinhronizēšanu.</string>
+    
+    <string name="synced_tabs_no_tabs">Pārējās ierīcēs nav atvērtas nevienas Waterfox cilnes.</string>
+    
+    <string name="synced_tabs_sign_in_message">Skatiet citu ierīču cilņu sarakstu.</string>
+    
+    <string name="synced_tabs_sign_in_button">Pierakstīties, lai sinhronizētu</string>
+    
+    <string name="synced_tabs_no_open_tabs">Nav atvērtu cilņu</string>
+    
+    <string name="synced_tabs_expand_group">Paplašināt sinhronizēto cilņu grupu</string>
+    
+    <string name="synced_tabs_collapse_group">Sinhronizēto cilņu grupas sabrukšana</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Īsceļu limits sasniegts</string>
+    
+    <string name="shortcut_max_limit_content">Lai pievienotu jaunu īsceļu, noņemiet vienu. Pieskarieties vietnei, turiet to un izvēlieties Noņemt.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">Labi, sapratu</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Īsceļi</string>
+	
+	<string name="top_sites_rename_dialog_title">Nosaukums</string>
+    
+    <string name="shortcut_name_hint">Īsais nosaukums</string>
+	
+	<string name="top_sites_rename_dialog_ok">LABI</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Atcelt</string>
+    
+    <string name="top_sites_menu_settings">Iestatījumi</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Mūsu sponsori un jūsu konfidencialitāte</string>
+    
+    <string name="top_sites_sponsored_label">Sponsorēts</string>
+
+    
+    
+    <string name="inactive_tabs_title">Neaktīvās cilnes</string>
+    
+    <string name="inactive_tabs_delete_all">Aizvērt visas neaktīvās cilnes</string>
+    
+    <string name="inactive_tabs_expand_content_description">Izvērst neaktīvās cilnes</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Neaktīvo cilņu sabrukšana</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automātiska slēgšana pēc mēneša?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox var aizvērt cilnes, kuras neesat skatījis pēdējā mēneša laikā.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">IESLĒGT AUTOMĀTISKO AIZVĒRŠANU</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Ieslēgta automātiskā aizvēršana</string>
+
+    
+    <string name="default_browser_experiment_card_text">Iestatiet, lai saites no vietnēm, e-pasta ziņojumiem un ziņojumiem tiktu automātiski atvērtas programmā Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Noņemt</string>
+
+    
+    <string name="radio_preference_info_content_description">Noklikšķiniet, lai uzzināt vairāk</string>
+
+    
+    <string name="action_bar_up_description">Virzīties uz augšu</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Aizvērt</string>
+
+    <string name="waterfox_suggest_header">Ūdenslapsenes Ieteikt</string>
+</resources>

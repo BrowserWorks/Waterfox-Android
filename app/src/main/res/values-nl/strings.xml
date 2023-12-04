@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Privé %s</string>
+
+    <string name="app_name_private_4">%s (privé)</string>
+
+
+    <string name="content_description_menu">Meer opties</string>
+
+    <string name="content_description_private_browsing_button">Privénavigatie inschakelen</string>
+
+    <string name="content_description_disable_private_browsing_button">Privénavigatie uitschakelen</string>
+
+    <string name="search_hint">Zoeken of adres invoeren</string>
+
+    <string name="application_search_hint">Zoektermen invoeren</string>
+
+    <string name="no_open_tabs_description">Je open tabbladen worden hier weergegeven.</string>
+
+    <string name="no_private_tabs_description">Je privétabbladen worden hier weergegeven.</string>
+
+    <string name="tab_tray_multi_select_title">%1$d geselecteerd</string>
+
+    <string name="tab_tray_add_new_collection">Nieuwe collectie toevoegen</string>
+
+    <string name="tab_tray_add_new_collection_name">Naam</string>
+
+    <string name="tab_tray_select_collection">Selecteer collectie</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Multiselectmodus afsluiten</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Geselecteerde tabbladen opslaan in verzameling</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Geselecteerd</string>
+
+
+    <string name="recently_saved_title">Onlangs opgeslagen</string>
+
+    <string name="recently_saved_show_all_content_description_2">Alle opgeslagen bladwijzers weergeven</string>
+
+    <string name="recently_saved_menu_item_remove">Verwijder</string>
+
+
+    <string name="about_content">%1$s is gemaakt door BrowserWorks</string>
+
+
+    <string name="private_browsing_placeholder_description_2">%1$s wist uw zoek- en browsegeschiedenis van privétabbladen wanneer u deze sluit of de app afsluit. Hoewel dit je niet anoniem maakt voor websites of je internetprovider, maakt het het wel makkelijker om wat je online doet privé te houden voor iedereen die dit apparaat gebruikt.</string>
+    <string name="private_browsing_common_myths">Veel voorkomende mythes over privé browsen</string>
+
+
+    <string name="cfr_message">Voeg een snelkoppeling toe om privétabbladen te openen vanaf je startscherm.</string>
+
+    <string name="cfr_pos_button_text">Snelkoppeling toevoegen</string>
+
+    <string name="cfr_neg_button_text">Geen dank</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">Je kunt %1$s zo instellen dat koppelingen in apps automatisch worden geopend.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Ga naar instellingen</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Ontsla</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Ontsla</string>
+
+
+    <string name="tcp_cfr_message">Onze krachtigste privacyfunctie tot nu toe isoleert cross-site trackers.</string>
+
+    <string name="tcp_cfr_learn_more">Meer informatie over totale cookiebescherming</string>
+
+
+    <string name="camera_permissions_needed_message">Cameratoegang nodig. Ga naar Android-instellingen, tik op machtigingen en tik op toestaan.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Ga naar instellingen</string>
+
+    <string name="camera_permissions_needed_negative_button_text">Ontsla</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Stel in dat open tabbladen die de afgelopen dag, week of maand niet zijn bekeken automatisch worden gesloten.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Opties bekijken</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Ontsla</string>
+
+    <string name="tab_tray_inactive_onboarding_message">Tabbladen die je twee weken niet hebt bekeken, worden hierheen verplaatst.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Uitschakelen in instellingen</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Automatisch sluiten na een maand?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s kan tabbladen sluiten die u de afgelopen maand niet hebt bekeken.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Sluit</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Automatisch sluiten inschakelen</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Nieuw tabblad</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Nieuw privé tabblad</string>
+
+
+    <string name="recent_tabs_header">Spring er weer in</string>
+
+    <string name="recent_tabs_show_all">Alles weergeven</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Toon alle recente tabbladen knop</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Je zoekopdracht voor %1$s</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d sites</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Alle gesynchroniseerde tabbladen bekijken</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Gesynchroniseerd apparaat</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Verwijder</string>
+
+    <string name="recent_tab_menu_item_remove">Verwijder</string>
+
+
+    <string name="history_metadata_header_2">Onlangs bezocht</string>
+
+    <string name="recently_visited_menu_item_remove">Verwijder</string>
+
+    <string name="past_explorations_show_all_content_description_2">Alle eerdere verkenningen weergeven</string>
+
+
+    <string name="browser_menu_back">Terug</string>
+
+    <string name="browser_menu_forward">Vooruit</string>
+
+    <string name="browser_menu_refresh">Vernieuw</string>
+
+    <string name="browser_menu_stop">Stop</string>
+
+    <string name="browser_menu_add_ons">Toevoegingen</string>
+
+    <string name="no_add_ons">Geen add-ons hier</string>
+
+    <string name="browser_menu_help">Help</string>
+
+    <string name="browser_menu_settings">Instellingen</string>
+
+    <string name="browser_menu_library">Bibliotheek</string>
+
+    <string name="browser_menu_desktop_site">Desktop</string>
+
+    <string name="browser_menu_add_to_homescreen">Toevoegen aan beginscherm</string>
+
+    <string name="browser_menu_install_on_homescreen">Installeer</string>
+
+    <string name="resync_button_content_description">Resync</string>
+
+    <string name="browser_menu_find_in_page">Zoek in pagina</string>
+
+    <string name="browser_menu_save_to_collection_2">Opslaan in collectie</string>
+
+    <string name="browser_menu_share">Deel</string>
+
+    <string name="browser_menu_open_in_waterfox">Open in %1$s</string>
+
+    <string name="browser_menu_powered_by">gevoed door %1$s</string>
+
+    <string name="browser_menu_powered_by2">Aangedreven door %1$s</string>
+
+    <string name="browser_menu_read">Lezers mening</string>
+
+    <string name="browser_menu_read_close">Lezersweergave sluiten</string>
+
+    <string name="browser_menu_open_app_link">Openen in app</string>
+
+    <string name="browser_menu_customize_reader_view">Leesweergave aanpassen</string>
+
+    <string name="browser_menu_add">Voeg  toe</string>
+
+    <string name="browser_menu_edit">Bewerk</string>
+
+    <string name="browser_menu_customize_home_1">Homepage aanpassen</string>
+
+
+    <string name="browser_toolbar_home">Beginscherm</string>
+
+
+    <string name="a11y_selected_locale_content_description">Geselecteerde taal</string>
+
+    <string name="default_locale_text">Volg de taal van het apparaat</string>
+
+    <string name="locale_search_hint">Taal zoeken</string>
+
+
+    <string name="search_scan_button">Scan</string>
+
+    <string name="search_engine_button">Zoekmachine</string>
+
+    <string name="search_shortcuts_engine_settings">Zoekmachine-instellingen</string>
+
+    <string name="awesomebar_clipboard_title">Link vullen vanaf klembord</string>
+
+    <string name="search_suggestions_onboarding_allow_button">Sta  toe.</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">Sta niet toe dat</string>
+
+    <string name="search_suggestions_onboarding_title">Zoeksuggesties toestaan in privésessies?</string>
+
+    <string name="search_suggestions_onboarding_text">%s deelt alles wat je in de adresbalk typt met je standaard zoekmachine.</string>
+
+    <string name="search_engine_suggestions_title">Zoeken %s</string>
+
+    <string name="search_engine_suggestions_description">Zoek direct vanuit de adresbalk</string>
+
+    <string name="search_settings_menu_item">Zoekinstellingen</string>
+
+
+    <string name="onboarding_home_screen_description_2">Het is nu gemakkelijker om verder te gaan waar je gebleven was.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Ga naar je open tabbladen, bladwijzers en browsergeschiedenis.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Schone, georganiseerde tabbladen</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Overzichtelijke tabbladen met verbeterde lay-out en automatisch sluitende tabbladen.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Recente zoekopdrachten</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Bekijk je laatste zoekopdrachten opnieuw vanaf je startpagina en tabbladen.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Maak kennis met uw persoonlijke startpagina. Recente tabbladen, bladwijzers en zoekresultaten verschijnen hier.</string>
+
+    <string name="onboarding_home_welcome_title_2">Welkom op een persoonlijker internet</string>
+
+    <string name="onboarding_home_welcome_description">Meer kleuren. Betere privacy. Dezelfde toewijding aan mensen boven winst.</string>
+
+    <string name="onboarding_home_sync_title_3">Van telefoon naar laptop en weer terug</string>
+
+    <string name="onboarding_home_sync_description">Ga verder waar je gebleven was met tabbladen van andere apparaten nu op je startpagina.</string>
+
+    <string name="onboarding_home_get_started_button">Aan de slag</string>
+
+    <string name="onboarding_home_sign_in_button">Aanmelden</string>
+
+    <string name="onboarding_home_skip_button">Skip</string>
+
+    <string name="onboarding_home_content_description_close_button">Sluit</string>
+
+
+    <string name="search_widget_content_description_2">Open een nieuw tabblad %1$s</string>
+
+    <string name="search_widget_text_short">Zoek op</string>
+
+    <string name="search_widget_text_long">Zoeken op het web</string>
+
+    <string name="search_widget_voice">Spraakgestuurd zoeken</string>
+
+
+    <string name="settings">Instellingen</string>
+
+    <string name="preferences_category_general">Algemeen</string>
+
+    <string name="preferences_category_about">Over</string>
+
+    <string name="preferences_default_search_engine">Standaard zoekmachine</string>
+
+    <string name="preferences_search">Zoek op</string>
+
+    <string name="preferences_search_address_bar">Adresbalk</string>
+
+    <string name="preferences_rate">Waardeer op Google Play</string>
+
+    <string name="preferences_about">Over %1$s</string>
+
+    <string name="preferences_set_as_default_browser">Instellen als standaardbrowser</string>
+
+    <string name="preferences_category_advanced">Geavanceerd</string>
+
+    <string name="preferences_category_privacy_security">Privacy en veiligheid</string>
+
+    <string name="preferences_site_permissions">Toestemmingen</string>
+
+    <string name="preferences_private_browsing_options">Privé surfen</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Links openen in een privétabblad</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Schermafbeeldingen toestaan in privé browsen</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Als dat is toegestaan, zijn privétabbladen ook zichtbaar als er meerdere apps zijn geopend</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Snelkoppeling voor privé browsen toevoegen</string>
+
+    <string name="preferences_https_only_title">Alleen HTTPS-modus</string>
+
+    <string name="preferences_https_only_summary">Probeert automatisch verbinding te maken met sites die het HTTPS-coderingsprotocol gebruiken voor een betere beveiliging.</string>
+
+    <string name="preferences_https_only_on">Op</string>
+
+    <string name="preferences_https_only_off">Uit</string>
+
+    <string name="preferences_http_only_learn_more">Meer informatie</string>
+
+    <string name="preferences_https_only_in_all_tabs">Inschakelen in alle tabbladen</string>
+
+    <string name="preferences_https_only_in_private_tabs">Alleen inschakelen in privétabbladen</string>
+
+    <string name="errorpage_httpsonly_title">Beveiligde site niet beschikbaar</string>
+
+    <string name="errorpage_httpsonly_message_title">Waarschijnlijk ondersteunt de website HTTPS gewoon niet.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Het is echter ook mogelijk dat er een aanvaller bij betrokken is. Als je doorgaat naar de website, moet je geen gevoelige informatie invoeren. Als je doorgaat, wordt de HTTPS-Only-modus tijdelijk uitgeschakeld voor de site.</string>
+
+    <string name="preferences_accessibility">Toegankelijkheid</string>
+
+    <string name="preferences_override_fxa_server">Aangepaste Waterfox-accountserver</string>
+
+    <string name="preferences_override_sync_tokenserver">Aangepaste synchronisatieserver</string>
+
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/Sync-server gewijzigd. De applicatie afsluiten om wijzigingen toe te passen...</string>
+
+    <string name="preferences_category_account">Account</string>
+
+    <string name="preferences_toolbar">Werkbalk</string>
+
+    <string name="preferences_theme">Thema</string>
+
+    <string name="preferences_home_2">Homepage</string>
+
+    <string name="preferences_gestures">Gebaren</string>
+
+    <string name="preferences_customize">Pas  aan</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Synchroniseer bladwijzers, geschiedenis en meer met uw Waterfox-account</string>
+
+    <string name="preferences_sign_in_description_2">Meld u aan om tabbladen, bladwijzers, wachtwoorden en meer te synchroniseren.</string>
+
+    <string name="preferences_account_default_name">Waterfox-account</string>
+
+    <string name="preferences_account_sync_error">Opnieuw verbinden om synchroniseren te hervatten</string>
+
+    <string name="preferences_language">Taal</string>
+
+    <string name="preferences_remote_debugging">Debuggen op afstand via USB</string>
+
+    <string name="preferences_show_search_engines">Zoekmachines weergeven</string>
+
+    <string name="preferences_show_search_suggestions">Zoeksuggesties weergeven</string>
+
+    <string name="preferences_show_voice_search">Spraakgestuurd zoeken weergeven</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Tonen in privésessies</string>
+
+    <string name="preferences_show_clipboard_suggestions">Klembordsuggesties weergeven</string>
+
+    <string name="preferences_search_browsing_history">Browsegeschiedenis doorzoeken</string>
+
+    <string name="preferences_search_bookmarks">Bladwijzers zoeken</string>
+
+    <string name="preferences_search_synced_tabs">Gesynchroniseerde tabbladen doorzoeken</string>
+
+    <string name="preferences_account_settings">Accountinstellingen</string>
+
+    <string name="preferences_enable_autocomplete_urls">URL\'s automatisch aanvullen</string>
+
+    <string name="preferences_open_links_in_apps">Koppelingen openen in apps</string>
+
+    <string name="preferences_external_download_manager">Externe downloadmanager</string>
+
+    <string name="preferences_addons">Toevoegingen</string>
+
+    <string name="preferences_notifications">Meldingen</string>
+
+
+    <string name="preferences_customize_amo_collection">Aangepaste add-on-collectie</string>
+
+    <string name="customize_addon_collection_ok">OK</string>
+
+    <string name="customize_addon_collection_cancel">Annuleren</string>
+
+    <string name="customize_addon_collection_hint">Naam collectie</string>
+
+    <string name="customize_addon_collection_user_hint">Eigenaar collectie (gebruikers-ID)</string>
+
+    <string name="toast_customize_addon_collection_done">Add-on-collectie gewijzigd. De toepassing afsluiten om wijzigingen toe te passen...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Spring er weer in</string>
+
+    <string name="customize_toggle_recent_bookmarks">Recente bladwijzers</string>
+
+    <string name="customize_toggle_recently_visited">Onlangs bezocht</string>
+
+    <string name="customize_wallpapers">Behang</string>
+
+    <string name="customize_toggle_contile">Gesponsorde snelkoppelingen</string>
+
+
+    <string name="wallpapers_item_name_content_description">Behangitem: %1$s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Behang bijgewerkt!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Bekijk</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Verander de achtergrond door op het startschermlogo van Waterfox te tikken</string>
+
+    <string name="wallpaper_logo_content_description">Waterfox-logo - achtergrond, knop wijzigen</string>
+
+
+    <string name="addon_not_supported_error">Add-on wordt niet ondersteund</string>
+
+    <string name="addon_already_installed">Add-on is al geïnstalleerd</string>
+
+
+    <string name="preferences_sync_now">Nu synchroniseren</string>
+
+    <string name="preferences_sync_category">Kies wat je wilt synchroniseren</string>
+
+    <string name="preferences_sync_history">Geschiedenis</string>
+
+    <string name="preferences_sync_bookmarks">Bladwijzers</string>
+
+    <string name="preferences_sync_logins">Aanmeldingen</string>
+
+    <string name="preferences_sync_tabs_2">Tabbladen openen</string>
+
+    <string name="preferences_sign_out">Afmelden</string>
+
+    <string name="preferences_sync_device_name">Naam apparaat</string>
+
+    <string name="empty_device_name_error">De naam van het apparaat mag niet leeg zijn.</string>
+
+    <string name="sync_syncing_in_progress">Synchroniseren...</string>
+
+    <string name="sync_failed_summary">Synchronisatie mislukt. Laatste succes: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Synchronisatie mislukt. Laatst gesynchroniseerd: nooit</string>
+
+    <string name="sync_last_synced_summary">Laatst gesynchroniseerd: %s</string>
+
+    <string name="sync_never_synced_summary">Laatst gesynchroniseerd: nooit</string>
+
+    <string name="default_device_name_2">%1$s op %2$s %3$s</string>
+
+    <string name="preferences_sync_credit_cards">Creditcards</string>
+
+    <string name="preferences_sync_address">Adressen</string>
+
+
+    <string name="fxa_received_tab_channel_name">Tabbladen ontvangen</string>
+
+    <string name="fxa_received_tab_channel_description">Meldingen voor tabbladen ontvangen van andere Waterfox-apparaten.</string>
+
+    <string name="fxa_tab_received_notification_name">Tabblad Ontvangen</string>
+
+    <string name="fxa_tab_received_from_notification_name">Tab van %s</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">Uitzonderingen</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Inschakelen voor alle sites</string>
+
+    <string name="exceptions_empty_message_description">Met uitzonderingen kunt u de trackingbescherming voor geselecteerde sites uitschakelen.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Meer informatie</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Synchronisatie inschakelen</string>
+
+    <string name="preferences_sync_2">Uw gegevens synchroniseren en opslaan</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Log in om opnieuw verbinding te maken</string>
+
+    <string name="preferences_sync_remove_account">Account verwijderen</string>
+
+
+    <string name="pair_instructions_2">Scan de QR-code op &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+
+    <string name="preference_top_toolbar">Top</string>
+
+    <string name="preference_bottom_toolbar">Bodem</string>
+
+
+    <string name="preference_light_theme">Licht</string>
+
+    <string name="preference_dark_theme">Donker</string>
+
+    <string name="preference_auto_battery_theme">Ingesteld door Battery Saver</string>
+
+    <string name="preference_follow_device_theme">Volg het apparaatthema</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Trekken om te verversen</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Scroll om werkbalk te verbergen</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Veeg de werkbalk zijwaarts om van tabblad te wisselen</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Werkbalk omhoog vegen om tabbladen te openen</string>
+
+
+    <string name="library_downloads">Downloads</string>
+
+    <string name="library_bookmarks">Bladwijzers</string>
+
+    <string name="library_desktop_bookmarks_root">Bladwijzers op het bureaublad</string>
+
+    <string name="library_desktop_bookmarks_menu">Bladwijzermenu</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Werkbalk Bladwijzers</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Andere bladwijzers</string>
+
+    <string name="library_history">Geschiedenis</string>
+
+    <string name="library_new_tab">Nieuw tabblad</string>
+
+    <string name="settings_title">Instellingen</string>
+
+    <string name="content_description_close_button">Sluit</string>
+
+
+    <string name="history_search_group_site">%d site</string>
+
+    <string name="history_search_group_sites">%d sites</string>
+
+
+    <string name="library_recently_closed_tabs">Onlangs gesloten tabbladen</string>
+
+    <string name="recently_closed_show_full_history">Toon volledige geschiedenis</string>
+
+    <string name="recently_closed_tabs">%d tabbladen</string>
+
+    <string name="recently_closed_tab">%d tab</string>
+
+    <string name="recently_closed_empty_message">Geen recent gesloten tabbladen hier</string>
+
+
+    <string name="preferences_tabs">Tabs</string>
+
+    <string name="preferences_tab_view">Tabweergave</string>
+
+    <string name="tab_view_list">Lijst</string>
+
+    <string name="tab_view_grid">Rooster</string>
+
+    <string name="preferences_close_tabs">Tabbladen sluiten</string>
+
+    <string name="close_tabs_manually">Nooit</string>
+
+    <string name="close_tabs_after_one_day">Na één dag</string>
+
+    <string name="close_tabs_after_one_week">Na een week</string>
+
+    <string name="close_tabs_after_one_month">Na één maand</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Open tabbladen automatisch sluiten</string>
+
+
+    <string name="preferences_opening_screen">Openingsscherm</string>
+
+    <string name="opening_screen_homepage">Homepage</string>
+
+    <string name="opening_screen_last_tab">Laatste tabblad</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Startpagina na vier uur inactiviteit</string>
+
+    <string name="close_tabs_manually_summary">Handmatig sluiten</string>
+
+    <string name="close_tabs_after_one_day_summary">Sluit na één dag</string>
+
+    <string name="close_tabs_after_one_week_summary">Sluit na één week</string>
+
+    <string name="close_tabs_after_one_month_summary">Sluit na één maand</string>
+
+
+    <string name="preferences_inactive_tabs">Verplaats oude tabbladen naar inactief</string>
+
+    <string name="preferences_inactive_tabs_title">Tabbladen die je twee weken niet hebt bekeken, worden verplaatst naar het inactieve gedeelte.</string>
+
+
+    <string name="tab_header_label">Tabbladen openen</string>
+
+    <string name="tabs_header_private_tabs_title">Privé tabbladen</string>
+
+    <string name="tabs_header_synced_tabs_title">Gesynchroniseerde tabbladen</string>
+
+    <string name="add_tab">Tabblad toevoegen</string>
+
+    <string name="add_private_tab">Tabblad Privé toevoegen</string>
+
+    <string name="tab_drawer_fab_content">Privé</string>
+
+    <string name="tab_drawer_fab_sync">Sync</string>
+
+    <string name="tab_tray_menu_item_share">Alle tabbladen delen</string>
+
+    <string name="tab_tray_menu_recently_closed">Onlangs gesloten tabbladen</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Onlangs gesloten</string>
+
+    <string name="tab_tray_menu_account_settings">Accountinstellingen</string>
+
+    <string name="tab_tray_menu_tab_settings">Tabblad instellingen</string>
+
+    <string name="tab_tray_menu_item_close">Alle tabbladen sluiten</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Bladwijzer</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Sluit</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Geselecteerde tabbladen delen</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Menu geselecteerde tabbladen</string>
+
+    <string name="remove_tab_from_collection">Tabblad uit collectie verwijderen</string>
+
+    <string name="tabs_tray_select_tabs">Tabbladen selecteren</string>
+
+    <string name="close_tab">Tabblad sluiten</string>
+
+    <string name="close_tab_title">Tabblad %s sluiten</string>
+
+    <string name="open_tabs_menu">Menu tabbladen openen</string>
+
+    <string name="tabs_menu_save_to_collection1">Tabbladen opslaan in verzameling</string>
+
+    <string name="collection_delete">Collectie verwijderen</string>
+
+    <string name="collection_rename">Collectie hernoemen</string>
+
+    <string name="collection_open_tabs">Tabbladen openen</string>
+
+    <string name="collection_name_hint">Naam collectie</string>
+
+    <string name="rename_top_site">Hernoem</string>
+
+    <string name="remove_top_site">Verwijder</string>
+
+    <string name="delete_from_history">Verwijderen uit geschiedenis</string>
+
+    <string name="pwa_site_controls_title_private">%1$s (privémodus)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Andere tabbladen</string>
+
+
+    <string name="history_search_1">Zoektermen invoeren</string>
+
+    <string name="history_delete_all">Geschiedenis verwijderen</string>
+
+    <string name="history_delete_multiple_items_snackbar">Geschiedenis Verwijderd</string>
+
+    <string name="history_delete_single_item_snackbar">Verwijderd %1$s</string>
+
+    <string name="history_delete_item">Verwijder</string>
+
+    <string name="history_multi_select_title">%1$d geselecteerd</string>
+
+    <string name="history_today">Vandaag</string>
+
+    <string name="history_yesterday">Gisteren</string>
+
+    <string name="history_7_days">Laatste 7 dagen</string>
+
+    <string name="history_30_days">Laatste 30 dagen</string>
+
+    <string name="history_older">Ouder</string>
+
+    <string name="history_empty_message">Geen geschiedenis hier</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">Downloads verwijderd</string>
+
+    <string name="download_delete_single_item_snackbar">Verwijderd %1$s</string>
+
+    <string name="download_empty_message_1">Geen gedownloade bestanden</string>
+
+    <string name="download_multi_select_title">%1$d geselecteerd</string>
+
+    <string name="download_delete_item_1">Verwijder</string>
+
+
+    <string name="tab_crash_title_2">Sorry. %1$s kan die pagina niet laden.</string>
+
+    <string name="tab_crash_send_report">Stuur een crashrapport naar BrowserWorks</string>
+
+    <string name="tab_crash_close">Tabblad sluiten</string>
+
+    <string name="tab_crash_restore">Tabblad Herstellen</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Weet je zeker dat je deze map wilt verwijderen?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s verwijdert de geselecteerde items.</string>
+
+    <string name="bookmark_delete_negative">Annuleren</string>
+
+    <string name="bookmark_add_folder">Map toevoegen</string>
+
+    <string name="bookmark_saved_snackbar">Bladwijzer opgeslagen!</string>
+
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+
+    <string name="bookmark_menu_edit_button">Bewerk</string>
+
+    <string name="bookmark_menu_copy_button">Kopie</string>
+
+    <string name="bookmark_menu_share_button">Deel</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">In nieuw tabblad openen</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">In eigen tabblad openen</string>
+
+    <string name="bookmark_menu_delete_button">Verwijder</string>
+
+    <string name="bookmark_menu_save_button">Sla</string>
+
+    <string name="bookmarks_multi_select_title">%1$d geselecteerd</string>
+
+    <string name="edit_bookmark_fragment_title">Bladwijzer bewerken</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Map bewerken</string>
+
+    <string name="bookmark_sign_in_button">Log in om gesynchroniseerde bladwijzers te zien</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">FOLDER</string>
+
+    <string name="bookmark_name_label">NAAM</string>
+
+    <string name="bookmark_add_folder_fragment_label">Map toevoegen</string>
+
+    <string name="bookmark_select_folder_fragment_label">Map selecteren</string>
+
+    <string name="bookmark_empty_title_error">Moet een titel hebben</string>
+
+    <string name="bookmark_invalid_url_error">Ongeldige URL</string>
+
+    <string name="bookmarks_empty_message">Geen bladwijzers hier</string>
+
+    <string name="bookmark_deletion_snackbar_message">Verwijderd %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Bladwijzers verwijderd</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Geselecteerde mappen verwijderen</string>
+
+    <string name="bookmark_undo_deletion">UNDO</string>
+
+    <string name="bookmark_search">Zoektermen invoeren</string>
+
+
+    <string name="phone_feature_go_to_settings">Ga naar Instellingen</string>
+
+    <string name="quick_settings_sheet">Snelle instellingen</string>
+
+    <string name="phone_feature_recommended">Aanbevolen</string>
+
+    <string name="clear_permissions">Rechten wissen</string>
+
+    <string name="clear_permissions_positive">OK</string>
+
+    <string name="clear_permissions_negative">Annuleren</string>
+
+    <string name="clear_permission">Duidelijke toestemming</string>
+
+    <string name="clear_permission_positive">OK</string>
+
+    <string name="clear_permission_negative">Annuleren</string>
+
+    <string name="clear_permissions_on_all_sites">Duidelijke machtigingen op alle sites</string>
+
+    <string name="preference_browser_feature_autoplay">Automatisch spelen</string>
+
+    <string name="preference_phone_feature_camera">Camera</string>
+
+    <string name="preference_phone_feature_microphone">Microfoon</string>
+
+    <string name="preference_phone_feature_location">Locatie</string>
+
+    <string name="preference_phone_feature_notification">Melding</string>
+
+    <string name="preference_phone_feature_persistent_storage">Persistente opslag</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Cross-site cookies</string>
+
+    <string name="preference_phone_feature_media_key_system_access">DRM-gecontroleerde inhoud</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">Vraag om toestemming voor</string>
+
+    <string name="preference_option_phone_feature_blocked">Geblokkeerd</string>
+
+    <string name="preference_option_phone_feature_allowed">Toegestaan</string>
+
+    <string name="phone_feature_blocked_by_android">Geblokkeerd door Android</string>
+
+    <string name="preference_exceptions">Uitzonderingen</string>
+
+    <string name="tracking_protection_on">Op</string>
+
+    <string name="tracking_protection_off">Uit</string>
+
+    <string name="preference_option_autoplay_allowed2">Audio en video toestaan</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Audio en video toestaan</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Audio en video alleen blokkeren op mobiele data</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Audio en video worden afgespeeld op Wi-Fi</string>
+
+    <string name="preference_option_autoplay_block_audio2">Alleen audio blokkeren</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Alleen audio blokkeren</string>
+
+    <string name="preference_option_autoplay_blocked3">Audio en video blokkeren</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Audio en video blokkeren</string>
+
+    <string name="delete_browsing_data_quit_on">Op</string>
+
+    <string name="delete_browsing_data_quit_off">Uit</string>
+
+    <string name="https_only_on">Op</string>
+
+    <string name="https_only_off">Uit</string>
+
+
+    <string name="collections_header">Collecties</string>
+
+    <string name="collection_menu_button_content_description">Collectie menu</string>
+
+    <string name="no_collections_description2">Verzamel de dingen die voor jou belangrijk zijn. Groepeer gelijksoortige zoekopdrachten, sites en tabbladen zodat je ze later snel kunt openen.</string>
+
+    <string name="create_collection_select_tabs">Tabbladen selecteren</string>
+
+    <string name="create_collection_select_collection">Selecteer collectie</string>
+
+    <string name="create_collection_name_collection">Naam collectie</string>
+
+    <string name="create_collection_add_new_collection">Nieuwe collectie toevoegen</string>
+
+    <string name="create_collection_select_all">Alles selecteren</string>
+
+    <string name="create_collection_deselect_all">Alles deselecteren</string>
+
+    <string name="create_collection_save_to_collection_empty">Tabbladen selecteren om op te slaan</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">%d tabbladen geselecteerd</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">%d tab geselecteerd</string>
+
+    <string name="create_collection_tabs_saved">Tabbladen opgeslagen!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Collectie gered!</string>
+
+    <string name="create_collection_tab_saved">Tabblad opgeslagen!</string>
+
+    <string name="create_collection_close">Sluit</string>
+
+    <string name="create_collection_save">Sla</string>
+
+    <string name="create_collection_view">Bekijk</string>
+
+    <string name="create_collection_positive">OK</string>
+
+    <string name="create_collection_negative">Annuleren</string>
+
+
+    <string name="create_collection_default_name">Collectie %d</string>
+
+
+    <string name="share_header_2">Deel</string>
+
+    <string name="share_button_content_description">Deel</string>
+
+    <string name="share_device_subheader">Verzenden naar apparaat</string>
+
+    <string name="share_link_all_apps_subheader">Alle acties</string>
+
+    <string name="share_link_recent_apps_subheader">Onlangs gebruikt</string>
+
+    <string name="share_copy_link_to_clipboard">Kopiëren naar klembord</string>
+
+    <string name="toast_copy_link_to_clipboard">Gekopieerd naar klembord</string>
+
+    <string name="sync_menu_sign_in">Aanmelden om te synchroniseren</string>
+
+    <string name="sync_sign_in">Aanmelden bij Sync</string>
+
+    <string name="sync_send_to_all">Verzenden naar alle apparaten</string>
+
+    <string name="sync_reconnect">Opnieuw verbinden met Sync</string>
+
+    <string name="sync_offline">Offline</string>
+
+    <string name="sync_connect_device">Een ander apparaat aansluiten</string>
+
+    <string name="sync_connect_device_dialog">Om een tabblad te verzenden, meldt u zich aan bij Waterfox op ten minste één ander apparaat.</string>
+
+    <string name="sync_confirmation_button">Ik heb het</string>
+
+    <string name="share_error_snackbar">Kan niet delen naar deze app</string>
+
+    <string name="sync_add_new_device_title">Verzenden naar apparaat</string>
+
+    <string name="sync_add_new_device_message">Geen apparaten aangesloten</string>
+
+    <string name="sync_add_new_device_learn_button">Meer informatie over tabbladen verzenden...</string>
+
+    <string name="sync_add_new_device_connect_button">Een ander apparaat aansluiten...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Privé tabbladen sluiten</string>
+
+    <string name="notification_marketing_channel_name">Marketing</string>
+
+    <string name="notification_default_browser_title">%1$s is snel en privé</string>
+
+    <string name="notification_default_browser_text">Maak %1$s uw standaardbrowser</string>
+
+
+    <string name="snackbar_collection_deleted">Collectie verwijderd</string>
+
+    <string name="snackbar_collection_renamed">Collectie hernoemd</string>
+
+    <string name="snackbar_tab_closed">Tab gesloten</string>
+
+    <string name="snackbar_tabs_closed">Tabbladen gesloten</string>
+
+    <string name="snackbar_message_bookmarks_saved">Bladwijzers opgeslagen!</string>
+
+    <string name="snackbar_added_to_shortcuts">Toegevoegd aan snelkoppelingen!</string>
+
+    <string name="snackbar_private_tab_closed">Gesloten privétabblad</string>
+
+    <string name="snackbar_private_tabs_closed">Gesloten privétabbladen</string>
+
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <string name="snackbar_top_site_removed">Site verwijderd</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">Sta %1$s toe om %2$s te openen</string>
+
+    <string name="qr_scanner_dialog_positive">TOEVOEGEN</string>
+
+    <string name="qr_scanner_dialog_negative">DENKEN</string>
+
+    <string name="qr_scanner_dialog_invalid">Webadres niet geldig.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+
+    <string name="tab_collection_dialog_message">Weet je zeker dat je %1$s wilt verwijderen?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">Als je dit tabblad verwijdert, wordt de hele collectie verwijderd. Je kunt op elk moment nieuwe collecties aanmaken.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">%1$s verwijderen?</string>
+
+    <string name="tab_collection_dialog_positive">Verwijder</string>
+
+    <string name="full_screen_notification">Modus Volledig scherm openen</string>
+
+    <string name="url_copied">URL gekopieerd</string>
+
+    <string name="accessibility_text_size_sample_text_1">Dit is voorbeeldtekst. Het is hier om te laten zien hoe tekst wordt weergegeven wanneer je de grootte vergroot of verkleint met deze instelling.</string>
+
+    <string name="preference_accessibility_text_size_summary">Tekst op websites groter of kleiner maken</string>
+
+    <string name="preference_accessibility_font_size_title">Lettergrootte</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Automatische lettergrootte</string>
+
+    <string name="preference_accessibility_auto_size_summary">De lettergrootte komt overeen met je Android-instellingen. Uitschakelen om de lettergrootte hier te beheren.</string>
+
+
+    <string name="preferences_delete_browsing_data">Browsegegevens verwijderen</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Tabbladen openen</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d tabbladen</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Browsegeschiedenis en sitegegevens</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adressen</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Cookies</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Je wordt uitgelogd bij de meeste sites</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Gecachte afbeeldingen en bestanden</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Maakt opslagruimte vrij</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Toestemmingen</string>
+
+    <string name="preferences_delete_browsing_data_downloads">Downloads</string>
+
+    <string name="preferences_delete_browsing_data_button">Browsegegevens verwijderen</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Browsegegevens verwijderen bij afsluiten</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Verwijdert automatisch browsegegevens wanneer je "Afsluiten" selecteert in het hoofdmenu.</string>
+
+    <string name="delete_browsing_data_on_quit_action">Stoppen met</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">Hierdoor worden al je surfgegevens gewist.</string>
+
+    <string name="delete_history_prompt_title">Tijdsbereik om te verwijderen</string>
+
+    <string name="delete_history_prompt_body">Verwijdert geschiedenis (inclusief geschiedenis gesynchroniseerd vanaf andere apparaten), cookies en andere browsegegevens.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Laatste uur</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Vandaag en gisteren</string>
+
+    <string name="delete_history_prompt_button_everything">Alles</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">%s verwijdert de geselecteerde browsegegevens.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">Annuleren</string>
+
+    <string name="delete_browsing_data_prompt_allow">Verwijder</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Browsergegevens verwijderd</string>
+
+    <string name="deleting_browsing_data_in_progress">Browsegegevens verwijderen...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">Alle sites in "%s" verwijderen</string>
+
+    <string name="delete_history_group_prompt_cancel">Annuleren</string>
+
+    <string name="delete_history_group_prompt_allow">Verwijder</string>
+
+    <string name="delete_history_group_snackbar">Groep verwijderd</string>
+
+
+    <string name="onboarding_header_2">Welkom op een web met meer privacy</string>
+
+    <string name="onboarding_message">Een grassroots, onafhankelijke browser.</string>
+
+    <string name="onboarding_account_sign_in_header">Ga verder waar je gebleven was</string>
+
+    <string name="onboarding_manual_sign_in_description">Synchroniseer tabbladen en wachtwoorden tussen apparaten om naadloos van scherm te wisselen.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Aanmelden</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">Sync staat aan</string>
+
+    <string name="onboarding_tracking_protection_header">Standaard privacybescherming</string>
+
+    <string name="onboarding_tracking_protection_description">Met Total Cookie Protection om te voorkomen dat trackers cookies gebruiken om je op verschillende sites te stalken.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Standaard (standaard)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Gebalanceerd voor privacy en prestaties. Pagina\'s worden normaal geladen.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Strikt</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokkeert meer trackers zodat pagina\'s sneller laden, maar sommige functionaliteiten op pagina\'s kunnen worden verbroken.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Kies de plaatsing van je werkbalk</string>
+
+    <string name="onboarding_toolbar_placement_description">Houd het onderaan of verplaats het naar bovenaan.</string>
+
+    <string name="onboarding_privacy_notice_header_1">U beheert uw gegevens</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox verzamelt geen telemetrie en geeft je controle over je gegevens.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Lees onze privacyverklaring</string>
+
+    <string name="onboarding_conclusion_header">Klaar om een geweldig internet te openen?</string>
+
+    <string name="onboarding_finish">Begin met bladeren</string>
+
+
+    <string name="onboarding_theme_picker_header">Kies je thema</string>
+
+    <string name="onboarding_theme_picker_description_2">Bespaar wat batterij en je gezichtsvermogen met de donkere modus.</string>
+
+    <string name="onboarding_theme_automatic_title">Automatisch</string>
+
+    <string name="onboarding_theme_automatic_summary">Past zich aan je apparaatinstellingen aan</string>
+
+    <string name="onboarding_theme_dark_title">Donker thema</string>
+
+    <string name="onboarding_theme_light_title">Licht thema</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Tabs verzonden!</string>
+
+    <string name="sync_sent_tab_snackbar">Tabblad verzonden!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Kan niet verzenden</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+
+    <string name="sync_scan_code">Scan de code</string>
+
+    <string name="sign_in_instructions">Waterfox vertrouwt op een Mozilla-account om gegevens te synchroniseren tussen mobiel en desktop.&lt;br&gt; Open Waterfox op je computer en ga naar &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla is op geen enkele manier verbonden aan Waterfox.&lt;/i&gt;</string>
+
+    <string name="sign_in_ready_for_scan">Klaar om te scannen</string>
+
+    <string name="sign_in_with_camera">Aanmelden met uw camera</string>
+
+    <string name="sign_in_with_email">Gebruik e-mail</string>
+
+    <string name="sign_in_create_account_text">Geen account? &lt;u&gt;Maak er een&lt;/u&gt; om Waterfox te synchroniseren tussen apparaten.</string>
+
+    <string name="sign_out_confirmation_message_2">%s stopt de synchronisatie met je account, maar verwijdert je browsegegevens niet op dit apparaat.</string>
+
+    <string name="sign_out_disconnect">Ontkoppelen</string>
+
+    <string name="sign_out_cancel">Annuleren</string>
+
+    <string name="bookmark_cannot_edit_root">Kan standaardmappen niet bewerken</string>
+
+
+    <string name="etp_settings">Beschermingsinstellingen</string>
+
+    <string name="preference_enhanced_tracking_protection">Verbeterde traceerbeveiliging</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Bladeren zonder gevolgd te worden</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Houd je gegevens voor jezelf. %s beschermt je tegen veel van de meest voorkomende trackers die volgen wat je online doet.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Meer informatie</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standaard (standaard)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Gebalanceerd voor privacy en prestaties. Pagina\'s worden normaal geladen.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Wat wordt geblokkeerd door standaard trackingbescherming</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Streng</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokkeert meer trackers zodat pagina\'s sneller laden, maar sommige functionaliteiten op pagina\'s kunnen worden verbroken.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Wat wordt geblokkeerd door strikte trackingbescherming</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Aangepast</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Kies welke trackers en scripts je wilt blokkeren.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Wat wordt geblokkeerd door aangepaste trackingbescherming</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookies</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Cross-site en sociale media trackers</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookies van niet-bezochte sites</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Alle cookies van derden (kan websites verstoren)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Alle cookies (maakt websites kapot)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Cross-site cookies isoleren</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Inhoud bijhouden</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">In alle tabbladen</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Alleen in privétabbladen</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Vingerafdrukkers</string>
+
+    <string name="enhanced_tracking_protection_details">Details</string>
+
+    <string name="enhanced_tracking_protection_blocked">Geblokkeerd</string>
+
+    <string name="enhanced_tracking_protection_allowed">Toegestaan</string>
+
+    <string name="etp_social_media_trackers_title">Trackers voor sociale media</string>
+
+    <string name="etp_social_media_trackers_description">Beperkt het vermogen van sociale netwerken om je surfactiviteiten op internet te volgen.</string>
+
+    <string name="etp_cookies_title">Cross-Site Tracking Cookies</string>
+
+    <string name="etp_cookies_title_2">Cross-Site Cookies</string>
+
+    <string name="etp_cookies_description">Blokkeert cookies die advertentienetwerken en analysebedrijven gebruiken om uw surfgegevens over verschillende sites te verzamelen.</string>
+
+    <string name="etp_cookies_description_2">Total Cookie Protection isoleert cookies tot de site waar je bent, zodat trackers zoals advertentienetwerken ze niet kunnen gebruiken om je op verschillende sites te volgen.</string>
+
+    <string name="etp_cryptominers_title">Cryptominers</string>
+
+    <string name="etp_cryptominers_description">Voorkomt dat schadelijke scripts toegang krijgen tot je apparaat om digitale valuta te delven.</string>
+
+    <string name="etp_fingerprinters_title">Vingerafdrukkers</string>
+
+    <string name="etp_fingerprinters_description">Stopt met het verzamelen van unieke identificeerbare gegevens over uw apparaat die kunnen worden gebruikt voor traceringsdoeleinden.</string>
+
+    <string name="etp_tracking_content_title">Inhoud bijhouden</string>
+
+    <string name="etp_tracking_content_description">Stopt het laden van externe advertenties, video\'s en andere inhoud die trackingcode bevat. Kan sommige websitefunctionaliteit beïnvloeden.</string>
+
+    <string name="etp_panel_on">Bescherming is AAN voor deze site</string>
+
+    <string name="etp_panel_off">Bescherming is UIT voor deze site</string>
+
+    <string name="enhanced_tracking_protection_exceptions">Enhanced Tracking Protection staat uit voor deze websites</string>
+
+    <string name="etp_back_button_content_description">Terug navigeren</string>
+
+    <string name="open_source_licenses_title">%s | OSS-bibliotheken</string>
+
+    <string name="etp_redirect_trackers_title">Omleidingstrackers</string>
+
+    <string name="etp_redirect_trackers_description">Verwijdert cookies die zijn ingesteld door omleidingen naar bekende volgwebsites.</string>
+
+    <string name="preference_etp_smartblock_description">Sommige trackers die hieronder zijn gemarkeerd, zijn gedeeltelijk gedeblokkeerd op deze pagina omdat je er interactie mee had *.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Meer informatie</string>
+
+
+    <string name="about_support">Ondersteuning</string>
+
+    <string name="about_crashes">Crashes</string>
+
+    <string name="about_privacy_notice">Privacyverklaring</string>
+
+    <string name="about_know_your_rights">Ken uw rechten</string>
+
+    <string name="about_licensing_information">Licentie-informatie</string>
+
+    <string name="about_other_open_source_libraries">Bibliotheken die we gebruiken</string>
+
+    <string name="about_debug_menu_toast_progress">Debug-menu: %1$d klik(pen) links om in te schakelen</string>
+    <string name="about_debug_menu_toast_done">Debug-menu ingeschakeld</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Kopie</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Plakken en wegwezen</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Plakken</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL gekopieerd naar klembord</string>
+
+
+    <string name="add_to_homescreen_title">Toevoegen aan beginscherm</string>
+
+    <string name="add_to_homescreen_cancel">Annuleren</string>
+
+    <string name="add_to_homescreen_add">Voeg  toe</string>
+
+    <string name="add_to_homescreen_continue">Doorgaan naar website</string>
+
+    <string name="add_to_homescreen_text_placeholder">Naam snelkoppeling</string>
+
+    <string name="add_to_homescreen_description_2">Je kunt deze website eenvoudig toevoegen aan het beginscherm van je apparaat zodat je direct toegang hebt en sneller kunt browsen met een app-achtige ervaring.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Logins en wachtwoorden</string>
+
+    <string name="preferences_passwords_save_logins">Logins en wachtwoorden opslaan</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Vraag om op te slaan</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Nooit opslaan</string>
+
+    <string name="preferences_passwords_autofill2">Automatisch invullen in %1$s</string>
+
+    <string name="preferences_passwords_autofill_description">Vul gebruikersnamen en wachtwoorden in op websites en sla ze op met %1$s.</string>
+
+    <string name="preferences_android_autofill">Autofill in andere apps</string>
+
+    <string name="preferences_android_autofill_description">Gebruikersnamen en wachtwoorden invullen in andere apps op je apparaat.</string>
+
+    <string name="preferences_logins_add_login">Login toevoegen</string>
+
+
+    <string name="preferences_passwords_sync_logins">Logins synchroniseren</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Inloggegevens synchroniseren tussen apparaten</string>
+
+    <string name="preferences_passwords_saved_logins">Opgeslagen aanmeldingen</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">De logins die je opslaat of synchroniseert met %s worden hier weergegeven.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Meer informatie over Sync.</string>
+
+    <string name="preferences_passwords_exceptions">Uitzonderingen</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">Logins en wachtwoorden die niet zijn opgeslagen, worden hier weergegeven.</string>
+
+    <string name="preferences_passwords_exceptions_description">Logins en wachtwoorden voor deze sites worden niet opgeslagen.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Alle uitzonderingen verwijderen</string>
+
+    <string name="preferences_passwords_saved_logins_search">Aanmeldingen zoeken</string>
+
+    <string name="preferences_passwords_saved_logins_site">Site</string>
+
+    <string name="preferences_passwords_saved_logins_username">Gebruikersnaam</string>
+
+    <string name="preferences_passwords_saved_logins_password">Wachtwoord</string>
+
+    <string name="logins_password_copied">Wachtwoord gekopieerd naar klembord</string>
+
+    <string name="logins_username_copied">Gebruikersnaam gekopieerd naar klembord</string>
+
+    <string name="saved_logins_copy_password">Wachtwoord kopiëren</string>
+
+    <string name="saved_logins_clear_password">Wachtwoord wissen</string>
+
+    <string name="saved_login_copy_username">Gebruikersnaam kopiëren</string>
+
+    <string name="saved_login_clear_username">Gebruikersnaam wissen</string>
+
+    <string name="saved_login_clear_hostname">Hostnaam wissen</string>
+
+    <string name="saved_login_open_site">Open site in browser</string>
+
+    <string name="saved_login_reveal_password">Wachtwoord tonen</string>
+
+    <string name="saved_login_hide_password">Verberg wachtwoord</string>
+
+    <string name="logins_biometric_prompt_message">Ontgrendelen om uw opgeslagen aanmeldingen te bekijken</string>
+
+    <string name="logins_warning_dialog_title">Beveilig uw aanmeldingen en wachtwoorden</string>
+
+    <string name="logins_warning_dialog_message">Stel een apparaatvergrendelingspatroon, PIN-code of wachtwoord in om te voorkomen dat je opgeslagen aanmeldingen en wachtwoorden worden geopend als iemand anders je apparaat heeft.</string>
+
+    <string name="logins_warning_dialog_later">Later</string>
+
+    <string name="logins_warning_dialog_set_up_now">Nu instellen</string>
+
+    <string name="logins_biometric_prompt_message_pin">Je apparaat ontgrendelen</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Zoomen op alle websites</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Inschakelen om knijpen en zoomen toe te staan, zelfs op websites die dit gebaar verhinderen.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">Naam (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Laatst gebruikt</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Menu logins sorteren</string>
+
+
+    <string name="preferences_autofill">Automatisch invullen</string>
+
+    <string name="preferences_addresses">Adressen</string>
+
+    <string name="preferences_credit_cards">Creditcards</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Kaarten opslaan en automatisch invullen</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Gegevens zijn gecodeerd</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Kaarten synchroniseren tussen apparaten</string>
+
+    <string name="preferences_credit_cards_sync_cards">Synchronisatiekaarten</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Creditcard toevoegen</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Opgeslagen kaarten beheren</string>
+
+    <string name="preferences_addresses_add_address">Adres toevoegen</string>
+
+    <string name="preferences_addresses_manage_addresses">Adressen beheren</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Adressen opslaan en automatisch invullen</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Vermeld informatie zoals nummers, e-mail- en verzendadressen</string>
+
+
+    <string name="credit_cards_add_card">Kaart toevoegen</string>
+
+    <string name="credit_cards_edit_card">Bewerk kaart</string>
+
+    <string name="credit_cards_card_number">Kaartnummer</string>
+
+    <string name="credit_cards_expiration_date">Vervaldatum</string>
+
+    <string name="credit_cards_expiration_date_month">Vervaldatum Maand</string>
+
+    <string name="credit_cards_expiration_date_year">Vervaldatum Jaar</string>
+
+    <string name="credit_cards_name_on_card">Naam op kaart</string>
+
+    <string name="credit_cards_menu_delete_card">Kaart verwijderen</string>
+
+    <string name="credit_cards_delete_card_button">Kaart verwijderen</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">Weet je zeker dat je deze creditcard wilt verwijderen?</string>
+
+    <string name="credit_cards_delete_dialog_button">Verwijder</string>
+
+    <string name="credit_cards_menu_save">Sla</string>
+
+    <string name="credit_cards_save_button">Sla</string>
+
+    <string name="credit_cards_cancel_button">Annuleren</string>
+
+    <string name="credit_cards_saved_cards">Opgeslagen kaarten</string>
+
+    <string name="credit_cards_number_validation_error_message">Voer een geldig creditcardnummer in</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Vul dit veld in</string>
+
+    <string name="credit_cards_biometric_prompt_message">Ontgrendelen om je opgeslagen kaarten te bekijken</string>
+
+    <string name="credit_cards_warning_dialog_title">Beveilig uw creditcards</string>
+
+    <string name="credit_cards_warning_dialog_message">Stel een apparaatvergrendelingspatroon, PIN-code of wachtwoord in om te voorkomen dat uw opgeslagen creditcards worden geopend als iemand anders uw apparaat heeft.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Nu instellen</string>
+
+    <string name="credit_cards_warning_dialog_later">Later</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Je apparaat ontgrendelen</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Ontgrendelen om opgeslagen creditcardgegevens te gebruiken</string>
+
+    <string name="addresses_add_address">Adres toevoegen</string>
+
+    <string name="addresses_edit_address">Adres bewerken</string>
+
+    <string name="addresses_manage_addresses">Adressen beheren</string>
+
+    <string name="addresses_first_name">Voornaam</string>
+
+    <string name="addresses_middle_name">Middelste naam</string>
+
+    <string name="addresses_last_name">Achternaam</string>
+
+    <string name="addresses_street_address">Straatnaam</string>
+
+    <string name="addresses_city">Stad</string>
+
+    <string name="addresses_state">Staat</string>
+
+    <string name="addresses_province">Provincie</string>
+
+    <string name="addresses_zip">Zip</string>
+
+    <string name="addresses_country">Land of regio</string>
+
+    <string name="addresses_phone">Telefoon</string>
+
+    <string name="addresses_email">E-mail</string>
+
+    <string name="addresses_save_button">Sla</string>
+
+    <string name="addresses_cancel_button">Annuleren</string>
+
+    <string name="addressess_delete_address_button">Adres verwijderen</string>
+
+    <string name="addressess_confirm_dialog_message">Weet je zeker dat je dit adres wilt verwijderen?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Verwijder</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">Annuleren</string>
+
+    <string name="address_menu_save_address">Adres opslaan</string>
+
+    <string name="address_menu_delete_address">Adres verwijderen</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Zoekmachine toevoegen</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Zoekmachine bewerken</string>
+
+    <string name="search_engine_add_button_content_description">Voeg  toe</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Sla</string>
+
+    <string name="search_engine_edit">Bewerk</string>
+
+    <string name="search_engine_delete">Verwijder</string>
+
+
+    <string name="search_add_custom_engine_label_other">Andere</string>
+
+    <string name="search_add_custom_engine_name_hint">Naam</string>
+
+    <string name="search_add_custom_engine_search_string_hint">Zoekreeks gebruiken</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Vervang query door "%s". Voorbeeld:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Aangepaste zoekmachinegegevens</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Voer de naam van de zoekmachine in</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Een zoekreeks invoeren</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Controleer of de zoekstring overeenkomt Voorbeeldformaat</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">Fout bij verbinding met "%s".</string>
+
+    <string name="search_add_custom_engine_success_message">Gemaakt %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Opgeslagen %s</string>
+
+    <string name="search_delete_search_engine_success_message">Verwijderd %s</string>
+
+
+    <string name="phone_feature_blocked_intro">Om het toe te staan:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Ga naar Android-instellingen</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. Tik op &lt;b&gt;Machtigingen&lt;/b&gt;</string>
+
+    <string name="phone_feature_blocked_step_feature">3. Schakel &lt;b&gt;%1$s&lt;/b&gt; naar AAN</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">Verbinding is veilig</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">Verbinding is niet veilig</string>
+
+    <string name="clear_site_data">Cookies en sitegegevens wissen</string>
+
+    <string name="confirm_clear_site_data">Weet je zeker dat je alle cookies en gegevens voor de site &lt;b&gt;%s&lt;/b&gt; wilt wissen?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Weet je zeker dat je alle rechten op alle sites wilt wissen?</string>
+
+    <string name="confirm_clear_permissions_site">Weet je zeker dat je alle rechten voor deze site wilt wissen?</string>
+
+    <string name="confirm_clear_permission_site">Weet je zeker dat je deze toestemming wilt geven voor deze site?</string>
+
+    <string name="no_site_exceptions">Geen site-uitzonderingen</string>
+
+    <string name="bookmark_deletion_confirmation">Weet je zeker dat je deze bladwijzer wilt verwijderen?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Toevoegen aan snelkoppelingen</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Verwijderen uit snelkoppelingen</string>
+
+    <string name="certificate_info_verified_by">Geverifieerd door: %1$s</string>
+
+    <string name="login_menu_delete_button">Verwijder</string>
+
+    <string name="login_menu_edit_button">Bewerk</string>
+
+    <string name="login_deletion_confirmation">Weet u zeker dat u deze aanmelding wilt verwijderen?</string>
+
+    <string name="dialog_delete_positive">Verwijder</string>
+
+    <string name="dialog_delete_negative">Annuleren</string>
+
+    <string name="login_options_menu">Aanmeldingsopties</string>
+
+    <string name="saved_login_hostname_description">Het bewerkbare tekstveld voor het webadres van de aanmelding.</string>
+
+    <string name="saved_login_username_description">Het bewerkbare tekstveld voor de gebruikersnaam van de aanmelding.</string>
+
+    <string name="saved_login_password_description">Het bewerkbare tekstveld voor het wachtwoord van de aanmelding.</string>
+
+    <string name="save_changes_to_login">Wijzigingen opslaan om in te loggen.</string>
+
+    <string name="edit">Bewerk</string>
+
+    <string name="add_login">Nieuwe aanmelding toevoegen</string>
+
+    <string name="saved_login_password_required">Wachtwoord vereist</string>
+
+    <string name="saved_login_username_required">Gebruikersnaam verplicht</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Hostnaam vereist</string>
+
+    <string name="voice_search_content_description">Spraakgestuurd zoeken</string>
+
+    <string name="voice_search_explainer">Spreek nu</string>
+
+    <string name="saved_login_duplicate">Er bestaat al een login met die gebruikersnaam</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">Het webadres moet "https://" of "http://" bevatten.</string>
+
+    <string name="add_login_hostname_invalid_text_2">Geldige hostnaam vereist</string>
+
+
+    <string name="synced_tabs_connect_another_device">Sluit een ander apparaat aan.</string>
+
+    <string name="synced_tabs_reauth">Authenticeer opnieuw.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Schakel tabsynchronisatie in.</string>
+
+    <string name="synced_tabs_no_tabs">U hebt geen tabbladen geopend in Waterfox op uw andere apparaten.</string>
+
+    <string name="synced_tabs_sign_in_message">Een lijst met tabbladen van uw andere apparaten weergeven.</string>
+
+    <string name="synced_tabs_sign_in_button">Aanmelden om te synchroniseren</string>
+
+    <string name="synced_tabs_no_open_tabs">Geen open tabbladen</string>
+
+    <string name="synced_tabs_expand_group">Groep gesynchroniseerde tabbladen uitvouwen</string>
+
+    <string name="synced_tabs_collapse_group">Groep gesynchroniseerde tabbladen samenvouwen</string>
+
+
+    <string name="shortcut_max_limit_title">Limiet snelkoppelingen bereikt</string>
+
+    <string name="shortcut_max_limit_content">Als u een nieuwe snelkoppeling wilt toevoegen, verwijdert u er een. Houd de site aangeraakt en selecteer verwijderen.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">OK, ik heb het</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Snelkoppelingen</string>
+
+    <string name="top_sites_rename_dialog_title">Naam</string>
+
+    <string name="shortcut_name_hint">Naam snelkoppeling</string>
+
+    <string name="top_sites_rename_dialog_ok">OK</string>
+
+    <string name="top_sites_rename_dialog_cancel">Annuleren</string>
+
+    <string name="top_sites_menu_settings">Instellingen</string>
+
+    <string name="top_sites_menu_sponsor_privacy">Onze sponsors &amp; uw privacy</string>
+
+    <string name="top_sites_sponsored_label">Gesponsord</string>
+
+
+    <string name="inactive_tabs_title">Inactieve tabbladen</string>
+
+    <string name="inactive_tabs_delete_all">Alle inactieve tabbladen sluiten</string>
+
+    <string name="inactive_tabs_expand_content_description">Inactieve tabbladen uitvouwen</string>
+
+    <string name="inactive_tabs_collapse_content_description">Inactieve tabbladen samenvouwen</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatisch sluiten na een maand?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox kan tabbladen sluiten die je de afgelopen maand niet hebt bekeken.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AUTOMATISCH SLUITEN INSCHAKELEN</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Automatisch sluiten ingeschakeld</string>
+
+
+    <string name="default_browser_experiment_card_text">Stel links van websites, e-mails en berichten zo in dat ze automatisch worden geopend in Waterfox.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Verwijder</string>
+
+
+    <string name="radio_preference_info_content_description">Klik voor meer informatie</string>
+
+
+    <string name="action_bar_up_description">Omhoog navigeren</string>
+
+
+    <string name="privacy_content_close_button_content_description">Sluit</string>
+
+    <string name="waterfox_suggest_header">Waterfox Suggesties</string>
+</resources>

@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Pribadi %s</string>
+
+    <string name="app_name_private_4">%s (Pribadi)</string>
+
+
+    <string name="content_description_menu">Opsi lainnya</string>
+
+    <string name="content_description_private_browsing_button">Mengaktifkan penjelajahan pribadi</string>
+
+    <string name="content_description_disable_private_browsing_button">Menonaktifkan penjelajahan pribadi</string>
+
+    <string name="search_hint">Cari atau masukkan alamat</string>
+
+    <string name="application_search_hint">Masukkan istilah pencarian</string>
+
+    <string name="no_open_tabs_description">Tab terbuka Anda akan ditampilkan di sini.</string>
+
+    <string name="no_private_tabs_description">Tab pribadi Anda akan ditampilkan di sini.</string>
+
+    <string name="tab_tray_multi_select_title">%1$d dipilih</string>
+
+    <string name="tab_tray_add_new_collection">Tambahkan koleksi baru</string>
+
+    <string name="tab_tray_add_new_collection_name">Nama</string>
+
+    <string name="tab_tray_select_collection">Pilih koleksi</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Keluar dari mode multi-pilihan</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Menyimpan tab yang dipilih ke koleksi</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Dipilih</string>
+
+
+    <string name="recently_saved_title">Baru saja disimpan</string>
+
+    <string name="recently_saved_show_all_content_description_2">Menampilkan semua penanda yang disimpan</string>
+
+    <string name="recently_saved_menu_item_remove">Menghapus</string>
+
+
+    <string name="about_content">%1$s dibuat oleh BrowserWorks</string>
+
+
+    <string name="private_browsing_placeholder_description_2">%1$ akan menghapus riwayat pencarian dan penelusuran Anda dari tab pribadi saat Anda menutupnya atau keluar dari aplikasi. Meskipun hal ini tidak membuat Anda menjadi anonim terhadap situs web atau penyedia layanan internet Anda, namun hal ini memudahkan untuk menjaga kerahasiaan aktivitas online Anda dari orang lain yang menggunakan perangkat ini.</string>
+    <string name="private_browsing_common_myths">Mitos umum tentang penjelajahan pribadi</string>
+
+
+    <string name="cfr_message">Tambahkan pintasan untuk membuka tab pribadi dari layar Beranda.</string>
+
+    <string name="cfr_pos_button_text">Tambahkan pintasan</string>
+
+    <string name="cfr_neg_button_text">Tidak, terima kasih.</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">Anda dapat mengatur %1$ untuk membuka tautan secara otomatis di aplikasi.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Buka pengaturan</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Bubarkan.</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Bubarkan.</string>
+
+
+    <string name="tcp_cfr_message">Fitur privasi kami yang paling kuat namun mengisolasi pelacak lintas situs.</string>
+
+    <string name="tcp_cfr_learn_more">Pelajari tentang Perlindungan Cookie Total</string>
+
+
+    <string name="camera_permissions_needed_message">Akses kamera diperlukan. Buka pengaturan Android, ketuk izin, dan ketuk izinkan.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Buka pengaturan</string>
+
+    <string name="camera_permissions_needed_negative_button_text">Bubarkan.</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Mengatur tab yang terbuka untuk ditutup secara otomatis yang belum dilihat dalam satu hari, minggu, atau bulan terakhir.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Opsi tampilan</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Bubarkan.</string>
+
+    <string name="tab_tray_inactive_onboarding_message">Tab yang tidak Anda lihat selama dua minggu akan dipindahkan ke sini.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Matikan dalam pengaturan</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Tutup otomatis setelah satu bulan?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">%1$ dapat menutup tab yang tidak Anda lihat selama sebulan terakhir.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Tutup</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Aktifkan tutup otomatis</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Tab baru</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Tab pribadi baru</string>
+
+
+    <string name="recent_tabs_header">Lompat kembali</string>
+
+    <string name="recent_tabs_show_all">Tampilkan semua</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Tombol Tampilkan semua tab terbaru</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Pencarian Anda untuk \"%1$s\"</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d situs</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Lihat semua tab yang disinkronkan</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Perangkat yang disinkronkan</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Menghapus</string>
+
+    <string name="recent_tab_menu_item_remove">Menghapus</string>
+
+
+    <string name="history_metadata_header_2">Baru-baru ini dikunjungi</string>
+
+    <string name="recently_visited_menu_item_remove">Menghapus</string>
+
+    <string name="past_explorations_show_all_content_description_2">Menampilkan semua eksplorasi sebelumnya</string>
+
+
+    <string name="browser_menu_back">Kembali</string>
+
+    <string name="browser_menu_forward">Teruskan</string>
+
+    <string name="browser_menu_refresh">Menyegarkan</string>
+
+    <string name="browser_menu_stop">Berhenti.</string>
+
+    <string name="browser_menu_add_ons">Pengaya</string>
+
+    <string name="no_add_ons">Tidak ada pengaya di sini</string>
+
+    <string name="browser_menu_help">Bantuan</string>
+
+    <string name="browser_menu_settings">Pengaturan</string>
+
+    <string name="browser_menu_library">Perpustakaan</string>
+
+    <string name="browser_menu_desktop_site">Situs desktop</string>
+
+    <string name="browser_menu_add_to_homescreen">Tambahkan ke layar Beranda</string>
+
+    <string name="browser_menu_install_on_homescreen">Memasang</string>
+
+    <string name="resync_button_content_description">Sinkronisasi ulang</string>
+
+    <string name="browser_menu_find_in_page">Temukan di halaman</string>
+
+    <string name="browser_menu_save_to_collection_2">Simpan ke koleksi</string>
+
+    <string name="browser_menu_share">Bagikan</string>
+
+    <string name="browser_menu_open_in_waterfox">Buka dalam %1$s</string>
+
+    <string name="browser_menu_powered_by">DIBERDAYAKAN OLEH% 1$s</string>
+
+    <string name="browser_menu_powered_by2">Didukung oleh %1$s</string>
+
+    <string name="browser_menu_read">Tampilan pembaca</string>
+
+    <string name="browser_menu_read_close">Tutup tampilan pembaca</string>
+
+    <string name="browser_menu_open_app_link">Buka di aplikasi</string>
+
+    <string name="browser_menu_customize_reader_view">Menyesuaikan tampilan pembaca</string>
+
+    <string name="browser_menu_add">Menambahkan</string>
+
+    <string name="browser_menu_edit">Sunting</string>
+
+    <string name="browser_menu_customize_home_1">Sesuaikan beranda</string>
+
+
+    <string name="browser_toolbar_home">Layar beranda</string>
+
+
+    <string name="a11y_selected_locale_content_description">Bahasa yang dipilih</string>
+
+    <string name="default_locale_text">Ikuti bahasa perangkat</string>
+
+    <string name="locale_search_hint">Bahasa pencarian</string>
+
+
+    <string name="search_scan_button">Memindai</string>
+
+    <string name="search_engine_button">Mesin pencari</string>
+
+    <string name="search_shortcuts_engine_settings">Pengaturan mesin pencari</string>
+
+    <string name="awesomebar_clipboard_title">Mengisi tautan dari papan klip</string>
+
+    <string name="search_suggestions_onboarding_allow_button">Izinkan</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">Jangan izinkan</string>
+
+    <string name="search_suggestions_onboarding_title">Mengizinkan saran pencarian dalam sesi pribadi?</string>
+
+    <string name="search_suggestions_onboarding_text">%s akan membagikan semua yang Anda ketik di bilah alamat dengan mesin pencari default Anda.</string>
+
+    <string name="search_engine_suggestions_title">Cari %s</string>
+
+    <string name="search_engine_suggestions_description">Cari langsung dari bilah alamat</string>
+
+    <string name="search_settings_menu_item">Pengaturan pencarian</string>
+
+
+    <string name="onboarding_home_screen_description_2">Sekarang lebih mudah untuk melanjutkan kembali dari bagian terakhir yang Anda tinggalkan.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Langsung ke tab yang terbuka, penanda, dan riwayat penjelajahan.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Tab yang bersih dan terorganisir</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Bersihkan kekacauan tab dengan tata letak yang lebih baik dan tab yang menutup otomatis.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Pencarian terbaru</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Kunjungi kembali pencarian terbaru Anda dari beranda dan tab.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Temui beranda pribadi Anda. Tab terbaru, penanda, dan hasil pencarian akan muncul di sini.</string>
+
+    <string name="onboarding_home_welcome_title_2">Selamat datang di internet yang lebih personal</string>
+
+    <string name="onboarding_home_welcome_description">Lebih banyak warna. Privasi yang lebih baik. Komitmen yang sama terhadap orang-orang daripada keuntungan.</string>
+
+    <string name="onboarding_home_sync_title_3">Berpindah dari ponsel ke laptop dan sebaliknya</string>
+
+    <string name="onboarding_home_sync_description">Lanjutkan dari bagian terakhir yang Anda tinggalkan dengan tab dari perangkat lain sekarang di beranda Anda.</string>
+
+    <string name="onboarding_home_get_started_button">Memulai</string>
+
+    <string name="onboarding_home_sign_in_button">Masuk</string>
+
+    <string name="onboarding_home_skip_button">Lewati</string>
+
+    <string name="onboarding_home_content_description_close_button">Tutup</string>
+
+
+    <string name="search_widget_content_description_2">Buka tab %1$ yang baru</string>
+
+    <string name="search_widget_text_short">Pencarian</string>
+
+    <string name="search_widget_text_long">Cari di web</string>
+
+    <string name="search_widget_voice">Pencarian suara</string>
+
+
+    <string name="settings">Pengaturan</string>
+
+    <string name="preferences_category_general">Umum</string>
+
+    <string name="preferences_category_about">Tentang</string>
+
+    <string name="preferences_default_search_engine">Mesin pencari default</string>
+
+    <string name="preferences_search">Pencarian</string>
+
+    <string name="preferences_search_address_bar">Bilah alamat</string>
+
+    <string name="preferences_rate">Beri peringkat di Google Play</string>
+
+    <string name="preferences_about">Tentang %1$s</string>
+
+    <string name="preferences_set_as_default_browser">Tetapkan sebagai browser default</string>
+
+    <string name="preferences_category_advanced">Lanjutan</string>
+
+    <string name="preferences_category_privacy_security">Privasi dan keamanan</string>
+
+    <string name="preferences_site_permissions">Izin situs</string>
+
+    <string name="preferences_private_browsing_options">Penjelajahan pribadi</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Membuka tautan di tab pribadi</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Mengizinkan tangkapan layar dalam penjelajahan pribadi</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Jika diizinkan, tab pribadi juga akan terlihat ketika beberapa aplikasi terbuka</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Menambahkan pintasan penjelajahan pribadi</string>
+
+    <string name="preferences_https_only_title">Mode Khusus HTTPS</string>
+
+    <string name="preferences_https_only_summary">Secara otomatis mencoba menyambung ke situs yang menggunakan protokol enkripsi HTTPS untuk meningkatkan keamanan.</string>
+
+    <string name="preferences_https_only_on">Pada</string>
+
+    <string name="preferences_https_only_off">Mati</string>
+
+    <string name="preferences_http_only_learn_more">Pelajari lebih lanjut</string>
+
+    <string name="preferences_https_only_in_all_tabs">Aktifkan di semua tab</string>
+
+    <string name="preferences_https_only_in_private_tabs">Aktifkan hanya di tab pribadi</string>
+
+    <string name="errorpage_httpsonly_title">Situs aman tidak tersedia</string>
+
+    <string name="errorpage_httpsonly_message_title">Kemungkinan besar, situs web tersebut tidak mendukung HTTPS.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Namun, ada juga kemungkinan penyerang yang terlibat. Jika Anda melanjutkan ke situs web, Anda tidak boleh memasukkan informasi sensitif apa pun. Jika Anda melanjutkan, mode HTTPS-Only akan dimatikan untuk sementara waktu untuk situs tersebut.</string>
+
+    <string name="preferences_accessibility">Aksesibilitas</string>
+
+    <string name="preferences_override_fxa_server">Server Akun Waterfox khusus</string>
+
+    <string name="preferences_override_sync_tokenserver">Server Sinkronisasi Khusus</string>
+
+    <string name="toast_override_fxa_sync_server_done">Akun Waterfox/Server sinkronisasi dimodifikasi. Keluar dari aplikasi untuk menerapkan perubahan...</string>
+
+    <string name="preferences_category_account">Akun</string>
+
+    <string name="preferences_toolbar">Bilah alat</string>
+
+    <string name="preferences_theme">Tema</string>
+
+    <string name="preferences_home_2">Beranda</string>
+
+    <string name="preferences_gestures">Gerakan</string>
+
+    <string name="preferences_customize">Sesuaikan</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sinkronisasi penanda, riwayat, dan lainnya dengan Akun Waterfox Anda</string>
+
+    <string name="preferences_sign_in_description_2">Masuk untuk menyinkronkan tab, penanda, kata sandi, dan lainnya.</string>
+
+    <string name="preferences_account_default_name">Akun Waterfox</string>
+
+    <string name="preferences_account_sync_error">Sambungkan kembali untuk melanjutkan sinkronisasi</string>
+
+    <string name="preferences_language">Bahasa</string>
+
+    <string name="preferences_remote_debugging">Debugging jarak jauh melalui USB</string>
+
+    <string name="preferences_show_search_engines">Tampilkan mesin pencari</string>
+
+    <string name="preferences_show_search_suggestions">Tampilkan saran pencarian</string>
+
+    <string name="preferences_show_voice_search">Tampilkan pencarian suara</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Tunjukkan dalam sesi pribadi</string>
+
+    <string name="preferences_show_clipboard_suggestions">Menampilkan saran papan klip</string>
+
+    <string name="preferences_search_browsing_history">Mencari riwayat penelusuran</string>
+
+    <string name="preferences_search_bookmarks">Cari penanda</string>
+
+    <string name="preferences_search_synced_tabs">Cari tab yang disinkronkan</string>
+
+    <string name="preferences_account_settings">Pengaturan akun</string>
+
+    <string name="preferences_enable_autocomplete_urls">URL Pelengkapan Otomatis</string>
+
+    <string name="preferences_open_links_in_apps">Membuka tautan di aplikasi</string>
+
+    <string name="preferences_external_download_manager">Pengelola unduhan eksternal</string>
+
+    <string name="preferences_addons">Pengaya</string>
+
+    <string name="preferences_notifications">Pemberitahuan</string>
+
+
+    <string name="preferences_customize_amo_collection">Koleksi Pengaya Khusus</string>
+
+    <string name="customize_addon_collection_ok">BAIKLAH.</string>
+
+    <string name="customize_addon_collection_cancel">Batal</string>
+
+    <string name="customize_addon_collection_hint">Nama koleksi</string>
+
+    <string name="customize_addon_collection_user_hint">Pemilik koleksi (ID Pengguna)</string>
+
+    <string name="toast_customize_addon_collection_done">Koleksi add-on dimodifikasi. Keluar dari aplikasi untuk menerapkan perubahan...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Lompat kembali</string>
+
+    <string name="customize_toggle_recent_bookmarks">Penanda terbaru</string>
+
+    <string name="customize_toggle_recently_visited">Baru-baru ini dikunjungi</string>
+
+    <string name="customize_wallpapers">Wallpaper</string>
+
+    <string name="customize_toggle_contile">Pintasan yang disponsori</string>
+
+
+    <string name="wallpapers_item_name_content_description">Item Wallpaper: % 1 $ s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Wallpaper diperbarui!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Melihat</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Mengubah wallpaper dengan mengetuk logo beranda Waterfox</string>
+
+    <string name="wallpaper_logo_content_description">Logo Waterfox - ubah wallpaper, tombol</string>
+
+
+    <string name="addon_not_supported_error">Add-on tidak didukung</string>
+
+    <string name="addon_already_installed">Pengaya sudah terpasang</string>
+
+
+    <string name="preferences_sync_now">Sinkronisasi sekarang</string>
+
+    <string name="preferences_sync_category">Memilih apa yang akan disinkronkan</string>
+
+    <string name="preferences_sync_history">Sejarah</string>
+
+    <string name="preferences_sync_bookmarks">Penanda</string>
+
+    <string name="preferences_sync_logins">Masuk</string>
+
+    <string name="preferences_sync_tabs_2">Buka tab</string>
+
+    <string name="preferences_sign_out">Keluar</string>
+
+    <string name="preferences_sync_device_name">Nama perangkat</string>
+
+    <string name="empty_device_name_error">Nama perangkat tidak boleh kosong.</string>
+
+    <string name="sync_syncing_in_progress">Menyinkronkan...</string>
+
+    <string name="sync_failed_summary">Sinkronisasi gagal. Keberhasilan terakhir: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Sinkronisasi gagal. Terakhir disinkronkan: tidak pernah</string>
+
+    <string name="sync_last_synced_summary">Terakhir disinkronkan: %s</string>
+
+    <string name="sync_never_synced_summary">Terakhir disinkronkan: tidak pernah</string>
+
+    <string name="default_device_name_2">%1 $s pada %2 $s %3 $s</string>
+
+    <string name="preferences_sync_credit_cards">Kartu kredit</string>
+
+    <string name="preferences_sync_address">Alamat</string>
+
+
+    <string name="fxa_received_tab_channel_name">Tab yang diterima</string>
+
+    <string name="fxa_received_tab_channel_description">Pemberitahuan untuk tab yang diterima dari perangkat Waterfox lain.</string>
+
+    <string name="fxa_tab_received_notification_name">Tab Diterima</string>
+
+    <string name="fxa_tab_received_from_notification_name">Tab dari %s</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">Pengecualian</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Nyalakan untuk semua situs</string>
+
+    <string name="exceptions_empty_message_description">Pengecualian memungkinkan Anda menonaktifkan perlindungan pelacakan untuk situs tertentu.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Pelajari lebih lanjut</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Aktifkan Sinkronisasi</string>
+
+    <string name="preferences_sync_2">Menyinkronkan dan menyimpan data Anda</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Masuk untuk menyambung kembali</string>
+
+    <string name="preferences_sync_remove_account">Hapus akun</string>
+
+
+    <string name="pair_instructions_2">Pindai kode QR yang ditampilkan di &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+
+    <string name="preference_top_toolbar">Atas</string>
+
+    <string name="preference_bottom_toolbar">Bawah</string>
+
+
+    <string name="preference_light_theme">Cahaya</string>
+
+    <string name="preference_dark_theme">Gelap</string>
+
+    <string name="preference_auto_battery_theme">Diatur oleh Penghemat Baterai</string>
+
+    <string name="preference_follow_device_theme">Ikuti tema perangkat</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Tarik untuk menyegarkan</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Gulir untuk menyembunyikan bilah alat</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Geser bilah alat ke samping untuk berpindah tab</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Geser bilah alat ke atas untuk membuka tab</string>
+
+
+    <string name="library_downloads">Unduhan</string>
+
+    <string name="library_bookmarks">Penanda</string>
+
+    <string name="library_desktop_bookmarks_root">Penanda Desktop</string>
+
+    <string name="library_desktop_bookmarks_menu">Menu Penanda</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Bilah Alat Penanda</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Penanda Lainnya</string>
+
+    <string name="library_history">Sejarah</string>
+
+    <string name="library_new_tab">Tab baru</string>
+
+    <string name="settings_title">Pengaturan</string>
+
+    <string name="content_description_close_button">Tutup</string>
+
+
+    <string name="history_search_group_site">%d situs</string>
+
+    <string name="history_search_group_sites">%d situs</string>
+
+
+    <string name="library_recently_closed_tabs">Tab yang baru saja ditutup</string>
+
+    <string name="recently_closed_show_full_history">Tampilkan riwayat lengkap</string>
+
+    <string name="recently_closed_tabs">%d tab</string>
+
+    <string name="recently_closed_tab">Tab %d</string>
+
+    <string name="recently_closed_empty_message">Tidak ada tab yang baru saja ditutup di sini</string>
+
+
+    <string name="preferences_tabs">Tab</string>
+
+    <string name="preferences_tab_view">Tampilan tab</string>
+
+    <string name="tab_view_list">Daftar</string>
+
+    <string name="tab_view_grid">Grid</string>
+
+    <string name="preferences_close_tabs">Tutup tab</string>
+
+    <string name="close_tabs_manually">Tidak pernah.</string>
+
+    <string name="close_tabs_after_one_day">Setelah satu hari</string>
+
+    <string name="close_tabs_after_one_week">Setelah satu minggu</string>
+
+    <string name="close_tabs_after_one_month">Setelah satu bulan</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Menutup tab yang terbuka secara otomatis</string>
+
+
+    <string name="preferences_opening_screen">Layar pembuka</string>
+
+    <string name="opening_screen_homepage">Beranda</string>
+
+    <string name="opening_screen_last_tab">Tab terakhir</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Beranda setelah empat jam tidak aktif</string>
+
+    <string name="close_tabs_manually_summary">Tutup secara manual</string>
+
+    <string name="close_tabs_after_one_day_summary">Tutup setelah satu hari</string>
+
+    <string name="close_tabs_after_one_week_summary">Tutup setelah satu minggu</string>
+
+    <string name="close_tabs_after_one_month_summary">Tutup setelah satu bulan</string>
+
+
+    <string name="preferences_inactive_tabs">Memindahkan tab lama ke tidak aktif</string>
+
+    <string name="preferences_inactive_tabs_title">Tab yang tidak Anda lihat selama dua minggu akan dipindahkan ke bagian tidak aktif.</string>
+
+
+    <string name="tab_header_label">Buka tab</string>
+
+    <string name="tabs_header_private_tabs_title">Tab pribadi</string>
+
+    <string name="tabs_header_synced_tabs_title">Tab yang disinkronkan</string>
+
+    <string name="add_tab">Tambahkan tab</string>
+
+    <string name="add_private_tab">Tambahkan tab pribadi</string>
+
+    <string name="tab_drawer_fab_content">Pribadi</string>
+
+    <string name="tab_drawer_fab_sync">Sinkronisasi</string>
+
+    <string name="tab_tray_menu_item_share">Bagikan semua tab</string>
+
+    <string name="tab_tray_menu_recently_closed">Tab yang baru saja ditutup</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Baru-baru ini ditutup</string>
+
+    <string name="tab_tray_menu_account_settings">Pengaturan akun</string>
+
+    <string name="tab_tray_menu_tab_settings">Pengaturan tab</string>
+
+    <string name="tab_tray_menu_item_close">Tutup semua tab</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Penanda</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Tutup</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Membagikan tab yang dipilih</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Menu tab yang dipilih</string>
+
+    <string name="remove_tab_from_collection">Menghapus tab dari koleksi</string>
+
+    <string name="tabs_tray_select_tabs">Pilih tab</string>
+
+    <string name="close_tab">Tutup tab</string>
+
+    <string name="close_tab_title">Tutup tab %s</string>
+
+    <string name="open_tabs_menu">Buka menu tab</string>
+
+    <string name="tabs_menu_save_to_collection1">Menyimpan tab ke koleksi</string>
+
+    <string name="collection_delete">Menghapus koleksi</string>
+
+    <string name="collection_rename">Mengganti nama koleksi</string>
+
+    <string name="collection_open_tabs">Buka tab</string>
+
+    <string name="collection_name_hint">Nama koleksi</string>
+
+    <string name="rename_top_site">Ganti nama</string>
+
+    <string name="remove_top_site">Menghapus</string>
+
+    <string name="delete_from_history">Menghapus dari riwayat</string>
+
+    <string name="pwa_site_controls_title_private">%1$s (Mode Pribadi)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Tab lain</string>
+
+
+    <string name="history_search_1">Masukkan istilah pencarian</string>
+
+    <string name="history_delete_all">Menghapus riwayat</string>
+
+    <string name="history_delete_multiple_items_snackbar">Riwayat Dihapus</string>
+
+    <string name="history_delete_single_item_snackbar">Dihapus %1$s</string>
+
+    <string name="history_delete_item">Menghapus</string>
+
+    <string name="history_multi_select_title">%1$d dipilih</string>
+
+    <string name="history_today">Hari ini</string>
+
+    <string name="history_yesterday">Kemarin.</string>
+
+    <string name="history_7_days">7 hari terakhir</string>
+
+    <string name="history_30_days">30 hari terakhir</string>
+
+    <string name="history_older">Lebih tua</string>
+
+    <string name="history_empty_message">Tidak ada sejarah di sini</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">Unduhan Dihapus</string>
+
+    <string name="download_delete_single_item_snackbar">Dihapus %1 $ s</string>
+
+    <string name="download_empty_message_1">Tidak ada file yang diunduh</string>
+
+    <string name="download_multi_select_title">%1$d dipilih</string>
+
+    <string name="download_delete_item_1">Menghapus</string>
+
+
+    <string name="tab_crash_title_2">Maaf. %1$ tidak dapat memuat halaman tersebut.</string>
+
+    <string name="tab_crash_send_report">Kirim laporan kerusakan ke BrowserWorks</string>
+
+    <string name="tab_crash_close">Tutup tab</string>
+
+    <string name="tab_crash_restore">Mengembalikan tab</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Apakah Anda yakin ingin menghapus folder ini?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s akan menghapus item yang dipilih.</string>
+
+    <string name="bookmark_delete_negative">Batal</string>
+
+    <string name="bookmark_add_folder">Tambahkan folder</string>
+
+    <string name="bookmark_saved_snackbar">Bookmark disimpan!</string>
+
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+
+    <string name="bookmark_menu_edit_button">Sunting</string>
+
+    <string name="bookmark_menu_copy_button">Salin</string>
+
+    <string name="bookmark_menu_share_button">Bagikan</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">Buka di tab baru</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">Buka di tab pribadi</string>
+
+    <string name="bookmark_menu_delete_button">Menghapus</string>
+
+    <string name="bookmark_menu_save_button">Simpan</string>
+
+    <string name="bookmarks_multi_select_title">%1$d dipilih</string>
+
+    <string name="edit_bookmark_fragment_title">Edit penanda</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Folder edit</string>
+
+    <string name="bookmark_sign_in_button">Masuk untuk melihat penanda yang disinkronkan</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">FOLDER</string>
+
+    <string name="bookmark_name_label">NAMA</string>
+
+    <string name="bookmark_add_folder_fragment_label">Tambahkan folder</string>
+
+    <string name="bookmark_select_folder_fragment_label">Pilih folder</string>
+
+    <string name="bookmark_empty_title_error">Harus memiliki gelar</string>
+
+    <string name="bookmark_invalid_url_error">URL tidak valid</string>
+
+    <string name="bookmarks_empty_message">Tidak ada penanda di sini</string>
+
+    <string name="bookmark_deletion_snackbar_message">Dihapus %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Penanda dihapus</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Menghapus folder yang dipilih</string>
+
+    <string name="bookmark_undo_deletion">UNDO</string>
+
+    <string name="bookmark_search">Masukkan istilah pencarian</string>
+
+
+    <string name="phone_feature_go_to_settings">Buka Pengaturan</string>
+
+    <string name="quick_settings_sheet">Lembar pengaturan cepat</string>
+
+    <string name="phone_feature_recommended">Direkomendasikan</string>
+
+    <string name="clear_permissions">Hapus izin</string>
+
+    <string name="clear_permissions_positive">BAIKLAH.</string>
+
+    <string name="clear_permissions_negative">Batal</string>
+
+    <string name="clear_permission">Izin yang jelas</string>
+
+    <string name="clear_permission_positive">BAIKLAH.</string>
+
+    <string name="clear_permission_negative">Batal</string>
+
+    <string name="clear_permissions_on_all_sites">Hapus izin di semua situs</string>
+
+    <string name="preference_browser_feature_autoplay">Putar otomatis</string>
+
+    <string name="preference_phone_feature_camera">Kamera</string>
+
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <string name="preference_phone_feature_location">Lokasi</string>
+
+    <string name="preference_phone_feature_notification">Pemberitahuan</string>
+
+    <string name="preference_phone_feature_persistent_storage">Penyimpanan Persisten</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookie lintas situs</string>
+
+    <string name="preference_phone_feature_media_key_system_access">Konten yang dikontrol DRM</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">Minta untuk mengizinkan</string>
+
+    <string name="preference_option_phone_feature_blocked">Diblokir</string>
+
+    <string name="preference_option_phone_feature_allowed">Diizinkan</string>
+
+    <string name="phone_feature_blocked_by_android">Diblokir oleh Android</string>
+
+    <string name="preference_exceptions">Pengecualian</string>
+
+    <string name="tracking_protection_on">Pada</string>
+
+    <string name="tracking_protection_off">Mati</string>
+
+    <string name="preference_option_autoplay_allowed2">Izinkan audio dan video</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Izinkan audio dan video</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Memblokir audio dan video hanya pada data seluler</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Audio dan video akan diputar pada Wi-Fi</string>
+
+    <string name="preference_option_autoplay_block_audio2">Hanya memblokir audio</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Hanya memblokir audio</string>
+
+    <string name="preference_option_autoplay_blocked3">Memblokir audio dan video</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Memblokir audio dan video</string>
+
+    <string name="delete_browsing_data_quit_on">Pada</string>
+
+    <string name="delete_browsing_data_quit_off">Mati</string>
+
+    <string name="https_only_on">Pada</string>
+
+    <string name="https_only_off">Mati</string>
+
+
+    <string name="collections_header">Koleksi</string>
+
+    <string name="collection_menu_button_content_description">Menu koleksi</string>
+
+    <string name="no_collections_description2">Kumpulkan hal-hal yang penting bagi Anda.\nKelompokkan pencarian, situs, dan tab yang serupa untuk akses cepat di kemudian hari.</string>
+
+    <string name="create_collection_select_tabs">Pilih Tab</string>
+
+    <string name="create_collection_select_collection">Pilih koleksi</string>
+
+    <string name="create_collection_name_collection">Koleksi nama</string>
+
+    <string name="create_collection_add_new_collection">Tambahkan koleksi baru</string>
+
+    <string name="create_collection_select_all">Pilih semua</string>
+
+    <string name="create_collection_deselect_all">Batalkan pilihan semua</string>
+
+    <string name="create_collection_save_to_collection_empty">Pilih tab untuk menyimpan</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">%d tab yang dipilih</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">Tab %d dipilih</string>
+
+    <string name="create_collection_tabs_saved">Tab disimpan!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Koleksi disimpan!</string>
+
+    <string name="create_collection_tab_saved">Tab disimpan!</string>
+
+    <string name="create_collection_close">Tutup</string>
+
+    <string name="create_collection_save">Simpan</string>
+
+    <string name="create_collection_view">Melihat</string>
+
+    <string name="create_collection_positive">BAIKLAH.</string>
+
+    <string name="create_collection_negative">Batal</string>
+
+
+    <string name="create_collection_default_name">Koleksi %d</string>
+
+
+    <string name="share_header_2">Bagikan</string>
+
+    <string name="share_button_content_description">Bagikan</string>
+
+    <string name="share_device_subheader">Kirim ke perangkat</string>
+
+    <string name="share_link_all_apps_subheader">Semua tindakan</string>
+
+    <string name="share_link_recent_apps_subheader">Baru-baru ini digunakan</string>
+
+    <string name="share_copy_link_to_clipboard">Salin ke papan klip</string>
+
+    <string name="toast_copy_link_to_clipboard">Disalin ke papan klip</string>
+
+    <string name="sync_menu_sign_in">Masuk untuk menyinkronkan</string>
+
+    <string name="sync_sign_in">Masuk ke Sinkronisasi</string>
+
+    <string name="sync_send_to_all">Kirim ke semua perangkat</string>
+
+    <string name="sync_reconnect">Hubungkan kembali ke Sinkronisasi</string>
+
+    <string name="sync_offline">Offline</string>
+
+    <string name="sync_connect_device">Menyambungkan perangkat lain</string>
+
+    <string name="sync_connect_device_dialog">Untuk mengirim tab, masuk ke Waterfox di setidaknya satu perangkat lain.</string>
+
+    <string name="sync_confirmation_button">Mengerti.</string>
+
+    <string name="share_error_snackbar">Tidak dapat berbagi ke aplikasi ini</string>
+
+    <string name="sync_add_new_device_title">Kirim ke perangkat</string>
+
+    <string name="sync_add_new_device_message">Tidak Ada Perangkat yang Tersambung</string>
+
+    <string name="sync_add_new_device_learn_button">Pelajari Tentang Mengirim Tab...</string>
+
+    <string name="sync_add_new_device_connect_button">Hubungkan Perangkat Lain...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Menutup tab pribadi</string>
+
+    <string name="notification_marketing_channel_name">Pemasaran</string>
+
+    <string name="notification_default_browser_title">%1$s cepat dan pribadi</string>
+
+    <string name="notification_default_browser_text">Jadikan %1 sebagai browser default Anda</string>
+
+
+    <string name="snackbar_collection_deleted">Koleksi dihapus</string>
+
+    <string name="snackbar_collection_renamed">Koleksi berganti nama</string>
+
+    <string name="snackbar_tab_closed">Tab ditutup</string>
+
+    <string name="snackbar_tabs_closed">Tab ditutup</string>
+
+    <string name="snackbar_message_bookmarks_saved">Penanda tersimpan!</string>
+
+    <string name="snackbar_added_to_shortcuts">Ditambahkan ke pintasan!</string>
+
+    <string name="snackbar_private_tab_closed">Tab pribadi ditutup</string>
+
+    <string name="snackbar_private_tabs_closed">Tab pribadi ditutup</string>
+
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <string name="snackbar_top_site_removed">Situs dihapus</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">Izinkan %1$ untuk membuka %2$</string>
+
+    <string name="qr_scanner_dialog_positive">BOLEHKAN</string>
+
+    <string name="qr_scanner_dialog_negative">DENY</string>
+
+    <string name="qr_scanner_dialog_invalid">Alamat web tidak valid.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">BAIKLAH.</string>
+
+    <string name="tab_collection_dialog_message">Apakah Anda yakin ingin menghapus %1$s?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">Menghapus tab ini akan menghapus seluruh koleksi. Anda dapat membuat koleksi baru kapan saja.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">Hapus %1$s?</string>
+
+    <string name="tab_collection_dialog_positive">Menghapus</string>
+
+    <string name="full_screen_notification">Memasuki mode layar penuh</string>
+
+    <string name="url_copied">URL disalin</string>
+
+    <string name="accessibility_text_size_sample_text_1">Ini adalah contoh teks. Di sini untuk menunjukkan, bagaimana teks akan muncul apabila Anda menambah atau mengurangi ukuran dengan pengaturan ini.</string>
+
+    <string name="preference_accessibility_text_size_summary">Membuat teks di situs web lebih besar atau lebih kecil</string>
+
+    <string name="preference_accessibility_font_size_title">Ukuran Font</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Ukuran font otomatis</string>
+
+    <string name="preference_accessibility_auto_size_summary">Ukuran font akan sesuai dengan pengaturan Android Anda. Nonaktifkan untuk mengelola ukuran font di sini.</string>
+
+
+    <string name="preferences_delete_browsing_data">Menghapus data penjelajahan</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Buka tab</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d tab</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Riwayat penjelajahan dan data situs</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">Alamat %d</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Cookie</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Anda akan keluar dari sebagian besar situs</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Gambar dan file yang di-cache</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Membebaskan ruang penyimpanan</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Izin situs</string>
+
+    <string name="preferences_delete_browsing_data_downloads">Unduhan</string>
+
+    <string name="preferences_delete_browsing_data_button">Menghapus data penjelajahan</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Menghapus data penjelajahan saat keluar</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Secara otomatis menghapus data penjelajahan saat Anda memilih "Keluar" dari menu utama</string>
+
+    <string name="delete_browsing_data_on_quit_action">Berhenti</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">Ini akan menghapus semua data penjelajahan Anda.</string>
+
+    <string name="delete_history_prompt_title">Rentang waktu untuk menghapus</string>
+
+    <string name="delete_history_prompt_body">Menghapus riwayat (termasuk riwayat yang disinkronkan dari perangkat lain), cookie, dan data penelusuran lainnya.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Satu jam terakhir</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Hari ini dan kemarin</string>
+
+    <string name="delete_history_prompt_button_everything">Semuanya.</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">%s akan menghapus data penelusuran yang dipilih.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">Batal</string>
+
+    <string name="delete_browsing_data_prompt_allow">Menghapus</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Data penjelajahan dihapus</string>
+
+    <string name="deleting_browsing_data_in_progress">Menghapus data penelusuran...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">Menghapus semua situs dalam "%s"</string>
+
+    <string name="delete_history_group_prompt_cancel">Batal</string>
+
+    <string name="delete_history_group_prompt_allow">Menghapus</string>
+
+    <string name="delete_history_group_snackbar">Grup dihapus</string>
+
+
+    <string name="onboarding_header_2">Selamat datang di web yang lebih pribadi</string>
+
+    <string name="onboarding_message">Peramban akar rumput yang independen.</string>
+
+    <string name="onboarding_account_sign_in_header">Lanjutkan dari bagian terakhir yang Anda tinggalkan</string>
+
+    <string name="onboarding_manual_sign_in_description">Sinkronkan tab dan kata sandi di seluruh perangkat untuk peralihan layar yang mulus.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Masuk</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">Sinkronisasi aktif</string>
+
+    <string name="onboarding_tracking_protection_header">Perlindungan privasi secara default</string>
+
+    <string name="onboarding_tracking_protection_description">Dilengkapi dengan Perlindungan Cookie Total untuk menghentikan pelacak menggunakan cookie untuk menguntit Anda di seluruh situs.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Standar (default)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Seimbang untuk privasi dan kinerja. Halaman dimuat secara normal.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Ketat</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Memblokir lebih banyak pelacak sehingga halaman dimuat lebih cepat, tetapi beberapa fungsionalitas pada halaman mungkin rusak.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Pilih penempatan bilah alat Anda</string>
+
+    <string name="onboarding_toolbar_placement_description">Simpan di bagian bawah, atau pindahkan ke bagian atas.</string>
+
+    <string name="onboarding_privacy_notice_header_1">Anda mengontrol data Anda</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox tidak mengumpulkan telemetri apa pun dan memberi Anda kendali atas data Anda.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Baca pemberitahuan privasi kami</string>
+
+    <string name="onboarding_conclusion_header">Siap untuk membuka internet yang luar biasa?</string>
+
+    <string name="onboarding_finish">Mulai menjelajah</string>
+
+
+    <string name="onboarding_theme_picker_header">Pilih tema Anda</string>
+
+    <string name="onboarding_theme_picker_description_2">Menghemat baterai dan penglihatan Anda dengan mode gelap.</string>
+
+    <string name="onboarding_theme_automatic_title">Otomatis</string>
+
+    <string name="onboarding_theme_automatic_summary">Beradaptasi dengan pengaturan perangkat Anda</string>
+
+    <string name="onboarding_theme_dark_title">Tema gelap</string>
+
+    <string name="onboarding_theme_light_title">Tema cahaya</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Tab dikirim!</string>
+
+    <string name="sync_sent_tab_snackbar">Tab terkirim!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Tidak dapat mengirim</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+
+    <string name="sync_scan_code">Memindai kode</string>
+
+    <string name="sign_in_instructions">Waterfox mengandalkan akun Mozilla untuk menyinkronkan data antara ponsel dan desktop.&lt;br&gt; Di komputer Anda, buka Waterfox dan buka &lt;b&gt;https://firefox.com/pair&lt;/b&gt; &lt;b&gt;Mozilla sama sekali tidak berafiliasi dengan Waterfox.&lt;/i&gt;</string>
+
+    <string name="sign_in_ready_for_scan">Siap untuk memindai</string>
+
+    <string name="sign_in_with_camera">Masuk dengan kamera Anda</string>
+
+    <string name="sign_in_with_email">Gunakan email sebagai gantinya</string>
+
+    <string name="sign_in_create_account_text">Tidak punya akun? &lt;u&gt;Buat akun&lt;/u&gt; untuk menyinkronkan Waterfox di antara perangkat.</string>
+
+    <string name="sign_out_confirmation_message_2">%s akan berhenti menyinkronkan dengan akun Anda, tetapi tidak akan menghapus data penjelajahan Anda di perangkat ini.</string>
+
+    <string name="sign_out_disconnect">Putuskan sambungan</string>
+
+    <string name="sign_out_cancel">Batal</string>
+
+    <string name="bookmark_cannot_edit_root">Tidak dapat mengedit folder default</string>
+
+
+    <string name="etp_settings">Pengaturan Perlindungan</string>
+
+    <string name="preference_enhanced_tracking_protection">Perlindungan Pelacakan yang Ditingkatkan</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Menjelajah tanpa diikuti</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Menyimpan data Anda untuk diri Anda sendiri. %s melindungi Anda dari banyak pelacak paling umum yang mengikuti apa yang Anda lakukan secara online.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Pelajari lebih lanjut</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standar (default)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Seimbang untuk privasi dan kinerja. Halaman dimuat secara normal.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Apa yang diblokir oleh perlindungan pelacakan standar</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Ketat</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Memblokir lebih banyak pelacak sehingga halaman dimuat lebih cepat, tetapi beberapa fungsionalitas pada halaman mungkin rusak.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Apa yang diblokir oleh perlindungan pelacakan yang ketat</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Kustom</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Pilih pelacak dan skrip mana yang akan diblokir.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Apa yang diblokir oleh perlindungan pelacakan khusus</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookie</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Pelacak lintas situs dan media sosial</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookie dari situs yang tidak dikunjungi</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Semua cookie pihak ketiga (dapat menyebabkan situs web rusak)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Semua cookie (akan menyebabkan situs web rusak)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Mengisolasi cookie lintas situs</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Melacak konten</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Di semua tab</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Hanya di tab Pribadi</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Pemindai sidik jari</string>
+
+    <string name="enhanced_tracking_protection_details">Detail</string>
+
+    <string name="enhanced_tracking_protection_blocked">Diblokir</string>
+
+    <string name="enhanced_tracking_protection_allowed">Diizinkan</string>
+
+    <string name="etp_social_media_trackers_title">Pelacak Media Sosial</string>
+
+    <string name="etp_social_media_trackers_description">Membatasi kemampuan jejaring sosial untuk melacak aktivitas penjelajahan Anda di web.</string>
+
+    <string name="etp_cookies_title">Cookie Pelacakan Lintas Situs</string>
+
+    <string name="etp_cookies_title_2">Cookie Lintas Situs</string>
+
+    <string name="etp_cookies_description">Memblokir cookie yang digunakan jaringan iklan dan perusahaan analitik untuk mengumpulkan data penjelajahan Anda di banyak situs.</string>
+
+    <string name="etp_cookies_description_2">Total Cookie Protection mengisolasi cookie pada situs yang Anda kunjungi sehingga pelacak seperti jaringan iklan tidak dapat menggunakannya untuk mengikuti Anda di seluruh situs.</string>
+
+    <string name="etp_cryptominers_title">Cryptominers</string>
+
+    <string name="etp_cryptominers_description">Mencegah skrip berbahaya mendapatkan akses ke perangkat Anda untuk menambang mata uang digital.</string>
+
+    <string name="etp_fingerprinters_title">Pemindai sidik jari</string>
+
+    <string name="etp_fingerprinters_description">Menghentikan pengumpulan data yang dapat diidentifikasi secara unik tentang perangkat Anda yang dapat digunakan untuk tujuan pelacakan.</string>
+
+    <string name="etp_tracking_content_title">Melacak Konten</string>
+
+    <string name="etp_tracking_content_description">Menghentikan pemuatan iklan, video, dan konten lain yang mengandung kode pelacakan. Dapat memengaruhi beberapa fungsionalitas situs web.</string>
+
+    <string name="etp_panel_on">Perlindungan AKTIF untuk situs ini</string>
+
+    <string name="etp_panel_off">Perlindungan dinonaktifkan untuk situs ini</string>
+
+    <string name="enhanced_tracking_protection_exceptions">Perlindungan Pelacakan yang Ditingkatkan dinonaktifkan untuk situs web ini</string>
+
+    <string name="etp_back_button_content_description">Menavigasi kembali</string>
+
+    <string name="open_source_licenses_title">%s | Perpustakaan OSS</string>
+
+    <string name="etp_redirect_trackers_title">Pelacak Pengalihan</string>
+
+    <string name="etp_redirect_trackers_description">Menghapus cookie yang ditetapkan oleh pengalihan ke situs web pelacakan yang dikenal.</string>
+
+    <string name="preference_etp_smartblock_description">Beberapa pelacak yang ditandai di bawah ini telah dibuka sebagian blokirnya di halaman ini karena Anda berinteraksi dengan mereka*.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Pelajari lebih lanjut</string>
+
+
+    <string name="about_support">Dukungan</string>
+
+    <string name="about_crashes">Kecelakaan</string>
+
+    <string name="about_privacy_notice">Pemberitahuan privasi</string>
+
+    <string name="about_know_your_rights">Ketahui hak-hak Anda</string>
+
+    <string name="about_licensing_information">Informasi perizinan</string>
+
+    <string name="about_other_open_source_libraries">Pustaka yang kami gunakan</string>
+
+    <string name="about_debug_menu_toast_progress">Menu debug: %1$ klik kiri untuk mengaktifkan</string>
+    <string name="about_debug_menu_toast_done">Menu debug diaktifkan</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Salin</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Rekatkan &amp; Pergi</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Tempel</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL disalin ke papan klip</string>
+
+
+    <string name="add_to_homescreen_title">Tambahkan ke layar Beranda</string>
+
+    <string name="add_to_homescreen_cancel">Batal</string>
+
+    <string name="add_to_homescreen_add">Menambahkan</string>
+
+    <string name="add_to_homescreen_continue">Lanjutkan ke situs web</string>
+
+    <string name="add_to_homescreen_text_placeholder">Nama pintasan</string>
+
+    <string name="add_to_homescreen_description_2">Anda dapat dengan mudah menambahkan situs web ini ke layar Beranda perangkat Anda untuk mendapatkan akses instan dan menjelajah lebih cepat dengan pengalaman seperti aplikasi.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Login dan kata sandi</string>
+
+    <string name="preferences_passwords_save_logins">Menyimpan login dan kata sandi</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Minta untuk menyimpan</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Jangan pernah menyimpan</string>
+
+    <string name="preferences_passwords_autofill2">Isi otomatis dalam %1$s</string>
+
+    <string name="preferences_passwords_autofill_description">Isi dan simpan nama pengguna dan kata sandi di situs web saat menggunakan %1$s.</string>
+
+    <string name="preferences_android_autofill">Isi otomatis di aplikasi lain</string>
+
+    <string name="preferences_android_autofill_description">Isi nama pengguna dan kata sandi di aplikasi lain di perangkat Anda.</string>
+
+    <string name="preferences_logins_add_login">Tambahkan login</string>
+
+
+    <string name="preferences_passwords_sync_logins">Menyinkronkan login</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Menyinkronkan login di seluruh perangkat</string>
+
+    <string name="preferences_passwords_saved_logins">Login tersimpan</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">Login yang Anda simpan atau sinkronkan ke %s akan muncul di sini.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Pelajari lebih lanjut tentang Sinkronisasi.</string>
+
+    <string name="preferences_passwords_exceptions">Pengecualian</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">Login dan kata sandi yang tidak disimpan akan ditampilkan di sini.</string>
+
+    <string name="preferences_passwords_exceptions_description">Login dan kata sandi tidak akan disimpan untuk situs-situs ini.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Menghapus semua pengecualian</string>
+
+    <string name="preferences_passwords_saved_logins_search">Cari login</string>
+
+    <string name="preferences_passwords_saved_logins_site">Situs</string>
+
+    <string name="preferences_passwords_saved_logins_username">Nama pengguna</string>
+
+    <string name="preferences_passwords_saved_logins_password">Kata sandi</string>
+
+    <string name="logins_password_copied">Kata sandi disalin ke papan klip</string>
+
+    <string name="logins_username_copied">Nama pengguna disalin ke papan klip</string>
+
+    <string name="saved_logins_copy_password">Salin kata sandi</string>
+
+    <string name="saved_logins_clear_password">Hapus kata sandi</string>
+
+    <string name="saved_login_copy_username">Salin nama pengguna</string>
+
+    <string name="saved_login_clear_username">Hapus nama pengguna</string>
+
+    <string name="saved_login_clear_hostname">Hapus nama host</string>
+
+    <string name="saved_login_open_site">Buka situs di browser</string>
+
+    <string name="saved_login_reveal_password">Tampilkan kata sandi</string>
+
+    <string name="saved_login_hide_password">Sembunyikan kata sandi</string>
+
+    <string name="logins_biometric_prompt_message">Buka kunci untuk melihat login Anda yang tersimpan</string>
+
+    <string name="logins_warning_dialog_title">Amankan login dan kata sandi Anda</string>
+
+    <string name="logins_warning_dialog_message">Mengatur pola kunci perangkat, PIN, atau kata sandi untuk melindungi login dan kata sandi yang tersimpan agar tidak dapat diakses oleh orang lain yang memiliki perangkat Anda.</string>
+
+    <string name="logins_warning_dialog_later">Kemudian</string>
+
+    <string name="logins_warning_dialog_set_up_now">Siapkan sekarang</string>
+
+    <string name="logins_biometric_prompt_message_pin">Membuka kunci perangkat Anda</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Memperbesar semua situs web</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Aktifkan untuk mengizinkan cubit dan zoom, bahkan pada situs web yang mencegah gerakan ini.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">Nama (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Terakhir digunakan</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Mengurutkan menu login</string>
+
+
+    <string name="preferences_autofill">Isi otomatis</string>
+
+    <string name="preferences_addresses">Alamat</string>
+
+    <string name="preferences_credit_cards">Kartu kredit</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Menyimpan dan mengisi kartu secara otomatis</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Data dienkripsi</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Menyinkronkan kartu di seluruh perangkat</string>
+
+    <string name="preferences_credit_cards_sync_cards">Menyinkronkan kartu</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Tambahkan kartu kredit</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Mengelola kartu yang disimpan</string>
+
+    <string name="preferences_addresses_add_address">Tambahkan alamat</string>
+
+    <string name="preferences_addresses_manage_addresses">Mengelola alamat</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Menyimpan dan mengisi alamat secara otomatis</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Sertakan informasi seperti nomor, email, dan alamat pengiriman</string>
+
+
+    <string name="credit_cards_add_card">Menambahkan kartu</string>
+
+    <string name="credit_cards_edit_card">Mengedit kartu</string>
+
+    <string name="credit_cards_card_number">Nomor Kartu</string>
+
+    <string name="credit_cards_expiration_date">Tanggal Kedaluwarsa</string>
+
+    <string name="credit_cards_expiration_date_month">Tanggal Kedaluwarsa Bulan</string>
+
+    <string name="credit_cards_expiration_date_year">Tanggal Kedaluwarsa Tahun</string>
+
+    <string name="credit_cards_name_on_card">Nama pada Kartu</string>
+
+    <string name="credit_cards_menu_delete_card">Menghapus kartu</string>
+
+    <string name="credit_cards_delete_card_button">Menghapus kartu</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">Apakah Anda yakin ingin menghapus kartu kredit ini?</string>
+
+    <string name="credit_cards_delete_dialog_button">Menghapus</string>
+
+    <string name="credit_cards_menu_save">Simpan</string>
+
+    <string name="credit_cards_save_button">Simpan</string>
+
+    <string name="credit_cards_cancel_button">Batal</string>
+
+    <string name="credit_cards_saved_cards">Kartu yang disimpan</string>
+
+    <string name="credit_cards_number_validation_error_message">Masukkan nomor kartu kredit yang valid</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Silakan isi kolom ini</string>
+
+    <string name="credit_cards_biometric_prompt_message">Buka kunci untuk melihat kartu yang disimpan</string>
+
+    <string name="credit_cards_warning_dialog_title">Amankan kartu kredit Anda</string>
+
+    <string name="credit_cards_warning_dialog_message">Atur pola kunci perangkat, PIN, atau kata sandi untuk melindungi kartu kredit yang tersimpan agar tidak dapat diakses oleh orang lain yang memiliki perangkat Anda.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Siapkan sekarang</string>
+
+    <string name="credit_cards_warning_dialog_later">Kemudian</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Membuka kunci perangkat Anda</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Buka kunci untuk menggunakan informasi kartu kredit yang tersimpan</string>
+
+    <string name="addresses_add_address">Tambahkan alamat</string>
+
+    <string name="addresses_edit_address">Edit alamat</string>
+
+    <string name="addresses_manage_addresses">Mengelola alamat</string>
+
+    <string name="addresses_first_name">Nama depan</string>
+
+    <string name="addresses_middle_name">Nama Tengah</string>
+
+    <string name="addresses_last_name">Nama belakang</string>
+
+    <string name="addresses_street_address">Alamat Jalan</string>
+
+    <string name="addresses_city">Kota</string>
+
+    <string name="addresses_state">Negara</string>
+
+    <string name="addresses_province">Provinsi</string>
+
+    <string name="addresses_zip">Zip</string>
+
+    <string name="addresses_country">Negara atau wilayah</string>
+
+    <string name="addresses_phone">Telepon</string>
+
+    <string name="addresses_email">Email</string>
+
+    <string name="addresses_save_button">Simpan</string>
+
+    <string name="addresses_cancel_button">Batal</string>
+
+    <string name="addressess_delete_address_button">Menghapus alamat</string>
+
+    <string name="addressess_confirm_dialog_message">Apakah Anda yakin ingin menghapus alamat ini?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Menghapus</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">Batal</string>
+
+    <string name="address_menu_save_address">Simpan alamat</string>
+
+    <string name="address_menu_delete_address">Menghapus alamat</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Tambahkan mesin pencari</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Edit mesin pencari</string>
+
+    <string name="search_engine_add_button_content_description">Menambahkan</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Simpan</string>
+
+    <string name="search_engine_edit">Sunting</string>
+
+    <string name="search_engine_delete">Menghapus</string>
+
+
+    <string name="search_add_custom_engine_label_other">Lainnya</string>
+
+    <string name="search_add_custom_engine_name_hint">Nama</string>
+
+    <string name="search_add_custom_engine_search_string_hint">String pencarian untuk digunakan</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Ganti kueri dengan "%s". Contoh:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Detail mesin pencari khusus</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Masukkan nama mesin pencari</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Masukkan string pencarian</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Periksa apakah string pencarian cocok dengan format Contoh</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">Kesalahan saat menyambung ke "%s"</string>
+
+    <string name="search_add_custom_engine_success_message">Dibuat %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Tersimpan %s</string>
+
+    <string name="search_delete_search_engine_success_message">Dihapus %s</string>
+
+
+    <string name="phone_feature_blocked_intro">Untuk mengizinkannya:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Buka Pengaturan Android</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. Ketuk &lt;b&gt;Izin&lt;/b&gt;</string>
+
+    <string name="phone_feature_blocked_step_feature">3. Mengalihkan &lt;b&gt;%1$s&lt;/b&gt; ke ON</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">Koneksi aman</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">Koneksi tidak aman</string>
+
+    <string name="clear_site_data">Hapus cookie dan data situs</string>
+
+    <string name="confirm_clear_site_data">Apakah Anda yakin ingin menghapus semua cookie dan data untuk situs &lt;b&gt;%s&lt;/b&gt;?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Apakah Anda yakin ingin menghapus semua izin di semua situs?</string>
+
+    <string name="confirm_clear_permissions_site">Apakah Anda yakin ingin menghapus semua izin untuk situs ini?</string>
+
+    <string name="confirm_clear_permission_site">Apakah Anda yakin ingin menghapus izin ini untuk situs ini?</string>
+
+    <string name="no_site_exceptions">Tidak ada pengecualian situs</string>
+
+    <string name="bookmark_deletion_confirmation">Apakah Anda yakin ingin menghapus penanda ini?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Tambahkan ke pintasan</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Hapus dari pintasan</string>
+
+    <string name="certificate_info_verified_by">Diverifikasi oleh: %1$s</string>
+
+    <string name="login_menu_delete_button">Menghapus</string>
+
+    <string name="login_menu_edit_button">Sunting</string>
+
+    <string name="login_deletion_confirmation">Apakah Anda yakin ingin menghapus login ini?</string>
+
+    <string name="dialog_delete_positive">Menghapus</string>
+
+    <string name="dialog_delete_negative">Batal</string>
+
+    <string name="login_options_menu">Opsi masuk</string>
+
+    <string name="saved_login_hostname_description">Bidang teks yang dapat diedit untuk alamat web login.</string>
+
+    <string name="saved_login_username_description">Bidang teks yang dapat diedit untuk nama pengguna login.</string>
+
+    <string name="saved_login_password_description">Bidang teks yang dapat diedit untuk kata sandi login.</string>
+
+    <string name="save_changes_to_login">Menyimpan perubahan untuk masuk.</string>
+
+    <string name="edit">Sunting</string>
+
+    <string name="add_login">Tambahkan login baru</string>
+
+    <string name="saved_login_password_required">Diperlukan kata sandi</string>
+
+    <string name="saved_login_username_required">Nama pengguna diperlukan</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Diperlukan nama host</string>
+
+    <string name="voice_search_content_description">Pencarian suara</string>
+
+    <string name="voice_search_explainer">Bicaralah sekarang</string>
+
+    <string name="saved_login_duplicate">Login dengan nama pengguna tersebut sudah ada</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">Alamat web harus berisi "https://" atau "http://"</string>
+
+    <string name="add_login_hostname_invalid_text_2">Diperlukan nama host yang valid</string>
+
+
+    <string name="synced_tabs_connect_another_device">Menyambungkan perangkat lain.</string>
+
+    <string name="synced_tabs_reauth">Harap lakukan autentikasi ulang.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Aktifkan sinkronisasi tab.</string>
+
+    <string name="synced_tabs_no_tabs">Anda tidak memiliki tab yang terbuka di Waterfox di perangkat lain.</string>
+
+    <string name="synced_tabs_sign_in_message">Melihat daftar tab dari perangkat Anda yang lain.</string>
+
+    <string name="synced_tabs_sign_in_button">Masuk untuk menyinkronkan</string>
+
+    <string name="synced_tabs_no_open_tabs">Tidak ada tab yang terbuka</string>
+
+    <string name="synced_tabs_expand_group">Memperluas grup tab yang disinkronkan</string>
+
+    <string name="synced_tabs_collapse_group">Menciutkan grup tab yang disinkronkan</string>
+
+
+    <string name="shortcut_max_limit_title">Batas pintasan tercapai</string>
+
+    <string name="shortcut_max_limit_content">Untuk menambahkan pintasan baru, hapus pintasan. Sentuh dan tahan situs, lalu pilih hapus.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">OK, Got It</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Pintasan</string>
+
+    <string name="top_sites_rename_dialog_title">Nama</string>
+
+    <string name="shortcut_name_hint">Nama pintasan</string>
+
+    <string name="top_sites_rename_dialog_ok">BAIKLAH.</string>
+
+    <string name="top_sites_rename_dialog_cancel">Batal</string>
+
+    <string name="top_sites_menu_settings">Pengaturan</string>
+
+    <string name="top_sites_menu_sponsor_privacy">Sponsor kami &amp; privasi Anda</string>
+
+    <string name="top_sites_sponsored_label">Disponsori</string>
+
+
+    <string name="inactive_tabs_title">Tab yang tidak aktif</string>
+
+    <string name="inactive_tabs_delete_all">Tutup semua tab yang tidak aktif</string>
+
+    <string name="inactive_tabs_expand_content_description">Memperluas tab yang tidak aktif</string>
+
+    <string name="inactive_tabs_collapse_content_description">Menciutkan tab yang tidak aktif</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Tutup otomatis setelah satu bulan?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox dapat menutup tab yang tidak Anda lihat selama sebulan terakhir.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AKTIFKAN TUTUP OTOMATIS</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Tutup otomatis diaktifkan</string>
+
+
+    <string name="default_browser_experiment_card_text">Mengatur tautan dari situs web, email, dan pesan agar terbuka secara otomatis di Waterfox.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Menghapus</string>
+
+
+    <string name="radio_preference_info_content_description">Klik untuk detail lebih lanjut</string>
+
+
+    <string name="action_bar_up_description">Arahkan ke atas</string>
+
+
+    <string name="privacy_content_close_button_content_description">Tutup</string>
+
+    <string name="waterfox_suggest_header">Waterfox menyarankan</string>
+</resources>

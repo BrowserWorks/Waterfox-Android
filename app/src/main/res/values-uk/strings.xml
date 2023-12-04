@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Приватні %s</string>
+
+    <string name="app_name_private_4">%s (Приватний)</string>
+
+
+    <string name="content_description_menu">Більше можливостей</string>
+
+    <string name="content_description_private_browsing_button">Увімкнути приватний перегляд</string>
+
+    <string name="content_description_disable_private_browsing_button">Вимкнути приватний перегляд</string>
+
+    <string name="search_hint">Пошук або введення адреси</string>
+
+    <string name="application_search_hint">Введіть пошукові запити</string>
+
+    <string name="no_open_tabs_description">Тут будуть показані ваші відкриті вкладки.</string>
+
+    <string name="no_private_tabs_description">Тут будуть показані ваші приватні вкладки.</string>
+
+    <string name="tab_tray_multi_select_title">вибрано %1$d</string>
+
+    <string name="tab_tray_add_new_collection">Додати нову колекцію</string>
+
+    <string name="tab_tray_add_new_collection_name">Ім\'я</string>
+
+    <string name="tab_tray_select_collection">Виберіть колекцію</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Вийдіть з режиму багатовекторного вибору</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Зберегти вибрані вкладки до колекції</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Вибране</string>
+
+
+    <string name="recently_saved_title">Нещодавно збережено</string>
+
+    <string name="recently_saved_show_all_content_description_2">Показати всі збережені закладки</string>
+
+    <string name="recently_saved_menu_item_remove">Видалити</string>
+
+
+    <string name="about_content">%1$s зроблено компанією BrowserWorks</string>
+
+
+    <string name="private_browsing_placeholder_description_2">%1$s очищає історію пошуку та перегляду з приватних вкладок, коли ви закриваєте їх або виходите з програми. Хоча це не робить вас анонімним для веб-сайтів або вашого інтернет-провайдера, це полегшує збереження ваших дій в Інтернеті в таємниці від будь-кого, хто використовує цей пристрій.</string>
+    <string name="private_browsing_common_myths">Поширені міфи про приватний перегляд</string>
+
+
+    <string name="cfr_message">Додайте ярлик для відкриття приватних вкладок з головного екрана.</string>
+
+    <string name="cfr_pos_button_text">Додати ярлик</string>
+
+    <string name="cfr_neg_button_text">Ні, дякую.</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">Ви можете встановити %1$s для автоматичного відкриття посилань у програмах.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Перейдіть до налаштувань</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Звільнити.</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Звільнити.</string>
+
+
+    <string name="tcp_cfr_message">Наша найпотужніша функція конфіденційності ще й ізолює міжсайтовий трекер.</string>
+
+    <string name="tcp_cfr_learn_more">Дізнайтеся про повний захист від файлів cookie</string>
+
+
+    <string name="camera_permissions_needed_message">Потрібен доступ до камери. Перейдіть до налаштувань Android, торкніться Дозволи, а потім торкніться Дозволити.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Перейдіть до налаштувань</string>
+
+    <string name="camera_permissions_needed_negative_button_text">Звільнити.</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Налаштуйте автоматичне закриття відкритих вкладок, які не переглядалися протягом останнього дня, тижня або місяця.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Параметри перегляду</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Звільнити.</string>
+
+    <string name="tab_tray_inactive_onboarding_message">Сюди переміщуються вкладки, які ви не переглядали протягом двох тижнів.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Вимкнути в налаштуваннях</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Автоматичне закриття через місяць?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s може закривати вкладки, які ви не переглядали протягом останнього місяця.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Закрити</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Увімкнути автоматичне закриття</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Нова вкладка</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Нова приватна вкладка</string>
+
+
+    <string name="recent_tabs_header">Поверніться назад</string>
+
+    <string name="recent_tabs_show_all">Показати всі</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Кнопка "Показати всі останні вкладки</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Ваш пошук для \"%1$s\"</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d сайтів</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Переглянути всі синхронізовані вкладки</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Синхронізований пристрій</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Видалити</string>
+
+    <string name="recent_tab_menu_item_remove">Видалити</string>
+
+
+    <string name="history_metadata_header_2">Нещодавно відвідані</string>
+
+    <string name="recently_visited_menu_item_remove">Видалити</string>
+
+    <string name="past_explorations_show_all_content_description_2">Показати всі попередні дослідження</string>
+
+
+    <string name="browser_menu_back">Назад</string>
+
+    <string name="browser_menu_forward">Вперед.</string>
+
+    <string name="browser_menu_refresh">Оновити</string>
+
+    <string name="browser_menu_stop">Стоп!</string>
+
+    <string name="browser_menu_add_ons">Доповнення</string>
+
+    <string name="no_add_ons">Тут немає доповнень</string>
+
+    <string name="browser_menu_help">Допоможіть!</string>
+
+    <string name="browser_menu_settings">Налаштування</string>
+
+    <string name="browser_menu_library">Бібліотека</string>
+
+    <string name="browser_menu_desktop_site">Десктопний сайт</string>
+
+    <string name="browser_menu_add_to_homescreen">Додати на головний екран</string>
+
+    <string name="browser_menu_install_on_homescreen">Встановити</string>
+
+    <string name="resync_button_content_description">Пересинхронізувати</string>
+
+    <string name="browser_menu_find_in_page">Знайти на сторінці</string>
+
+    <string name="browser_menu_save_to_collection_2">Зберегти в колекції</string>
+
+    <string name="browser_menu_share">Поділіться</string>
+
+    <string name="browser_menu_open_in_waterfox">Відкрити в %1$s</string>
+
+    <string name="browser_menu_powered_by">ПИТАЄТЬСЯ %1$s</string>
+
+    <string name="browser_menu_powered_by2">Працює на %1$s</string>
+
+    <string name="browser_menu_read">Погляд читача</string>
+
+    <string name="browser_menu_read_close">Ближче до читача</string>
+
+    <string name="browser_menu_open_app_link">Відкрити в додатку</string>
+
+    <string name="browser_menu_customize_reader_view">Налаштуйте вигляд читача</string>
+
+    <string name="browser_menu_add">Додати</string>
+
+    <string name="browser_menu_edit">Редагувати</string>
+
+    <string name="browser_menu_customize_home_1">Налаштувати домашню сторінку</string>
+
+
+    <string name="browser_toolbar_home">Головний екран</string>
+
+
+    <string name="a11y_selected_locale_content_description">Обрана мова</string>
+
+    <string name="default_locale_text">Дотримуйтесь мови пристрою</string>
+
+    <string name="locale_search_hint">Мова пошуку</string>
+
+
+    <string name="search_scan_button">Сканування.</string>
+
+    <string name="search_engine_button">Пошукова система</string>
+
+    <string name="search_shortcuts_engine_settings">Налаштування пошукової системи</string>
+
+    <string name="awesomebar_clipboard_title">Заповнити посилання з буфера обміну</string>
+
+    <string name="search_suggestions_onboarding_allow_button">Дозвольте</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">Не дозволяйте</string>
+
+    <string name="search_suggestions_onboarding_title">Дозволити пошукові підказки в приватних сесіях?</string>
+
+    <string name="search_suggestions_onboarding_text">%s передасть усе, що ви введете в адресний рядок, вашій пошуковій системі за замовчуванням.</string>
+
+    <string name="search_engine_suggestions_title">Пошук %s</string>
+
+    <string name="search_engine_suggestions_description">Пошук безпосередньо з адресного рядка</string>
+
+    <string name="search_settings_menu_item">Налаштування пошуку</string>
+
+
+    <string name="onboarding_home_screen_description_2">Тепер легше повернутися до того, на чому ви зупинилися.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Перехід до відкритих вкладок, закладок та історії браузера.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Чисті, впорядковані вкладки</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Приберіть безлад з вкладок за допомогою покращеної компоновки та автоматичного закриття вкладок.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Нещодавні пошукові запити</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Перегляньте свої останні пошукові запити на домашній сторінці та вкладках.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Зустрічайте вашу персоналізовану домашню сторінку. Тут з\'являться останні вкладки, закладки та результати пошуку.</string>
+
+    <string name="onboarding_home_welcome_title_2">Ласкаво просимо до більш особистого інтернету</string>
+
+    <string name="onboarding_home_welcome_description">Більше кольорів. Краща конфіденційність. Та ж прихильність до людей, а не до прибутку.</string>
+
+    <string name="onboarding_home_sync_title_3">Переходьте з телефону на ноутбук і назад</string>
+
+    <string name="onboarding_home_sync_description">Продовжуйте з вкладок з інших пристроїв на домашній сторінці, де ви зупинилися.</string>
+
+    <string name="onboarding_home_get_started_button">Починайте.</string>
+
+    <string name="onboarding_home_sign_in_button">Увійдіть в систему</string>
+
+    <string name="onboarding_home_skip_button">Пропустити.</string>
+
+    <string name="onboarding_home_content_description_close_button">Закрити</string>
+
+
+    <string name="search_widget_content_description_2">Відкрийте нову вкладку %1$s</string>
+
+    <string name="search_widget_text_short">Пошук</string>
+
+    <string name="search_widget_text_long">Пошук в Інтернеті</string>
+
+    <string name="search_widget_voice">Голосовий пошук</string>
+
+
+    <string name="settings">Налаштування</string>
+
+    <string name="preferences_category_general">Генерал</string>
+
+    <string name="preferences_category_about">Про</string>
+
+    <string name="preferences_default_search_engine">Пошукова система за замовчуванням</string>
+
+    <string name="preferences_search">Пошук</string>
+
+    <string name="preferences_search_address_bar">Адресний рядок</string>
+
+    <string name="preferences_rate">Оцініть в Google Play</string>
+
+    <string name="preferences_about">Близько %1$s</string>
+
+    <string name="preferences_set_as_default_browser">Встановити браузер за замовчуванням</string>
+
+    <string name="preferences_category_advanced">Розширений</string>
+
+    <string name="preferences_category_privacy_security">Конфіденційність і безпека</string>
+
+    <string name="preferences_site_permissions">Дозволи сайту</string>
+
+    <string name="preferences_private_browsing_options">Приватний перегляд</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Відкрийте посилання в приватній вкладці</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Дозволити скріншоти в приватному браузері</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Якщо це дозволено, приватні вкладки також будуть видимими, коли відкрито кілька програм</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Додати ярлик приватного перегляду</string>
+
+    <string name="preferences_https_only_title">Режим тільки HTTPS</string>
+
+    <string name="preferences_https_only_summary">Автоматично намагається з\'єднатися з сайтами, що використовують протокол шифрування HTTPS для підвищення безпеки.</string>
+
+    <string name="preferences_https_only_on">На</string>
+
+    <string name="preferences_https_only_off">Вимкнено</string>
+
+    <string name="preferences_http_only_learn_more">Дізнайтеся більше</string>
+
+    <string name="preferences_https_only_in_all_tabs">Увімкнути на всіх вкладках</string>
+
+    <string name="preferences_https_only_in_private_tabs">Увімкнути тільки в приватних вкладках</string>
+
+    <string name="errorpage_httpsonly_title">Безпечний сайт недоступний</string>
+
+    <string name="errorpage_httpsonly_message_title">Швидше за все, сайт просто не підтримує HTTPS.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Однак не виключено, що до цього може бути причетний зловмисник. Якщо ви продовжуєте користуватися сайтом, не вводьте ніякої конфіденційної інформації. Якщо ви продовжите, режим HTTPS-Only буде тимчасово вимкнено для сайту.</string>
+
+    <string name="preferences_accessibility">Доступність</string>
+
+    <string name="preferences_override_fxa_server">Спеціальний сервер облікових записів Waterfox</string>
+
+    <string name="preferences_override_sync_tokenserver">Спеціальний сервер синхронізації</string>
+
+    <string name="toast_override_fxa_sync_server_done">Змінено обліковий запис/сервер синхронізації Waterfox. Вихід з програми для застосування змін...</string>
+
+    <string name="preferences_category_account">Обліковий запис</string>
+
+    <string name="preferences_toolbar">Панель інструментів</string>
+
+    <string name="preferences_theme">Тема</string>
+
+    <string name="preferences_home_2">Головна сторінка</string>
+
+    <string name="preferences_gestures">Жести</string>
+
+    <string name="preferences_customize">Налаштувати</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Синхронізуйте закладки, історію та багато іншого з вашим обліковим записом Waterfox</string>
+
+    <string name="preferences_sign_in_description_2">Увійдіть, щоб синхронізувати вкладки, закладки, паролі тощо.</string>
+
+    <string name="preferences_account_default_name">Обліковий запис Waterfox</string>
+
+    <string name="preferences_account_sync_error">Перепідключіться, щоб відновити синхронізацію</string>
+
+    <string name="preferences_language">Мова</string>
+
+    <string name="preferences_remote_debugging">Віддалене налагодження через USB</string>
+
+    <string name="preferences_show_search_engines">Показати пошукові системи</string>
+
+    <string name="preferences_show_search_suggestions">Показати пропозиції пошуку</string>
+
+    <string name="preferences_show_voice_search">Показати голосовий пошук</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Показ на приватних сесіях</string>
+
+    <string name="preferences_show_clipboard_suggestions">Показати пропозиції буфера обміну</string>
+
+    <string name="preferences_search_browsing_history">Історія пошуку в браузері</string>
+
+    <string name="preferences_search_bookmarks">Пошукові закладки</string>
+
+    <string name="preferences_search_synced_tabs">Пошук синхронізованих вкладок</string>
+
+    <string name="preferences_account_settings">Налаштування облікового запису</string>
+
+    <string name="preferences_enable_autocomplete_urls">Автоматичне заповнення URL-адрес</string>
+
+    <string name="preferences_open_links_in_apps">Відкривайте посилання в додатках</string>
+
+    <string name="preferences_external_download_manager">Зовнішній менеджер завантажень</string>
+
+    <string name="preferences_addons">Доповнення</string>
+
+    <string name="preferences_notifications">Сповіщення</string>
+
+
+    <string name="preferences_customize_amo_collection">Спеціальна колекція доповнень</string>
+
+    <string name="customize_addon_collection_ok">ГАРАЗД.</string>
+
+    <string name="customize_addon_collection_cancel">Скасувати</string>
+
+    <string name="customize_addon_collection_hint">Назва колекції</string>
+
+    <string name="customize_addon_collection_user_hint">Власник колекції (ідентифікатор користувача)</string>
+
+    <string name="toast_customize_addon_collection_done">Змінено колекцію доповнень. Вихід з програми для застосування змін...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Поверніться назад</string>
+
+    <string name="customize_toggle_recent_bookmarks">Останні закладки</string>
+
+    <string name="customize_toggle_recently_visited">Нещодавно відвідані</string>
+
+    <string name="customize_wallpapers">Шпалери</string>
+
+    <string name="customize_toggle_contile">Спонсоровані ярлики</string>
+
+
+    <string name="wallpapers_item_name_content_description">Артикул шпалер: %1$s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Оновлені шпалери!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Вигляд</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Змінити шпалери, натиснувши на логотип домашньої сторінки Waterfox</string>
+
+    <string name="wallpaper_logo_content_description">Логотип Waterfox - змінити шпалери, кнопку</string>
+
+
+    <string name="addon_not_supported_error">Доповнення не підтримується</string>
+
+    <string name="addon_already_installed">Доповнення вже встановлено</string>
+
+
+    <string name="preferences_sync_now">Синхронізувати зараз</string>
+
+    <string name="preferences_sync_category">Виберіть, що синхронізувати</string>
+
+    <string name="preferences_sync_history">Історія</string>
+
+    <string name="preferences_sync_bookmarks">Закладки</string>
+
+    <string name="preferences_sync_logins">Логіни</string>
+
+    <string name="preferences_sync_tabs_2">Відкриті вкладки</string>
+
+    <string name="preferences_sign_out">Вийдіть з системи.</string>
+
+    <string name="preferences_sync_device_name">Назва пристрою</string>
+
+    <string name="empty_device_name_error">Ім\'я пристрою не може бути порожнім.</string>
+
+    <string name="sync_syncing_in_progress">Синхронізація...</string>
+
+    <string name="sync_failed_summary">Не вдалося синхронізувати. Останній успіх: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Синхронізація не відбулася. Востаннє синхронізовано: ніколи</string>
+
+    <string name="sync_last_synced_summary">Останнє синхронізовано: %s</string>
+
+    <string name="sync_never_synced_summary">Останній раз синхронізовано: ніколи</string>
+
+    <string name="default_device_name_2">%1$ на %2$ на %3$</string>
+
+    <string name="preferences_sync_credit_cards">Кредитні картки</string>
+
+    <string name="preferences_sync_address">Адреси</string>
+
+
+    <string name="fxa_received_tab_channel_name">Отримані вкладки</string>
+
+    <string name="fxa_received_tab_channel_description">Сповіщення про вкладки, отримані з інших пристроїв Waterfox.</string>
+
+    <string name="fxa_tab_received_notification_name">Вкладка Отримано</string>
+
+    <string name="fxa_tab_received_from_notification_name">Вкладка з %s</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">Винятки</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Увімкнути для всіх сайтів</string>
+
+    <string name="exceptions_empty_message_description">Винятки дозволяють вимкнути захист від відстеження для вибраних сайтів.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Дізнайтеся більше</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Увімкнути синхронізацію</string>
+
+    <string name="preferences_sync_2">Синхронізуйте та зберігайте дані</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Увійдіть, щоб відновити зв\'язок</string>
+
+    <string name="preferences_sync_remove_account">Видалити обліковий запис</string>
+
+
+    <string name="pair_instructions_2">Відскануйте QR-код, показаний на сторінці &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+
+    <string name="preference_top_toolbar">Верхня частина</string>
+
+    <string name="preference_bottom_toolbar">Дно.</string>
+
+
+    <string name="preference_light_theme">Світло</string>
+
+    <string name="preference_dark_theme">Темнота.</string>
+
+    <string name="preference_auto_battery_theme">Встановлюється за допомогою Battery Saver</string>
+
+    <string name="preference_follow_device_theme">Слідкуйте за темою пристрою</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Потягніть, щоб оновити</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Прокрутіть, щоб приховати панель інструментів</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Проведіть по панелі інструментів убік, щоб перемикати вкладки</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Проведіть по панелі інструментів вгору, щоб відкрити вкладки</string>
+
+
+    <string name="library_downloads">Завантаження</string>
+
+    <string name="library_bookmarks">Закладки</string>
+
+    <string name="library_desktop_bookmarks_root">Закладки для робочого столу</string>
+
+    <string name="library_desktop_bookmarks_menu">Меню закладок</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Панель інструментів "Закладки</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Інші закладки</string>
+
+    <string name="library_history">Історія</string>
+
+    <string name="library_new_tab">Нова вкладка</string>
+
+    <string name="settings_title">Налаштування</string>
+
+    <string name="content_description_close_button">Закрити</string>
+
+
+    <string name="history_search_group_site">%d сайт</string>
+
+    <string name="history_search_group_sites">%d сайтів</string>
+
+
+    <string name="library_recently_closed_tabs">Нещодавно закриті вкладки</string>
+
+    <string name="recently_closed_show_full_history">Показати всю історію</string>
+
+    <string name="recently_closed_tabs">%d вкладки</string>
+
+    <string name="recently_closed_tab">вкладка %d</string>
+
+    <string name="recently_closed_empty_message">Тут немає нещодавно закритих вкладок</string>
+
+
+    <string name="preferences_tabs">Вкладки</string>
+
+    <string name="preferences_tab_view">Вигляд вкладки</string>
+
+    <string name="tab_view_list">Список</string>
+
+    <string name="tab_view_grid">Сітка</string>
+
+    <string name="preferences_close_tabs">Закрити вкладки</string>
+
+    <string name="close_tabs_manually">Ніколи.</string>
+
+    <string name="close_tabs_after_one_day">Через день</string>
+
+    <string name="close_tabs_after_one_week">Через тиждень</string>
+
+    <string name="close_tabs_after_one_month">Через місяць</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Автоматичне закриття відкритих вкладок</string>
+
+
+    <string name="preferences_opening_screen">Початковий екран</string>
+
+    <string name="opening_screen_homepage">Головна сторінка</string>
+
+    <string name="opening_screen_last_tab">Остання вкладка</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Домашня сторінка після чотирьох годин бездіяльності</string>
+
+    <string name="close_tabs_manually_summary">Закрийте вручну</string>
+
+    <string name="close_tabs_after_one_day_summary">Закрити через один день</string>
+
+    <string name="close_tabs_after_one_week_summary">Закрити через тиждень</string>
+
+    <string name="close_tabs_after_one_month_summary">Закрити через один місяць</string>
+
+
+    <string name="preferences_inactive_tabs">Перемістіть старі вкладки до неактивних</string>
+
+    <string name="preferences_inactive_tabs_title">Вкладки, які ви не переглядали протягом двох тижнів, переміщуються до неактивного розділу.</string>
+
+
+    <string name="tab_header_label">Відкриті вкладки</string>
+
+    <string name="tabs_header_private_tabs_title">Приватні вкладки</string>
+
+    <string name="tabs_header_synced_tabs_title">Синхронізовані вкладки</string>
+
+    <string name="add_tab">Додати вкладку</string>
+
+    <string name="add_private_tab">Додати приватну вкладку</string>
+
+    <string name="tab_drawer_fab_content">Рядовий</string>
+
+    <string name="tab_drawer_fab_sync">Синхронізація</string>
+
+    <string name="tab_tray_menu_item_share">Спільний доступ до всіх вкладок</string>
+
+    <string name="tab_tray_menu_recently_closed">Нещодавно закриті вкладки</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Нещодавно закрито</string>
+
+    <string name="tab_tray_menu_account_settings">Налаштування облікового запису</string>
+
+    <string name="tab_tray_menu_tab_settings">Налаштування вкладки</string>
+
+    <string name="tab_tray_menu_item_close">Закрийте всі вкладки</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Додати в закладки</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Закрити</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Спільний доступ до вибраних вкладок</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Меню вибраних вкладок</string>
+
+    <string name="remove_tab_from_collection">Видалити вкладку з колекції</string>
+
+    <string name="tabs_tray_select_tabs">Виберіть вкладки</string>
+
+    <string name="close_tab">Закрити вкладку</string>
+
+    <string name="close_tab_title">Закрити вкладку %s</string>
+
+    <string name="open_tabs_menu">Меню відкритих вкладок</string>
+
+    <string name="tabs_menu_save_to_collection1">Зберегти вкладки до колекції</string>
+
+    <string name="collection_delete">Видалити колекцію</string>
+
+    <string name="collection_rename">Перейменувати колекцію</string>
+
+    <string name="collection_open_tabs">Відкриті вкладки</string>
+
+    <string name="collection_name_hint">Назва колекції</string>
+
+    <string name="rename_top_site">Перейменувати</string>
+
+    <string name="remove_top_site">Видалити</string>
+
+    <string name="delete_from_history">Видалити з історії</string>
+
+    <string name="pwa_site_controls_title_private">%1$s (приватний режим)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Інші вкладки</string>
+
+
+    <string name="history_search_1">Введіть пошукові запити</string>
+
+    <string name="history_delete_all">Видалити історію</string>
+
+    <string name="history_delete_multiple_items_snackbar">Історія Видалено</string>
+
+    <string name="history_delete_single_item_snackbar">Видалено %1$s</string>
+
+    <string name="history_delete_item">Видалити</string>
+
+    <string name="history_multi_select_title">вибрано %1$d</string>
+
+    <string name="history_today">Сьогодні</string>
+
+    <string name="history_yesterday">Вчора</string>
+
+    <string name="history_7_days">Останні 7 днів</string>
+
+    <string name="history_30_days">Останні 30 днів</string>
+
+    <string name="history_older">Старіше.</string>
+
+    <string name="history_empty_message">Тут немає історії.</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">Видалено завантаження</string>
+
+    <string name="download_delete_single_item_snackbar">Видалено %1$s</string>
+
+    <string name="download_empty_message_1">Немає завантажених файлів</string>
+
+    <string name="download_multi_select_title">вибрано %1$d</string>
+
+    <string name="download_delete_item_1">Видалити</string>
+
+
+    <string name="tab_crash_title_2">Вибачте. %1$s не може завантажити цю сторінку.</string>
+
+    <string name="tab_crash_send_report">Надіслати звіт про збій в BrowserWorks</string>
+
+    <string name="tab_crash_close">Закрити вкладку</string>
+
+    <string name="tab_crash_restore">Вкладка "Відновити</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Ви впевнені, що хочете видалити цю папку?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s видалить вибрані елементи.</string>
+
+    <string name="bookmark_delete_negative">Скасувати</string>
+
+    <string name="bookmark_add_folder">Додати папку</string>
+
+    <string name="bookmark_saved_snackbar">Закладка збережена!</string>
+
+    <string name="edit_bookmark_snackbar_action">РЕДАГУВАННЯ</string>
+
+    <string name="bookmark_menu_edit_button">Редагувати</string>
+
+    <string name="bookmark_menu_copy_button">Зрозумів.</string>
+
+    <string name="bookmark_menu_share_button">Поділіться</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">Відкрити в новій вкладці</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">Відкрити в приватній вкладці</string>
+
+    <string name="bookmark_menu_delete_button">Видалити</string>
+
+    <string name="bookmark_menu_save_button">Зберегти</string>
+
+    <string name="bookmarks_multi_select_title">вибрано %1$d</string>
+
+    <string name="edit_bookmark_fragment_title">Редагувати закладку</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Папка редагування</string>
+
+    <string name="bookmark_sign_in_button">Увійдіть, щоб побачити синхронізовані закладки</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">ПАПКА</string>
+
+    <string name="bookmark_name_label">ІМ\'Я</string>
+
+    <string name="bookmark_add_folder_fragment_label">Додати папку</string>
+
+    <string name="bookmark_select_folder_fragment_label">Виберіть папку</string>
+
+    <string name="bookmark_empty_title_error">Повинна бути назва.</string>
+
+    <string name="bookmark_invalid_url_error">Неправильна URL-адреса</string>
+
+    <string name="bookmarks_empty_message">Тут немає закладок</string>
+
+    <string name="bookmark_deletion_snackbar_message">Видалено %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Закладки видалено</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Видалення вибраних папок</string>
+
+    <string name="bookmark_undo_deletion">UNDO</string>
+
+    <string name="bookmark_search">Введіть пошукові запити</string>
+
+
+    <string name="phone_feature_go_to_settings">Перейдіть до налаштувань</string>
+
+    <string name="quick_settings_sheet">Сторінка швидких налаштувань</string>
+
+    <string name="phone_feature_recommended">Рекомендовано</string>
+
+    <string name="clear_permissions">Чіткі дозволи</string>
+
+    <string name="clear_permissions_positive">ГАРАЗД.</string>
+
+    <string name="clear_permissions_negative">Скасувати</string>
+
+    <string name="clear_permission">Чіткий дозвіл</string>
+
+    <string name="clear_permission_positive">ГАРАЗД.</string>
+
+    <string name="clear_permission_negative">Скасувати</string>
+
+    <string name="clear_permissions_on_all_sites">Чіткі дозволи на всіх сайтах</string>
+
+    <string name="preference_browser_feature_autoplay">Автовідтворення</string>
+
+    <string name="preference_phone_feature_camera">Камера</string>
+
+    <string name="preference_phone_feature_microphone">Мікрофон</string>
+
+    <string name="preference_phone_feature_location">Місцезнаходження</string>
+
+    <string name="preference_phone_feature_notification">Повідомлення</string>
+
+    <string name="preference_phone_feature_persistent_storage">Постійне сховище</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Міжсайтові файли cookie</string>
+
+    <string name="preference_phone_feature_media_key_system_access">Вміст під контролем DRM</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">Попросіть дозволити</string>
+
+    <string name="preference_option_phone_feature_blocked">Заблоковано.</string>
+
+    <string name="preference_option_phone_feature_allowed">Дозволено</string>
+
+    <string name="phone_feature_blocked_by_android">Заблоковано на Android</string>
+
+    <string name="preference_exceptions">Винятки</string>
+
+    <string name="tracking_protection_on">На</string>
+
+    <string name="tracking_protection_off">Вимкнено</string>
+
+    <string name="preference_option_autoplay_allowed2">Дозволити аудіо та відео</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Дозволити аудіо та відео</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Блокування аудіо та відео лише для мобільного зв\'язку</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Аудіо та відео відтворюватиметься через Wi-Fi</string>
+
+    <string name="preference_option_autoplay_block_audio2">Блокувати тільки звук</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Блокувати тільки звук</string>
+
+    <string name="preference_option_autoplay_blocked3">Блокування аудіо та відео</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Блокування аудіо та відео</string>
+
+    <string name="delete_browsing_data_quit_on">На</string>
+
+    <string name="delete_browsing_data_quit_off">Вимкнено</string>
+
+    <string name="https_only_on">На</string>
+
+    <string name="https_only_off">Вимкнено</string>
+
+
+    <string name="collections_header">Колекції</string>
+
+    <string name="collection_menu_button_content_description">Меню колекції</string>
+
+    <string name="no_collections_description2">Збирайте речі, які важливі для вас.\nЗгрупуйте схожі пошукові запити, сайти та вкладки для швидкого доступу до них пізніше.</string>
+
+    <string name="create_collection_select_tabs">Виберіть Вкладки</string>
+
+    <string name="create_collection_select_collection">Виберіть колекцію</string>
+
+    <string name="create_collection_name_collection">Колекція імен</string>
+
+    <string name="create_collection_add_new_collection">Додати нову колекцію</string>
+
+    <string name="create_collection_select_all">Вибрати все</string>
+
+    <string name="create_collection_deselect_all">Зніміть усі позначки</string>
+
+    <string name="create_collection_save_to_collection_empty">Виберіть вкладки для збереження</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">вибрано %d вкладок</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">Вибрано вкладку %d</string>
+
+    <string name="create_collection_tabs_saved">Вкладки збережено!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Колекцію збережено!</string>
+
+    <string name="create_collection_tab_saved">Вкладка збережена!</string>
+
+    <string name="create_collection_close">Закрити</string>
+
+    <string name="create_collection_save">Зберегти</string>
+
+    <string name="create_collection_view">Вигляд</string>
+
+    <string name="create_collection_positive">ГАРАЗД.</string>
+
+    <string name="create_collection_negative">Скасувати</string>
+
+
+    <string name="create_collection_default_name">Збір %d</string>
+
+
+    <string name="share_header_2">Поділіться</string>
+
+    <string name="share_button_content_description">Поділіться</string>
+
+    <string name="share_device_subheader">Надіслати на пристрій</string>
+
+    <string name="share_link_all_apps_subheader">Всі дії</string>
+
+    <string name="share_link_recent_apps_subheader">Нещодавно використані</string>
+
+    <string name="share_copy_link_to_clipboard">Скопіювати в буфер обміну</string>
+
+    <string name="toast_copy_link_to_clipboard">Скопійовано в буфер обміну</string>
+
+    <string name="sync_menu_sign_in">Увійдіть, щоб синхронізувати</string>
+
+    <string name="sync_sign_in">Увійдіть до Sync</string>
+
+    <string name="sync_send_to_all">Надіслати на всі пристрої</string>
+
+    <string name="sync_reconnect">Повторно підключитися до синхронізації</string>
+
+    <string name="sync_offline">Офлайн</string>
+
+    <string name="sync_connect_device">Підключіть інший пристрій</string>
+
+    <string name="sync_connect_device_dialog">Щоб надіслати вкладку, увійдіть у Waterfox принаймні на одному іншому пристрої.</string>
+
+    <string name="sync_confirmation_button">Зрозумів.</string>
+
+    <string name="share_error_snackbar">Неможливо надати доступ до цієї програми</string>
+
+    <string name="sync_add_new_device_title">Надіслати на пристрій</string>
+
+    <string name="sync_add_new_device_message">Пристрої не підключено</string>
+
+    <string name="sync_add_new_device_learn_button">Дізнайтеся про надсилання вкладок...</string>
+
+    <string name="sync_add_new_device_connect_button">Підключити інший пристрій...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Закрийте приватні вкладки</string>
+
+    <string name="notification_marketing_channel_name">Маркетинг</string>
+
+    <string name="notification_default_browser_title">%1$s - це швидко та конфіденційно</string>
+
+    <string name="notification_default_browser_text">Зробіть %1$s браузером за замовчуванням</string>
+
+
+    <string name="snackbar_collection_deleted">Колекцію видалено</string>
+
+    <string name="snackbar_collection_renamed">Колекцію перейменовано</string>
+
+    <string name="snackbar_tab_closed">Вкладка закрита</string>
+
+    <string name="snackbar_tabs_closed">Вкладки закрито</string>
+
+    <string name="snackbar_message_bookmarks_saved">Закладки збережено!</string>
+
+    <string name="snackbar_added_to_shortcuts">Додано до ярликів!</string>
+
+    <string name="snackbar_private_tab_closed">Приватна вкладка закрита</string>
+
+    <string name="snackbar_private_tabs_closed">Закрито приватні вкладки</string>
+
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <string name="snackbar_top_site_removed">Сайт видалено</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">Дозволити %1$ відкривати %2$</string>
+
+    <string name="qr_scanner_dialog_positive">ДОЗВОЛИТИ</string>
+
+    <string name="qr_scanner_dialog_negative">ЗАПЕРЕЧАТИ</string>
+
+    <string name="qr_scanner_dialog_invalid">Веб-адреса невірна.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">ГАРАЗД.</string>
+
+    <string name="tab_collection_dialog_message">Ви впевнені, що хочете видалити %1$s?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">Видалення цієї вкладки призведе до видалення всієї колекції. Ви можете створювати нові колекції в будь-який час.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">Видалити %1$s?</string>
+
+    <string name="tab_collection_dialog_positive">Видалити</string>
+
+    <string name="full_screen_notification">Увійдіть у повноекранний режим</string>
+
+    <string name="url_copied">URL скопійовано</string>
+
+    <string name="accessibility_text_size_sample_text_1">Це зразок тексту. Він показує, як буде виглядати текст, коли ви збільшуєте або зменшуєте розмір за допомогою цього параметра.</string>
+
+    <string name="preference_accessibility_text_size_summary">Збільшуйте або зменшуйте текст на веб-сайтах</string>
+
+    <string name="preference_accessibility_font_size_title">Розмір шрифту</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Автоматичний розмір шрифту</string>
+
+    <string name="preference_accessibility_auto_size_summary">Розмір шрифту буде відповідати вашим налаштуванням Android. Вимкніть керування розміром шрифту тут.</string>
+
+
+    <string name="preferences_delete_browsing_data">Видалення даних веб-перегляду</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Відкриті вкладки</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d вкладки</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Історія браузера та дані сайту</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d адрес</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Печиво</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Ви вийдете з більшості сайтів</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Кешовані зображення та файли</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Звільняє місце для зберігання</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Дозволи сайту</string>
+
+    <string name="preferences_delete_browsing_data_downloads">Завантаження</string>
+
+    <string name="preferences_delete_browsing_data_button">Видалення даних веб-перегляду</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Видалення даних перегляду при виході з системи</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Автоматично видаляє дані перегляду, коли ви вибираєте \"Вийти\" з головного меню</string>
+
+    <string name="delete_browsing_data_on_quit_action">Звільнися.</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">Це призведе до видалення всіх даних вашого браузера.</string>
+
+    <string name="delete_history_prompt_title">Часовий діапазон для видалення</string>
+
+    <string name="delete_history_prompt_body">Видаляє історію (включаючи історію, синхронізовану з інших пристроїв), файли cookie та інші дані веб-перегляду.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Остання година</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Сьогодні і вчора</string>
+
+    <string name="delete_history_prompt_button_everything">Все</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">%s видалить вибрані дані перегляду.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">Скасувати</string>
+
+    <string name="delete_browsing_data_prompt_allow">Видалити</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Видалено дані браузера</string>
+
+    <string name="deleting_browsing_data_in_progress">Видалення даних перегляду...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">Видаліть усі сайти в "%s"</string>
+
+    <string name="delete_history_group_prompt_cancel">Скасувати</string>
+
+    <string name="delete_history_group_prompt_allow">Видалити</string>
+
+    <string name="delete_history_group_snackbar">Групу видалено</string>
+
+
+    <string name="onboarding_header_2">Ласкаво просимо до більш приватної мережі</string>
+
+    <string name="onboarding_message">Низовий, незалежний браузер.</string>
+
+    <string name="onboarding_account_sign_in_header">Почніть з того, на чому зупинилися</string>
+
+    <string name="onboarding_manual_sign_in_description">Синхронізуйте вкладки та паролі на різних пристроях для плавного перемикання між екранами.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Увійдіть в систему</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">Синхронізація увімкнена</string>
+
+    <string name="onboarding_tracking_protection_header">Захист конфіденційності за замовчуванням</string>
+
+    <string name="onboarding_tracking_protection_description">Функція повного захисту від файлів cookie запобігає використанню трекерами файлів cookie для переслідування вас на різних сайтах.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Стандартний (за замовчуванням)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Збалансований для конфіденційності та продуктивності. Сторінки завантажуються нормально.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Суворий.</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Блокує більше трекерів, тому сторінки завантажуються швидше, але деякі функції на сторінці можуть не працювати.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Виберіть розташування панелі інструментів</string>
+
+    <string name="onboarding_toolbar_placement_description">Тримайте його внизу або перемістіть наверх.</string>
+
+    <string name="onboarding_privacy_notice_header_1">Ви контролюєте свої дані</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox не збирає жодної телеметрії і дає вам контроль над вашими даними.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Прочитайте наше повідомлення про конфіденційність</string>
+
+    <string name="onboarding_conclusion_header">Готові відкрити для себе дивовижний інтернет?</string>
+
+    <string name="onboarding_finish">Почніть перегляд</string>
+
+
+    <string name="onboarding_theme_picker_header">Виберіть свою тему</string>
+
+    <string name="onboarding_theme_picker_description_2">Заощаджуйте заряд акумулятора та збережіть свій зір завдяки темному режиму.</string>
+
+    <string name="onboarding_theme_automatic_title">Автоматично</string>
+
+    <string name="onboarding_theme_automatic_summary">Адаптується до налаштувань вашого пристрою</string>
+
+    <string name="onboarding_theme_dark_title">Темна тема</string>
+
+    <string name="onboarding_theme_light_title">Світла тема</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Вкладки надіслано!</string>
+
+    <string name="sync_sent_tab_snackbar">Рахунок відправлено!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Не вдалося відправити</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">ПОВТОРНА СПРОБА</string>
+
+    <string name="sync_scan_code">Відскануйте код</string>
+
+    <string name="sign_in_instructions">Waterfox покладається на обліковий запис Mozilla для синхронізації даних між мобільним і настільним комп\'ютером.&lt;br&gt; На вашому комп\'ютері відкрийте Waterfox і перейдіть на &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla жодним чином не пов\'язана з Waterfox.&lt;/i&gt;</string>
+
+    <string name="sign_in_ready_for_scan">Готові до сканування</string>
+
+    <string name="sign_in_with_camera">Увійдіть за допомогою камери</string>
+
+    <string name="sign_in_with_email">Замість цього використовуйте електронну пошту</string>
+
+    <string name="sign_in_create_account_text">Немає облікового запису? &lt;u&gt;Створіть його&lt;/u&gt;, щоб синхронізувати Waterfox між пристроями.</string>
+
+    <string name="sign_out_confirmation_message_2">%s припинить синхронізацію з вашим акаунтом, але не видалить жодних даних вашого браузера на цьому пристрої.</string>
+
+    <string name="sign_out_disconnect">Від\'єднати</string>
+
+    <string name="sign_out_cancel">Скасувати</string>
+
+    <string name="bookmark_cannot_edit_root">Неможливо редагувати папки за замовчуванням</string>
+
+
+    <string name="etp_settings">Налаштування захисту</string>
+
+    <string name="preference_enhanced_tracking_protection">Покращений захист від відстеження</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Переглядайте без стеження</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Тримайте свої дані при собі. %s захищає вас від багатьох найпоширеніших трекерів, які стежать за тим, що ви робите в Інтернеті.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Дізнайтеся більше</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Стандартний (за замовчуванням)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Збалансований для конфіденційності та продуктивності. Сторінки завантажуються нормально.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Що блокується стандартним захистом від відстеження</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Суворий.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Блокує більше трекерів, тому сторінки завантажуються швидше, але деякі функції на сторінці можуть не працювати.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Що блокується суворим захистом від відстеження</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Нестандартний</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Виберіть, які трекери та скрипти блокувати.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Що блокується кастомним захистом відстеження</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Печиво</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Крос-сайтовий трекер та трекери соціальних мереж</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Файли cookie з невідвіданих сайтів</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Усі сторонні файли cookie (можуть спричинити збої в роботі веб-сайтів)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Всі файли cookie (призведе до поломки веб-сайтів)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Ізолюйте міжсайтові файли cookie</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Відстеження контенту</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">У всіх вкладках</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Тільки в приватних вкладках</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Криптомайнери</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Відбитки пальців</string>
+
+    <string name="enhanced_tracking_protection_details">Деталі</string>
+
+    <string name="enhanced_tracking_protection_blocked">Заблоковано.</string>
+
+    <string name="enhanced_tracking_protection_allowed">Дозволено</string>
+
+    <string name="etp_social_media_trackers_title">Трекери соціальних мереж</string>
+
+    <string name="etp_social_media_trackers_description">Обмежує можливість соціальних мереж відстежувати вашу активність в Інтернеті.</string>
+
+    <string name="etp_cookies_title">Файли cookie для міжсайтового відстеження</string>
+
+    <string name="etp_cookies_title_2">Міжсайтові файли cookie</string>
+
+    <string name="etp_cookies_description">Блокує файли cookie, які рекламні мережі та аналітичні компанії використовують для збору даних про ваш перегляд на багатьох сайтах.</string>
+
+    <string name="etp_cookies_description_2">Total Cookie Protection ізолює файли cookie до сайту, на якому ви перебуваєте, щоб трекери, такі як рекламні мережі, не могли використовувати їх для стеження за вами на різних сайтах.</string>
+
+    <string name="etp_cryptominers_title">Криптомайнери</string>
+
+    <string name="etp_cryptominers_description">Запобігає отриманню шкідливими скриптами доступу до вашого пристрою для майнінгу цифрової валюти.</string>
+
+    <string name="etp_fingerprinters_title">Відбитки пальців</string>
+
+    <string name="etp_fingerprinters_description">Зупиняє збір унікальних ідентифікаційних даних про ваш пристрій, які можуть бути використані для відстеження.</string>
+
+    <string name="etp_tracking_content_title">Відстеження вмісту</string>
+
+    <string name="etp_tracking_content_description">Зупиняє завантаження зовнішньої реклами, відео та іншого контенту, що містить код відстеження. Може вплинути на деякі функції веб-сайту.</string>
+
+    <string name="etp_panel_on">Для цього сайту ввімкнено захист</string>
+
+    <string name="etp_panel_off">Захист для цього сайту вимкнено</string>
+
+    <string name="enhanced_tracking_protection_exceptions">Покращений захист від відстеження вимкнено для цих веб-сайтів</string>
+
+    <string name="etp_back_button_content_description">Повернутися назад</string>
+
+    <string name="open_source_licenses_title">%s | Бібліотеки OSS</string>
+
+    <string name="etp_redirect_trackers_title">Трекери перенаправлення</string>
+
+    <string name="etp_redirect_trackers_description">Очищає файли cookie, встановлені перенаправленнями на відомі веб-сайти відстеження.</string>
+
+    <string name="preference_etp_smartblock_description">Деякі трекери, позначені нижче, були частково розблоковані на цій сторінці, оскільки ви взаємодіяли з ними *.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Дізнайтеся більше</string>
+
+
+    <string name="about_support">Підтримка</string>
+
+    <string name="about_crashes">Аварії</string>
+
+    <string name="about_privacy_notice">Повідомлення про конфіденційність</string>
+
+    <string name="about_know_your_rights">Знайте свої права</string>
+
+    <string name="about_licensing_information">Інформація про ліцензування</string>
+
+    <string name="about_other_open_source_libraries">Бібліотеки, які ми використовуємо</string>
+
+    <string name="about_debug_menu_toast_progress">Меню налагодження: %1$d клацніть лівою кнопкою миші, щоб увімкнути</string>
+    <string name="about_debug_menu_toast_done">Увімкнено меню налагодження</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Зрозумів.</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Вставити та піти</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Вставити</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL-адресу скопійовано до буфера обміну</string>
+
+
+    <string name="add_to_homescreen_title">Додати на головний екран</string>
+
+    <string name="add_to_homescreen_cancel">Скасувати</string>
+
+    <string name="add_to_homescreen_add">Додати</string>
+
+    <string name="add_to_homescreen_continue">Перейти на сайт</string>
+
+    <string name="add_to_homescreen_text_placeholder">Назва ярлика</string>
+
+    <string name="add_to_homescreen_description_2">Ви можете легко додати цей веб-сайт на головний екран вашого пристрою, щоб мати миттєвий доступ до нього і швидше переглядати його за допомогою програми.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Логіни та паролі</string>
+
+    <string name="preferences_passwords_save_logins">Зберігайте логіни та паролі</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Попросіть зберегти</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Ніколи не заощаджуй</string>
+
+    <string name="preferences_passwords_autofill2">Автозаповнення %1$s</string>
+
+    <string name="preferences_passwords_autofill_description">Заповнюйте та зберігайте імена користувачів та паролі на веб-сайтах, використовуючи %1$s.</string>
+
+    <string name="preferences_android_autofill">Автоматичне заповнення в інших програмах</string>
+
+    <string name="preferences_android_autofill_description">Заповнюйте імена користувачів і паролі в інших програмах на вашому пристрої.</string>
+
+    <string name="preferences_logins_add_login">Додати логін</string>
+
+
+    <string name="preferences_passwords_sync_logins">Синхронізувати логіни</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Синхронізація входів на різних пристроях</string>
+
+    <string name="preferences_passwords_saved_logins">Збережені логіни</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">Тут відображатимуться логіни, які ви збережете або синхронізуєте з %s.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Дізнайтеся більше про Sync.</string>
+
+    <string name="preferences_passwords_exceptions">Винятки</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">Тут будуть показані логіни та паролі, які не збережено.</string>
+
+    <string name="preferences_passwords_exceptions_description">Логіни та паролі для цих сайтів не будуть збережені.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Видаліть усі винятки</string>
+
+    <string name="preferences_passwords_saved_logins_search">Логіни для пошуку</string>
+
+    <string name="preferences_passwords_saved_logins_site">Сайт</string>
+
+    <string name="preferences_passwords_saved_logins_username">Ім\'я користувача</string>
+
+    <string name="preferences_passwords_saved_logins_password">Пароль</string>
+
+    <string name="logins_password_copied">Пароль скопійовано в буфер обміну</string>
+
+    <string name="logins_username_copied">Ім\'я користувача скопійовано до буфера обміну</string>
+
+    <string name="saved_logins_copy_password">Скопіювати пароль</string>
+
+    <string name="saved_logins_clear_password">Очистити пароль</string>
+
+    <string name="saved_login_copy_username">Скопіювати ім\'я користувача</string>
+
+    <string name="saved_login_clear_username">Очистити ім\'я користувача</string>
+
+    <string name="saved_login_clear_hostname">Очистити ім\'я хоста</string>
+
+    <string name="saved_login_open_site">Відкрийте сайт у браузері</string>
+
+    <string name="saved_login_reveal_password">Показати пароль</string>
+
+    <string name="saved_login_hide_password">Приховати пароль</string>
+
+    <string name="logins_biometric_prompt_message">Розблокуйте, щоб переглянути збережені логіни</string>
+
+    <string name="logins_warning_dialog_title">Захистіть свої логіни та паролі</string>
+
+    <string name="logins_warning_dialog_message">Налаштуйте шаблон блокування пристрою, PIN-код або пароль, щоб захистити ваші збережені логіни та паролі від доступу до них, якщо пристрій опиниться у когось іншого.</string>
+
+    <string name="logins_warning_dialog_later">Пізніше.</string>
+
+    <string name="logins_warning_dialog_set_up_now">Налаштуйте зараз.</string>
+
+    <string name="logins_biometric_prompt_message_pin">Розблокуйте свій пристрій</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Збільшити на всіх сайтах</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Увімкніть, щоб дозволити стискання та масштабування, навіть на веб-сайтах, які забороняють цей жест.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">Ім\'я (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Останній раз використовувався</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Меню сортування логінів</string>
+
+
+    <string name="preferences_autofill">Автозаповнення</string>
+
+    <string name="preferences_addresses">Адреси</string>
+
+    <string name="preferences_credit_cards">Кредитні картки</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Збереження та автозаповнення карток</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Дані зашифровані</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Синхронізація карток на різних пристроях</string>
+
+    <string name="preferences_credit_cards_sync_cards">Картки синхронізації</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Додати кредитну картку</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Керування збереженими картками</string>
+
+    <string name="preferences_addresses_add_address">Додати адресу</string>
+
+    <string name="preferences_addresses_manage_addresses">Керування адресами</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Збереження та автозаповнення адрес</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Включіть таку інформацію, як номери телефонів, електронну пошту та адреси доставки</string>
+
+
+    <string name="credit_cards_add_card">Додати картку</string>
+
+    <string name="credit_cards_edit_card">Редагувати картку</string>
+
+    <string name="credit_cards_card_number">Номер картки</string>
+
+    <string name="credit_cards_expiration_date">Термін придатності</string>
+
+    <string name="credit_cards_expiration_date_month">Дата закінчення терміну дії Місяць</string>
+
+    <string name="credit_cards_expiration_date_year">Дата закінчення терміну придатності Рік</string>
+
+    <string name="credit_cards_name_on_card">Ім\'я на картці</string>
+
+    <string name="credit_cards_menu_delete_card">Видалити картку</string>
+
+    <string name="credit_cards_delete_card_button">Видалити картку</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">Ви впевнені, що хочете видалити цю кредитну картку?</string>
+
+    <string name="credit_cards_delete_dialog_button">Видалити</string>
+
+    <string name="credit_cards_menu_save">Зберегти</string>
+
+    <string name="credit_cards_save_button">Зберегти</string>
+
+    <string name="credit_cards_cancel_button">Скасувати</string>
+
+    <string name="credit_cards_saved_cards">Збережені картки</string>
+
+    <string name="credit_cards_number_validation_error_message">Будь ласка, введіть дійсний номер кредитної картки</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Будь ласка, заповніть це поле</string>
+
+    <string name="credit_cards_biometric_prompt_message">Розблокуйте, щоб переглянути збережені картки</string>
+
+    <string name="credit_cards_warning_dialog_title">Захистіть свої кредитні картки</string>
+
+    <string name="credit_cards_warning_dialog_message">Налаштуйте шаблон блокування пристрою, PIN-код або пароль, щоб захистити збережені кредитні картки від доступу до них, якщо пристрій опиниться у когось іншого.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Налаштуйте зараз.</string>
+
+    <string name="credit_cards_warning_dialog_later">Пізніше.</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Розблокуйте свій пристрій</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Розблокуйте, щоб використовувати збережену інформацію про кредитну картку</string>
+
+    <string name="addresses_add_address">Додати адресу</string>
+
+    <string name="addresses_edit_address">Редагувати адресу</string>
+
+    <string name="addresses_manage_addresses">Керування адресами</string>
+
+    <string name="addresses_first_name">Ім\'я та прізвище</string>
+
+    <string name="addresses_middle_name">Ім\'я по батькові</string>
+
+    <string name="addresses_last_name">Прізвище</string>
+
+    <string name="addresses_street_address">Вулична адреса</string>
+
+    <string name="addresses_city">Місто</string>
+
+    <string name="addresses_state">Держава</string>
+
+    <string name="addresses_province">Провінція</string>
+
+    <string name="addresses_zip">Блискавка.</string>
+
+    <string name="addresses_country">Країна або регіон</string>
+
+    <string name="addresses_phone">Телефон</string>
+
+    <string name="addresses_email">Електронна пошта</string>
+
+    <string name="addresses_save_button">Зберегти</string>
+
+    <string name="addresses_cancel_button">Скасувати</string>
+
+    <string name="addressess_delete_address_button">Видалити адресу</string>
+
+    <string name="addressess_confirm_dialog_message">Ви впевнені, що хочете видалити цю адресу?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Видалити</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">Скасувати</string>
+
+    <string name="address_menu_save_address">Зберегти адресу</string>
+
+    <string name="address_menu_delete_address">Видалити адресу</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Додати пошукову систему</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Редагувати пошукову систему</string>
+
+    <string name="search_engine_add_button_content_description">Додати</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Зберегти</string>
+
+    <string name="search_engine_edit">Редагувати</string>
+
+    <string name="search_engine_delete">Видалити</string>
+
+
+    <string name="search_add_custom_engine_label_other">Інше</string>
+
+    <string name="search_add_custom_engine_name_hint">Ім\'я</string>
+
+    <string name="search_add_custom_engine_search_string_hint">Використовувати пошуковий рядок</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Замініть запит на "%s". Приклад:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Спеціальна інформація про пошукову систему</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Введіть назву пошукової системи</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Введіть рядок пошуку</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Перевірте, чи збігається рядок пошуку Приклад формату</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">Помилка підключення до "%s"</string>
+
+    <string name="search_add_custom_engine_success_message">Створено %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Збережено %s</string>
+
+    <string name="search_delete_search_engine_success_message">Видалено %s</string>
+
+
+    <string name="phone_feature_blocked_intro">Дозволити це:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Перейдіть до налаштувань Android</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. Натисніть &lt;b&gt;Дозволи&lt;/b&gt;</string>
+
+    <string name="phone_feature_blocked_step_feature">3. Увімкніть &lt;b&gt;%1$s&lt;/b&gt; на ON</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">З\'єднання безпечне</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">З\'єднання не є безпечним</string>
+
+    <string name="clear_site_data">Очистити файли cookie та дані сайту</string>
+
+    <string name="confirm_clear_site_data">Ви впевнені, що хочете очистити всі файли cookie та дані для сайту &lt;b&gt;%s&lt;/b&gt;?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Ви впевнені, що хочете очистити всі дозволи на всіх сайтах?</string>
+
+    <string name="confirm_clear_permissions_site">Ви впевнені, що хочете очистити всі дозволи для цього сайту?</string>
+
+    <string name="confirm_clear_permission_site">Ви впевнені, що хочете скасувати цей дозвіл для цього сайту?</string>
+
+    <string name="no_site_exceptions">Без винятків для сайтів</string>
+
+    <string name="bookmark_deletion_confirmation">Ви дійсно хочете видалити цю закладку?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Додати до ярликів</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Видалити з ярликів</string>
+
+    <string name="certificate_info_verified_by">Перевірено: %1$s</string>
+
+    <string name="login_menu_delete_button">Видалити</string>
+
+    <string name="login_menu_edit_button">Редагувати</string>
+
+    <string name="login_deletion_confirmation">Ви впевнені, що хочете видалити цей логін?</string>
+
+    <string name="dialog_delete_positive">Видалити</string>
+
+    <string name="dialog_delete_negative">Скасувати</string>
+
+    <string name="login_options_menu">Параметри входу</string>
+
+    <string name="saved_login_hostname_description">Редаговане текстове поле для веб-адреси для входу в систему.</string>
+
+    <string name="saved_login_username_description">Редаговане текстове поле для імені користувача для входу.</string>
+
+    <string name="saved_login_password_description">Редаговане текстове поле для введення пароля для входу.</string>
+
+    <string name="save_changes_to_login">Збережіть зміни для входу в систему.</string>
+
+    <string name="edit">Редагувати</string>
+
+    <string name="add_login">Додати новий логін</string>
+
+    <string name="saved_login_password_required">Потрібен пароль</string>
+
+    <string name="saved_login_username_required">Потрібне ім\'я користувача</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Потрібне ім\'я хоста</string>
+
+    <string name="voice_search_content_description">Голосовий пошук</string>
+
+    <string name="voice_search_explainer">Говори зараз.</string>
+
+    <string name="saved_login_duplicate">Логін з таким ім\'ям користувача вже існує</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">Веб-адреса повинна містити "https://" або "http://"</string>
+
+    <string name="add_login_hostname_invalid_text_2">Потрібне дійсне ім\'я хоста</string>
+
+
+    <string name="synced_tabs_connect_another_device">Підключіть інший пристрій.</string>
+
+    <string name="synced_tabs_reauth">Будь ласка, пройдіть повторну аутентифікацію.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Увімкніть синхронізацію вкладок.</string>
+
+    <string name="synced_tabs_no_tabs">У вас немає відкритих вкладок у Waterfox на інших пристроях.</string>
+
+    <string name="synced_tabs_sign_in_message">Перегляд списку вкладок з інших пристроїв.</string>
+
+    <string name="synced_tabs_sign_in_button">Увійдіть, щоб синхронізувати</string>
+
+    <string name="synced_tabs_no_open_tabs">Немає відкритих вкладок</string>
+
+    <string name="synced_tabs_expand_group">Розгорнути групу синхронізованих вкладок</string>
+
+    <string name="synced_tabs_collapse_group">Згорнути групу синхронізованих вкладок</string>
+
+
+    <string name="shortcut_max_limit_title">Вичерпано ліміт ярликів</string>
+
+    <string name="shortcut_max_limit_content">Щоб додати новий ярлик, видаліть попередній. Натисніть і утримуйте сайт, а потім виберіть видалити.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">Гаразд, зрозумів.</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Ярлики</string>
+
+    <string name="top_sites_rename_dialog_title">Ім\'я</string>
+
+    <string name="shortcut_name_hint">Назва ярлика</string>
+
+    <string name="top_sites_rename_dialog_ok">ГАРАЗД.</string>
+
+    <string name="top_sites_rename_dialog_cancel">Скасувати</string>
+
+    <string name="top_sites_menu_settings">Налаштування</string>
+
+    <string name="top_sites_menu_sponsor_privacy">Наші спонсори та ваша конфіденційність</string>
+
+    <string name="top_sites_sponsored_label">Спонсорська підтримка</string>
+
+
+    <string name="inactive_tabs_title">Неактивні вкладки</string>
+
+    <string name="inactive_tabs_delete_all">Закрийте всі неактивні вкладки</string>
+
+    <string name="inactive_tabs_expand_content_description">Розгорнути неактивні вкладки</string>
+
+    <string name="inactive_tabs_collapse_content_description">Згорнути неактивні вкладки</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Автоматичне закриття через місяць?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox може закривати вкладки, які ви не переглядали протягом останнього місяця.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">УВІМКНУТИ АВТОМАТИЧНЕ ЗАКРИТТЯ</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Увімкнено автоматичне закриття</string>
+
+
+    <string name="default_browser_experiment_card_text">Налаштуйте автоматичне відкриття посилань з веб-сайтів, електронних листів та повідомлень у Waterfox.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Видалити</string>
+
+
+    <string name="radio_preference_info_content_description">Натисніть, щоб дізнатись більше</string>
+
+
+    <string name="action_bar_up_description">Перейдіть вгору</string>
+
+
+    <string name="privacy_content_close_button_content_description">Закрити</string>
+
+    <string name="waterfox_suggest_header">Waterfox Запропонувати</string>
+</resources>

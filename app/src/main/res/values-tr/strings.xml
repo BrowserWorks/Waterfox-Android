@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Özel %s</string>
+
+    <string name="app_name_private_4">%s (Özel)</string>
+    
+    <string name="content_description_menu">Daha fazla seçenek</string>
+
+    <string name="content_description_private_browsing_button">Gizli taramayı etkinleştirin</string>
+
+    <string name="content_description_disable_private_browsing_button">Gizli taramayı devre dışı bırakma</string>
+
+    <string name="search_hint">Arama yapın veya adres girin</string>
+
+    <string name="application_search_hint">Arama terimlerini girin</string>
+
+    <string name="no_open_tabs_description">Açık sekmeleriniz burada gösterilecektir.</string>
+
+    <string name="no_private_tabs_description">Özel sekmeleriniz burada gösterilecektir.</string>
+
+    <string name="tab_tray_multi_select_title">1$d seçildi</string>
+
+    <string name="tab_tray_add_new_collection">Yeni koleksiyon ekle</string>
+
+    <string name="tab_tray_add_new_collection_name">İsim</string>
+
+    <string name="tab_tray_select_collection">Koleksiyon seçiniz</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Çoklu seçim modundan çıkın</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Seçilen sekmeleri koleksiyona kaydetme</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Seçilmiş</string>
+
+
+    <string name="recently_saved_title">Yakın zamanda kaydedildi</string>
+
+    <string name="recently_saved_show_all_content_description_2">Kayıtlı tüm yer imlerini göster</string>
+
+    <string name="recently_saved_menu_item_remove">Kaldırmak</string>
+
+
+    <string name="about_content">1$s BrowserWorks tarafından yapılmıştır</string>
+
+
+    <string name="private_browsing_placeholder_description_2">1$s, özel sekmeleri kapattığınızda veya uygulamadan çıktığınızda arama ve tarama geçmişinizi temizler. Bu sizi web siteleri veya internet servis sağlayıcınız için anonim yapmasa da, çevrimiçi yaptıklarınızı bu cihazı kullanan diğer herkesten gizli tutmanızı kolaylaştırır.</string>
+    <string name="private_browsing_common_myths">Gizli tarama hakkında yaygın efsaneler</string>
+
+
+    <string name="cfr_message">Ana ekranınızdan özel sekmeleri açmak için bir kısayol ekleyin.</string>
+
+    <string name="cfr_pos_button_text">Kısayol ekle</string>
+
+    <string name="cfr_neg_button_text">Hayır, teşekkürler.</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">Uygulamalardaki bağlantıları otomatik olarak açmak için %1$s ayarlayabilirsiniz.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Ayarlara git</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Dağılın</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Dağılın</string>
+
+
+    <string name="tcp_cfr_message">Şimdiye kadarki en güçlü gizlilik özelliğimiz siteler arası izleyicileri izole eder.</string>
+
+    <string name="tcp_cfr_learn_more">Total Cookie Protection hakkında bilgi edinin</string>
+
+
+    <string name="camera_permissions_needed_message">Kamera erişimi gerekli. Android ayarlarına gidin, izinler\'e dokunun ve izin ver\'e dokunun.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Ayarlara git</string>
+   
+    <string name="camera_permissions_needed_negative_button_text">Dağılın</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Son gün, hafta veya ay içinde görüntülenmemiş açık sekmeleri otomatik olarak kapanacak şekilde ayarlayın.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Seçenekleri görüntüle</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Dağılın</string>
+
+    <string name="tab_tray_inactive_onboarding_message">İki hafta boyunca görüntülemediğiniz sekmeler buraya taşınır.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Ayarlardan kapatın</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Bir ay sonra otomatik kapanır mı?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">1$s geçen ay boyunca görüntülemediğiniz sekmeleri kapatabilir.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Kapat</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Otomatik kapatmayı açın</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Yeni sekme</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Yeni özel sekme</string>
+
+
+    <string name="recent_tabs_header">Geri atlayın</string>
+
+    <string name="recent_tabs_show_all">Hepsini göster</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Tüm son sekmeleri göster düğmesi</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Aramanız \"%1$s\"</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">d siteler</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Tüm senkronize sekmeleri görün</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Senkronize cihaz</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Kaldırmak</string>
+
+    <string name="recent_tab_menu_item_remove">Kaldırmak</string>
+
+
+    <string name="history_metadata_header_2">Yakın zamanda ziyaret edildi</string>
+
+    <string name="recently_visited_menu_item_remove">Kaldırmak</string>
+
+    <string name="past_explorations_show_all_content_description_2">Tüm geçmiş keşifleri göster</string>
+
+
+    <string name="browser_menu_back">Geri</string>
+
+    <string name="browser_menu_forward">İleri</string>
+
+    <string name="browser_menu_refresh">Yenile</string>
+
+    <string name="browser_menu_stop">Dur</string>
+
+    <string name="browser_menu_add_ons">Eklentiler</string>
+
+    <string name="no_add_ons">Burada eklenti yok</string>
+
+    <string name="browser_menu_help">Yardım</string>
+
+    <string name="browser_menu_settings">Ayarlar</string>
+
+    <string name="browser_menu_library">Kütüphane</string>
+
+    <string name="browser_menu_desktop_site">Masaüstü sitesi</string>
+
+    <string name="browser_menu_add_to_homescreen">Ana ekrana ekle</string>
+
+    <string name="browser_menu_install_on_homescreen">Kurulum</string>
+
+    <string name="resync_button_content_description">Resync</string>
+
+    <string name="browser_menu_find_in_page">Sayfa içinde bul</string>
+
+    <string name="browser_menu_save_to_collection_2">Koleksiyona kaydet</string>
+
+    <string name="browser_menu_share">Paylaş</string>
+
+    <string name="browser_menu_open_in_waterfox">1$s içinde aç</string>
+
+    <string name="browser_menu_powered_by">POWERED BY %1$s</string>
+
+    <string name="browser_menu_powered_by2">1$s tarafından desteklenmektedir</string>
+
+    <string name="browser_menu_read">Okuyucu görüşü</string>
+
+    <string name="browser_menu_read_close">Yakın okuyucu görünümü</string>
+
+    <string name="browser_menu_open_app_link">Uygulamada aç</string>
+
+    <string name="browser_menu_customize_reader_view">Okuyucu görünümünü özelleştirme</string>
+
+    <string name="browser_menu_add">Ekle</string>
+
+    <string name="browser_menu_edit">Düzenle</string>
+
+    <string name="browser_menu_customize_home_1">Ana sayfayı özelleştirme</string>
+
+
+    <string name="browser_toolbar_home">Ana ekran</string>
+
+
+    <string name="a11y_selected_locale_content_description">Seçilen dil</string>
+
+    <string name="default_locale_text">Cihaz dilini takip edin</string>
+
+    <string name="locale_search_hint">Arama dili</string>
+
+
+    <string name="search_scan_button">Tarama</string>
+
+    <string name="search_engine_button">Arama motoru</string>
+
+    <string name="search_shortcuts_engine_settings">Arama motoru ayarları</string>
+
+    <string name="awesomebar_clipboard_title">Panodan bağlantı doldurma</string>
+
+    <string name="search_suggestions_onboarding_allow_button">İzin ver</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">İzin verme</string>
+
+    <string name="search_suggestions_onboarding_title">Özel oturumlarda arama önerilerine izin verin?</string>
+
+    <string name="search_suggestions_onboarding_text">s adres çubuğuna yazdığınız her şeyi varsayılan arama motorunuzla paylaşacaktır.</string>
+
+    <string name="search_engine_suggestions_title">Arama %s</string>
+
+    <string name="search_engine_suggestions_description">Doğrudan adres çubuğundan arama yapın</string>
+
+    <string name="search_settings_menu_item">Arama ayarları</string>
+
+
+    <string name="onboarding_home_screen_description_2">Kaldığınız yerden devam etmek artık daha kolay.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Açık sekmelerinize, yer imlerinize ve tarama geçmişinize atlayın.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Temiz, düzenli sekmeler</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Geliştirilmiş düzen ve otomatik kapanan sekmelerle sekme karmaşasını ortadan kaldırın.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Son aramalar</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Ana sayfanızdan ve sekmelerinizden en son aramalarınızı tekrar ziyaret edin.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Kişiselleştirilmiş ana sayfanızla tanışın. Son sekmeler, yer imleri ve arama sonuçları burada görünecektir.</string>
+
+    <string name="onboarding_home_welcome_title_2">Daha kişisel bir internete hoş geldiniz</string>
+
+    <string name="onboarding_home_welcome_description">Daha fazla renk. Daha iyi gizlilik. Kârdan ziyade insanlara aynı bağlılık.</string>
+
+    <string name="onboarding_home_sync_title_3">Telefondan dizüstü bilgisayara atlayın ve geri dönün</string>
+
+    <string name="onboarding_home_sync_description">Artık ana sayfanızda bulunan diğer cihazlardaki sekmelerle kaldığınız yerden devam edin.</string>
+
+    <string name="onboarding_home_get_started_button">Başlayın</string>
+
+    <string name="onboarding_home_sign_in_button">Oturum aç</string>
+
+    <string name="onboarding_home_skip_button">Atla</string>
+
+    <string name="onboarding_home_content_description_close_button">Kapat</string>
+
+
+    <string name="search_widget_content_description_2">Yeni bir %1$s sekmesi açın</string>
+
+    <string name="search_widget_text_short">Arama</string>
+
+    <string name="search_widget_text_long">Web\'de arama yapın</string>
+
+    <string name="search_widget_voice">Sesli arama</string>
+
+
+    <string name="settings">Ayarlar</string>
+
+    <string name="preferences_category_general">Genel</string>
+
+    <string name="preferences_category_about">Hakkında</string>
+
+    <string name="preferences_default_search_engine">Varsayılan arama motoru</string>
+
+    <string name="preferences_search">Arama</string>
+
+    <string name="preferences_search_address_bar">Adres çubuğu</string>
+
+    <string name="preferences_rate">Google Play\'de Değerlendirin</string>
+
+    <string name="preferences_about">1$s hakkında</string>
+
+    <string name="preferences_set_as_default_browser">Varsayılan tarayıcı olarak ayarla</string>
+
+    <string name="preferences_category_advanced">Gelişmiş</string>
+
+    <string name="preferences_category_privacy_security">Gizlilik ve güvenlik</string>
+
+    <string name="preferences_site_permissions">Site izinleri</string>
+
+    <string name="preferences_private_browsing_options">Özel tarama</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Bağlantıları özel bir sekmede açma</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Özel taramada ekran görüntülerine izin ver</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">İzin verilirse, özel sekmeler birden fazla uygulama açıkken de görünür olacaktır</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Özel tarama kısayolu ekleme</string>
+
+    <string name="preferences_https_only_title">Yalnızca HTTPS Modu</string>
+
+    <string name="preferences_https_only_summary">Daha fazla güvenlik için HTTPS şifreleme protokolünü kullanan sitelere otomatik olarak bağlanmaya çalışır.</string>
+
+    <string name="preferences_https_only_on">Açık</string>
+
+    <string name="preferences_https_only_off">Kapalı</string>
+
+    <string name="preferences_http_only_learn_more">Daha fazla bilgi edinin</string>
+
+    <string name="preferences_https_only_in_all_tabs">Tüm sekmelerde etkinleştir</string>
+
+    <string name="preferences_https_only_in_private_tabs">Yalnızca özel sekmelerde etkinleştir</string>
+
+    <string name="errorpage_httpsonly_title">Güvenli site mevcut değil</string>
+
+    <string name="errorpage_httpsonly_message_title">Büyük olasılıkla web sitesi HTTPS\'yi desteklemiyordur.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Ancak, bir saldırganın işin içinde olması da mümkündür. Web sitesine devam ederseniz, herhangi bir hassas bilgi girmemelisiniz. Devam ederseniz, HTTPS-Only modu site için geçici olarak kapatılacaktır.</string>
+
+    <string name="preferences_accessibility">Erişilebilirlik</string>
+
+    <string name="preferences_override_fxa_server">Özel Waterfox Hesap sunucusu</string>
+
+    <string name="preferences_override_sync_tokenserver">Özel Senkronizasyon sunucusu</string>
+
+    <string name="toast_override_fxa_sync_server_done">Waterfox Hesap/Senkronizasyon sunucusu değiştirildi. Değişiklikleri uygulamak için uygulamadan çıkma...</string>
+
+    <string name="preferences_category_account">Hesap</string>
+
+    <string name="preferences_toolbar">Araç Çubuğu</string>
+
+    <string name="preferences_theme">Tema</string>
+
+    <string name="preferences_home_2">Anasayfa</string>
+
+    <string name="preferences_gestures">Jestler</string>
+
+    <string name="preferences_customize">Özelleştirme</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Waterfox Hesabınızla yer imlerini, geçmişi ve daha fazlasını senkronize edin</string>
+
+    <string name="preferences_sign_in_description_2">Sekmeleri, yer imlerini, parolaları ve daha fazlasını senkronize etmek için oturum açın.</string>
+
+    <string name="preferences_account_default_name">Waterfox Hesabı</string>
+
+    <string name="preferences_account_sync_error">Senkronizasyonu sürdürmek için yeniden bağlanın</string>
+
+    <string name="preferences_language">Dil</string>
+
+    <string name="preferences_remote_debugging">USB üzerinden uzaktan hata ayıklama</string>
+
+    <string name="preferences_show_search_engines">Arama motorlarını göster</string>
+
+    <string name="preferences_show_search_suggestions">Arama önerilerini göster</string>
+
+    <string name="preferences_show_voice_search">Sesli aramayı göster</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Özel seanslarda göster</string>
+
+    <string name="preferences_show_clipboard_suggestions">Pano önerilerini göster</string>
+
+    <string name="preferences_search_browsing_history">Tarama geçmişinde arama</string>
+
+    <string name="preferences_search_bookmarks">Yer imlerini ara</string>
+
+    <string name="preferences_search_synced_tabs">Senkronize sekmeleri arama</string>
+
+    <string name="preferences_account_settings">Hesap ayarları</string>
+
+    <string name="preferences_enable_autocomplete_urls">URL\'leri otomatik tamamlama</string>
+
+    <string name="preferences_open_links_in_apps">Uygulamalardaki bağlantıları açma</string>
+
+    <string name="preferences_external_download_manager">Harici indirme yöneticisi</string>
+
+    <string name="preferences_addons">Eklentiler</string>
+
+    <string name="preferences_notifications">Bildirimler</string>
+
+
+    <string name="preferences_customize_amo_collection">Özel Eklenti koleksiyonu</string>
+
+    <string name="customize_addon_collection_ok">TAMAM.</string>
+
+    <string name="customize_addon_collection_cancel">İptal</string>
+
+    <string name="customize_addon_collection_hint">Koleksiyon adı</string>
+
+    <string name="customize_addon_collection_user_hint">Koleksiyon sahibi (Kullanıcı Kimliği)</string>
+
+    <string name="toast_customize_addon_collection_done">Eklenti koleksiyonu değiştirildi. Değişiklikleri uygulamak için uygulamadan çıkma...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Geri atlayın</string>
+
+    <string name="customize_toggle_recent_bookmarks">Son yer imleri</string>
+
+    <string name="customize_toggle_recently_visited">Yakın zamanda ziyaret edildi</string>
+
+    <string name="customize_wallpapers">Duvar Kağıtları</string>
+
+    <string name="customize_toggle_contile">Sponsorlu kısayollar</string>
+
+
+    <string name="wallpapers_item_name_content_description">Duvar Kağıdı Öğesi: %1$s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Duvar kağıdı güncellendi!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Görünüm</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox ana sayfa logosuna dokunarak duvar kağıdını değiştirin</string>
+
+    <string name="wallpaper_logo_content_description">Waterfox logosu - duvar kağıdını değiştir, düğme</string>
+
+
+    <string name="addon_not_supported_error">Eklenti desteklenmiyor</string>
+
+    <string name="addon_already_installed">Eklenti zaten yüklü</string>
+
+
+    <string name="preferences_sync_now">Şimdi senkronize et</string>
+
+    <string name="preferences_sync_category">Neyin senkronize edileceğini seçin</string>
+
+    <string name="preferences_sync_history">Tarih</string>
+
+    <string name="preferences_sync_bookmarks">Yer İmleri</string>
+
+    <string name="preferences_sync_logins">Girişler</string>
+
+    <string name="preferences_sync_tabs_2">Açık sekmeler</string>
+
+    <string name="preferences_sign_out">Çıkış yapın</string>
+
+    <string name="preferences_sync_device_name">Cihaz adı</string>
+
+    <string name="empty_device_name_error">Cihaz adı boş olamaz.</string>
+
+    <string name="sync_syncing_in_progress">Senkronizasyon...</string>
+
+    <string name="sync_failed_summary">Senkronizasyon başarısız oldu. Son başarı: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Senkronizasyon başarısız oldu. Son senkronize edilen: asla</string>
+
+    <string name="sync_last_synced_summary">Son senkronize edilen: %s</string>
+
+    <string name="sync_never_synced_summary">Son senkronizasyon: asla</string>
+
+    <string name="default_device_name_2">1$s %2$s %3$s üzerinde</string>
+
+    <string name="preferences_sync_credit_cards">Kredi kartları</string>
+
+    <string name="preferences_sync_address">Adresler</string>
+
+
+    <string name="fxa_received_tab_channel_name">Alınan sekmeler</string>
+
+    <string name="fxa_received_tab_channel_description">Diğer Waterfox cihazlarından alınan sekmeler için bildirimler.</string>
+
+    <string name="fxa_tab_received_notification_name">Sekme Alındı</string>
+
+    <string name="fxa_tab_received_from_notification_name">Tab %s\'den</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">İstisnalar</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Tüm siteler için açın</string>
+
+    <string name="exceptions_empty_message_description">İstisnalar, seçilen siteler için izleme korumasını devre dışı bırakmanıza olanak tanır.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Daha fazla bilgi edinin</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Senkronizasyonu Açın</string>
+
+    <string name="preferences_sync_2">Verilerinizi senkronize edin ve kaydedin</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Yeniden bağlanmak için oturum açın</string>
+
+    <string name="preferences_sync_remove_account">Hesabı kaldır</string>
+
+
+    <string name="pair_instructions_2">&lt;b&gt;firefox.com/pair&lt;/b&gt; adresinde gösterilen QR kodunu tarayın</string>
+
+
+    <string name="preference_top_toolbar">Üst</string>
+
+    <string name="preference_bottom_toolbar">Alt</string>
+
+
+    <string name="preference_light_theme">Işık</string>
+
+    <string name="preference_dark_theme">Karanlık</string>
+
+    <string name="preference_auto_battery_theme">Pil Tasarrufu tarafından ayarlanır</string>
+
+    <string name="preference_follow_device_theme">Cihaz temasını takip edin</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Yenilemek için çekin</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Araç çubuğunu gizlemek için kaydırın</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Sekmeleri değiştirmek için araç çubuğunu yana kaydırın</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Sekmeleri açmak için araç çubuğunu yukarı kaydırın</string>
+
+
+    <string name="library_downloads">İndirmeler</string>
+
+    <string name="library_bookmarks">Yer İmleri</string>
+
+    <string name="library_desktop_bookmarks_root">Masaüstü Yer İmleri</string>
+
+    <string name="library_desktop_bookmarks_menu">Yer İmleri Menüsü</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Yer İmleri Araç Çubuğu</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Diğer Yer İmleri</string>
+
+    <string name="library_history">Tarih</string>
+
+    <string name="library_new_tab">Yeni sekme</string>
+
+    <string name="settings_title">Ayarlar</string>
+
+    <string name="content_description_close_button">Kapat</string>
+
+
+    <string name="history_search_group_site">d site</string>
+
+    <string name="history_search_group_sites">d siteler</string>
+
+
+    <string name="library_recently_closed_tabs">Son kapatılan sekmeler</string>
+
+    <string name="recently_closed_show_full_history">Tüm geçmişi göster</string>
+
+    <string name="recently_closed_tabs">d sekmeleri</string>
+
+    <string name="recently_closed_tab">d sekmesi</string>
+
+    <string name="recently_closed_empty_message">Burada son kapatılan sekme yok</string>
+
+
+    <string name="preferences_tabs">Sekmeler</string>
+
+    <string name="preferences_tab_view">Sekme görünümü</string>
+
+    <string name="tab_view_list">Liste</string>
+
+    <string name="tab_view_grid">Izgara</string>
+
+    <string name="preferences_close_tabs">Sekmeleri kapat</string>
+
+    <string name="close_tabs_manually">Asla</string>
+
+    <string name="close_tabs_after_one_day">Bir gün sonra</string>
+
+    <string name="close_tabs_after_one_week">Bir hafta sonra</string>
+
+    <string name="close_tabs_after_one_month">Bir ay sonra</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Açık sekmeleri otomatik kapatma</string>
+
+
+    <string name="preferences_opening_screen">Açılış ekranı</string>
+
+    <string name="opening_screen_homepage">Anasayfa</string>
+
+    <string name="opening_screen_last_tab">Son sekme</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Dört saatlik hareketsizlikten sonra ana sayfa</string>
+
+    <string name="close_tabs_manually_summary">Manuel olarak kapat</string>
+
+    <string name="close_tabs_after_one_day_summary">Bir gün sonra kapatın</string>
+
+    <string name="close_tabs_after_one_week_summary">Bir hafta sonra kapatın</string>
+
+    <string name="close_tabs_after_one_month_summary">Bir ay sonra kapatın</string>
+
+
+    <string name="preferences_inactive_tabs">Eski sekmeleri etkin olmayanlara taşı</string>
+
+    <string name="preferences_inactive_tabs_title">İki hafta boyunca görüntülemediğiniz sekmeler etkin olmayanlar bölümüne taşınır.</string>
+
+
+    <string name="tab_header_label">Açık sekmeler</string>
+
+    <string name="tabs_header_private_tabs_title">Özel sekmeler</string>
+
+    <string name="tabs_header_synced_tabs_title">Senkronize sekmeler</string>
+
+    <string name="add_tab">Sekme ekle</string>
+
+    <string name="add_private_tab">Özel sekme ekle</string>
+
+    <string name="tab_drawer_fab_content">Özel</string>
+
+    <string name="tab_drawer_fab_sync">Senkronizasyon</string>
+
+    <string name="tab_tray_menu_item_share">Tüm sekmeleri paylaş</string>
+
+    <string name="tab_tray_menu_recently_closed">Son kapatılan sekmeler</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Yakın zamanda kapatıldı</string>
+
+    <string name="tab_tray_menu_account_settings">Hesap ayarları</string>
+
+    <string name="tab_tray_menu_tab_settings">Sekme ayarları</string>
+
+    <string name="tab_tray_menu_item_close">Tüm sekmeleri kapat</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Yer imi</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Kapat</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Seçili sekmeleri paylaşma</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Seçili sekmeler menüsü</string>
+
+    <string name="remove_tab_from_collection">Sekmeyi koleksiyondan kaldır</string>
+
+    <string name="tabs_tray_select_tabs">Sekmeleri seçin</string>
+
+    <string name="close_tab">Sekmeyi kapat</string>
+
+    <string name="close_tab_title">Sekme %s\'yi kapat</string>
+
+    <string name="open_tabs_menu">Sekmeler menüsünü aç</string>
+
+    <string name="tabs_menu_save_to_collection1">Sekmeleri koleksiyona kaydetme</string>
+
+    <string name="collection_delete">Koleksiyonu sil</string>
+
+    <string name="collection_rename">Koleksiyonu yeniden adlandır</string>
+
+    <string name="collection_open_tabs">Açık sekmeler</string>
+
+    <string name="collection_name_hint">Koleksiyon adı</string>
+
+    <string name="rename_top_site">Yeniden Adlandır</string>
+
+    <string name="remove_top_site">Kaldırmak</string>
+
+    <string name="delete_from_history">Geçmişten sil</string>
+
+    <string name="pwa_site_controls_title_private">1$s (Özel Mod)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Diğer sekmeler</string>
+
+
+    <string name="history_search_1">Arama terimlerini girin</string>
+
+    <string name="history_delete_all">Geçmişi sil</string>
+
+    <string name="history_delete_multiple_items_snackbar">Tarih Silindi</string>
+
+    <string name="history_delete_single_item_snackbar">Silinmiş %1$s</string>
+
+    <string name="history_delete_item">Silme</string>
+
+    <string name="history_multi_select_title">1$d seçildi</string>
+
+    <string name="history_today">Bugün</string>
+
+    <string name="history_yesterday">Dün</string>
+
+    <string name="history_7_days">Son 7 gün</string>
+
+    <string name="history_30_days">Son 30 gün</string>
+
+    <string name="history_older">Daha yaşlı</string>
+
+    <string name="history_empty_message">Burada tarih yok</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">İndirmeler Kaldırıldı</string>
+
+    <string name="download_delete_single_item_snackbar">1$s kaldırıldı</string>
+
+    <string name="download_empty_message_1">İndirilen dosya yok</string>
+
+    <string name="download_multi_select_title">1$d seçildi</string>
+
+    <string name="download_delete_item_1">Kaldırmak</string>
+
+
+    <string name="tab_crash_title_2">Üzgünüm. 1$s bu sayfayı yükleyemiyor.</string>
+
+    <string name="tab_crash_send_report">BrowserWorks\'e çökme raporu gönderme</string>
+
+    <string name="tab_crash_close">Sekmeyi kapat</string>
+
+    <string name="tab_crash_restore">Geri yükleme sekmesi</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Bu klasörü silmek istediğinizden emin misiniz?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">s seçili öğeleri silecektir.</string>
+
+    <string name="bookmark_delete_negative">İptal</string>
+
+    <string name="bookmark_add_folder">Klasör ekle</string>
+
+    <string name="bookmark_saved_snackbar">Yer imi kaydedildi!</string>
+
+    <string name="edit_bookmark_snackbar_action">DÜZENLE</string>
+
+    <string name="bookmark_menu_edit_button">Düzenle</string>
+
+    <string name="bookmark_menu_copy_button">Anlaşıldı</string>
+
+    <string name="bookmark_menu_share_button">Paylaş</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">Yeni sekmede aç</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">Özel sekmede aç</string>
+
+    <string name="bookmark_menu_delete_button">Silme</string>
+
+    <string name="bookmark_menu_save_button">Kaydet</string>
+
+    <string name="bookmarks_multi_select_title">1$d seçildi</string>
+
+    <string name="edit_bookmark_fragment_title">Yer imini düzenle</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Klasörü düzenle</string>
+
+    <string name="bookmark_sign_in_button">Senkronize yer imlerini görmek için oturum açın</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">KLASÖR</string>
+
+    <string name="bookmark_name_label">İSİM</string>
+
+    <string name="bookmark_add_folder_fragment_label">Klasör ekle</string>
+
+    <string name="bookmark_select_folder_fragment_label">Klasör seçin</string>
+
+    <string name="bookmark_empty_title_error">Bir unvana sahip olmalı</string>
+
+    <string name="bookmark_invalid_url_error">Geçersiz URL</string>
+
+    <string name="bookmarks_empty_message">Burada yer imi yok</string>
+
+    <string name="bookmark_deletion_snackbar_message">Silinmiş %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Yer imleri silindi</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Seçili klasörleri silme</string>
+
+    <string name="bookmark_undo_deletion">UNDO</string>
+
+    <string name="bookmark_search">Arama terimlerini girin</string>
+
+
+    <string name="phone_feature_go_to_settings">Ayarlar\'a gidin</string>
+
+    <string name="quick_settings_sheet">Hızlı ayarlar sayfası</string>
+
+    <string name="phone_feature_recommended">Tavsiye edilir</string>
+
+    <string name="clear_permissions">İzinleri temizleyin</string>
+
+    <string name="clear_permissions_positive">TAMAM.</string>
+
+    <string name="clear_permissions_negative">İptal</string>
+
+    <string name="clear_permission">Açık izin</string>
+
+    <string name="clear_permission_positive">TAMAM.</string>
+
+    <string name="clear_permission_negative">İptal</string>
+
+    <string name="clear_permissions_on_all_sites">Tüm sitelerdeki izinleri temizleyin</string>
+
+    <string name="preference_browser_feature_autoplay">Otomatik Oynatma</string>
+
+    <string name="preference_phone_feature_camera">Kamera</string>
+
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+
+    <string name="preference_phone_feature_location">Konum</string>
+
+    <string name="preference_phone_feature_notification">Bildirim</string>
+
+    <string name="preference_phone_feature_persistent_storage">Kalıcı Depolama</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Siteler arası çerezler</string>
+
+    <string name="preference_phone_feature_media_key_system_access">DRM kontrollü içerik</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">İzin vermeyi isteyin</string>
+
+    <string name="preference_option_phone_feature_blocked">Engellendi</string>
+
+    <string name="preference_option_phone_feature_allowed">İzin verildi</string>
+
+    <string name="phone_feature_blocked_by_android">Android tarafından engellendi</string>
+
+    <string name="preference_exceptions">İstisnalar</string>
+
+    <string name="tracking_protection_on">Açık</string>
+
+    <string name="tracking_protection_off">Kapalı</string>
+
+    <string name="preference_option_autoplay_allowed2">Ses ve videoya izin ver</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Ses ve videoya izin ver</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Yalnızca hücresel veride ses ve videoyu engelleyin</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Ses ve video Wi-Fi üzerinden oynatılır</string>
+
+    <string name="preference_option_autoplay_block_audio2">Yalnızca sesi engelle</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Yalnızca sesi engelle</string>
+
+    <string name="preference_option_autoplay_blocked3">Ses ve görüntüyü engelleme</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Ses ve görüntüyü engelleme</string>
+
+    <string name="delete_browsing_data_quit_on">Açık</string>
+
+    <string name="delete_browsing_data_quit_off">Kapalı</string>
+
+    <string name="https_only_on">Açık</string>
+
+    <string name="https_only_off">Kapalı</string>
+
+
+    <string name="collections_header">Koleksiyonlar</string>
+
+    <string name="collection_menu_button_content_description">Koleksiyon menüsü</string>
+
+    <string name="no_collections_description2">Sizin için önemli olan şeyleri toplayın.\nDaha sonra hızlı erişim için benzer aramaları, siteleri ve sekmeleri bir araya getirin.</string>
+
+    <string name="create_collection_select_tabs">Sekmeleri Seçin</string>
+
+    <string name="create_collection_select_collection">Koleksiyon seçiniz</string>
+
+    <string name="create_collection_name_collection">İsim koleksiyonu</string>
+
+    <string name="create_collection_add_new_collection">Yeni koleksiyon ekle</string>
+
+    <string name="create_collection_select_all">Tümünü seçin</string>
+
+    <string name="create_collection_deselect_all">Tümünün seçimini kaldır</string>
+
+    <string name="create_collection_save_to_collection_empty">Kaydetmek için sekmeleri seçin</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">d sekme seçildi</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">d sekmesi seçildi</string>
+
+    <string name="create_collection_tabs_saved">Sekmeler kaydedildi!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Koleksiyon kurtarıldı!</string>
+
+    <string name="create_collection_tab_saved">Sekme kurtarıldı!</string>
+
+    <string name="create_collection_close">Kapat</string>
+
+    <string name="create_collection_save">Kaydet</string>
+
+    <string name="create_collection_view">Görünüm</string>
+
+    <string name="create_collection_positive">TAMAM.</string>
+
+    <string name="create_collection_negative">İptal</string>
+
+
+    <string name="create_collection_default_name">Koleksiyon %d</string>
+
+
+    <string name="share_header_2">Paylaş</string>
+
+    <string name="share_button_content_description">Paylaş</string>
+
+    <string name="share_device_subheader">Cihaza gönder</string>
+
+    <string name="share_link_all_apps_subheader">Tüm eylemler</string>
+
+    <string name="share_link_recent_apps_subheader">Yakın zamanda kullanılmış</string>
+
+    <string name="share_copy_link_to_clipboard">Panoya kopyala</string>
+
+    <string name="toast_copy_link_to_clipboard">Panoya kopyalandı</string>
+
+    <string name="sync_menu_sign_in">Senkronize etmek için oturum açın</string>
+
+    <string name="sync_sign_in">Sync\'te oturum açın</string>
+
+    <string name="sync_send_to_all">Tüm cihazlara gönder</string>
+
+    <string name="sync_reconnect">Senkronizasyona Yeniden Bağlanın</string>
+
+    <string name="sync_offline">Çevrimdışı</string>
+
+    <string name="sync_connect_device">Başka bir cihaz bağlayın</string>
+
+    <string name="sync_connect_device_dialog">Bir sekme göndermek için en az bir başka cihazda Waterfox\'ta oturum açın.</string>
+
+    <string name="sync_confirmation_button">Anladım.</string>
+
+    <string name="share_error_snackbar">Bu uygulama ile paylaşılamıyor</string>
+
+    <string name="sync_add_new_device_title">Cihaza gönder</string>
+
+    <string name="sync_add_new_device_message">Bağlı Cihaz Yok</string>
+
+    <string name="sync_add_new_device_learn_button">Sekme Gönderme Hakkında Bilgi Edinin...</string>
+
+    <string name="sync_add_new_device_connect_button">Başka Bir Cihaz Bağlayın...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Özel sekmeleri kapatın</string>
+
+    <string name="notification_marketing_channel_name">Pazarlama</string>
+
+    <string name="notification_default_browser_title">1$s hızlı ve özeldir</string>
+
+    <string name="notification_default_browser_text">1$s\'yi varsayılan tarayıcınız yapın</string>
+
+
+    <string name="snackbar_collection_deleted">Koleksiyon silindi</string>
+
+    <string name="snackbar_collection_renamed">Koleksiyonun adı değiştirildi</string>
+
+    <string name="snackbar_tab_closed">Sekme kapalı</string>
+
+    <string name="snackbar_tabs_closed">Sekmeler kapalı</string>
+
+    <string name="snackbar_message_bookmarks_saved">Yer imleri kaydedildi!</string>
+
+    <string name="snackbar_added_to_shortcuts">Kısayollara eklendi!</string>
+
+    <string name="snackbar_private_tab_closed">Özel sekme kapatıldı</string>
+
+    <string name="snackbar_private_tabs_closed">Özel sekmeler kapalı</string>
+
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <string name="snackbar_top_site_removed">Site kaldırıldı</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">1$s\'nin %2$s\'yi açmasına izin ver</string>
+
+    <string name="qr_scanner_dialog_positive">İZİN VER</string>
+
+    <string name="qr_scanner_dialog_negative">REDDET</string>
+
+    <string name="qr_scanner_dialog_invalid">Web adresi geçerli değil.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">TAMAM.</string>
+
+    <string name="tab_collection_dialog_message">1$s\'yi silmek istediğinizden emin misiniz?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">Bu sekmenin silinmesi tüm koleksiyonu silecektir. İstediğiniz zaman yeni koleksiyonlar oluşturabilirsiniz.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">1$s silinsin mi?</string>
+
+    <string name="tab_collection_dialog_positive">Silme</string>
+
+    <string name="full_screen_notification">Tam ekran moduna girme</string>
+
+    <string name="url_copied">URL kopyalandı</string>
+
+    <string name="accessibility_text_size_sample_text_1">Bu örnek metindir. Bu ayarla boyutu artırdığınızda veya azalttığınızda metnin nasıl görüneceğini göstermek için buradadır.</string>
+
+    <string name="preference_accessibility_text_size_summary">Web sitelerindeki metinleri büyütme veya küçültme</string>
+
+    <string name="preference_accessibility_font_size_title">Yazı Tipi Boyutu</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Otomatik yazı tipi boyutlandırma</string>
+
+    <string name="preference_accessibility_auto_size_summary">Yazı tipi boyutu Android ayarlarınızla eşleşecektir. Yazı tipi boyutunu buradan yönetmek için devre dışı bırakın.</string>
+
+
+    <string name="preferences_delete_browsing_data">Tarama verilerini silme</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Açık sekmeler</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">d sekmeleri</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Tarama geçmişi ve site verileri</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">d adresleri</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Çerezler</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Çoğu siteden çıkış yapmış olacaksınız</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Önbelleğe alınmış görüntüler ve dosyalar</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Depolama alanını boşaltır</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Site izinleri</string>
+
+    <string name="preferences_delete_browsing_data_downloads">İndirmeler</string>
+
+    <string name="preferences_delete_browsing_data_button">Tarama verilerini silme</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Çıkıldığında tarama verilerini silme</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Ana menüden \"Çık\" seçeneğini seçtiğinizde tarama verilerini otomatik olarak siler</string>
+
+    <string name="delete_browsing_data_on_quit_action">Bırak</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">Bu, tüm tarama verilerinizi silecektir.</string>
+
+    <string name="delete_history_prompt_title">Silinecek zaman aralığı</string>
+
+    <string name="delete_history_prompt_body">Geçmişi (diğer cihazlardan senkronize edilen geçmiş dahil), çerezleri ve diğer tarama verilerini kaldırır.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Son bir saat</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Bugün ve dün</string>
+
+    <string name="delete_history_prompt_button_everything">Her şey</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">s seçilen tarama verilerini silecektir.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">İptal</string>
+
+    <string name="delete_browsing_data_prompt_allow">Silme</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Tarama verileri silindi</string>
+
+    <string name="deleting_browsing_data_in_progress">Tarama verilerini silme...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">"%s" içindeki tüm siteleri sil</string>
+
+    <string name="delete_history_group_prompt_cancel">İptal</string>
+
+    <string name="delete_history_group_prompt_allow">Silme</string>
+
+    <string name="delete_history_group_snackbar">Grup silindi</string>
+
+
+    <string name="onboarding_header_2">Daha özel bir ağa hoş geldiniz</string>
+
+    <string name="onboarding_message">Tabandan gelen, bağımsız bir tarayıcı.</string>
+
+    <string name="onboarding_account_sign_in_header">Kaldığınız yerden devam edin</string>
+
+    <string name="onboarding_manual_sign_in_description">Sorunsuz ekran geçişi için sekmeleri ve parolaları cihazlar arasında senkronize edin.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Oturum aç</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">Senkronizasyon açık</string>
+
+    <string name="onboarding_tracking_protection_header">Varsayılan olarak gizlilik koruması</string>
+
+    <string name="onboarding_tracking_protection_description">İzleyicilerin sizi siteler arasında takip etmek için çerezleri kullanmasını engellemek için Toplam Çerez Koruması özelliğine sahiptir.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Standart (varsayılan)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Gizlilik ve performans için dengeli. Sayfalar normal şekilde yüklenir.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Katı</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Daha fazla izleyiciyi engeller, böylece sayfalar daha hızlı yüklenir, ancak bazı sayfa içi işlevler bozulabilir.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Araç çubuğu yerleşiminizi seçin</string>
+
+    <string name="onboarding_toolbar_placement_description">Altta tutun ya da üste taşıyın.</string>
+
+    <string name="onboarding_privacy_notice_header_1">Verilerinizi siz kontrol edersiniz</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox herhangi bir telemetri toplamaz ve verileriniz üzerinde kontrol sahibi olmanızı sağlar.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Gizlilik bildirimimizi okuyun</string>
+
+    <string name="onboarding_conclusion_header">Harika bir internet açmaya hazır mısınız?</string>
+
+    <string name="onboarding_finish">Göz atmaya başlayın</string>
+
+
+    <string name="onboarding_theme_picker_header">Temanızı seçin</string>
+
+    <string name="onboarding_theme_picker_description_2">Karanlık mod ile pilden ve gözlerinizden tasarruf edin.</string>
+
+    <string name="onboarding_theme_automatic_title">Otomatik</string>
+
+    <string name="onboarding_theme_automatic_summary">Cihaz ayarlarınıza uyum sağlar</string>
+
+    <string name="onboarding_theme_dark_title">Koyu tema</string>
+
+    <string name="onboarding_theme_light_title">Işık teması</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Sekmeler gönderildi!</string>
+
+    <string name="sync_sent_tab_snackbar">Tab gönderildi!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Gönderilemiyor</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+
+    <string name="sync_scan_code">Kodu tarayın</string>
+
+    <string name="sign_in_instructions">Waterfox, mobil ve masaüstü arasında veri senkronizasyonu için bir Mozilla hesabına dayanır.&lt;br&gt; Bilgisayarınızda Waterfox\'u açın ve &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla hiçbir şekilde Waterfox ile bağlantılı değildir.&lt;/i&gt; adresine gidin.</string>
+
+    <string name="sign_in_ready_for_scan">Taramaya hazır</string>
+
+    <string name="sign_in_with_camera">Kameranızla oturum açın</string>
+
+    <string name="sign_in_with_email">Bunun yerine e-posta kullanın</string>
+
+    <string name="sign_in_create_account_text">Hesabınız yok mu? Waterfox\'u cihazlar arasında senkronize etmek için &lt;u&gt;Bir tane oluşturun&lt;/u&gt;.</string>
+
+    <string name="sign_out_confirmation_message_2">s hesabınızla senkronizasyonu durduracak, ancak bu cihazdaki tarama verilerinizin hiçbirini silmeyecektir.</string>
+
+    <string name="sign_out_disconnect">Bağlantıyı Kes</string>
+
+    <string name="sign_out_cancel">İptal</string>
+
+    <string name="bookmark_cannot_edit_root">Varsayılan klasörler düzenlenemiyor</string>
+
+
+    <string name="etp_settings">Koruma Ayarları</string>
+
+    <string name="preference_enhanced_tracking_protection">Gelişmiş İzleme Koruması</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Takip edilmeden gezinin</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Verilerinizi kendinize saklayın. s sizi çevrimiçi yaptıklarınızı takip eden en yaygın izleyicilerin çoğundan korur.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Daha fazla bilgi edinin</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standart (varsayılan)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Gizlilik ve performans için dengeli. Sayfalar normal şekilde yüklenir.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Standart izleme koruması tarafından engellenen şeyler</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Katı</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Daha fazla izleyiciyi engeller, böylece sayfalar daha hızlı yüklenir, ancak bazı sayfa içi işlevler bozulabilir.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Sıkı izleme koruması tarafından engellenen şeyler</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Özel</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Hangi izleyicilerin ve komut dosyalarının engelleneceğini seçin.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Özel izleme koruması tarafından engellenen şeyler</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Çerezler</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Siteler arası ve sosyal medya izleyicileri</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Ziyaret edilmeyen sitelerden gelen çerezler</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Tüm üçüncü taraf çerezleri (web sitelerinin çökmesine neden olabilir)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Tüm çerezler (web sitelerinin çökmesine neden olur)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Siteler arası çerezleri izole edin</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">İçerik takibi</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Tüm sekmelerde</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Sadece Özel sekmelerde</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Parmak izi makineleri</string>
+
+    <string name="enhanced_tracking_protection_details">Detaylar</string>
+
+    <string name="enhanced_tracking_protection_blocked">Engellendi</string>
+
+    <string name="enhanced_tracking_protection_allowed">İzin verildi</string>
+
+    <string name="etp_social_media_trackers_title">Sosyal Medya Takipçileri</string>
+
+    <string name="etp_social_media_trackers_description">Sosyal ağların web\'deki gezinme etkinliğinizi izleme yeteneğini sınırlar.</string>
+
+    <string name="etp_cookies_title">Siteler Arası İzleme Çerezleri</string>
+
+    <string name="etp_cookies_title_2">Siteler Arası Çerezler</string>
+
+    <string name="etp_cookies_description">Reklam ağlarının ve analiz şirketlerinin birçok sitede gezinme verilerinizi derlemek için kullandığı çerezleri engeller.</string>
+
+    <string name="etp_cookies_description_2">Total Cookie Protection, çerezleri bulunduğunuz siteye izole eder, böylece reklam ağları gibi izleyiciler sizi siteler arasında takip etmek için bunları kullanamaz.</string>
+
+    <string name="etp_cryptominers_title">Cryptominers</string>
+
+    <string name="etp_cryptominers_description">Kötü amaçlı komut dosyalarının dijital para madenciliği yapmak için cihazınıza erişmesini önler.</string>
+
+    <string name="etp_fingerprinters_title">Parmak izi makineleri</string>
+
+    <string name="etp_fingerprinters_description">Cihazınız hakkında izleme amacıyla kullanılabilecek benzersiz olarak tanımlanabilir verilerin toplanmasını durdurur.</string>
+
+    <string name="etp_tracking_content_title">İçerik Takibi</string>
+
+    <string name="etp_tracking_content_description">İzleme kodu içeren dış reklamların, videoların ve diğer içeriklerin yüklenmesini durdurur. Bazı web sitesi işlevlerini etkileyebilir.</string>
+
+    <string name="etp_panel_on">Bu site için korumalar AÇIK</string>
+
+    <string name="etp_panel_off">Bu site için korumalar KAPALI</string>
+
+    <string name="enhanced_tracking_protection_exceptions">Gelişmiş İzleme Koruması bu web siteleri için kapalı</string>
+
+    <string name="etp_back_button_content_description">Geri git</string>
+
+    <string name="open_source_licenses_title">s | OSS Kütüphaneleri</string>
+
+    <string name="etp_redirect_trackers_title">Yönlendirme İzleyicileri</string>
+
+    <string name="etp_redirect_trackers_description">Bilinen izleme web sitelerine yönlendirmeler tarafından ayarlanan çerezleri temizler.</string>
+
+    <string name="preference_etp_smartblock_description">Aşağıda işaretlenen bazı izleyiciler, onlarla etkileşimde bulunduğunuz için bu sayfada kısmen engellenmiştir *.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Daha fazla bilgi edinin</string>
+
+
+    <string name="about_support">Destek</string>
+
+    <string name="about_crashes">Kazalar</string>
+
+    <string name="about_privacy_notice">Gizlilik bildirimi</string>
+
+    <string name="about_know_your_rights">Haklarınızı bilin</string>
+
+    <string name="about_licensing_information">Lisanslama bilgileri</string>
+
+    <string name="about_other_open_source_libraries">Kullandığımız kütüphaneler</string>
+
+    <string name="about_debug_menu_toast_progress">Hata ayıklama menüsü: Etkinleştirmek için %1$d sol tıklama(lar)</string>
+    <string name="about_debug_menu_toast_done">Hata ayıklama menüsü etkin</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Anlaşıldı</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Yapıştır ve Git</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Yapıştır</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">Panoya kopyalanan URL</string>
+
+
+    <string name="add_to_homescreen_title">Ana ekrana ekle</string>
+
+    <string name="add_to_homescreen_cancel">İptal</string>
+
+    <string name="add_to_homescreen_add">Ekle</string>
+
+    <string name="add_to_homescreen_continue">Web sitesine devam edin</string>
+
+    <string name="add_to_homescreen_text_placeholder">Kısayol adı</string>
+
+    <string name="add_to_homescreen_description_2">Uygulama benzeri bir deneyimle anında erişim sağlamak ve daha hızlı gezinmek için bu web sitesini cihazınızın Ana ekranına kolayca ekleyebilirsiniz.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Girişler ve şifreler</string>
+
+    <string name="preferences_passwords_save_logins">Girişleri ve parolaları kaydetme</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Kaydetmeyi isteyin</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Asla kaydetme</string>
+
+    <string name="preferences_passwords_autofill2">1$s içinde otomatik doldurma</string>
+
+    <string name="preferences_passwords_autofill_description">1$s kullanırken web sitelerindeki kullanıcı adlarını ve parolaları doldurun ve kaydedin.</string>
+
+    <string name="preferences_android_autofill">Diğer uygulamalarda otomatik doldurma</string>
+
+    <string name="preferences_android_autofill_description">Cihazınızdaki diğer uygulamalarda kullanıcı adlarını ve parolaları doldurun.</string>
+
+    <string name="preferences_logins_add_login">Giriş ekle</string>
+
+
+    <string name="preferences_passwords_sync_logins">Girişleri senkronize et</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Girişleri cihazlar arasında senkronize edin</string>
+
+    <string name="preferences_passwords_saved_logins">Kaydedilmiş girişler</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">Kaydettiğiniz veya %s ile senkronize ettiğiniz girişler burada görünecektir.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sync hakkında daha fazla bilgi edinin.</string>
+
+    <string name="preferences_passwords_exceptions">İstisnalar</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">Kaydedilmeyen girişler ve parolalar burada gösterilecektir.</string>
+
+    <string name="preferences_passwords_exceptions_description">Bu siteler için girişler ve şifreler kaydedilmeyecektir.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Tüm istisnaları sil</string>
+
+    <string name="preferences_passwords_saved_logins_search">Arama girişleri</string>
+
+    <string name="preferences_passwords_saved_logins_site">Site</string>
+
+    <string name="preferences_passwords_saved_logins_username">Kullanıcı Adı</string>
+
+    <string name="preferences_passwords_saved_logins_password">Şifre</string>
+
+    <string name="logins_password_copied">Panoya kopyalanan şifre</string>
+
+    <string name="logins_username_copied">Kullanıcı adı panoya kopyalandı</string>
+
+    <string name="saved_logins_copy_password">Şifreyi kopyala</string>
+
+    <string name="saved_logins_clear_password">Parolayı temizle</string>
+
+    <string name="saved_login_copy_username">Kullanıcı adını kopyala</string>
+
+    <string name="saved_login_clear_username">Kullanıcı adını temizle</string>
+
+    <string name="saved_login_clear_hostname">Ana bilgisayar adını temizle</string>
+
+    <string name="saved_login_open_site">Siteyi tarayıcıda açın</string>
+
+    <string name="saved_login_reveal_password">Şifreyi göster</string>
+
+    <string name="saved_login_hide_password">Şifreyi gizle</string>
+
+    <string name="logins_biometric_prompt_message">Kayıtlı giriş bilgilerinizi görüntülemek için kilidi açın</string>
+
+    <string name="logins_warning_dialog_title">Giriş bilgilerinizi ve parolalarınızı güvence altına alın</string>
+
+    <string name="logins_warning_dialog_message">Cihazınız başka birinin elindeyse kayıtlı giriş bilgilerinize ve parolalarınıza erişilmesini önlemek için bir cihaz kilidi deseni, PIN veya parola ayarlayın.</string>
+
+    <string name="logins_warning_dialog_later">Daha sonra</string>
+
+    <string name="logins_warning_dialog_set_up_now">Şimdi kurun</string>
+
+    <string name="logins_biometric_prompt_message_pin">Cihazınızın kilidini açın</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Tüm web sitelerini yakınlaştırın</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Bu hareketi engelleyen web sitelerinde bile sıkıştırma ve yakınlaştırmaya izin vermeyi etkinleştirin.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">İsim (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Son kullanılan</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Girişleri sırala menüsü</string>
+
+
+    <string name="preferences_autofill">Otomatik Doldurma</string>
+
+    <string name="preferences_addresses">Adresler</string>
+
+    <string name="preferences_credit_cards">Kredi kartları</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Kartları kaydedin ve otomatik doldurun</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Veriler şifrelenmiştir</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Kartları cihazlar arasında senkronize edin</string>
+
+    <string name="preferences_credit_cards_sync_cards">Senkronizasyon kartları</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Kredi kartı ekle</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Kayıtlı kartları yönetme</string>
+
+    <string name="preferences_addresses_add_address">Adres ekle</string>
+
+    <string name="preferences_addresses_manage_addresses">Adresleri yönetin</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Adresleri kaydetme ve otomatik doldurma</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Numaralar, e-posta ve sevkiyat adresleri gibi bilgileri ekleyin</string>
+
+
+    <string name="credit_cards_add_card">Kart ekle</string>
+
+    <string name="credit_cards_edit_card">Kartı düzenle</string>
+
+    <string name="credit_cards_card_number">Kart Numarası</string>
+
+    <string name="credit_cards_expiration_date">Son Kullanma Tarihi</string>
+
+    <string name="credit_cards_expiration_date_month">Son Kullanma Tarihi Ay</string>
+
+    <string name="credit_cards_expiration_date_year">Son Kullanma Tarihi Yıl</string>
+
+    <string name="credit_cards_name_on_card">Karttaki İsim</string>
+
+    <string name="credit_cards_menu_delete_card">Kartı sil</string>
+
+    <string name="credit_cards_delete_card_button">Kartı sil</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">Bu kredi kartını silmek istediğinizden emin misiniz?</string>
+
+    <string name="credit_cards_delete_dialog_button">Silme</string>
+
+    <string name="credit_cards_menu_save">Kaydet</string>
+
+    <string name="credit_cards_save_button">Kaydet</string>
+
+    <string name="credit_cards_cancel_button">İptal</string>
+
+    <string name="credit_cards_saved_cards">Kaydedilen kartlar</string>
+
+    <string name="credit_cards_number_validation_error_message">Lütfen geçerli bir kredi kartı numarası girin</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Lütfen bu alanı doldurun</string>
+
+    <string name="credit_cards_biometric_prompt_message">Kayıtlı kartlarınızı görüntülemek için kilidi açın</string>
+
+    <string name="credit_cards_warning_dialog_title">Kredi kartlarınızı güvence altına alın</string>
+
+    <string name="credit_cards_warning_dialog_message">Cihazınız başka birinin elindeyse kayıtlı kredi kartlarınıza erişilmesini önlemek için bir cihaz kilidi deseni, PIN veya parola ayarlayın.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Şimdi kurun</string>
+
+    <string name="credit_cards_warning_dialog_later">Daha sonra</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Cihazınızın kilidini açın</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Kayıtlı kredi kartı bilgilerini kullanmak için kilidi açma</string>
+
+    <string name="addresses_add_address">Adres ekle</string>
+
+    <string name="addresses_edit_address">Adresi düzenle</string>
+
+    <string name="addresses_manage_addresses">Adresleri yönetin</string>
+
+    <string name="addresses_first_name">İlk İsim</string>
+
+    <string name="addresses_middle_name">Göbek Adı</string>
+
+    <string name="addresses_last_name">Soyadı</string>
+
+    <string name="addresses_street_address">Sokak Adresi</string>
+
+    <string name="addresses_city">Şehir</string>
+
+    <string name="addresses_state">Eyalet</string>
+
+    <string name="addresses_province">İl</string>
+
+    <string name="addresses_zip">Zip</string>
+
+    <string name="addresses_country">Ülke veya bölge</string>
+
+    <string name="addresses_phone">Telefon</string>
+
+    <string name="addresses_email">E-posta</string>
+
+    <string name="addresses_save_button">Kaydet</string>
+
+    <string name="addresses_cancel_button">İptal</string>
+
+    <string name="addressess_delete_address_button">Adres sil</string>
+
+    <string name="addressess_confirm_dialog_message">Bu adresi silmek istediğinizden emin misiniz?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Silme</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">İptal</string>
+
+    <string name="address_menu_save_address">Adres kaydet</string>
+
+    <string name="address_menu_delete_address">Adres sil</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Arama motoru ekle</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Arama motorunu düzenle</string>
+
+    <string name="search_engine_add_button_content_description">Ekle</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Kaydet</string>
+
+    <string name="search_engine_edit">Düzenle</string>
+
+    <string name="search_engine_delete">Silme</string>
+
+
+    <string name="search_add_custom_engine_label_other">Diğer</string>
+
+    <string name="search_add_custom_engine_name_hint">İsim</string>
+
+    <string name="search_add_custom_engine_search_string_hint">Kullanılacak arama dizesi</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Sorguyu "%s" ile değiştirin. Örnek:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Özel arama motoru ayrıntıları</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Arama motoru adını girin</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Bir arama dizesi girin</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Arama dizesinin Örnek biçimiyle eşleşip eşleşmediğini kontrol edin</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">"%s "ye bağlanırken hata oluştu</string>
+
+    <string name="search_add_custom_engine_success_message">Oluşturuldu %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Kaydedildi %s</string>
+
+    <string name="search_delete_search_engine_success_message">Silinmiş %s</string>
+
+
+    <string name="phone_feature_blocked_intro">İzin vermek için:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Android Ayarları\'na gidin</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. &lt;b&gt;İzinler&lt;/b&gt; öğesine dokunun</string>
+
+    <string name="phone_feature_blocked_step_feature">3. &lt;b&gt;%1$s&lt;/b&gt; öğesini AÇIK olarak değiştirin</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">Bağlantı güvenli</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">Bağlantı güvenli değil</string>
+
+    <string name="clear_site_data">Çerezleri ve site verilerini temizleyin</string>
+
+    <string name="confirm_clear_site_data">&lt;b&gt;%s&lt;/b&gt; sitesi için tüm çerezleri ve verileri temizlemek istediğinizden emin misiniz?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Tüm sitelerdeki tüm izinleri temizlemek istediğinizden emin misiniz?</string>
+
+    <string name="confirm_clear_permissions_site">Bu site için tüm izinleri temizlemek istediğinizden emin misiniz?</string>
+
+    <string name="confirm_clear_permission_site">Bu site için bu izni temizlemek istediğinizden emin misiniz?</string>
+
+    <string name="no_site_exceptions">Saha istisnası yok</string>
+
+    <string name="bookmark_deletion_confirmation">Bu yer imini silmek istediğinizden emin misiniz?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Kısayollara ekle</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Kısayollardan kaldır</string>
+
+    <string name="certificate_info_verified_by">Doğrulayan: %1$s</string>
+
+    <string name="login_menu_delete_button">Silme</string>
+
+    <string name="login_menu_edit_button">Düzenle</string>
+
+    <string name="login_deletion_confirmation">Bu girişi silmek istediğinizden emin misiniz?</string>
+
+    <string name="dialog_delete_positive">Silme</string>
+
+    <string name="dialog_delete_negative">İptal</string>
+
+    <string name="login_options_menu">Giriş seçenekleri</string>
+
+    <string name="saved_login_hostname_description">Oturum açma web adresi için düzenlenebilir metin alanı.</string>
+
+    <string name="saved_login_username_description">Oturum açma kullanıcı adı için düzenlenebilir metin alanı.</string>
+
+    <string name="saved_login_password_description">Oturum açma parolası için düzenlenebilir metin alanı.</string>
+
+    <string name="save_changes_to_login">Oturum açmak için değişiklikleri kaydedin.</string>
+
+    <string name="edit">Düzenle</string>
+
+    <string name="add_login">Yeni giriş ekle</string>
+
+    <string name="saved_login_password_required">Şifre gerekli</string>
+
+    <string name="saved_login_username_required">Kullanıcı adı gerekli</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Ana bilgisayar adı gerekli</string>
+
+    <string name="voice_search_content_description">Sesli arama</string>
+
+    <string name="voice_search_explainer">Şimdi konuşun</string>
+
+    <string name="saved_login_duplicate">Bu kullanıcı adına sahip bir oturum zaten mevcut</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">Web adresi "https://" veya "http://" içermelidir</string>
+
+    <string name="add_login_hostname_invalid_text_2">Geçerli ana bilgisayar adı gerekli</string>
+
+
+    <string name="synced_tabs_connect_another_device">Başka bir cihaz bağlayın.</string>
+
+    <string name="synced_tabs_reauth">Lütfen yeniden kimlik doğrulaması yapın.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Lütfen sekme senkronizasyonunu etkinleştirin.</string>
+
+    <string name="synced_tabs_no_tabs">Diğer cihazlarınızda Waterfox\'ta açık herhangi bir sekmeniz yok.</string>
+
+    <string name="synced_tabs_sign_in_message">Diğer cihazlarınızdaki sekmelerin bir listesini görüntüleyin.</string>
+
+    <string name="synced_tabs_sign_in_button">Senkronize etmek için oturum açın</string>
+
+    <string name="synced_tabs_no_open_tabs">Açık sekme yok</string>
+
+    <string name="synced_tabs_expand_group">Senkronize sekmeler grubunu genişletme</string>
+
+    <string name="synced_tabs_collapse_group">Senkronize sekmeler grubunu daraltma</string>
+
+
+    <string name="shortcut_max_limit_title">Kısayol sınırına ulaşıldı</string>
+
+    <string name="shortcut_max_limit_content">Yeni bir kısayol eklemek için bir tanesini kaldırın. Siteye dokunup basılı tutun ve kaldır öğesini seçin.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">Tamam, anladım.</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Kısayollar</string>
+
+    <string name="top_sites_rename_dialog_title">İsim</string>
+
+    <string name="shortcut_name_hint">Kısayol adı</string>
+
+    <string name="top_sites_rename_dialog_ok">TAMAM.</string>
+
+    <string name="top_sites_rename_dialog_cancel">İptal</string>
+
+    <string name="top_sites_menu_settings">Ayarlar</string>
+
+    <string name="top_sites_menu_sponsor_privacy">Sponsorlarımız ve gizliliğiniz</string>
+
+    <string name="top_sites_sponsored_label">Sponsorlu</string>
+
+
+    <string name="inactive_tabs_title">Aktif olmayan sekmeler</string>
+
+    <string name="inactive_tabs_delete_all">Etkin olmayan tüm sekmeleri kapatın</string>
+
+    <string name="inactive_tabs_expand_content_description">Etkin olmayan sekmeleri genişletme</string>
+
+    <string name="inactive_tabs_collapse_content_description">Etkin olmayan sekmeleri daraltma</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Bir ay sonra otomatik kapanır mı?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox, geçtiğimiz ay boyunca görüntülemediğiniz sekmeleri kapatabilir.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">OTOMATIK KAPATMAYI AÇ</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Otomatik kapanma etkin</string>
+
+
+    <string name="default_browser_experiment_card_text">Web sitelerindeki, e-postalardaki ve mesajlardaki bağlantıları Waterfox\'ta otomatik olarak açılacak şekilde ayarlayın.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Kaldırmak</string>
+
+
+    <string name="radio_preference_info_content_description">Daha fazla bilgi için tıklayın</string>
+
+
+    <string name="action_bar_up_description">Yukarı git</string>
+
+
+    <string name="privacy_content_close_button_content_description">Kapat</string>
+
+    <string name="waterfox_suggest_header">Waterfox Önerisi</string>
+</resources>

@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Ιδιωτικό %s</string>
+    
+    <string name="app_name_private_4">%s (Ιδιωτικό)</string>
+
+    
+    
+    <string name="content_description_menu">Περισσότερες επιλογές</string>
+    
+    <string name="content_description_private_browsing_button">Ενεργοποιήστε την ιδιωτική περιήγηση</string>
+    
+    <string name="content_description_disable_private_browsing_button">Απενεργοποιήστε την ιδιωτική περιήγηση</string>
+    
+    <string name="search_hint">Αναζήτηση ή εισαγωγή διεύθυνσης</string>
+    
+    <string name="application_search_hint">Εισάγετε όρους αναζήτησης</string>
+    
+    <string name="no_open_tabs_description">Οι ανοιχτές καρτέλες σας θα εμφανίζονται εδώ.</string>
+    
+    <string name="no_private_tabs_description">Οι προσωπικές σας καρτέλες θα εμφανίζονται εδώ.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d επιλεγμένο</string>
+    
+    <string name="tab_tray_add_new_collection">Προσθήκη νέας συλλογής</string>
+    
+    <string name="tab_tray_add_new_collection_name">Όνομα</string>
+    
+    <string name="tab_tray_select_collection">Επιλέξτε συλλογή</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Έξοδος από τη λειτουργία πολλαπλών επιλογών</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Αποθήκευση επιλεγμένων καρτελών σε συλλογή</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Επιλεγμένα</string>
+
+    
+    
+    <string name="recently_saved_title">Πρόσφατα αποθηκευμένο</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Εμφάνιση όλων των αποθηκευμένων σελιδοδεικτών</string>
+    
+    <string name="recently_saved_menu_item_remove">Αφαιρέστε το</string>
+
+    
+    <string name="about_content">Το %1$s κατασκευάζεται από την BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s διαγράφει το ιστορικό αναζήτησης και περιήγησης από τις ιδιωτικές καρτέλες όταν τις κλείνετε ή κλείνετε την εφαρμογή. Παρόλο που αυτό δεν σας κάνει ανώνυμους για τους ιστότοπους ή τον πάροχο υπηρεσιών διαδικτύου, διευκολύνει τη διατήρηση των διαδικτυακών σας δραστηριοτήτων σε ιδιωτικό επίπεδο από οποιονδήποτε άλλο χρησιμοποιεί αυτή τη συσκευή.</string>
+    <string name="private_browsing_common_myths">Κοινοί μύθοι σχετικά με την ιδιωτική περιήγηση</string>
+
+    
+    
+    <string name="cfr_message">Προσθέστε μια συντόμευση για να ανοίγετε ιδιωτικές καρτέλες από την Αρχική οθόνη σας.</string>
+    
+    <string name="cfr_pos_button_text">Προσθήκη συντόμευσης</string>
+    
+    <string name="cfr_neg_button_text">Όχι ευχαριστώ</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Μπορείτε να ορίσετε το %1$s να ανοίγει αυτόματα συνδέσμους σε εφαρμογές.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Μεταβείτε στις ρυθμίσεις</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Απορρίψτε το</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Απορρίψτε το</string>
+
+    
+    
+    <string name="tcp_cfr_message">Το πιο ισχυρό χαρακτηριστικό προστασίας της ιδιωτικής ζωής μας απομονώνει τους cross-site trackers.</string>
+    
+    <string name="tcp_cfr_learn_more">Μάθετε για την ολοκληρωμένη προστασία cookie</string>
+
+    
+    <string name="camera_permissions_needed_message">Απαιτείται πρόσβαση στην κάμερα. Μεταβείτε στις ρυθμίσεις του Android, πατήστε δικαιώματα και πατήστε επιτρέψτε.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Μεταβείτε στις ρυθμίσεις</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Απορρίψτε το</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Ορίστε να κλείνουν αυτόματα οι ανοιχτές καρτέλες που δεν έχουν προβληθεί την τελευταία ημέρα, εβδομάδα ή μήνα.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Προβολή επιλογών</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Απορρίψτε το</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Οι καρτέλες που δεν έχετε δει για δύο εβδομάδες μεταφέρονται εδώ.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Απενεργοποίηση στις ρυθμίσεις</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Αυτόματο κλείσιμο μετά από ένα μήνα;</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s μπορεί να κλείσει καρτέλες που δεν έχετε δει τον τελευταίο μήνα.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Κλείστε το</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Ενεργοποίηση του αυτόματου κλεισίματος</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Νέα καρτέλα</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Νέα ιδιωτική καρτέλα</string>
+
+    
+    
+    <string name="recent_tabs_header">Μετάβαση πίσω</string>
+    
+    <string name="recent_tabs_show_all">Εμφάνιση όλων</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Εμφάνιση όλων των πρόσφατων καρτελών</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Η αναζήτησή σας για \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d τοποθεσίες</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Δείτε όλες τις συγχρονισμένες καρτέλες</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Συσκευή συγχρονισμού</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Αφαιρέστε το</string>
+    
+    <string name="recent_tab_menu_item_remove">Αφαιρέστε το</string>
+
+    
+    
+    <string name="history_metadata_header_2">Πρόσφατα επισκέφθηκε</string>
+    
+    <string name="recently_visited_menu_item_remove">Αφαιρέστε το</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Εμφάνιση όλων των προηγούμενων εξερευνήσεων</string>
+
+    
+    
+    <string name="browser_menu_back">Πίσω</string>
+    
+    <string name="browser_menu_forward">Εμπρός</string>
+    
+    <string name="browser_menu_refresh">Ανανέωση</string>
+    
+    <string name="browser_menu_stop">Σταματήστε το</string>
+    
+    <string name="browser_menu_add_ons">Πρόσθετα</string>
+    
+    <string name="no_add_ons">Δεν υπάρχουν πρόσθετα εδώ</string>
+    
+    <string name="browser_menu_help">Βοήθεια</string>
+    
+    <string name="browser_menu_settings">Ρυθμίσεις</string>
+    
+    <string name="browser_menu_library">Βιβλιοθήκη</string>
+    
+    <string name="browser_menu_desktop_site">Επιτραπέζια τοποθεσία</string>
+    
+    <string name="browser_menu_add_to_homescreen">Προσθήκη στην αρχική οθόνη</string>
+    
+    <string name="browser_menu_install_on_homescreen">Εγκαταστήστε το</string>
+    
+    <string name="resync_button_content_description">Επανασυντονισμός</string>
+    
+    <string name="browser_menu_find_in_page">Βρείτε στη σελίδα</string>
+    
+    <string name="browser_menu_save_to_collection_2">Αποθήκευση σε συλλογή</string>
+    
+    <string name="browser_menu_share">Μοιραστείτε το</string>
+    
+    <string name="browser_menu_open_in_waterfox">Άνοιγμα σε %1$s</string>
+    
+    <string name="browser_menu_powered_by">Τροφοδοτείται από %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">Άποψη αναγνώστη</string>
+    
+    <string name="browser_menu_read_close">Κλείστε την προβολή του αναγνώστη</string>
+    
+    <string name="browser_menu_open_app_link">Άνοιγμα στην εφαρμογή</string>
+    
+    <string name="browser_menu_customize_reader_view">Προσαρμογή προβολής αναγνώστη</string>
+    
+    <string name="browser_menu_add">Προσθέστε</string>
+    
+    <string name="browser_menu_edit">Επεξεργασία</string>
+    
+    <string name="browser_menu_customize_home_1">Προσαρμογή αρχικής σελίδας</string>
+    
+    
+    <string name="browser_toolbar_home">Αρχική οθόνη</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Επιλεγμένη γλώσσα</string>
+    
+    <string name="default_locale_text">Ακολουθήστε τη γλώσσα της συσκευής</string>
+    
+    <string name="locale_search_hint">Γλώσσα αναζήτησης</string>
+
+    
+    
+    <string name="search_scan_button">Σάρωση</string>
+    
+    <string name="search_engine_button">Μηχανή αναζήτησης</string>
+    
+    <string name="search_shortcuts_engine_settings">Ρυθμίσεις μηχανών αναζήτησης</string>
+    
+    <string name="awesomebar_clipboard_title">Συμπλήρωση συνδέσμου από το πρόχειρο</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Επιτρέψτε το</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Μην επιτρέπετε</string>
+    
+    <string name="search_suggestions_onboarding_title">Να επιτρέπετε προτάσεις αναζήτησης σε ιδιωτικές συνεδρίες;</string>
+    
+    <string name="search_suggestions_onboarding_text">%s θα μοιράζεται ό,τι πληκτρολογείτε στη γραμμή διευθύνσεων με την προεπιλεγμένη μηχανή αναζήτησης.</string>
+    
+    <string name="search_engine_suggestions_title">Αναζήτηση %s</string>
+    
+    <string name="search_engine_suggestions_description">Αναζήτηση απευθείας από τη γραμμή διευθύνσεων</string>
+    
+    <string name="search_settings_menu_item">Ρυθμίσεις αναζήτησης</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Τώρα είναι πιο εύκολο να συνεχίσετε από εκεί που σταματήσατε.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Μετάβαση στις ανοιχτές καρτέλες, τους σελιδοδείκτες και το ιστορικό περιήγησης.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Καθαρές, οργανωμένες καρτέλες</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Απομακρύνετε την ακαταστασία των καρτελών με τη βελτιωμένη διάταξη και τις καρτέλες που κλείνουν αυτόματα.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Πρόσφατες αναζητήσεις</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Επανεξετάστε τις τελευταίες αναζητήσεις σας από την αρχική σελίδα και τις καρτέλες σας.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Γνωρίστε την εξατομικευμένη αρχική σας σελίδα. Εδώ θα εμφανίζονται οι πρόσφατες καρτέλες, οι σελιδοδείκτες και τα αποτελέσματα αναζήτησης.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Καλώς ήρθατε σε ένα πιο προσωπικό διαδίκτυο</string>
+    
+    <string name="onboarding_home_welcome_description">Περισσότερα χρώματα. Καλύτερη ιδιωτικότητα. Ίδια δέσμευση για τους ανθρώπους έναντι του κέρδους.</string>
+    
+    <string name="onboarding_home_sync_title_3">Μεταπηδήστε από το τηλέφωνο στο φορητό υπολογιστή και πίσω</string>
+    
+    <string name="onboarding_home_sync_description">Συνεχίστε από εκεί που σταματήσατε με καρτέλες από άλλες συσκευές στην αρχική σας σελίδα.</string>
+    
+    <string name="onboarding_home_get_started_button">Ξεκινήστε</string>
+    
+    <string name="onboarding_home_sign_in_button">Συνδεθείτε</string>
+    
+    <string name="onboarding_home_skip_button">Παράλειψη</string>
+    
+    <string name="onboarding_home_content_description_close_button">Κλείστε το</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Άνοιγμα νέας καρτέλας %1$s</string>
+    
+    <string name="search_widget_text_short">Αναζήτηση</string>
+    
+    <string name="search_widget_text_long">Αναζήτηση στο διαδίκτυο</string>
+    
+    <string name="search_widget_voice">Φωνητική αναζήτηση</string>
+
+    
+    
+    <string name="settings">Ρυθμίσεις</string>
+    
+    <string name="preferences_category_general">Γενικά</string>
+    
+    <string name="preferences_category_about">Σχετικά με το</string>
+    
+    <string name="preferences_default_search_engine">Προεπιλεγμένη μηχανή αναζήτησης</string>
+    
+    <string name="preferences_search">Αναζήτηση</string>
+    
+    <string name="preferences_search_address_bar">Γραμμή διευθύνσεων</string>
+    
+    <string name="preferences_rate">Βαθμολογήστε στο Google Play</string>
+    
+    <string name="preferences_about">Σχετικά με το %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Ορισμός ως προεπιλεγμένο πρόγραμμα περιήγησης</string>
+    
+    <string name="preferences_category_advanced">Προχωρημένο</string>
+    
+    <string name="preferences_category_privacy_security">Ιδιωτικότητα και ασφάλεια</string>
+    
+    <string name="preferences_site_permissions">Άδειες εγκατάστασης</string>
+    
+    <string name="preferences_private_browsing_options">Ιδιωτική περιήγηση</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Άνοιγμα συνδέσμων σε ιδιωτική καρτέλα</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Επιτρέψτε στιγμιότυπα οθόνης στην ιδιωτική περιήγηση</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Εάν επιτρέπεται, οι ιδιωτικές καρτέλες θα είναι επίσης ορατές όταν είναι ανοιχτές πολλές εφαρμογές.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Προσθήκη συντόμευσης ιδιωτικής περιήγησης</string>
+    
+    <string name="preferences_https_only_title">Λειτουργία μόνο HTTPS</string>
+    
+    <string name="preferences_https_only_summary">Προσπαθεί αυτόματα να συνδεθεί σε τοποθεσίες που χρησιμοποιούν πρωτόκολλο κρυπτογράφησης HTTPS για μεγαλύτερη ασφάλεια.</string>
+    
+    <string name="preferences_https_only_on">Στο</string>
+    
+    <string name="preferences_https_only_off">Off</string>
+    
+    <string name="preferences_http_only_learn_more">Μάθετε περισσότερα</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Ενεργοποίηση σε όλες τις καρτέλες</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Ενεργοποίηση μόνο σε ιδιωτικές καρτέλες</string>
+    
+    <string name="errorpage_httpsonly_title">Ασφαλής ιστότοπος δεν είναι διαθέσιμος</string>
+    
+    <string name="errorpage_httpsonly_message_title">Το πιθανότερο είναι ότι ο ιστότοπος απλώς δεν υποστηρίζει το HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Ωστόσο, είναι επίσης πιθανό να εμπλέκεται κάποιος επιτιθέμενος. Εάν συνεχίσετε στον ιστότοπο, δεν πρέπει να εισαγάγετε ευαίσθητες πληροφορίες. Εάν συνεχίσετε, η λειτουργία HTTPS-Only θα απενεργοποιηθεί προσωρινά για τον ιστότοπο.</string>
+    
+    <string name="preferences_accessibility">Προσβασιμότητα</string>
+    
+    <string name="preferences_override_fxa_server">Προσαρμοσμένος διακομιστής λογαριασμού Waterfox</string>
+    
+    <string name="preferences_override_sync_tokenserver">Προσαρμοσμένος διακομιστής συγχρονισμού</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Ο διακομιστής Waterfox Account/Sync τροποποιήθηκε. Το κλείσιμο της εφαρμογής για να εφαρμοστούν οι αλλαγές...</string>
+    
+    <string name="preferences_category_account">Λογαριασμός</string>
+    
+    <string name="preferences_toolbar">Γραμμή εργαλείων</string>
+    
+    <string name="preferences_theme">Θέμα</string>
+    
+    <string name="preferences_home_2">Αρχική σελίδα</string>
+    
+    <string name="preferences_gestures">Χειρονομίες</string>
+    
+    <string name="preferences_customize">Προσαρμογή</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Συγχρονισμός σελιδοδεικτών, ιστορικού και άλλων στοιχείων με το λογαριασμό σας στο Waterfox</string>
+    
+    <string name="preferences_sign_in_description_2">Συνδεθείτε για να συγχρονίσετε καρτέλες, σελιδοδείκτες, κωδικούς πρόσβασης και πολλά άλλα.</string>
+    
+    <string name="preferences_account_default_name">Λογαριασμός Waterfox</string>
+    
+    <string name="preferences_account_sync_error">Επανασύνδεση για συνέχιση του συγχρονισμού</string>
+    
+    <string name="preferences_language">Γλώσσα</string>
+    
+    <string name="preferences_remote_debugging">Απομακρυσμένη αποσφαλμάτωση μέσω USB</string>
+    
+    <string name="preferences_show_search_engines">Εμφάνιση μηχανών αναζήτησης</string>
+    
+    <string name="preferences_show_search_suggestions">Εμφάνιση προτάσεων αναζήτησης</string>
+    
+    <string name="preferences_show_voice_search">Εμφάνιση φωνητικής αναζήτησης</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Εμφάνιση σε ιδιωτικές συνεδρίες</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Εμφάνιση προτάσεων πρόχειρου</string>
+    
+    <string name="preferences_search_browsing_history">Ιστορικό περιήγησης αναζήτησης</string>
+    
+    <string name="preferences_search_bookmarks">Αναζήτηση σελιδοδεικτών</string>
+    
+    <string name="preferences_search_synced_tabs">Αναζήτηση συγχρονισμένων καρτελών</string>
+    
+    <string name="preferences_account_settings">Ρυθμίσεις λογαριασμού</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Αυτόματη συμπλήρωση URLs</string>
+    
+    <string name="preferences_open_links_in_apps">Άνοιγμα συνδέσμων σε εφαρμογές</string>
+    
+    <string name="preferences_external_download_manager">Εξωτερικός διαχειριστής λήψης</string>
+    
+    <string name="preferences_addons">Πρόσθετα</string>
+    
+    <string name="preferences_notifications">Ειδοποιήσεις</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Προσαρμοσμένη συλλογή Add-on</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Ακύρωση</string>
+    
+    <string name="customize_addon_collection_hint">Όνομα συλλογής</string>
+    
+    <string name="customize_addon_collection_user_hint">Ιδιοκτήτης συλλογής (User ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">Συλλογή πρόσθετων τροποποιημένη. Τερματισμός της εφαρμογής για να εφαρμοστούν οι αλλαγές...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Μετάβαση πίσω</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Πρόσφατοι σελιδοδείκτες</string>
+    
+    <string name="customize_toggle_recently_visited">Πρόσφατα επισκέφθηκε</string>
+    
+    <string name="customize_wallpapers">Ταπετσαρίες</string>
+    
+    <string name="customize_toggle_contile">Χορηγούμενες συντομεύσεις</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Στοιχείο ταπετσαρίας: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Ενημέρωση ταπετσαρίας!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Προβολή</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Αλλαγή ταπετσαρίας πατώντας το λογότυπο της αρχικής σελίδας του Waterfox</string>
+    
+    <string name="wallpaper_logo_content_description">Λογότυπο του Waterfox - αλλάξτε την ταπετσαρία, κουμπί</string>
+
+    
+    
+    <string name="addon_not_supported_error">Το πρόσθετο δεν υποστηρίζεται</string>
+    
+    <string name="addon_already_installed">Το πρόσθετο είναι ήδη εγκατεστημένο</string>
+
+    
+    
+    <string name="preferences_sync_now">Συγχρονισμός τώρα</string>
+    
+    <string name="preferences_sync_category">Επιλέξτε τι θα συγχρονίσετε</string>
+    
+    <string name="preferences_sync_history">Ιστορία</string>
+    
+    <string name="preferences_sync_bookmarks">Σελιδοδείκτες</string>
+    
+    <string name="preferences_sync_logins">Συνδέσεις</string>
+    
+    <string name="preferences_sync_tabs_2">Ανοιχτές καρτέλες</string>
+    
+    <string name="preferences_sign_out">Υπογράψτε έξω</string>
+    
+    <string name="preferences_sync_device_name">Όνομα συσκευής</string>
+    
+    <string name="empty_device_name_error">Το όνομα της συσκευής δεν μπορεί να είναι κενό.</string>
+    
+    <string name="sync_syncing_in_progress">Συγχρονισμός...</string>
+    
+    <string name="sync_failed_summary">Ο συγχρονισμός απέτυχε. Τελευταία επιτυχία: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Ο συγχρονισμός απέτυχε. Τελευταίος συγχρονισμός: ποτέ</string>
+    
+    <string name="sync_last_synced_summary">Τελευταίος συγχρονισμός: %s</string>
+    
+    <string name="sync_never_synced_summary">Τελευταίος συγχρονισμός: ποτέ</string>
+    
+    <string name="default_device_name_2">%1$s στο %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Πιστωτικές κάρτες</string>
+    
+    <string name="preferences_sync_address">Διευθύνσεις</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Λαμβανόμενες καρτέλες</string>
+    
+    <string name="fxa_received_tab_channel_description">Ειδοποιήσεις για καρτέλες που λαμβάνονται από άλλες συσκευές Waterfox.</string>
+    
+    <string name="fxa_tab_received_notification_name">Καρτέλα Received</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Καρτέλα από %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Εξαιρέσεις</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Ενεργοποίηση για όλες τις τοποθεσίες</string>
+    
+    <string name="exceptions_empty_message_description">Οι εξαιρέσεις σας επιτρέπουν να απενεργοποιήσετε την προστασία παρακολούθησης για επιλεγμένους ιστότοπους.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Μάθετε περισσότερα</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Ενεργοποίηση του συγχρονισμού</string>
+    
+    <string name="preferences_sync_2">Συγχρονίστε και αποθηκεύστε τα δεδομένα σας</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Συνδεθείτε για επανασύνδεση</string>
+    
+    <string name="preferences_sync_remove_account">Κατάργηση λογαριασμού</string>
+
+    
+    
+    <string name="pair_instructions_2">Σαρώστε τον κωδικό QR που εμφανίζεται στη διεύθυνση &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Κορυφή</string>
+    
+    <string name="preference_bottom_toolbar">Κάτω μέρος</string>
+
+    
+    
+    <string name="preference_light_theme">Φως</string>
+    
+    <string name="preference_dark_theme">Σκούρο</string>
+    
+    <string name="preference_auto_battery_theme">Ρύθμιση από την Εξοικονόμηση μπαταρίας</string>
+    
+    <string name="preference_follow_device_theme">Ακολουθήστε το θέμα της συσκευής</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Τραβήξτε για ανανέωση</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Κύλιση για απόκρυψη της γραμμής εργαλείων</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Σύρετε τη γραμμή εργαλείων προς το πλάι για να αλλάξετε καρτέλες</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Σύρετε τη γραμμή εργαλείων προς τα πάνω για να ανοίξετε καρτέλες</string>
+
+    
+    
+    <string name="library_downloads">Λήψεις</string>
+    
+    <string name="library_bookmarks">Σελιδοδείκτες</string>
+    
+    <string name="library_desktop_bookmarks_root">Σελιδοδείκτες επιφάνειας εργασίας</string>
+    
+    <string name="library_desktop_bookmarks_menu">Μενού Σελιδοδείκτες</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Γραμμή εργαλείων σελιδοδεικτών</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Άλλοι σελιδοδείκτες</string>
+    
+    <string name="library_history">Ιστορία</string>
+    
+    <string name="library_new_tab">Νέα καρτέλα</string>
+    
+    <string name="settings_title">Ρυθμίσεις</string>
+    
+    <string name="content_description_close_button">Κλείστε το</string>
+
+    
+    <string name="history_search_group_site">%d site</string>
+    
+    <string name="history_search_group_sites">%d τοποθεσίες</string>
+
+    
+    <string name="library_recently_closed_tabs">Πρόσφατα κλειστές καρτέλες</string>
+    
+    <string name="recently_closed_show_full_history">Εμφάνιση πλήρους ιστορικού</string>
+    
+    <string name="recently_closed_tabs">%d καρτέλες</string>
+    
+    <string name="recently_closed_tab">%d καρτέλα</string>
+    
+    <string name="recently_closed_empty_message">Δεν υπάρχουν πρόσφατα κλειστές καρτέλες εδώ</string>
+
+    
+    
+    <string name="preferences_tabs">Καρτέλες</string>
+    
+    <string name="preferences_tab_view">Προβολή καρτελών</string>
+    
+    <string name="tab_view_list">Λίστα</string>
+    
+    <string name="tab_view_grid">Πλέγμα</string>
+    
+    <string name="preferences_close_tabs">Κλείστε καρτέλες</string>
+    
+    <string name="close_tabs_manually">Ποτέ</string>
+    
+    <string name="close_tabs_after_one_day">Μετά από μία ημέρα</string>
+    
+    <string name="close_tabs_after_one_week">Μετά από μία εβδομάδα</string>
+    
+    <string name="close_tabs_after_one_month">Μετά από ένα μήνα</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Αυτόματο κλείσιμο ανοικτών καρτελών</string>
+
+    
+    
+    <string name="preferences_opening_screen">Οθόνη έναρξης</string>
+    
+    <string name="opening_screen_homepage">Αρχική σελίδα</string>
+    
+    <string name="opening_screen_last_tab">Τελευταία καρτέλα</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Αρχική σελίδα μετά από τέσσερις ώρες αδράνειας</string>
+    
+    <string name="close_tabs_manually_summary">Κλείστε χειροκίνητα</string>
+    
+    <string name="close_tabs_after_one_day_summary">Κλείσιμο μετά από μία ημέρα</string>
+    
+    <string name="close_tabs_after_one_week_summary">Κλείστε μετά από μία εβδομάδα</string>
+    
+    <string name="close_tabs_after_one_month_summary">Κλείσιμο μετά από ένα μήνα</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Μετακινήστε τις παλιές καρτέλες σε ανενεργές</string>
+    
+    <string name="preferences_inactive_tabs_title">Οι καρτέλες που δεν έχετε δει για δύο εβδομάδες μετακινούνται στην ανενεργή ενότητα.</string>
+
+    
+    
+    <string name="tab_header_label">Ανοιχτές καρτέλες</string>
+    
+    <string name="tabs_header_private_tabs_title">Ιδιωτικές καρτέλες</string>
+    
+    <string name="tabs_header_synced_tabs_title">Συγχρονισμένες καρτέλες</string>
+    
+    <string name="add_tab">Προσθήκη καρτέλας</string>
+    
+    <string name="add_private_tab">Προσθήκη ιδιωτικής καρτέλας</string>
+    
+    <string name="tab_drawer_fab_content">Ιδιωτικό</string>
+    
+    <string name="tab_drawer_fab_sync">Συγχρονισμός</string>
+    
+    <string name="tab_tray_menu_item_share">Μοιραστείτε όλες τις καρτέλες</string>
+    
+    <string name="tab_tray_menu_recently_closed">Πρόσφατα κλειστές καρτέλες</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Πρόσφατα κλειστό</string>
+    
+    <string name="tab_tray_menu_account_settings">Ρυθμίσεις λογαριασμού</string>
+    
+    <string name="tab_tray_menu_tab_settings">Ρυθμίσεις καρτέλας</string>
+    
+    <string name="tab_tray_menu_item_close">Κλείστε όλες τις καρτέλες</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Σελιδοδείκτης</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Κλείστε το</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Κοινή χρήση επιλεγμένων καρτελών</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Μενού επιλεγμένων καρτελών</string>
+    
+    <string name="remove_tab_from_collection">Αφαίρεση καρτέλας από τη συλλογή</string>
+    
+    <string name="tabs_tray_select_tabs">Επιλέξτε καρτέλες</string>
+    
+    <string name="close_tab">Κλείστε την καρτέλα</string>
+    
+    <string name="close_tab_title">Κλείστε την καρτέλα %s</string>
+    
+    <string name="open_tabs_menu">Άνοιγμα μενού καρτελών</string>
+    
+    <string name="tabs_menu_save_to_collection1">Αποθήκευση καρτελών σε συλλογή</string>
+    
+    <string name="collection_delete">Διαγραφή συλλογής</string>
+    
+    <string name="collection_rename">Μετονομασία συλλογής</string>
+    
+    <string name="collection_open_tabs">Ανοιχτές καρτέλες</string>
+    
+    <string name="collection_name_hint">Όνομα συλλογής</string>
+	
+	<string name="rename_top_site">Μετονομασία</string>
+	
+	<string name="remove_top_site">Αφαιρέστε το</string>
+    
+    <string name="delete_from_history">Διαγραφή από το ιστορικό</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (Ιδιωτική λειτουργία)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Άλλες καρτέλες</string>
+
+    
+    
+    <string name="history_search_1">Εισάγετε όρους αναζήτησης</string>
+    
+    <string name="history_delete_all">Διαγραφή ιστορικού</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Ιστορία Διαγράφηκε</string>
+    
+    <string name="history_delete_single_item_snackbar">Διαγράφηκε %1$s</string>
+    
+    <string name="history_delete_item">Διαγραφή</string>
+    
+    <string name="history_multi_select_title">%1$d επιλεγμένο</string>
+    
+    <string name="history_today">Σήμερα</string>
+    
+    <string name="history_yesterday">Χθες</string>
+    
+    <string name="history_7_days">Τελευταίες 7 ημέρες</string>
+    
+    <string name="history_30_days">Τελευταίες 30 ημέρες</string>
+    
+    <string name="history_older">Παλαιότερο</string>
+    
+    <string name="history_empty_message">Δεν υπάρχει ιστορία εδώ</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Λήψεις που αφαιρέθηκαν</string>
+    
+    <string name="download_delete_single_item_snackbar">Αφαιρέθηκε %1$s</string>
+    
+    <string name="download_empty_message_1">Δεν υπάρχουν κατεβασμένα αρχεία</string>
+    
+    <string name="download_multi_select_title">%1$d επιλεγμένο</string>
+    
+    <string name="download_delete_item_1">Αφαιρέστε το</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Συγγνώμη. Το %1$s δεν μπορεί να φορτώσει αυτή τη σελίδα.</string>
+    
+    <string name="tab_crash_send_report">Αποστολή αναφοράς συντριβής στο BrowserWorks</string>
+    
+    <string name="tab_crash_close">Κλείστε την καρτέλα</string>
+    
+    <string name="tab_crash_restore">Καρτέλα Επαναφορά</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον φάκελο;</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s θα διαγράψει τα επιλεγμένα στοιχεία.</string>
+    
+    <string name="bookmark_delete_negative">Ακύρωση</string>
+    
+    <string name="bookmark_add_folder">Προσθήκη φακέλου</string>
+    
+    <string name="bookmark_saved_snackbar">Ο σελιδοδείκτης αποθηκεύτηκε!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Επεξεργασία</string>
+    
+    <string name="bookmark_menu_copy_button">Αντιγραφή</string>
+    
+    <string name="bookmark_menu_share_button">Μοιραστείτε το</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Άνοιγμα σε νέα καρτέλα</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Άνοιγμα σε ιδιωτική καρτέλα</string>
+    
+    <string name="bookmark_menu_delete_button">Διαγραφή</string>
+    
+    <string name="bookmark_menu_save_button">Αποθήκευση</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d επιλεγμένο</string>
+    
+    <string name="edit_bookmark_fragment_title">Επεξεργασία σελιδοδείκτη</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Επεξεργασία φακέλου</string>
+    
+    <string name="bookmark_sign_in_button">Συνδεθείτε για να δείτε τους συγχρονισμένους σελιδοδείκτες</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">ΦΑΚΕΛΟΣ</string>
+    
+    <string name="bookmark_name_label">ΟΝΟΜΑ</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Προσθήκη φακέλου</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Επιλέξτε φάκελο</string>
+    
+    <string name="bookmark_empty_title_error">Πρέπει να έχει τίτλο</string>
+    
+    <string name="bookmark_invalid_url_error">Μη έγκυρο URL</string>
+    
+    <string name="bookmarks_empty_message">Δεν υπάρχουν σελιδοδείκτες εδώ</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Διαγράφηκε %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Διαγραφή σελιδοδεικτών</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Διαγραφή επιλεγμένων φακέλων</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Εισάγετε όρους αναζήτησης</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Μεταβείτε στις Ρυθμίσεις</string>
+    
+    <string name="quick_settings_sheet">Φύλλο γρήγορων ρυθμίσεων</string>
+    
+    <string name="phone_feature_recommended">Συνιστώμενη</string>
+    
+    <string name="clear_permissions">Εκκαθάριση δικαιωμάτων</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Ακύρωση</string>
+    
+    <string name="clear_permission">Σαφής άδεια</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Ακύρωση</string>
+    
+    <string name="clear_permissions_on_all_sites">Σαφή δικαιώματα σε όλους τους ιστότοπους</string>
+    
+    <string name="preference_browser_feature_autoplay">Αυτόματο παιχνίδι</string>
+    
+    <string name="preference_phone_feature_camera">Κάμερα</string>
+    
+    <string name="preference_phone_feature_microphone">Μικρόφωνο</string>
+    
+    <string name="preference_phone_feature_location">Τοποθεσία</string>
+    
+    <string name="preference_phone_feature_notification">Ειδοποίηση</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Επίμονη αποθήκευση</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Cross-site cookies</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">Περιεχόμενο ελεγχόμενο με DRM</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Ζητήστε να επιτρέψετε</string>
+    
+    <string name="preference_option_phone_feature_blocked">Αποκλεισμένο</string>
+    
+    <string name="preference_option_phone_feature_allowed">Επιτρεπόμενο</string>
+    
+    <string name="phone_feature_blocked_by_android">Αποκλεισμός από το Android</string>
+    
+    <string name="preference_exceptions">Εξαιρέσεις</string>
+    
+    <string name="tracking_protection_on">Στο</string>
+    
+    <string name="tracking_protection_off">Off</string>
+    
+    <string name="preference_option_autoplay_allowed2">Επιτρέψτε ήχο και βίντεο</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Επιτρέψτε ήχο και βίντεο</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Αποκλεισμός ήχου και βίντεο μόνο σε δεδομένα κινητής τηλεφωνίας</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Ο ήχος και το βίντεο θα αναπαράγονται στο Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Αποκλεισμός ήχου μόνο</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Αποκλεισμός ήχου μόνο</string>
+    
+    <string name="preference_option_autoplay_blocked3">Αποκλεισμός ήχου και βίντεο</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Αποκλεισμός ήχου και βίντεο</string>
+    
+    <string name="delete_browsing_data_quit_on">Στο</string>
+    
+    <string name="delete_browsing_data_quit_off">Off</string>
+    
+    <string name="https_only_on">Στο</string>
+    
+    <string name="https_only_off">Off</string>
+
+    
+    
+    <string name="collections_header">Συλλογές</string>
+    
+    <string name="collection_menu_button_content_description">Μενού συλλογής</string>
+    
+    <string name="no_collections_description2">Συγκεντρώστε τα πράγματα που έχουν σημασία για εσάς.\nΟμαδοποιήστε παρόμοιες αναζητήσεις, τοποθεσίες και καρτέλες για γρήγορη πρόσβαση αργότερα.</string>
+    
+    <string name="create_collection_select_tabs">Επιλέξτε καρτέλες</string>
+    
+    <string name="create_collection_select_collection">Επιλέξτε συλλογή</string>
+    
+    <string name="create_collection_name_collection">Συλλογή ονομάτων</string>
+    
+    <string name="create_collection_add_new_collection">Προσθήκη νέας συλλογής</string>
+    
+    <string name="create_collection_select_all">Επιλέξτε όλα</string>
+    
+    <string name="create_collection_deselect_all">Αποεπιλογή όλων</string>
+    
+    <string name="create_collection_save_to_collection_empty">Επιλέξτε καρτέλες για αποθήκευση</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d καρτέλες επιλεγμένες</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">%d επιλεγμένη καρτέλα</string>
+    
+    <string name="create_collection_tabs_saved">Οι καρτέλες αποθηκεύονται!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Η συλλογή σώθηκε!</string>
+    
+    <string name="create_collection_tab_saved">Η καρτέλα σώθηκε!</string>
+    
+    <string name="create_collection_close">Κλείστε το</string>
+    
+    <string name="create_collection_save">Αποθήκευση</string>
+    
+    <string name="create_collection_view">Προβολή</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Ακύρωση</string>
+
+    
+    <string name="create_collection_default_name">Συλλογή %d</string>
+
+    
+    
+    <string name="share_header_2">Μοιραστείτε το</string>
+    
+    <string name="share_button_content_description">Μοιραστείτε το</string>
+    
+    <string name="share_device_subheader">Αποστολή σε συσκευή</string>
+    
+    <string name="share_link_all_apps_subheader">Όλες οι δράσεις</string>
+    
+    <string name="share_link_recent_apps_subheader">Χρησιμοποιήθηκε πρόσφατα</string>
+    
+    <string name="share_copy_link_to_clipboard">Αντιγραφή στο πρόχειρο</string>
+    
+    <string name="toast_copy_link_to_clipboard">Αντιγραφή στο πρόχειρο</string>
+    
+    <string name="sync_menu_sign_in">Συνδεθείτε για συγχρονισμό</string>
+    
+    <string name="sync_sign_in">Συνδεθείτε στο Sync</string>
+    
+    <string name="sync_send_to_all">Αποστολή σε όλες τις συσκευές</string>
+    
+    <string name="sync_reconnect">Επανασύνδεση με Sync</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Σύνδεση άλλης συσκευής</string>
+    
+    <string name="sync_connect_device_dialog">Για να στείλετε μια καρτέλα, συνδεθείτε στο Waterfox σε τουλάχιστον μια άλλη συσκευή.</string>
+    
+    <string name="sync_confirmation_button">Το πήρα</string>
+    
+    <string name="share_error_snackbar">Δεν μπορώ να μοιραστώ σε αυτή την εφαρμογή</string>
+    
+    <string name="sync_add_new_device_title">Αποστολή σε συσκευή</string>
+    
+    <string name="sync_add_new_device_message">Δεν υπάρχουν συνδεδεμένες συσκευές</string>
+    
+    <string name="sync_add_new_device_learn_button">Μάθετε για την αποστολή καρτελών...</string>
+    
+    <string name="sync_add_new_device_connect_button">Σύνδεση άλλης συσκευής...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Κλείστε ιδιωτικές καρτέλες</string>
+    
+    <string name="notification_marketing_channel_name">Μάρκετινγκ</string>
+    
+    <string name="notification_default_browser_title">Το %1$s είναι γρήγορο και ιδιωτικό</string>
+    
+    <string name="notification_default_browser_text">Κάντε το %1$s το προεπιλεγμένο πρόγραμμα περιήγησης</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Συλλογή που διαγράφηκε</string>
+    
+    <string name="snackbar_collection_renamed">Μετονομασία συλλογής</string>
+    
+    <string name="snackbar_tab_closed">Καρτέλα κλειστή</string>
+    
+    <string name="snackbar_tabs_closed">Καρτέλες κλειστές</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Οι σελιδοδείκτες αποθηκεύονται!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Προστέθηκε στις συντομεύσεις!</string>
+    
+    <string name="snackbar_private_tab_closed">Ιδιωτική καρτέλα κλειστή</string>
+    
+    <string name="snackbar_private_tabs_closed">Ιδιωτικές καρτέλες κλειστές</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Τοποθεσία που αφαιρέθηκε</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Επιτρέψτε στο %1$s να ανοίξει το %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Η διεύθυνση Web δεν είναι έγκυρη.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Σίγουρα θέλετε να διαγράψετε το %1$s;</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Η διαγραφή αυτής της καρτέλας θα διαγράψει ολόκληρη τη συλλογή. Μπορείτε να δημιουργήσετε νέες συλλογές ανά πάσα στιγμή.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Διαγραφή %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Διαγραφή</string>
+    
+    <string name="full_screen_notification">Είσοδος σε λειτουργία πλήρους οθόνης</string>
+    
+    <string name="url_copied">Αντιγραφή URL</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Αυτό είναι δείγμα κειμένου. Βρίσκεται εδώ για να δείξει πώς θα εμφανίζεται το κείμενο όταν αυξάνετε ή μειώνετε το μέγεθος με αυτή τη ρύθμιση.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Κάντε το κείμενο σε ιστότοπους μεγαλύτερο ή μικρότερο</string>
+    
+    <string name="preference_accessibility_font_size_title">Μέγεθος γραμματοσειράς</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Αυτόματο μέγεθος γραμματοσειράς</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Το μέγεθος γραμματοσειράς θα ταιριάζει με τις ρυθμίσεις του Android. Απενεργοποιήστε τη διαχείριση του μεγέθους γραμματοσειράς εδώ.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Διαγραφή δεδομένων περιήγησης</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Ανοιχτές καρτέλες</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d καρτέλες</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Ιστορικό περιήγησης και δεδομένα ιστότοπου</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d διευθύνσεις</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Cookies</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Θα αποσυνδεθείτε από τους περισσότερους ιστότοπους</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Αποθηκευμένες εικόνες και αρχεία</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Απελευθερώνει αποθηκευτικό χώρο</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Άδειες εγκατάστασης</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Λήψεις</string>
+    
+    <string name="preferences_delete_browsing_data_button">Διαγραφή δεδομένων περιήγησης</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Διαγραφή δεδομένων περιήγησης κατά την έξοδο</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Διαγράφει αυτόματα τα δεδομένα περιήγησης όταν επιλέγετε \"Έξοδος\" από το κύριο μενού</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Σταματήστε το</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Αυτό θα διαγράψει όλα τα δεδομένα περιήγησής σας.</string>
+    
+    <string name="delete_history_prompt_title">Χρονικό εύρος προς διαγραφή</string>
+    
+    <string name="delete_history_prompt_body">Αφαιρεί το ιστορικό (συμπεριλαμβανομένου του ιστορικού που έχει συγχρονιστεί από άλλες συσκευές), τα cookies και άλλα δεδομένα περιήγησης.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Τελευταία ώρα</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Σήμερα και χθες</string>
+    
+    <string name="delete_history_prompt_button_everything">Τα πάντα</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s θα διαγράψει τα επιλεγμένα δεδομένα περιήγησης.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Ακύρωση</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Διαγραφή</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Διαγραφή δεδομένων περιήγησης</string>
+    
+    <string name="deleting_browsing_data_in_progress">Διαγραφή δεδομένων περιήγησης...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Διαγραφή όλων των τοποθεσιών στην περιοχή "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Ακύρωση</string>
+    
+    <string name="delete_history_group_prompt_allow">Διαγραφή</string>
+    
+    <string name="delete_history_group_snackbar">Ομάδα που διαγράφηκε</string>
+
+    
+    
+    <string name="onboarding_header_2">Καλώς ήρθατε σε έναν πιο ιδιωτικό ιστό</string>
+    
+    <string name="onboarding_message">Ένα ανεξάρτητο πρόγραμμα περιήγησης από τα κάτω.</string>
+    
+    <string name="onboarding_account_sign_in_header">Συνεχίστε από εκεί που σταματήσατε</string>
+    
+    <string name="onboarding_manual_sign_in_description">Συγχρονίστε καρτέλες και κωδικούς πρόσβασης σε όλες τις συσκευές για απρόσκοπτη εναλλαγή οθόνης.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Συνδεθείτε</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Ο συγχρονισμός είναι ενεργοποιημένος</string>
+    
+    <string name="onboarding_tracking_protection_header">Προστασία απορρήτου από προεπιλογή</string>
+    
+    <string name="onboarding_tracking_protection_description">Διαθέτει Total Cookie Protection για να σταματήσει τους ιχνηλάτες να χρησιμοποιούν cookies για να σας παρακολουθούν σε όλους τους ιστότοπους.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standard (προεπιλογή)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Ισορροπημένο για προστασία της ιδιωτικής ζωής και απόδοση. Οι σελίδες φορτώνονται κανονικά.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Αυστηρό</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Μπλοκάρει περισσότερους ανιχνευτές, ώστε οι σελίδες να φορτώνουν ταχύτερα, αλλά ενδέχεται να διακοπεί η λειτουργία ορισμένων λειτουργιών της σελίδας.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Επιλέξτε την τοποθέτηση της γραμμής εργαλείων σας</string>
+    
+    <string name="onboarding_toolbar_placement_description">Κρατήστε το στο κάτω μέρος ή μετακινήστε το στο πάνω μέρος.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Ελέγχετε τα δεδομένα σας</string>
+    
+    <string name="onboarding_privacy_notice_description">Το Waterfox δεν συλλέγει καμία τηλεμετρία και σας δίνει τον έλεγχο των δεδομένων σας.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Διαβάστε τη δήλωση απορρήτου μας</string>
+    
+    <string name="onboarding_conclusion_header">Είστε έτοιμοι να ανοίξετε ένα καταπληκτικό διαδίκτυο;</string>
+    
+    <string name="onboarding_finish">Ξεκινήστε την περιήγηση</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Επιλέξτε το θέμα σας</string>
+    
+    <string name="onboarding_theme_picker_description_2">Εξοικονομήστε λίγη μπαταρία και την όρασή σας με τη σκοτεινή λειτουργία.</string>
+    
+    <string name="onboarding_theme_automatic_title">Αυτόματο</string>
+    
+    <string name="onboarding_theme_automatic_summary">Προσαρμόζεται στις ρυθμίσεις της συσκευής σας</string>
+    
+    <string name="onboarding_theme_dark_title">Σκοτεινό θέμα</string>
+    
+    <string name="onboarding_theme_light_title">Θέμα φωτός</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Οι καρτέλες εστάλησαν!</string>
+    
+    <string name="sync_sent_tab_snackbar">Η καρτέλα στάλθηκε!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Αδυναμία αποστολής</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Σαρώστε τον κωδικό</string>
+    
+    <string name="sign_in_instructions">Ο Waterfox βασίζεται σε έναν λογαριασμό Mozilla για τον συγχρονισμό δεδομένων μεταξύ κινητού και επιτραπέζιου υπολογιστή.&lt;br&gt; Στον υπολογιστή σας ανοίξτε τον Waterfox και μεταβείτε στη διεύθυνση &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Η Mozilla δεν συνδέεται με κανέναν τρόπο με τον Waterfox.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Έτοιμοι για σάρωση</string>
+    
+    <string name="sign_in_with_camera">Συνδεθείτε με την κάμερά σας</string>
+    
+    <string name="sign_in_with_email">Χρησιμοποιήστε αντί για email</string>
+    
+    <string name="sign_in_create_account_text">Δεν έχετε λογαριασμό; &lt;u&gt;Δημιουργήστε έναν&lt;/u&gt; για να συγχρονίσετε τον Waterfox μεταξύ συσκευών.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s θα σταματήσει το συγχρονισμό με το λογαριασμό σας, αλλά δεν θα διαγράψει τα δεδομένα περιήγησής σας σε αυτή τη συσκευή.</string>
+    
+    <string name="sign_out_disconnect">Αποσύνδεση</string>
+    
+    <string name="sign_out_cancel">Ακύρωση</string>
+    
+    <string name="bookmark_cannot_edit_root">Δεν μπορείτε να επεξεργαστείτε τους προεπιλεγμένους φακέλους</string>
+
+    
+    
+    <string name="etp_settings">Ρυθμίσεις προστασίας</string>
+    
+    <string name="preference_enhanced_tracking_protection">Ενισχυμένη προστασία εντοπισμού</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Περιηγηθείτε χωρίς να σας ακολουθούν</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Κρατήστε τα δεδομένα σας για τον εαυτό σας. Το %s σας προστατεύει από πολλούς από τους πιο συνηθισμένους ανιχνευτές που παρακολουθούν ό,τι κάνετε στο διαδίκτυο.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Μάθετε περισσότερα</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (προεπιλογή)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Ισορροπημένο για προστασία της ιδιωτικής ζωής και απόδοση. Οι σελίδες φορτώνονται κανονικά.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Τι εμποδίζεται από την τυπική προστασία παρακολούθησης</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Αυστηρό</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Μπλοκάρει περισσότερους ανιχνευτές, ώστε οι σελίδες να φορτώνουν ταχύτερα, αλλά ενδέχεται να διακοπεί η λειτουργία ορισμένων λειτουργιών της σελίδας.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Τι εμποδίζεται από την αυστηρή προστασία παρακολούθησης</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Προσαρμοσμένο</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Επιλέξτε ποιοι ανιχνευτές και δέσμες ενεργειών θα μπλοκαριστούν.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Τι εμποδίζεται από την προσαρμοσμένη προστασία παρακολούθησης</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookies</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Παρακολουθητές cross-site και social media</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookies από μη επισκέψιμους ιστότοπους</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Όλα τα cookies τρίτων (μπορεί να προκαλέσουν διακοπή λειτουργίας των ιστότοπων)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Όλα τα cookies (θα προκαλέσουν διακοπή λειτουργίας των ιστότοπων)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Απομόνωση των cross-site cookies</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Παρακολούθηση περιεχομένου</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Σε όλες τις καρτέλες</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Μόνο σε ιδιωτικές καρτέλες</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Αποτυπώματα</string>
+    
+    <string name="enhanced_tracking_protection_details">Λεπτομέρειες</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Αποκλεισμένο</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Επιτρεπόμενο</string>
+    
+    <string name="etp_social_media_trackers_title">Παρακολουθητές μέσων κοινωνικής δικτύωσης</string>
+    
+    <string name="etp_social_media_trackers_description">Περιορίζει τη δυνατότητα των κοινωνικών δικτύων να παρακολουθούν τη δραστηριότητά σας κατά την περιήγησή σας στο διαδίκτυο.</string>
+    
+    <string name="etp_cookies_title">Cookies εντοπισμού cross-site</string>
+    
+    <string name="etp_cookies_title_2">Cross-Site Cookies</string>
+    
+    <string name="etp_cookies_description">Μπλοκάρει τα cookies που χρησιμοποιούν τα διαφημιστικά δίκτυα και οι εταιρείες ανάλυσης για να συγκεντρώσουν τα δεδομένα περιήγησής σας σε πολλούς ιστότοπους.</string>
+    
+    <string name="etp_cookies_description_2">Η Ολική προστασία cookie απομονώνει τα cookies στον ιστότοπο στον οποίο βρίσκεστε, ώστε τα δίκτυα παρακολούθησης, όπως τα διαφημιστικά δίκτυα, να μην μπορούν να τα χρησιμοποιήσουν για να σας ακολουθούν σε όλους τους ιστότοπους.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Αποτρέπει την πρόσβαση κακόβουλων σεναρίων στη συσκευή σας για την εξόρυξη ψηφιακού νομίσματος.</string>
+    
+    <string name="etp_fingerprinters_title">Αποτυπώματα</string>
+    
+    <string name="etp_fingerprinters_description">Εμποδίζει τη συλλογή μοναδικά αναγνωρίσιμων δεδομένων σχετικά με τη συσκευή σας, τα οποία μπορούν να χρησιμοποιηθούν για σκοπούς εντοπισμού.</string>
+    
+    <string name="etp_tracking_content_title">Παρακολούθηση περιεχομένου</string>
+    
+    <string name="etp_tracking_content_description">Εμποδίζει τη φόρτωση εξωτερικών διαφημίσεων, βίντεο και άλλου περιεχομένου που περιέχει κώδικα παρακολούθησης. Μπορεί να επηρεάσει ορισμένες λειτουργίες του ιστότοπου.</string>
+    
+    <string name="etp_panel_on">Οι προστασίες είναι ON για αυτή την τοποθεσία</string>
+    
+    <string name="etp_panel_off">Οι προστασίες είναι απενεργοποιημένες για αυτόν τον ιστότοπο</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Η Ενισχυμένη προστασία παρακολούθησης είναι απενεργοποιημένη για αυτούς τους ιστότοπους</string>
+    
+    <string name="etp_back_button_content_description">Πλοήγηση πίσω</string>
+    
+    <string name="open_source_licenses_title">%s | Βιβλιοθήκες OSS</string>
+    
+    <string name="etp_redirect_trackers_title">Παρακολουθητές ανακατεύθυνσης</string>
+    
+    <string name="etp_redirect_trackers_description">Καθαρίζει τα cookies που έχουν οριστεί από ανακατευθύνσεις σε γνωστούς ιστότοπους παρακολούθησης.</string>
+    
+    <string name="preference_etp_smartblock_description">Ορισμένοι ανιχνευτές που σημειώνονται παρακάτω έχουν μερικώς ξεμπλοκαριστεί σε αυτή τη σελίδα επειδή αλληλεπιδράσατε μαζί τους *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Μάθετε περισσότερα</string>
+
+    
+    <string name="about_support">Υποστήριξη</string>
+    
+    <string name="about_crashes">Συντριβές</string>
+    
+    <string name="about_privacy_notice">Ειδοποίηση απορρήτου</string>
+    
+    <string name="about_know_your_rights">Γνωρίστε τα δικαιώματά σας</string>
+    
+    <string name="about_licensing_information">Πληροφορίες αδειοδότησης</string>
+    
+    <string name="about_other_open_source_libraries">Βιβλιοθήκες που χρησιμοποιούμε</string>
+    
+    <string name="about_debug_menu_toast_progress">Μενού εντοπισμού σφαλμάτων: για να ενεργοποιήσετε</string>
+    <string name="about_debug_menu_toast_done">Ενεργοποιημένο μενού εντοπισμού σφαλμάτων</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Αντιγραφή</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Paste &amp; Go</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Επικόλληση</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">Αντιγραφή URL στο πρόχειρο</string>
+
+    
+    <string name="add_to_homescreen_title">Προσθήκη στην αρχική οθόνη</string>
+    
+    <string name="add_to_homescreen_cancel">Ακύρωση</string>
+    
+    <string name="add_to_homescreen_add">Προσθέστε</string>
+    
+    <string name="add_to_homescreen_continue">Συνέχεια στην ιστοσελίδα</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Όνομα συντόμευσης</string>
+    
+    <string name="add_to_homescreen_description_2">Μπορείτε εύκολα να προσθέσετε αυτόν τον ιστότοπο στην αρχική οθόνη της συσκευής σας για άμεση πρόσβαση και ταχύτερη περιήγηση με μια εμπειρία που μοιάζει με εφαρμογή.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Συνδέσεις και κωδικοί πρόσβασης</string>
+    
+    <string name="preferences_passwords_save_logins">Αποθήκευση συνδέσμων και κωδικών πρόσβασης</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Ζητήστε να αποθηκεύσετε</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Ποτέ μην αποθηκεύετε</string>
+    
+    <string name="preferences_passwords_autofill2">Αυτόματη συμπλήρωση σε %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Συμπληρώστε και αποθηκεύστε ονόματα χρηστών και κωδικούς πρόσβασης σε ιστότοπους χρησιμοποιώντας το %1$s.</string>
+    
+    <string name="preferences_android_autofill">Αυτόματη συμπλήρωση σε άλλες εφαρμογές</string>
+    
+    <string name="preferences_android_autofill_description">Συμπληρώστε ονόματα χρήστη και κωδικούς πρόσβασης σε άλλες εφαρμογές στη συσκευή σας.</string>
+    
+    <string name="preferences_logins_add_login">Προσθήκη σύνδεσης</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Συντονισμός συνδέσεων</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Συγχρονισμός συνδέσεων σε όλες τις συσκευές</string>
+    
+    <string name="preferences_passwords_saved_logins">Αποθηκευμένες συνδέσεις</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Οι συνδέσεις που αποθηκεύετε ή συγχρονίζετε στο %s θα εμφανίζονται εδώ.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Μάθετε περισσότερα για το Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Εξαιρέσεις</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Οι συνδέσεις και οι κωδικοί πρόσβασης που δεν έχουν αποθηκευτεί θα εμφανίζονται εδώ.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Οι συνδέσεις και οι κωδικοί πρόσβασης δεν θα αποθηκεύονται για αυτές τις τοποθεσίες.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Διαγραφή όλων των εξαιρέσεων</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Συνδέσεις αναζήτησης</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Ιστοσελίδα</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Όνομα χρήστη</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Κωδικός πρόσβασης</string>
+    
+    <string name="logins_password_copied">Αντιγραφή κωδικού πρόσβασης στο πρόχειρο</string>
+    
+    <string name="logins_username_copied">Το όνομα χρήστη αντιγράφεται στο πρόχειρο</string>
+    
+    <string name="saved_logins_copy_password">Αντιγραφή κωδικού πρόσβασης</string>
+    
+    <string name="saved_logins_clear_password">Καθαρισμός κωδικού πρόσβασης</string>
+    
+    <string name="saved_login_copy_username">Αντιγραφή ονόματος χρήστη</string>
+    
+    <string name="saved_login_clear_username">Εκκαθάριση ονόματος χρήστη</string>
+    
+    <string name="saved_login_clear_hostname">Εκκαθάριση ονόματος κεντρικού υπολογιστή</string>
+    
+    <string name="saved_login_open_site">Άνοιγμα ιστότοπου στο πρόγραμμα περιήγησης</string>
+    
+    <string name="saved_login_reveal_password">Εμφάνιση κωδικού πρόσβασης</string>
+    
+    <string name="saved_login_hide_password">Απόκρυψη κωδικού πρόσβασης</string>
+    
+    <string name="logins_biometric_prompt_message">Ξεκλειδώστε για να δείτε τις αποθηκευμένες συνδέσεις σας</string>
+    
+    <string name="logins_warning_dialog_title">Ασφαλίστε τις συνδέσεις και τους κωδικούς πρόσβασής σας</string>
+    
+    <string name="logins_warning_dialog_message">Ρυθμίστε ένα μοτίβο κλειδώματος της συσκευής, έναν κωδικό PIN ή έναν κωδικό πρόσβασης για να προστατεύσετε τις αποθηκευμένες συνδέσεις και τους κωδικούς πρόσβασης από την πρόσβαση σε αυτούς εάν κάποιος άλλος έχει τη συσκευή σας.</string>
+    
+    <string name="logins_warning_dialog_later">Αργότερα</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Ρυθμίστε τώρα</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Ξεκλειδώστε τη συσκευή σας</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Ζουμ σε όλους τους ιστότοπους</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Ενεργοποίηση για να επιτρέπετε το τσίμπημα και το ζουμ, ακόμη και σε ιστότοπους που εμποδίζουν αυτή τη χειρονομία.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Όνομα (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Τελευταία χρήση</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Ταξινόμηση μενού συνδέσεων</string>
+
+    
+    
+    <string name="preferences_autofill">Αυτόματη συμπλήρωση</string>
+    
+    <string name="preferences_addresses">Διευθύνσεις</string>
+    
+    <string name="preferences_credit_cards">Πιστωτικές κάρτες</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Αποθήκευση και αυτόματη συμπλήρωση καρτών</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Τα δεδομένα είναι κρυπτογραφημένα</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Συγχρονισμός καρτών σε όλες τις συσκευές</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Κάρτες συγχρονισμού</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Προσθήκη πιστωτικής κάρτας</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Διαχείριση αποθηκευμένων καρτών</string>
+    
+    <string name="preferences_addresses_add_address">Προσθήκη διεύθυνσης</string>
+    
+    <string name="preferences_addresses_manage_addresses">Διαχείριση διευθύνσεων</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Αποθήκευση και αυτόματη συμπλήρωση διευθύνσεων</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Συμπεριλάβετε πληροφορίες όπως αριθμούς, email και διευθύνσεις αποστολής</string>
+
+    
+    <string name="credit_cards_add_card">Προσθήκη κάρτας</string>
+    
+    <string name="credit_cards_edit_card">Επεξεργασία κάρτας</string>
+    
+    <string name="credit_cards_card_number">Αριθμός κάρτας</string>
+    
+    <string name="credit_cards_expiration_date">Ημερομηνία λήξης</string>
+    
+    <string name="credit_cards_expiration_date_month">Ημερομηνία λήξης Μήνας</string>
+    
+    <string name="credit_cards_expiration_date_year">Ημερομηνία λήξης Έτος</string>
+    
+    <string name="credit_cards_name_on_card">Όνομα στην κάρτα</string>
+    
+    <string name="credit_cards_menu_delete_card">Διαγραφή κάρτας</string>
+    
+    <string name="credit_cards_delete_card_button">Διαγραφή κάρτας</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Σίγουρα θέλετε να διαγράψετε αυτή την πιστωτική κάρτα;</string>
+    
+    <string name="credit_cards_delete_dialog_button">Διαγραφή</string>
+    
+    <string name="credit_cards_menu_save">Αποθήκευση</string>
+    
+    <string name="credit_cards_save_button">Αποθήκευση</string>
+    
+    <string name="credit_cards_cancel_button">Ακύρωση</string>
+    
+    <string name="credit_cards_saved_cards">Αποθηκευμένες κάρτες</string>
+    
+    <string name="credit_cards_number_validation_error_message">Παρακαλώ εισάγετε έναν έγκυρο αριθμό πιστωτικής κάρτας</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Παρακαλούμε συμπληρώστε αυτό το πεδίο</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Ξεκλειδώστε για να δείτε τις αποθηκευμένες κάρτες σας</string>
+    
+    <string name="credit_cards_warning_dialog_title">Ασφαλίστε τις πιστωτικές σας κάρτες</string>
+    
+    <string name="credit_cards_warning_dialog_message">Ρυθμίστε ένα μοτίβο κλειδώματος της συσκευής, έναν κωδικό PIN ή έναν κωδικό πρόσβασης για να προστατεύσετε τις αποθηκευμένες πιστωτικές κάρτες σας από την πρόσβαση σε αυτές εάν κάποιος άλλος έχει τη συσκευή σας.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Ρυθμίστε τώρα</string>
+    
+    <string name="credit_cards_warning_dialog_later">Αργότερα</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Ξεκλειδώστε τη συσκευή σας</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Ξεκλείδωμα για χρήση αποθηκευμένων πληροφοριών πιστωτικής κάρτας</string>
+    
+    <string name="addresses_add_address">Προσθήκη διεύθυνσης</string>
+    
+    <string name="addresses_edit_address">Επεξεργασία διεύθυνσης</string>
+    
+    <string name="addresses_manage_addresses">Διαχείριση διευθύνσεων</string>
+    
+    <string name="addresses_first_name">Όνομα</string>
+    
+    <string name="addresses_middle_name">Μεσαίο όνομα</string>
+    
+    <string name="addresses_last_name">Επώνυμο</string>
+    
+    <string name="addresses_street_address">Διεύθυνση οδού</string>
+    
+    <string name="addresses_city">Πόλη</string>
+    
+    <string name="addresses_state">Κράτος</string>
+    
+    <string name="addresses_province">Επαρχία</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Χώρα ή περιοχή</string>
+    
+    <string name="addresses_phone">Τηλέφωνο</string>
+    
+    <string name="addresses_email">Ηλεκτρονικό ταχυδρομείο</string>
+    
+    <string name="addresses_save_button">Αποθήκευση</string>
+    
+    <string name="addresses_cancel_button">Ακύρωση</string>
+    
+    <string name="addressess_delete_address_button">Διαγραφή διεύθυνσης</string>
+    
+    <string name="addressess_confirm_dialog_message">Σίγουρα θέλετε να διαγράψετε αυτή τη διεύθυνση;</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Διαγραφή</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Ακύρωση</string>
+    
+    <string name="address_menu_save_address">Αποθήκευση διεύθυνσης</string>
+    
+    <string name="address_menu_delete_address">Διαγραφή διεύθυνσης</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Προσθήκη μηχανής αναζήτησης</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Επεξεργασία μηχανής αναζήτησης</string>
+    
+    <string name="search_engine_add_button_content_description">Προσθέστε</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Αποθήκευση</string>
+    
+    <string name="search_engine_edit">Επεξεργασία</string>
+    
+    <string name="search_engine_delete">Διαγραφή</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Άλλα</string>
+    
+    <string name="search_add_custom_engine_name_hint">Όνομα</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Συμβολοσειρά αναζήτησης για χρήση</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Αντικαταστήστε το ερώτημα με "%s". Παράδειγμα:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Λεπτομέρειες προσαρμοσμένης μηχανής αναζήτησης</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Εισάγετε το όνομα της μηχανής αναζήτησης</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Εισάγετε μια συμβολοσειρά αναζήτησης</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Ελέγξτε ότι η συμβολοσειρά αναζήτησης ταιριάζει με τη μορφή παραδείγματος</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Σφάλμα σύνδεσης στο "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Δημιουργήθηκε %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Αποθηκεύτηκε %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Διαγράφηκε %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Για να το επιτρέψετε:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Μεταβείτε στις Ρυθμίσεις Android</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Πατήστε &lt;b&gt;Δικαιώματα&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Εναλλαγή του &lt;b&gt;%1$s&lt;/b&gt; σε ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Η σύνδεση είναι ασφαλής</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Η σύνδεση δεν είναι ασφαλής</string>
+    
+    <string name="clear_site_data">Διαγραφή των cookies και των δεδομένων του ιστότοπου</string>
+    
+    <string name="confirm_clear_site_data">Είστε σίγουροι ότι θέλετε να διαγράψετε όλα τα cookies και τα δεδομένα για τον ιστότοπο &lt;b&gt;%s&lt;/b&gt;;</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Είστε σίγουροι ότι θέλετε να καταργήσετε όλα τα δικαιώματα σε όλες τις τοποθεσίες;</string>
+    
+    <string name="confirm_clear_permissions_site">Είστε σίγουροι ότι θέλετε να καταργήσετε όλα τα δικαιώματα για αυτόν τον ιστότοπο;</string>
+    
+    <string name="confirm_clear_permission_site">Είστε σίγουροι ότι θέλετε να καταργήσετε αυτή την άδεια για αυτόν τον ιστότοπο;</string>
+    
+    <string name="no_site_exceptions">Δεν υπάρχουν εξαιρέσεις από την περιοχή</string>
+    
+    <string name="bookmark_deletion_confirmation">Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον σελιδοδείκτη;</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Προσθήκη στις συντομεύσεις</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Αφαίρεση από συντομεύσεις</string>
+    
+    <string name="certificate_info_verified_by">Επιβεβαιώθηκε από: %1$s</string>
+    
+    <string name="login_menu_delete_button">Διαγραφή</string>
+    
+    <string name="login_menu_edit_button">Επεξεργασία</string>
+    
+    <string name="login_deletion_confirmation">Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή τη σύνδεση;</string>
+    
+    <string name="dialog_delete_positive">Διαγραφή</string>
+    
+    <string name="dialog_delete_negative">Ακύρωση</string>
+    
+    <string name="login_options_menu">Επιλογές σύνδεσης</string>
+    
+    <string name="saved_login_hostname_description">Το επεξεργάσιμο πεδίο κειμένου για τη διαδικτυακή διεύθυνση της σύνδεσης.</string>
+    
+    <string name="saved_login_username_description">Το επεξεργάσιμο πεδίο κειμένου για το όνομα χρήστη της σύνδεσης.</string>
+    
+    <string name="saved_login_password_description">Το επεξεργάσιμο πεδίο κειμένου για τον κωδικό πρόσβασης της σύνδεσης.</string>
+    
+    <string name="save_changes_to_login">Αποθηκεύστε τις αλλαγές για να συνδεθείτε.</string>
+    
+    <string name="edit">Επεξεργασία</string>
+    
+    <string name="add_login">Προσθήκη νέας σύνδεσης</string>
+    
+    <string name="saved_login_password_required">Απαιτείται κωδικός πρόσβασης</string>
+    
+    <string name="saved_login_username_required">Απαιτείται όνομα χρήστη</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Απαιτείται όνομα κεντρικού υπολογιστή</string>
+    
+    <string name="voice_search_content_description">Φωνητική αναζήτηση</string>
+    
+    <string name="voice_search_explainer">Μιλήστε τώρα</string>
+    
+    <string name="saved_login_duplicate">Μια σύνδεση με αυτό το όνομα χρήστη υπάρχει ήδη</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Η διαδικτυακή διεύθυνση πρέπει να περιέχει "https://" ή "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Απαιτείται έγκυρο όνομα κεντρικού υπολογιστή</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Συνδέστε μια άλλη συσκευή.</string>
+    
+    <string name="synced_tabs_reauth">Παρακαλώ πιστοποιήστε εκ νέου την ταυτότητά σας.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Ενεργοποιήστε το συγχρονισμό καρτελών.</string>
+    
+    <string name="synced_tabs_no_tabs">Δεν έχετε καμία καρτέλα ανοιχτή στον Waterfox στις άλλες συσκευές σας.</string>
+    
+    <string name="synced_tabs_sign_in_message">Προβολή μιας λίστας καρτελών από άλλες συσκευές σας.</string>
+    
+    <string name="synced_tabs_sign_in_button">Συνδεθείτε για συγχρονισμό</string>
+    
+    <string name="synced_tabs_no_open_tabs">Δεν υπάρχουν ανοιχτές καρτέλες</string>
+    
+    <string name="synced_tabs_expand_group">Επέκταση ομάδας συγχρονισμένων καρτελών</string>
+    
+    <string name="synced_tabs_collapse_group">Απόρριψη ομάδας συγχρονισμένων καρτελών</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Επίτευξη ορίου συντομεύσεων</string>
+    
+    <string name="shortcut_max_limit_content">Για να προσθέσετε μια νέα συντόμευση, αφαιρέστε μια. Αγγίξτε παρατεταμένα την τοποθεσία και επιλέξτε κατάργηση.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">Εντάξει, το κατάλαβα</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Συντομεύσεις</string>
+	
+	<string name="top_sites_rename_dialog_title">Όνομα</string>
+    
+    <string name="shortcut_name_hint">Όνομα συντόμευσης</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Ακύρωση</string>
+    
+    <string name="top_sites_menu_settings">Ρυθμίσεις</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Οι χορηγοί μας &amp; το απόρρητό σας</string>
+    
+    <string name="top_sites_sponsored_label">Χορηγία</string>
+
+    
+    
+    <string name="inactive_tabs_title">Ανενεργές καρτέλες</string>
+    
+    <string name="inactive_tabs_delete_all">Κλείστε όλες τις ανενεργές καρτέλες</string>
+    
+    <string name="inactive_tabs_expand_content_description">Αναπτύξτε ανενεργές καρτέλες</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Κατάρρευση ανενεργών καρτελών</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Αυτόματο κλείσιμο μετά από ένα μήνα;</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Ο Waterfox μπορεί να κλείσει καρτέλες που δεν έχετε δει τον τελευταίο μήνα.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ΕΝΕΡΓΟΠΟΊΗΣΗ ΤΟΥ ΑΥΤΌΜΑΤΟΥ ΚΛΕΙΣΊΜΑΤΟΣ</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Ενεργοποιημένο αυτόματο κλείσιμο</string>
+
+    
+    <string name="default_browser_experiment_card_text">Ορίστε συνδέσμους από ιστότοπους, μηνύματα ηλεκτρονικού ταχυδρομείου και μηνύματα για να ανοίγουν αυτόματα στον Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Αφαιρέστε το</string>
+
+    
+    <string name="radio_preference_info_content_description">Κάντε κλικ για περισσότερες λεπτομέρειες</string>
+
+    
+    <string name="action_bar_up_description">Πλοήγηση προς τα πάνω</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Κλείστε το</string>
+
+    <string name="waterfox_suggest_header">Waterfox Προτείνετε</string>
+</resources>

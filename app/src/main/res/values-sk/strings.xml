@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Súkromné %s</string>
+    
+    <string name="app_name_private_4">%s (súkromné)</string>
+
+    
+    
+    <string name="content_description_menu">Ďalšie možnosti</string>
+    
+    <string name="content_description_private_browsing_button">Povolenie súkromného prehliadania</string>
+    
+    <string name="content_description_disable_private_browsing_button">Zakázanie súkromného prehliadania</string>
+    
+    <string name="search_hint">Vyhľadávanie alebo zadanie adresy</string>
+    
+    <string name="application_search_hint">Zadajte hľadané výrazy</string>
+    
+    <string name="no_open_tabs_description">Tu sa zobrazia vaše otvorené karty.</string>
+    
+    <string name="no_private_tabs_description">Tu sa zobrazia vaše súkromné karty.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d vybrané</string>
+    
+    <string name="tab_tray_add_new_collection">Pridanie novej kolekcie</string>
+    
+    <string name="tab_tray_add_new_collection_name">Názov</string>
+    
+    <string name="tab_tray_select_collection">Vybrať kolekciu</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Ukončenie režimu viacnásobného výberu</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Uloženie vybraných kariet do zbierky</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Vybrané</string>
+
+    
+    
+    <string name="recently_saved_title">Nedávno uložené</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Zobraziť všetky uložené záložky</string>
+    
+    <string name="recently_saved_menu_item_remove">Odstránenie stránky</string>
+
+    
+    <string name="about_content">%1$s je vyrobený spoločnosťou BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s vymaže históriu vyhľadávania a prehliadania zo súkromných kariet, keď ich zatvoríte alebo ukončíte aplikáciu. Aj keď tým nezískate anonymitu pre webové stránky alebo poskytovateľa internetových služieb, uľahčuje to udržiavanie súkromia toho, čo robíte online, pred ostatnými používateľmi tohto zariadenia.</string>
+    <string name="private_browsing_common_myths">Najčastejšie mýty o súkromnom prehliadaní</string>
+
+    
+    
+    <string name="cfr_message">Pridanie skratky na otváranie súkromných kariet z domovskej obrazovky.</string>
+    
+    <string name="cfr_pos_button_text">Pridanie skratky</string>
+    
+    <string name="cfr_neg_button_text">Nie, ďakujem</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Môžete nastaviť %1$s na automatické otváranie odkazov v aplikáciách.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Prejsť do nastavení</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Odmietnuť</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Odmietnuť</string>
+
+    
+    
+    <string name="tcp_cfr_message">Naša doteraz najvýkonnejšia funkcia ochrany súkromia izoluje sledovacie zariadenia na rôznych lokalitách.</string>
+    
+    <string name="tcp_cfr_learn_more">Ďalšie informácie o celkovej ochrane súborov cookie</string>
+
+    
+    <string name="camera_permissions_needed_message">Potrebný je prístup k fotoaparátu. Prejdite do nastavení systému Android, ťuknite na položku povolenia a ťuknite na položku povoliť.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Prejsť do nastavení</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Odmietnuť</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Nastavenie automatického zatvárania otvorených kariet, ktoré neboli zobrazené za posledný deň, týždeň alebo mesiac.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Zobraziť možnosti</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Odmietnuť</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Presunú sa sem karty, ktoré ste si dva týždne nepozreli.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Vypnutie v nastaveniach</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automatické zatvorenie po jednom mesiaci?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s môže zatvoriť karty, ktoré ste si za posledný mesiac neprezreli.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Zatvoriť</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Zapnutie automatického zatvárania</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Nová karta</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Nová súkromná karta</string>
+
+    
+    
+    <string name="recent_tabs_header">Skočte späť</string>
+    
+    <string name="recent_tabs_show_all">Zobraziť všetky</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Tlačidlo Zobraziť všetky posledné karty</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Vaše vyhľadávanie \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d stránok</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Zobrazenie všetkých synchronizovaných kariet</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Synchronizované zariadenie</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Odstránenie stránky</string>
+    
+    <string name="recent_tab_menu_item_remove">Odstránenie stránky</string>
+
+    
+    
+    <string name="history_metadata_header_2">Nedávno navštívené</string>
+    
+    <string name="recently_visited_menu_item_remove">Odstránenie stránky</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Zobraziť všetky predchádzajúce prieskumy</string>
+
+    
+    
+    <string name="browser_menu_back">Späť</string>
+    
+    <string name="browser_menu_forward">Forward</string>
+    
+    <string name="browser_menu_refresh">Obnoviť</string>
+    
+    <string name="browser_menu_stop">Zastavte</string>
+    
+    <string name="browser_menu_add_ons">Doplnky</string>
+    
+    <string name="no_add_ons">Žiadne doplnky tu nie sú</string>
+    
+    <string name="browser_menu_help">Pomoc</string>
+    
+    <string name="browser_menu_settings">Nastavenia</string>
+    
+    <string name="browser_menu_library">Knižnica</string>
+    
+    <string name="browser_menu_desktop_site">Lokalita pre stolové počítače</string>
+    
+    <string name="browser_menu_add_to_homescreen">Pridanie na obrazovku Domov</string>
+    
+    <string name="browser_menu_install_on_homescreen">Inštalácia stránky</string>
+    
+    <string name="resync_button_content_description">Resynchronizácia</string>
+    
+    <string name="browser_menu_find_in_page">Nájsť na stránke</string>
+    
+    <string name="browser_menu_save_to_collection_2">Uložiť do zbierky</string>
+    
+    <string name="browser_menu_share">Zdieľať</string>
+    
+    <string name="browser_menu_open_in_waterfox">Otvoriť v %1$s</string>
+    
+    <string name="browser_menu_powered_by">Napájané prostredníctvom %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">Pohľad čitateľa</string>
+    
+    <string name="browser_menu_read_close">Pohľad čitateľa zblízka</string>
+    
+    <string name="browser_menu_open_app_link">Otvoriť v aplikácii</string>
+    
+    <string name="browser_menu_customize_reader_view">Prispôsobenie zobrazenia čítačky</string>
+    
+    <string name="browser_menu_add">Pridať</string>
+    
+    <string name="browser_menu_edit">Upraviť</string>
+    
+    <string name="browser_menu_customize_home_1">Prispôsobenie domovskej stránky</string>
+    
+    
+    <string name="browser_toolbar_home">Domovská obrazovka</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Vybraný jazyk</string>
+    
+    <string name="default_locale_text">Postupujte podľa jazyka zariadenia</string>
+    
+    <string name="locale_search_hint">Vyhľadávací jazyk</string>
+
+    
+    
+    <string name="search_scan_button">Skenovanie</string>
+    
+    <string name="search_engine_button">Vyhľadávač</string>
+    
+    <string name="search_shortcuts_engine_settings">Nastavenia vyhľadávača</string>
+    
+    <string name="awesomebar_clipboard_title">Vyplnenie odkazu zo schránky</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Povoľte</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Nedovoľte</string>
+    
+    <string name="search_suggestions_onboarding_title">Povoliť návrhy na vyhľadávanie v súkromných reláciách?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s bude zdieľať všetko, čo zadáte do adresného riadka, s vaším predvoleným vyhľadávačom.</string>
+    
+    <string name="search_engine_suggestions_title">Vyhľadávanie %s</string>
+    
+    <string name="search_engine_suggestions_description">Vyhľadávanie priamo z adresného riadka</string>
+    
+    <string name="search_settings_menu_item">Nastavenia vyhľadávania</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Teraz je jednoduchšie pokračovať tam, kde ste skončili.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Prejdite na otvorené karty, záložky a históriu prehliadania.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Čisté, usporiadané karty</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Zbavte sa neporiadku na kartách vďaka vylepšenému rozvrhnutiu a automatickému zatváraniu kariet.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Nedávne vyhľadávania</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Znovu si prezrite svoje posledné vyhľadávania z domovskej stránky a kariet.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Zoznámte sa so svojou personalizovanou domovskou stránkou. Zobrazia sa tu posledné karty, záložky a výsledky vyhľadávania.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Vitajte na osobnejšom internete</string>
+    
+    <string name="onboarding_home_welcome_description">Viac farieb. Lepšie súkromie. Rovnaký záväzok uprednostniť ľudí pred ziskom.</string>
+    
+    <string name="onboarding_home_sync_title_3">Preskakovanie z telefónu na notebook a späť</string>
+    
+    <string name="onboarding_home_sync_description">Pokračujte tam, kde ste skončili, a na domovskej stránke teraz nájdete karty z iných zariadení.</string>
+    
+    <string name="onboarding_home_get_started_button">Začnite</string>
+    
+    <string name="onboarding_home_sign_in_button">Prihlásiť sa</string>
+    
+    <string name="onboarding_home_skip_button">Vynechať</string>
+    
+    <string name="onboarding_home_content_description_close_button">Zatvoriť</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Otvorenie novej karty %1$s</string>
+    
+    <string name="search_widget_text_short">Vyhľadávanie</string>
+    
+    <string name="search_widget_text_long">Vyhľadávanie na webe</string>
+    
+    <string name="search_widget_voice">Hlasové vyhľadávanie</string>
+
+    
+    
+    <string name="settings">Nastavenia</string>
+    
+    <string name="preferences_category_general">Všeobecné</string>
+    
+    <string name="preferences_category_about">O stránke</string>
+    
+    <string name="preferences_default_search_engine">Predvolený vyhľadávač</string>
+    
+    <string name="preferences_search">Vyhľadávanie</string>
+    
+    <string name="preferences_search_address_bar">Adresný riadok</string>
+    
+    <string name="preferences_rate">Hodnotiť v službe Google Play</string>
+    
+    <string name="preferences_about">O %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Nastavenie ako predvoleného prehliadača</string>
+    
+    <string name="preferences_category_advanced">Pokročilé</string>
+    
+    <string name="preferences_category_privacy_security">Ochrana súkromia a bezpečnosť</string>
+    
+    <string name="preferences_site_permissions">Povolenia na stavenisko</string>
+    
+    <string name="preferences_private_browsing_options">Súkromné prehliadanie</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Otvorenie odkazov v súkromnej karte</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Povolenie snímok obrazovky pri súkromnom prehliadaní</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Ak je to povolené, súkromné karty budú viditeľné aj pri otvorení viacerých aplikácií.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Pridanie skratky pre súkromné prehliadanie</string>
+    
+    <string name="preferences_https_only_title">Režim iba HTTPS</string>
+    
+    <string name="preferences_https_only_summary">Automaticky sa pokúša pripojiť k lokalitám, ktoré používajú šifrovací protokol HTTPS na zvýšenie bezpečnosti.</string>
+    
+    <string name="preferences_https_only_on">Na stránke</string>
+    
+    <string name="preferences_https_only_off">Vypnuté</string>
+    
+    <string name="preferences_http_only_learn_more">Zistite viac</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Povolenie na všetkých kartách</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Povolenie len v súkromných kartách</string>
+    
+    <string name="errorpage_httpsonly_title">Zabezpečená stránka nie je k dispozícii</string>
+    
+    <string name="errorpage_httpsonly_message_title">S najväčšou pravdepodobnosťou webová lokalita jednoducho nepodporuje protokol HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Je však možné, že je do toho zapojený aj útočník. Ak budete pokračovať na webovej lokalite, nemali by ste zadávať žiadne citlivé informácie. Ak budete pokračovať, režim iba HTTPS bude pre stránku dočasne vypnutý.</string>
+    
+    <string name="preferences_accessibility">Prístupnosť</string>
+    
+    <string name="preferences_override_fxa_server">Vlastný server účtu Waterfox</string>
+    
+    <string name="preferences_override_sync_tokenserver">Vlastný synchronizačný server</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Účtovný/synchronizačný server Waterfox upravený. Ukončenie aplikácie na uplatnenie zmien...</string>
+    
+    <string name="preferences_category_account">Účet</string>
+    
+    <string name="preferences_toolbar">Panel nástrojov</string>
+    
+    <string name="preferences_theme">Téma</string>
+    
+    <string name="preferences_home_2">Domovská stránka</string>
+    
+    <string name="preferences_gestures">Gestá</string>
+    
+    <string name="preferences_customize">Prispôsobenie stránky</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Synchronizácia záložiek, histórie a ďalších údajov s kontom Waterfox</string>
+    
+    <string name="preferences_sign_in_description_2">Prihláste sa a synchronizujte karty, záložky, heslá a ďalšie položky.</string>
+    
+    <string name="preferences_account_default_name">Účet Waterfox</string>
+    
+    <string name="preferences_account_sync_error">Opätovné pripojenie na obnovenie synchronizácie</string>
+    
+    <string name="preferences_language">Jazyk</string>
+    
+    <string name="preferences_remote_debugging">Vzdialené ladenie cez USB</string>
+    
+    <string name="preferences_show_search_engines">Zobraziť vyhľadávače</string>
+    
+    <string name="preferences_show_search_suggestions">Zobraziť návrhy vyhľadávania</string>
+    
+    <string name="preferences_show_voice_search">Zobraziť hlasové vyhľadávanie</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Zobraziť v súkromných reláciách</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Zobraziť návrhy schránky</string>
+    
+    <string name="preferences_search_browsing_history">História prehľadávania</string>
+    
+    <string name="preferences_search_bookmarks">Vyhľadávanie záložiek</string>
+    
+    <string name="preferences_search_synced_tabs">Vyhľadávanie synchronizovaných kariet</string>
+    
+    <string name="preferences_account_settings">Nastavenia účtu</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Automatické dokončovanie adries URL</string>
+    
+    <string name="preferences_open_links_in_apps">Otváranie odkazov v aplikáciách</string>
+    
+    <string name="preferences_external_download_manager">Externý správca sťahovania</string>
+    
+    <string name="preferences_addons">Doplnky</string>
+    
+    <string name="preferences_notifications">Oznámenia</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Vlastná kolekcia doplnkov</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Zrušiť</string>
+    
+    <string name="customize_addon_collection_hint">Názov kolekcie</string>
+    
+    <string name="customize_addon_collection_user_hint">Vlastník zbierky (ID používateľa)</string>
+    
+    <string name="toast_customize_addon_collection_done">Upravená kolekcia doplnkov. Ukončenie aplikácie na uplatnenie zmien...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Skočte späť</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Nedávne záložky</string>
+    
+    <string name="customize_toggle_recently_visited">Nedávno navštívené</string>
+    
+    <string name="customize_wallpapers">Tapety na plochu</string>
+    
+    <string name="customize_toggle_contile">Sponzorované skratky</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Položka tapety: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Tapety aktualizované!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Zobraziť</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Zmena tapety ťuknutím na logo domovskej stránky Waterfox</string>
+    
+    <string name="wallpaper_logo_content_description">Logo Waterfox - zmena tapety, tlačidlo</string>
+
+    
+    
+    <string name="addon_not_supported_error">Doplnok nie je podporovaný</string>
+    
+    <string name="addon_already_installed">Doplnok je už nainštalovaný</string>
+
+    
+    
+    <string name="preferences_sync_now">Synchronizovať teraz</string>
+    
+    <string name="preferences_sync_category">Vyberte si, čo chcete synchronizovať</string>
+    
+    <string name="preferences_sync_history">História</string>
+    
+    <string name="preferences_sync_bookmarks">Záložky</string>
+    
+    <string name="preferences_sync_logins">Prihlásenia</string>
+    
+    <string name="preferences_sync_tabs_2">Otvorené karty</string>
+    
+    <string name="preferences_sign_out">Odhlásiť sa</string>
+    
+    <string name="preferences_sync_device_name">Názov zariadenia</string>
+    
+    <string name="empty_device_name_error">Názov zariadenia nemôže byť prázdny.</string>
+    
+    <string name="sync_syncing_in_progress">Synchronizácia...</string>
+    
+    <string name="sync_failed_summary">Synchronizácia zlyhala. Posledný úspech: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Synchronizácia zlyhala. Posledná synchronizácia: nikdy</string>
+    
+    <string name="sync_last_synced_summary">Posledná synchronizácia: %s</string>
+    
+    <string name="sync_never_synced_summary">Posledná synchronizácia: nikdy</string>
+    
+    <string name="default_device_name_2">%1$s na %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kreditné karty</string>
+    
+    <string name="preferences_sync_address">Adresy</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Prijaté karty</string>
+    
+    <string name="fxa_received_tab_channel_description">Upozornenia na karty prijaté z iných zariadení Waterfox.</string>
+    
+    <string name="fxa_tab_received_notification_name">Prijatá karta</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Karta z %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Výnimky</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Zapnúť pre všetky stránky</string>
+    
+    <string name="exceptions_empty_message_description">Výnimky umožňujú vypnúť ochranu sledovania pre vybrané stránky.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Zistite viac</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Zapnutie funkcie Synchronizácia</string>
+    
+    <string name="preferences_sync_2">Synchronizácia a ukladanie údajov</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Prihláste sa a znovu sa pripojte</string>
+    
+    <string name="preferences_sync_remove_account">Odstránenie účtu</string>
+
+    
+    
+    <string name="pair_instructions_2">Naskenujte kód QR zobrazený na &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Top</string>
+    
+    <string name="preference_bottom_toolbar">Spodná časť</string>
+
+    
+    
+    <string name="preference_light_theme">Svetlo</string>
+    
+    <string name="preference_dark_theme">Dark</string>
+    
+    <string name="preference_auto_battery_theme">Nastavenie podľa šetriča batérie</string>
+    
+    <string name="preference_follow_device_theme">Sledovanie témy zariadenia</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Ťahanie na obnovenie</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Posunutím skryjete panel nástrojov</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Posunutím panela nástrojov do strany môžete prepínať karty</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Posunutím panela nástrojov nahor otvoríte karty</string>
+
+    
+    
+    <string name="library_downloads">Na stiahnutie</string>
+    
+    <string name="library_bookmarks">Záložky</string>
+    
+    <string name="library_desktop_bookmarks_root">Záložky na ploche</string>
+    
+    <string name="library_desktop_bookmarks_menu">Záložky Menu</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Panel s nástrojmi Záložky</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Ostatné záložky</string>
+    
+    <string name="library_history">História</string>
+    
+    <string name="library_new_tab">Nová karta</string>
+    
+    <string name="settings_title">Nastavenia</string>
+    
+    <string name="content_description_close_button">Zatvoriť</string>
+
+    
+    <string name="history_search_group_site">%d stránky</string>
+    
+    <string name="history_search_group_sites">%d stránok</string>
+
+    
+    <string name="library_recently_closed_tabs">Nedávno zatvorené karty</string>
+    
+    <string name="recently_closed_show_full_history">Zobraziť celú históriu</string>
+    
+    <string name="recently_closed_tabs">%d kariet</string>
+    
+    <string name="recently_closed_tab">%d karta</string>
+    
+    <string name="recently_closed_empty_message">Žiadne nedávno zatvorené karty</string>
+
+    
+    
+    <string name="preferences_tabs">Karty</string>
+    
+    <string name="preferences_tab_view">Zobrazenie karty</string>
+    
+    <string name="tab_view_list">Zoznam</string>
+    
+    <string name="tab_view_grid">Sieť</string>
+    
+    <string name="preferences_close_tabs">Zatvoriť karty</string>
+    
+    <string name="close_tabs_manually">Nikdy</string>
+    
+    <string name="close_tabs_after_one_day">Po jednom dni</string>
+    
+    <string name="close_tabs_after_one_week">Po jednom týždni</string>
+    
+    <string name="close_tabs_after_one_month">Po jednom mesiaci</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatické zatváranie otvorených kariet</string>
+
+    
+    
+    <string name="preferences_opening_screen">Úvodná obrazovka</string>
+    
+    <string name="opening_screen_homepage">Domovská stránka</string>
+    
+    <string name="opening_screen_last_tab">Posledná karta</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Domovská stránka po štyroch hodinách nečinnosti</string>
+    
+    <string name="close_tabs_manually_summary">Ručné zatvorenie</string>
+    
+    <string name="close_tabs_after_one_day_summary">Zavrieť po jednom dni</string>
+    
+    <string name="close_tabs_after_one_week_summary">Zavrieť po jednom týždni</string>
+    
+    <string name="close_tabs_after_one_month_summary">Zavrieť po jednom mesiaci</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Presun starých kariet do neaktívnych</string>
+    
+    <string name="preferences_inactive_tabs_title">Karty, ktoré ste si dva týždne neprezreli, sa presunú do neaktívnej časti.</string>
+
+    
+    
+    <string name="tab_header_label">Otvorené karty</string>
+    
+    <string name="tabs_header_private_tabs_title">Súkromné karty</string>
+    
+    <string name="tabs_header_synced_tabs_title">Synchronizované karty</string>
+    
+    <string name="add_tab">Pridať kartu</string>
+    
+    <string name="add_private_tab">Pridanie súkromnej karty</string>
+    
+    <string name="tab_drawer_fab_content">Súkromná stránka</string>
+    
+    <string name="tab_drawer_fab_sync">Synchronizácia</string>
+    
+    <string name="tab_tray_menu_item_share">Zdieľanie všetkých kariet</string>
+    
+    <string name="tab_tray_menu_recently_closed">Nedávno zatvorené karty</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Nedávno zatvorené</string>
+    
+    <string name="tab_tray_menu_account_settings">Nastavenia účtu</string>
+    
+    <string name="tab_tray_menu_tab_settings">Nastavenia karty</string>
+    
+    <string name="tab_tray_menu_item_close">Zatvoriť všetky karty</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Záložka</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Zatvoriť</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Zdieľanie vybraných kariet</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Ponuka vybraných kariet</string>
+    
+    <string name="remove_tab_from_collection">Odstránenie karty z kolekcie</string>
+    
+    <string name="tabs_tray_select_tabs">Vyberte karty</string>
+    
+    <string name="close_tab">Zatvoriť kartu</string>
+    
+    <string name="close_tab_title">Zatvoriť kartu %s</string>
+    
+    <string name="open_tabs_menu">Otvorenie ponuky kariet</string>
+    
+    <string name="tabs_menu_save_to_collection1">Uloženie kariet do zbierky</string>
+    
+    <string name="collection_delete">Odstránenie kolekcie</string>
+    
+    <string name="collection_rename">Premenovanie kolekcie</string>
+    
+    <string name="collection_open_tabs">Otvorené karty</string>
+    
+    <string name="collection_name_hint">Názov kolekcie</string>
+	
+	<string name="rename_top_site">Premenovať stránku</string>
+	
+	<string name="remove_top_site">Odstránenie stránky</string>
+    
+    <string name="delete_from_history">Odstrániť z histórie</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (súkromný režim)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Ostatné karty</string>
+
+    
+    
+    <string name="history_search_1">Zadajte hľadané výrazy</string>
+    
+    <string name="history_delete_all">Odstránenie histórie</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Odstránená história</string>
+    
+    <string name="history_delete_single_item_snackbar">Odstránené %1$s</string>
+    
+    <string name="history_delete_item">Odstrániť</string>
+    
+    <string name="history_multi_select_title">%1$d vybrané</string>
+    
+    <string name="history_today">Dnes</string>
+    
+    <string name="history_yesterday">Včera</string>
+    
+    <string name="history_7_days">Posledných 7 dní</string>
+    
+    <string name="history_30_days">Posledných 30 dní</string>
+    
+    <string name="history_older">Staršie</string>
+    
+    <string name="history_empty_message">Žiadna história</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Odstránené súbory na stiahnutie</string>
+    
+    <string name="download_delete_single_item_snackbar">Odstránené %1$s</string>
+    
+    <string name="download_empty_message_1">Žiadne stiahnuté súbory</string>
+    
+    <string name="download_multi_select_title">%1$d vybrané</string>
+    
+    <string name="download_delete_item_1">Odstránenie stránky</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Prepáčte. %1$s nemôže načítať túto stránku.</string>
+    
+    <string name="tab_crash_send_report">Odoslanie hlásenia o zlyhaní do služby BrowserWorks</string>
+    
+    <string name="tab_crash_close">Zatvoriť kartu</string>
+    
+    <string name="tab_crash_restore">Karta Obnovenie</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Ste si istí, že chcete tento priečinok odstrániť?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s odstráni vybrané položky.</string>
+    
+    <string name="bookmark_delete_negative">Zrušiť</string>
+    
+    <string name="bookmark_add_folder">Pridať priečinok</string>
+    
+    <string name="bookmark_saved_snackbar">Záložka uložená!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Upraviť</string>
+    
+    <string name="bookmark_menu_copy_button">Kopírovať</string>
+    
+    <string name="bookmark_menu_share_button">Zdieľať</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Otvoriť v novej karte</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Otvoriť v súkromnej karte</string>
+    
+    <string name="bookmark_menu_delete_button">Odstrániť</string>
+    
+    <string name="bookmark_menu_save_button">Uložiť</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d vybrané</string>
+    
+    <string name="edit_bookmark_fragment_title">Upraviť záložku</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Upraviť priečinok</string>
+    
+    <string name="bookmark_sign_in_button">Prihláste sa, aby ste videli synchronizované záložky</string>
+    
+    <string name="bookmark_url_label">ADRESA URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">NÁZOV</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Pridať priečinok</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Vyberte priečinok</string>
+    
+    <string name="bookmark_empty_title_error">Musí mať titul</string>
+    
+    <string name="bookmark_invalid_url_error">Neplatná adresa URL</string>
+    
+    <string name="bookmarks_empty_message">Žiadne záložky tu nie sú</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Odstránené %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Odstránené záložky</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Odstránenie vybraných priečinkov</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Zadajte hľadané výrazy</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Prejdite do Nastavení</string>
+    
+    <string name="quick_settings_sheet">Hárok s rýchlymi nastaveniami</string>
+    
+    <string name="phone_feature_recommended">Odporúčané stránky</string>
+    
+    <string name="clear_permissions">Zrušiť povolenia</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Zrušiť</string>
+    
+    <string name="clear_permission">Jasné povolenie</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Zrušiť</string>
+    
+    <string name="clear_permissions_on_all_sites">Vymazanie oprávnení na všetkých lokalitách</string>
+    
+    <string name="preference_browser_feature_autoplay">Automatické prehrávanie</string>
+    
+    <string name="preference_phone_feature_camera">Fotoaparát</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofón</string>
+    
+    <string name="preference_phone_feature_location">Umiestnenie</string>
+    
+    <string name="preference_phone_feature_notification">Oznámenie</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Trvalé ukladanie</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Súbory cookie medzi lokalitami</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">Obsah kontrolovaný systémom DRM</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Požiadajte o povolenie</string>
+    
+    <string name="preference_option_phone_feature_blocked">Zablokované stránky</string>
+    
+    <string name="preference_option_phone_feature_allowed">Povolené</string>
+    
+    <string name="phone_feature_blocked_by_android">Zablokované systémom Android</string>
+    
+    <string name="preference_exceptions">Výnimky</string>
+    
+    <string name="tracking_protection_on">Na stránke</string>
+    
+    <string name="tracking_protection_off">Vypnuté</string>
+    
+    <string name="preference_option_autoplay_allowed2">Povolenie zvuku a videa</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Povolenie zvuku a videa</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blokovanie zvuku a videa len pri mobilných dátach</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Zvuk a video sa budú prehrávať v sieti Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Len blokovanie zvuku</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Len blokovanie zvuku</string>
+    
+    <string name="preference_option_autoplay_blocked3">Blokovanie zvuku a videa</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Blokovanie zvuku a videa</string>
+    
+    <string name="delete_browsing_data_quit_on">Na stránke</string>
+    
+    <string name="delete_browsing_data_quit_off">Vypnuté</string>
+    
+    <string name="https_only_on">Na stránke</string>
+    
+    <string name="https_only_off">Vypnuté</string>
+
+    
+    
+    <string name="collections_header">Zbierky</string>
+    
+    <string name="collection_menu_button_content_description">Ponuka kolekcie</string>
+    
+    <string name="no_collections_description2">Zhromažďujte veci, na ktorých vám záleží.\nZoskupujte podobné vyhľadávania, stránky a karty, aby ste k nim mali neskôr rýchly prístup.</string>
+    
+    <string name="create_collection_select_tabs">Vybrať karty</string>
+    
+    <string name="create_collection_select_collection">Vybrať kolekciu</string>
+    
+    <string name="create_collection_name_collection">Kolekcia názvov</string>
+    
+    <string name="create_collection_add_new_collection">Pridanie novej kolekcie</string>
+    
+    <string name="create_collection_select_all">Vyberte všetky</string>
+    
+    <string name="create_collection_deselect_all">Zrušiť výber všetkých</string>
+    
+    <string name="create_collection_save_to_collection_empty">Vyberte karty, ktoré chcete uložiť</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d vybraných kariet</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">Vybraná karta %d</string>
+    
+    <string name="create_collection_tabs_saved">Uložené karty!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Zbierka uložená!</string>
+    
+    <string name="create_collection_tab_saved">Karta uložená!</string>
+    
+    <string name="create_collection_close">Zatvoriť</string>
+    
+    <string name="create_collection_save">Uložiť</string>
+    
+    <string name="create_collection_view">Zobraziť</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Zrušiť</string>
+
+    
+    <string name="create_collection_default_name">Zbierka %d</string>
+
+    
+    
+    <string name="share_header_2">Zdieľať</string>
+    
+    <string name="share_button_content_description">Zdieľať</string>
+    
+    <string name="share_device_subheader">Odoslať do zariadenia</string>
+    
+    <string name="share_link_all_apps_subheader">Všetky akcie</string>
+    
+    <string name="share_link_recent_apps_subheader">Nedávno použité</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopírovanie do schránky</string>
+    
+    <string name="toast_copy_link_to_clipboard">Skopírované do schránky</string>
+    
+    <string name="sync_menu_sign_in">Prihláste sa na synchronizáciu</string>
+    
+    <string name="sync_sign_in">Prihlásenie do služby Synchronizácia</string>
+    
+    <string name="sync_send_to_all">Odoslanie do všetkých zariadení</string>
+    
+    <string name="sync_reconnect">Opätovné pripojenie k službe Sync</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Pripojenie ďalšieho zariadenia</string>
+    
+    <string name="sync_connect_device_dialog">Ak chcete odoslať kartu, prihláste sa do aplikácie Waterfox aspoň na jednom ďalšom zariadení.</string>
+    
+    <string name="sync_confirmation_button">Mám to</string>
+    
+    <string name="share_error_snackbar">Nemožno zdieľať do tejto aplikácie</string>
+    
+    <string name="sync_add_new_device_title">Odoslať do zariadenia</string>
+    
+    <string name="sync_add_new_device_message">Žiadne pripojené zariadenia</string>
+    
+    <string name="sync_add_new_device_learn_button">Informácie o odosielaní kariet...</string>
+    
+    <string name="sync_add_new_device_connect_button">Pripojenie ďalšieho zariadenia...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Zatvorenie súkromných kariet</string>
+    
+    <string name="notification_marketing_channel_name">Marketing</string>
+    
+    <string name="notification_default_browser_title">%1$s je rýchly a súkromný</string>
+    
+    <string name="notification_default_browser_text">Nastavte %1$s ako predvolený prehliadač</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Zbierka vymazaná</string>
+    
+    <string name="snackbar_collection_renamed">Zmenený názov zbierky</string>
+    
+    <string name="snackbar_tab_closed">Karta je zatvorená</string>
+    
+    <string name="snackbar_tabs_closed">Zatvorené karty</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Záložky uložené!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Pridané do skratiek!</string>
+    
+    <string name="snackbar_private_tab_closed">Súkromná karta zatvorená</string>
+    
+    <string name="snackbar_private_tabs_closed">Súkromné karty sú zatvorené</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Miesto odstránené</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Povolenie %1$s na otvorenie %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Webová adresa nie je platná.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Určite chcete odstrániť %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Odstránením tejto karty sa odstráni celá kolekcia. Nové kolekcie môžete vytvárať kedykoľvek.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Odstrániť %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Odstrániť</string>
+    
+    <string name="full_screen_notification">Vstup do režimu celej obrazovky</string>
+    
+    <string name="url_copied">Skopírovaná adresa URL</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Toto je ukážka textu. Je tu na ukážku toho, ako sa text zobrazí, keď zväčšíte alebo zmenšíte veľkosť pomocou tohto nastavenia.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Zväčšenie alebo zmenšenie textu na webových stránkach</string>
+    
+    <string name="preference_accessibility_font_size_title">Veľkosť písma</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automatické nastavenie veľkosti písma</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Veľkosť písma bude zodpovedať nastaveniam systému Android. Tu môžete vypnúť správu veľkosti písma.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Odstránenie údajov o prehľadávaní</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Otvorené karty</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d kariet</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">História prehliadania a údaje o lokalite</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adries</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Cookies</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Budete odhlásení z väčšiny lokalít</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Obrázky a súbory v medzipamäti</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Uvoľňuje úložný priestor</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Povolenia na stavenisko</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Na stiahnutie</string>
+    
+    <string name="preferences_delete_browsing_data_button">Odstránenie údajov o prehľadávaní</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Odstránenie údajov o prehľadávaní pri ukončení</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Automatické vymazanie údajov o prehliadaní, keď v hlavnej ponuke vyberiete položku \"Ukončiť\".</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Ukončite</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Tým sa odstránia všetky údaje o prehliadaní.</string>
+    
+    <string name="delete_history_prompt_title">Časový rozsah na vymazanie</string>
+    
+    <string name="delete_history_prompt_body">Odstráni históriu (vrátane histórie synchronizovanej z iných zariadení), súbory cookie a iné údaje o prehliadaní.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Posledná hodina</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Dnes a včera</string>
+    
+    <string name="delete_history_prompt_button_everything">Všetko</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s odstráni vybrané údaje o prehliadaní.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Zrušiť</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Odstrániť</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Odstránenie údajov o prehliadaní</string>
+    
+    <string name="deleting_browsing_data_in_progress">Odstránenie údajov o prehľadávaní...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Odstránenie všetkých stránok v "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Zrušiť</string>
+    
+    <string name="delete_history_group_prompt_allow">Odstrániť</string>
+    
+    <string name="delete_history_group_snackbar">Vymazaná skupina</string>
+
+    
+    
+    <string name="onboarding_header_2">Vitajte na súkromnejšom webe</string>
+    
+    <string name="onboarding_message">Občiansky, nezávislý prehliadač.</string>
+    
+    <string name="onboarding_account_sign_in_header">Pokračujte tam, kde ste skončili</string>
+    
+    <string name="onboarding_manual_sign_in_description">Synchronizujte karty a heslá v rôznych zariadeniach na bezproblémové prepínanie obrazovky.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Prihlásiť sa</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Synchronizácia je zapnutá</string>
+    
+    <string name="onboarding_tracking_protection_header">Predvolená ochrana súkromia</string>
+    
+    <string name="onboarding_tracking_protection_description">Obsahuje funkciu Total Cookie Protection, ktorá zabraňuje sledovacím zariadeniam používať súbory cookie na sledovanie na rôznych lokalitách.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Štandardné (predvolené)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Vyvážené pre súkromie a výkon. Stránky sa načítavajú normálne.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Prísne</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blokuje viac sledovacích zariadení, takže sa stránky načítajú rýchlejšie, ale niektoré funkcie na stránke sa môžu porušiť.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Vyberte si umiestnenie panela nástrojov</string>
+    
+    <string name="onboarding_toolbar_placement_description">Ponechajte ho na spodku alebo ho presuňte na vrchol.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Máte kontrolu nad svojimi údajmi</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox nezhromažďuje žiadnu telemetriu a poskytuje vám kontrolu nad vašimi údajmi.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Prečítajte si naše oznámenie o ochrane osobných údajov</string>
+    
+    <string name="onboarding_conclusion_header">Ste pripravení otvoriť úžasný internet?</string>
+    
+    <string name="onboarding_finish">Začať prehľadávanie</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Vyberte si tému</string>
+    
+    <string name="onboarding_theme_picker_description_2">Šetrite batériu a svoj zrak pomocou tmavého režimu.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automatické</string>
+    
+    <string name="onboarding_theme_automatic_summary">Prispôsobí sa nastaveniam zariadenia</string>
+    
+    <string name="onboarding_theme_dark_title">Tmavá téma</string>
+    
+    <string name="onboarding_theme_light_title">Téma svetla</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Karty odoslané!</string>
+    
+    <string name="sync_sent_tab_snackbar">Karta odoslaná!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Nie je možné odoslať</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Naskenujte kód</string>
+    
+    <string name="sign_in_instructions">Waterfox sa pri synchronizácii údajov medzi mobilným zariadením a počítačom spolieha na účet Mozilla.&lt;br&gt; V počítači otvorte Waterfox a prejdite na &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla nie je nijako spojená s Waterfoxom.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Pripravené na skenovanie</string>
+    
+    <string name="sign_in_with_camera">Prihlásenie pomocou fotoaparátu</string>
+    
+    <string name="sign_in_with_email">Namiesto toho použite e-mail</string>
+    
+    <string name="sign_in_create_account_text">Nemáte účet? &lt;u&gt;Vytvorte si ho&lt;/u&gt; a synchronizujte Waterfox medzi zariadeniami.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s zastaví synchronizáciu s vaším účtom, ale neodstráni žiadne vaše údaje o prehliadaní v tomto zariadení.</string>
+    
+    <string name="sign_out_disconnect">Odpojenie</string>
+    
+    <string name="sign_out_cancel">Zrušiť</string>
+    
+    <string name="bookmark_cannot_edit_root">Nemožno upravovať predvolené priečinky</string>
+
+    
+    
+    <string name="etp_settings">Nastavenia ochrany</string>
+    
+    <string name="preference_enhanced_tracking_protection">Vylepšená ochrana sledovania</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Prechádzanie bez sledovania</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Nechajte si svoje údaje pre seba. %s vás chráni pred mnohými z najbežnejších sledovacích zariadení, ktoré sledujú, čo robíte online.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Zistite viac</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Štandardné (predvolené)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Vyvážené pre súkromie a výkon. Stránky sa načítavajú normálne.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Čo blokuje štandardná ochrana sledovania</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Prísne</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokuje viac sledovacích zariadení, takže sa stránky načítajú rýchlejšie, ale niektoré funkcie na stránke sa môžu porušiť.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Čo je blokované prísnou ochranou sledovania</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Vlastné</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Vyberte, ktoré sledovacie programy a skripty chcete blokovať.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Čo je blokované vlastnou ochranou sledovania</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookies</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Sledovanie rôznych lokalít a sociálnych médií</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Súbory cookie z nenavštívených lokalít</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Všetky súbory cookie tretích strán (môžu spôsobiť poruchy webových stránok)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Všetky súbory cookie (spôsobia poruchu webových stránok)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Izolácia súborov cookie medzi lokalitami</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Sledovanie obsahu</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Na všetkých kartách</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Len v súkromných kartách</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Daktyloskopické služby</string>
+    
+    <string name="enhanced_tracking_protection_details">Podrobnosti na</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Zablokované stránky</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Povolené</string>
+    
+    <string name="etp_social_media_trackers_title">Sledovanie sociálnych médií</string>
+    
+    <string name="etp_social_media_trackers_description">Obmedzuje schopnosť sociálnych sietí sledovať vašu aktivitu pri prehliadaní webu.</string>
+    
+    <string name="etp_cookies_title">Súbory cookie na sledovanie rôznych lokalít</string>
+    
+    <string name="etp_cookies_title_2">Súbory cookie medzi lokalitami</string>
+    
+    <string name="etp_cookies_description">Blokuje súbory cookie, ktoré reklamné siete a analytické spoločnosti používajú na zhromažďovanie údajov o vašom prehliadaní na mnohých stránkach.</string>
+    
+    <string name="etp_cookies_description_2">Úplná ochrana súborov cookie izoluje súbory cookie na lokalite, na ktorej sa nachádzate, takže ich sledovacie zariadenia, ako napríklad reklamné siete, nemôžu používať na sledovanie na rôznych lokalitách.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Zabraňuje škodlivým skriptom získať prístup k vášmu zariadeniu na ťažbu digitálnej meny.</string>
+    
+    <string name="etp_fingerprinters_title">Daktyloskopické služby</string>
+    
+    <string name="etp_fingerprinters_description">Zabráni zhromažďovaniu jednoznačne identifikovateľných údajov o vašom zariadení, ktoré možno použiť na účely sledovania.</string>
+    
+    <string name="etp_tracking_content_title">Sledovanie obsahu</string>
+    
+    <string name="etp_tracking_content_description">Zabráni načítaniu vonkajších reklám, videí a iného obsahu, ktorý obsahuje sledovací kód. Môže ovplyvniť niektoré funkcie webovej lokality.</string>
+    
+    <string name="etp_panel_on">Ochrana tejto lokality je zapnutá</string>
+    
+    <string name="etp_panel_off">Ochrana tejto lokality je vypnutá</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Vylepšená ochrana sledovania je pre tieto webové lokality vypnutá</string>
+    
+    <string name="etp_back_button_content_description">Prejsť späť</string>
+    
+    <string name="open_source_licenses_title">%s | Knižnice OSS</string>
+    
+    <string name="etp_redirect_trackers_title">Sledovače presmerovania</string>
+    
+    <string name="etp_redirect_trackers_description">Vymaže súbory cookie nastavené pri presmerovaní na známe sledovacie webové stránky.</string>
+    
+    <string name="preference_etp_smartblock_description">Niektoré sledovacie zariadenia označené nižšie boli na tejto stránke čiastočne odblokované, pretože ste s nimi interagovali *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Zistite viac</string>
+
+    
+    <string name="about_support">Podpora</string>
+    
+    <string name="about_crashes">Havárie</string>
+    
+    <string name="about_privacy_notice">Oznámenie o ochrane osobných údajov</string>
+    
+    <string name="about_know_your_rights">Poznajte svoje práva</string>
+    
+    <string name="about_licensing_information">Informácie o licenciách</string>
+    
+    <string name="about_other_open_source_libraries">Knižnice, ktoré používame</string>
+    
+    <string name="about_debug_menu_toast_progress">Ponuka ladenia: %1$d kliknutí vľavo pre aktiváciu</string>
+    <string name="about_debug_menu_toast_done">Zapnutá ponuka ladenia</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopírovať</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Vložiť a ísť</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Vložiť</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL skopírovaná do schránky</string>
+
+    
+    <string name="add_to_homescreen_title">Pridanie na obrazovku Domov</string>
+    
+    <string name="add_to_homescreen_cancel">Zrušiť</string>
+    
+    <string name="add_to_homescreen_add">Pridať</string>
+    
+    <string name="add_to_homescreen_continue">Pokračovať na webovú stránku</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Názov skratky</string>
+    
+    <string name="add_to_homescreen_description_2">Túto webovú lokalitu môžete jednoducho pridať na domovskú obrazovku zariadenia, aby ste k nej mali okamžitý prístup a mohli ju prehľadávať rýchlejšie ako v aplikácii.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Prihlasovacie mená a heslá</string>
+    
+    <string name="preferences_passwords_save_logins">Uloženie prihlasovacích mien a hesiel</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Požiadajte o uloženie</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Nikdy neukladajte</string>
+    
+    <string name="preferences_passwords_autofill2">Automatické vypĺňanie v %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Vypĺňanie a ukladanie používateľských mien a hesiel na webových stránkach pri použití %1$s.</string>
+    
+    <string name="preferences_android_autofill">Automatické vypĺňanie v iných aplikáciách</string>
+    
+    <string name="preferences_android_autofill_description">Vyplňte používateľské mená a heslá v iných aplikáciách v zariadení.</string>
+    
+    <string name="preferences_logins_add_login">Pridať prihlásenie</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Synchronizácia prihlásení</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Synchronizácia prihlásení v rôznych zariadeniach</string>
+    
+    <string name="preferences_passwords_saved_logins">Uložené prihlásenia</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Tu sa zobrazia prihlásenia, ktoré uložíte alebo synchronizujete s %s.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Ďalšie informácie o službe Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Výnimky</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Tu sa zobrazia prihlasovacie mená a heslá, ktoré nie sú uložené.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Prihlasovacie mená a heslá sa na týchto stránkach neukladajú.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Odstránenie všetkých výnimiek</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Vyhľadávanie prihlášok</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Stránka</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Používateľské meno</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Heslo</string>
+    
+    <string name="logins_password_copied">Heslo skopírované do schránky</string>
+    
+    <string name="logins_username_copied">Používateľské meno skopírované do schránky</string>
+    
+    <string name="saved_logins_copy_password">Kopírovanie hesla</string>
+    
+    <string name="saved_logins_clear_password">Vymazanie hesla</string>
+    
+    <string name="saved_login_copy_username">Kopírovanie používateľského mena</string>
+    
+    <string name="saved_login_clear_username">Jasné používateľské meno</string>
+    
+    <string name="saved_login_clear_hostname">Vymazať názov hostiteľa</string>
+    
+    <string name="saved_login_open_site">Otvorenie stránky v prehliadači</string>
+    
+    <string name="saved_login_reveal_password">Zobraziť heslo</string>
+    
+    <string name="saved_login_hide_password">Skryť heslo</string>
+    
+    <string name="logins_biometric_prompt_message">Odomknutie na zobrazenie uložených prihlášok</string>
+    
+    <string name="logins_warning_dialog_title">Zabezpečenie prihlasovacích mien a hesiel</string>
+    
+    <string name="logins_warning_dialog_message">Nastavte vzor uzamknutia zariadenia, kód PIN alebo heslo, aby ste chránili uložené prihlasovacie mená a heslá pred prístupom, ak má vaše zariadenie niekto iný.</string>
+    
+    <string name="logins_warning_dialog_later">Neskôr</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Nastaviť teraz</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Odomknutie zariadenia</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Priblíženie na všetkých webových stránkach</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Povoľte stlačenie a priblíženie aj na webových stránkach, ktoré toto gesto neumožňujú.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Názov (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Naposledy použité</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Ponuka triedenia prihlášok</string>
+
+    
+    
+    <string name="preferences_autofill">Automatické vypĺňanie</string>
+    
+    <string name="preferences_addresses">Adresy</string>
+    
+    <string name="preferences_credit_cards">Kreditné karty</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Ukladanie a automatické vypĺňanie kariet</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Údaje sú zašifrované</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Synchronizácia kariet medzi zariadeniami</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Synchronizačné karty</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Pridať kreditnú kartu</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Správa uložených kariet</string>
+    
+    <string name="preferences_addresses_add_address">Pridať adresu</string>
+    
+    <string name="preferences_addresses_manage_addresses">Správa adries</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Ukladanie a automatické vypĺňanie adries</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Uveďte informácie, ako sú čísla, e-mailové a dodacie adresy</string>
+
+    
+    <string name="credit_cards_add_card">Pridať kartu</string>
+    
+    <string name="credit_cards_edit_card">Upraviť kartu</string>
+    
+    <string name="credit_cards_card_number">Číslo karty</string>
+    
+    <string name="credit_cards_expiration_date">Dátum skončenia platnosti</string>
+    
+    <string name="credit_cards_expiration_date_month">Dátum skončenia platnosti Mesiac</string>
+    
+    <string name="credit_cards_expiration_date_year">Dátum skončenia platnosti Rok</string>
+    
+    <string name="credit_cards_name_on_card">Meno na karte</string>
+    
+    <string name="credit_cards_menu_delete_card">Vymazať kartu</string>
+    
+    <string name="credit_cards_delete_card_button">Vymazať kartu</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Ste si istí, že chcete túto kreditnú kartu vymazať?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Odstrániť</string>
+    
+    <string name="credit_cards_menu_save">Uložiť</string>
+    
+    <string name="credit_cards_save_button">Uložiť</string>
+    
+    <string name="credit_cards_cancel_button">Zrušiť</string>
+    
+    <string name="credit_cards_saved_cards">Uložené karty</string>
+    
+    <string name="credit_cards_number_validation_error_message">Zadajte platné číslo kreditnej karty</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Vyplňte toto pole</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Odomknutie na zobrazenie uložených kariet</string>
+    
+    <string name="credit_cards_warning_dialog_title">Zabezpečte svoje kreditné karty</string>
+    
+    <string name="credit_cards_warning_dialog_message">Nastavte si vzor uzamknutia zariadenia, kód PIN alebo heslo, aby ste chránili uložené kreditné karty pred prístupom, ak má vaše zariadenie niekto iný.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Nastaviť teraz</string>
+    
+    <string name="credit_cards_warning_dialog_later">Neskôr</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Odomknutie zariadenia</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Odblokovanie používania uložených informácií o kreditnej karte</string>
+    
+    <string name="addresses_add_address">Pridať adresu</string>
+    
+    <string name="addresses_edit_address">Upraviť adresu</string>
+    
+    <string name="addresses_manage_addresses">Správa adries</string>
+    
+    <string name="addresses_first_name">Kresťanské meno</string>
+    
+    <string name="addresses_middle_name">Stredné meno</string>
+    
+    <string name="addresses_last_name">Priezvisko</string>
+    
+    <string name="addresses_street_address">Ulica Adresa</string>
+    
+    <string name="addresses_city">Mesto</string>
+    
+    <string name="addresses_state">Štát</string>
+    
+    <string name="addresses_province">Provincia</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Krajina alebo región</string>
+    
+    <string name="addresses_phone">Telefón</string>
+    
+    <string name="addresses_email">E-mail</string>
+    
+    <string name="addresses_save_button">Uložiť</string>
+    
+    <string name="addresses_cancel_button">Zrušiť</string>
+    
+    <string name="addressess_delete_address_button">Vymazať adresu</string>
+    
+    <string name="addressess_confirm_dialog_message">Ste si istí, že chcete túto adresu vymazať?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Odstrániť</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Zrušiť</string>
+    
+    <string name="address_menu_save_address">Uložiť adresu</string>
+    
+    <string name="address_menu_delete_address">Vymazať adresu</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Pridanie vyhľadávača</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Upraviť vyhľadávač</string>
+    
+    <string name="search_engine_add_button_content_description">Pridať</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Uložiť</string>
+    
+    <string name="search_engine_edit">Upraviť</string>
+    
+    <string name="search_engine_delete">Odstrániť</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Iné</string>
+    
+    <string name="search_add_custom_engine_name_hint">Názov</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Vyhľadávací reťazec, ktorý sa má použiť</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Nahraďte dotaz výrazom "%s". Príklad:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Podrobnosti o vlastnom vyhľadávači</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Zadajte názov vyhľadávača</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Zadajte vyhľadávací reťazec</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Skontrolujte, či sa vyhľadávací reťazec zhoduje s formátom príkladu</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Chyba pripojenia k "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Vytvorené %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Uložené %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Odstránené %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Umožniť to:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Prejdite do Nastavení systému Android</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Ťuknite na položku &lt;b&gt;Oprávnenia&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Prepnite &lt;b&gt;%1$s&lt;/b&gt; na ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Pripojenie je bezpečné</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Pripojenie nie je zabezpečené</string>
+    
+    <string name="clear_site_data">Vymazanie súborov cookie a údajov o lokalite</string>
+    
+    <string name="confirm_clear_site_data">Ste si istí, že chcete vymazať všetky súbory cookie a údaje pre stránku &lt;b&gt;%s&lt;/b&gt;?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Ste si istí, že chcete vymazať všetky povolenia na všetkých lokalitách?</string>
+    
+    <string name="confirm_clear_permissions_site">Ste si istí, že chcete vymazať všetky povolenia pre túto stránku?</string>
+    
+    <string name="confirm_clear_permission_site">Ste si istí, že chcete zrušiť toto povolenie pre túto stránku?</string>
+    
+    <string name="no_site_exceptions">Žiadne výnimky z lokality</string>
+    
+    <string name="bookmark_deletion_confirmation">Určite chcete túto záložku odstrániť?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Pridanie do skratiek</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Odstrániť zo skratiek</string>
+    
+    <string name="certificate_info_verified_by">Overené: %1$s</string>
+    
+    <string name="login_menu_delete_button">Odstrániť</string>
+    
+    <string name="login_menu_edit_button">Upraviť</string>
+    
+    <string name="login_deletion_confirmation">Ste si istí, že chcete toto prihlásenie odstrániť?</string>
+    
+    <string name="dialog_delete_positive">Odstrániť</string>
+    
+    <string name="dialog_delete_negative">Zrušiť</string>
+    
+    <string name="login_options_menu">Možnosti prihlásenia</string>
+    
+    <string name="saved_login_hostname_description">Upraviteľné textové pole pre webovú adresu prihlásenia.</string>
+    
+    <string name="saved_login_username_description">Upraviteľné textové pole pre používateľské meno prihlásenia.</string>
+    
+    <string name="saved_login_password_description">Upraviteľné textové pole pre heslo prihlásenia.</string>
+    
+    <string name="save_changes_to_login">Uložte zmeny na prihlásenie.</string>
+    
+    <string name="edit">Upraviť</string>
+    
+    <string name="add_login">Pridanie nového prihlásenia</string>
+    
+    <string name="saved_login_password_required">Vyžaduje sa heslo</string>
+    
+    <string name="saved_login_username_required">Vyžaduje sa používateľské meno</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Požadované meno hostiteľa</string>
+    
+    <string name="voice_search_content_description">Hlasové vyhľadávanie</string>
+    
+    <string name="voice_search_explainer">Hovorte teraz</string>
+    
+    <string name="saved_login_duplicate">Prihlásenie s týmto používateľským menom už existuje</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Webová adresa musí obsahovať "https://" alebo "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Vyžaduje sa platné meno hostiteľa</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Pripojte ďalšie zariadenie.</string>
+    
+    <string name="synced_tabs_reauth">Znovu overte pravosť.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Povoľte synchronizáciu kariet.</string>
+    
+    <string name="synced_tabs_no_tabs">Na ostatných zariadeniach nemáte vo Waterfoxe otvorené žiadne karty.</string>
+    
+    <string name="synced_tabs_sign_in_message">Zobrazenie zoznamu kariet z iných zariadení.</string>
+    
+    <string name="synced_tabs_sign_in_button">Prihláste sa na synchronizáciu</string>
+    
+    <string name="synced_tabs_no_open_tabs">Žiadne otvorené karty</string>
+    
+    <string name="synced_tabs_expand_group">Rozšírenie skupiny synchronizovaných kariet</string>
+    
+    <string name="synced_tabs_collapse_group">Zbalenie skupiny synchronizovaných kariet</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Limit skratiek dosiahnutý</string>
+    
+    <string name="shortcut_max_limit_content">Ak chcete pridať nového zástupcu, jedného odstráňte. Dotknite sa miesta, podržte na ňom prst a vyberte položku odstrániť.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">OK, mám to</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Skratky</string>
+	
+	<string name="top_sites_rename_dialog_title">Názov</string>
+    
+    <string name="shortcut_name_hint">Názov skratky</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Zrušiť</string>
+    
+    <string name="top_sites_menu_settings">Nastavenia</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Naši sponzori a vaše súkromie</string>
+    
+    <string name="top_sites_sponsored_label">Sponzorované</string>
+
+    
+    
+    <string name="inactive_tabs_title">Neaktívne karty</string>
+    
+    <string name="inactive_tabs_delete_all">Zatvorenie všetkých neaktívnych kariet</string>
+    
+    <string name="inactive_tabs_expand_content_description">Rozbalenie neaktívnych kariet</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Zbalenie neaktívnych kariet</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatické zatvorenie po jednom mesiaci?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Aplikácia Waterfox dokáže zatvoriť karty, ktoré ste si za posledný mesiac nepozreli.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ZAPNUTIE AUTOMATICKÉHO ZATVÁRANIA</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Povolené automatické zatváranie</string>
+
+    
+    <string name="default_browser_experiment_card_text">Nastavenie automatického otvárania odkazov z webových lokalít, e-mailov a správ v aplikácii Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Odstránenie stránky</string>
+
+    
+    <string name="radio_preference_info_content_description">Kliknite pre viac informácií</string>
+
+    
+    <string name="action_bar_up_description">Prejsť nahor</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Zatvoriť</string>
+
+    <string name="waterfox_suggest_header">Vodná líška Navrhnúť</string>
+</resources>

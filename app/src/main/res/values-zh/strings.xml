@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">私人 %s</string>
+    
+    <string name="app_name_private_4">%s (私人)</string>
+
+    
+    
+    <string name="content_description_menu">更多选择</string>
+    
+    <string name="content_description_private_browsing_button">启用私人浏览</string>
+    
+    <string name="content_description_disable_private_browsing_button">禁用私人浏览</string>
+    
+    <string name="search_hint">搜索或输入地址</string>
+    
+    <string name="application_search_hint">输入搜索条件</string>
+    
+    <string name="no_open_tabs_description">您打开的标签页将显示在这里。</string>
+    
+    <string name="no_private_tabs_description">这里将显示您的私人标签。</string>
+    
+    <string name="tab_tray_multi_select_title">选择了 %1$d</string>
+    
+    <string name="tab_tray_add_new_collection">添加新收藏</string>
+    
+    <string name="tab_tray_add_new_collection_name">名称</string>
+    
+    <string name="tab_tray_select_collection">选择系列</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">退出多选模式</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">将选定的标签页保存到收藏夹</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">精选</string>
+
+    
+    
+    <string name="recently_saved_title">最近保存</string>
+    
+    <string name="recently_saved_show_all_content_description_2">显示所有已保存的书签</string>
+    
+    <string name="recently_saved_menu_item_remove">移除</string>
+
+    
+    <string name="about_content">%1$s 由 BrowserWorks 制作</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">当你关闭私人标签页或退出应用程序时，%1$s 会清除私人标签页中的搜索和浏览历史记录。虽然这并不能让你对网站或网络服务提供商匿名，但却能让你更轻松地保持上网行为的私密性，不让其他使用此设备的人知道。</string>
+    <string name="private_browsing_common_myths">关于隐私浏览的常见误解</string>
+
+    
+    
+    <string name="cfr_message">添加快捷方式，从主屏幕打开私人标签页。</string>
+    
+    <string name="cfr_pos_button_text">添加快捷方式</string>
+    
+    <string name="cfr_neg_button_text">不，谢谢</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">您可以将 %1$s 设置为自动打开应用程序中的链接。</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">转到设置</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">解散</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">解散</string>
+
+    
+    
+    <string name="tcp_cfr_message">我们最强大的隐私功能可隔离跨站跟踪器。</string>
+    
+    <string name="tcp_cfr_learn_more">了解全面 Cookie 保护</string>
+
+    
+    <string name="camera_permissions_needed_message">需要相机访问权限。进入 Android 设置，点击权限，然后点击允许。</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">转到设置</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">解散</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">设置自动关闭过去一天、一周或一个月内未查看的打开标签页。</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">查看选项</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">解散</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">两周未查看的标签页会被移到这里。</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">在设置中关闭</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">一个月后自动关闭？</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s 可以关闭过去一个月内未查看的标签页。</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">关闭</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">打开自动关闭</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">新标签</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">新的私人选项卡</string>
+
+    
+    
+    <string name="recent_tabs_header">跳回</string>
+    
+    <string name="recent_tabs_show_all">显示全部</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">显示所有最近选项卡按钮</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Your search for \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d 站点</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">查看所有同步选项卡</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">同步设备</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">移除</string>
+    
+    <string name="recent_tab_menu_item_remove">移除</string>
+
+    
+    
+    <string name="history_metadata_header_2">最近访问</string>
+    
+    <string name="recently_visited_menu_item_remove">移除</string>
+    
+    <string name="past_explorations_show_all_content_description_2">显示所有过去的探索</string>
+
+    
+    
+    <string name="browser_menu_back">返回</string>
+    
+    <string name="browser_menu_forward">转发</string>
+    
+    <string name="browser_menu_refresh">刷新</string>
+    
+    <string name="browser_menu_stop">停止</string>
+    
+    <string name="browser_menu_add_ons">附加组件</string>
+    
+    <string name="no_add_ons">这里没有附加组件</string>
+    
+    <string name="browser_menu_help">帮助</string>
+    
+    <string name="browser_menu_settings">设置</string>
+    
+    <string name="browser_menu_library">图书馆</string>
+    
+    <string name="browser_menu_desktop_site">桌面网站</string>
+    
+    <string name="browser_menu_add_to_homescreen">添加到主屏幕</string>
+    
+    <string name="browser_menu_install_on_homescreen">安装</string>
+    
+    <string name="resync_button_content_description">重新同步</string>
+    
+    <string name="browser_menu_find_in_page">在页面中查找</string>
+    
+    <string name="browser_menu_save_to_collection_2">保存到收藏夹</string>
+    
+    <string name="browser_menu_share">分享</string>
+    
+    <string name="browser_menu_open_in_waterfox">在 %1$s 中打开</string>
+    
+    <string name="browser_menu_powered_by">由 %1$s 供电</string>
+    
+    <string name="browser_menu_powered_by2">由 %1$s 提供</string>
+    
+    <string name="browser_menu_read">读者观点</string>
+    
+    <string name="browser_menu_read_close">关闭读者视图</string>
+    
+    <string name="browser_menu_open_app_link">在应用程序中打开</string>
+    
+    <string name="browser_menu_customize_reader_view">自定义阅读器视图</string>
+    
+    <string name="browser_menu_add">添加</string>
+    
+    <string name="browser_menu_edit">编辑</string>
+    
+    <string name="browser_menu_customize_home_1">自定义主页</string>
+    
+    
+    <string name="browser_toolbar_home">主屏幕</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">选定语言</string>
+    
+    <string name="default_locale_text">遵循设备语言</string>
+    
+    <string name="locale_search_hint">搜索语言</string>
+
+    
+    
+    <string name="search_scan_button">扫描</string>
+    
+    <string name="search_engine_button">搜索引擎</string>
+    
+    <string name="search_shortcuts_engine_settings">搜索引擎设置</string>
+    
+    <string name="awesomebar_clipboard_title">从剪贴板填写链接</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">允许</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">不要让</string>
+    
+    <string name="search_suggestions_onboarding_title">允许在私人会话中提出搜索建议？</string>
+    
+    <string name="search_suggestions_onboarding_text">%s 将与你的默认搜索引擎共享你在地址栏中输入的所有内容。</string>
+    
+    <string name="search_engine_suggestions_title">搜索 %s</string>
+    
+    <string name="search_engine_suggestions_description">直接从地址栏搜索</string>
+    
+    <string name="search_settings_menu_item">搜索设置</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">现在，您可以更轻松地从中断的地方重新开始。</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">跳转到打开的标签页、书签和浏览历史。</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">整洁有序的标签</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">通过改进布局和自动关闭选项卡，清除杂乱无章的选项卡。</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">最近的搜索</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">从主页和标签页重新查看最新搜索。</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">体验你的个性化主页。最近的标签、书签和搜索结果都将显示在这里。</string>
+    
+    <string name="onboarding_home_welcome_title_2">欢迎使用更个性化的互联网</string>
+    
+    <string name="onboarding_home_welcome_description">更多色彩。更好的隐私保护。不变的承诺：以人为本，唯利是图。</string>
+    
+    <string name="onboarding_home_sync_title_3">从手机跳到笔记本电脑再跳回来</string>
+    
+    <string name="onboarding_home_sync_description">从其他设备的标签页进入你的主页，继续你的旅程。</string>
+    
+    <string name="onboarding_home_get_started_button">开始</string>
+    
+    <string name="onboarding_home_sign_in_button">登录</string>
+    
+    <string name="onboarding_home_skip_button">跳过</string>
+    
+    <string name="onboarding_home_content_description_close_button">关闭</string>
+
+    
+    
+    <string name="search_widget_content_description_2">打开新的 %1$s 标签</string>
+    
+    <string name="search_widget_text_short">搜索</string>
+    
+    <string name="search_widget_text_long">网络搜索</string>
+    
+    <string name="search_widget_voice">语音搜索</string>
+
+    
+    
+    <string name="settings">设置</string>
+    
+    <string name="preferences_category_general">一般情况</string>
+    
+    <string name="preferences_category_about">关于</string>
+    
+    <string name="preferences_default_search_engine">默认搜索引擎</string>
+    
+    <string name="preferences_search">搜索</string>
+    
+    <string name="preferences_search_address_bar">地址栏</string>
+    
+    <string name="preferences_rate">在 Google Play 上评分</string>
+    
+    <string name="preferences_about">关于 %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">设置为默认浏览器</string>
+    
+    <string name="preferences_category_advanced">高级</string>
+    
+    <string name="preferences_category_privacy_security">隐私和安全</string>
+    
+    <string name="preferences_site_permissions">场地许可</string>
+    
+    <string name="preferences_private_browsing_options">私人浏览</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">在私人标签页中打开链接</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">允许在私人浏览中截图</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">如果允许，在打开多个应用程序时，私人标签页也将可见</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">添加私人浏览快捷方式</string>
+    
+    <string name="preferences_https_only_title">仅 HTTPS 模式</string>
+    
+    <string name="preferences_https_only_summary">自动尝试连接使用 HTTPS 加密协议的网站，以提高安全性。</string>
+    
+    <string name="preferences_https_only_on">关于</string>
+    
+    <string name="preferences_https_only_off">关闭</string>
+    
+    <string name="preferences_http_only_learn_more">了解更多</string>
+    
+    <string name="preferences_https_only_in_all_tabs">在所有选项卡中启用</string>
+    
+    <string name="preferences_https_only_in_private_tabs">仅在私人标签页中启用</string>
+    
+    <string name="errorpage_httpsonly_title">安全网站不可用</string>
+    
+    <string name="errorpage_httpsonly_message_title">最有可能的情况是，网站根本不支持 HTTPS。</string>
+    
+    <string name="errorpage_httpsonly_message_summary">不过，也有可能是攻击者所为。如果您继续访问该网站，请不要输入任何敏感信息。如果继续访问，网站将暂时关闭 HTTPS-Only（仅 HTTPS）模式。</string>
+    
+    <string name="preferences_accessibility">无障碍环境</string>
+    
+    <string name="preferences_override_fxa_server">自定义 Waterfox 账户服务器</string>
+    
+    <string name="preferences_override_sync_tokenserver">自定义同步服务器</string>
+    
+    <string name="toast_override_fxa_sync_server_done">修改了 Waterfox 帐户/同步服务器。退出应用程序以应用更改...</string>
+    
+    <string name="preferences_category_account">账户</string>
+    
+    <string name="preferences_toolbar">工具栏</string>
+    
+    <string name="preferences_theme">主题</string>
+    
+    <string name="preferences_home_2">主页</string>
+    
+    <string name="preferences_gestures">手势</string>
+    
+    <string name="preferences_customize">定制</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">与 Waterfox 账户同步书签、历史记录等内容</string>
+    
+    <string name="preferences_sign_in_description_2">登录以同步标签页、书签、密码等。</string>
+    
+    <string name="preferences_account_default_name">水狐账户</string>
+    
+    <string name="preferences_account_sync_error">重新连接以恢复同步</string>
+    
+    <string name="preferences_language">语言</string>
+    
+    <string name="preferences_remote_debugging">通过 USB 进行远程调试</string>
+    
+    <string name="preferences_show_search_engines">显示搜索引擎</string>
+    
+    <string name="preferences_show_search_suggestions">显示搜索建议</string>
+    
+    <string name="preferences_show_voice_search">显示语音搜索</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">在私人会议上展示</string>
+    
+    <string name="preferences_show_clipboard_suggestions">显示剪贴板建议</string>
+    
+    <string name="preferences_search_browsing_history">搜索浏览历史</string>
+    
+    <string name="preferences_search_bookmarks">搜索书签</string>
+    
+    <string name="preferences_search_synced_tabs">搜索同步标签页</string>
+    
+    <string name="preferences_account_settings">账户设置</string>
+    
+    <string name="preferences_enable_autocomplete_urls">自动完成 URL</string>
+    
+    <string name="preferences_open_links_in_apps">在应用程序中打开链接</string>
+    
+    <string name="preferences_external_download_manager">外部下载管理器</string>
+    
+    <string name="preferences_addons">附加组件</string>
+    
+    <string name="preferences_notifications">通知</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">自定义附加组件系列</string>
+    
+    <string name="customize_addon_collection_ok">好的</string>
+    
+    <string name="customize_addon_collection_cancel">取消</string>
+    
+    <string name="customize_addon_collection_hint">藏品名称</string>
+    
+    <string name="customize_addon_collection_user_hint">藏品所有者（用户 ID）</string>
+    
+    <string name="toast_customize_addon_collection_done">附加组件集已修改。退出应用程序以应用更改...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">跳回</string>
+    
+    <string name="customize_toggle_recent_bookmarks">最近的书签</string>
+    
+    <string name="customize_toggle_recently_visited">最近访问</string>
+    
+    <string name="customize_wallpapers">壁纸</string>
+    
+    <string name="customize_toggle_contile">赞助快捷方式</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">壁纸项目: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">壁纸已更新！</string>
+    
+    <string name="wallpaper_updated_snackbar_action">查看</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">点击 Waterfox 主页徽标更换壁纸</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfox 徽标 - 更改壁纸、按钮</string>
+
+    
+    
+    <string name="addon_not_supported_error">不支持附加组件</string>
+    
+    <string name="addon_already_installed">已安装附加组件</string>
+
+    
+    
+    <string name="preferences_sync_now">立即同步</string>
+    
+    <string name="preferences_sync_category">选择同步内容</string>
+    
+    <string name="preferences_sync_history">历史</string>
+    
+    <string name="preferences_sync_bookmarks">书签</string>
+    
+    <string name="preferences_sync_logins">登录</string>
+    
+    <string name="preferences_sync_tabs_2">打开标签页</string>
+    
+    <string name="preferences_sign_out">签出</string>
+    
+    <string name="preferences_sync_device_name">设备名称</string>
+    
+    <string name="empty_device_name_error">设备名称不能为空。</string>
+    
+    <string name="sync_syncing_in_progress">同步...</string>
+    
+    <string name="sync_failed_summary">同步失败。上次成功：%s</string>
+    
+    <string name="sync_failed_never_synced_summary">同步失败。上次同步：从未</string>
+    
+    <string name="sync_last_synced_summary">上次同步：%s</string>
+    
+    <string name="sync_never_synced_summary">上次同步：从未</string>
+    
+    <string name="default_device_name_2">%1$s on %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">信用卡</string>
+    
+    <string name="preferences_sync_address">地址</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">接收标签</string>
+    
+    <string name="fxa_received_tab_channel_description">从其他 Waterfox 设备收到的标签页通知。</string>
+    
+    <string name="fxa_tab_received_notification_name">收到标签</string>
+    
+    <string name="fxa_tab_received_from_notification_name">来自 %s 的选项卡</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">例外情况</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">为所有网站打开</string>
+    
+    <string name="exceptions_empty_message_description">通过 "例外 "功能，您可以禁用选定网站的跟踪保护功能。</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">了解更多</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">打开同步</string>
+    
+    <string name="preferences_sync_2">同步并保存数据</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">登录以重新连接</string>
+    
+    <string name="preferences_sync_remove_account">删除帐户</string>
+
+    
+    
+    <string name="pair_instructions_2">扫描 &lt;b&gt;firefox.com/pair&lt;/b&gt; 上显示的二维码</string>
+
+    
+    
+    <string name="preference_top_toolbar">返回顶部</string>
+    
+    <string name="preference_bottom_toolbar">底部</string>
+
+    
+    
+    <string name="preference_light_theme">灯光</string>
+    
+    <string name="preference_dark_theme">黑暗</string>
+    
+    <string name="preference_auto_battery_theme">由电池保护器设置</string>
+    
+    <string name="preference_follow_device_theme">遵循设备主题</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">拉动刷新</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">滚动以隐藏工具栏</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">横向轻扫工具栏以切换选项卡</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">向上轻扫工具栏打开标签页</string>
+
+    
+    
+    <string name="library_downloads">下载</string>
+    
+    <string name="library_bookmarks">书签</string>
+    
+    <string name="library_desktop_bookmarks_root">桌面书签</string>
+    
+    <string name="library_desktop_bookmarks_menu">书签菜单</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">书签工具栏</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">其他书签</string>
+    
+    <string name="library_history">历史</string>
+    
+    <string name="library_new_tab">新标签</string>
+    
+    <string name="settings_title">设置</string>
+    
+    <string name="content_description_close_button">关闭</string>
+
+    
+    <string name="history_search_group_site">%d 站点</string>
+    
+    <string name="history_search_group_sites">%d 站点</string>
+
+    
+    <string name="library_recently_closed_tabs">最近关闭的标签页</string>
+    
+    <string name="recently_closed_show_full_history">显示完整历史</string>
+    
+    <string name="recently_closed_tabs">%d 选项卡</string>
+    
+    <string name="recently_closed_tab">%d 选项卡</string>
+    
+    <string name="recently_closed_empty_message">这里没有最近关闭的标签页</string>
+
+    
+    
+    <string name="preferences_tabs">标签</string>
+    
+    <string name="preferences_tab_view">标签视图</string>
+    
+    <string name="tab_view_list">列表</string>
+    
+    <string name="tab_view_grid">网格</string>
+    
+    <string name="preferences_close_tabs">关闭标签</string>
+    
+    <string name="close_tabs_manually">从不</string>
+    
+    <string name="close_tabs_after_one_day">一天之后</string>
+    
+    <string name="close_tabs_after_one_week">一周后</string>
+    
+    <string name="close_tabs_after_one_month">一个月后</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">自动关闭打开的标签页</string>
+
+    
+    
+    <string name="preferences_opening_screen">打开屏幕</string>
+    
+    <string name="opening_screen_homepage">主页</string>
+    
+    <string name="opening_screen_last_tab">最后一个标签</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">四小时不活动后的主页</string>
+    
+    <string name="close_tabs_manually_summary">手动关闭</string>
+    
+    <string name="close_tabs_after_one_day_summary">一天后关闭</string>
+    
+    <string name="close_tabs_after_one_week_summary">一周后关闭</string>
+    
+    <string name="close_tabs_after_one_month_summary">一个月后关闭</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">将旧标签页移至非活动状态</string>
+    
+    <string name="preferences_inactive_tabs_title">两周未查看的标签页会被移动到非活动区。</string>
+
+    
+    
+    <string name="tab_header_label">打开标签页</string>
+    
+    <string name="tabs_header_private_tabs_title">私人标签</string>
+    
+    <string name="tabs_header_synced_tabs_title">同步标签页</string>
+    
+    <string name="add_tab">添加选项卡</string>
+    
+    <string name="add_private_tab">添加私人选项卡</string>
+    
+    <string name="tab_drawer_fab_content">私人</string>
+    
+    <string name="tab_drawer_fab_sync">同步</string>
+    
+    <string name="tab_tray_menu_item_share">共享所有选项卡</string>
+    
+    <string name="tab_tray_menu_recently_closed">最近关闭的标签页</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">最近关闭</string>
+    
+    <string name="tab_tray_menu_account_settings">账户设置</string>
+    
+    <string name="tab_tray_menu_tab_settings">选项卡设置</string>
+    
+    <string name="tab_tray_menu_item_close">关闭所有标签页</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">书签</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">关闭</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">共享选定的选项卡</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">选定标签菜单</string>
+    
+    <string name="remove_tab_from_collection">从收藏中删除标签</string>
+    
+    <string name="tabs_tray_select_tabs">选择标签</string>
+    
+    <string name="close_tab">关闭选项卡</string>
+    
+    <string name="close_tab_title">关闭选项卡 %s</string>
+    
+    <string name="open_tabs_menu">打开标签菜单</string>
+    
+    <string name="tabs_menu_save_to_collection1">将标签保存到收藏夹</string>
+    
+    <string name="collection_delete">删除收藏</string>
+    
+    <string name="collection_rename">重新命名收藏</string>
+    
+    <string name="collection_open_tabs">打开标签页</string>
+    
+    <string name="collection_name_hint">藏品名称</string>
+	
+	<string name="rename_top_site">重新命名</string>
+	
+	<string name="remove_top_site">移除</string>
+    
+    <string name="delete_from_history">从历史记录中删除</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s（私人模式）</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">其他选项卡</string>
+
+    
+    
+    <string name="history_search_1">输入搜索条件</string>
+    
+    <string name="history_delete_all">删除历史记录</string>
+    
+    <string name="history_delete_multiple_items_snackbar">删除历史</string>
+    
+    <string name="history_delete_single_item_snackbar">删除 %1$s</string>
+    
+    <string name="history_delete_item">删除</string>
+    
+    <string name="history_multi_select_title">选择了 %1$d</string>
+    
+    <string name="history_today">今天</string>
+    
+    <string name="history_yesterday">昨天</string>
+    
+    <string name="history_7_days">最近 7 天</string>
+    
+    <string name="history_30_days">最近 30 天</string>
+    
+    <string name="history_older">年龄较大</string>
+    
+    <string name="history_empty_message">这里没有历史</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">删除下载</string>
+    
+    <string name="download_delete_single_item_snackbar">已删除 %1$s</string>
+    
+    <string name="download_empty_message_1">没有下载文件</string>
+    
+    <string name="download_multi_select_title">选择了 %1$d</string>
+    
+    <string name="download_delete_item_1">移除</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">对不起。%1$s 无法加载该页面。</string>
+    
+    <string name="tab_crash_send_report">向 BrowserWorks 发送崩溃报告</string>
+    
+    <string name="tab_crash_close">关闭选项卡</string>
+    
+    <string name="tab_crash_restore">还原选项卡</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">您确定要删除这个文件夹吗？</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s 将删除所选项目。</string>
+    
+    <string name="bookmark_delete_negative">取消</string>
+    
+    <string name="bookmark_add_folder">添加文件夹</string>
+    
+    <string name="bookmark_saved_snackbar">已保存书签！</string>
+    
+    <string name="edit_bookmark_snackbar_action">编辑</string>
+    
+    <string name="bookmark_menu_edit_button">编辑</string>
+    
+    <string name="bookmark_menu_copy_button">复制</string>
+    
+    <string name="bookmark_menu_share_button">分享</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">在新标签页中打开</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">在私人选项卡中打开</string>
+    
+    <string name="bookmark_menu_delete_button">删除</string>
+    
+    <string name="bookmark_menu_save_button">节省</string>
+    
+    <string name="bookmarks_multi_select_title">选择了 %1$d</string>
+    
+    <string name="edit_bookmark_fragment_title">编辑书签</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">编辑文件夹</string>
+    
+    <string name="bookmark_sign_in_button">登录以查看同步书签</string>
+    
+    <string name="bookmark_url_label">网址</string>
+    
+    <string name="bookmark_folder_label">文件夹</string>
+    
+    <string name="bookmark_name_label">姓名</string>
+    
+    <string name="bookmark_add_folder_fragment_label">添加文件夹</string>
+    
+    <string name="bookmark_select_folder_fragment_label">选择文件夹</string>
+    
+    <string name="bookmark_empty_title_error">必须有标题</string>
+    
+    <string name="bookmark_invalid_url_error">无效 URL</string>
+    
+    <string name="bookmarks_empty_message">此处无书签</string>
+    
+    <string name="bookmark_deletion_snackbar_message">删除 %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">删除书签</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">删除选定文件夹</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">输入搜索条件</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">转到设置</string>
+    
+    <string name="quick_settings_sheet">快速设置表</string>
+    
+    <string name="phone_feature_recommended">推荐</string>
+    
+    <string name="clear_permissions">清除权限</string>
+    
+    <string name="clear_permissions_positive">好的</string>
+    
+    <string name="clear_permissions_negative">取消</string>
+    
+    <string name="clear_permission">明确许可</string>
+    
+    <string name="clear_permission_positive">好的</string>
+    
+    <string name="clear_permission_negative">取消</string>
+    
+    <string name="clear_permissions_on_all_sites">清除所有网站的权限</string>
+    
+    <string name="preference_browser_feature_autoplay">自动播放</string>
+    
+    <string name="preference_phone_feature_camera">照相机</string>
+    
+    <string name="preference_phone_feature_microphone">麦克风</string>
+    
+    <string name="preference_phone_feature_location">地点</string>
+    
+    <string name="preference_phone_feature_notification">通知</string>
+    
+    <string name="preference_phone_feature_persistent_storage">持久存储</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">跨站 cookie</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">受 DRM 控制的内容</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">要求允许</string>
+    
+    <string name="preference_option_phone_feature_blocked">受阻</string>
+    
+    <string name="preference_option_phone_feature_allowed">允许</string>
+    
+    <string name="phone_feature_blocked_by_android">被安卓系统屏蔽</string>
+    
+    <string name="preference_exceptions">例外情况</string>
+    
+    <string name="tracking_protection_on">关于</string>
+    
+    <string name="tracking_protection_off">关闭</string>
+    
+    <string name="preference_option_autoplay_allowed2">允许音频和视频</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">允许音频和视频</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">仅通过蜂窝数据阻止音频和视频</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">音频和视频可通过 Wi-Fi 播放</string>
+    
+    <string name="preference_option_autoplay_block_audio2">仅屏蔽音频</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">仅屏蔽音频</string>
+    
+    <string name="preference_option_autoplay_blocked3">屏蔽音频和视频</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">屏蔽音频和视频</string>
+    
+    <string name="delete_browsing_data_quit_on">关于</string>
+    
+    <string name="delete_browsing_data_quit_off">关闭</string>
+    
+    <string name="https_only_on">关于</string>
+    
+    <string name="https_only_off">关闭</string>
+
+    
+    
+    <string name="collections_header">收藏品</string>
+    
+    <string name="collection_menu_button_content_description">收藏菜单</string>
+    
+    <string name="no_collections_description2">收集与你相关的内容。将类似的搜索、网站和标签组合在一起，以便日后快速访问。</string>
+    
+    <string name="create_collection_select_tabs">选择选项卡</string>
+    
+    <string name="create_collection_select_collection">选择系列</string>
+    
+    <string name="create_collection_name_collection">名称系列</string>
+    
+    <string name="create_collection_add_new_collection">添加新收藏</string>
+    
+    <string name="create_collection_select_all">选择所有</string>
+    
+    <string name="create_collection_deselect_all">全部取消选择</string>
+    
+    <string name="create_collection_save_to_collection_empty">选择要保存的选项卡</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">已选择 %d 选项卡</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">已选择 %d 选项卡</string>
+    
+    <string name="create_collection_tabs_saved">标签已保存！</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">收藏已保存！</string>
+    
+    <string name="create_collection_tab_saved">标签已保存！</string>
+    
+    <string name="create_collection_close">关闭</string>
+    
+    <string name="create_collection_save">节省</string>
+    
+    <string name="create_collection_view">查看</string>
+    
+    <string name="create_collection_positive">好的</string>
+    
+    <string name="create_collection_negative">取消</string>
+
+    
+    <string name="create_collection_default_name">收集 %d</string>
+
+    
+    
+    <string name="share_header_2">分享</string>
+    
+    <string name="share_button_content_description">分享</string>
+    
+    <string name="share_device_subheader">发送至设备</string>
+    
+    <string name="share_link_all_apps_subheader">所有行动</string>
+    
+    <string name="share_link_recent_apps_subheader">最近使用</string>
+    
+    <string name="share_copy_link_to_clipboard">复制到剪贴板</string>
+    
+    <string name="toast_copy_link_to_clipboard">复制到剪贴板</string>
+    
+    <string name="sync_menu_sign_in">登录同步</string>
+    
+    <string name="sync_sign_in">登录同步</string>
+    
+    <string name="sync_send_to_all">发送到所有设备</string>
+    
+    <string name="sync_reconnect">重新连接到同步</string>
+    
+    <string name="sync_offline">离线</string>
+    
+    <string name="sync_connect_device">连接其他设备</string>
+    
+    <string name="sync_connect_device_dialog">要发送标签页，请至少在另一台设备上登录 Waterfox。</string>
+    
+    <string name="sync_confirmation_button">明白</string>
+    
+    <string name="share_error_snackbar">无法分享到此应用程序</string>
+    
+    <string name="sync_add_new_device_title">发送至设备</string>
+    
+    <string name="sync_add_new_device_message">未连接设备</string>
+    
+    <string name="sync_add_new_device_learn_button">了解发送标签...</string>
+    
+    <string name="sync_add_new_device_connect_button">连接其他设备...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">关闭私人标签页</string>
+    
+    <string name="notification_marketing_channel_name">市场营销</string>
+    
+    <string name="notification_default_browser_title">%1$s 快速而私密</string>
+    
+    <string name="notification_default_browser_text">将 %1$s 设为默认浏览器</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">已删除的收藏</string>
+    
+    <string name="snackbar_collection_renamed">收藏品更名</string>
+    
+    <string name="snackbar_tab_closed">关闭选项卡</string>
+    
+    <string name="snackbar_tabs_closed">关闭标签</string>
+    
+    <string name="snackbar_message_bookmarks_saved">已保存书签！</string>
+    
+    <string name="snackbar_added_to_shortcuts">已添加到快捷方式中！</string>
+    
+    <string name="snackbar_private_tab_closed">私人标签已关闭</string>
+    
+    <string name="snackbar_private_tabs_closed">关闭私人标签页</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">已移除的网站</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">允许 %1$s 打开 %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">允许</string>
+    
+    <string name="qr_scanner_dialog_negative">拒绝</string>
+    
+    <string name="qr_scanner_dialog_invalid">网址无效。</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">好的</string>
+    
+    <string name="tab_collection_dialog_message">您确定要删除 %1$s？</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">删除该选项卡将删除整个收藏集。您可以随时创建新的收藏集。</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">删除 %1$s？</string>
+    
+    <string name="tab_collection_dialog_positive">删除</string>
+    
+    <string name="full_screen_notification">进入全屏模式</string>
+    
+    <string name="url_copied">复制的 URL</string>
+    
+    <string name="accessibility_text_size_sample_text_1">这是示例文本。它展示了使用此设置增大或减小文字大小时文字的显示效果。</string>
+    
+    <string name="preference_accessibility_text_size_summary">将网站上的文字放大或缩小</string>
+    
+    <string name="preference_accessibility_font_size_title">字体大小</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">自动调整字体大小</string>
+    
+    <string name="preference_accessibility_auto_size_summary">字体大小将与您的 Android 设置一致。禁用此处管理字体大小。</string>
+
+    
+    <string name="preferences_delete_browsing_data">删除浏览数据</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">打开标签页</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d 选项卡</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">浏览历史和网站数据</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d 地址</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">曲奇</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">您将退出大多数网站</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">缓存图像和文件</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">释放存储空间</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">场地许可</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">下载</string>
+    
+    <string name="preferences_delete_browsing_data_button">删除浏览数据</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">退出时删除浏览数据</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">从主菜单中选择 "退出 "时自动删除浏览数据</string>
+    
+    <string name="delete_browsing_data_on_quit_action">退出</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">这将删除您的所有浏览数据。</string>
+    
+    <string name="delete_history_prompt_title">要删除的时间范围</string>
+    
+    <string name="delete_history_prompt_body">删除历史记录（包括从其他设备同步的历史记录）、cookies 和其他浏览数据。</string>
+    
+    <string name="delete_history_prompt_button_last_hour">最后一小时</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">今天和昨天</string>
+    
+    <string name="delete_history_prompt_button_everything">一切</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s 将删除选定的浏览数据。</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">取消</string>
+    
+    <string name="delete_browsing_data_prompt_allow">删除</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">删除浏览数据</string>
+    
+    <string name="deleting_browsing_data_in_progress">删除浏览数据...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">删除"%s "中的所有站点</string>
+    
+    <string name="delete_history_group_prompt_cancel">取消</string>
+    
+    <string name="delete_history_group_prompt_allow">删除</string>
+    
+    <string name="delete_history_group_snackbar">组别已删除</string>
+
+    
+    
+    <string name="onboarding_header_2">欢迎访问更私密的网络</string>
+    
+    <string name="onboarding_message">一个基层的独立浏览器。</string>
+    
+    <string name="onboarding_account_sign_in_header">重拾往事</string>
+    
+    <string name="onboarding_manual_sign_in_description">跨设备同步标签页和密码，实现无缝屏幕切换。</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">登录</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">同步已开启</string>
+    
+    <string name="onboarding_tracking_protection_header">默认情况下的隐私保护</string>
+    
+    <string name="onboarding_tracking_protection_description">具有全面 Cookie 保护功能，可阻止跟踪器使用 Cookie 在网站上跟踪你。</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">标准（默认）</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">兼顾隐私和性能。页面加载正常。</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">严格</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">屏蔽更多跟踪器，因此页面加载速度更快，但某些页面功能可能会中断。</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">选择工具栏位置</string>
+    
+    <string name="onboarding_toolbar_placement_description">保留在底部，还是移到顶部？</string>
+    
+    <string name="onboarding_privacy_notice_header_1">您可以控制自己的数据</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox 不收集任何遥测数据，让您控制自己的数据。</string>
+    
+    <string name="onboarding_privacy_notice_read_button">阅读我们的隐私声明</string>
+    
+    <string name="onboarding_conclusion_header">准备好开启神奇的互联网了吗？</string>
+    
+    <string name="onboarding_finish">开始浏览</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">选择主题</string>
+    
+    <string name="onboarding_theme_picker_description_2">使用暗光模式，节省电池，保护视力。</string>
+    
+    <string name="onboarding_theme_automatic_title">自动</string>
+    
+    <string name="onboarding_theme_automatic_summary">适应您的设备设置</string>
+    
+    <string name="onboarding_theme_dark_title">深色主题</string>
+    
+    <string name="onboarding_theme_light_title">灯光主题</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">已发送标签！</string>
+    
+    <string name="sync_sent_tab_snackbar">标签已发送！</string>
+    
+    <string name="sync_sent_tab_error_snackbar">无法发送</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">返回</string>
+    
+    <string name="sync_scan_code">扫描代码</string>
+    
+    <string name="sign_in_instructions">&lt;br&gt;在电脑上打开 Waterfox，然后访问 &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla 与 Waterfox 没有任何关联。</string>
+    
+    <string name="sign_in_ready_for_scan">准备扫描</string>
+    
+    <string name="sign_in_with_camera">使用相机登录</string>
+    
+    <string name="sign_in_with_email">改用电子邮件</string>
+    
+    <string name="sign_in_create_account_text">没有账户？&lt;u&gt;创建一个&lt;/u&gt;在设备间同步 Waterfox。</string>
+    
+    <string name="sign_out_confirmation_message_2">%s 将停止与您的帐户同步，但不会删除您在该设备上的任何浏览数据。</string>
+    
+    <string name="sign_out_disconnect">断开</string>
+    
+    <string name="sign_out_cancel">取消</string>
+    
+    <string name="bookmark_cannot_edit_root">无法编辑默认文件夹</string>
+
+    
+    
+    <string name="etp_settings">保护设置</string>
+    
+    <string name="preference_enhanced_tracking_protection">增强跟踪保护</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">浏览而不被跟踪</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">将数据留给自己%s能保护你免受许多最常见的跟踪器的攻击，这些跟踪器会跟踪你在网上的行为。</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">了解更多</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">标准（默认）</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">兼顾隐私和性能。页面加载正常。</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">标准跟踪保护所阻止的内容</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">严格</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">屏蔽更多跟踪器，因此页面加载速度更快，但某些页面功能可能会中断。</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">严格的跟踪保护会阻止什么</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">定制</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">选择要阻止的跟踪器和脚本。</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">自定义跟踪保护会阻止什么</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">曲奇</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">跨网站和社交媒体跟踪器</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">来自未访问网站的 Cookie</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">所有第三方 cookie（可能导致网站崩溃）</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">所有 cookie（会导致网站崩溃）</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">隔离跨站 cookie</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">跟踪内容</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">在所有选项卡中</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">仅在私人选项卡中</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">密码支配者</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">指纹采集器</string>
+    
+    <string name="enhanced_tracking_protection_details">详细信息</string>
+    
+    <string name="enhanced_tracking_protection_blocked">受阻</string>
+    
+    <string name="enhanced_tracking_protection_allowed">允许</string>
+    
+    <string name="etp_social_media_trackers_title">社交媒体跟踪器</string>
+    
+    <string name="etp_social_media_trackers_description">限制社交网络跟踪你在网上浏览活动的能力。</string>
+    
+    <string name="etp_cookies_title">跨站跟踪 Cookie</string>
+    
+    <string name="etp_cookies_title_2">跨站 Cookie</string>
+    
+    <string name="etp_cookies_description">阻止广告网络和分析公司用来在多个网站上汇编你的浏览数据的 cookies。</string>
+    
+    <string name="etp_cookies_description_2">全面 Cookie 保护可将 Cookie 与您所在的网站隔离，这样广告网络等跟踪器就无法利用它们跟踪您访问其他网站。</string>
+    
+    <string name="etp_cryptominers_title">密码支配者</string>
+    
+    <string name="etp_cryptominers_description">防止恶意脚本进入设备挖掘数字货币。</string>
+    
+    <string name="etp_fingerprinters_title">指纹采集器</string>
+    
+    <string name="etp_fingerprinters_description">阻止收集可用于跟踪目的的设备唯一可识别数据。</string>
+    
+    <string name="etp_tracking_content_title">跟踪内容</string>
+    
+    <string name="etp_tracking_content_description">阻止加载包含跟踪代码的外部广告、视频和其他内容。可能会影响某些网站功能。</string>
+    
+    <string name="etp_panel_on">该网站的保护措施已启动</string>
+    
+    <string name="etp_panel_off">本网站保护关闭</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">这些网站的 "增强跟踪保护 "功能已关闭</string>
+    
+    <string name="etp_back_button_content_description">返回导航</string>
+    
+    <string name="open_source_licenses_title">OSS 图书馆</string>
+    
+    <string name="etp_redirect_trackers_title">重定向跟踪器</string>
+    
+    <string name="etp_redirect_trackers_description">清除重定向到已知跟踪网站时设置的 cookies。</string>
+    
+    <string name="preference_etp_smartblock_description">下面标注的一些跟踪器已在本页解除部分封锁，因为您与它们进行了互动 *。</string>
+    
+    <string name="preference_etp_smartblock_learn_more">了解更多</string>
+
+    
+    <string name="about_support">支持</string>
+    
+    <string name="about_crashes">碰撞</string>
+    
+    <string name="about_privacy_notice">隐私声明</string>
+    
+    <string name="about_know_your_rights">了解您的权利</string>
+    
+    <string name="about_licensing_information">许可信息</string>
+    
+    <string name="about_other_open_source_libraries">我们使用的图书馆</string>
+    
+    <string name="about_debug_menu_toast_progress">调试菜单：向左点击 %1$d 以启用</string>
+    <string name="about_debug_menu_toast_done">调试菜单已启用</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">复制</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">粘贴与转发</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">粘贴</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">复制到剪贴板的 URL</string>
+
+    
+    <string name="add_to_homescreen_title">添加到主屏幕</string>
+    
+    <string name="add_to_homescreen_cancel">取消</string>
+    
+    <string name="add_to_homescreen_add">添加</string>
+    
+    <string name="add_to_homescreen_continue">继续访问网站</string>
+    
+    <string name="add_to_homescreen_text_placeholder">快捷方式名称</string>
+    
+    <string name="add_to_homescreen_description_2">您可以轻松地将该网站添加到设备的主屏幕上，以便即时访问，并以类似应用程序的体验加快浏览速度。</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">登录名和密码</string>
+    
+    <string name="preferences_passwords_save_logins">保存登录名和密码</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">要求保存</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">从不储蓄</string>
+    
+    <string name="preferences_passwords_autofill2">自动填写 %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">使用 %1$s 在网站上填写并保存用户名和密码。</string>
+    
+    <string name="preferences_android_autofill">在其他应用程序中自动填写</string>
+    
+    <string name="preferences_android_autofill_description">在设备上的其他应用程序中填写用户名和密码。</string>
+    
+    <string name="preferences_logins_add_login">添加登录</string>
+
+    
+    <string name="preferences_passwords_sync_logins">同步登录</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">跨设备同步登录</string>
+    
+    <string name="preferences_passwords_saved_logins">保存的登录信息</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">您保存或同步到 %s 的登录信息将显示在这里。</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">了解更多同步信息。</string>
+    
+    <string name="preferences_passwords_exceptions">例外情况</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">此处将显示未保存的登录名和密码。</string>
+    
+    <string name="preferences_passwords_exceptions_description">这些网站不会保存登录名和密码。</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">删除所有例外</string>
+    
+    <string name="preferences_passwords_saved_logins_search">搜索登录</string>
+    
+    <string name="preferences_passwords_saved_logins_site">网站</string>
+    
+    <string name="preferences_passwords_saved_logins_username">用户名</string>
+    
+    <string name="preferences_passwords_saved_logins_password">密码</string>
+    
+    <string name="logins_password_copied">密码复制到剪贴板</string>
+    
+    <string name="logins_username_copied">用户名复制到剪贴板</string>
+    
+    <string name="saved_logins_copy_password">复制密码</string>
+    
+    <string name="saved_logins_clear_password">清除密码</string>
+    
+    <string name="saved_login_copy_username">复制用户名</string>
+    
+    <string name="saved_login_clear_username">清除用户名</string>
+    
+    <string name="saved_login_clear_hostname">清除主机名</string>
+    
+    <string name="saved_login_open_site">在浏览器中打开网站</string>
+    
+    <string name="saved_login_reveal_password">显示密码</string>
+    
+    <string name="saved_login_hide_password">隐藏密码</string>
+    
+    <string name="logins_biometric_prompt_message">解锁查看已保存的登录信息</string>
+    
+    <string name="logins_warning_dialog_title">保护您的登录名和密码</string>
+    
+    <string name="logins_warning_dialog_message">设置设备锁定模式、PIN 码或密码，以保护你保存的登录名和密码，防止他人在你的设备上进行访问。</string>
+    
+    <string name="logins_warning_dialog_later">稍后</string>
+    
+    <string name="logins_warning_dialog_set_up_now">立即设置</string>
+    
+    <string name="logins_biometric_prompt_message_pin">解锁设备</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">放大所有网站</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">启用允许捏合和缩放，即使在阻止这种手势的网站上也是如此。</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">姓名（A-Z）</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">最后使用</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">分类登录菜单</string>
+
+    
+    
+    <string name="preferences_autofill">自动填充</string>
+    
+    <string name="preferences_addresses">地址</string>
+    
+    <string name="preferences_credit_cards">信用卡</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">保存和自动填充卡片</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">数据已加密</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">跨设备同步存储卡</string>
+    
+    <string name="preferences_credit_cards_sync_cards">同步卡</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">添加信用卡</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">管理保存的卡片</string>
+    
+    <string name="preferences_addresses_add_address">添加地址</string>
+    
+    <string name="preferences_addresses_manage_addresses">管理地址</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">保存和自动填充地址</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">包括电话号码、电子邮件和送货地址等信息</string>
+
+    
+    <string name="credit_cards_add_card">添加卡片</string>
+    
+    <string name="credit_cards_edit_card">编辑卡</string>
+    
+    <string name="credit_cards_card_number">卡号</string>
+    
+    <string name="credit_cards_expiration_date">有效期</string>
+    
+    <string name="credit_cards_expiration_date_month">有效期 月</string>
+    
+    <string name="credit_cards_expiration_date_year">有效日期 年份</string>
+    
+    <string name="credit_cards_name_on_card">卡片上的姓名</string>
+    
+    <string name="credit_cards_menu_delete_card">删除卡片</string>
+    
+    <string name="credit_cards_delete_card_button">删除卡片</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">您确定要删除这张信用卡吗？</string>
+    
+    <string name="credit_cards_delete_dialog_button">删除</string>
+    
+    <string name="credit_cards_menu_save">节省</string>
+    
+    <string name="credit_cards_save_button">节省</string>
+    
+    <string name="credit_cards_cancel_button">取消</string>
+    
+    <string name="credit_cards_saved_cards">保存的卡片</string>
+    
+    <string name="credit_cards_number_validation_error_message">请输入有效的信用卡号</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">请填写此栏</string>
+    
+    <string name="credit_cards_biometric_prompt_message">解锁查看保存的卡片</string>
+    
+    <string name="credit_cards_warning_dialog_title">保护您的信用卡</string>
+    
+    <string name="credit_cards_warning_dialog_message">设置设备锁定模式、PIN 码或密码，以防止他人持有你的设备时访问你保存的信用卡。</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">立即设置</string>
+    
+    <string name="credit_cards_warning_dialog_later">稍后</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">解锁设备</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">解锁使用存储的信用卡信息</string>
+    
+    <string name="addresses_add_address">添加地址</string>
+    
+    <string name="addresses_edit_address">编辑地址</string>
+    
+    <string name="addresses_manage_addresses">管理地址</string>
+    
+    <string name="addresses_first_name">姓名</string>
+    
+    <string name="addresses_middle_name">中间名</string>
+    
+    <string name="addresses_last_name">姓氏</string>
+    
+    <string name="addresses_street_address">街道地址</string>
+    
+    <string name="addresses_city">城市</string>
+    
+    <string name="addresses_state">国家</string>
+    
+    <string name="addresses_province">省</string>
+    
+    <string name="addresses_zip">压缩</string>
+    
+    <string name="addresses_country">国家或地区</string>
+    
+    <string name="addresses_phone">电话</string>
+    
+    <string name="addresses_email">电子邮件</string>
+    
+    <string name="addresses_save_button">节省</string>
+    
+    <string name="addresses_cancel_button">取消</string>
+    
+    <string name="addressess_delete_address_button">删除地址</string>
+    
+    <string name="addressess_confirm_dialog_message">您确定要删除此地址吗？</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">删除</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">取消</string>
+    
+    <string name="address_menu_save_address">保存地址</string>
+    
+    <string name="address_menu_delete_address">删除地址</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">添加搜索引擎</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">编辑搜索引擎</string>
+    
+    <string name="search_engine_add_button_content_description">添加</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">节省</string>
+    
+    <string name="search_engine_edit">编辑</string>
+    
+    <string name="search_engine_delete">删除</string>
+
+    
+    <string name="search_add_custom_engine_label_other">其他</string>
+    
+    <string name="search_add_custom_engine_name_hint">名称</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">使用的搜索字符串</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">用"%s "替换查询。示例：\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">自定义搜索引擎详细信息</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">输入搜索引擎名称</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">输入搜索字符串</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">检查搜索字符串是否匹配 示例格式</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">连接"%s "出错</string>
+    
+    <string name="search_add_custom_engine_success_message">创建 %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">已保存 %s</string>
+    
+    <string name="search_delete_search_engine_success_message">已删除 %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">允许它：</string>
+    
+    <string name="phone_feature_blocked_step_settings">1.进入安卓设置</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2.点按&lt;b&gt;权限&lt;/b</string>
+    
+    <string name="phone_feature_blocked_step_feature">3.将 &lt;b&gt;%1$s&lt;/b&gt; 切换为 ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">连接安全</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">连接不安全</string>
+    
+    <string name="clear_site_data">清除 cookie 和网站数据</string>
+    
+    <string name="confirm_clear_site_data">您确定要清除网站 &lt;b&gt;%s&lt;/b&gt; 的所有 cookie 和数据吗？</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">您确定要清除所有网站的所有权限吗？</string>
+    
+    <string name="confirm_clear_permissions_site">您确定要清除该网站的所有权限吗？</string>
+    
+    <string name="confirm_clear_permission_site">您确定要为该网站清除此权限吗？</string>
+    
+    <string name="no_site_exceptions">无场地例外</string>
+    
+    <string name="bookmark_deletion_confirmation">您确定要删除此书签吗？</string>
+    
+    <string name="browser_menu_add_to_shortcuts">添加到快捷方式</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">从快捷方式中删除</string>
+    
+    <string name="certificate_info_verified_by">验证者： %1$s</string>
+    
+    <string name="login_menu_delete_button">删除</string>
+    
+    <string name="login_menu_edit_button">编辑</string>
+    
+    <string name="login_deletion_confirmation">您确定要删除此登录名吗？</string>
+    
+    <string name="dialog_delete_positive">删除</string>
+    
+    <string name="dialog_delete_negative">取消</string>
+    
+    <string name="login_options_menu">登录选项</string>
+    
+    <string name="saved_login_hostname_description">登录网址的可编辑文本字段。</string>
+    
+    <string name="saved_login_username_description">登录用户名的可编辑文本字段。</string>
+    
+    <string name="saved_login_password_description">登录密码的可编辑文本字段。</string>
+    
+    <string name="save_changes_to_login">保存更改登录。</string>
+    
+    <string name="edit">编辑</string>
+    
+    <string name="add_login">添加新登录</string>
+    
+    <string name="saved_login_password_required">需要密码</string>
+    
+    <string name="saved_login_username_required">需要用户名</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">需要主机名</string>
+    
+    <string name="voice_search_content_description">语音搜索</string>
+    
+    <string name="voice_search_explainer">现在就说</string>
+    
+    <string name="saved_login_duplicate">已经存在使用该用户名登录的用户</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">网址必须包含 "https://"或 "http://"</string>
+    
+    <string name="add_login_hostname_invalid_text_2">需要有效的主机名</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">连接另一个设备。</string>
+    
+    <string name="synced_tabs_reauth">请重新认证。</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">请启用标签同步。</string>
+    
+    <string name="synced_tabs_no_tabs">您在其他设备上没有打开任何 Waterfox 标签。</string>
+    
+    <string name="synced_tabs_sign_in_message">查看其他设备上的标签列表。</string>
+    
+    <string name="synced_tabs_sign_in_button">登录同步</string>
+    
+    <string name="synced_tabs_no_open_tabs">没有打开的标签页</string>
+    
+    <string name="synced_tabs_expand_group">扩展同步选项卡组</string>
+    
+    <string name="synced_tabs_collapse_group">折叠同步选项卡组</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">达到快捷方式限制</string>
+    
+    <string name="shortcut_max_limit_content">要添加新快捷方式，请删除一个。轻触并按住网站，然后选择删除。</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">好的，明白了</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">捷径</string>
+	
+	<string name="top_sites_rename_dialog_title">名称</string>
+    
+    <string name="shortcut_name_hint">快捷方式名称</string>
+	
+	<string name="top_sites_rename_dialog_ok">好的</string>
+	
+	<string name="top_sites_rename_dialog_cancel">取消</string>
+    
+    <string name="top_sites_menu_settings">设置</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">我们的赞助商和您的隐私</string>
+    
+    <string name="top_sites_sponsored_label">赞助</string>
+
+    
+    
+    <string name="inactive_tabs_title">非活动标签</string>
+    
+    <string name="inactive_tabs_delete_all">关闭所有非活动标签页</string>
+    
+    <string name="inactive_tabs_expand_content_description">展开非活动选项卡</string>
+    
+    <string name="inactive_tabs_collapse_content_description">折叠非活动标签</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">一个月后自动关闭？</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox 可以关闭过去一个月未浏览的标签页。</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">打开自动关闭</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">已启用自动关闭</string>
+
+    
+    <string name="default_browser_experiment_card_text">将网站、电子邮件和信息中的链接设置为在 Waterfox 中自动打开。</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">移除</string>
+
+    
+    <string name="radio_preference_info_content_description">点击了解更多详情</string>
+
+    
+    <string name="action_bar_up_description">向上导航</string>
+
+    
+    <string name="privacy_content_close_button_content_description">关闭</string>
+
+    <string name="waterfox_suggest_header">水狐建议</string>
+</resources>

@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Yksityinen %s</string>
+    
+    <string name="app_name_private_4">%s (yksityinen)</string>
+
+    
+    
+    <string name="content_description_menu">Lisää vaihtoehtoja</string>
+    
+    <string name="content_description_private_browsing_button">Ota käyttöön yksityinen selaus</string>
+    
+    <string name="content_description_disable_private_browsing_button">Yksityisen selauksen poistaminen käytöstä</string>
+    
+    <string name="search_hint">Etsi tai syötä osoite</string>
+    
+    <string name="application_search_hint">Kirjoita hakusanat</string>
+    
+    <string name="no_open_tabs_description">Avoimet välilehdet näkyvät tässä.</string>
+    
+    <string name="no_private_tabs_description">Yksityiset välilehdet näkyvät täällä.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d valittu</string>
+    
+    <string name="tab_tray_add_new_collection">Lisää uusi kokoelma</string>
+    
+    <string name="tab_tray_add_new_collection_name">Nimi</string>
+    
+    <string name="tab_tray_select_collection">Valitse kokoelma</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Poistu monivalintatilasta</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Tallenna valitut välilehdet kokoelmaan</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Valitut</string>
+
+    
+    
+    <string name="recently_saved_title">Äskettäin tallennettu</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Näytä kaikki tallennetut kirjanmerkit</string>
+    
+    <string name="recently_saved_menu_item_remove">Poista</string>
+
+    
+    <string name="about_content">%1$s on BrowserWorksin tekemä.</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s tyhjentää haku- ja selaushistoriasi yksityisistä välilehdistä, kun suljet ne tai lopetat sovelluksen. Vaikka tämä ei tee sinusta anonyymiä verkkosivustoille tai Internet-palveluntarjoajalle, se helpottaa verkossa tekemiesi toimien pitämistä salassa muilta tätä laitetta käyttäviltä henkilöiltä.</string>
+    <string name="private_browsing_common_myths">Yleiset myytit yksityisestä selaamisesta</string>
+
+    
+    
+    <string name="cfr_message">Lisää pikakuvake yksityisten välilehtien avaamiseen aloitusnäytöltä.</string>
+    
+    <string name="cfr_pos_button_text">Lisää pikakuvake</string>
+    
+    <string name="cfr_neg_button_text">Ei kiitos</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Voit asettaa %1$s:n avaamaan linkit automaattisesti sovelluksissa.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Siirry asetuksiin</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Vapauttakaa</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Vapauttakaa</string>
+
+    
+    
+    <string name="tcp_cfr_message">Tehokkain yksityisyydensuojaominaisuutemme eristää sivustojen väliset jäljittäjät.</string>
+    
+    <string name="tcp_cfr_learn_more">Lisätietoja Total Cookie Protection -palvelusta</string>
+
+    
+    <string name="camera_permissions_needed_message">Kameran käyttöoikeus tarvitaan. Mene Android-asetuksiin, napauta käyttöoikeuksia ja napauta sallia.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Siirry asetuksiin</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Vapauttakaa</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Aseta avoimet välilehdet, joita ei ole katsottu viimeiseen päivään, viikkoon tai kuukauteen, sulkemaan automaattisesti.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Näytä vaihtoehdot</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Vapauttakaa</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Välilehdet, joita et ole katsonut kahteen viikkoon, siirretään tänne.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Sammuta asetuksista</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automaattinen sulkeminen kuukauden kuluttua?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s voi sulkea välilehdet, joita et ole katsonut viimeisen kuukauden aikana.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Sulje</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Automaattisen sulkemisen kytkeminen päälle</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Uusi välilehti</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Uusi yksityinen välilehti</string>
+
+    
+    
+    <string name="recent_tabs_header">Hyppää takaisin</string>
+    
+    <string name="recent_tabs_show_all">Näytä kaikki</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Näytä kaikki viimeisimmät välilehdet -painike</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Hakusi \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d sivustoja</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Katso kaikki synkronoidut välilehdet</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Synkronoitu laite</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Poista</string>
+    
+    <string name="recent_tab_menu_item_remove">Poista</string>
+
+    
+    
+    <string name="history_metadata_header_2">Hiljattain vieraillut</string>
+    
+    <string name="recently_visited_menu_item_remove">Poista</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Näytä kaikki aiemmat tutkimukset</string>
+
+    
+    
+    <string name="browser_menu_back">Takaisin</string>
+    
+    <string name="browser_menu_forward">Eteenpäin</string>
+    
+    <string name="browser_menu_refresh">Päivitä</string>
+    
+    <string name="browser_menu_stop">Stop</string>
+    
+    <string name="browser_menu_add_ons">Lisäosat</string>
+    
+    <string name="no_add_ons">Ei lisäosia täällä</string>
+    
+    <string name="browser_menu_help">Apua</string>
+    
+    <string name="browser_menu_settings">Asetukset</string>
+    
+    <string name="browser_menu_library">Kirjasto</string>
+    
+    <string name="browser_menu_desktop_site">Työpöytäsivusto</string>
+    
+    <string name="browser_menu_add_to_homescreen">Lisää aloitusnäyttöön</string>
+    
+    <string name="browser_menu_install_on_homescreen">Asenna</string>
+    
+    <string name="resync_button_content_description">Uudelleen synkronointi</string>
+    
+    <string name="browser_menu_find_in_page">Etsi sivulta</string>
+    
+    <string name="browser_menu_save_to_collection_2">Tallenna kokoelmaan</string>
+    
+    <string name="browser_menu_share">Jaa</string>
+    
+    <string name="browser_menu_open_in_waterfox">Avaa %1$s</string>
+    
+    <string name="browser_menu_powered_by">POWERED BY %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Powered by %1$s</string>
+    
+    <string name="browser_menu_read">Lukijan näkymä</string>
+    
+    <string name="browser_menu_read_close">Sulje lukijan näkymä</string>
+    
+    <string name="browser_menu_open_app_link">Avaa sovelluksessa</string>
+    
+    <string name="browser_menu_customize_reader_view">Mukauta lukijanäkymää</string>
+    
+    <string name="browser_menu_add">Lisää</string>
+    
+    <string name="browser_menu_edit">Muokkaa</string>
+    
+    <string name="browser_menu_customize_home_1">Mukauta etusivu</string>
+    
+    
+    <string name="browser_toolbar_home">Aloitusnäyttö</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Valittu kieli</string>
+    
+    <string name="default_locale_text">Seuraa laitteen kieltä</string>
+    
+    <string name="locale_search_hint">Etsi kieli</string>
+
+    
+    
+    <string name="search_scan_button">Skannaa</string>
+    
+    <string name="search_engine_button">Hakukone</string>
+    
+    <string name="search_shortcuts_engine_settings">Hakukoneen asetukset</string>
+    
+    <string name="awesomebar_clipboard_title">Täytä linkki leikepöydästä</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Salli</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Älä salli</string>
+    
+    <string name="search_suggestions_onboarding_title">Salli hakuehdotukset yksityisissä istunnoissa?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s jakaa kaiken, mitä kirjoitat osoiteriville, oletushakukoneesi kanssa.</string>
+    
+    <string name="search_engine_suggestions_title">Haku %s</string>
+    
+    <string name="search_engine_suggestions_description">Etsi suoraan osoiteriviltä</string>
+    
+    <string name="search_settings_menu_item">Hakuasetukset</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Nyt on helpompi jatkaa siitä, mihin jäit.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Siirry avoimiin välilehtiin, kirjanmerkkeihin ja selaushistoriaan.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Siistit, järjestetyt välilehdet</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Tyhjennä välilehtien sekamelska paremman ulkoasun ja automaattisesti sulkeutuvien välilehtien avulla.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Viimeisimmät haut</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Tarkastele viimeisimpiä hakujasi etusivulta ja välilehdiltä.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Tutustu henkilökohtaiseen kotisivuusi. Viimeisimmät välilehdet, kirjanmerkit ja hakutulokset näkyvät täällä.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Tervetuloa henkilökohtaisempaan internetiin</string>
+    
+    <string name="onboarding_home_welcome_description">Lisää värejä. Parempi yksityisyys. Sama sitoutuminen ihmisiin voittojen sijaan.</string>
+    
+    <string name="onboarding_home_sync_title_3">Siirry puhelimesta kannettavaan tietokoneeseen ja takaisin</string>
+    
+    <string name="onboarding_home_sync_description">Jatka siitä, mihin jäit, sillä muiden laitteiden välilehdet ovat nyt etusivulla.</string>
+    
+    <string name="onboarding_home_get_started_button">Aloita</string>
+    
+    <string name="onboarding_home_sign_in_button">Kirjaudu sisään</string>
+    
+    <string name="onboarding_home_skip_button">Ohita</string>
+    
+    <string name="onboarding_home_content_description_close_button">Sulje</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Avaa uusi %1$s-välilehti</string>
+    
+    <string name="search_widget_text_short">Etsi</string>
+    
+    <string name="search_widget_text_long">Etsi verkosta</string>
+    
+    <string name="search_widget_voice">Äänihaku</string>
+
+    
+    
+    <string name="settings">Asetukset</string>
+    
+    <string name="preferences_category_general">Yleistä</string>
+    
+    <string name="preferences_category_about">Tietoja</string>
+    
+    <string name="preferences_default_search_engine">Oletushakukone</string>
+    
+    <string name="preferences_search">Etsi</string>
+    
+    <string name="preferences_search_address_bar">Osoitepalkki</string>
+    
+    <string name="preferences_rate">Arvioi Google Playssa</string>
+    
+    <string name="preferences_about">Tietoja %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Aseta oletusselaimeksi</string>
+    
+    <string name="preferences_category_advanced">Edistynyt</string>
+    
+    <string name="preferences_category_privacy_security">Yksityisyys ja turvallisuus</string>
+    
+    <string name="preferences_site_permissions">Sivuston luvat</string>
+    
+    <string name="preferences_private_browsing_options">Yksityinen selailu</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Avaa linkit yksityisessä välilehdessä</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Salli kuvakaappaukset yksityisessä selauksessa</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Jos se sallitaan, yksityiset välilehdet ovat näkyvissä myös silloin, kun useita sovelluksia on avoinna.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Lisää yksityisen selauksen pikakuvake</string>
+    
+    <string name="preferences_https_only_title">Vain HTTPS-tila</string>
+    
+    <string name="preferences_https_only_summary">Yrittää automaattisesti muodostaa yhteyden sivustoihin, jotka käyttävät HTTPS-salausprotokollaa turvallisuuden lisäämiseksi.</string>
+    
+    <string name="preferences_https_only_on">Osoitteessa</string>
+    
+    <string name="preferences_https_only_off">Off</string>
+    
+    <string name="preferences_http_only_learn_more">Lue lisää</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Ota käyttöön kaikissa välilehdissä</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Ota käyttöön vain yksityisissä välilehdissä</string>
+    
+    <string name="errorpage_httpsonly_title">Suojattu sivusto ei ole käytettävissä</string>
+    
+    <string name="errorpage_httpsonly_message_title">Todennäköisesti sivusto ei yksinkertaisesti tue HTTPS:ää.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">On kuitenkin myös mahdollista, että kyseessä on hyökkääjä. Jos jatkat sivustolle, älä anna mitään arkaluonteisia tietoja. Jos jatkat, HTTPS-Only-tila kytkeytyy tilapäisesti pois päältä sivustolta.</string>
+    
+    <string name="preferences_accessibility">Saavutettavuus</string>
+    
+    <string name="preferences_override_fxa_server">Mukautettu Waterfox-tilin palvelin</string>
+    
+    <string name="preferences_override_sync_tokenserver">Mukautettu synkronointipalvelin</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Waterfox-tili/synkronointipalvelin muutettu. Sovelluksen lopettaminen muutosten soveltamiseksi...</string>
+    
+    <string name="preferences_category_account">Tili</string>
+    
+    <string name="preferences_toolbar">Työkalurivi</string>
+    
+    <string name="preferences_theme">Teema</string>
+    
+    <string name="preferences_home_2">Kotisivu</string>
+    
+    <string name="preferences_gestures">Eleet</string>
+    
+    <string name="preferences_customize">Mukauta</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Synkronoi kirjanmerkit, historia ja paljon muuta Waterfox-tilisi kanssa.</string>
+    
+    <string name="preferences_sign_in_description_2">Kirjaudu sisään synkronoidaksesi välilehtiä, kirjanmerkkejä, salasanoja ja muuta.</string>
+    
+    <string name="preferences_account_default_name">Waterfox-tili</string>
+    
+    <string name="preferences_account_sync_error">Yhteyden muodostaminen jatkaa synkronointia</string>
+    
+    <string name="preferences_language">Kieli</string>
+    
+    <string name="preferences_remote_debugging">Etä-Debuggaus USB:n kautta</string>
+    
+    <string name="preferences_show_search_engines">Näytä hakukoneet</string>
+    
+    <string name="preferences_show_search_suggestions">Näytä hakuehdotukset</string>
+    
+    <string name="preferences_show_voice_search">Näytä äänihaku</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Näytä yksityistilaisuuksissa</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Näytä leikepöydän ehdotukset</string>
+    
+    <string name="preferences_search_browsing_history">Etsi selaushistoriaa</string>
+    
+    <string name="preferences_search_bookmarks">Etsi kirjanmerkkejä</string>
+    
+    <string name="preferences_search_synced_tabs">Etsi synkronoituja välilehtiä</string>
+    
+    <string name="preferences_account_settings">Tilin asetukset</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Automaattisesti täydennetyt URL-osoitteet</string>
+    
+    <string name="preferences_open_links_in_apps">Linkkien avaaminen sovelluksissa</string>
+    
+    <string name="preferences_external_download_manager">Ulkoinen latauksenhallinta</string>
+    
+    <string name="preferences_addons">Lisäosat</string>
+    
+    <string name="preferences_notifications">Ilmoitukset</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Mukautettu lisäosien kokoelma</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Peruuta</string>
+    
+    <string name="customize_addon_collection_hint">Kokoelman nimi</string>
+    
+    <string name="customize_addon_collection_user_hint">Kokoelman omistaja (käyttäjätunnus)</string>
+    
+    <string name="toast_customize_addon_collection_done">Lisäkokoelma muutettu. Sovelluksen lopettaminen muutosten soveltamiseksi...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Hyppää takaisin</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Viimeisimmät kirjanmerkit</string>
+    
+    <string name="customize_toggle_recently_visited">Hiljattain vieraillut</string>
+    
+    <string name="customize_wallpapers">Taustakuvat</string>
+    
+    <string name="customize_toggle_contile">Sponsoroidut pikakuvakkeet</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Taustakuva Kohde: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Taustakuva päivitetty!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Näytä</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Vaihda taustakuva napauttamalla Waterfoxin etusivun logoa</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfox logo - vaihda taustakuva, painike</string>
+
+    
+    
+    <string name="addon_not_supported_error">Lisäosa ei ole tuettu</string>
+    
+    <string name="addon_already_installed">Lisäosa on jo asennettu</string>
+
+    
+    
+    <string name="preferences_sync_now">Synkronoi nyt</string>
+    
+    <string name="preferences_sync_category">Valitse synkronoitavat tiedot</string>
+    
+    <string name="preferences_sync_history">Historia</string>
+    
+    <string name="preferences_sync_bookmarks">Kirjanmerkit</string>
+    
+    <string name="preferences_sync_logins">Kirjautumiset</string>
+    
+    <string name="preferences_sync_tabs_2">Avoimet välilehdet</string>
+    
+    <string name="preferences_sign_out">Kirjaudu ulos</string>
+    
+    <string name="preferences_sync_device_name">Laitteen nimi</string>
+    
+    <string name="empty_device_name_error">Laitteen nimi ei voi olla tyhjä.</string>
+    
+    <string name="sync_syncing_in_progress">Synkronointi...</string>
+    
+    <string name="sync_failed_summary">Synkronointi epäonnistui. Viimeisin onnistuminen: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Synkronointi epäonnistui. Viimeksi synkronoitu: ei koskaan</string>
+    
+    <string name="sync_last_synced_summary">Viimeksi synkronoitu: %s</string>
+    
+    <string name="sync_never_synced_summary">Viimeksi synkronoitu: ei koskaan</string>
+    
+    <string name="default_device_name_2">%1$s %2$s %3$s %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Luottokortit</string>
+    
+    <string name="preferences_sync_address">Osoitteet</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Vastaanotetut välilehdet</string>
+    
+    <string name="fxa_received_tab_channel_description">Muilta Waterfox-laitteilta vastaanotettujen välilehtien ilmoitukset.</string>
+    
+    <string name="fxa_tab_received_notification_name">Välilehti Vastaanotettu</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Välilehti alkaen %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Poikkeukset</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Ota käyttöön kaikilla sivustoilla</string>
+    
+    <string name="exceptions_empty_message_description">Poikkeusten avulla voit poistaa seurantasuojauksen käytöstä valittujen sivustojen osalta.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Lue lisää</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Ota synkronointi käyttöön</string>
+    
+    <string name="preferences_sync_2">Synkronoi ja tallenna tietosi</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Kirjaudu sisään ja muodosta yhteys uudelleen</string>
+    
+    <string name="preferences_sync_remove_account">Poista tili</string>
+
+    
+    
+    <string name="pair_instructions_2">Skannaa osoitteessa &lt;b&gt;firefox.com/pair&lt;/b&gt; näkyvä QR-koodi.</string>
+
+    
+    
+    <string name="preference_top_toolbar">Top</string>
+    
+    <string name="preference_bottom_toolbar">Pohja</string>
+
+    
+    
+    <string name="preference_light_theme">Valo</string>
+    
+    <string name="preference_dark_theme">Tumma</string>
+    
+    <string name="preference_auto_battery_theme">Asettaa Battery Saver</string>
+    
+    <string name="preference_follow_device_theme">Seuraa laitteen teemaa</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Vedä päivittääksesi</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Selaa piilottaaksesi työkalurivin</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Vaihda välilehtiä pyyhkäisemällä työkalupalkkia sivuttain.</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Pyyhkäise työkalupalkkia ylöspäin avataksesi välilehtiä</string>
+
+    
+    
+    <string name="library_downloads">Lataukset</string>
+    
+    <string name="library_bookmarks">Kirjanmerkit</string>
+    
+    <string name="library_desktop_bookmarks_root">Työpöydän kirjanmerkit</string>
+    
+    <string name="library_desktop_bookmarks_menu">Kirjanmerkit-valikko</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Kirjanmerkit-työkalurivi</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Muut kirjanmerkit</string>
+    
+    <string name="library_history">Historia</string>
+    
+    <string name="library_new_tab">Uusi välilehti</string>
+    
+    <string name="settings_title">Asetukset</string>
+    
+    <string name="content_description_close_button">Sulje</string>
+
+    
+    <string name="history_search_group_site">%d sivusto</string>
+    
+    <string name="history_search_group_sites">%d sivustoja</string>
+
+    
+    <string name="library_recently_closed_tabs">Äskettäin suljetut välilehdet</string>
+    
+    <string name="recently_closed_show_full_history">Näytä koko historia</string>
+    
+    <string name="recently_closed_tabs">%d välilehdet</string>
+    
+    <string name="recently_closed_tab">%d välilehti</string>
+    
+    <string name="recently_closed_empty_message">Tässä ei ole äskettäin suljettuja välilehtiä</string>
+
+    
+    
+    <string name="preferences_tabs">Välilehdet</string>
+    
+    <string name="preferences_tab_view">Välilehden näkymä</string>
+    
+    <string name="tab_view_list">Luettelo</string>
+    
+    <string name="tab_view_grid">Ruutu</string>
+    
+    <string name="preferences_close_tabs">Sulje välilehdet</string>
+    
+    <string name="close_tabs_manually">Ei koskaan</string>
+    
+    <string name="close_tabs_after_one_day">Yhden päivän kuluttua</string>
+    
+    <string name="close_tabs_after_one_week">Viikon kuluttua</string>
+    
+    <string name="close_tabs_after_one_month">Yhden kuukauden kuluttua</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Sulje avoimet välilehdet automaattisesti</string>
+
+    
+    
+    <string name="preferences_opening_screen">Avausnäyttö</string>
+    
+    <string name="opening_screen_homepage">Kotisivu</string>
+    
+    <string name="opening_screen_last_tab">Viimeinen välilehti</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Kotisivu neljän tunnin käyttämättömyyden jälkeen</string>
+    
+    <string name="close_tabs_manually_summary">Sulje manuaalisesti</string>
+    
+    <string name="close_tabs_after_one_day_summary">Sulje yhden päivän jälkeen</string>
+    
+    <string name="close_tabs_after_one_week_summary">Sulje viikon kuluttua</string>
+    
+    <string name="close_tabs_after_one_month_summary">Sulje yhden kuukauden kuluttua</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Siirrä vanhat välilehdet inaktiivisiksi</string>
+    
+    <string name="preferences_inactive_tabs_title">Välilehdet, joita et ole katsonut kahteen viikkoon, siirretään inaktiiviseen osioon.</string>
+
+    
+    
+    <string name="tab_header_label">Avoimet välilehdet</string>
+    
+    <string name="tabs_header_private_tabs_title">Yksityiset välilehdet</string>
+    
+    <string name="tabs_header_synced_tabs_title">Synkronoidut välilehdet</string>
+    
+    <string name="add_tab">Lisää välilehti</string>
+    
+    <string name="add_private_tab">Lisää yksityinen välilehti</string>
+    
+    <string name="tab_drawer_fab_content">Yksityinen</string>
+    
+    <string name="tab_drawer_fab_sync">Sync</string>
+    
+    <string name="tab_tray_menu_item_share">Jaa kaikki välilehdet</string>
+    
+    <string name="tab_tray_menu_recently_closed">Äskettäin suljetut välilehdet</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Hiljattain suljettu</string>
+    
+    <string name="tab_tray_menu_account_settings">Tilin asetukset</string>
+    
+    <string name="tab_tray_menu_tab_settings">Välilehden asetukset</string>
+    
+    <string name="tab_tray_menu_item_close">Sulje kaikki välilehdet</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Kirjanmerkki</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Sulje</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Jaa valitut välilehdet</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Valitut välilehdet-valikko</string>
+    
+    <string name="remove_tab_from_collection">Poista välilehti kokoelmasta</string>
+    
+    <string name="tabs_tray_select_tabs">Valitse välilehdet</string>
+    
+    <string name="close_tab">Sulje välilehti</string>
+    
+    <string name="close_tab_title">Sulje välilehti %s</string>
+    
+    <string name="open_tabs_menu">Avaa välilehtien valikko</string>
+    
+    <string name="tabs_menu_save_to_collection1">Tallenna välilehdet kokoelmaan</string>
+    
+    <string name="collection_delete">Poista kokoelma</string>
+    
+    <string name="collection_rename">Nimeä kokoelma uudelleen</string>
+    
+    <string name="collection_open_tabs">Avoimet välilehdet</string>
+    
+    <string name="collection_name_hint">Kokoelman nimi</string>
+	
+	<string name="rename_top_site">Nimeä uudelleen</string>
+	
+	<string name="remove_top_site">Poista</string>
+    
+    <string name="delete_from_history">Poista historiasta</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (yksityinen tila)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Muut välilehdet</string>
+
+    
+    
+    <string name="history_search_1">Kirjoita hakusanat</string>
+    
+    <string name="history_delete_all">Poista historia</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Historia Poistettu</string>
+    
+    <string name="history_delete_single_item_snackbar">Poistettu %1$s</string>
+    
+    <string name="history_delete_item">Poista</string>
+    
+    <string name="history_multi_select_title">%1$d valittu</string>
+    
+    <string name="history_today">Tänään</string>
+    
+    <string name="history_yesterday">Eilen</string>
+    
+    <string name="history_7_days">Viimeiset 7 päivää</string>
+    
+    <string name="history_30_days">Viimeiset 30 päivää</string>
+    
+    <string name="history_older">Vanhemmat</string>
+    
+    <string name="history_empty_message">Ei historiaa täällä</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Poistetut lataukset</string>
+    
+    <string name="download_delete_single_item_snackbar">Poistettu %1$s</string>
+    
+    <string name="download_empty_message_1">Ei ladattuja tiedostoja</string>
+    
+    <string name="download_multi_select_title">%1$d valittu</string>
+    
+    <string name="download_delete_item_1">Poista</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Olen pahoillani. %1$s ei voi ladata tätä sivua.</string>
+    
+    <string name="tab_crash_send_report">Lähetä kaatumisraportti BrowserWorksille</string>
+    
+    <string name="tab_crash_close">Sulje välilehti</string>
+    
+    <string name="tab_crash_restore">Palauta-välilehti</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Haluatko varmasti poistaa tämän kansion?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s poistaa valitut kohteet.</string>
+    
+    <string name="bookmark_delete_negative">Peruuta</string>
+    
+    <string name="bookmark_add_folder">Lisää kansio</string>
+    
+    <string name="bookmark_saved_snackbar">Kirjanmerkki tallennettu!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Muokkaa</string>
+    
+    <string name="bookmark_menu_copy_button">Kopioi</string>
+    
+    <string name="bookmark_menu_share_button">Jaa</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Avaa uudessa välilehdessä</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Avaa yksityisessä välilehdessä</string>
+    
+    <string name="bookmark_menu_delete_button">Poista</string>
+    
+    <string name="bookmark_menu_save_button">Tallenna</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d valittu</string>
+    
+    <string name="edit_bookmark_fragment_title">Muokkaa kirjanmerkkiä</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Muokkaa kansiota</string>
+    
+    <string name="bookmark_sign_in_button">Kirjaudu sisään nähdäksesi synkronoidut kirjanmerkit</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">NIMI</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Lisää kansio</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Valitse kansio</string>
+    
+    <string name="bookmark_empty_title_error">On oltava titteli</string>
+    
+    <string name="bookmark_invalid_url_error">Virheellinen URL-osoite</string>
+    
+    <string name="bookmarks_empty_message">Ei kirjanmerkkejä täällä</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Poistettu %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Kirjanmerkit poistettu</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Valittujen kansioiden poistaminen</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Kirjoita hakusanat</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Siirry kohtaan Asetukset</string>
+    
+    <string name="quick_settings_sheet">Pika-asetukset</string>
+    
+    <string name="phone_feature_recommended">Suositeltu</string>
+    
+    <string name="clear_permissions">Tyhjennä käyttöoikeudet</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Peruuta</string>
+    
+    <string name="clear_permission">Selvä lupa</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Peruuta</string>
+    
+    <string name="clear_permissions_on_all_sites">Kaikkien sivustojen käyttöoikeudet on selvitettävä</string>
+    
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
+    
+    <string name="preference_phone_feature_camera">Kamera</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofoni</string>
+    
+    <string name="preference_phone_feature_location">Sijainti</string>
+    
+    <string name="preference_phone_feature_notification">Ilmoitus</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Pysyvä varastointi</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Sivustojen väliset evästeet</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM-ohjattu sisältö</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Pyydä sallimaan</string>
+    
+    <string name="preference_option_phone_feature_blocked">Estetty</string>
+    
+    <string name="preference_option_phone_feature_allowed">Sallittu</string>
+    
+    <string name="phone_feature_blocked_by_android">Androidin estämä</string>
+    
+    <string name="preference_exceptions">Poikkeukset</string>
+    
+    <string name="tracking_protection_on">Osoitteessa</string>
+    
+    <string name="tracking_protection_off">Off</string>
+    
+    <string name="preference_option_autoplay_allowed2">Salli ääni ja video</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Salli ääni ja video</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Estä ääni ja video vain matkapuhelinverkon datan käytöstä</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Äänen ja videon toistaminen Wi-Fi-yhteydellä</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Vain äänen esto</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Vain äänen esto</string>
+    
+    <string name="preference_option_autoplay_blocked3">Estää äänen ja videon</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Estää äänen ja videon</string>
+    
+    <string name="delete_browsing_data_quit_on">Osoitteessa</string>
+    
+    <string name="delete_browsing_data_quit_off">Off</string>
+    
+    <string name="https_only_on">Osoitteessa</string>
+    
+    <string name="https_only_off">Off</string>
+
+    
+    
+    <string name="collections_header">Kokoelmat</string>
+    
+    <string name="collection_menu_button_content_description">Kokoelman valikko</string>
+    
+    <string name="no_collections_description2">Kerää itsellesi tärkeät asiat.\nRyhmittele samankaltaisia hakuja, sivustoja ja välilehtiä, jotta pääset niihin nopeasti käsiksi myöhemmin.</string>
+    
+    <string name="create_collection_select_tabs">Valitse välilehdet</string>
+    
+    <string name="create_collection_select_collection">Valitse kokoelma</string>
+    
+    <string name="create_collection_name_collection">Nimikokoelma</string>
+    
+    <string name="create_collection_add_new_collection">Lisää uusi kokoelma</string>
+    
+    <string name="create_collection_select_all">Valitse kaikki</string>
+    
+    <string name="create_collection_deselect_all">Poista kaikki valinnat</string>
+    
+    <string name="create_collection_save_to_collection_empty">Valitse tallennettavat välilehdet</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d välilehdet valittu</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">%d välilehti valittu</string>
+    
+    <string name="create_collection_tabs_saved">Välilehdet tallennettu!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Kokoelma pelastettu!</string>
+    
+    <string name="create_collection_tab_saved">Välilehti pelastettu!</string>
+    
+    <string name="create_collection_close">Sulje</string>
+    
+    <string name="create_collection_save">Tallenna</string>
+    
+    <string name="create_collection_view">Näytä</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Peruuta</string>
+
+    
+    <string name="create_collection_default_name">Kokoelma %d</string>
+
+    
+    
+    <string name="share_header_2">Jaa</string>
+    
+    <string name="share_button_content_description">Jaa</string>
+    
+    <string name="share_device_subheader">Lähetä laitteeseen</string>
+    
+    <string name="share_link_all_apps_subheader">Kaikki toimet</string>
+    
+    <string name="share_link_recent_apps_subheader">Hiljattain käytetty</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopioi leikepöydälle</string>
+    
+    <string name="toast_copy_link_to_clipboard">Kopioitu leikepöydälle</string>
+    
+    <string name="sync_menu_sign_in">Kirjaudu sisään synkronointiin</string>
+    
+    <string name="sync_sign_in">Kirjaudu sisään Synciin</string>
+    
+    <string name="sync_send_to_all">Lähetä kaikkiin laitteisiin</string>
+    
+    <string name="sync_reconnect">Yhteyden muodostaminen synkronointiin</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Liitä toinen laite</string>
+    
+    <string name="sync_connect_device_dialog">Jos haluat lähettää välilehden, kirjaudu sisään Waterfoxiin vähintään yhdellä toisella laitteella.</string>
+    
+    <string name="sync_confirmation_button">Sain sen</string>
+    
+    <string name="share_error_snackbar">Ei voi jakaa tähän sovellukseen</string>
+    
+    <string name="sync_add_new_device_title">Lähetä laitteeseen</string>
+    
+    <string name="sync_add_new_device_message">Ei yhdistettyjä laitteita</string>
+    
+    <string name="sync_add_new_device_learn_button">Lisätietoja välilehtien lähettämisestä...</string>
+    
+    <string name="sync_add_new_device_connect_button">Liitä toinen laite...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Sulje yksityiset välilehdet</string>
+    
+    <string name="notification_marketing_channel_name">Markkinointi</string>
+    
+    <string name="notification_default_browser_title">%1$s on nopea ja yksityinen</string>
+    
+    <string name="notification_default_browser_text">Tee %1$s oletusselaimeksi</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Kokoelma poistettu</string>
+    
+    <string name="snackbar_collection_renamed">Kokoelma nimetty uudelleen</string>
+    
+    <string name="snackbar_tab_closed">Välilehti suljettu</string>
+    
+    <string name="snackbar_tabs_closed">Välilehdet suljettu</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Kirjanmerkit tallennettu!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Lisätty pikavalintoihin!</string>
+    
+    <string name="snackbar_private_tab_closed">Yksityinen välilehti suljettu</string>
+    
+    <string name="snackbar_private_tabs_closed">Yksityiset välilehdet suljettu</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Sivusto poistettu</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Salli %1$s avata %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">ALLOW</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Verkko-osoite ei ole voimassa.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Haluatko varmasti poistaa %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Tämän välilehden poistaminen poistaa koko kokoelman. Voit luoda uusia kokoelmia milloin tahansa.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Poista %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Poista</string>
+    
+    <string name="full_screen_notification">Siirtyminen koko näytön tilaan</string>
+    
+    <string name="url_copied">URL kopioitu</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Tämä on esimerkkiteksti. Sen tarkoituksena on näyttää, miten teksti näkyy, kun kokoa suurennetaan tai pienennetään tällä asetuksella.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Tekstin suurentaminen tai pienentäminen verkkosivustoilla</string>
+    
+    <string name="preference_accessibility_font_size_title">Kirjasinkoko</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automaattinen fontin koko</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Kirjasinkoko vastaa Android-asetuksiasi. Poista käytöstä fontin koon hallinta täällä.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Poista selaustiedot</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Avoimet välilehdet</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d välilehdet</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Selaushistoria ja sivuston tiedot</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d osoitteet</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Evästeet</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Sinut kirjaudutaan ulos useimmilta sivustoilta</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Välimuistiin tallennetut kuvat ja tiedostot</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Vapauttaa säilytystilaa</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Sivuston luvat</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Lataukset</string>
+    
+    <string name="preferences_delete_browsing_data_button">Poista selaustiedot</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Poista selaustiedot lopetettaessa</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Poistaa selaustiedot automaattisesti, kun valitset päävalikosta \"Lopeta\".</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Lopeta</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Tämä poistaa kaikki selaustiedot.</string>
+    
+    <string name="delete_history_prompt_title">Poistettava aikaväli</string>
+    
+    <string name="delete_history_prompt_body">Poistaa historiatiedot (myös muista laitteista synkronoidut historiatiedot), evästeet ja muut selaustiedot.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Viimeinen tunti</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Tänään ja eilen</string>
+    
+    <string name="delete_history_prompt_button_everything">Kaikki</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s poistaa valitut selaustiedot.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Peruuta</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Poista</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Selaustiedot poistettu</string>
+    
+    <string name="deleting_browsing_data_in_progress">Selaustietojen poistaminen...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Poista kaikki sivustot alueella "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Peruuta</string>
+    
+    <string name="delete_history_group_prompt_allow">Poista</string>
+    
+    <string name="delete_history_group_snackbar">Ryhmä poistettu</string>
+
+    
+    
+    <string name="onboarding_header_2">Tervetuloa yksityisempään verkkoon</string>
+    
+    <string name="onboarding_message">Ruohonjuuritason riippumaton selain.</string>
+    
+    <string name="onboarding_account_sign_in_header">Jatka siitä mihin jäit</string>
+    
+    <string name="onboarding_manual_sign_in_description">Synkronoi välilehdet ja salasanat eri laitteilla saumatonta näytön vaihtoa varten.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Kirjaudu sisään</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Synkronointi on päällä</string>
+    
+    <string name="onboarding_tracking_protection_header">Yksityisyyden suoja oletusarvoisesti</string>
+    
+    <string name="onboarding_tracking_protection_description">Total Cookie Protection -ominaisuus estää jäljittäjiä käyttämästä evästeitä sivustojen väliseen kyttäämiseen.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Vakio (oletus)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Tasapainotettu yksityisyyden ja suorituskyvyn kannalta. Sivut latautuvat normaalisti.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Tiukka</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Estää useampia seurantalaitteita, joten sivut latautuvat nopeammin, mutta jotkin sivun toiminnot saattavat katketa.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Valitse työkalurivin sijoitus</string>
+    
+    <string name="onboarding_toolbar_placement_description">Pidä se alareunassa tai siirrä se yläreunaan.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Hallitset tietojasi</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox ei kerää telemetriaa, ja voit hallita tietojasi.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Lue tietosuojailmoituksemme</string>
+    
+    <string name="onboarding_conclusion_header">Oletko valmis avaamaan hämmästyttävän internetin?</string>
+    
+    <string name="onboarding_finish">Aloita selailu</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Valitse teema</string>
+    
+    <string name="onboarding_theme_picker_description_2">Säästä akkua ja näköäsi pimeän tilan avulla.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automaattinen</string>
+    
+    <string name="onboarding_theme_automatic_summary">Mukautuu laitteen asetuksiin</string>
+    
+    <string name="onboarding_theme_dark_title">Tumma teema</string>
+    
+    <string name="onboarding_theme_light_title">Valo teema</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Välilehdet lähetetty!</string>
+    
+    <string name="sync_sent_tab_snackbar">Välilehti lähetetty!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Ei pysty lähettämään</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Skannaa koodi</string>
+    
+    <string name="sign_in_instructions">Waterfox käyttää Mozilla-tiliä synkronoidakseen tiedot mobiililaitteen ja työpöydän välillä.&lt;br&gt; Avaa tietokoneellasi Waterfox ja siirry osoitteeseen &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla ei ole millään tavalla sidoksissa Waterfoxiin.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Valmis skannaukseen</string>
+    
+    <string name="sign_in_with_camera">Kirjaudu sisään kameralla</string>
+    
+    <string name="sign_in_with_email">Käytä sen sijaan sähköpostia</string>
+    
+    <string name="sign_in_create_account_text">Ei tiliä? &lt;u&gt;Luo sellainen&lt;/u&gt; synkronoidaksesi Waterfoxin laitteiden välillä.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s lopettaa synkronoinnin tilisi kanssa, mutta ei poista mitään selaustietojasi tällä laitteella.</string>
+    
+    <string name="sign_out_disconnect">Irrota</string>
+    
+    <string name="sign_out_cancel">Peruuta</string>
+    
+    <string name="bookmark_cannot_edit_root">Ei voi muokata oletuskansioita</string>
+
+    
+    
+    <string name="etp_settings">Suojausasetukset</string>
+    
+    <string name="preference_enhanced_tracking_protection">Parannettu jäljityssuojaus</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Selaa ilman, että sinua seurataan</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Pidä tietosi omana tietonasi. %s suojaa sinua monilta yleisimmiltä jäljittimiltä, jotka seuraavat, mitä teet verkossa.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Lue lisää</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Vakio (oletus)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Tasapainotettu yksityisyyden ja suorituskyvyn kannalta. Sivut latautuvat normaalisti.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Mitä tavallinen seurantasuojaus estää?</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Tiukka</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Estää useampia seurantalaitteita, joten sivut latautuvat nopeammin, mutta jotkin sivun toiminnot saattavat katketa.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Mitä tiukka seurantasuojaus estää?</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Custom</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Valitse estettävät seurantalaitteet ja skriptit.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Mitä mukautettu seurantasuojaus estää?</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Evästeet</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Sivustojen väliset ja sosiaalisen median seurantalaitteet</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Evästeet vierailemattomilta sivustoilta</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Kaikki kolmannen osapuolen evästeet (voi aiheuttaa verkkosivustojen rikkoutumisen).</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Kaikki evästeet (rikkoo verkkosivustoja)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Eristä sivuston väliset evästeet</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Sisällön seuranta</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Kaikissa välilehdissä</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Vain yksityisissä välilehdissä</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Sormenjälkien ottajat</string>
+    
+    <string name="enhanced_tracking_protection_details">Yksityiskohdat</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Estetty</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Sallittu</string>
+    
+    <string name="etp_social_media_trackers_title">Sosiaalisen median seurantalaitteet</string>
+    
+    <string name="etp_social_media_trackers_description">Rajoittaa sosiaalisten verkostojen kykyä seurata selaamistasi verkossa.</string>
+    
+    <string name="etp_cookies_title">Sivustojen väliset seurantaevästeet</string>
+    
+    <string name="etp_cookies_title_2">Sivuston rajat ylittävät evästeet</string>
+    
+    <string name="etp_cookies_description">Estää evästeet, joita mainosverkostot ja analyysiyritykset käyttävät kootakseen selaustietojasi monilta sivustoilta.</string>
+    
+    <string name="etp_cookies_description_2">Total Cookie Protection eristää evästeet siihen sivustoon, jolla olet, joten mainosverkkojen kaltaiset seurantalaitteet eivät voi käyttää niitä seuraamaan sinua eri sivustoilla.</string>
+    
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    
+    <string name="etp_cryptominers_description">Estää haitallisten komentosarjojen pääsyn laitteeseesi digitaalisen valuutan louhintaa varten.</string>
+    
+    <string name="etp_fingerprinters_title">Sormenjälkien ottajat</string>
+    
+    <string name="etp_fingerprinters_description">Estää laitteestasi kerättävän yksilöiviä tietoja, joita voidaan käyttää seurantatarkoituksiin.</string>
+    
+    <string name="etp_tracking_content_title">Sisällön seuranta</string>
+    
+    <string name="etp_tracking_content_description">Estää ulkopuolisten mainosten, videoiden ja muun seurantakoodia sisältävän sisällön lataamisen. Saattaa vaikuttaa joihinkin sivuston toimintoihin.</string>
+    
+    <string name="etp_panel_on">Suojaukset ovat päällä tällä sivustolla</string>
+    
+    <string name="etp_panel_off">Suojaukset ovat OFF tällä sivustolla</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Enhanced Tracking Protection on pois päältä näillä verkkosivustoilla</string>
+    
+    <string name="etp_back_button_content_description">Navigoi takaisin</string>
+    
+    <string name="open_source_licenses_title">%s | OSS-kirjastot</string>
+    
+    <string name="etp_redirect_trackers_title">Uudelleenohjauksen seurantalaitteet</string>
+    
+    <string name="etp_redirect_trackers_description">Tyhjentää evästeet, jotka on asetettu uudelleenohjauksissa tunnetuille seurantasivustoille.</string>
+    
+    <string name="preference_etp_smartblock_description">Jotkin alla merkityt seurantalaitteet on osittain vapautettu tällä sivulla, koska olit vuorovaikutuksessa niiden kanssa *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Lue lisää</string>
+
+    
+    <string name="about_support">Tuki</string>
+    
+    <string name="about_crashes">Törmäykset</string>
+    
+    <string name="about_privacy_notice">Tietosuojaseloste</string>
+    
+    <string name="about_know_your_rights">Tunne oikeutesi</string>
+    
+    <string name="about_licensing_information">Lisenssitiedot</string>
+    
+    <string name="about_other_open_source_libraries">Käyttämämme kirjastot</string>
+    
+    <string name="about_debug_menu_toast_progress">Vianmääritysvalikko: Klikkaa vasemmalle ottaaksesi käyttöön %1$d klikkaamalla vasemmalle</string>
+    <string name="about_debug_menu_toast_done">Vianmääritysvalikko käytössä</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopioi</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Paste &amp; Go</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Liitä</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL-osoite kopioitu leikepöydälle</string>
+
+    
+    <string name="add_to_homescreen_title">Lisää aloitusnäyttöön</string>
+    
+    <string name="add_to_homescreen_cancel">Peruuta</string>
+    
+    <string name="add_to_homescreen_add">Lisää</string>
+    
+    <string name="add_to_homescreen_continue">Jatka verkkosivustolle</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Pikanimi</string>
+    
+    <string name="add_to_homescreen_description_2">Voit helposti lisätä tämän verkkosivuston laitteesi aloitusnäyttöön, jotta pääset heti käsiksi ja voit selata nopeammin sovelluksen kaltaisella kokemuksella.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Tunnukset ja salasanat</string>
+    
+    <string name="preferences_passwords_save_logins">Tallenna kirjautumistunnukset ja salasanat</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Pyydä säästämään</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Älä koskaan säästä</string>
+    
+    <string name="preferences_passwords_autofill2">Automaattinen täyttö %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Täytä ja tallenna käyttäjätunnuksia ja salasanoja verkkosivustoilla käyttämällä %1$s.</string>
+    
+    <string name="preferences_android_autofill">Automaattinen täyttäminen muissa sovelluksissa</string>
+    
+    <string name="preferences_android_autofill_description">Täytä käyttäjätunnukset ja salasanat laitteesi muissa sovelluksissa.</string>
+    
+    <string name="preferences_logins_add_login">Lisää kirjautuminen</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Synkronoi kirjautumiset</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Synkronoi kirjautumiset eri laitteilla</string>
+    
+    <string name="preferences_passwords_saved_logins">Tallennetut kirjautumiset</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">Tallentamasi tai synkronoimasi tunnukset näkyvät tässä.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Lisätietoja Syncistä.</string>
+    
+    <string name="preferences_passwords_exceptions">Poikkeukset</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Kirjautumiset ja salasanat, joita ei ole tallennettu, näkyvät tässä.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Tunnuksia ja salasanoja ei tallenneta näille sivustoille.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Poista kaikki poikkeukset</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Haku kirjautumiset</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Sivusto</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Käyttäjätunnus</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Salasana</string>
+    
+    <string name="logins_password_copied">Salasana kopioitu leikepöydälle</string>
+    
+    <string name="logins_username_copied">Käyttäjätunnus kopioitu leikepöydälle</string>
+    
+    <string name="saved_logins_copy_password">Kopioi salasana</string>
+    
+    <string name="saved_logins_clear_password">Tyhjennä salasana</string>
+    
+    <string name="saved_login_copy_username">Kopioi käyttäjänimi</string>
+    
+    <string name="saved_login_clear_username">Tyhjennä käyttäjänimi</string>
+    
+    <string name="saved_login_clear_hostname">Tyhjennä isäntänimi</string>
+    
+    <string name="saved_login_open_site">Avaa sivusto selaimessa</string>
+    
+    <string name="saved_login_reveal_password">Näytä salasana</string>
+    
+    <string name="saved_login_hide_password">Piilota salasana</string>
+    
+    <string name="logins_biometric_prompt_message">Avaa lukitus nähdäksesi tallennetut kirjautumisesi</string>
+    
+    <string name="logins_warning_dialog_title">Turvaa kirjautumistunnukset ja salasanat</string>
+    
+    <string name="logins_warning_dialog_message">Määritä laitteen lukituskuvio, PIN-koodi tai salasana, jotta tallennetut kirjautumistunnukset ja salasanat eivät pääse käsiksi, jos laite on jonkun muun hallussa.</string>
+    
+    <string name="logins_warning_dialog_later">Myöhemmin</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Aseta nyt</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Avaa laitteesi lukitus</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Zoomaa kaikkia verkkosivustoja</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Salli nipistäminen ja zoomaus myös sivustoilla, jotka estävät tämän eleen käytön.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Nimi (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Viimeksi käytetty</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Lajittele kirjautumiset-valikko</string>
+
+    
+    
+    <string name="preferences_autofill">Automaattinen täyttö</string>
+    
+    <string name="preferences_addresses">Osoitteet</string>
+    
+    <string name="preferences_credit_cards">Luottokortit</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Tallenna ja täytä kortit automaattisesti</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Tiedot on salattu</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Synkronoi kortit eri laitteiden välillä</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Synkronointikortit</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Lisää luottokortti</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Tallennettujen korttien hallinta</string>
+    
+    <string name="preferences_addresses_add_address">Lisää osoite</string>
+    
+    <string name="preferences_addresses_manage_addresses">Hallitse osoitteita</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Tallenna ja täytä osoitteet automaattisesti</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Sisällytä tiedot, kuten numerot, sähköpostiosoitteet ja toimitusosoitteet.</string>
+
+    
+    <string name="credit_cards_add_card">Lisää kortti</string>
+    
+    <string name="credit_cards_edit_card">Muokkaa korttia</string>
+    
+    <string name="credit_cards_card_number">Kortin numero</string>
+    
+    <string name="credit_cards_expiration_date">Viimeinen voimassaolopäivä</string>
+    
+    <string name="credit_cards_expiration_date_month">Viimeinen voimassaolopäivä Kuukausi</string>
+    
+    <string name="credit_cards_expiration_date_year">Viimeinen voimassaolopäivä Vuosi</string>
+    
+    <string name="credit_cards_name_on_card">Nimi kortissa</string>
+    
+    <string name="credit_cards_menu_delete_card">Poista kortti</string>
+    
+    <string name="credit_cards_delete_card_button">Poista kortti</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Haluatko varmasti poistaa tämän luottokortin?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Poista</string>
+    
+    <string name="credit_cards_menu_save">Tallenna</string>
+    
+    <string name="credit_cards_save_button">Tallenna</string>
+    
+    <string name="credit_cards_cancel_button">Peruuta</string>
+    
+    <string name="credit_cards_saved_cards">Tallennetut kortit</string>
+    
+    <string name="credit_cards_number_validation_error_message">Syötä voimassa oleva luottokortin numero</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Täytä tämä kenttä</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Avaa lukitus nähdäksesi tallennetut kortit</string>
+    
+    <string name="credit_cards_warning_dialog_title">Suojaa luottokorttisi</string>
+    
+    <string name="credit_cards_warning_dialog_message">Määritä laitteen lukituskuvio, PIN-koodi tai salasana, jotta tallennetut luottokortit eivät pääse käsiksi, jos laite on jonkun muun hallussa.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Aseta nyt</string>
+    
+    <string name="credit_cards_warning_dialog_later">Myöhemmin</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Avaa laitteesi lukitus</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Lukituksen avaaminen tallennettujen luottokorttitietojen käyttämiseksi</string>
+    
+    <string name="addresses_add_address">Lisää osoite</string>
+    
+    <string name="addresses_edit_address">Muokkaa osoitetta</string>
+    
+    <string name="addresses_manage_addresses">Hallitse osoitteita</string>
+    
+    <string name="addresses_first_name">Etunimi</string>
+    
+    <string name="addresses_middle_name">Keskimmäinen nimi</string>
+    
+    <string name="addresses_last_name">Sukunimi</string>
+    
+    <string name="addresses_street_address">Katuosoite</string>
+    
+    <string name="addresses_city">Kaupunki</string>
+    
+    <string name="addresses_state">Valtio</string>
+    
+    <string name="addresses_province">Maakunta</string>
+    
+    <string name="addresses_zip">Vetoketju</string>
+    
+    <string name="addresses_country">Maa tai alue</string>
+    
+    <string name="addresses_phone">Puhelin</string>
+    
+    <string name="addresses_email">Sähköposti</string>
+    
+    <string name="addresses_save_button">Tallenna</string>
+    
+    <string name="addresses_cancel_button">Peruuta</string>
+    
+    <string name="addressess_delete_address_button">Poista osoite</string>
+    
+    <string name="addressess_confirm_dialog_message">Haluatko varmasti poistaa tämän osoitteen?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Poista</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Peruuta</string>
+    
+    <string name="address_menu_save_address">Tallenna osoite</string>
+    
+    <string name="address_menu_delete_address">Poista osoite</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Lisää hakukone</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Muokkaa hakukonetta</string>
+    
+    <string name="search_engine_add_button_content_description">Lisää</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Tallenna</string>
+    
+    <string name="search_engine_edit">Muokkaa</string>
+    
+    <string name="search_engine_delete">Poista</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Muut</string>
+    
+    <string name="search_add_custom_engine_name_hint">Nimi</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Käytettävä haku merkkijono</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Korvaa kysely sanalla "%s". Esimerkki:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Mukautetun hakukoneen tiedot</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Kirjoita hakukoneen nimi</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Kirjoita haku merkkijono</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Tarkista, että haku merkkijono täsmää Esimerkin muoto</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Virhe yhteyden muodostamisessa "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Luotu %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Tallennettu %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Poistettu %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">Sallia se:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Siirry Android-asetuksiin</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Napauta &lt;b&gt;Luvat&lt;/b&gt;.</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Kytke &lt;b&gt;%1$s&lt;/b&gt; päälle.</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Yhteys on turvallinen</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Yhteys ei ole turvallinen</string>
+    
+    <string name="clear_site_data">Tyhjennä evästeet ja sivuston tiedot</string>
+    
+    <string name="confirm_clear_site_data">Oletko varma, että haluat tyhjentää kaikki sivuston &lt;b&gt;%s&lt;/b&gt; evästeet ja tiedot?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Oletko varma, että haluat tyhjentää kaikkien sivustojen kaikki käyttöoikeudet?</string>
+    
+    <string name="confirm_clear_permissions_site">Oletko varma, että haluat poistaa kaikki tämän sivuston käyttöoikeudet?</string>
+    
+    <string name="confirm_clear_permission_site">Oletko varma, että haluat poistaa tämän luvan tältä sivustolta?</string>
+    
+    <string name="no_site_exceptions">Ei poikkeuksia</string>
+    
+    <string name="bookmark_deletion_confirmation">Haluatko varmasti poistaa tämän kirjanmerkin?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Lisää pikanäppäimiin</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Poista pikanäppäimistä</string>
+    
+    <string name="certificate_info_verified_by">Vahvistanut: %1$s</string>
+    
+    <string name="login_menu_delete_button">Poista</string>
+    
+    <string name="login_menu_edit_button">Muokkaa</string>
+    
+    <string name="login_deletion_confirmation">Haluatko varmasti poistaa tämän kirjautumisen?</string>
+    
+    <string name="dialog_delete_positive">Poista</string>
+    
+    <string name="dialog_delete_negative">Peruuta</string>
+    
+    <string name="login_options_menu">Kirjautumisvaihtoehdot</string>
+    
+    <string name="saved_login_hostname_description">Sisäänkirjautumisen verkko-osoitteen muokattava tekstikenttä.</string>
+    
+    <string name="saved_login_username_description">Muokattava tekstikenttä kirjautumisen käyttäjänimelle.</string>
+    
+    <string name="saved_login_password_description">Muokattava tekstikenttä kirjautumisen salasanaa varten.</string>
+    
+    <string name="save_changes_to_login">Tallenna muutokset kirjautumiseen.</string>
+    
+    <string name="edit">Muokkaa</string>
+    
+    <string name="add_login">Lisää uusi kirjautuminen</string>
+    
+    <string name="saved_login_password_required">Salasana vaaditaan</string>
+    
+    <string name="saved_login_username_required">Käyttäjätunnus vaaditaan</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Vaadittu isäntänimi</string>
+    
+    <string name="voice_search_content_description">Äänihaku</string>
+    
+    <string name="voice_search_explainer">Puhu nyt</string>
+    
+    <string name="saved_login_duplicate">Kirjautuminen tällä käyttäjätunnuksella on jo olemassa</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Web-osoitteen on sisällettävä "https://" tai "http://".</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Kelvollinen isäntänimi vaaditaan</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Liitä toinen laite.</string>
+    
+    <string name="synced_tabs_reauth">Ole hyvä ja autentikoi uudelleen.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Ota välilehtien synkronointi käyttöön.</string>
+    
+    <string name="synced_tabs_no_tabs">Sinulla ei ole Waterfoxissa välilehtiä auki muilla laitteillasi.</string>
+    
+    <string name="synced_tabs_sign_in_message">Näytä luettelo muiden laitteiden välilehdistä.</string>
+    
+    <string name="synced_tabs_sign_in_button">Kirjaudu sisään synkronointiin</string>
+    
+    <string name="synced_tabs_no_open_tabs">Ei avoimia välilehtiä</string>
+    
+    <string name="synced_tabs_expand_group">Laajenna synkronoitujen välilehtien ryhmä</string>
+    
+    <string name="synced_tabs_collapse_group">Synkronoitujen välilehtien ryhmän sulkeminen</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Oikopolkujen raja saavutettu</string>
+    
+    <string name="shortcut_max_limit_content">Jos haluat lisätä uuden pikakuvakkeen, poista yksi. Kosketa sivustoa pitkään ja valitse poista.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">OK, selvä</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Shortcuts</string>
+	
+	<string name="top_sites_rename_dialog_title">Nimi</string>
+    
+    <string name="shortcut_name_hint">Pikanimi</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Peruuta</string>
+    
+    <string name="top_sites_menu_settings">Asetukset</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Sponsorimme &amp; yksityisyytesi</string>
+    
+    <string name="top_sites_sponsored_label">Sponsoroitu</string>
+
+    
+    
+    <string name="inactive_tabs_title">Inaktiiviset välilehdet</string>
+    
+    <string name="inactive_tabs_delete_all">Sulje kaikki inaktiiviset välilehdet</string>
+    
+    <string name="inactive_tabs_expand_content_description">Laajenna inaktiiviset välilehdet</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Sulje inaktiiviset välilehdet</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automaattinen sulkeminen kuukauden kuluttua?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox voi sulkea välilehdet, joita et ole katsonut viimeisen kuukauden aikana.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">AUTOMAATTISEN SULKEMISEN KYTKEMINEN PÄÄLLE</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Automaattinen sulkeminen käytössä</string>
+
+    
+    <string name="default_browser_experiment_card_text">Aseta verkkosivustojen, sähköpostiviestien ja viestien linkit avautumaan automaattisesti Waterfoxissa.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Poista</string>
+
+    
+    <string name="radio_preference_info_content_description">Klikkaa lisätietoja</string>
+
+    
+    <string name="action_bar_up_description">Navigoi ylöspäin</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Sulje</string>
+
+    <string name="waterfox_suggest_header">Waterfox Ehdota</string>
+</resources>

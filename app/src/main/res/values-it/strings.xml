@@ -1,0 +1,1658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name_private_5">Privato %s</string>
+
+    <string name="app_name_private_4">%s (Privato)</string>
+
+
+    <string name="content_description_menu">Altre opzioni</string>
+
+    <string name="content_description_private_browsing_button">Abilitare la navigazione privata</string>
+
+    <string name="content_description_disable_private_browsing_button">Disattivare la navigazione privata</string>
+
+    <string name="search_hint">Cerca o inserisci l\'indirizzo</string>
+
+    <string name="application_search_hint">Inserire i termini di ricerca</string>
+
+    <string name="no_open_tabs_description">Qui vengono visualizzate le schede aperte.</string>
+
+    <string name="no_private_tabs_description">Le schede private saranno visualizzate qui.</string>
+
+    <string name="tab_tray_multi_select_title">%1$d selezionato</string>
+
+    <string name="tab_tray_add_new_collection">Aggiungere una nuova collezione</string>
+
+    <string name="tab_tray_add_new_collection_name">Nome</string>
+
+    <string name="tab_tray_select_collection">Seleziona la collezione</string>
+
+    <string name="tab_tray_close_multiselect_content_description">Esce dalla modalità multiselezione</string>
+
+    <string name="tab_tray_collection_button_multiselect_content_description">Salva le schede selezionate nella raccolta</string>
+
+    <string name="tab_tray_multiselect_selected_content_description">Selezionato</string>
+
+
+    <string name="recently_saved_title">Salvati di recente</string>
+
+    <string name="recently_saved_show_all_content_description_2">Mostra tutti i segnalibri salvati</string>
+
+    <string name="recently_saved_menu_item_remove">Rimuovere</string>
+
+
+    <string name="about_content">%1$s è prodotto da BrowserWorks</string>
+
+
+    <string name="private_browsing_placeholder_description_2">%1$s cancella la cronologia delle ricerche e della navigazione dalle schede private quando le si chiude o si esce dall\'applicazione. Sebbene questo non renda l\'utente anonimo nei confronti dei siti web o del provider di servizi Internet, rende più facile mantenere la riservatezza di ciò che si fa online rispetto a chiunque altro utilizzi il dispositivo.</string>
+    <string name="private_browsing_common_myths">Miti comuni sulla navigazione privata</string>
+
+
+    <string name="cfr_message">Aggiungere un collegamento per aprire schede private dalla schermata iniziale.</string>
+
+    <string name="cfr_pos_button_text">Aggiungi scorciatoia</string>
+
+    <string name="cfr_neg_button_text">No grazie</string>
+
+
+    <string name="open_in_app_cfr_info_message_2">È possibile impostare %1$s per aprire automaticamente i link nelle applicazioni.</string>
+
+    <string name="open_in_app_cfr_positive_button_text">Vai alle impostazioni</string>
+
+    <string name="open_in_app_cfr_negative_button_text">Congedo</string>
+
+
+    <string name="cfr_dismiss_button_default_content_description">Congedo</string>
+
+
+    <string name="tcp_cfr_message">La nostra più potente funzione di tutela della privacy isola i tracker cross-site.</string>
+
+    <string name="tcp_cfr_learn_more">Informazioni sulla Protezione totale dei cookie</string>
+
+
+    <string name="camera_permissions_needed_message">È necessario l\'accesso alla fotocamera. Accedere alle impostazioni di Android, toccare le autorizzazioni e toccare Consenti.</string>
+
+    <string name="camera_permissions_needed_positive_button_text">Vai alle impostazioni</string>
+
+    <string name="camera_permissions_needed_negative_button_text">Congedo</string>
+
+
+    <string name="tab_tray_close_tabs_banner_message">Impostare la chiusura automatica delle schede aperte che non sono state visualizzate nell\'ultimo giorno, settimana o mese.</string>
+
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Visualizza le opzioni</string>
+
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Congedo</string>
+
+    <string name="tab_tray_inactive_onboarding_message">Le schede non visualizzate per due settimane vengono spostate qui.</string>
+
+    <string name="tab_tray_inactive_onboarding_button_text">Disattivare nelle impostazioni</string>
+
+    <string name="tab_tray_inactive_auto_close_title">Chiusura automatica dopo un mese?</string>
+
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s può chiudere le schede non visualizzate nell\'ultimo mese.</string>
+
+    <string name="tab_tray_inactive_auto_close_button_content_description">Chiudere</string>
+
+
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Attivare la chiusura automatica</string>
+
+
+    <string name="home_screen_shortcut_open_new_tab_2">Nuova scheda</string>
+
+    <string name="home_screen_shortcut_open_new_private_tab_2">Nuova scheda privata</string>
+
+
+    <string name="recent_tabs_header">Torna indietro</string>
+
+    <string name="recent_tabs_show_all">Mostra tutti</string>
+
+    <string name="recent_tabs_show_all_content_description_2">Pulsante per mostrare tutte le schede recenti</string>
+
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">La tua ricerca per \"%1$s"</string>
+
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d siti</string>
+
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Vedi tutte le schede sincronizzate</string>
+
+    <string name="recent_tabs_synced_device_icon_content_description">Dispositivo sincronizzato</string>
+
+    <string name="recent_synced_tab_menu_item_remove">Rimuovere</string>
+
+    <string name="recent_tab_menu_item_remove">Rimuovere</string>
+
+
+    <string name="history_metadata_header_2">Visitata di recente</string>
+
+    <string name="recently_visited_menu_item_remove">Rimuovere</string>
+
+    <string name="past_explorations_show_all_content_description_2">Mostra tutte le esplorazioni passate</string>
+
+
+    <string name="browser_menu_back">Indietro</string>
+
+    <string name="browser_menu_forward">In avanti</string>
+
+    <string name="browser_menu_refresh">Aggiornare</string>
+
+    <string name="browser_menu_stop">Stop</string>
+
+    <string name="browser_menu_add_ons">Componenti aggiuntivi</string>
+
+    <string name="no_add_ons">Nessun componente aggiuntivo</string>
+
+    <string name="browser_menu_help">Aiuto</string>
+
+    <string name="browser_menu_settings">Impostazioni</string>
+
+    <string name="browser_menu_library">Biblioteca</string>
+
+    <string name="browser_menu_desktop_site">Sito desktop</string>
+
+    <string name="browser_menu_add_to_homescreen">Aggiungi alla schermata iniziale</string>
+
+    <string name="browser_menu_install_on_homescreen">Installare</string>
+
+    <string name="resync_button_content_description">Risincronizzazione</string>
+
+    <string name="browser_menu_find_in_page">Trova nella pagina</string>
+
+    <string name="browser_menu_save_to_collection_2">Salva nella raccolta</string>
+
+    <string name="browser_menu_share">Condividi</string>
+
+    <string name="browser_menu_open_in_waterfox">Aprire in %1$s</string>
+
+    <string name="browser_menu_powered_by">alimentato da %1$s</string>
+
+    <string name="browser_menu_powered_by2">Alimentato da %1$s</string>
+
+    <string name="browser_menu_read">Vista del lettore</string>
+
+    <string name="browser_menu_read_close">Vista ravvicinata del lettore</string>
+
+    <string name="browser_menu_open_app_link">Aprire in app</string>
+
+    <string name="browser_menu_customize_reader_view">Personalizzare la visualizzazione del lettore</string>
+
+    <string name="browser_menu_add">Aggiungi</string>
+
+    <string name="browser_menu_edit">Modifica</string>
+
+    <string name="browser_menu_customize_home_1">Personalizzazione della homepage</string>
+
+
+    <string name="browser_toolbar_home">Schermata iniziale</string>
+
+
+    <string name="a11y_selected_locale_content_description">Lingua selezionata</string>
+
+    <string name="default_locale_text">Seguire la lingua del dispositivo</string>
+
+    <string name="locale_search_hint">Lingua di ricerca</string>
+
+
+    <string name="search_scan_button">Scansione</string>
+
+    <string name="search_engine_button">Motore di ricerca</string>
+
+    <string name="search_shortcuts_engine_settings">Impostazioni del motore di ricerca</string>
+
+    <string name="awesomebar_clipboard_title">Riempire il link dagli appunti</string>
+
+    <string name="search_suggestions_onboarding_allow_button">Consentire</string>
+
+    <string name="search_suggestions_onboarding_do_not_allow_button">Non permettete che</string>
+
+    <string name="search_suggestions_onboarding_title">Consentire i suggerimenti di ricerca nelle sessioni private?</string>
+
+    <string name="search_suggestions_onboarding_text">%s condividerà tutto ciò che viene digitato nella barra degli indirizzi con il motore di ricerca predefinito.</string>
+
+    <string name="search_engine_suggestions_title">Ricerca %s</string>
+
+    <string name="search_engine_suggestions_description">Ricerca direttamente dalla barra degli indirizzi</string>
+
+    <string name="search_settings_menu_item">Impostazioni di ricerca</string>
+
+
+    <string name="onboarding_home_screen_description_2">Ora è più facile riprendere da dove si era interrotto.</string>
+
+    <string name="onboarding_home_screen_section_home_description_2">Salta alle schede aperte, ai segnalibri e alla cronologia di navigazione.</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Schede pulite e organizzate</string>
+
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Eliminate l\'ingombro delle schede grazie al layout migliorato e alla chiusura automatica delle schede.</string>
+
+    <string name="onboarding_home_screen_section_useful_history_title_2">Ricerche recenti</string>
+
+    <string name="onboarding_home_screen_section_useful_history_description_2">Rivedere le ultime ricerche dalla homepage e dalle schede.</string>
+
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Ecco la vostra homepage personalizzata. Qui appaiono le schede recenti, i segnalibri e i risultati delle ricerche.</string>
+
+    <string name="onboarding_home_welcome_title_2">Benvenuti in un Internet più personale</string>
+
+    <string name="onboarding_home_welcome_description">Più colori. Migliore privacy. Lo stesso impegno a privilegiare le persone rispetto ai profitti.</string>
+
+    <string name="onboarding_home_sync_title_3">Passare dal telefono al laptop e viceversa</string>
+
+    <string name="onboarding_home_sync_description">Riprendete da dove vi siete fermati con le schede di altri dispositivi ora presenti nella vostra homepage.</string>
+
+    <string name="onboarding_home_get_started_button">Iniziare</string>
+
+    <string name="onboarding_home_sign_in_button">Accedi</string>
+
+    <string name="onboarding_home_skip_button">Salto</string>
+
+    <string name="onboarding_home_content_description_close_button">Chiudere</string>
+
+
+    <string name="search_widget_content_description_2">Aprire una nuova scheda %1$s</string>
+
+    <string name="search_widget_text_short">Ricerca</string>
+
+    <string name="search_widget_text_long">Ricerca sul web</string>
+
+    <string name="search_widget_voice">Ricerca vocale</string>
+
+
+    <string name="settings">Impostazioni</string>
+
+    <string name="preferences_category_general">Generale</string>
+
+    <string name="preferences_category_about">Circa</string>
+
+    <string name="preferences_default_search_engine">Motore di ricerca predefinito</string>
+
+    <string name="preferences_search">Ricerca</string>
+
+    <string name="preferences_search_address_bar">Barra degli indirizzi</string>
+
+    <string name="preferences_rate">Vota su Google Play</string>
+
+    <string name="preferences_about">Informazioni su %1$s</string>
+
+    <string name="preferences_set_as_default_browser">Imposta come browser predefinito</string>
+
+    <string name="preferences_category_advanced">Avanzato</string>
+
+    <string name="preferences_category_privacy_security">Privacy e sicurezza</string>
+
+    <string name="preferences_site_permissions">Autorizzazioni del sito</string>
+
+    <string name="preferences_private_browsing_options">Navigazione privata</string>
+
+    <string name="preferences_open_links_in_a_private_tab">Aprire i link in una scheda privata</string>
+
+    <string name="preferences_allow_screenshots_in_private_mode">Consentire gli screenshot nella navigazione privata</string>
+
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Se consentito, le schede private saranno visibili anche quando sono aperte più app.</string>
+
+    <string name="preferences_add_private_browsing_shortcut">Aggiungi una scorciatoia per la navigazione privata</string>
+
+    <string name="preferences_https_only_title">Modalità solo HTTPS</string>
+
+    <string name="preferences_https_only_summary">Tenta automaticamente di connettersi ai siti che utilizzano il protocollo di crittografia HTTPS per una maggiore sicurezza.</string>
+
+    <string name="preferences_https_only_on">Su</string>
+
+    <string name="preferences_https_only_off">Spento</string>
+
+    <string name="preferences_http_only_learn_more">Per saperne di più</string>
+
+    <string name="preferences_https_only_in_all_tabs">Abilita in tutte le schede</string>
+
+    <string name="preferences_https_only_in_private_tabs">Abilitato solo nelle schede private</string>
+
+    <string name="errorpage_httpsonly_title">Sito sicuro non disponibile</string>
+
+    <string name="errorpage_httpsonly_message_title">Molto probabilmente il sito web non supporta l\'HTTPS.</string>
+
+    <string name="errorpage_httpsonly_message_summary">Tuttavia, è anche possibile che sia coinvolto un malintenzionato. Se si continua a visitare il sito web, non si devono inserire informazioni sensibili. Se si continua, la modalità HTTPS-Only verrà disattivata temporaneamente per il sito.</string>
+
+    <string name="preferences_accessibility">Accessibilità</string>
+
+    <string name="preferences_override_fxa_server">Server personalizzato per l\'account Waterfox</string>
+
+    <string name="preferences_override_sync_tokenserver">Server di sincronizzazione personalizzato</string>
+
+    <string name="toast_override_fxa_sync_server_done">Account Waterfox/Server di sincronizzazione modificato. Chiudere l\'applicazione per applicare le modifiche...</string>
+
+    <string name="preferences_category_account">Conto</string>
+
+    <string name="preferences_toolbar">Barra degli strumenti</string>
+
+    <string name="preferences_theme">Tema</string>
+
+    <string name="preferences_home_2">Homepage</string>
+
+    <string name="preferences_gestures">Gesti</string>
+
+    <string name="preferences_customize">Personalizzazione</string>
+
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sincronizzate i segnalibri, la cronologia e altro ancora con il vostro account Waterfox</string>
+
+    <string name="preferences_sign_in_description_2">Accedi per sincronizzare schede, segnalibri, password e altro.</string>
+
+    <string name="preferences_account_default_name">Conto Waterfox</string>
+
+    <string name="preferences_account_sync_error">Ricollegarsi per riprendere la sincronizzazione</string>
+
+    <string name="preferences_language">Lingua</string>
+
+    <string name="preferences_remote_debugging">Debug remoto via USB</string>
+
+    <string name="preferences_show_search_engines">Mostra i motori di ricerca</string>
+
+    <string name="preferences_show_search_suggestions">Mostra suggerimenti di ricerca</string>
+
+    <string name="preferences_show_voice_search">Mostra la ricerca vocale</string>
+
+    <string name="preferences_show_search_suggestions_in_private">Mostra in sessioni private</string>
+
+    <string name="preferences_show_clipboard_suggestions">Mostra suggerimenti per gli appunti</string>
+
+    <string name="preferences_search_browsing_history">Ricerca nella cronologia di navigazione</string>
+
+    <string name="preferences_search_bookmarks">Ricerca segnalibri</string>
+
+    <string name="preferences_search_synced_tabs">Ricerca delle schede sincronizzate</string>
+
+    <string name="preferences_account_settings">Impostazioni dell\'account</string>
+
+    <string name="preferences_enable_autocomplete_urls">URL a completamento automatico</string>
+
+    <string name="preferences_open_links_in_apps">Aprire i link nelle app</string>
+
+    <string name="preferences_external_download_manager">Gestore esterno dei download</string>
+
+    <string name="preferences_addons">Componenti aggiuntivi</string>
+
+    <string name="preferences_notifications">Notifiche</string>
+
+
+    <string name="preferences_customize_amo_collection">Collezione di componenti aggiuntivi personalizzati</string>
+
+    <string name="customize_addon_collection_ok">OK</string>
+
+    <string name="customize_addon_collection_cancel">Annullamento</string>
+
+    <string name="customize_addon_collection_hint">Nome della collezione</string>
+
+    <string name="customize_addon_collection_user_hint">Proprietario della collezione (ID utente)</string>
+
+    <string name="toast_customize_addon_collection_done">Collezione di componenti aggiuntivi modificata. Chiudere l\'applicazione per applicare le modifiche...</string>
+
+
+    <string name="customize_toggle_jump_back_in">Torna indietro</string>
+
+    <string name="customize_toggle_recent_bookmarks">Segnalibri recenti</string>
+
+    <string name="customize_toggle_recently_visited">Visitato di recente</string>
+
+    <string name="customize_wallpapers">Sfondi</string>
+
+    <string name="customize_toggle_contile">Scorciatoie sponsorizzate</string>
+
+
+    <string name="wallpapers_item_name_content_description">Carta da parati: %1$s</string>
+
+    <string name="wallpaper_updated_snackbar_message">Sfondo aggiornato!</string>
+
+    <string name="wallpaper_updated_snackbar_action">Vista</string>
+
+    <string name="wallpaper_tap_to_change_switch_label_1">Cambiare lo sfondo toccando il logo della homepage di Waterfox</string>
+
+    <string name="wallpaper_logo_content_description">Logo Waterfox - cambia lo sfondo, pulsante</string>
+
+
+    <string name="addon_not_supported_error">Il componente aggiuntivo non è supportato</string>
+
+    <string name="addon_already_installed">Il componente aggiuntivo è già installato</string>
+
+
+    <string name="preferences_sync_now">Sincronizza ora</string>
+
+    <string name="preferences_sync_category">Scegliere cosa sincronizzare</string>
+
+    <string name="preferences_sync_history">La storia</string>
+
+    <string name="preferences_sync_bookmarks">Segnalibri</string>
+
+    <string name="preferences_sync_logins">Accesso</string>
+
+    <string name="preferences_sync_tabs_2">Schede aperte</string>
+
+    <string name="preferences_sign_out">Esci</string>
+
+    <string name="preferences_sync_device_name">Nome del dispositivo</string>
+
+    <string name="empty_device_name_error">Il nome del dispositivo non può essere vuoto.</string>
+
+    <string name="sync_syncing_in_progress">Sincronizzazione...</string>
+
+    <string name="sync_failed_summary">Sincronizzazione fallita. Ultimo successo: %s</string>
+
+    <string name="sync_failed_never_synced_summary">Sincronizzazione fallita. Ultima sincronizzazione: mai</string>
+
+    <string name="sync_last_synced_summary">Ultima sincronizzazione: %s</string>
+
+    <string name="sync_never_synced_summary">Ultima sincronizzazione: mai</string>
+
+    <string name="default_device_name_2">%1$s su %2$s %3$s</string>
+
+    <string name="preferences_sync_credit_cards">Carte di credito</string>
+
+    <string name="preferences_sync_address">Indirizzi</string>
+
+
+    <string name="fxa_received_tab_channel_name">Schede ricevute</string>
+
+    <string name="fxa_received_tab_channel_description">Notifiche per le schede ricevute da altri dispositivi Waterfox.</string>
+
+    <string name="fxa_tab_received_notification_name">Scheda Ricevuta</string>
+
+    <string name="fxa_tab_received_from_notification_name">Scheda da %s</string>
+
+
+    <string name="preferences_tracking_protection_exceptions">Eccezioni</string>
+
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Attivare per tutti i siti</string>
+
+    <string name="exceptions_empty_message_description">Le eccezioni consentono di disattivare la protezione dal tracciamento per siti selezionati.</string>
+
+    <string name="exceptions_empty_message_learn_more_link">Per saperne di più</string>
+
+
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Attivare la sincronizzazione</string>
+
+    <string name="preferences_sync_2">Sincronizzazione e salvataggio dei dati</string>
+
+    <string name="preferences_sync_sign_in_to_reconnect">Accedi per riconnetterti</string>
+
+    <string name="preferences_sync_remove_account">Rimuovere l\'account</string>
+
+
+    <string name="pair_instructions_2">Scansionare il codice QR visualizzato su &lt;b&gt;firefox.com/pair&lt;/b&gt;.</string>
+
+
+    <string name="preference_top_toolbar">In alto</string>
+
+    <string name="preference_bottom_toolbar">Fondo</string>
+
+
+    <string name="preference_light_theme">Luce</string>
+
+    <string name="preference_dark_theme">Scuro</string>
+
+    <string name="preference_auto_battery_theme">Impostato da Battery Saver</string>
+
+    <string name="preference_follow_device_theme">Seguire il tema del dispositivo</string>
+
+
+    <string name="preference_gestures_website_pull_to_refresh">Tirare per aggiornare</string>
+
+    <string name="preference_gestures_dynamic_toolbar">Scorrere per nascondere la barra degli strumenti</string>
+
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Scorrete la barra degli strumenti lateralmente per cambiare scheda.</string>
+
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Scorrere la barra degli strumenti verso l\'alto per aprire le schede</string>
+
+
+    <string name="library_downloads">Download</string>
+
+    <string name="library_bookmarks">Segnalibri</string>
+
+    <string name="library_desktop_bookmarks_root">Segnalibri sul desktop</string>
+
+    <string name="library_desktop_bookmarks_menu">Menu Segnalibri</string>
+
+    <string name="library_desktop_bookmarks_toolbar">Barra degli strumenti Segnalibri</string>
+
+    <string name="library_desktop_bookmarks_unfiled">Altri segnalibri</string>
+
+    <string name="library_history">La storia</string>
+
+    <string name="library_new_tab">Nuova scheda</string>
+
+    <string name="settings_title">Impostazioni</string>
+
+    <string name="content_description_close_button">Chiudere</string>
+
+
+    <string name="history_search_group_site">Sito %d</string>
+
+    <string name="history_search_group_sites">%d siti</string>
+
+
+    <string name="library_recently_closed_tabs">Schede chiuse di recente</string>
+
+    <string name="recently_closed_show_full_history">Mostra la storia completa</string>
+
+    <string name="recently_closed_tabs">%d schede</string>
+
+    <string name="recently_closed_tab">Scheda %d</string>
+
+    <string name="recently_closed_empty_message">Non ci sono schede chiuse di recente</string>
+
+
+    <string name="preferences_tabs">Schede</string>
+
+    <string name="preferences_tab_view">Vista scheda</string>
+
+    <string name="tab_view_list">Elenco</string>
+
+    <string name="tab_view_grid">Griglia</string>
+
+    <string name="preferences_close_tabs">Chiudere le schede</string>
+
+    <string name="close_tabs_manually">Mai</string>
+
+    <string name="close_tabs_after_one_day">Dopo un giorno</string>
+
+    <string name="close_tabs_after_one_week">Dopo una settimana</string>
+
+    <string name="close_tabs_after_one_month">Dopo un mese</string>
+
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Chiusura automatica delle schede aperte</string>
+
+
+    <string name="preferences_opening_screen">Schermata di apertura</string>
+
+    <string name="opening_screen_homepage">Homepage</string>
+
+    <string name="opening_screen_last_tab">Ultima scheda</string>
+
+    <string name="opening_screen_after_four_hours_of_inactivity">Homepage dopo quattro ore di inattività</string>
+
+    <string name="close_tabs_manually_summary">Chiudere manualmente</string>
+
+    <string name="close_tabs_after_one_day_summary">Chiudere dopo un giorno</string>
+
+    <string name="close_tabs_after_one_week_summary">Chiudere dopo una settimana</string>
+
+    <string name="close_tabs_after_one_month_summary">Chiudere dopo un mese</string>
+
+
+    <string name="preferences_inactive_tabs">Sposta le vecchie schede in quelle inattive</string>
+
+    <string name="preferences_inactive_tabs_title">Le schede non visualizzate per due settimane vengono spostate nella sezione inattiva.</string>
+
+
+    <string name="tab_header_label">Schede aperte</string>
+
+    <string name="tabs_header_private_tabs_title">Schede private</string>
+
+    <string name="tabs_header_synced_tabs_title">Schede sincronizzate</string>
+
+    <string name="add_tab">Aggiungi scheda</string>
+
+    <string name="add_private_tab">Aggiungi scheda privata</string>
+
+    <string name="tab_drawer_fab_content">Privato</string>
+
+    <string name="tab_drawer_fab_sync">Sincronizzazione</string>
+
+    <string name="tab_tray_menu_item_share">Condividi tutte le schede</string>
+
+    <string name="tab_tray_menu_recently_closed">Schede chiuse di recente</string>
+
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Chiuso di recente</string>
+
+    <string name="tab_tray_menu_account_settings">Impostazioni dell\'account</string>
+
+    <string name="tab_tray_menu_tab_settings">Impostazioni della scheda</string>
+
+    <string name="tab_tray_menu_item_close">Chiudere tutte le schede</string>
+
+    <string name="tab_tray_multiselect_menu_item_bookmark">Segnalibro</string>
+
+    <string name="tab_tray_multiselect_menu_item_close">Chiudere</string>
+
+    <string name="tab_tray_multiselect_share_content_description">Condividere le schede selezionate</string>
+
+    <string name="tab_tray_multiselect_menu_content_description">Menu schede selezionate</string>
+
+    <string name="remove_tab_from_collection">Rimuovere la scheda dalla raccolta</string>
+
+    <string name="tabs_tray_select_tabs">Selezionare le schede</string>
+
+    <string name="close_tab">Chiudere la scheda</string>
+
+    <string name="close_tab_title">Chiudere la scheda %s</string>
+
+    <string name="open_tabs_menu">Menu Schede aperte</string>
+
+    <string name="tabs_menu_save_to_collection1">Salvare le schede nella raccolta</string>
+
+    <string name="collection_delete">Eliminare la collezione</string>
+
+    <string name="collection_rename">Rinominare la collezione</string>
+
+    <string name="collection_open_tabs">Schede aperte</string>
+
+    <string name="collection_name_hint">Nome della collezione</string>
+
+    <string name="rename_top_site">Rinominare</string>
+
+    <string name="remove_top_site">Rimuovere</string>
+
+    <string name="delete_from_history">Cancellare dalla cronologia</string>
+
+    <string name="pwa_site_controls_title_private">%1$s (modalità privata)</string>
+
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Altre schede</string>
+
+
+    <string name="history_search_1">Inserire i termini di ricerca</string>
+
+    <string name="history_delete_all">Cancellare la cronologia</string>
+
+    <string name="history_delete_multiple_items_snackbar">Storia Eliminata</string>
+
+    <string name="history_delete_single_item_snackbar">Eliminato %1$s</string>
+
+    <string name="history_delete_item">Cancellare</string>
+
+    <string name="history_multi_select_title">%1$d selezionato</string>
+
+    <string name="history_today">Oggi</string>
+
+    <string name="history_yesterday">Ieri</string>
+
+    <string name="history_7_days">Ultimi 7 giorni</string>
+
+    <string name="history_30_days">Ultimi 30 giorni</string>
+
+    <string name="history_older">Più vecchio</string>
+
+    <string name="history_empty_message">Non c\'è storia qui</string>
+
+
+    <string name="download_delete_multiple_items_snackbar_1">Download rimossi</string>
+
+    <string name="download_delete_single_item_snackbar">Rimosso %1$s</string>
+
+    <string name="download_empty_message_1">Nessun file scaricato</string>
+
+    <string name="download_multi_select_title">%1$d selezionato</string>
+
+    <string name="download_delete_item_1">Rimuovere</string>
+
+
+    <string name="tab_crash_title_2">Spiacente. La pagina %1$s non può essere caricata.</string>
+
+    <string name="tab_crash_send_report">Inviare il rapporto di arresto anomalo a BrowserWorks</string>
+
+    <string name="tab_crash_close">Chiudere la scheda</string>
+
+    <string name="tab_crash_restore">Scheda Ripristino</string>
+
+
+    <string name="bookmark_delete_folder_confirmation_dialog">Siete sicuri di voler eliminare questa cartella?</string>
+
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s eliminerà gli elementi selezionati.</string>
+
+    <string name="bookmark_delete_negative">Annullamento</string>
+
+    <string name="bookmark_add_folder">Aggiungi cartella</string>
+
+    <string name="bookmark_saved_snackbar">Segnalibro salvato!</string>
+
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+
+    <string name="bookmark_menu_edit_button">Modifica</string>
+
+    <string name="bookmark_menu_copy_button">Copia</string>
+
+    <string name="bookmark_menu_share_button">Condividi</string>
+
+    <string name="bookmark_menu_open_in_new_tab_button">Aprire in una nuova scheda</string>
+
+    <string name="bookmark_menu_open_in_private_tab_button">Aprire una scheda privata</string>
+
+    <string name="bookmark_menu_delete_button">Cancellare</string>
+
+    <string name="bookmark_menu_save_button">Risparmiare</string>
+
+    <string name="bookmarks_multi_select_title">%1$d selezionato</string>
+
+    <string name="edit_bookmark_fragment_title">Modifica del segnalibro</string>
+
+    <string name="edit_bookmark_folder_fragment_title">Modifica cartella</string>
+
+    <string name="bookmark_sign_in_button">Accedi per vedere i segnalibri sincronizzati</string>
+
+    <string name="bookmark_url_label">URL</string>
+
+    <string name="bookmark_folder_label">CARTELLA</string>
+
+    <string name="bookmark_name_label">NOME</string>
+
+    <string name="bookmark_add_folder_fragment_label">Aggiungi cartella</string>
+
+    <string name="bookmark_select_folder_fragment_label">Selezionare la cartella</string>
+
+    <string name="bookmark_empty_title_error">Deve avere un titolo</string>
+
+    <string name="bookmark_invalid_url_error">URL non valido</string>
+
+    <string name="bookmarks_empty_message">Nessun segnalibro qui</string>
+
+    <string name="bookmark_deletion_snackbar_message">Eliminato %1$s</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Segnalibri eliminati</string>
+
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Eliminazione delle cartelle selezionate</string>
+
+    <string name="bookmark_undo_deletion">ANNULLAMENTO</string>
+
+    <string name="bookmark_search">Inserire i termini di ricerca</string>
+
+
+    <string name="phone_feature_go_to_settings">Andare alle Impostazioni</string>
+
+    <string name="quick_settings_sheet">Scheda di impostazione rapida</string>
+
+    <string name="phone_feature_recommended">Consigliato</string>
+
+    <string name="clear_permissions">Cancella le autorizzazioni</string>
+
+    <string name="clear_permissions_positive">OK</string>
+
+    <string name="clear_permissions_negative">Annullamento</string>
+
+    <string name="clear_permission">Autorizzazione chiara</string>
+
+    <string name="clear_permission_positive">OK</string>
+
+    <string name="clear_permission_negative">Annullamento</string>
+
+    <string name="clear_permissions_on_all_sites">Autorizzazioni chiare su tutti i siti</string>
+
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
+
+    <string name="preference_phone_feature_camera">Macchina fotografica</string>
+
+    <string name="preference_phone_feature_microphone">Microfono</string>
+
+    <string name="preference_phone_feature_location">Posizione</string>
+
+    <string name="preference_phone_feature_notification">Notifica</string>
+
+    <string name="preference_phone_feature_persistent_storage">Archiviazione persistente</string>
+
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookie cross-site</string>
+
+    <string name="preference_phone_feature_media_key_system_access">Contenuti controllati da DRM</string>
+
+    <string name="preference_option_phone_feature_ask_to_allow">Chiedere di consentire</string>
+
+    <string name="preference_option_phone_feature_blocked">Bloccato</string>
+
+    <string name="preference_option_phone_feature_allowed">Consentito</string>
+
+    <string name="phone_feature_blocked_by_android">Bloccato da Android</string>
+
+    <string name="preference_exceptions">Eccezioni</string>
+
+    <string name="tracking_protection_on">Su</string>
+
+    <string name="tracking_protection_off">Spento</string>
+
+    <string name="preference_option_autoplay_allowed2">Consentire audio e video</string>
+
+    <string name="quick_setting_option_autoplay_allowed">Consentire audio e video</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_only2">Bloccare audio e video solo sui dati cellulari</string>
+
+    <string name="preference_option_autoplay_allowed_wifi_subtext">L\'audio e il video vengono riprodotti su Wi-Fi</string>
+
+    <string name="preference_option_autoplay_block_audio2">Blocca solo l\'audio</string>
+
+    <string name="quick_setting_option_autoplay_block_audio">Blocca solo l\'audio</string>
+
+    <string name="preference_option_autoplay_blocked3">Bloccare audio e video</string>
+
+    <string name="quick_setting_option_autoplay_blocked">Bloccare audio e video</string>
+
+    <string name="delete_browsing_data_quit_on">Su</string>
+
+    <string name="delete_browsing_data_quit_off">Spento</string>
+
+    <string name="https_only_on">Su</string>
+
+    <string name="https_only_off">Spento</string>
+
+
+    <string name="collections_header">Collezioni</string>
+
+    <string name="collection_menu_button_content_description">Menu della collezione</string>
+
+    <string name="no_collections_description2">Raggruppa ricerche, siti e schede simili per accedervi rapidamente in un secondo momento.</string>
+
+    <string name="create_collection_select_tabs">Selezionare le schede</string>
+
+    <string name="create_collection_select_collection">Seleziona la collezione</string>
+
+    <string name="create_collection_name_collection">Collezione di nomi</string>
+
+    <string name="create_collection_add_new_collection">Aggiungere una nuova collezione</string>
+
+    <string name="create_collection_select_all">Seleziona tutti</string>
+
+    <string name="create_collection_deselect_all">Deselezionare tutti</string>
+
+    <string name="create_collection_save_to_collection_empty">Selezionare le schede da salvare</string>
+
+    <string name="create_collection_save_to_collection_tabs_selected">%d schede selezionate</string>
+
+    <string name="create_collection_save_to_collection_tab_selected">%d scheda selezionata</string>
+
+    <string name="create_collection_tabs_saved">Schede salvate!</string>
+
+    <string name="create_collection_tabs_saved_new_collection">Collezione salvata!</string>
+
+    <string name="create_collection_tab_saved">Scheda salvata!</string>
+
+    <string name="create_collection_close">Chiudere</string>
+
+    <string name="create_collection_save">Risparmiare</string>
+
+    <string name="create_collection_view">Vista</string>
+
+    <string name="create_collection_positive">OK</string>
+
+    <string name="create_collection_negative">Annullamento</string>
+
+
+    <string name="create_collection_default_name">Collezione %d</string>
+
+
+    <string name="share_header_2">Condividi</string>
+
+    <string name="share_button_content_description">Condividi</string>
+
+    <string name="share_device_subheader">Invia al dispositivo</string>
+
+    <string name="share_link_all_apps_subheader">Tutte le azioni</string>
+
+    <string name="share_link_recent_apps_subheader">Utilizzato di recente</string>
+
+    <string name="share_copy_link_to_clipboard">Copia negli appunti</string>
+
+    <string name="toast_copy_link_to_clipboard">Copiato negli appunti</string>
+
+    <string name="sync_menu_sign_in">Accedi alla sincronizzazione</string>
+
+    <string name="sync_sign_in">Accedi a Sync</string>
+
+    <string name="sync_send_to_all">Invia a tutti i dispositivi</string>
+
+    <string name="sync_reconnect">Ricollegarsi alla sincronizzazione</string>
+
+    <string name="sync_offline">Non in linea</string>
+
+    <string name="sync_connect_device">Collegare un altro dispositivo</string>
+
+    <string name="sync_connect_device_dialog">Per inviare una scheda, accedere a Waterfox su almeno un altro dispositivo.</string>
+
+    <string name="sync_confirmation_button">Capito</string>
+
+    <string name="share_error_snackbar">Non è possibile condividere con questa applicazione</string>
+
+    <string name="sync_add_new_device_title">Invia al dispositivo</string>
+
+    <string name="sync_add_new_device_message">Nessun dispositivo collegato</string>
+
+    <string name="sync_add_new_device_learn_button">Informazioni sull\'invio di schede...</string>
+
+    <string name="sync_add_new_device_connect_button">Collegare un altro dispositivo...</string>
+
+
+    <string name="notification_pbm_delete_text_2">Chiudere le schede private</string>
+
+    <string name="notification_marketing_channel_name">Marketing</string>
+
+    <string name="notification_default_browser_title">%1$s è veloce e privato</string>
+
+    <string name="notification_default_browser_text">Rendi %1$s il tuo browser predefinito</string>
+
+
+    <string name="snackbar_collection_deleted">Collezione cancellata</string>
+
+    <string name="snackbar_collection_renamed">Collezione rinominata</string>
+
+    <string name="snackbar_tab_closed">Scheda chiusa</string>
+
+    <string name="snackbar_tabs_closed">Schede chiuse</string>
+
+    <string name="snackbar_message_bookmarks_saved">Segnalibri salvati!</string>
+
+    <string name="snackbar_added_to_shortcuts">Aggiunto alle scorciatoie!</string>
+
+    <string name="snackbar_private_tab_closed">Scheda privata chiusa</string>
+
+    <string name="snackbar_private_tabs_closed">Schede private chiuse</string>
+
+    <string name="snackbar_deleted_undo">ANNULLAMENTO</string>
+
+    <string name="snackbar_top_site_removed">Sito rimosso</string>
+
+    <string name="qr_scanner_confirmation_dialog_message">Consentire a %1$s di aprire %2$s</string>
+
+    <string name="qr_scanner_dialog_positive">CONSENTIRE</string>
+
+    <string name="qr_scanner_dialog_negative">NEGOZIARE</string>
+
+    <string name="qr_scanner_dialog_invalid">Indirizzo web non valido.</string>
+
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+
+    <string name="tab_collection_dialog_message">Siete sicuri di voler cancellare %1$s?</string>
+
+    <string name="delete_tab_and_collection_dialog_message">L\'eliminazione di questa scheda comporta la cancellazione dell\'intera raccolta. È possibile creare nuove raccolte in qualsiasi momento.</string>
+
+    <string name="delete_tab_and_collection_dialog_title">Cancellare %1$s?</string>
+
+    <string name="tab_collection_dialog_positive">Cancellare</string>
+
+    <string name="full_screen_notification">Accedere alla modalità a schermo intero</string>
+
+    <string name="url_copied">URL copiato</string>
+
+    <string name="accessibility_text_size_sample_text_1">Questo è un testo di esempio. Serve a mostrare come appare il testo quando si aumenta o si diminuisce la dimensione con questa impostazione.</string>
+
+    <string name="preference_accessibility_text_size_summary">Ingrandire o rimpicciolire il testo dei siti web</string>
+
+    <string name="preference_accessibility_font_size_title">Dimensione del carattere</string>
+
+
+    <string name="preference_accessibility_auto_size_2">Dimensionamento automatico dei caratteri</string>
+
+    <string name="preference_accessibility_auto_size_summary">Le dimensioni dei caratteri corrispondono alle impostazioni di Android. Disattivare la gestione delle dimensioni dei caratteri qui.</string>
+
+
+    <string name="preferences_delete_browsing_data">Cancellare i dati di navigazione</string>
+
+    <string name="preferences_delete_browsing_data_tabs_title_2">Schede aperte</string>
+
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d schede</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_title">Cronologia di navigazione e dati del sito</string>
+
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d indirizzi</string>
+
+    <string name="preferences_delete_browsing_data_cookies">Biscotti</string>
+
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Verrete disconnessi dalla maggior parte dei siti</string>
+
+    <string name="preferences_delete_browsing_data_cached_files">Immagini e file nella cache</string>
+
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Libera spazio di archiviazione</string>
+
+    <string name="preferences_delete_browsing_data_site_permissions">Autorizzazioni del sito</string>
+
+    <string name="preferences_delete_browsing_data_downloads">Download</string>
+
+    <string name="preferences_delete_browsing_data_button">Cancellare i dati di navigazione</string>
+
+    <string name="preferences_delete_browsing_data_on_quit">Cancellare i dati di navigazione all\'uscita</string>
+
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Cancella automaticamente i dati di navigazione quando si seleziona "Esci" dal menu principale.</string>
+
+    <string name="delete_browsing_data_on_quit_action">Abbandonare</string>
+
+
+    <string name="delete_browsing_data_prompt_message" moz:removedIn="104" tools:ignore="UnusedResources">In questo modo verranno cancellati tutti i dati di navigazione.</string>
+
+    <string name="delete_history_prompt_title">Intervallo di tempo da eliminare</string>
+
+    <string name="delete_history_prompt_body">Rimuove la cronologia (compresa quella sincronizzata da altri dispositivi), i cookie e altri dati di navigazione.</string>
+
+    <string name="delete_history_prompt_button_last_hour">Ultima ora</string>
+
+    <string name="delete_history_prompt_button_today_and_yesterday">Oggi e ieri</string>
+
+    <string name="delete_history_prompt_button_everything">Tutto</string>
+
+
+    <string name="delete_browsing_data_prompt_message_3">%s cancellerà i dati di navigazione selezionati.</string>
+
+    <string name="delete_browsing_data_prompt_cancel">Annullamento</string>
+
+    <string name="delete_browsing_data_prompt_allow">Cancellare</string>
+
+    <string name="preferences_delete_browsing_data_snackbar">Cancellazione dei dati di navigazione</string>
+
+    <string name="deleting_browsing_data_in_progress">Eliminazione dei dati di navigazione...</string>
+
+
+    <string name="delete_all_history_group_prompt_message">Cancellare tutti i siti in "%s"</string>
+
+    <string name="delete_history_group_prompt_cancel">Annullamento</string>
+
+    <string name="delete_history_group_prompt_allow">Cancellare</string>
+
+    <string name="delete_history_group_snackbar">Gruppo cancellato</string>
+
+
+    <string name="onboarding_header_2">Benvenuti in un web più privato</string>
+
+    <string name="onboarding_message">Un browser indipendente e di base.</string>
+
+    <string name="onboarding_account_sign_in_header">Riprendere da dove si era interrotto</string>
+
+    <string name="onboarding_manual_sign_in_description">Sincronizzate schede e password su tutti i dispositivi per passare da uno schermo all\'altro senza problemi.</string>
+
+    <string name="onboarding_waterfox_account_sign_in">Accedi</string>
+
+    <string name="onboarding_waterfox_account_sync_is_on">La sincronizzazione è attiva</string>
+
+    <string name="onboarding_tracking_protection_header">Protezione della privacy per impostazione predefinita</string>
+
+    <string name="onboarding_tracking_protection_description">Protezione totale dai cookie per impedire ai tracker di utilizzare i cookie per seguire l\'utente su tutti i siti.</string>
+
+    <string name="onboarding_tracking_protection_standard_button_2">Standard (predefinito)</string>
+
+    <string name="onboarding_tracking_protection_standard_button_description_3">Bilanciato per privacy e prestazioni. Le pagine si caricano normalmente.</string>
+
+    <string name="onboarding_tracking_protection_strict_option">Rigoroso</string>
+
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blocca un maggior numero di tracker, in modo che le pagine vengano caricate più velocemente, ma alcune funzionalità della pagina potrebbero essere interrotte.</string>
+
+    <string name="onboarding_toolbar_placement_header_1">Scegliete il posizionamento della barra degli strumenti</string>
+
+    <string name="onboarding_toolbar_placement_description">Mantenetelo in basso o spostatelo in alto.</string>
+
+    <string name="onboarding_privacy_notice_header_1">Il controllo dei dati</string>
+
+    <string name="onboarding_privacy_notice_description">Waterfox non raccoglie alcuna telemetria e vi dà il controllo sui vostri dati.</string>
+
+    <string name="onboarding_privacy_notice_read_button">Leggi la nostra informativa sulla privacy</string>
+
+    <string name="onboarding_conclusion_header">Siete pronti ad aprire un internet fantastico?</string>
+
+    <string name="onboarding_finish">Iniziare la navigazione</string>
+
+
+    <string name="onboarding_theme_picker_header">Scegliete il vostro tema</string>
+
+    <string name="onboarding_theme_picker_description_2">Risparmia la batteria e la vista con la modalità scura.</string>
+
+    <string name="onboarding_theme_automatic_title">Automatico</string>
+
+    <string name="onboarding_theme_automatic_summary">Si adatta alle impostazioni del dispositivo</string>
+
+    <string name="onboarding_theme_dark_title">Tema scuro</string>
+
+    <string name="onboarding_theme_light_title">Tema luminoso</string>
+
+
+    <string name="sync_sent_tabs_snackbar">Schede inviate!</string>
+
+    <string name="sync_sent_tab_snackbar">Scheda inviata!</string>
+
+    <string name="sync_sent_tab_error_snackbar">Impossibile inviare</string>
+
+    <string name="sync_sent_tab_error_snackbar_action">RITROVARE</string>
+
+    <string name="sync_scan_code">Scansione del codice</string>
+
+    <string name="sign_in_instructions">Waterfox si basa su un account Mozilla per sincronizzare i dati tra il cellulare e il desktop.&lt;br&gt; Sul computer aprire Waterfox e andare su &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla non è in alcun modo affiliata a Waterfox.&lt;/i&gt;</string>
+
+    <string name="sign_in_ready_for_scan">Pronto per la scansione</string>
+
+    <string name="sign_in_with_camera">Accedi con la tua fotocamera</string>
+
+    <string name="sign_in_with_email">Utilizzate invece l\'e-mail</string>
+
+    <string name="sign_in_create_account_text">Nessun account? &lt;u&gt;Createne uno&lt;/u&gt; per sincronizzare Waterfox tra i dispositivi.</string>
+
+    <string name="sign_out_confirmation_message_2">%s interromperà la sincronizzazione con l\'account, ma non eliminerà i dati di navigazione sul dispositivo.</string>
+
+    <string name="sign_out_disconnect">Disconnessione</string>
+
+    <string name="sign_out_cancel">Annullamento</string>
+
+    <string name="bookmark_cannot_edit_root">Non è possibile modificare le cartelle predefinite</string>
+
+
+    <string name="etp_settings">Impostazioni di protezione</string>
+
+    <string name="preference_enhanced_tracking_protection">Maggiore protezione della tracciabilità</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_title">Navigare senza essere seguiti</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation">Tenete i vostri dati per voi. %s vi protegge da molti dei più comuni tracker che seguono le vostre attività online.</string>
+
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Per saperne di più</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (predefinito)</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Bilanciato per privacy e prestazioni. Le pagine si caricano normalmente.</string>
+
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Cosa viene bloccato dalla protezione di tracciamento standard</string>
+
+    <string name="preference_enhanced_tracking_protection_strict">Rigoroso</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blocca un maggior numero di tracker, in modo che le pagine vengano caricate più velocemente, ma alcune funzionalità della pagina potrebbero essere interrotte.</string>
+
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Cosa è bloccato da una rigida protezione del tracciamento</string>
+
+    <string name="preference_enhanced_tracking_protection_custom">Personalizzato</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Scegliere quali tracker e script bloccare.</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Cosa viene bloccato dalla protezione di tracciamento personalizzata</string>
+
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Biscotti</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Tracciatori di siti e social media</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookie da siti non visitati</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Tutti i cookie di terze parti (possono causare l\'interruzione dei siti web)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Tutti i cookie (causano la rottura dei siti web)</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Isolare i cookie cross-site</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Tracciamento dei contenuti</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">In tutte le schede</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Solo in schede private</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomani</string>
+
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Impronte digitali</string>
+
+    <string name="enhanced_tracking_protection_details">Dettagli</string>
+
+    <string name="enhanced_tracking_protection_blocked">Bloccato</string>
+
+    <string name="enhanced_tracking_protection_allowed">Consentito</string>
+
+    <string name="etp_social_media_trackers_title">Tracciatori di social media</string>
+
+    <string name="etp_social_media_trackers_description">Limita la capacità dei social network di tracciare la vostra attività di navigazione sul web.</string>
+
+    <string name="etp_cookies_title">Cookie per il tracciamento incrociato dei siti</string>
+
+    <string name="etp_cookies_title_2">Cookie cross-site</string>
+
+    <string name="etp_cookies_description">Blocca i cookie che le reti pubblicitarie e le società di analisi utilizzano per compilare i dati di navigazione dell\'utente su molti siti.</string>
+
+    <string name="etp_cookies_description_2">Total Cookie Protection isola i cookie al sito in cui vi trovate, in modo che i tracker come le reti pubblicitarie non possano utilizzarli per seguirvi da un sito all\'altro.</string>
+
+    <string name="etp_cryptominers_title">Criptomani</string>
+
+    <string name="etp_cryptominers_description">Impedisce agli script dannosi di accedere al dispositivo per estrarre valuta digitale.</string>
+
+    <string name="etp_fingerprinters_title">Impronte digitali</string>
+
+    <string name="etp_fingerprinters_description">Impedisce la raccolta di dati identificabili in modo univoco sul dispositivo dell\'utente, che possono essere utilizzati per scopi di tracciamento.</string>
+
+    <string name="etp_tracking_content_title">Tracciamento dei contenuti</string>
+
+    <string name="etp_tracking_content_description">Impedisce il caricamento di annunci esterni, video e altri contenuti contenenti codici di tracciamento. Può influire su alcune funzionalità del sito web.</string>
+
+    <string name="etp_panel_on">Le protezioni sono attive per questo sito</string>
+
+    <string name="etp_panel_off">Le protezioni sono disattivate per questo sito</string>
+
+    <string name="enhanced_tracking_protection_exceptions">La Protezione avanzata dal tracciamento è disattivata per questi siti web</string>
+
+    <string name="etp_back_button_content_description">Navigare indietro</string>
+
+    <string name="open_source_licenses_title">%s | Biblioteche OSS</string>
+
+    <string name="etp_redirect_trackers_title">Tracciatori di reindirizzamento</string>
+
+    <string name="etp_redirect_trackers_description">Cancella i cookie impostati dai reindirizzamenti a siti web di tracciamento noti.</string>
+
+    <string name="preference_etp_smartblock_description">Alcuni tracker contrassegnati di seguito sono stati parzialmente sbloccati in questa pagina perché avete interagito con loro *.</string>
+
+    <string name="preference_etp_smartblock_learn_more">Per saperne di più</string>
+
+
+    <string name="about_support">Supporto</string>
+
+    <string name="about_crashes">Incidenti</string>
+
+    <string name="about_privacy_notice">Informativa sulla privacy</string>
+
+    <string name="about_know_your_rights">Conoscere i propri diritti</string>
+
+    <string name="about_licensing_information">Informazioni sulla licenza</string>
+
+    <string name="about_other_open_source_libraries">Biblioteche che utilizziamo</string>
+
+    <string name="about_debug_menu_toast_progress">Menu di debug: %1$d clic a sinistra per attivare</string>
+    <string name="about_debug_menu_toast_done">Menu di debug abilitato</string>
+
+
+    <string name="browser_toolbar_long_press_popup_copy">Copia</string>
+
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Incolla e vai</string>
+
+    <string name="browser_toolbar_long_press_popup_paste">Incolla</string>
+
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL copiato negli appunti</string>
+
+
+    <string name="add_to_homescreen_title">Aggiungi alla schermata iniziale</string>
+
+    <string name="add_to_homescreen_cancel">Annullamento</string>
+
+    <string name="add_to_homescreen_add">Aggiungi</string>
+
+    <string name="add_to_homescreen_continue">Vai al sito web</string>
+
+    <string name="add_to_homescreen_text_placeholder">Nome della scorciatoia</string>
+
+    <string name="add_to_homescreen_description_2">È possibile aggiungere facilmente questo sito web alla schermata iniziale del dispositivo per avere un accesso immediato e navigare più velocemente con un\'esperienza simile a quella delle app.</string>
+
+
+    <string name="preferences_passwords_logins_and_passwords">Login e password</string>
+
+    <string name="preferences_passwords_save_logins">Salvare login e password</string>
+
+    <string name="preferences_passwords_save_logins_ask_to_save">Chiedere di salvare</string>
+
+    <string name="preferences_passwords_save_logins_never_save">Non salvare mai</string>
+
+    <string name="preferences_passwords_autofill2">Compilazione automatica in %1$s</string>
+
+    <string name="preferences_passwords_autofill_description">Compilare e salvare nomi utente e password nei siti web utilizzando %1$s.</string>
+
+    <string name="preferences_android_autofill">Compilazione automatica in altre applicazioni</string>
+
+    <string name="preferences_android_autofill_description">Compilare nomi utente e password in altre applicazioni del dispositivo.</string>
+
+    <string name="preferences_logins_add_login">Aggiungi login</string>
+
+
+    <string name="preferences_passwords_sync_logins">Sincronizzazione dei login</string>
+
+    <string name="preferences_passwords_sync_logins_across_devices">Sincronizzazione dei login su tutti i dispositivi</string>
+
+    <string name="preferences_passwords_saved_logins">Accesso salvato</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_text">I login salvati o sincronizzati con %s saranno visualizzati qui.</string>
+
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Per saperne di più su Sync.</string>
+
+    <string name="preferences_passwords_exceptions">Eccezioni</string>
+
+    <string name="preferences_passwords_exceptions_description_empty">I login e le password non salvati saranno visualizzati qui.</string>
+
+    <string name="preferences_passwords_exceptions_description">I login e le password non verranno salvati per questi siti.</string>
+
+    <string name="preferences_passwords_exceptions_remove_all">Cancellare tutte le eccezioni</string>
+
+    <string name="preferences_passwords_saved_logins_search">Ricerca login</string>
+
+    <string name="preferences_passwords_saved_logins_site">Sito</string>
+
+    <string name="preferences_passwords_saved_logins_username">Nome utente</string>
+
+    <string name="preferences_passwords_saved_logins_password">Password</string>
+
+    <string name="logins_password_copied">Password copiata negli appunti</string>
+
+    <string name="logins_username_copied">Nome utente copiato negli appunti</string>
+
+    <string name="saved_logins_copy_password">Copiare la password</string>
+
+    <string name="saved_logins_clear_password">Cancella la password</string>
+
+    <string name="saved_login_copy_username">Copiare il nome utente</string>
+
+    <string name="saved_login_clear_username">Cancella il nome utente</string>
+
+    <string name="saved_login_clear_hostname">Cancella il nome dell\'host</string>
+
+    <string name="saved_login_open_site">Aprire il sito nel browser</string>
+
+    <string name="saved_login_reveal_password">Mostra password</string>
+
+    <string name="saved_login_hide_password">Nascondere la password</string>
+
+    <string name="logins_biometric_prompt_message">Sbloccare per visualizzare i login salvati</string>
+
+    <string name="logins_warning_dialog_title">Proteggete i vostri login e le vostre password</string>
+
+    <string name="logins_warning_dialog_message">Impostare un modello di blocco del dispositivo, un PIN o una password per proteggere i login e le password salvate dall\'accesso se qualcun altro possiede il dispositivo.</string>
+
+    <string name="logins_warning_dialog_later">Più tardi</string>
+
+    <string name="logins_warning_dialog_set_up_now">Configura ora</string>
+
+    <string name="logins_biometric_prompt_message_pin">Sbloccare il dispositivo</string>
+
+    <string name="preference_accessibility_force_enable_zoom">Zoom su tutti i siti web</string>
+
+    <string name="preference_accessibility_force_enable_zoom_summary">Abilita per consentire il pinch e lo zoom, anche sui siti web che impediscono questo gesto.</string>
+
+    <string name="saved_logins_sort_strategy_alphabetically">Nome (A-Z)</string>
+
+    <string name="saved_logins_sort_strategy_last_used">Ultimo utilizzo</string>
+
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Menu di ordinamento dei login</string>
+
+
+    <string name="preferences_autofill">Riempimento automatico</string>
+
+    <string name="preferences_addresses">Indirizzi</string>
+
+    <string name="preferences_credit_cards">Carte di credito</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards">Salvataggio e autocompilazione di schede</string>
+
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">I dati sono criptati</string>
+
+    <string name="preferences_credit_cards_sync_cards_across_devices">Sincronizzazione delle schede tra i dispositivi</string>
+
+    <string name="preferences_credit_cards_sync_cards">Schede di sincronizzazione</string>
+
+    <string name="preferences_credit_cards_add_credit_card">Aggiungi carta di credito</string>
+
+    <string name="preferences_credit_cards_manage_saved_cards">Gestione delle schede salvate</string>
+
+    <string name="preferences_addresses_add_address">Aggiungi indirizzo</string>
+
+    <string name="preferences_addresses_manage_addresses">Gestire gli indirizzi</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses">Salvataggio e autocompilazione degli indirizzi</string>
+
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Includere informazioni come numeri, indirizzi e-mail e di spedizione.</string>
+
+
+    <string name="credit_cards_add_card">Aggiungi scheda</string>
+
+    <string name="credit_cards_edit_card">Scheda di modifica</string>
+
+    <string name="credit_cards_card_number">Numero di carta</string>
+
+    <string name="credit_cards_expiration_date">Data di scadenza</string>
+
+    <string name="credit_cards_expiration_date_month">Data di scadenza Mese</string>
+
+    <string name="credit_cards_expiration_date_year">Data di scadenza Anno</string>
+
+    <string name="credit_cards_name_on_card">Nome sulla scheda</string>
+
+    <string name="credit_cards_menu_delete_card">Cancellare la scheda</string>
+
+    <string name="credit_cards_delete_card_button">Cancellare la scheda</string>
+
+    <string name="credit_cards_delete_dialog_confirmation">È sicuro di voler cancellare questa carta di credito?</string>
+
+    <string name="credit_cards_delete_dialog_button">Cancellare</string>
+
+    <string name="credit_cards_menu_save">Risparmiare</string>
+
+    <string name="credit_cards_save_button">Risparmiare</string>
+
+    <string name="credit_cards_cancel_button">Annullamento</string>
+
+    <string name="credit_cards_saved_cards">Carte salvate</string>
+
+    <string name="credit_cards_number_validation_error_message">Inserire un numero di carta di credito valido</string>
+
+    <string name="credit_cards_name_on_card_validation_error_message">Compilare questo campo</string>
+
+    <string name="credit_cards_biometric_prompt_message">Sbloccare per visualizzare le schede salvate</string>
+
+    <string name="credit_cards_warning_dialog_title">Proteggere le carte di credito</string>
+
+    <string name="credit_cards_warning_dialog_message">Impostate un modello di blocco del dispositivo, un PIN o una password per proteggere le carte di credito salvate dall\'accesso se qualcun altro possiede il vostro dispositivo.</string>
+
+    <string name="credit_cards_warning_dialog_set_up_now">Configura ora</string>
+
+    <string name="credit_cards_warning_dialog_later">Più tardi</string>
+
+    <string name="credit_cards_biometric_prompt_message_pin">Sbloccare il dispositivo</string>
+
+    <string name="credit_cards_biometric_prompt_unlock_message">Sblocco dell\'utilizzo delle informazioni della carta di credito memorizzate</string>
+
+    <string name="addresses_add_address">Aggiungi indirizzo</string>
+
+    <string name="addresses_edit_address">Modifica indirizzo</string>
+
+    <string name="addresses_manage_addresses">Gestire gli indirizzi</string>
+
+    <string name="addresses_first_name">Nome</string>
+
+    <string name="addresses_middle_name">Secondo nome</string>
+
+    <string name="addresses_last_name">Cognome</string>
+
+    <string name="addresses_street_address">Indirizzo stradale</string>
+
+    <string name="addresses_city">Città</string>
+
+    <string name="addresses_state">Stato</string>
+
+    <string name="addresses_province">Provincia</string>
+
+    <string name="addresses_zip">Zip</string>
+
+    <string name="addresses_country">Paese o regione</string>
+
+    <string name="addresses_phone">Telefono</string>
+
+    <string name="addresses_email">Email</string>
+
+    <string name="addresses_save_button">Risparmiare</string>
+
+    <string name="addresses_cancel_button">Annullamento</string>
+
+    <string name="addressess_delete_address_button">Cancellare l\'indirizzo</string>
+
+    <string name="addressess_confirm_dialog_message">È sicuro di voler cancellare questo indirizzo?</string>
+
+    <string name="addressess_confirm_dialog_ok_button">Cancellare</string>
+
+    <string name="addressess_confirm_dialog_cancel_button">Annullamento</string>
+
+    <string name="address_menu_save_address">Salva indirizzo</string>
+
+    <string name="address_menu_delete_address">Cancellare l\'indirizzo</string>
+
+
+    <string name="search_engine_add_custom_search_engine_title">Aggiungere un motore di ricerca</string>
+
+    <string name="search_engine_edit_custom_search_engine_title">Modifica del motore di ricerca</string>
+
+    <string name="search_engine_add_button_content_description">Aggiungi</string>
+
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Risparmiare</string>
+
+    <string name="search_engine_edit">Modifica</string>
+
+    <string name="search_engine_delete">Cancellare</string>
+
+
+    <string name="search_add_custom_engine_label_other">Altro</string>
+
+    <string name="search_add_custom_engine_name_hint">Nome</string>
+
+    <string name="search_add_custom_engine_search_string_hint">Stringa di ricerca da utilizzare</string>
+
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Sostituire la query con "%s". Esempio:\nhttps://www.google.com/search?q=%s</string>
+
+    <string name="search_add_custom_engine_form_description">Dettagli del motore di ricerca personalizzato</string>
+
+
+    <string name="search_add_custom_engine_error_empty_name">Inserire il nome del motore di ricerca</string>
+
+    <string name="search_add_custom_engine_error_empty_search_string">Immettere una stringa di ricerca</string>
+
+    <string name="search_add_custom_engine_error_missing_template">Controllare che la stringa di ricerca corrisponda al formato di esempio</string>
+
+    <string name="search_add_custom_engine_error_cannot_reach">Errore di connessione a "%s"</string>
+
+    <string name="search_add_custom_engine_success_message">Creato %s</string>
+
+    <string name="search_edit_custom_engine_success_message">Salvato %s</string>
+
+    <string name="search_delete_search_engine_success_message">Eliminato %s</string>
+
+
+    <string name="phone_feature_blocked_intro">Per permetterlo:</string>
+
+    <string name="phone_feature_blocked_step_settings">1. Andare alle Impostazioni di Android</string>
+
+    <string name="phone_feature_blocked_step_permissions">2. Toccare &lt;b&gt;Permissioni&lt;/b&gt;.</string>
+
+    <string name="phone_feature_blocked_step_feature">3. Attivare &lt;b&gt;%1$s&lt;/b&gt; su ON</string>
+
+
+    <string name="quick_settings_sheet_secure_connection_2">La connessione è sicura</string>
+
+    <string name="quick_settings_sheet_insecure_connection_2">La connessione non è sicura</string>
+
+    <string name="clear_site_data">Cancellare i cookie e i dati del sito</string>
+
+    <string name="confirm_clear_site_data">Siete sicuri di voler cancellare tutti i cookie e i dati del sito &lt;b&gt;%s&lt;/b&gt;?</string>
+
+    <string name="confirm_clear_permissions_on_all_sites">Siete sicuri di voler cancellare tutti i permessi su tutti i siti?</string>
+
+    <string name="confirm_clear_permissions_site">Siete sicuri di voler cancellare tutti i permessi per questo sito?</string>
+
+    <string name="confirm_clear_permission_site">Siete sicuri di voler autorizzare questo sito?</string>
+
+    <string name="no_site_exceptions">Nessuna eccezione per il sito</string>
+
+    <string name="bookmark_deletion_confirmation">Sei sicuro di voler cancellare questo segnalibro?</string>
+
+    <string name="browser_menu_add_to_shortcuts">Aggiungi alle scorciatoie</string>
+
+    <string name="browser_menu_remove_from_shortcuts">Rimuovere dai collegamenti</string>
+
+    <string name="certificate_info_verified_by">Verificato da: %1$s</string>
+
+    <string name="login_menu_delete_button">Cancellare</string>
+
+    <string name="login_menu_edit_button">Modifica</string>
+
+    <string name="login_deletion_confirmation">È sicuro di voler cancellare questo accesso?</string>
+
+    <string name="dialog_delete_positive">Cancellare</string>
+
+    <string name="dialog_delete_negative">Annullamento</string>
+
+    <string name="login_options_menu">Opzioni di accesso</string>
+
+    <string name="saved_login_hostname_description">Il campo di testo modificabile per l\'indirizzo web del login.</string>
+
+    <string name="saved_login_username_description">Il campo di testo modificabile per il nome utente del login.</string>
+
+    <string name="saved_login_password_description">Il campo di testo modificabile per la password di accesso.</string>
+
+    <string name="save_changes_to_login">Salvare le modifiche per accedere.</string>
+
+    <string name="edit">Modifica</string>
+
+    <string name="add_login">Aggiungere un nuovo login</string>
+
+    <string name="saved_login_password_required">È richiesta la password</string>
+
+    <string name="saved_login_username_required">Nome utente richiesto</string>
+
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Nome host richiesto</string>
+
+    <string name="voice_search_content_description">Ricerca vocale</string>
+
+    <string name="voice_search_explainer">Parla ofra</string>
+
+    <string name="saved_login_duplicate">Esiste già un login con quel nome utente</string>
+
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <string name="add_login_hostname_invalid_text_3">L\'indirizzo web deve contenere "https://" o "http://".</string>
+
+    <string name="add_login_hostname_invalid_text_2">È richiesto un nome host valido</string>
+
+
+    <string name="synced_tabs_connect_another_device">Collegare un altro dispositivo.</string>
+
+    <string name="synced_tabs_reauth">Si prega di effettuare nuovamente l\'autenticazione.</string>
+
+    <string name="synced_tabs_enable_tab_syncing">Attivare la sincronizzazione delle schede.</string>
+
+    <string name="synced_tabs_no_tabs">Non ci sono schede aperte in Waterfox sugli altri dispositivi.</string>
+
+    <string name="synced_tabs_sign_in_message">Visualizzare un elenco di schede da altri dispositivi.</string>
+
+    <string name="synced_tabs_sign_in_button">Accedi alla sincronizzazione</string>
+
+    <string name="synced_tabs_no_open_tabs">Nessuna scheda aperta</string>
+
+    <string name="synced_tabs_expand_group">Espandere il gruppo di schede sincronizzate</string>
+
+    <string name="synced_tabs_collapse_group">Collasso del gruppo di schede sincronizzate</string>
+
+
+    <string name="shortcut_max_limit_title">Limite di scelta rapida raggiunto</string>
+
+    <string name="shortcut_max_limit_content">Per aggiungere un nuovo collegamento, rimuoverne uno. Toccare e tenere premuto il sito e selezionare rimuovi.</string>
+
+    <string name="top_sites_max_limit_confirmation_button">OK, capito</string>
+
+    <string name="top_sites_toggle_top_recent_sites_4">Scorciatoie</string>
+
+    <string name="top_sites_rename_dialog_title">Nome</string>
+
+    <string name="shortcut_name_hint">Nome della scorciatoia</string>
+
+    <string name="top_sites_rename_dialog_ok">OK</string>
+
+    <string name="top_sites_rename_dialog_cancel">Annullamento</string>
+
+    <string name="top_sites_menu_settings">Impostazioni</string>
+
+    <string name="top_sites_menu_sponsor_privacy">I nostri sponsor e la vostra privacy</string>
+
+    <string name="top_sites_sponsored_label">Sponsorizzato</string>
+
+
+    <string name="inactive_tabs_title">Schede inattive</string>
+
+    <string name="inactive_tabs_delete_all">Chiudere tutte le schede inattive</string>
+
+    <string name="inactive_tabs_expand_content_description">Espandere le schede inattive</string>
+
+    <string name="inactive_tabs_collapse_content_description">Chiudere le schede inattive</string>
+
+
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Chiusura automatica dopo un mese?</string>
+
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox può chiudere le schede non visualizzate nell\'ultimo mese.</string>
+
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ATTIVARE LA CHIUSURA AUTOMATICA</string>
+
+    <string name="inactive_tabs_auto_close_message_snackbar">Chiusura automatica abilitata</string>
+
+
+    <string name="default_browser_experiment_card_text">Impostare l\'apertura automatica dei link di siti web, e-mail e messaggi in Waterfox.</string>
+
+
+    <string name="remove_home_collection_placeholder_content_description">Rimuovere</string>
+
+
+    <string name="radio_preference_info_content_description">Clicca per maggiori dettagli</string>
+
+
+    <string name="action_bar_up_description">Navigare verso l\'alto</string>
+
+
+    <string name="privacy_content_close_button_content_description">Chiudere</string>
+
+    <string name="waterfox_suggest_header">Waterfox Suggerisci</string>
+</resources>

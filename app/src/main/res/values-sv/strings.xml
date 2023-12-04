@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">Privat %s</string>
+    
+    <string name="app_name_private_4">%s (privat)</string>
+
+    
+    
+    <string name="content_description_menu">Fler alternativ</string>
+    
+    <string name="content_description_private_browsing_button">Aktivera privat surfning</string>
+    
+    <string name="content_description_disable_private_browsing_button">Inaktivera privat surfning</string>
+    
+    <string name="search_hint">Sök eller ange adress</string>
+    
+    <string name="application_search_hint">Ange sökord</string>
+    
+    <string name="no_open_tabs_description">Dina öppna flikar visas här.</string>
+    
+    <string name="no_private_tabs_description">Dina privata flikar visas här.</string>
+    
+    <string name="tab_tray_multi_select_title">%1$d vald</string>
+    
+    <string name="tab_tray_add_new_collection">Lägg till ny samling</string>
+    
+    <string name="tab_tray_add_new_collection_name">Namn</string>
+    
+    <string name="tab_tray_select_collection">Välj samling</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">Avsluta multiselect-läge</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">Spara valda flikar till samling</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">Utvalda</string>
+
+    
+    
+    <string name="recently_saved_title">Nyligen sparad</string>
+    
+    <string name="recently_saved_show_all_content_description_2">Visa alla sparade bokmärken</string>
+    
+    <string name="recently_saved_menu_item_remove">Ta bort</string>
+
+    
+    <string name="about_content">%1$s är tillverkad av BrowserWorks</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">%1$s rensar din sök- och surfhistorik från privata flikar när du stänger dem eller avslutar appen. Detta gör dig inte anonym för webbplatser eller din internetleverantör, men det gör det enklare att hålla det du gör online privat från alla andra som använder den här enheten.</string>
+    <string name="private_browsing_common_myths">Vanliga myter om privat surfning</string>
+
+    
+    
+    <string name="cfr_message">Lägg till en genväg för att öppna privata flikar från startskärmen.</string>
+    
+    <string name="cfr_pos_button_text">Lägg till genväg</string>
+    
+    <string name="cfr_neg_button_text">Inga tack</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">Du kan ställa in %1$s så att länkar i appar öppnas automatiskt.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">Gå till inställningar</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">Avskeda</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">Avskeda</string>
+
+    
+    
+    <string name="tcp_cfr_message">Vår hittills mest kraftfulla sekretessfunktion isolerar cross-site trackers.</string>
+    
+    <string name="tcp_cfr_learn_more">Läs mer om totalt cookie-skydd</string>
+
+    
+    <string name="camera_permissions_needed_message">Kameraåtkomst behövs. Gå till Android-inställningar, tryck på behörigheter och tryck på tillåt.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">Gå till inställningar</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">Avskeda</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">Stäng automatiskt öppna flikar som inte har visats under den senaste dagen, veckan eller månaden.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Visa alternativ</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Avskeda</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">Flikar som du inte har tittat på under två veckor flyttas hit.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">Stäng av i inställningar</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">Automatisk stängning efter en månad?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s kan stänga flikar som du inte har tittat på under den senaste månaden.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">Nära</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Aktivera automatisk stängning</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">Ny flik</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">Ny privat flik</string>
+
+    
+    
+    <string name="recent_tabs_header">Hoppa tillbaka in</string>
+    
+    <string name="recent_tabs_show_all">Visa alla</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">Visa alla senaste flikar knapp</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Din sökning efter \"%1$s\"</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d webbplatser</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Se alla synkroniserade flikar</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">Synkroniserad enhet</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">Ta bort</string>
+    
+    <string name="recent_tab_menu_item_remove">Ta bort</string>
+
+    
+    
+    <string name="history_metadata_header_2">Nyligen besökt</string>
+    
+    <string name="recently_visited_menu_item_remove">Ta bort</string>
+    
+    <string name="past_explorations_show_all_content_description_2">Visa alla tidigare utforskningar</string>
+
+    
+    
+    <string name="browser_menu_back">Tillbaka</string>
+    
+    <string name="browser_menu_forward">Framåt</string>
+    
+    <string name="browser_menu_refresh">Uppdatera</string>
+    
+    <string name="browser_menu_stop">Stopp</string>
+    
+    <string name="browser_menu_add_ons">Tillägg</string>
+    
+    <string name="no_add_ons">Inga tillägg här</string>
+    
+    <string name="browser_menu_help">Hjälp</string>
+    
+    <string name="browser_menu_settings">Inställningar</string>
+    
+    <string name="browser_menu_library">Bibliotek</string>
+    
+    <string name="browser_menu_desktop_site">Webbplats för skrivbord</string>
+    
+    <string name="browser_menu_add_to_homescreen">Lägg till på startskärmen</string>
+    
+    <string name="browser_menu_install_on_homescreen">Installera</string>
+    
+    <string name="resync_button_content_description">Återsynkning</string>
+    
+    <string name="browser_menu_find_in_page">Hitta på sidan</string>
+    
+    <string name="browser_menu_save_to_collection_2">Spara till samling</string>
+    
+    <string name="browser_menu_share">Andel</string>
+    
+    <string name="browser_menu_open_in_waterfox">Öppna i %1$s</string>
+    
+    <string name="browser_menu_powered_by">Drivs av %1$s</string>
+    
+    <string name="browser_menu_powered_by2">Drivs av %1$s</string>
+    
+    <string name="browser_menu_read">Läsarnas åsikter</string>
+    
+    <string name="browser_menu_read_close">Nära läsarens vy</string>
+    
+    <string name="browser_menu_open_app_link">Öppna i app</string>
+    
+    <string name="browser_menu_customize_reader_view">Anpassa läsarens vy</string>
+    
+    <string name="browser_menu_add">Lägg till</string>
+    
+    <string name="browser_menu_edit">Redigera</string>
+    
+    <string name="browser_menu_customize_home_1">Anpassa startsidan</string>
+    
+    
+    <string name="browser_toolbar_home">Startskärm</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">Utvalda språk</string>
+    
+    <string name="default_locale_text">Följ enhetens språk</string>
+    
+    <string name="locale_search_hint">Sök språk</string>
+
+    
+    
+    <string name="search_scan_button">Scanning</string>
+    
+    <string name="search_engine_button">Sökmotor</string>
+    
+    <string name="search_shortcuts_engine_settings">Inställningar för sökmotorer</string>
+    
+    <string name="awesomebar_clipboard_title">Fyll länk från Urklipp</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">Tillåt</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">Tillåt inte</string>
+    
+    <string name="search_suggestions_onboarding_title">Tillåt sökförslag i privata sessioner?</string>
+    
+    <string name="search_suggestions_onboarding_text">%s kommer att dela allt du skriver i adressfältet med din standardsökmotor.</string>
+    
+    <string name="search_engine_suggestions_title">Sök %s</string>
+    
+    <string name="search_engine_suggestions_description">Sök direkt från adressfältet</string>
+    
+    <string name="search_settings_menu_item">Inställningar för sökning</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">Det är nu lättare att fortsätta där du slutade.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">Hoppa till dina öppna flikar, bokmärken och webbhistorik.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Rena, organiserade flikar</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Rensa bland flikarna med förbättrad layout och flikar som stängs automatiskt.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">Senaste sökningar</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">Gå igenom dina senaste sökningar från din startsida och flikar.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Här är din personliga startsida. De senaste flikarna, bokmärkena och sökresultaten visas här.</string>
+    
+    <string name="onboarding_home_welcome_title_2">Välkommen till ett mer personligt internet</string>
+    
+    <string name="onboarding_home_welcome_description">Fler färger. Bättre integritet. Samma engagemang för människor framför vinst.</string>
+    
+    <string name="onboarding_home_sync_title_3">Hoppa från telefon till bärbar dator och tillbaka</string>
+    
+    <string name="onboarding_home_sync_description">Fortsätt där du slutade med flikar från andra enheter nu på din startsida.</string>
+    
+    <string name="onboarding_home_get_started_button">Kom igång</string>
+    
+    <string name="onboarding_home_sign_in_button">Logga in</string>
+    
+    <string name="onboarding_home_skip_button">Hoppa över</string>
+    
+    <string name="onboarding_home_content_description_close_button">Nära</string>
+
+    
+    
+    <string name="search_widget_content_description_2">Öppna en ny flik %1$s</string>
+    
+    <string name="search_widget_text_short">Sök</string>
+    
+    <string name="search_widget_text_long">Sök på webben</string>
+    
+    <string name="search_widget_voice">Röstsökning</string>
+
+    
+    
+    <string name="settings">Inställningar</string>
+    
+    <string name="preferences_category_general">Allmänt</string>
+    
+    <string name="preferences_category_about">Om</string>
+    
+    <string name="preferences_default_search_engine">Standard sökmotor</string>
+    
+    <string name="preferences_search">Sök</string>
+    
+    <string name="preferences_search_address_bar">Adressfält</string>
+    
+    <string name="preferences_rate">Betygsätt på Google Play</string>
+    
+    <string name="preferences_about">Om %1$s</string>
+    
+    <string name="preferences_set_as_default_browser">Ange som standardwebbläsare</string>
+    
+    <string name="preferences_category_advanced">Avancerad</string>
+    
+    <string name="preferences_category_privacy_security">Integritet och säkerhet</string>
+    
+    <string name="preferences_site_permissions">Tillstånd för anläggningar</string>
+    
+    <string name="preferences_private_browsing_options">Privat surfning</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">Öppna länkar i en privat flik</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">Tillåt skärmdumpar i privat surfning</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Om tillåtet kommer privata flikar även att vara synliga när flera appar är öppna</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">Lägg till genväg för privat surfning</string>
+    
+    <string name="preferences_https_only_title">Endast HTTPS-läge</string>
+    
+    <string name="preferences_https_only_summary">Försöker automatiskt ansluta till webbplatser som använder HTTPS-krypteringsprotokoll för ökad säkerhet.</string>
+    
+    <string name="preferences_https_only_on">På</string>
+    
+    <string name="preferences_https_only_off">Av</string>
+    
+    <string name="preferences_http_only_learn_more">Läs mer</string>
+    
+    <string name="preferences_https_only_in_all_tabs">Aktivera i alla flikar</string>
+    
+    <string name="preferences_https_only_in_private_tabs">Aktivera endast i privata flikar</string>
+    
+    <string name="errorpage_httpsonly_title">Säker webbplats ej tillgänglig</string>
+    
+    <string name="errorpage_httpsonly_message_title">Det troligaste är att webbplatsen helt enkelt inte stöder HTTPS.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">Det är dock också möjligt att en angripare är inblandad. Om du fortsätter till webbplatsen bör du inte ange någon känslig information. Om du fortsätter kommer HTTPS-Only-läget att stängas av tillfälligt för webbplatsen.</string>
+    
+    <string name="preferences_accessibility">Tillgänglighet</string>
+    
+    <string name="preferences_override_fxa_server">Anpassad server för Waterfox-konto</string>
+    
+    <string name="preferences_override_sync_tokenserver">Anpassad Sync-server</string>
+    
+    <string name="toast_override_fxa_sync_server_done">Waterfox Account/Sync-server modifierad. Avsluta programmet för att tillämpa ändringarna...</string>
+    
+    <string name="preferences_category_account">Konto</string>
+    
+    <string name="preferences_toolbar">Verktygsfält</string>
+    
+    <string name="preferences_theme">Tema</string>
+    
+    <string name="preferences_home_2">Hemsida</string>
+    
+    <string name="preferences_gestures">Gester</string>
+    
+    <string name="preferences_customize">Anpassa</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Synkronisera bokmärken, historik och mer med ditt Waterfox-konto</string>
+    
+    <string name="preferences_sign_in_description_2">Logga in för att synka flikar, bokmärken, lösenord och mycket mer.</string>
+    
+    <string name="preferences_account_default_name">Konto för Waterfox</string>
+    
+    <string name="preferences_account_sync_error">Återanslut för att återuppta synkroniseringen</string>
+    
+    <string name="preferences_language">Språk</string>
+    
+    <string name="preferences_remote_debugging">Fjärrfelsökning via USB</string>
+    
+    <string name="preferences_show_search_engines">Visa sökmotorer</string>
+    
+    <string name="preferences_show_search_suggestions">Visa sökförslag</string>
+    
+    <string name="preferences_show_voice_search">Visa röstsökning</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">Visa i privata sessioner</string>
+    
+    <string name="preferences_show_clipboard_suggestions">Visa förslag för urklipp</string>
+    
+    <string name="preferences_search_browsing_history">Sök i webbhistorik</string>
+    
+    <string name="preferences_search_bookmarks">Sök i bokmärken</string>
+    
+    <string name="preferences_search_synced_tabs">Sök i synkroniserade flikar</string>
+    
+    <string name="preferences_account_settings">Kontoinställningar</string>
+    
+    <string name="preferences_enable_autocomplete_urls">Autofullständiga URL-adresser</string>
+    
+    <string name="preferences_open_links_in_apps">Öppna länkar i appar</string>
+    
+    <string name="preferences_external_download_manager">Extern nedladdningshanterare</string>
+    
+    <string name="preferences_addons">Tillägg</string>
+    
+    <string name="preferences_notifications">Meddelanden</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">Anpassad samling av tillägg</string>
+    
+    <string name="customize_addon_collection_ok">OK</string>
+    
+    <string name="customize_addon_collection_cancel">Avbryt</string>
+    
+    <string name="customize_addon_collection_hint">Namn på samling</string>
+    
+    <string name="customize_addon_collection_user_hint">Samlingens ägare (användar-ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">Tilläggssamling modifierad. Avsluta programmet för att tillämpa ändringarna...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">Hoppa tillbaka in</string>
+    
+    <string name="customize_toggle_recent_bookmarks">Senaste bokmärken</string>
+    
+    <string name="customize_toggle_recently_visited">Nyligen besökt</string>
+    
+    <string name="customize_wallpapers">Bakgrundsbilder</string>
+    
+    <string name="customize_toggle_contile">Sponsrade genvägar</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">Bakgrundsartikel: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">Bakgrunden uppdaterad!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">Utsikt</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">Ändra bakgrundsbild genom att trycka på logotypen för Waterfox startsida</string>
+    
+    <string name="wallpaper_logo_content_description">Waterfox-logotyp - ändra bakgrundsbild, knapp</string>
+
+    
+    
+    <string name="addon_not_supported_error">Tillägget stöds inte</string>
+    
+    <string name="addon_already_installed">Tillägget är redan installerat</string>
+
+    
+    
+    <string name="preferences_sync_now">Synkronisera nu</string>
+    
+    <string name="preferences_sync_category">Välj vad som ska synkroniseras</string>
+    
+    <string name="preferences_sync_history">Historia</string>
+    
+    <string name="preferences_sync_bookmarks">Bokmärken</string>
+    
+    <string name="preferences_sync_logins">Inloggning</string>
+    
+    <string name="preferences_sync_tabs_2">Öppna flikar</string>
+    
+    <string name="preferences_sign_out">Logga ut</string>
+    
+    <string name="preferences_sync_device_name">Enhetens namn</string>
+    
+    <string name="empty_device_name_error">Enhetsnamnet får inte vara tomt.</string>
+    
+    <string name="sync_syncing_in_progress">Synkronisering...</string>
+    
+    <string name="sync_failed_summary">Synkronisering misslyckades. Senaste lyckade: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">Synkronisering misslyckades. Senast synkad: aldrig</string>
+    
+    <string name="sync_last_synced_summary">Senast synkroniserad: %s</string>
+    
+    <string name="sync_never_synced_summary">Senast synkad: aldrig</string>
+    
+    <string name="default_device_name_2">%1$s på %2$s %3$s</string>
+    
+    <string name="preferences_sync_credit_cards">Kreditkort</string>
+    
+    <string name="preferences_sync_address">Adresser</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">Mottagna flikar</string>
+    
+    <string name="fxa_received_tab_channel_description">Notifieringar för flikar som tas emot från andra Waterfox-enheter.</string>
+    
+    <string name="fxa_tab_received_notification_name">Flik mottagen</string>
+    
+    <string name="fxa_tab_received_from_notification_name">Tab från %s</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">Undantag</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Aktivera för alla webbplatser</string>
+    
+    <string name="exceptions_empty_message_description">Med undantag kan du inaktivera spårningsskyddet för utvalda webbplatser.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">Läs mer</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Aktivera synkronisering</string>
+    
+    <string name="preferences_sync_2">Synkronisera och spara dina data</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">Logga in för att återansluta</string>
+    
+    <string name="preferences_sync_remove_account">Ta bort konto</string>
+
+    
+    
+    <string name="pair_instructions_2">Skanna QR-koden som visas på &lt;b&gt;firefox.com/pair&lt;/b&gt;</string>
+
+    
+    
+    <string name="preference_top_toolbar">Topp</string>
+    
+    <string name="preference_bottom_toolbar">Botten</string>
+
+    
+    
+    <string name="preference_light_theme">Ljus</string>
+    
+    <string name="preference_dark_theme">Mörk</string>
+    
+    <string name="preference_auto_battery_theme">Inställning av batterisparläge</string>
+    
+    <string name="preference_follow_device_theme">Följ enhetens tema</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">Dra för att fräscha upp</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">Bläddra för att dölja verktygsfältet</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Svep verktygsfältet i sidled för att byta flikar</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Svep verktygsfältet uppåt för att öppna flikar</string>
+
+    
+    
+    <string name="library_downloads">Nedladdningar</string>
+    
+    <string name="library_bookmarks">Bokmärken</string>
+    
+    <string name="library_desktop_bookmarks_root">Bokmärken på skrivbordet</string>
+    
+    <string name="library_desktop_bookmarks_menu">Meny Bokmärken</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">Verktygsfält för bokmärken</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">Andra bokmärken</string>
+    
+    <string name="library_history">Historia</string>
+    
+    <string name="library_new_tab">Ny flik</string>
+    
+    <string name="settings_title">Inställningar</string>
+    
+    <string name="content_description_close_button">Nära</string>
+
+    
+    <string name="history_search_group_site">%d webbplats</string>
+    
+    <string name="history_search_group_sites">%d webbplatser</string>
+
+    
+    <string name="library_recently_closed_tabs">Nyligen stängda flikar</string>
+    
+    <string name="recently_closed_show_full_history">Visa fullständig historik</string>
+    
+    <string name="recently_closed_tabs">%d flikar</string>
+    
+    <string name="recently_closed_tab">%d flik</string>
+    
+    <string name="recently_closed_empty_message">Inga nyligen stängda flikar här</string>
+
+    
+    
+    <string name="preferences_tabs">Flikar</string>
+    
+    <string name="preferences_tab_view">Flikvy</string>
+    
+    <string name="tab_view_list">Lista</string>
+    
+    <string name="tab_view_grid">Nät</string>
+    
+    <string name="preferences_close_tabs">Stäng flikar</string>
+    
+    <string name="close_tabs_manually">Aldrig</string>
+    
+    <string name="close_tabs_after_one_day">Efter en dag</string>
+    
+    <string name="close_tabs_after_one_week">Efter en vecka</string>
+    
+    <string name="close_tabs_after_one_month">Efter en månad</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Stäng öppna flikar automatiskt</string>
+
+    
+    
+    <string name="preferences_opening_screen">Öppningsskärm</string>
+    
+    <string name="opening_screen_homepage">Hemsida</string>
+    
+    <string name="opening_screen_last_tab">Sista fliken</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">Hemsida efter fyra timmars inaktivitet</string>
+    
+    <string name="close_tabs_manually_summary">Stäng manuellt</string>
+    
+    <string name="close_tabs_after_one_day_summary">Stäng efter en dag</string>
+    
+    <string name="close_tabs_after_one_week_summary">Stäng efter en vecka</string>
+    
+    <string name="close_tabs_after_one_month_summary">Stäng efter en månad</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">Flytta gamla flikar till inaktiva</string>
+    
+    <string name="preferences_inactive_tabs_title">Flikar som du inte har tittat på under två veckor flyttas till den inaktiva sektionen.</string>
+
+    
+    
+    <string name="tab_header_label">Öppna flikar</string>
+    
+    <string name="tabs_header_private_tabs_title">Privata flikar</string>
+    
+    <string name="tabs_header_synced_tabs_title">Synkade flikar</string>
+    
+    <string name="add_tab">Lägg till flik</string>
+    
+    <string name="add_private_tab">Lägg till privat flik</string>
+    
+    <string name="tab_drawer_fab_content">Privat</string>
+    
+    <string name="tab_drawer_fab_sync">Synkronisering</string>
+    
+    <string name="tab_tray_menu_item_share">Visa alla flikar</string>
+    
+    <string name="tab_tray_menu_recently_closed">Nyligen stängda flikar</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Nyligen stängd</string>
+    
+    <string name="tab_tray_menu_account_settings">Kontoinställningar</string>
+    
+    <string name="tab_tray_menu_tab_settings">Inställningar för flikar</string>
+    
+    <string name="tab_tray_menu_item_close">Stäng alla flikar</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">Bokmärke</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">Nära</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">Dela valda flikar</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">Meny för valda flikar</string>
+    
+    <string name="remove_tab_from_collection">Ta bort fliken från samlingen</string>
+    
+    <string name="tabs_tray_select_tabs">Välj flikar</string>
+    
+    <string name="close_tab">Stäng fliken</string>
+    
+    <string name="close_tab_title">Stäng fliken %s</string>
+    
+    <string name="open_tabs_menu">Öppna flikar-menyn</string>
+    
+    <string name="tabs_menu_save_to_collection1">Spara flikar till samling</string>
+    
+    <string name="collection_delete">Radera samling</string>
+    
+    <string name="collection_rename">Byt namn på samling</string>
+    
+    <string name="collection_open_tabs">Öppna flikar</string>
+    
+    <string name="collection_name_hint">Namn på samling</string>
+	
+	<string name="rename_top_site">Byt namn</string>
+	
+	<string name="remove_top_site">Ta bort</string>
+    
+    <string name="delete_from_history">Radera från historik</string>
+    
+    <string name="pwa_site_controls_title_private">%1$s (privat läge)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Andra flikar</string>
+
+    
+    
+    <string name="history_search_1">Ange sökord</string>
+    
+    <string name="history_delete_all">Radera historik</string>
+    
+    <string name="history_delete_multiple_items_snackbar">Historia borttagen</string>
+    
+    <string name="history_delete_single_item_snackbar">Borttagen %1$s</string>
+    
+    <string name="history_delete_item">Radera</string>
+    
+    <string name="history_multi_select_title">%1$d vald</string>
+    
+    <string name="history_today">Idag</string>
+    
+    <string name="history_yesterday">Igår</string>
+    
+    <string name="history_7_days">Senaste 7 dagarna</string>
+    
+    <string name="history_30_days">Senaste 30 dagarna</string>
+    
+    <string name="history_older">Äldre</string>
+    
+    <string name="history_empty_message">Ingen historia här</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">Borttagna nedladdningar</string>
+    
+    <string name="download_delete_single_item_snackbar">Borttagen %1$s</string>
+    
+    <string name="download_empty_message_1">Inga nedladdade filer</string>
+    
+    <string name="download_multi_select_title">%1$d vald</string>
+    
+    <string name="download_delete_item_1">Ta bort</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">Tyvärr. %1$s kan inte ladda den sidan.</string>
+    
+    <string name="tab_crash_send_report">Skicka kraschrapport till BrowserWorks</string>
+    
+    <string name="tab_crash_close">Stäng fliken</string>
+    
+    <string name="tab_crash_restore">Fliken Återställ</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">Är du säker på att du vill ta bort den här mappen?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s raderar de markerade objekten.</string>
+    
+    <string name="bookmark_delete_negative">Avbryt</string>
+    
+    <string name="bookmark_add_folder">Lägg till mapp</string>
+    
+    <string name="bookmark_saved_snackbar">Bokmärke sparat!</string>
+    
+    <string name="edit_bookmark_snackbar_action">EDIT</string>
+    
+    <string name="bookmark_menu_edit_button">Redigera</string>
+    
+    <string name="bookmark_menu_copy_button">Kopia</string>
+    
+    <string name="bookmark_menu_share_button">Andel</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">Öppna i ny flik</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">Öppna på en privat flik</string>
+    
+    <string name="bookmark_menu_delete_button">Radera</string>
+    
+    <string name="bookmark_menu_save_button">Spara</string>
+    
+    <string name="bookmarks_multi_select_title">%1$d vald</string>
+    
+    <string name="edit_bookmark_fragment_title">Redigera bokmärke</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">Redigera mapp</string>
+    
+    <string name="bookmark_sign_in_button">Logga in för att se synkroniserade bokmärken</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">FOLDER</string>
+    
+    <string name="bookmark_name_label">NAMN</string>
+    
+    <string name="bookmark_add_folder_fragment_label">Lägg till mapp</string>
+    
+    <string name="bookmark_select_folder_fragment_label">Välj mapp</string>
+    
+    <string name="bookmark_empty_title_error">Måste ha en titel</string>
+    
+    <string name="bookmark_invalid_url_error">Ogiltig URL</string>
+    
+    <string name="bookmarks_empty_message">Inga bokmärken här</string>
+    
+    <string name="bookmark_deletion_snackbar_message">Borttagen %1$s</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Bokmärken raderade</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Radera valda mappar</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">Ange sökord</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">Gå till Inställningar</string>
+    
+    <string name="quick_settings_sheet">Blad för snabbinställningar</string>
+    
+    <string name="phone_feature_recommended">Rekommenderade</string>
+    
+    <string name="clear_permissions">Klargör behörigheter</string>
+    
+    <string name="clear_permissions_positive">OK</string>
+    
+    <string name="clear_permissions_negative">Avbryt</string>
+    
+    <string name="clear_permission">Tydligt tillstånd</string>
+    
+    <string name="clear_permission_positive">OK</string>
+    
+    <string name="clear_permission_negative">Avbryt</string>
+    
+    <string name="clear_permissions_on_all_sites">Tydliga tillstånd på alla platser</string>
+    
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
+    
+    <string name="preference_phone_feature_camera">Kamera</string>
+    
+    <string name="preference_phone_feature_microphone">Mikrofon</string>
+    
+    <string name="preference_phone_feature_location">Plats</string>
+    
+    <string name="preference_phone_feature_notification">Anmälan</string>
+    
+    <string name="preference_phone_feature_persistent_storage">Beständig lagring</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookies från andra webbplatser</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM-kontrollerat innehåll</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">Fråga om att tillåta</string>
+    
+    <string name="preference_option_phone_feature_blocked">Blockerad</string>
+    
+    <string name="preference_option_phone_feature_allowed">Tillåtet</string>
+    
+    <string name="phone_feature_blocked_by_android">Blockerad av Android</string>
+    
+    <string name="preference_exceptions">Undantag</string>
+    
+    <string name="tracking_protection_on">På</string>
+    
+    <string name="tracking_protection_off">Av</string>
+    
+    <string name="preference_option_autoplay_allowed2">Tillåt ljud och video</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">Tillåt ljud och video</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blockera ljud och video endast på mobildata</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Ljud och video spelas upp på Wi-Fi</string>
+    
+    <string name="preference_option_autoplay_block_audio2">Blockera endast ljud</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">Blockera endast ljud</string>
+    
+    <string name="preference_option_autoplay_blocked3">Blockera ljud och video</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">Blockera ljud och video</string>
+    
+    <string name="delete_browsing_data_quit_on">På</string>
+    
+    <string name="delete_browsing_data_quit_off">Av</string>
+    
+    <string name="https_only_on">På</string>
+    
+    <string name="https_only_off">Av</string>
+
+    
+    
+    <string name="collections_header">Samlingar</string>
+    
+    <string name="collection_menu_button_content_description">Meny för samlingar</string>
+    
+    <string name="no_collections_description2">Samla det som är viktigt för dig.\nGruppera liknande sökningar, webbplatser och flikar för snabb åtkomst senare.</string>
+    
+    <string name="create_collection_select_tabs">Välj flikar</string>
+    
+    <string name="create_collection_select_collection">Välj samling</string>
+    
+    <string name="create_collection_name_collection">Namninsamling</string>
+    
+    <string name="create_collection_add_new_collection">Lägg till ny samling</string>
+    
+    <string name="create_collection_select_all">Välj alla</string>
+    
+    <string name="create_collection_deselect_all">Avmarkera alla</string>
+    
+    <string name="create_collection_save_to_collection_empty">Välj flikar att spara</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">%d flikar valda</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">%d flik vald</string>
+    
+    <string name="create_collection_tabs_saved">Tabbarna är räddade!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">Samlingen räddad!</string>
+    
+    <string name="create_collection_tab_saved">Tabben räddad!</string>
+    
+    <string name="create_collection_close">Nära</string>
+    
+    <string name="create_collection_save">Spara</string>
+    
+    <string name="create_collection_view">Utsikt</string>
+    
+    <string name="create_collection_positive">OK</string>
+    
+    <string name="create_collection_negative">Avbryt</string>
+
+    
+    <string name="create_collection_default_name">Insamling %d</string>
+
+    
+    
+    <string name="share_header_2">Andel</string>
+    
+    <string name="share_button_content_description">Andel</string>
+    
+    <string name="share_device_subheader">Skicka till enhet</string>
+    
+    <string name="share_link_all_apps_subheader">Alla åtgärder</string>
+    
+    <string name="share_link_recent_apps_subheader">Nyligen använt</string>
+    
+    <string name="share_copy_link_to_clipboard">Kopiera till urklipp</string>
+    
+    <string name="toast_copy_link_to_clipboard">Kopierad till urklipp</string>
+    
+    <string name="sync_menu_sign_in">Logga in för att synkronisera</string>
+    
+    <string name="sync_sign_in">Logga in på Sync</string>
+    
+    <string name="sync_send_to_all">Skicka till alla enheter</string>
+    
+    <string name="sync_reconnect">Återanslut för att synkronisera</string>
+    
+    <string name="sync_offline">Offline</string>
+    
+    <string name="sync_connect_device">Anslut en annan enhet</string>
+    
+    <string name="sync_connect_device_dialog">För att skicka en flik måste du logga in på Waterfox på minst en annan enhet.</string>
+    
+    <string name="sync_confirmation_button">Fick det</string>
+    
+    <string name="share_error_snackbar">Kan inte dela till denna app</string>
+    
+    <string name="sync_add_new_device_title">Skicka till enhet</string>
+    
+    <string name="sync_add_new_device_message">Inga enheter anslutna</string>
+    
+    <string name="sync_add_new_device_learn_button">Lär dig mer om att skicka tabbar...</string>
+    
+    <string name="sync_add_new_device_connect_button">Anslut en annan enhet...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">Stäng privata flikar</string>
+    
+    <string name="notification_marketing_channel_name">Marknadsföring</string>
+    
+    <string name="notification_default_browser_title">%1$s är snabb och privat</string>
+    
+    <string name="notification_default_browser_text">Gör %1$s till standardwebbläsare</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">Samling borttagen</string>
+    
+    <string name="snackbar_collection_renamed">Kollektionen döptes om</string>
+    
+    <string name="snackbar_tab_closed">Flik stängd</string>
+    
+    <string name="snackbar_tabs_closed">Flikar stängda</string>
+    
+    <string name="snackbar_message_bookmarks_saved">Bokmärken sparade!</string>
+    
+    <string name="snackbar_added_to_shortcuts">Lagt till genvägar!</string>
+    
+    <string name="snackbar_private_tab_closed">Privat flik stängd</string>
+    
+    <string name="snackbar_private_tabs_closed">Privata flikar stängda</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">Plats borttagen</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">Tillåt %1$s att öppna %2$s</string>
+    
+    <string name="qr_scanner_dialog_positive">TILLÅT</string>
+    
+    <string name="qr_scanner_dialog_negative">DENY</string>
+    
+    <string name="qr_scanner_dialog_invalid">Webbadressen är inte giltig.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
+    
+    <string name="tab_collection_dialog_message">Är du säker på att du vill ta bort %1$s?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">Om du raderar den här fliken raderas hela samlingen. Du kan när som helst skapa nya samlingar.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">Ta bort %1$s?</string>
+    
+    <string name="tab_collection_dialog_positive">Radera</string>
+    
+    <string name="full_screen_notification">Gå till helskärmsläge</string>
+    
+    <string name="url_copied">URL kopierad</string>
+    
+    <string name="accessibility_text_size_sample_text_1">Detta är exempeltext. Den är här för att visa hur texten visas när du ökar eller minskar storleken med den här inställningen.</string>
+    
+    <string name="preference_accessibility_text_size_summary">Gör text på webbplatser större eller mindre</string>
+    
+    <string name="preference_accessibility_font_size_title">Fontstorlek</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">Automatisk storlek på teckensnitt</string>
+    
+    <string name="preference_accessibility_auto_size_summary">Teckenstorleken kommer att matcha dina Android-inställningar. Inaktivera för att hantera teckenstorlek här.</string>
+
+    
+    <string name="preferences_delete_browsing_data">Radera surfdata</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">Öppna flikar</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d flikar</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">Browsinghistorik och webbplatsdata</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adresser</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">Kakor</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Du kommer att vara utloggad från de flesta webbplatser</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">Cachelagrade bilder och filer</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Frigör lagringsutrymme</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">Tillstånd för anläggningar</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">Nedladdningar</string>
+    
+    <string name="preferences_delete_browsing_data_button">Radera surfdata</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">Radera surfdata vid avslut</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Raderar automatiskt surfdata när du väljer \"Avsluta\" i huvudmenyn</string>
+    
+    <string name="delete_browsing_data_on_quit_action">Avsluta</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Detta raderar alla dina surfdata.</string>
+    
+    <string name="delete_history_prompt_title">Tidsintervall att radera</string>
+    
+    <string name="delete_history_prompt_body">Tar bort historik (inklusive historik som synkroniserats från andra enheter), cookies och andra surfdata.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">Sista timmen</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">Idag och igår</string>
+    
+    <string name="delete_history_prompt_button_everything">Allting</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">%s kommer att radera de valda surfuppgifterna.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">Avbryt</string>
+    
+    <string name="delete_browsing_data_prompt_allow">Radera</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">Surfdata raderade</string>
+    
+    <string name="deleting_browsing_data_in_progress">Radering av surfdata...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">Ta bort alla webbplatser i "%s"</string>
+    
+    <string name="delete_history_group_prompt_cancel">Avbryt</string>
+    
+    <string name="delete_history_group_prompt_allow">Radera</string>
+    
+    <string name="delete_history_group_snackbar">Grupp borttagen</string>
+
+    
+    
+    <string name="onboarding_header_2">Välkommen till en mer privat webb</string>
+    
+    <string name="onboarding_message">En gräsrotsbaserad, oberoende webbläsare.</string>
+    
+    <string name="onboarding_account_sign_in_header">Fortsätt där du slutade</string>
+    
+    <string name="onboarding_manual_sign_in_description">Synkronisera flikar och lösenord mellan enheter för sömlös skärmväxling.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">Logga in</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">Synkronisering är på</string>
+    
+    <string name="onboarding_tracking_protection_header">Integritetsskydd som standard</string>
+    
+    <string name="onboarding_tracking_protection_description">Med Total Cookie Protection som hindrar trackers från att använda cookies för att förfölja dig på olika webbplatser.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">Standard (standard)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">Balanserad för integritet och prestanda. Sidorna laddas normalt.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Strikt</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">Blockerar fler spårare så att sidorna laddas snabbare, men vissa funktioner på sidorna kan påverkas.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">Välj placering av verktygsfältet</string>
+    
+    <string name="onboarding_toolbar_placement_description">Behåll den på botten, eller flytta den till toppen.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">Du kontrollerar dina data</string>
+    
+    <string name="onboarding_privacy_notice_description">Waterfox samlar inte in någon telemetri och ger dig kontroll över dina data.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">Läs vår integritetspolicy</string>
+    
+    <string name="onboarding_conclusion_header">Redo att öppna upp ett fantastiskt internet?</string>
+    
+    <string name="onboarding_finish">Börja bläddra</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">Välj ditt tema</string>
+    
+    <string name="onboarding_theme_picker_description_2">Spara batteri och syn med mörkerläget.</string>
+    
+    <string name="onboarding_theme_automatic_title">Automatisk</string>
+    
+    <string name="onboarding_theme_automatic_summary">Anpassar sig till dina enhetsinställningar</string>
+    
+    <string name="onboarding_theme_dark_title">Mörkt tema</string>
+    
+    <string name="onboarding_theme_light_title">Ljus tema</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">Tabbar skickade!</string>
+    
+    <string name="sync_sent_tab_snackbar">Tab skickad!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">Kan inte skicka</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
+    
+    <string name="sync_scan_code">Skanna koden</string>
+    
+    <string name="sign_in_instructions">Waterfox är beroende av ett Mozilla-konto för att synkronisera data mellan mobil och dator.&lt;br&gt; Öppna Waterfox på din dator och gå till &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla är inte på något sätt associerade med Waterfox.&lt;/i&gt;</string>
+    
+    <string name="sign_in_ready_for_scan">Klar för skanning</string>
+    
+    <string name="sign_in_with_camera">Logga in med din kamera</string>
+    
+    <string name="sign_in_with_email">Använd e-post istället</string>
+    
+    <string name="sign_in_create_account_text">Har du inget konto? &lt;u&gt;Skapa ett&lt;/u&gt; för att synkronisera Waterfox mellan enheter.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s kommer att sluta synkronisera med ditt konto, men kommer inte att radera några av dina surfdata på den här enheten.</string>
+    
+    <string name="sign_out_disconnect">Koppla från</string>
+    
+    <string name="sign_out_cancel">Avbryt</string>
+    
+    <string name="bookmark_cannot_edit_root">Kan inte redigera standardmappar</string>
+
+    
+    
+    <string name="etp_settings">Inställningar för skydd</string>
+    
+    <string name="preference_enhanced_tracking_protection">Förbättrat skydd mot spårning</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">Bläddra utan att bli förföljd</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">Håll dina uppgifter för dig själv. %s skyddar dig från många av de vanligaste spårarna som följer vad du gör online.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Läs mer</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (standard)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Balanserad för integritet och prestanda. Sidorna laddas normalt.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Vad blockeras av standardspårningsskydd</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Strikt</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Blockerar fler spårare så att sidorna laddas snabbare, men vissa funktioner på sidorna kan påverkas.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Vad som blockeras av strikt spårningsskydd</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">Anpassad</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Välj vilka trackers och scripts som ska blockeras.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Vad blockeras av anpassat spårningsskydd</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Kakor</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Cross-site och social media trackers</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookies från webbplatser som inte besökts</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Alla cookies från tredje part (kan leda till att webbplatser inte fungerar)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Alla cookies (kommer att orsaka att webbplatser bryts)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Isolera cross-site cookies</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Spårning av innehåll</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">I alla flikar</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Endast i privata flikar</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Kryptomän</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Fingeravtryckare</string>
+    
+    <string name="enhanced_tracking_protection_details">Detaljer</string>
+    
+    <string name="enhanced_tracking_protection_blocked">Blockerad</string>
+    
+    <string name="enhanced_tracking_protection_allowed">Tillåtet</string>
+    
+    <string name="etp_social_media_trackers_title">Spårare för sociala medier</string>
+    
+    <string name="etp_social_media_trackers_description">Begränsar möjligheten för sociala nätverk att spåra din surfaktivitet på nätet.</string>
+    
+    <string name="etp_cookies_title">Cookies för spårning av korsade webbplatser</string>
+    
+    <string name="etp_cookies_title_2">Cookies från flera webbplatser</string>
+    
+    <string name="etp_cookies_description">Blockerar cookies som annonsnätverk och analysföretag använder för att sammanställa dina surfdata på många webbplatser.</string>
+    
+    <string name="etp_cookies_description_2">Total Cookie Protection isolerar cookies till den webbplats du är på så att spårare som annonsnätverk inte kan använda dem för att följa dig mellan olika webbplatser.</string>
+    
+    <string name="etp_cryptominers_title">Kryptomän</string>
+    
+    <string name="etp_cryptominers_description">Förhindrar att skadliga skript får åtkomst till din enhet för att utvinna digital valuta.</string>
+    
+    <string name="etp_fingerprinters_title">Fingeravtryckare</string>
+    
+    <string name="etp_fingerprinters_description">Stoppar insamling av unikt identifierbara data om din enhet som kan användas för spårningsändamål.</string>
+    
+    <string name="etp_tracking_content_title">Spårning av innehåll</string>
+    
+    <string name="etp_tracking_content_description">Stoppar externa annonser, videor och annat innehåll som innehåller spårningskod från att laddas. Kan påverka vissa funktioner på webbplatsen.</string>
+    
+    <string name="etp_panel_on">Skyddet är PÅ för denna webbplats</string>
+    
+    <string name="etp_panel_off">Skyddet är AV för denna webbplats</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">Förbättrat spårningsskydd är avstängt för dessa webbplatser</string>
+    
+    <string name="etp_back_button_content_description">Navigera tillbaka</string>
+    
+    <string name="open_source_licenses_title">%s | OSS-bibliotek</string>
+    
+    <string name="etp_redirect_trackers_title">Spårare för omdirigering</string>
+    
+    <string name="etp_redirect_trackers_description">Raderar cookies från omdirigeringar till kända spårningswebbplatser.</string>
+    
+    <string name="preference_etp_smartblock_description">Vissa trackers markerade nedan har delvis avblockerats på den här sidan eftersom du interagerade med dem *.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">Läs mer</string>
+
+    
+    <string name="about_support">Stöd</string>
+    
+    <string name="about_crashes">Krascher</string>
+    
+    <string name="about_privacy_notice">Meddelande om integritet</string>
+    
+    <string name="about_know_your_rights">Känn till dina rättigheter</string>
+    
+    <string name="about_licensing_information">Information om licensiering</string>
+    
+    <string name="about_other_open_source_libraries">Bibliotek som vi använder</string>
+    
+    <string name="about_debug_menu_toast_progress">Debugga menyn: %1$d klick(s) vänster för att aktivera</string>
+    <string name="about_debug_menu_toast_done">Felsökningsmeny aktiverad</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">Kopia</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Klistra in och gå</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">Klistra in</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL kopierad till urklipp</string>
+
+    
+    <string name="add_to_homescreen_title">Lägg till på startskärmen</string>
+    
+    <string name="add_to_homescreen_cancel">Avbryt</string>
+    
+    <string name="add_to_homescreen_add">Lägg till</string>
+    
+    <string name="add_to_homescreen_continue">Fortsätt till webbplatsen</string>
+    
+    <string name="add_to_homescreen_text_placeholder">Namn på genväg</string>
+    
+    <string name="add_to_homescreen_description_2">Du kan enkelt lägga till den här webbplatsen på enhetens startskärm för att få direktåtkomst och bläddra snabbare med en appliknande upplevelse.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">Inloggningar och lösenord</string>
+    
+    <string name="preferences_passwords_save_logins">Spara inloggningar och lösenord</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">Fråga för att spara</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">Spara aldrig</string>
+    
+    <string name="preferences_passwords_autofill2">Autofyll i %1$s</string>
+    
+    <string name="preferences_passwords_autofill_description">Fyll i och spara användarnamn och lösenord på webbplatser samtidigt som du använder %1$s.</string>
+    
+    <string name="preferences_android_autofill">Autofyll i andra appar</string>
+    
+    <string name="preferences_android_autofill_description">Fyll i användarnamn och lösenord i andra appar på din enhet.</string>
+    
+    <string name="preferences_logins_add_login">Lägg till inloggning</string>
+
+    
+    <string name="preferences_passwords_sync_logins">Synkronisera inloggningar</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">Synkronisera inloggningar mellan enheter</string>
+    
+    <string name="preferences_passwords_saved_logins">Sparade inloggningar</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">De inloggningar du sparar eller synkroniserar med %s visas här.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Läs mer om Sync.</string>
+    
+    <string name="preferences_passwords_exceptions">Undantag</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">Här visas inloggningar och lösenord som inte sparats.</string>
+    
+    <string name="preferences_passwords_exceptions_description">Inloggningsuppgifter och lösenord sparas inte för dessa webbplatser.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">Ta bort alla undantag</string>
+    
+    <string name="preferences_passwords_saved_logins_search">Sök inloggningar</string>
+    
+    <string name="preferences_passwords_saved_logins_site">Plats</string>
+    
+    <string name="preferences_passwords_saved_logins_username">Användarnamn</string>
+    
+    <string name="preferences_passwords_saved_logins_password">Lösenord</string>
+    
+    <string name="logins_password_copied">Lösenord kopierat till urklipp</string>
+    
+    <string name="logins_username_copied">Användarnamn kopierat till urklipp</string>
+    
+    <string name="saved_logins_copy_password">Kopiera lösenord</string>
+    
+    <string name="saved_logins_clear_password">Rensa lösenord</string>
+    
+    <string name="saved_login_copy_username">Kopiera användarnamn</string>
+    
+    <string name="saved_login_clear_username">Rensa användarnamn</string>
+    
+    <string name="saved_login_clear_hostname">Radera värdnamn</string>
+    
+    <string name="saved_login_open_site">Öppna webbplatsen i webbläsaren</string>
+    
+    <string name="saved_login_reveal_password">Visa lösenord</string>
+    
+    <string name="saved_login_hide_password">Dölj lösenord</string>
+    
+    <string name="logins_biometric_prompt_message">Lås upp för att se dina sparade inloggningar</string>
+    
+    <string name="logins_warning_dialog_title">Säkra dina inloggningar och lösenord</string>
+    
+    <string name="logins_warning_dialog_message">Ställ in ett enhetslåsmönster, en PIN-kod eller ett lösenord för att skydda dina sparade inloggningar och lösenord från åtkomst om någon annan har din enhet.</string>
+    
+    <string name="logins_warning_dialog_later">Senare</string>
+    
+    <string name="logins_warning_dialog_set_up_now">Ställ in nu</string>
+    
+    <string name="logins_biometric_prompt_message_pin">Lås upp din enhet</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">Zooma på alla webbplatser</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">Aktivera för att tillåta nypning och zoomning, även på webbplatser som förhindrar denna gest.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">Namn (A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">Senast använt</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Sortera inloggningsmenyn</string>
+
+    
+    
+    <string name="preferences_autofill">Autofyll</string>
+    
+    <string name="preferences_addresses">Adresser</string>
+    
+    <string name="preferences_credit_cards">Kreditkort</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">Spara kort och fyll i dem automatiskt</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Data är krypterade</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">Synkronisera kort mellan olika enheter</string>
+    
+    <string name="preferences_credit_cards_sync_cards">Synkronisera kort</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">Lägg till kreditkort</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">Hantera sparade kort</string>
+    
+    <string name="preferences_addresses_add_address">Lägg till adress</string>
+    
+    <string name="preferences_addresses_manage_addresses">Hantera adresser</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">Spara och fyll i adresser automatiskt</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Inkludera information som nummer, e-postadresser och leveransadresser</string>
+
+    
+    <string name="credit_cards_add_card">Lägg till kort</string>
+    
+    <string name="credit_cards_edit_card">Redigera kort</string>
+    
+    <string name="credit_cards_card_number">Kortnummer</string>
+    
+    <string name="credit_cards_expiration_date">Utgångsdatum</string>
+    
+    <string name="credit_cards_expiration_date_month">Utgångsdatum Månad</string>
+    
+    <string name="credit_cards_expiration_date_year">Utgångsdatum År</string>
+    
+    <string name="credit_cards_name_on_card">Namn på kortet</string>
+    
+    <string name="credit_cards_menu_delete_card">Radera kort</string>
+    
+    <string name="credit_cards_delete_card_button">Radera kort</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">Är du säker på att du vill radera det här kreditkortet?</string>
+    
+    <string name="credit_cards_delete_dialog_button">Radera</string>
+    
+    <string name="credit_cards_menu_save">Spara</string>
+    
+    <string name="credit_cards_save_button">Spara</string>
+    
+    <string name="credit_cards_cancel_button">Avbryt</string>
+    
+    <string name="credit_cards_saved_cards">Sparade kort</string>
+    
+    <string name="credit_cards_number_validation_error_message">Ange ett giltigt kreditkortsnummer</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">Vänligen fyll i detta fält</string>
+    
+    <string name="credit_cards_biometric_prompt_message">Lås upp för att se dina sparade kort</string>
+    
+    <string name="credit_cards_warning_dialog_title">Säkra dina kreditkort</string>
+    
+    <string name="credit_cards_warning_dialog_message">Ställ in ett enhetslåsmönster, en PIN-kod eller ett lösenord för att skydda dina sparade kreditkort från åtkomst om någon annan har din enhet.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">Ställ in nu</string>
+    
+    <string name="credit_cards_warning_dialog_later">Senare</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">Lås upp din enhet</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">Lås upp för att använda lagrad kreditkortsinformation</string>
+    
+    <string name="addresses_add_address">Lägg till adress</string>
+    
+    <string name="addresses_edit_address">Redigera adress</string>
+    
+    <string name="addresses_manage_addresses">Hantera adresser</string>
+    
+    <string name="addresses_first_name">Förnamn</string>
+    
+    <string name="addresses_middle_name">Mellannamn</string>
+    
+    <string name="addresses_last_name">Efternamn</string>
+    
+    <string name="addresses_street_address">Gatuadress</string>
+    
+    <string name="addresses_city">Stad</string>
+    
+    <string name="addresses_state">Stat</string>
+    
+    <string name="addresses_province">Provins</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">Land eller region</string>
+    
+    <string name="addresses_phone">Telefon</string>
+    
+    <string name="addresses_email">E-post</string>
+    
+    <string name="addresses_save_button">Spara</string>
+    
+    <string name="addresses_cancel_button">Avbryt</string>
+    
+    <string name="addressess_delete_address_button">Radera adress</string>
+    
+    <string name="addressess_confirm_dialog_message">Är du säker på att du vill radera den här adressen?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">Radera</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">Avbryt</string>
+    
+    <string name="address_menu_save_address">Spara adress</string>
+    
+    <string name="address_menu_delete_address">Radera adress</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">Lägg till sökmotor</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">Redigera sökmotor</string>
+    
+    <string name="search_engine_add_button_content_description">Lägg till</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Spara</string>
+    
+    <string name="search_engine_edit">Redigera</string>
+    
+    <string name="search_engine_delete">Radera</string>
+
+    
+    <string name="search_add_custom_engine_label_other">Andra</string>
+    
+    <string name="search_add_custom_engine_name_hint">Namn</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">Söksträng att använda</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Ersätt frågan med "%s". Exempel:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">Anpassad information om sökmotorer</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">Ange sökmotorns namn</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">Ange en söksträng</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">Kontrollera att söksträngen matchar Exempelformat</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">Fel vid anslutning till "%s"</string>
+    
+    <string name="search_add_custom_engine_success_message">Skapad %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">Sparat %s</string>
+    
+    <string name="search_delete_search_engine_success_message">Borttagen %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">För att tillåta det:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. Gå till Android-inställningar</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. Tryck på &lt;b&gt;Tillstånd&lt;/b&gt;</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. Växla &lt;b&gt;%1$s&lt;/b&gt; till ON</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">Anslutningen är säker</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">Anslutningen är inte säker</string>
+    
+    <string name="clear_site_data">Rensa cookies och webbplatsdata</string>
+    
+    <string name="confirm_clear_site_data">Är du säker på att du vill rensa alla cookies och data för webbplatsen &lt;b&gt;%s&lt;/b&gt;?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">Är du säker på att du vill rensa alla behörigheter på alla webbplatser?</string>
+    
+    <string name="confirm_clear_permissions_site">Är du säker på att du vill ta bort alla behörigheter för den här webbplatsen?</string>
+    
+    <string name="confirm_clear_permission_site">Är du säker på att du vill ge detta tillstånd för denna webbplats?</string>
+    
+    <string name="no_site_exceptions">Inga områdesundantag</string>
+    
+    <string name="bookmark_deletion_confirmation">Är du säker på att du vill ta bort detta bokmärke?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">Lägg till i genvägar</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">Ta bort från genvägar</string>
+    
+    <string name="certificate_info_verified_by">Verifierad av: %1$s</string>
+    
+    <string name="login_menu_delete_button">Radera</string>
+    
+    <string name="login_menu_edit_button">Redigera</string>
+    
+    <string name="login_deletion_confirmation">Är du säker på att du vill ta bort denna inloggning?</string>
+    
+    <string name="dialog_delete_positive">Radera</string>
+    
+    <string name="dialog_delete_negative">Avbryt</string>
+    
+    <string name="login_options_menu">Inloggningsalternativ</string>
+    
+    <string name="saved_login_hostname_description">Det redigerbara textfältet för inloggningens webbadress.</string>
+    
+    <string name="saved_login_username_description">Det redigerbara textfältet för användarnamnet för inloggningen.</string>
+    
+    <string name="saved_login_password_description">Det redigerbara textfältet för lösenordet för inloggningen.</string>
+    
+    <string name="save_changes_to_login">Spara ändringarna för att logga in.</string>
+    
+    <string name="edit">Redigera</string>
+    
+    <string name="add_login">Lägg till ny inloggning</string>
+    
+    <string name="saved_login_password_required">Lösenord krävs</string>
+    
+    <string name="saved_login_username_required">Användarnamn krävs</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Värdnamn krävs</string>
+    
+    <string name="voice_search_content_description">Röstsökning</string>
+    
+    <string name="voice_search_explainer">Tala nu</string>
+    
+    <string name="saved_login_duplicate">Det finns redan en inloggning med det användarnamnet</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">Webbadressen måste innehålla "https://" eller "http://"</string>
+    
+    <string name="add_login_hostname_invalid_text_2">Giltigt värdnamn krävs</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">Anslut en annan enhet.</string>
+    
+    <string name="synced_tabs_reauth">Vänligen autentisera igen.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">Vänligen aktivera synkronisering av flikar.</string>
+    
+    <string name="synced_tabs_no_tabs">Du har inga flikar öppna i Waterfox på dina andra enheter.</string>
+    
+    <string name="synced_tabs_sign_in_message">Visa en lista över flikar från dina andra enheter.</string>
+    
+    <string name="synced_tabs_sign_in_button">Logga in för att synkronisera</string>
+    
+    <string name="synced_tabs_no_open_tabs">Inga öppna flikar</string>
+    
+    <string name="synced_tabs_expand_group">Expandera grupp av synkroniserade flikar</string>
+    
+    <string name="synced_tabs_collapse_group">Dölj grupp av synkroniserade flikar</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">Gränsen för genvägar nådd</string>
+    
+    <string name="shortcut_max_limit_content">Ta bort en genväg för att lägga till en ny. Håll kvar pekaren på webbplatsen och välj ta bort.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">OK, jag har det</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">Genvägar</string>
+	
+	<string name="top_sites_rename_dialog_title">Namn</string>
+    
+    <string name="shortcut_name_hint">Namn på genväg</string>
+	
+	<string name="top_sites_rename_dialog_ok">OK</string>
+	
+	<string name="top_sites_rename_dialog_cancel">Avbryt</string>
+    
+    <string name="top_sites_menu_settings">Inställningar</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">Våra sponsorer och din integritet</string>
+    
+    <string name="top_sites_sponsored_label">Sponsrad</string>
+
+    
+    
+    <string name="inactive_tabs_title">Inaktiva flikar</string>
+    
+    <string name="inactive_tabs_delete_all">Stäng alla inaktiva flikar</string>
+    
+    <string name="inactive_tabs_expand_content_description">Expandera inaktiva flikar</string>
+    
+    <string name="inactive_tabs_collapse_content_description">Dölj inaktiva flikar</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Automatisk stängning efter en månad?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox kan stänga flikar som du inte har tittat på under den senaste månaden.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">SLÅ PÅ AUTOMATISK STÄNGNING</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">Automatisk stängning aktiverad</string>
+
+    
+    <string name="default_browser_experiment_card_text">Ställ in länkar från webbplatser, e-post och meddelanden så att de öppnas automatiskt i Waterfox.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">Ta bort</string>
+
+    
+    <string name="radio_preference_info_content_description">Klicka här för mer information</string>
+
+    
+    <string name="action_bar_up_description">Navigera upp</string>
+
+    
+    <string name="privacy_content_close_button_content_description">Nära</string>
+
+    <string name="waterfox_suggest_header">Waterfox föreslår</string>
+</resources>

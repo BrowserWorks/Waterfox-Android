@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla-Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
+    
+    <string name="app_name_private_5">비공개 %s</string>
+    
+    <string name="app_name_private_4">s (비공개)</string>
+
+    
+    
+    <string name="content_description_menu">추가 옵션</string>
+    
+    <string name="content_description_private_browsing_button">비공개 브라우징 사용</string>
+    
+    <string name="content_description_disable_private_browsing_button">비공개 브라우징 사용 중지</string>
+    
+    <string name="search_hint">주소 검색 또는 입력</string>
+    
+    <string name="application_search_hint">검색어 입력</string>
+    
+    <string name="no_open_tabs_description">열려 있는 탭이 여기에 표시됩니다.</string>
+    
+    <string name="no_private_tabs_description">비공개 탭이 여기에 표시됩니다.</string>
+    
+    <string name="tab_tray_multi_select_title">1$d 선택됨</string>
+    
+    <string name="tab_tray_add_new_collection">새 컬렉션 추가</string>
+    
+    <string name="tab_tray_add_new_collection_name">이름</string>
+    
+    <string name="tab_tray_select_collection">컬렉션 선택</string>
+    
+    <string name="tab_tray_close_multiselect_content_description">다중 선택 모드 종료</string>
+    
+    <string name="tab_tray_collection_button_multiselect_content_description">선택한 탭을 컬렉션에 저장</string>
+    
+    <string name="tab_tray_multiselect_selected_content_description">선택됨</string>
+
+    
+    
+    <string name="recently_saved_title">최근 저장</string>
+    
+    <string name="recently_saved_show_all_content_description_2">저장된 모든 북마크 표시</string>
+    
+    <string name="recently_saved_menu_item_remove">제거</string>
+
+    
+    <string name="about_content">1$s는 BrowserWorks에서 만들었습니다.</string>
+
+    
+    
+    <string name="private_browsing_placeholder_description_2">1$s는 비공개 탭을 닫거나 앱을 종료할 때 검색 및 인터넷 사용 기록을 지웁니다. 이렇게 하면 웹사이트나 인터넷 서비스 제공업체에서 익명으로 처리되지는 않지만, 이 장치를 사용하는 다른 사람으로부터 온라인에서 하는 일을 더 쉽게 비공개로 유지할 수 있습니다.</string>
+    <string name="private_browsing_common_myths">비공개 브라우징에 대한 일반적인 오해</string>
+
+    
+    
+    <string name="cfr_message">홈 화면에서 비공개 탭을 여는 바로가기를 추가하세요.</string>
+    
+    <string name="cfr_pos_button_text">바로 가기 추가</string>
+    
+    <string name="cfr_neg_button_text">아니요</string>
+
+    
+    
+    <string name="open_in_app_cfr_info_message_2">앱에서 링크를 자동으로 열도록 %1$을(를) 설정할 수 있습니다.</string>
+    
+    <string name="open_in_app_cfr_positive_button_text">설정으로 이동</string>
+    
+    <string name="open_in_app_cfr_negative_button_text">해산</string>
+
+    
+    <string name="cfr_dismiss_button_default_content_description">해산</string>
+
+    
+    
+    <string name="tcp_cfr_message">가장 강력한 개인정보 보호 기능인 동시에 사이트 간 추적자를 격리하는 기능입니다.</string>
+    
+    <string name="tcp_cfr_learn_more">전체 쿠키 보호에 대해 알아보기</string>
+
+    
+    <string name="camera_permissions_needed_message">카메라 액세스 권한이 필요합니다. Android 설정으로 이동하여 권한을 탭한 다음 허용을 탭합니다.</string>
+    
+    <string name="camera_permissions_needed_positive_button_text">설정으로 이동</string>
+    
+    <string name="camera_permissions_needed_negative_button_text">해산</string>
+
+    
+    <string name="tab_tray_close_tabs_banner_message">지난 일, 주 또는 월에 보지 않은 열린 탭이 자동으로 닫히도록 설정하세요.</string>
+    
+    <string name="tab_tray_close_tabs_banner_positive_button_text">보기 옵션</string>
+    
+    <string name="tab_tray_close_tabs_banner_negative_button_text">해산</string>
+    
+    <string name="tab_tray_inactive_onboarding_message">2주 동안 보지 않은 탭은 여기로 이동합니다.</string>
+    
+    <string name="tab_tray_inactive_onboarding_button_text">설정에서 끄기</string>
+    
+    <string name="tab_tray_inactive_auto_close_title">한 달 후 자동 종료?</string>
+    
+    <string name="tab_tray_inactive_auto_close_body_2">1$는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
+    
+    <string name="tab_tray_inactive_auto_close_button_content_description">닫기</string>
+
+    
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">자동 닫기 켜기</string>
+
+
+    
+    
+    <string name="home_screen_shortcut_open_new_tab_2">새 탭</string>
+    
+    <string name="home_screen_shortcut_open_new_private_tab_2">새로운 비공개 탭</string>
+
+    
+    
+    <string name="recent_tabs_header">다시 참여하기</string>
+    
+    <string name="recent_tabs_show_all">모두 보기</string>
+    
+    <string name="recent_tabs_show_all_content_description_2">최근 탭 모두 표시 버튼</string>
+    
+    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">"%1$s\"에 대한 검색입니다.</string>
+    
+    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">D 사이트</string>
+    
+    <string name="recent_tabs_see_all_synced_tabs_button_text">동기화된 모든 탭 보기</string>
+    
+    <string name="recent_tabs_synced_device_icon_content_description">동기화된 장치</string>
+    
+    <string name="recent_synced_tab_menu_item_remove">제거</string>
+    
+    <string name="recent_tab_menu_item_remove">제거</string>
+
+    
+    
+    <string name="history_metadata_header_2">최근 방문</string>
+    
+    <string name="recently_visited_menu_item_remove">제거</string>
+    
+    <string name="past_explorations_show_all_content_description_2">모든 과거 탐색 표시</string>
+
+    
+    
+    <string name="browser_menu_back">뒤로</string>
+    
+    <string name="browser_menu_forward">앞으로</string>
+    
+    <string name="browser_menu_refresh">새로 고침</string>
+    
+    <string name="browser_menu_stop">중지</string>
+    
+    <string name="browser_menu_add_ons">애드온</string>
+    
+    <string name="no_add_ons">여기에는 추가 기능이 없습니다.</string>
+    
+    <string name="browser_menu_help">도움말</string>
+    
+    <string name="browser_menu_settings">설정</string>
+    
+    <string name="browser_menu_library">라이브러리</string>
+    
+    <string name="browser_menu_desktop_site">데스크톱 사이트</string>
+    
+    <string name="browser_menu_add_to_homescreen">홈 화면에 추가</string>
+    
+    <string name="browser_menu_install_on_homescreen">설치</string>
+    
+    <string name="resync_button_content_description">재동기화</string>
+    
+    <string name="browser_menu_find_in_page">페이지에서 찾기</string>
+    
+    <string name="browser_menu_save_to_collection_2">컬렉션에 저장</string>
+    
+    <string name="browser_menu_share">공유</string>
+    
+    <string name="browser_menu_open_in_waterfox">1$s에서 열기</string>
+    
+    <string name="browser_menu_powered_by">1$s에 의해 구동됨</string>
+    
+    <string name="browser_menu_powered_by2">1$s에 의해 구동됨</string>
+    
+    <string name="browser_menu_read">리더 보기</string>
+    
+    <string name="browser_menu_read_close">리더 보기 닫기</string>
+    
+    <string name="browser_menu_open_app_link">앱에서 열기</string>
+    
+    <string name="browser_menu_customize_reader_view">리더 보기 사용자 지정</string>
+    
+    <string name="browser_menu_add">추가</string>
+    
+    <string name="browser_menu_edit">편집</string>
+    
+    <string name="browser_menu_customize_home_1">홈페이지 사용자 지정</string>
+    
+    
+    <string name="browser_toolbar_home">홈 화면</string>
+
+    
+    
+    <string name="a11y_selected_locale_content_description">선택한 언어</string>
+    
+    <string name="default_locale_text">디바이스 언어 따르기</string>
+    
+    <string name="locale_search_hint">검색 언어</string>
+
+    
+    
+    <string name="search_scan_button">스캔</string>
+    
+    <string name="search_engine_button">검색 엔진</string>
+    
+    <string name="search_shortcuts_engine_settings">검색 엔진 설정</string>
+    
+    <string name="awesomebar_clipboard_title">클립보드에서 링크 채우기</string>
+    
+    <string name="search_suggestions_onboarding_allow_button">허용</string>
+    
+    <string name="search_suggestions_onboarding_do_not_allow_button">허용하지 않음</string>
+    
+    <string name="search_suggestions_onboarding_title">비공개 세션에서 검색 제안을 허용할까요?</string>
+    
+    <string name="search_suggestions_onboarding_text">주소창에 입력한 모든 내용을 기본 검색 엔진과 공유합니다.</string>
+    
+    <string name="search_engine_suggestions_title">검색 %s</string>
+    
+    <string name="search_engine_suggestions_description">주소창에서 바로 검색</string>
+    
+    <string name="search_settings_menu_item">검색 설정</string>
+
+    
+    
+    <string name="onboarding_home_screen_description_2">이제 중단한 부분을 쉽게 다시 시작할 수 있습니다.</string>
+    
+    <string name="onboarding_home_screen_section_home_description_2">열려 있는 탭, 북마크, 검색 기록으로 이동합니다.</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">깔끔하게 정리된 탭</string>
+    
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">개선된 레이아웃과 자동 닫기 탭으로 복잡한 탭을 정리하세요.</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_title_2">최근 검색</string>
+    
+    <string name="onboarding_home_screen_section_useful_history_description_2">홈페이지와 탭에서 최근 검색한 내용을 다시 살펴보세요.</string>
+    
+    <string name="onboarding_home_screen_jump_back_contextual_hint_2">나만의 맞춤형 홈페이지를 만나보세요. 최근 탭, 북마크, 검색 결과가 여기에 표시됩니다.</string>
+    
+    <string name="onboarding_home_welcome_title_2">더욱 개인화된 인터넷에 오신 것을 환영합니다</string>
+    
+    <string name="onboarding_home_welcome_description">더 많은 색상. 더 나은 프라이버시. 이익보다 사람에 대한 헌신.</string>
+    
+    <string name="onboarding_home_sync_title_3">휴대폰에서 노트북으로, 그리고 다시 휴대폰으로 이동</string>
+    
+    <string name="onboarding_home_sync_description">다른 기기에서 탭을 사용하다가 중단한 부분을 이제 홈페이지에서 이어서 사용할 수 있습니다.</string>
+    
+    <string name="onboarding_home_get_started_button">시작하기</string>
+    
+    <string name="onboarding_home_sign_in_button">로그인</string>
+    
+    <string name="onboarding_home_skip_button">건너뛰기</string>
+    
+    <string name="onboarding_home_content_description_close_button">닫기</string>
+
+    
+    
+    <string name="search_widget_content_description_2">새 %1$s 탭 열기</string>
+    
+    <string name="search_widget_text_short">검색</string>
+    
+    <string name="search_widget_text_long">웹 검색</string>
+    
+    <string name="search_widget_voice">음성 검색</string>
+
+    
+    
+    <string name="settings">설정</string>
+    
+    <string name="preferences_category_general">일반</string>
+    
+    <string name="preferences_category_about">정보</string>
+    
+    <string name="preferences_default_search_engine">기본 검색 엔진</string>
+    
+    <string name="preferences_search">검색</string>
+    
+    <string name="preferences_search_address_bar">주소 표시줄</string>
+    
+    <string name="preferences_rate">구글 플레이에서 평가하기</string>
+    
+    <string name="preferences_about">1$s 정보</string>
+    
+    <string name="preferences_set_as_default_browser">기본 브라우저로 설정</string>
+    
+    <string name="preferences_category_advanced">고급</string>
+    
+    <string name="preferences_category_privacy_security">개인정보 보호 및 보안</string>
+    
+    <string name="preferences_site_permissions">사이트 권한</string>
+    
+    <string name="preferences_private_browsing_options">비공개 브라우징</string>
+    
+    <string name="preferences_open_links_in_a_private_tab">비공개 탭에서 링크 열기</string>
+    
+    <string name="preferences_allow_screenshots_in_private_mode">비공개 브라우징에서 스크린샷 허용</string>
+    
+    <string name="preferences_screenshots_in_private_mode_disclaimer">허용된 경우, 여러 개의 앱이 열려 있을 때 비공개 탭도 표시됩니다.</string>
+    
+    <string name="preferences_add_private_browsing_shortcut">비공개 브라우징 바로 가기 추가</string>
+    
+    <string name="preferences_https_only_title">HTTPS 전용 모드</string>
+    
+    <string name="preferences_https_only_summary">보안 강화를 위해 HTTPS 암호화 프로토콜을 사용하는 사이트에 자동으로 연결을 시도합니다.</string>
+    
+    <string name="preferences_https_only_on">켜짐</string>
+    
+    <string name="preferences_https_only_off">꺼짐</string>
+    
+    <string name="preferences_http_only_learn_more">자세히 알아보기</string>
+    
+    <string name="preferences_https_only_in_all_tabs">모든 탭에서 사용 설정</string>
+    
+    <string name="preferences_https_only_in_private_tabs">비공개 탭에서만 사용 설정</string>
+    
+    <string name="errorpage_httpsonly_title">보안 사이트를 사용할 수 없음</string>
+    
+    <string name="errorpage_httpsonly_message_title">대부분의 경우 해당 웹사이트는 단순히 HTTPS를 지원하지 않습니다.</string>
+    
+    <string name="errorpage_httpsonly_message_summary">그러나 공격자가 개입되었을 가능성도 있습니다. 웹사이트를 계속 이용할 경우 민감한 정보를 입력하지 마세요. 계속 진행하면 해당 사이트에 대한 HTTPS 전용 모드가 일시적으로 해제됩니다.</string>
+    
+    <string name="preferences_accessibility">접근성</string>
+    
+    <string name="preferences_override_fxa_server">사용자 지정 워터폭스 계정 서버</string>
+    
+    <string name="preferences_override_sync_tokenserver">사용자 지정 동기화 서버</string>
+    
+    <string name="toast_override_fxa_sync_server_done">워터폭스 계정/동기화 서버가 수정되었습니다. 변경 사항을 적용하기 위해 애플리케이션을 종료하는 중...</string>
+    
+    <string name="preferences_category_account">계정</string>
+    
+    <string name="preferences_toolbar">도구 모음</string>
+    
+    <string name="preferences_theme">테마</string>
+    
+    <string name="preferences_home_2">홈페이지</string>
+    
+    <string name="preferences_gestures">제스처</string>
+    
+    <string name="preferences_customize">사용자 지정</string>
+    
+    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">워터폭스 계정으로 북마크, 기록 등을 동기화하세요.</string>
+    
+    <string name="preferences_sign_in_description_2">로그인하여 탭, 북마크, 비밀번호 등을 동기화하세요.</string>
+    
+    <string name="preferences_account_default_name">워터폭스 계정</string>
+    
+    <string name="preferences_account_sync_error">다시 연결하여 동기화 재개</string>
+    
+    <string name="preferences_language">언어</string>
+    
+    <string name="preferences_remote_debugging">USB를 통한 원격 디버깅</string>
+    
+    <string name="preferences_show_search_engines">검색 엔진 표시</string>
+    
+    <string name="preferences_show_search_suggestions">검색 제안 표시</string>
+    
+    <string name="preferences_show_voice_search">음성 검색 표시</string>
+    
+    <string name="preferences_show_search_suggestions_in_private">비공개 세션에서 표시</string>
+    
+    <string name="preferences_show_clipboard_suggestions">클립보드 제안 표시</string>
+    
+    <string name="preferences_search_browsing_history">인터넷 사용 기록 검색</string>
+    
+    <string name="preferences_search_bookmarks">북마크 검색</string>
+    
+    <string name="preferences_search_synced_tabs">동기화된 탭 검색</string>
+    
+    <string name="preferences_account_settings">계정 설정</string>
+    
+    <string name="preferences_enable_autocomplete_urls">URL 자동 완성</string>
+    
+    <string name="preferences_open_links_in_apps">앱에서 링크 열기</string>
+    
+    <string name="preferences_external_download_manager">외부 다운로드 관리자</string>
+    
+    <string name="preferences_addons">애드온</string>
+    
+    <string name="preferences_notifications">알림</string>
+
+    
+    
+    <string name="preferences_customize_amo_collection">사용자 지정 애드온 컬렉션</string>
+    
+    <string name="customize_addon_collection_ok">확인</string>
+    
+    <string name="customize_addon_collection_cancel">취소</string>
+    
+    <string name="customize_addon_collection_hint">컬렉션 이름</string>
+    
+    <string name="customize_addon_collection_user_hint">컬렉션 소유자(사용자 ID)</string>
+    
+    <string name="toast_customize_addon_collection_done">애드온 컬렉션이 수정되었습니다. 애플리케이션을 종료하여 변경 사항을 적용하는 중...</string>
+
+    
+    
+    <string name="customize_toggle_jump_back_in">다시 참여하기</string>
+    
+    <string name="customize_toggle_recent_bookmarks">최근 북마크</string>
+    
+    <string name="customize_toggle_recently_visited">최근 방문</string>
+    
+    <string name="customize_wallpapers">배경 화면</string>
+    
+    <string name="customize_toggle_contile">스폰서 바로 가기</string>
+
+    
+    
+    <string name="wallpapers_item_name_content_description">배경 화면 항목: %1$s</string>
+    
+    <string name="wallpaper_updated_snackbar_message">배경화면이 업데이트되었습니다!</string>
+    
+    <string name="wallpaper_updated_snackbar_action">보기</string>
+    
+    <string name="wallpaper_tap_to_change_switch_label_1">워터폭스 홈페이지 로고를 탭하여 배경화면 변경하기</string>
+    
+    <string name="wallpaper_logo_content_description">워터폭스 로고 - 배경화면, 버튼 변경하기</string>
+
+    
+    
+    <string name="addon_not_supported_error">애드온은 지원되지 않습니다.</string>
+    
+    <string name="addon_already_installed">애드온이 이미 설치되어 있습니다.</string>
+
+    
+    
+    <string name="preferences_sync_now">지금 동기화</string>
+    
+    <string name="preferences_sync_category">동기화할 항목 선택</string>
+    
+    <string name="preferences_sync_history">역사</string>
+    
+    <string name="preferences_sync_bookmarks">북마크</string>
+    
+    <string name="preferences_sync_logins">로그인</string>
+    
+    <string name="preferences_sync_tabs_2">탭 열기</string>
+    
+    <string name="preferences_sign_out">로그아웃</string>
+    
+    <string name="preferences_sync_device_name">장치 이름</string>
+    
+    <string name="empty_device_name_error">장치 이름은 비워 둘 수 없습니다.</string>
+    
+    <string name="sync_syncing_in_progress">동기화...</string>
+    
+    <string name="sync_failed_summary">동기화에 실패했습니다. 마지막 성공: %s</string>
+    
+    <string name="sync_failed_never_synced_summary">동기화에 실패했습니다. 마지막 동기화: 없음</string>
+    
+    <string name="sync_last_synced_summary">마지막 동기화: %s</string>
+    
+    <string name="sync_never_synced_summary">마지막 동기화: 없음</string>
+    
+    <string name="default_device_name_2">2$s %3$s의 %1$s</string>
+    
+    <string name="preferences_sync_credit_cards">신용 카드</string>
+    
+    <string name="preferences_sync_address">주소</string>
+
+    
+    
+    <string name="fxa_received_tab_channel_name">받은 탭</string>
+    
+    <string name="fxa_received_tab_channel_description">다른 Waterfox 기기에서 받은 탭에 대한 알림.</string>
+    
+    <string name="fxa_tab_received_notification_name">탭 수신됨</string>
+    
+    <string name="fxa_tab_received_from_notification_name">에서 탭</string>
+
+    
+    
+    <string name="preferences_tracking_protection_exceptions">예외</string>
+    
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">모든 사이트에 대해 켜기</string>
+    
+    <string name="exceptions_empty_message_description">예외를 사용하면 선택한 사이트에 대한 추적 보호를 비활성화할 수 있습니다.</string>
+    
+    <string name="exceptions_empty_message_learn_more_link">자세히 알아보기</string>
+
+    
+    
+    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">동기화 켜기</string>
+    
+    <string name="preferences_sync_2">데이터 동기화 및 저장</string>
+    
+    <string name="preferences_sync_sign_in_to_reconnect">다시 연결하려면 로그인</string>
+    
+    <string name="preferences_sync_remove_account">계정 삭제</string>
+
+    
+    
+    <string name="pair_instructions_2">&lt;b&gt;firefox.com/pair&lt;/b&gt;에 표시된 QR 코드를 스캔합니다.</string>
+
+    
+    
+    <string name="preference_top_toolbar">Top</string>
+    
+    <string name="preference_bottom_toolbar">하단</string>
+
+    
+    
+    <string name="preference_light_theme">빛</string>
+    
+    <string name="preference_dark_theme">Dark</string>
+    
+    <string name="preference_auto_battery_theme">배터리 세이버로 설정</string>
+    
+    <string name="preference_follow_device_theme">디바이스 테마 팔로우</string>
+
+    
+    
+    <string name="preference_gestures_website_pull_to_refresh">당겨서 새로 고침</string>
+    
+    <string name="preference_gestures_dynamic_toolbar">스크롤하여 도구 모음 숨기기</string>
+    
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">탭을 전환하려면 도구 모음을 옆으로 스와이프하세요.</string>
+    
+    <string name="preference_gestures_swipe_toolbar_show_tabs">도구 모음을 위로 스와이프하여 탭 열기</string>
+
+    
+    
+    <string name="library_downloads">다운로드</string>
+    
+    <string name="library_bookmarks">북마크</string>
+    
+    <string name="library_desktop_bookmarks_root">데스크톱 북마크</string>
+    
+    <string name="library_desktop_bookmarks_menu">북마크 메뉴</string>
+    
+    <string name="library_desktop_bookmarks_toolbar">북마크 도구 모음</string>
+    
+    <string name="library_desktop_bookmarks_unfiled">기타 북마크</string>
+    
+    <string name="library_history">역사</string>
+    
+    <string name="library_new_tab">새 탭</string>
+    
+    <string name="settings_title">설정</string>
+    
+    <string name="content_description_close_button">닫기</string>
+
+    
+    <string name="history_search_group_site">D 사이트</string>
+    
+    <string name="history_search_group_sites">D 사이트</string>
+
+    
+    <string name="library_recently_closed_tabs">최근 닫은 탭</string>
+    
+    <string name="recently_closed_show_full_history">전체 기록 보기</string>
+    
+    <string name="recently_closed_tabs">D 탭</string>
+    
+    <string name="recently_closed_tab">D 탭</string>
+    
+    <string name="recently_closed_empty_message">최근에 닫은 탭이 없습니다.</string>
+
+    
+    
+    <string name="preferences_tabs">탭</string>
+    
+    <string name="preferences_tab_view">탭 보기</string>
+    
+    <string name="tab_view_list">목록</string>
+    
+    <string name="tab_view_grid">그리드</string>
+    
+    <string name="preferences_close_tabs">탭 닫기</string>
+    
+    <string name="close_tabs_manually">절대로</string>
+    
+    <string name="close_tabs_after_one_day">하루 후</string>
+    
+    <string name="close_tabs_after_one_week">1주일 후</string>
+    
+    <string name="close_tabs_after_one_month">한 달 후</string>
+    
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">열려 있는 탭 자동 닫기</string>
+
+    
+    
+    <string name="preferences_opening_screen">시작 화면</string>
+    
+    <string name="opening_screen_homepage">홈페이지</string>
+    
+    <string name="opening_screen_last_tab">마지막 탭</string>
+    
+    <string name="opening_screen_after_four_hours_of_inactivity">4시간 동안 사용하지 않은 홈페이지</string>
+    
+    <string name="close_tabs_manually_summary">수동으로 닫기</string>
+    
+    <string name="close_tabs_after_one_day_summary">하루 후 마감</string>
+    
+    <string name="close_tabs_after_one_week_summary">1주일 후 마감</string>
+    
+    <string name="close_tabs_after_one_month_summary">한 달 후 종료</string>
+
+    
+    
+    <string name="preferences_inactive_tabs">이전 탭을 비활성 상태로 전환</string>
+    
+    <string name="preferences_inactive_tabs_title">2주 동안 보지 않은 탭은 비활성 섹션으로 이동합니다.</string>
+
+    
+    
+    <string name="tab_header_label">탭 열기</string>
+    
+    <string name="tabs_header_private_tabs_title">비공개 탭</string>
+    
+    <string name="tabs_header_synced_tabs_title">동기화된 탭</string>
+    
+    <string name="add_tab">추가 탭</string>
+    
+    <string name="add_private_tab">비공개 탭 추가</string>
+    
+    <string name="tab_drawer_fab_content">비공개</string>
+    
+    <string name="tab_drawer_fab_sync">동기화</string>
+    
+    <string name="tab_tray_menu_item_share">모든 탭 공유</string>
+    
+    <string name="tab_tray_menu_recently_closed">최근 닫은 탭</string>
+    
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">최근 폐쇄</string>
+    
+    <string name="tab_tray_menu_account_settings">계정 설정</string>
+    
+    <string name="tab_tray_menu_tab_settings">탭 설정</string>
+    
+    <string name="tab_tray_menu_item_close">모든 탭 닫기</string>
+    
+    <string name="tab_tray_multiselect_menu_item_bookmark">북마크</string>
+    
+    <string name="tab_tray_multiselect_menu_item_close">닫기</string>
+    
+    <string name="tab_tray_multiselect_share_content_description">선택한 탭 공유</string>
+    
+    <string name="tab_tray_multiselect_menu_content_description">선택한 탭 메뉴</string>
+    
+    <string name="remove_tab_from_collection">컬렉션에서 탭 제거</string>
+    
+    <string name="tabs_tray_select_tabs">탭 선택</string>
+    
+    <string name="close_tab">탭 닫기</string>
+    
+    <string name="close_tab_title">탭 닫기 %s</string>
+    
+    <string name="open_tabs_menu">탭 메뉴 열기</string>
+    
+    <string name="tabs_menu_save_to_collection1">컬렉션에 탭 저장</string>
+    
+    <string name="collection_delete">컬렉션 삭제</string>
+    
+    <string name="collection_rename">컬렉션 이름 바꾸기</string>
+    
+    <string name="collection_open_tabs">탭 열기</string>
+    
+    <string name="collection_name_hint">컬렉션 이름</string>
+	
+	<string name="rename_top_site">이름 바꾸기</string>
+	
+	<string name="remove_top_site">제거</string>
+    
+    <string name="delete_from_history">기록에서 삭제</string>
+    
+    <string name="pwa_site_controls_title_private">1$s(개인 모드)</string>
+    
+    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">기타 탭</string>
+
+    
+    
+    <string name="history_search_1">검색어 입력</string>
+    
+    <string name="history_delete_all">기록 삭제</string>
+    
+    <string name="history_delete_multiple_items_snackbar">기록 삭제됨</string>
+    
+    <string name="history_delete_single_item_snackbar">1$s 삭제됨</string>
+    
+    <string name="history_delete_item">삭제</string>
+    
+    <string name="history_multi_select_title">1$d 선택됨</string>
+    
+    <string name="history_today">오늘</string>
+    
+    <string name="history_yesterday">어제</string>
+    
+    <string name="history_7_days">지난 7일</string>
+    
+    <string name="history_30_days">지난 30일</string>
+    
+    <string name="history_older">이전</string>
+    
+    <string name="history_empty_message">여기에 기록이 없습니다.</string>
+
+    
+    
+    <string name="download_delete_multiple_items_snackbar_1">다운로드 제거</string>
+    
+    <string name="download_delete_single_item_snackbar">1$s 제거</string>
+    
+    <string name="download_empty_message_1">다운로드한 파일 없음</string>
+    
+    <string name="download_multi_select_title">1$d 선택됨</string>
+    
+    <string name="download_delete_item_1">제거</string>
+
+
+    
+    
+    <string name="tab_crash_title_2">죄송합니다. 1$이(가) 해당 페이지를 로드할 수 없습니다.</string>
+    
+    <string name="tab_crash_send_report">브라우저웍스에 충돌 보고서 보내기</string>
+    
+    <string name="tab_crash_close">탭 닫기</string>
+    
+    <string name="tab_crash_restore">복원 탭</string>
+
+    
+    
+    <string name="bookmark_delete_folder_confirmation_dialog">이 폴더를 삭제하시겠습니까?</string>
+    
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">를 입력하면 선택한 항목이 삭제됩니다.</string>
+    
+    <string name="bookmark_delete_negative">취소</string>
+    
+    <string name="bookmark_add_folder">폴더 추가</string>
+    
+    <string name="bookmark_saved_snackbar">북마크 저장!</string>
+    
+    <string name="edit_bookmark_snackbar_action">편집</string>
+    
+    <string name="bookmark_menu_edit_button">편집</string>
+    
+    <string name="bookmark_menu_copy_button">복사</string>
+    
+    <string name="bookmark_menu_share_button">공유</string>
+    
+    <string name="bookmark_menu_open_in_new_tab_button">새 탭에서 열기</string>
+    
+    <string name="bookmark_menu_open_in_private_tab_button">비공개 탭에서 열기</string>
+    
+    <string name="bookmark_menu_delete_button">삭제</string>
+    
+    <string name="bookmark_menu_save_button">저장</string>
+    
+    <string name="bookmarks_multi_select_title">1$d 선택됨</string>
+    
+    <string name="edit_bookmark_fragment_title">북마크 편집</string>
+    
+    <string name="edit_bookmark_folder_fragment_title">폴더 수정</string>
+    
+    <string name="bookmark_sign_in_button">동기화된 북마크를 보려면 로그인하세요.</string>
+    
+    <string name="bookmark_url_label">URL</string>
+    
+    <string name="bookmark_folder_label">폴더</string>
+    
+    <string name="bookmark_name_label">이름</string>
+    
+    <string name="bookmark_add_folder_fragment_label">폴더 추가</string>
+    
+    <string name="bookmark_select_folder_fragment_label">폴더 선택</string>
+    
+    <string name="bookmark_empty_title_error">제목이 있어야 합니다.</string>
+    
+    <string name="bookmark_invalid_url_error">잘못된 URL</string>
+    
+    <string name="bookmarks_empty_message">여기에는 북마크가 없습니다.</string>
+    
+    <string name="bookmark_deletion_snackbar_message">1$s 삭제됨</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_2">북마크 삭제됨</string>
+    
+    <string name="bookmark_deletion_multiple_snackbar_message_3">선택한 폴더 삭제하기</string>
+    
+    <string name="bookmark_undo_deletion">UNDO</string>
+    
+    <string name="bookmark_search">검색어 입력</string>
+
+    
+    
+    <string name="phone_feature_go_to_settings">설정으로 이동</string>
+    
+    <string name="quick_settings_sheet">빠른 설정 시트</string>
+    
+    <string name="phone_feature_recommended">추천</string>
+    
+    <string name="clear_permissions">권한 지우기</string>
+    
+    <string name="clear_permissions_positive">확인</string>
+    
+    <string name="clear_permissions_negative">취소</string>
+    
+    <string name="clear_permission">권한 지우기</string>
+    
+    <string name="clear_permission_positive">확인</string>
+    
+    <string name="clear_permission_negative">취소</string>
+    
+    <string name="clear_permissions_on_all_sites">모든 사이트에 대한 권한 지우기</string>
+    
+    <string name="preference_browser_feature_autoplay">자동 재생</string>
+    
+    <string name="preference_phone_feature_camera">카메라</string>
+    
+    <string name="preference_phone_feature_microphone">마이크</string>
+    
+    <string name="preference_phone_feature_location">위치</string>
+    
+    <string name="preference_phone_feature_notification">알림</string>
+    
+    <string name="preference_phone_feature_persistent_storage">영구 스토리지</string>
+    
+    <string name="preference_phone_feature_cross_origin_storage_access">사이트 간 쿠키</string>
+    
+    <string name="preference_phone_feature_media_key_system_access">DRM 제어 콘텐츠</string>
+    
+    <string name="preference_option_phone_feature_ask_to_allow">허용 요청</string>
+    
+    <string name="preference_option_phone_feature_blocked">차단됨</string>
+    
+    <string name="preference_option_phone_feature_allowed">허용됨</string>
+    
+    <string name="phone_feature_blocked_by_android">Android에 의해 차단됨</string>
+    
+    <string name="preference_exceptions">예외</string>
+    
+    <string name="tracking_protection_on">켜짐</string>
+    
+    <string name="tracking_protection_off">꺼짐</string>
+    
+    <string name="preference_option_autoplay_allowed2">오디오 및 비디오 허용</string>
+    
+    <string name="quick_setting_option_autoplay_allowed">오디오 및 비디오 허용</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_only2">셀룰러 데이터에서 오디오 및 비디오만 차단</string>
+    
+    <string name="preference_option_autoplay_allowed_wifi_subtext">오디오 및 비디오는 Wi-Fi에서 재생됩니다.</string>
+    
+    <string name="preference_option_autoplay_block_audio2">오디오만 차단</string>
+    
+    <string name="quick_setting_option_autoplay_block_audio">오디오만 차단</string>
+    
+    <string name="preference_option_autoplay_blocked3">오디오 및 비디오 차단</string>
+    
+    <string name="quick_setting_option_autoplay_blocked">오디오 및 비디오 차단</string>
+    
+    <string name="delete_browsing_data_quit_on">켜짐</string>
+    
+    <string name="delete_browsing_data_quit_off">꺼짐</string>
+    
+    <string name="https_only_on">켜짐</string>
+    
+    <string name="https_only_off">꺼짐</string>
+
+    
+    
+    <string name="collections_header">컬렉션</string>
+    
+    <string name="collection_menu_button_content_description">컬렉션 메뉴</string>
+    
+    <string name="no_collections_description2">중요한 정보를 모아서 나중에 빠르게 액세스할 수 있도록 유사한 검색, 사이트, 탭을 그룹화하세요.</string>
+    
+    <string name="create_collection_select_tabs">탭 선택</string>
+    
+    <string name="create_collection_select_collection">컬렉션 선택</string>
+    
+    <string name="create_collection_name_collection">이름 수집</string>
+    
+    <string name="create_collection_add_new_collection">새 컬렉션 추가</string>
+    
+    <string name="create_collection_select_all">모두 선택</string>
+    
+    <string name="create_collection_deselect_all">모두 선택 해제</string>
+    
+    <string name="create_collection_save_to_collection_empty">저장할 탭 선택</string>
+    
+    <string name="create_collection_save_to_collection_tabs_selected">D 탭 선택됨</string>
+    
+    <string name="create_collection_save_to_collection_tab_selected">D 탭 선택됨</string>
+    
+    <string name="create_collection_tabs_saved">탭이 저장되었습니다!</string>
+    
+    <string name="create_collection_tabs_saved_new_collection">컬렉션이 저장되었습니다!</string>
+    
+    <string name="create_collection_tab_saved">탭이 저장되었습니다!</string>
+    
+    <string name="create_collection_close">닫기</string>
+    
+    <string name="create_collection_save">저장</string>
+    
+    <string name="create_collection_view">보기</string>
+    
+    <string name="create_collection_positive">확인</string>
+    
+    <string name="create_collection_negative">취소</string>
+
+    
+    <string name="create_collection_default_name">컬렉션 %d</string>
+
+    
+    
+    <string name="share_header_2">공유</string>
+    
+    <string name="share_button_content_description">공유</string>
+    
+    <string name="share_device_subheader">장치로 보내기</string>
+    
+    <string name="share_link_all_apps_subheader">모든 작업</string>
+    
+    <string name="share_link_recent_apps_subheader">최근 사용</string>
+    
+    <string name="share_copy_link_to_clipboard">클립보드에 복사</string>
+    
+    <string name="toast_copy_link_to_clipboard">클립보드에 복사</string>
+    
+    <string name="sync_menu_sign_in">로그인하여 동기화하기</string>
+    
+    <string name="sync_sign_in">동기화에 로그인</string>
+    
+    <string name="sync_send_to_all">모든 디바이스로 보내기</string>
+    
+    <string name="sync_reconnect">동기화에 다시 연결</string>
+    
+    <string name="sync_offline">오프라인</string>
+    
+    <string name="sync_connect_device">다른 장치 연결</string>
+    
+    <string name="sync_connect_device_dialog">탭을 보내려면 하나 이상의 다른 기기에서 Waterfox에 로그인하세요.</string>
+    
+    <string name="sync_confirmation_button">알겠습니다</string>
+    
+    <string name="share_error_snackbar">이 앱에 공유할 수 없습니다.</string>
+    
+    <string name="sync_add_new_device_title">장치로 보내기</string>
+    
+    <string name="sync_add_new_device_message">연결된 장치 없음</string>
+    
+    <string name="sync_add_new_device_learn_button">탭 전송에 대해 알아보기...</string>
+    
+    <string name="sync_add_new_device_connect_button">다른 장치 연결...</string>
+
+    
+    
+    <string name="notification_pbm_delete_text_2">비공개 탭 닫기</string>
+    
+    <string name="notification_marketing_channel_name">마케팅</string>
+    
+    <string name="notification_default_browser_title">1$s는 빠르고 비공개입니다.</string>
+    
+    <string name="notification_default_browser_text">1$를 기본 브라우저로 설정</string>
+
+    
+    
+    <string name="snackbar_collection_deleted">컬렉션 삭제됨</string>
+    
+    <string name="snackbar_collection_renamed">컬렉션 이름 변경</string>
+    
+    <string name="snackbar_tab_closed">탭 닫힘</string>
+    
+    <string name="snackbar_tabs_closed">탭이 닫힘</string>
+    
+    <string name="snackbar_message_bookmarks_saved">북마크가 저장되었습니다!</string>
+    
+    <string name="snackbar_added_to_shortcuts">바로 가기에 추가되었습니다!</string>
+    
+    <string name="snackbar_private_tab_closed">비공개 탭 닫힘</string>
+    
+    <string name="snackbar_private_tabs_closed">비공개 탭 닫힘</string>
+    
+    <string name="snackbar_deleted_undo">UNDO</string>
+    
+    <string name="snackbar_top_site_removed">사이트 제거</string>
+    
+    <string name="qr_scanner_confirmation_dialog_message">1$s가 %2$s를 열 수 있도록 허용</string>
+    
+    <string name="qr_scanner_dialog_positive">허용</string>
+    
+    <string name="qr_scanner_dialog_negative">거부</string>
+    
+    <string name="qr_scanner_dialog_invalid">웹 주소가 유효하지 않습니다.</string>
+    
+    <string name="qr_scanner_dialog_invalid_ok">확인</string>
+    
+    <string name="tab_collection_dialog_message">1$s를 삭제하시겠습니까?</string>
+    
+    <string name="delete_tab_and_collection_dialog_message">이 탭을 삭제하면 전체 컬렉션이 삭제됩니다. 언제든지 새 컬렉션을 만들 수 있습니다.</string>
+    
+    <string name="delete_tab_and_collection_dialog_title">1$s를 삭제하시겠습니까?</string>
+    
+    <string name="tab_collection_dialog_positive">삭제</string>
+    
+    <string name="full_screen_notification">전체 화면 모드로 전환</string>
+    
+    <string name="url_copied">URL 복사됨</string>
+    
+    <string name="accessibility_text_size_sample_text_1">샘플 텍스트입니다. 이 설정으로 크기를 늘리거나 줄일 때 텍스트가 어떻게 표시되는지 보여주기 위한 것입니다.</string>
+    
+    <string name="preference_accessibility_text_size_summary">웹사이트의 텍스트를 크게 또는 작게 만들기</string>
+    
+    <string name="preference_accessibility_font_size_title">글꼴 크기</string>
+
+    
+    <string name="preference_accessibility_auto_size_2">자동 글꼴 크기 조정</string>
+    
+    <string name="preference_accessibility_auto_size_summary">글꼴 크기는 Android 설정과 일치합니다. 글꼴 크기를 관리하려면 여기에서 비활성화합니다.</string>
+
+    
+    <string name="preferences_delete_browsing_data">검색 데이터 삭제</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_title_2">탭 열기</string>
+    
+    <string name="preferences_delete_browsing_data_tabs_subtitle">D 탭</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_title">검색 기록 및 사이트 데이터</string>
+    
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">D 주소</string>
+    
+    <string name="preferences_delete_browsing_data_cookies">쿠키</string>
+    
+    <string name="preferences_delete_browsing_data_cookies_subtitle">대부분의 사이트에서 로그아웃됩니다.</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files">캐시된 이미지 및 파일</string>
+    
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">저장 공간 확보</string>
+    
+    <string name="preferences_delete_browsing_data_site_permissions">사이트 권한</string>
+    
+    <string name="preferences_delete_browsing_data_downloads">다운로드</string>
+    
+    <string name="preferences_delete_browsing_data_button">검색 데이터 삭제</string>
+    
+    <string name="preferences_delete_browsing_data_on_quit">종료 시 브라우징 데이터 삭제</string>
+    
+    <string name="preference_summary_delete_browsing_data_on_quit_2">메인 메뉴에서 \'종료\'를 선택하면 검색 데이터가 자동으로 삭제됩니다.</string>
+    
+    <string name="delete_browsing_data_on_quit_action">종료</string>
+
+    
+    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">이렇게 하면 모든 검색 데이터가 삭제됩니다.</string>
+    
+    <string name="delete_history_prompt_title">삭제할 시간 범위</string>
+    
+    <string name="delete_history_prompt_body">검색 기록(다른 기기에서 동기화된 기록 포함), 쿠키 및 기타 검색 데이터를 제거합니다.</string>
+    
+    <string name="delete_history_prompt_button_last_hour">지난 시간</string>
+    
+    <string name="delete_history_prompt_button_today_and_yesterday">오늘과 어제</string>
+    
+    <string name="delete_history_prompt_button_everything">모든 것</string>
+
+    
+    <string name="delete_browsing_data_prompt_message_3">를 입력하면 선택한 검색 데이터가 삭제됩니다.</string>
+    
+    <string name="delete_browsing_data_prompt_cancel">취소</string>
+    
+    <string name="delete_browsing_data_prompt_allow">삭제</string>
+    
+    <string name="preferences_delete_browsing_data_snackbar">브라우징 데이터 삭제</string>
+    
+    <string name="deleting_browsing_data_in_progress">브라우징 데이터 삭제하기...</string>
+
+    
+    <string name="delete_all_history_group_prompt_message">"%s"의 모든 사이트 삭제</string>
+    
+    <string name="delete_history_group_prompt_cancel">취소</string>
+    
+    <string name="delete_history_group_prompt_allow">삭제</string>
+    
+    <string name="delete_history_group_snackbar">그룹 삭제됨</string>
+
+    
+    
+    <string name="onboarding_header_2">더욱 안전한 웹에 오신 것을 환영합니다.</string>
+    
+    <string name="onboarding_message">풀뿌리 독립 브라우저입니다.</string>
+    
+    <string name="onboarding_account_sign_in_header">중단한 부분부터 다시 시작하기</string>
+    
+    <string name="onboarding_manual_sign_in_description">여러 기기에서 탭과 비밀번호를 동기화하여 원활한 화면 전환이 가능합니다.</string>
+    
+    <string name="onboarding_waterfox_account_sign_in">로그인</string>
+    
+    <string name="onboarding_waterfox_account_sync_is_on">동기화가 켜져 있습니다.</string>
+    
+    <string name="onboarding_tracking_protection_header">기본적으로 제공되는 개인 정보 보호</string>
+    
+    <string name="onboarding_tracking_protection_description">트래커가 쿠키를 사용하여 여러 사이트에서 사용자를 스토킹하는 것을 차단하는 토탈 쿠키 보호 기능을 제공합니다.</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_2">표준(기본값)</string>
+    
+    <string name="onboarding_tracking_protection_standard_button_description_3">개인 정보 보호와 성능의 균형을 맞췄습니다. 페이지가 정상적으로 로드됩니다.</string>
+    
+    <string name="onboarding_tracking_protection_strict_option">Strict</string>
+    
+    <string name="onboarding_tracking_protection_strict_button_description_3">더 많은 트래커를 차단하여 페이지가 더 빨리 로드되지만 일부 페이지 기능이 중단될 수 있습니다.</string>
+    
+    <string name="onboarding_toolbar_placement_header_1">툴바 배치 선택</string>
+    
+    <string name="onboarding_toolbar_placement_description">하단에 그대로 두거나 상단으로 이동합니다.</string>
+    
+    <string name="onboarding_privacy_notice_header_1">데이터 관리</string>
+    
+    <string name="onboarding_privacy_notice_description">워터폭스는 텔레메트리를 수집하지 않으며, 사용자가 데이터를 제어할 수 있습니다.</string>
+    
+    <string name="onboarding_privacy_notice_read_button">개인정보 취급방침 읽기</string>
+    
+    <string name="onboarding_conclusion_header">놀라운 인터넷을 열 준비가 되셨나요?</string>
+    
+    <string name="onboarding_finish">검색 시작</string>
+
+    
+    
+    <string name="onboarding_theme_picker_header">테마 선택</string>
+    
+    <string name="onboarding_theme_picker_description_2">다크 모드로 배터리와 시력을 보호하세요.</string>
+    
+    <string name="onboarding_theme_automatic_title">자동</string>
+    
+    <string name="onboarding_theme_automatic_summary">디바이스 설정에 맞게 조정</string>
+    
+    <string name="onboarding_theme_dark_title">어두운 테마</string>
+    
+    <string name="onboarding_theme_light_title">조명 테마</string>
+
+    
+    <string name="sync_sent_tabs_snackbar">탭이 전송되었습니다!</string>
+    
+    <string name="sync_sent_tab_snackbar">탭을 보냈습니다!</string>
+    
+    <string name="sync_sent_tab_error_snackbar">보낼 수 없음</string>
+    
+    <string name="sync_sent_tab_error_snackbar_action">회신</string>
+    
+    <string name="sync_scan_code">코드 스캔</string>
+    
+    <string name="sign_in_instructions">Waterfox는 모바일과 데스크톱 간에 데이터를 동기화하기 위해 Mozilla 계정에 의존합니다.&lt;br&gt; 컴퓨터에서 Waterfox를 열고 &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla는 Waterfox와 어떠한 제휴 관계도 없습니다.&lt;/i&gt;.</string>
+    
+    <string name="sign_in_ready_for_scan">스캔 준비 완료</string>
+    
+    <string name="sign_in_with_camera">카메라로 로그인</string>
+    
+    <string name="sign_in_with_email">대신 이메일 사용</string>
+    
+    <string name="sign_in_create_account_text">계정이 없으신가요? &lt;u&gt;하나를 만들어서 기기 간에 Waterfox를 동기화하세요.</string>
+    
+    <string name="sign_out_confirmation_message_2">%s가 계정과의 동기화를 중지하지만 이 장치에서 검색 데이터를 삭제하지는 않습니다.</string>
+    
+    <string name="sign_out_disconnect">연결 해제</string>
+    
+    <string name="sign_out_cancel">취소</string>
+    
+    <string name="bookmark_cannot_edit_root">기본 폴더를 편집할 수 없음</string>
+
+    
+    
+    <string name="etp_settings">보호 설정</string>
+    
+    <string name="preference_enhanced_tracking_protection">향상된 추적 보호 기능</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_title">팔로우하지 않고 탐색하기</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation">데이터를 안전하게 보호하세요. 를 사용하면 온라인에서 사용자의 활동을 추적하는 가장 일반적인 추적기로부터 사용자를 보호할 수 있습니다.</string>
+    
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">자세히 알아보기</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_default_1">표준(기본값)</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_description_4">개인 정보 보호와 성능의 균형을 맞췄습니다. 페이지가 정상적으로 로드됩니다.</string>
+    
+    <string name="preference_enhanced_tracking_protection_standard_info_button">표준 추적 보호 기능으로 차단되는 항목</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict">Strict</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_description_3">더 많은 트래커를 차단하여 페이지가 더 빨리 로드되지만 일부 페이지 기능이 중단될 수 있습니다.</string>
+    
+    <string name="preference_enhanced_tracking_protection_strict_info_button">엄격한 추적 방지 기능으로 차단되는 항목</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom">사용자 지정</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_description_2">차단할 트래커와 스크립트를 선택합니다.</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_info_button">맞춤 추적 차단 기능으로 차단되는 항목</string>
+    
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies">쿠키</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">크로스 사이트 및 소셜 미디어 트래커</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">방문하지 않은 사이트의 쿠키</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">모든 타사 쿠키(웹사이트가 중단될 수 있음)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">모든 쿠키(웹사이트가 중단될 수 있음)</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">사이트 간 쿠키 분리</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">콘텐츠 추적</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">모든 탭에서</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">비공개 탭에서만</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">크립토마이너</string>
+    
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">지문 인식기</string>
+    
+    <string name="enhanced_tracking_protection_details">세부 정보</string>
+    
+    <string name="enhanced_tracking_protection_blocked">차단됨</string>
+    
+    <string name="enhanced_tracking_protection_allowed">허용됨</string>
+    
+    <string name="etp_social_media_trackers_title">소셜 미디어 트래커</string>
+    
+    <string name="etp_social_media_trackers_description">소셜 네트워크가 웹에서 사용자의 검색 활동을 추적하는 기능을 제한합니다.</string>
+    
+    <string name="etp_cookies_title">사이트 간 추적 쿠키</string>
+    
+    <string name="etp_cookies_title_2">사이트 간 쿠키</string>
+    
+    <string name="etp_cookies_description">광고 네트워크 및 분석 회사가 여러 사이트에서 사용자의 브라우징 데이터를 수집하는 데 사용하는 쿠키를 차단합니다.</string>
+    
+    <string name="etp_cookies_description_2">토탈 쿠키 보호는 쿠키를 사용 중인 사이트로 격리하여 광고 네트워크와 같은 추적기가 여러 사이트에서 사용자를 추적하는 데 쿠키를 사용할 수 없도록 합니다.</string>
+    
+    <string name="etp_cryptominers_title">크립토마이너</string>
+    
+    <string name="etp_cryptominers_description">악성 스크립트가 디지털 화폐를 채굴하기 위해 장치에 액세스하는 것을 방지합니다.</string>
+    
+    <string name="etp_fingerprinters_title">지문 인식기</string>
+    
+    <string name="etp_fingerprinters_description">추적 목적으로 사용될 수 있는 고유 식별 데이터가 디바이스에 대해 수집되는 것을 차단합니다.</string>
+    
+    <string name="etp_tracking_content_title">콘텐츠 추적</string>
+    
+    <string name="etp_tracking_content_description">추적 코드가 포함된 외부 광고, 동영상 및 기타 콘텐츠의 로딩을 중지합니다. 일부 웹사이트 기능에 영향을 줄 수 있습니다.</string>
+    
+    <string name="etp_panel_on">이 사이트에 대한 보호가 켜져 있습니다.</string>
+    
+    <string name="etp_panel_off">이 사이트의 보호 기능이 꺼져 있습니다.</string>
+    
+    <string name="enhanced_tracking_protection_exceptions">다음 웹사이트에서는 향상된 추적 보호 기능이 해제되어 있습니다.</string>
+    
+    <string name="etp_back_button_content_description">뒤로 이동</string>
+    
+    <string name="open_source_licenses_title">s | OSS 라이브러리</string>
+    
+    <string name="etp_redirect_trackers_title">리디렉션 트래커</string>
+    
+    <string name="etp_redirect_trackers_description">알려진 추적 웹사이트로 리디렉션하여 설정된 쿠키를 지웁니다.</string>
+    
+    <string name="preference_etp_smartblock_description">아래에 표시된 일부 트래커는 사용자가 해당 트래커와 상호작용했기 때문에 이 페이지에서 부분적으로 차단이 해제되었습니다*.</string>
+    
+    <string name="preference_etp_smartblock_learn_more">자세히 알아보기</string>
+
+    
+    <string name="about_support">지원</string>
+    
+    <string name="about_crashes">크래시</string>
+    
+    <string name="about_privacy_notice">개인정보 취급방침</string>
+    
+    <string name="about_know_your_rights">귀하의 권리 알기</string>
+    
+    <string name="about_licensing_information">라이선스 정보</string>
+    
+    <string name="about_other_open_source_libraries">사용하는 라이브러리</string>
+    
+    <string name="about_debug_menu_toast_progress">디버그 메뉴입니다: 활성화하려면 %1$d번 클릭했습니다.</string>
+    <string name="about_debug_menu_toast_done">디버그 메뉴 활성화</string>
+
+    
+    
+    <string name="browser_toolbar_long_press_popup_copy">복사</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste_and_go">붙여넣기 및 이동</string>
+    
+    <string name="browser_toolbar_long_press_popup_paste">붙여넣기</string>
+    
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">클립보드에 복사된 URL</string>
+
+    
+    <string name="add_to_homescreen_title">홈 화면에 추가</string>
+    
+    <string name="add_to_homescreen_cancel">취소</string>
+    
+    <string name="add_to_homescreen_add">추가</string>
+    
+    <string name="add_to_homescreen_continue">웹사이트로 계속 가기</string>
+    
+    <string name="add_to_homescreen_text_placeholder">바로 가기 이름</string>
+    
+    <string name="add_to_homescreen_description_2">이 웹사이트를 디바이스의 홈 화면에 쉽게 추가하여 앱과 같은 환경으로 즉시 액세스하고 더 빠르게 탐색할 수 있습니다.</string>
+
+    
+    <string name="preferences_passwords_logins_and_passwords">로그인 및 비밀번호</string>
+    
+    <string name="preferences_passwords_save_logins">로그인 및 비밀번호 저장</string>
+    
+    <string name="preferences_passwords_save_logins_ask_to_save">저장 요청하기</string>
+    
+    <string name="preferences_passwords_save_logins_never_save">저장하지 않음</string>
+    
+    <string name="preferences_passwords_autofill2">1$s에 자동 완성</string>
+    
+    <string name="preferences_passwords_autofill_description">1$s를 사용하는 동안 웹 사이트에서 사용자 이름과 암호를 입력하고 저장합니다.</string>
+    
+    <string name="preferences_android_autofill">다른 앱에서 자동 완성</string>
+    
+    <string name="preferences_android_autofill_description">기기의 다른 앱에서 사용자 이름과 비밀번호를 입력합니다.</string>
+    
+    <string name="preferences_logins_add_login">로그인 추가</string>
+
+    
+    <string name="preferences_passwords_sync_logins">로그인 동기화</string>
+    
+    <string name="preferences_passwords_sync_logins_across_devices">여러 기기에서 로그인 동기화</string>
+    
+    <string name="preferences_passwords_saved_logins">저장된 로그인</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_text">저장하거나 동기화한 로그인은 %s에 표시됩니다.</string>
+    
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">동기화에 대해 자세히 알아보세요.</string>
+    
+    <string name="preferences_passwords_exceptions">예외</string>
+    
+    <string name="preferences_passwords_exceptions_description_empty">저장되지 않은 로그인 및 비밀번호는 여기에 표시됩니다.</string>
+    
+    <string name="preferences_passwords_exceptions_description">이러한 사이트에는 로그인 및 비밀번호가 저장되지 않습니다.</string>
+    
+    <string name="preferences_passwords_exceptions_remove_all">모든 예외 삭제</string>
+    
+    <string name="preferences_passwords_saved_logins_search">로그인 검색</string>
+    
+    <string name="preferences_passwords_saved_logins_site">사이트</string>
+    
+    <string name="preferences_passwords_saved_logins_username">사용자 이름</string>
+    
+    <string name="preferences_passwords_saved_logins_password">비밀번호</string>
+    
+    <string name="logins_password_copied">비밀번호가 클립보드에 복사됨</string>
+    
+    <string name="logins_username_copied">사용자 이름이 클립보드에 복사됨</string>
+    
+    <string name="saved_logins_copy_password">비밀번호 복사</string>
+    
+    <string name="saved_logins_clear_password">비밀번호 지우기</string>
+    
+    <string name="saved_login_copy_username">사용자 이름 복사</string>
+    
+    <string name="saved_login_clear_username">사용자 이름 지우기</string>
+    
+    <string name="saved_login_clear_hostname">호스트 이름 지우기</string>
+    
+    <string name="saved_login_open_site">브라우저에서 사이트 열기</string>
+    
+    <string name="saved_login_reveal_password">비밀번호 표시</string>
+    
+    <string name="saved_login_hide_password">비밀번호 숨기기</string>
+    
+    <string name="logins_biometric_prompt_message">저장된 로그인 정보를 보려면 잠금 해제하세요.</string>
+    
+    <string name="logins_warning_dialog_title">로그인 및 비밀번호 보호</string>
+    
+    <string name="logins_warning_dialog_message">디바이스 잠금 패턴, PIN 또는 비밀번호를 설정하여 다른 사람이 내 디바이스를 가지고 있을 때 저장된 로그인 및 비밀번호에 액세스하지 못하도록 보호하세요.</string>
+    
+    <string name="logins_warning_dialog_later">나중에</string>
+    
+    <string name="logins_warning_dialog_set_up_now">지금 설정하기</string>
+    
+    <string name="logins_biometric_prompt_message_pin">디바이스 잠금 해제</string>
+    
+    <string name="preference_accessibility_force_enable_zoom">모든 웹사이트 확대</string>
+    
+    <string name="preference_accessibility_force_enable_zoom_summary">이 제스처를 막는 웹사이트에서도 핀치 및 확대/축소를 허용하도록 설정합니다.</string>
+    
+    <string name="saved_logins_sort_strategy_alphabetically">이름(A-Z)</string>
+    
+    <string name="saved_logins_sort_strategy_last_used">마지막 사용</string>
+    
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">로그인 메뉴 정렬</string>
+
+    
+    
+    <string name="preferences_autofill">자동 완성</string>
+    
+    <string name="preferences_addresses">주소</string>
+    
+    <string name="preferences_credit_cards">신용 카드</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards">카드 저장 및 자동 채우기</string>
+    
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">데이터가 암호화됨</string>
+    
+    <string name="preferences_credit_cards_sync_cards_across_devices">여러 장치에서 카드 동기화</string>
+    
+    <string name="preferences_credit_cards_sync_cards">카드 동기화</string>
+    
+    <string name="preferences_credit_cards_add_credit_card">신용 카드 추가</string>
+    
+    <string name="preferences_credit_cards_manage_saved_cards">저장된 카드 관리</string>
+    
+    <string name="preferences_addresses_add_address">주소 추가</string>
+    
+    <string name="preferences_addresses_manage_addresses">주소 관리</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses">주소 저장 및 자동 완성</string>
+    
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">번호, 이메일, 배송지 주소와 같은 정보를 포함하세요.</string>
+
+    
+    <string name="credit_cards_add_card">카드 추가</string>
+    
+    <string name="credit_cards_edit_card">카드 편집</string>
+    
+    <string name="credit_cards_card_number">카드 번호</string>
+    
+    <string name="credit_cards_expiration_date">만료 날짜</string>
+    
+    <string name="credit_cards_expiration_date_month">만료일 월</string>
+    
+    <string name="credit_cards_expiration_date_year">만료일 연도</string>
+    
+    <string name="credit_cards_name_on_card">카드의 이름</string>
+    
+    <string name="credit_cards_menu_delete_card">카드 삭제</string>
+    
+    <string name="credit_cards_delete_card_button">카드 삭제</string>
+    
+    <string name="credit_cards_delete_dialog_confirmation">이 신용카드를 삭제하시겠습니까?</string>
+    
+    <string name="credit_cards_delete_dialog_button">삭제</string>
+    
+    <string name="credit_cards_menu_save">저장</string>
+    
+    <string name="credit_cards_save_button">저장</string>
+    
+    <string name="credit_cards_cancel_button">취소</string>
+    
+    <string name="credit_cards_saved_cards">저장된 카드</string>
+    
+    <string name="credit_cards_number_validation_error_message">유효한 신용카드 번호를 입력하세요.</string>
+    
+    <string name="credit_cards_name_on_card_validation_error_message">이 필드를 작성해 주세요.</string>
+    
+    <string name="credit_cards_biometric_prompt_message">잠금 해제하여 저장된 카드 보기</string>
+    
+    <string name="credit_cards_warning_dialog_title">신용카드 보안 유지</string>
+    
+    <string name="credit_cards_warning_dialog_message">장치 잠금 패턴, PIN 또는 비밀번호를 설정하여 다른 사람이 장치를 가지고 있는 경우 저장된 신용 카드에 액세스하지 못하도록 보호하세요.</string>
+    
+    <string name="credit_cards_warning_dialog_set_up_now">지금 설정하기</string>
+    
+    <string name="credit_cards_warning_dialog_later">나중에</string>
+    
+    <string name="credit_cards_biometric_prompt_message_pin">디바이스 잠금 해제</string>
+    
+    <string name="credit_cards_biometric_prompt_unlock_message">저장된 신용카드 정보를 사용하려면 잠금 해제</string>
+    
+    <string name="addresses_add_address">주소 추가</string>
+    
+    <string name="addresses_edit_address">주소 수정</string>
+    
+    <string name="addresses_manage_addresses">주소 관리</string>
+    
+    <string name="addresses_first_name">이름</string>
+    
+    <string name="addresses_middle_name">중간 이름</string>
+    
+    <string name="addresses_last_name">성</string>
+    
+    <string name="addresses_street_address">거리 주소</string>
+    
+    <string name="addresses_city">도시</string>
+    
+    <string name="addresses_state">상태</string>
+    
+    <string name="addresses_province">주</string>
+    
+    <string name="addresses_zip">Zip</string>
+    
+    <string name="addresses_country">국가 또는 지역</string>
+    
+    <string name="addresses_phone">전화</string>
+    
+    <string name="addresses_email">이메일</string>
+    
+    <string name="addresses_save_button">저장</string>
+    
+    <string name="addresses_cancel_button">취소</string>
+    
+    <string name="addressess_delete_address_button">주소 삭제</string>
+    
+    <string name="addressess_confirm_dialog_message">이 주소를 삭제하시겠습니까?</string>
+    
+    <string name="addressess_confirm_dialog_ok_button">삭제</string>
+    
+    <string name="addressess_confirm_dialog_cancel_button">취소</string>
+    
+    <string name="address_menu_save_address">주소 저장</string>
+    
+    <string name="address_menu_delete_address">주소 삭제</string>
+
+    
+    <string name="search_engine_add_custom_search_engine_title">검색 엔진 추가</string>
+    
+    <string name="search_engine_edit_custom_search_engine_title">검색 엔진 수정</string>
+    
+    <string name="search_engine_add_button_content_description">추가</string>
+    
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">저장</string>
+    
+    <string name="search_engine_edit">편집</string>
+    
+    <string name="search_engine_delete">삭제</string>
+
+    
+    <string name="search_add_custom_engine_label_other">기타</string>
+    
+    <string name="search_add_custom_engine_name_hint">이름</string>
+    
+    <string name="search_add_custom_engine_search_string_hint">사용할 검색 문자열</string>
+    
+    <string name="search_add_custom_engine_search_string_example" formatted="false">쿼리를 "%s"로 바꿉니다. 예:\nhttps://www.google.com/search?q=%s</string>
+    
+    <string name="search_add_custom_engine_form_description">사용자 지정 검색 엔진 세부 정보</string>
+
+    
+    <string name="search_add_custom_engine_error_empty_name">검색 엔진 이름 입력</string>
+    
+    <string name="search_add_custom_engine_error_empty_search_string">검색 문자열 입력</string>
+    
+    <string name="search_add_custom_engine_error_missing_template">검색 문자열이 예제 형식과 일치하는지 확인</string>
+    
+    <string name="search_add_custom_engine_error_cannot_reach">"%s"에 연결하는 동안 오류가 발생했습니다.</string>
+    
+    <string name="search_add_custom_engine_success_message">생성된 %s</string>
+    
+    <string name="search_edit_custom_engine_success_message">저장된 %s</string>
+    
+    <string name="search_delete_search_engine_success_message">삭제된 %s</string>
+
+    
+    <string name="phone_feature_blocked_intro">허용합니다:</string>
+    
+    <string name="phone_feature_blocked_step_settings">1. 1. Android 설정으로 이동합니다.</string>
+    
+    <string name="phone_feature_blocked_step_permissions">2. 2. &lt;b&gt;권한&lt;/b&gt;을 탭합니다.</string>
+    
+    <string name="phone_feature_blocked_step_feature">3. &lt;b&gt;%1$s&lt;/b&gt;를 켜기로 전환합니다.</string>
+
+    
+    <string name="quick_settings_sheet_secure_connection_2">연결이 안전합니다.</string>
+    
+    <string name="quick_settings_sheet_insecure_connection_2">연결이 안전하지 않습니다.</string>
+    
+    <string name="clear_site_data">쿠키 및 사이트 데이터 삭제</string>
+    
+    <string name="confirm_clear_site_data">사이트 &lt;b&gt;%s&lt;/b&gt;에 대한 모든 쿠키와 데이터를 삭제하시겠습니까?</string>
+    
+    <string name="confirm_clear_permissions_on_all_sites">모든 사이트에 대한 모든 권한을 지우시겠습니까?</string>
+    
+    <string name="confirm_clear_permissions_site">이 사이트에 대한 모든 권한을 지우시겠습니까?</string>
+    
+    <string name="confirm_clear_permission_site">이 사이트에 대한 이 권한을 취소하시겠습니까?</string>
+    
+    <string name="no_site_exceptions">사이트 예외 없음</string>
+    
+    <string name="bookmark_deletion_confirmation">이 북마크를 삭제하시겠습니까?</string>
+    
+    <string name="browser_menu_add_to_shortcuts">바로 가기에 추가</string>
+    
+    <string name="browser_menu_remove_from_shortcuts">바로 가기에서 제거</string>
+    
+    <string name="certificate_info_verified_by">확인자: %1$s</string>
+    
+    <string name="login_menu_delete_button">삭제</string>
+    
+    <string name="login_menu_edit_button">편집</string>
+    
+    <string name="login_deletion_confirmation">이 로그인을 삭제하시겠습니까?</string>
+    
+    <string name="dialog_delete_positive">삭제</string>
+    
+    <string name="dialog_delete_negative">취소</string>
+    
+    <string name="login_options_menu">로그인 옵션</string>
+    
+    <string name="saved_login_hostname_description">로그인 웹 주소의 수정 가능한 텍스트 필드입니다.</string>
+    
+    <string name="saved_login_username_description">로그인 사용자 아이디의 수정 가능한 텍스트 필드입니다.</string>
+    
+    <string name="saved_login_password_description">로그인 비밀번호를 입력할 수 있는 수정 가능한 텍스트 필드입니다.</string>
+    
+    <string name="save_changes_to_login">로그인 변경 사항을 저장합니다.</string>
+    
+    <string name="edit">편집</string>
+    
+    <string name="add_login">새 로그인 추가</string>
+    
+    <string name="saved_login_password_required">비밀번호 필요</string>
+    
+    <string name="saved_login_username_required">사용자 이름 필수</string>
+    
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">호스트 이름 필수</string>
+    
+    <string name="voice_search_content_description">음성 검색</string>
+    
+    <string name="voice_search_explainer">지금 말하기</string>
+    
+    <string name="saved_login_duplicate">해당 사용자 아이디로 로그인한 계정이 이미 존재합니다.</string>
+    
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    
+    <string name="add_login_hostname_invalid_text_3">웹 주소는 "https://" 또는 "http://"을 포함해야 합니다.</string>
+    
+    <string name="add_login_hostname_invalid_text_2">유효한 호스트 이름 필수</string>
+
+    
+    
+    <string name="synced_tabs_connect_another_device">다른 장치를 연결합니다.</string>
+    
+    <string name="synced_tabs_reauth">다시 인증해 주세요.</string>
+    
+    <string name="synced_tabs_enable_tab_syncing">탭 동기화를 활성화하세요.</string>
+    
+    <string name="synced_tabs_no_tabs">다른 기기에서 Waterfox에 열려 있는 탭이 없습니다.</string>
+    
+    <string name="synced_tabs_sign_in_message">다른 장치에서 탭 목록을 봅니다.</string>
+    
+    <string name="synced_tabs_sign_in_button">로그인하여 동기화하기</string>
+    
+    <string name="synced_tabs_no_open_tabs">열려 있는 탭 없음</string>
+    
+    <string name="synced_tabs_expand_group">동기화된 탭 그룹 확장</string>
+    
+    <string name="synced_tabs_collapse_group">동기화된 탭 그룹 접기</string>
+
+    
+    
+    <string name="shortcut_max_limit_title">바로 가기 제한에 도달</string>
+    
+    <string name="shortcut_max_limit_content">새 바로가기를 추가하려면 바로가기를 제거합니다. 사이트를 길게 터치하고 제거를 선택합니다.</string>
+    
+    <string name="top_sites_max_limit_confirmation_button">네, 알겠습니다</string>
+    
+    <string name="top_sites_toggle_top_recent_sites_4">바로 가기</string>
+	
+	<string name="top_sites_rename_dialog_title">이름</string>
+    
+    <string name="shortcut_name_hint">바로 가기 이름</string>
+	
+	<string name="top_sites_rename_dialog_ok">확인</string>
+	
+	<string name="top_sites_rename_dialog_cancel">취소</string>
+    
+    <string name="top_sites_menu_settings">설정</string>
+    
+    <string name="top_sites_menu_sponsor_privacy">스폰서 및 개인정보 보호</string>
+    
+    <string name="top_sites_sponsored_label">후원</string>
+
+    
+    
+    <string name="inactive_tabs_title">비활성 탭</string>
+    
+    <string name="inactive_tabs_delete_all">비활성 탭 모두 닫기</string>
+    
+    <string name="inactive_tabs_expand_content_description">비활성 탭 확장</string>
+    
+    <string name="inactive_tabs_collapse_content_description">비활성 탭 접기</string>
+
+    
+    
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">한 달 후 자동 종료?</string>
+    
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox는 지난 한 달 동안 보지 않은 탭을 닫을 수 있습니다.</string>
+    
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">자동 닫기 켜기</string>
+    
+    <string name="inactive_tabs_auto_close_message_snackbar">자동 닫기 사용</string>
+
+    
+    <string name="default_browser_experiment_card_text">웹사이트, 이메일, 메시지의 링크가 Waterfox에서 자동으로 열리도록 설정하세요.</string>
+
+    
+    <string name="remove_home_collection_placeholder_content_description">제거</string>
+
+    
+    <string name="radio_preference_info_content_description">자세한 내용을 보려면 클릭하세요.</string>
+
+    
+    <string name="action_bar_up_description">위로 이동</string>
+
+    
+    <string name="privacy_content_close_button_content_description">닫기</string>
+
+    <string name="waterfox_suggest_header">워터폭스 제안</string>
+</resources>
