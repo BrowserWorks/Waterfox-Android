@@ -5,6 +5,10 @@
 package net.waterfox.android.gecko
 
 import android.content.Context
+import androidx.core.util.AtomicFile
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import mozilla.components.browser.engine.gecko.autofill.GeckoAutocompleteStorageDelegate
 import mozilla.components.browser.engine.gecko.ext.toContentBlockingSetting
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy
@@ -18,9 +22,36 @@ import net.waterfox.android.ext.components
 import net.waterfox.android.ext.settings
 import org.mozilla.geckoview.GeckoRuntime
 import org.mozilla.geckoview.GeckoRuntimeSettings
+import java.io.File
 
 object GeckoProvider {
     private var runtime: GeckoRuntime? = null
+
+    /**
+     * Path to geckoview config in app assets
+     */
+    private const val geckoViewConfigAssetPath = "geckoview-config.yaml"
+    /**
+     * Path to geckoview config in cache dir.
+     */
+    private const val geckoViewConfigCachePath = "geckoview-config-v1.yaml"
+
+    /**
+     * Import a geckoview config YAML file from assets and return a File that the GeckoRuntime
+     * can load it from.
+     */
+    private suspend fun importGeckoConfig(context: Context): File = withContext(Dispatchers.IO) {
+        val configFile = File(context.cacheDir, geckoViewConfigCachePath)
+        if (!configFile.exists()) {
+            val configAssets = context.assets.open(geckoViewConfigAssetPath)
+            val atomicConfigFile = AtomicFile(configFile)
+            val writeStream = atomicConfigFile.startWrite()
+            configAssets.copyTo(writeStream)
+            configAssets.close()
+            atomicConfigFile.finishWrite(writeStream)
+        }
+        configFile
+    }
 
     @Synchronized
     fun getOrCreateRuntime(
@@ -50,6 +81,7 @@ object GeckoProvider {
             .contentBlocking(policy.toContentBlockingSetting())
             .debugLogging(Config.channel.isDebug)
             .aboutConfigEnabled(true)
+            .configFilePath(runBlocking { importGeckoConfig(context).absolutePath })
             .build()
 
         val settings = context.components.settings

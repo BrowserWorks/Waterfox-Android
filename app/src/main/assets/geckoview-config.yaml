@@ -1,0 +1,6 @@
+prefs:
+  network.trr.mode: 2
+  network.trr.ohttp.config_uri: "https://dooh.cloudflare-dns.com/.well-known/doohconfig"
+  network.trr.ohttp.uri: "https://dooh.cloudflare-dns.com/dns-query"
+  network.trr.ohttp.relay_uri: "https://dooh.waterfox.net/"
+  network.trr.use_ohttp: true
