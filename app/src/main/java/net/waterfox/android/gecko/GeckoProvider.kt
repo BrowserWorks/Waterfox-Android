@@ -49,7 +49,7 @@ object GeckoProvider {
             .crashHandler(CrashHandlerService::class.java)
             .contentBlocking(policy.toContentBlockingSetting())
             .debugLogging(Config.channel.isDebug)
-            .aboutConfigEnabled(Config.channel.isDebug)
+            .aboutConfigEnabled(true)
             .build()
 
         val settings = context.components.settings
