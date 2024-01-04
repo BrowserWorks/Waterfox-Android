@@ -69,7 +69,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
         val homeAction = BrowserToolbar.Button(
             imageDrawable = AppCompatResources.getDrawable(
                 context,
-                R.drawable.mozac_ic_home
+                R.drawable.mozac_ic_home_24
             )!!,
             contentDescription = context.getString(R.string.browser_toolbar_home),
             iconTintColorResource = ThemeManager.resolveAttribute(R.attr.textPrimary, context),
@@ -84,7 +84,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
             val backAction = BrowserToolbar.TwoStateButton(
                 primaryImage = AppCompatResources.getDrawable(
                     context,
-                    R.drawable.mozac_ic_back
+                    R.drawable.mozac_ic_back_24
                 )!!,
                 primaryContentDescription = context.getString(R.string.browser_menu_back),
                 primaryImageTintResource = enableTint,
@@ -106,7 +106,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
             val forwardAction = BrowserToolbar.TwoStateButton(
                 primaryImage = AppCompatResources.getDrawable(
                     context,
-                    R.drawable.mozac_ic_forward
+                    R.drawable.mozac_ic_forward_24
                 )!!,
                 primaryContentDescription = context.getString(R.string.browser_menu_forward),
                 primaryImageTintResource = enableTint,
@@ -128,7 +128,7 @@ class BrowserFragment : BaseBrowserFragment(), UserInteractionHandler {
             val refreshAction = BrowserToolbar.TwoStateButton(
                 primaryImage = AppCompatResources.getDrawable(
                     context,
-                    R.drawable.mozac_ic_refresh
+                    R.drawable.mozac_ic_arrow_clockwise_24
                 )!!,
                 primaryContentDescription = context.getString(R.string.browser_menu_refresh),
                 primaryImageTintResource = enableTint,

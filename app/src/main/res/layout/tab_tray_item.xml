@@ -43,7 +43,7 @@
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
             android:padding="22dp"
-            app:srcCompat="@drawable/mozac_ic_globe"
+            app:srcCompat="@drawable/mozac_ic_globe_24"
             app:tint="?iconSecondary" />
 
         <mozilla.components.browser.tabstray.thumbnail.TabThumbnailView
