@@ -124,7 +124,7 @@ fun CFRPopupContent(
                 .size(48.dp)
         ) {
             Icon(
-                painter = painterResource(drawable.mozac_ic_close_20),
+                painter = painterResource(drawable.mozac_ic_cross_20),
                 contentDescription = stringResource(R.string.cfr_dismiss_button_default_content_description),
                 modifier = Modifier
                     // Following alignment and padding are necessary to visually align the middle

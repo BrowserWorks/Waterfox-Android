@@ -230,7 +230,7 @@ class EditBookmarkFragment : Fragment(R.layout.fragment_edit_bookmark) {
             } catch (e: PlacesApiException.UrlParseFailed) {
                 withContext(Main) {
                     binding.bookmarkContent.bookmarkUrlErrorMessage = getString(R.string.bookmark_invalid_url_error)
-                    binding.bookmarkContent.bookmarkUrlErrorDrawable = R.drawable.mozac_ic_warning
+                    binding.bookmarkContent.bookmarkUrlErrorDrawable = R.drawable.mozac_ic_warning_fill_24
                 }
             }
         }

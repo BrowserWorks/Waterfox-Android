@@ -67,7 +67,7 @@ fun ClearableEditText(
                 if (shouldShowClearButton()) {
                     IconButton(onClick = onClearClicked) {
                         Image(
-                            painter = painterResource(id = R.drawable.mozac_ic_clear),
+                            painter = painterResource(id = R.drawable.mozac_ic_cross_circle_fill_24),
                             contentDescription = null,
                             colorFilter = ColorFilter.tint(WaterfoxTheme.colors.textPrimary),
                         )
@@ -120,7 +120,7 @@ fun ClearableEditTextPreview() {
             onValueChanged = { value.value = it },
             onClearClicked = { value.value = "" },
             errorMessage = stringResource(id = R.string.bookmark_invalid_url_error),
-            errorDrawable = R.drawable.mozac_ic_warning,
+            errorDrawable = R.drawable.mozac_ic_warning_fill_24,
             keyboardType = KeyboardType.Uri,
         )
     }

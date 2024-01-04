@@ -121,7 +121,7 @@ fun <T> LibrarySiteItem(
                         ),
                 ) {
                     Icon(
-                        painter = painterResource(R.drawable.mozac_ic_check),
+                        painter = painterResource(R.drawable.mozac_ic_checkmark_24),
                         contentDescription = null,
                         modifier = Modifier
                             .padding(10.dp)
