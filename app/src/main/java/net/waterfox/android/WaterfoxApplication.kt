@@ -309,11 +309,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             initializeRustErrors(components.analytics.crashReporter)
             // ... but RustHttpConfig.setClient() and RustLog.enable() can be called later.
             RustHttpConfig.setClient(lazy { components.core.client })
-            // Once application-services has switched to using the new
-            // error reporting system, RustLog shouldn't input a CrashReporter
-            // anymore.
-            // (https://github.com/mozilla/application-services/issues/4981).
-            RustLog.enable(components.analytics.crashReporter)
+            RustLog.enable()
         }
     }
 
