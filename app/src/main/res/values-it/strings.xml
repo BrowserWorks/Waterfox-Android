@@ -1655,4 +1655,15 @@
     <string name="privacy_content_close_button_content_description">Chiudere</string>
 
     <string name="waterfox_suggest_header">Waterfox Suggerisci</string>
+
+    <!-- Add-on process crash dialog to user -->
+    <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
+    <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">I componenti aggiuntivi sono temporaneamente disattivati</string>
+    <!-- The first parameter is the application name. This is a message shown to the user when too many errors have occurred with the addons process and they have been disabled. The user can decide if they would like to continue trying to start add-ons or if they'd rather continue without them. -->
+    <string name="addon_process_crash_dialog_message" tools:ignore="UnusedResources">Uno o più componenti aggiuntivi hanno smesso di funzionare, rendendo il sistema instabile. %1$s ha tentato di riavviare i componenti aggiuntivi senza successo.\n\nI componenti aggiuntivi non verranno riavviati durante la sessione corrente.\n\nLa rimozione o la disattivazione dei componenti aggiuntivi potrebbe risolvere il problema.</string>
+    <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
+    <string name="addon_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Prova a riavviare i componenti aggiuntivi</string>
+    <!-- The user will continue with all add-ons disabled -->
+    <string name="addon_process_crash_dialog_disable_addons_button_text" tools:ignore="UnusedResources">Continua con i componenti aggiuntivi disattivati</string>
+
 </resources>
