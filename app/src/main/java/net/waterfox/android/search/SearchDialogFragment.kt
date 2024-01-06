@@ -55,7 +55,7 @@ import mozilla.components.support.ktx.android.net.isHttpOrHttps
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.kotlin.toNormalizedUrl
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import mozilla.components.ui.autocomplete.InlineAutocompleteEditText
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
@@ -262,7 +262,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
 
         consumeFlow(requireComponents.core.store) { flow ->
             flow.map { state -> state.search }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { search ->
                     store.dispatch(SearchFragmentAction.UpdateSearchState(search))
 
@@ -424,7 +424,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
 
     private fun observeSuggestionProvidersState() = consumeFlow(store) { flow ->
         flow.map { state -> state.toSearchProviderState() }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { state -> awesomeBarView.updateSuggestionProvidersVisibility(state) }
     }
 
@@ -441,7 +441,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
          * */
 
         flow.map { state -> state.url != state.query && state.query.isNotBlank() || state.showSearchShortcuts }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { shouldShowAwesomebar ->
                 binding.awesomeBar.visibility = if (shouldShowAwesomebar) {
                     View.VISIBLE
@@ -458,7 +458,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
                 state.clipboardHasUrl && !state.showSearchShortcuts
             Pair(shouldShowView, state.clipboardHasUrl)
         }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { (shouldShowView) ->
                 updateClipboardSuggestion(shouldShowView)
             }

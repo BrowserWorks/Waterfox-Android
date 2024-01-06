@@ -5,7 +5,7 @@
 package net.waterfox.android.components
 
 import android.content.Context
-import mozilla.components.service.fxa.ServerConfig.Server
+import mozilla.appservices.fxaclient.FxaServer
 import mozilla.components.service.fxa.ServerConfig
 
 /**
@@ -18,6 +18,6 @@ object FxaServer {
 
     @Suppress("UNUSED_PARAMETER")
     fun config(context: Context): ServerConfig {
-        return ServerConfig(Server.STAGE, CLIENT_ID, REDIRECT_URL)
+        return ServerConfig(FxaServer.Stage, CLIENT_ID, REDIRECT_URL)
     }
 }

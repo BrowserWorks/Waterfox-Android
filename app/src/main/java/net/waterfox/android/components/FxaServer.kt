@@ -5,8 +5,8 @@
 package net.waterfox.android.components
 
 import android.content.Context
+import mozilla.appservices.fxaclient.FxaServer
 import mozilla.components.service.fxa.ServerConfig
-import mozilla.components.service.fxa.ServerConfig.Server
 import net.waterfox.android.ext.settings
 
 /**
@@ -22,8 +22,8 @@ object FxaServer {
         val serverOverride = context.settings().overrideFxAServer
         val tokenServerOverride = context.settings().overrideSyncTokenServer.ifEmpty { null }
         if (serverOverride.isEmpty()) {
-            return ServerConfig(Server.RELEASE, CLIENT_ID, REDIRECT_URL, tokenServerOverride)
+            return ServerConfig(FxaServer.Release, CLIENT_ID, REDIRECT_URL, tokenServerOverride)
         }
-        return ServerConfig(serverOverride, CLIENT_ID, REDIRECT_URL, tokenServerOverride)
+        return ServerConfig(FxaServer.Custom(serverOverride), CLIENT_ID, REDIRECT_URL, tokenServerOverride)
     }
 }

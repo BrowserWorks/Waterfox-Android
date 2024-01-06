@@ -43,6 +43,8 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -52,6 +54,7 @@ import mozilla.components.browser.icons.compose.Placeholder
 import mozilla.components.browser.icons.compose.WithIcon
 import mozilla.components.browser.state.state.ContentState
 import mozilla.components.browser.state.state.TabSessionState
+import mozilla.components.browser.thumbnails.storage.ThumbnailStorage
 import mozilla.components.ui.colors.PhotonColors
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.Image
@@ -59,6 +62,8 @@ import net.waterfox.android.compose.TabThumbnail
 import net.waterfox.android.compose.inComposePreview
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.theme.WaterfoxTheme
+
+private const val THUMBNAIL_SIZE = 108
 
 /**
  * A list of recent tabs to jump back to.
@@ -71,6 +76,7 @@ import net.waterfox.android.theme.WaterfoxTheme
 fun RecentTabs(
     recentTabs: List<RecentTab>,
     menuItems: List<RecentTabMenuItem>,
+    storage: ThumbnailStorage,
     onRecentTabClick: (String) -> Unit = {},
 ) {
     Column(
@@ -82,6 +88,7 @@ fun RecentTabs(
                 is RecentTab.Tab -> {
                     RecentTabItem(
                         tab = tab,
+                        storage = storage,
                         menuItems = menuItems,
                         onRecentTabClick = onRecentTabClick
                     )
@@ -101,6 +108,7 @@ fun RecentTabs(
 @Composable
 private fun RecentTabItem(
     tab: RecentTab.Tab,
+    storage: ThumbnailStorage,
     menuItems: List<RecentTabMenuItem>,
     onRecentTabClick: (String) -> Unit = {}
 ) {
@@ -124,6 +132,7 @@ private fun RecentTabItem(
         ) {
             RecentTabImage(
                 tab = tab,
+                storage = storage,
                 modifier = Modifier
                     .size(108.dp, 80.dp)
                     .clip(RoundedCornerShape(8.dp)),
@@ -186,6 +195,7 @@ private fun RecentTabItem(
 @Composable
 fun RecentTabImage(
     tab: RecentTab.Tab,
+    storage: ThumbnailStorage,
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.FillWidth,
 ) {
@@ -202,6 +212,8 @@ fun RecentTabImage(
         }
         else -> TabThumbnail(
             tab = tab.state,
+            size = LocalDensity.current.run { THUMBNAIL_SIZE.dp.toPx().toInt() },
+            storage = storage,
             modifier = modifier,
             contentScale = contentScale,
         )
@@ -340,6 +352,7 @@ private fun RecentTabsPreview() {
             recentTabs = listOf(
                 tab
             ),
+            storage = ThumbnailStorage(LocalContext.current),
             menuItems = listOf(
                 RecentTabMenuItem(
                     title = "Menu item",

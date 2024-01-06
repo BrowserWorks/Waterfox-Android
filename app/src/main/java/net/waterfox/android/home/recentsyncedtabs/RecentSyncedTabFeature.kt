@@ -23,7 +23,8 @@ import mozilla.components.service.fxa.store.SyncStore
 import mozilla.components.service.fxa.sync.SyncReason
 import mozilla.components.support.base.feature.LifecycleAwareFeature
 import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import java.util.concurrent.TimeUnit
@@ -60,7 +61,7 @@ class RecentSyncedTabFeature(
 
     private fun collectAccountUpdates() {
         syncStore.flow()
-            .ifChanged { state ->
+            .distinctUntilChangedBy { state ->
                 state.account != null
             }.onEach { state ->
                 if (state.account != null) {
@@ -78,7 +79,7 @@ class RecentSyncedTabFeature(
 
     private fun collectStatusUpdates() {
         syncStore.flow()
-            .ifChanged { state ->
+            .distinctUntilChangedBy { state ->
                 state.status
             }.onEach { state ->
                 when (state.status) {

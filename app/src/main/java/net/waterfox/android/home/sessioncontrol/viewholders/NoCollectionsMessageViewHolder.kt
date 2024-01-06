@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.map
 import mozilla.components.browser.state.selector.normalTabs
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.lib.state.ext.flowScoped
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.R
 import net.waterfox.android.databinding.NoCollectionsMessageBinding
 import net.waterfox.android.ext.increaseTapArea
@@ -49,7 +49,7 @@ open class NoCollectionsMessageViewHolder(
 
         store.flowScoped(viewLifecycleOwner) { flow ->
             flow.map { state -> state.normalTabs.size }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { tabs ->
                     binding.addTabsToCollectionsButton.isVisible = tabs > 0
                 }

@@ -11,7 +11,7 @@ import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.lib.state.helpers.AbstractBinding
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.ext.asRecentTabs
@@ -30,7 +30,7 @@ class RecentTabsListFeature(
         // Listen for changes regarding the currently selected tab and in progress media tab.
         flow
             .map { it.asRecentTabs() }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect {
                 appStore.dispatch(AppAction.RecentTabsChange(it))
             }

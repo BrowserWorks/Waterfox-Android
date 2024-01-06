@@ -15,7 +15,7 @@ import mozilla.components.browser.state.selector.selectedNormalTab
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.lib.state.ext.flowScoped
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.R
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.appstate.AppAction
@@ -129,7 +129,7 @@ class NormalBrowserPageViewHolder(
     private fun observeTabsTrayInactiveTabsState(adapter: RecyclerView.Adapter<out RecyclerView.ViewHolder>) {
         tabsTrayStore.flowScoped(lifecycleOwner) { flow ->
             flow.map { state -> state.inactiveTabs }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { inactiveTabs ->
                     inactiveTabsSize = inactiveTabs.size
                     updateTrayVisibility(showTrayList(adapter))

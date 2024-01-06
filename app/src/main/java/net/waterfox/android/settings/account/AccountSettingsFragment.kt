@@ -57,7 +57,7 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
                 // Remove the device name when we log out.
                 context?.let {
                     val deviceNameKey = it.getPreferenceKey(R.string.pref_key_sync_device_name)
-                    preferenceManager.sharedPreferences.edit().remove(deviceNameKey).apply()
+                    preferenceManager.sharedPreferences?.edit()?.remove(deviceNameKey)?.apply()
                 }
             }
         }
@@ -115,8 +115,10 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
         preferenceSyncNow.apply {
             onPreferenceClickListener = getClickListenerForSyncNow()
 
-            icon = icon.mutate().apply {
-                setTint(context.getColorFromAttr(R.attr.textPrimary))
+            icon?.let {
+                icon = it.mutate().apply {
+                    setTint(context.getColorFromAttr(R.attr.textPrimary))
+                }
             }
 
             // Current sync state

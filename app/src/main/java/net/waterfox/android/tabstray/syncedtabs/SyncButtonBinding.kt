@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import mozilla.components.feature.syncedtabs.view.SyncedTabsView
 import mozilla.components.lib.state.helpers.AbstractBinding
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
 
@@ -26,7 +26,7 @@ class SyncButtonBinding(
 ) : AbstractBinding<TabsTrayState>(tabsTrayStore) {
     override suspend fun onState(flow: Flow<TabsTrayState>) {
         flow.map { it.syncing }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { syncingNow ->
                 if (syncingNow) {
                     onSyncNow()

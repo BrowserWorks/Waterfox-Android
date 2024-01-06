@@ -23,6 +23,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 import mozilla.components.browser.state.selector.findTabOrCustomTab
@@ -34,7 +35,6 @@ import mozilla.components.lib.state.ext.observe
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.log.logger.Logger
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
@@ -159,7 +159,10 @@ class TrackingProtectionPanelDialogFragment : AppCompatDialogFragment(), UserInt
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return if (args.gravity == Gravity.BOTTOM) {
             object : BottomSheetDialog(requireContext(), this.theme) {
+                @Deprecated("Deprecated in Java")
                 override fun onBackPressed() {
+                    @Suppress("DEPRECATION")
+                    super.onBackPressed()
                     this@TrackingProtectionPanelDialogFragment.onBackPressed()
                 }
             }.apply {
@@ -172,6 +175,7 @@ class TrackingProtectionPanelDialogFragment : AppCompatDialogFragment(), UserInt
             }
         } else {
             object : Dialog(requireContext()) {
+                @Deprecated("Deprecated in Java")
                 override fun onBackPressed() {
                     this@TrackingProtectionPanelDialogFragment.onBackPressed()
                 }
@@ -209,7 +213,7 @@ class TrackingProtectionPanelDialogFragment : AppCompatDialogFragment(), UserInt
         consumeFlow(store) { flow ->
             flow.mapNotNull { state ->
                 state.findTabOrCustomTab(provideCurrentTabId())
-            }.ifChanged { tab -> tab.content.url }
+            }.distinctUntilChangedBy { tab -> tab.content.url }
                 .collect {
                     trackingProtectionStore.dispatch(TrackingProtectionAction.UrlChange(it.content.url))
                 }

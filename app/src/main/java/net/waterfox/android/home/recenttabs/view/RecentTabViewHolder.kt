@@ -44,6 +44,7 @@ class RecentTabViewHolder(
 
         RecentTabs(
             recentTabs = recentTabs.value ?: emptyList(),
+            storage = components.core.thumbnailStorage,
             onRecentTabClick = { recentTabInteractor.onRecentTabClicked(it) },
             menuItems = listOf(
                 RecentTabMenuItem(
