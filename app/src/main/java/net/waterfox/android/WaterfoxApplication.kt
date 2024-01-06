@@ -345,9 +345,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
                 RustHttpConfig.allowEmulatorLoopback()
             }
             RustHttpConfig.setClient(lazy { components.core.client })
-
-            // Now viaduct (the RustHttp client) is initialized we can ask Nimbus to fetch
-            // experiments recipes from the server.
         }
     }
 

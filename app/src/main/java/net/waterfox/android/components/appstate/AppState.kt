@@ -36,17 +36,10 @@ import net.waterfox.android.wallpapers.WallpaperState
  * @property recentSyncedTabState The [RecentSyncedTabState] in the [HomeFragment].
  * @property recentBookmarks The list of recently saved [BookmarkNode]s to show on the [HomeFragment].
  * @property recentHistory The list of [RecentlyVisitedItem]s.
- * @property pocketStories The list of currently shown [PocketRecommendedStory]s.
- * @property pocketStoriesCategories All [PocketRecommendedStory] categories.
- * @property pocketStoriesCategoriesSelections Current Pocket recommended stories categories selected by the user.
- * @property pocketSponsoredStories All [PocketSponsoredStory]s.
- * @property messaging State related messages.
  * @property pendingDeletionHistoryItems The set of History items marked for removal in the UI,
  * awaiting to be removed once the Undo snackbar hides away.
  * Also serves as an in memory cache of all stories mapped by category allowing for quick stories filtering.
  * @property wallpaperState The [WallpaperState] to display in the [HomeFragment].
- * @property standardSnackbarError A snackbar error message to display.
- * @property shoppingState Holds state for shopping feature that's required to live the lifetime of a session.
  */
 data class AppState(
     val isForeground: Boolean = true,
