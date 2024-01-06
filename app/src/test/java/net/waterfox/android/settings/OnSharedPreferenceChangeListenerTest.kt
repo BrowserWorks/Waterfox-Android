@@ -11,16 +11,16 @@ import androidx.lifecycle.LifecycleRegistry
 import io.mockk.Called
 import io.mockk.mockk
 import io.mockk.verify
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class OnSharedPreferenceChangeListenerTest {
 
     private lateinit var sharedPrefs: SharedPreferences
-    private lateinit var listener: (SharedPreferences, String) -> Unit
+    private lateinit var listener: (SharedPreferences, String?) -> Unit
     private lateinit var owner: LifecycleOwner
     private lateinit var lifecycleRegistry: LifecycleRegistry
 

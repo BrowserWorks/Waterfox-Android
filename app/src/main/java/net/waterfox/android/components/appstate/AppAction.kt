@@ -11,11 +11,11 @@ import mozilla.components.lib.state.Action
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.home.Mode
 import net.waterfox.android.home.recentbookmarks.RecentBookmark
+import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
 import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTabState
 import net.waterfox.android.home.recenttabs.RecentTab
 import net.waterfox.android.home.recentvisits.RecentlyVisitedItem
 import net.waterfox.android.library.history.PendingDeletionHistory
-import net.waterfox.android.home.recentsyncedtabs.RecentSyncedTab
 import net.waterfox.android.wallpapers.Wallpaper
 
 /**
@@ -93,5 +93,21 @@ sealed class AppAction : Action {
          * Indicates that the list of potential wallpapers has changed.
          */
         data class UpdateAvailableWallpapers(val wallpapers: List<Wallpaper>) : WallpaperAction()
+    }
+
+    /**
+     * [AppAction] implementations related to the application lifecycle.
+     */
+    sealed class AppLifecycleAction : AppAction() {
+
+        /**
+         * The application has received an ON_RESUME event.
+         */
+        object ResumeAction : AppLifecycleAction()
+
+        /**
+         * The application has received an ON_PAUSE event.
+         */
+        object PauseAction : AppLifecycleAction()
     }
 }

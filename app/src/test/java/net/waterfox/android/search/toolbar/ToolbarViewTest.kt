@@ -17,18 +17,20 @@ import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.browser.toolbar.edit.EditToolbar
 import mozilla.components.support.test.robolectric.testContext
+import net.waterfox.android.R
+import net.waterfox.android.components.Components
+import net.waterfox.android.ext.settings
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.search.SearchEngineSource
+import net.waterfox.android.search.SearchEventSource
+import net.waterfox.android.search.SearchFragmentState
+import net.waterfox.android.utils.Settings
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.R
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import net.waterfox.android.search.SearchEngineSource
-import net.waterfox.android.search.SearchEventSource
-import net.waterfox.android.search.SearchFragmentState
-import net.waterfox.android.utils.Settings
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class ToolbarViewTest {
@@ -154,12 +156,17 @@ class ToolbarViewTest {
         verify { editToolbar.setIcon(any(), "Search Engine") }
     }
 
-    private fun buildToolbarView(isPrivate: Boolean) = ToolbarView(
-        context,
-        Settings(context),
-        interactor,
+    private fun buildToolbarView(
+        isPrivate: Boolean,
+        settings: Settings = context.settings(),
+        components: Components = mockk(relaxed = true),
+    ) = ToolbarView(
+        context = context,
+        settings = settings,
+        components = components,
+        interactor = interactor,
         isPrivate = isPrivate,
         view = toolbar,
-        fromHomeFragment = false
+        fromHomeFragment = false,
     )
 }

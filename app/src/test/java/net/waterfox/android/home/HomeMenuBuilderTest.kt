@@ -13,19 +13,20 @@ import io.mockk.verify
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.menu.view.MenuButton
 import mozilla.components.support.test.robolectric.testContext
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.components.accounts.AccountState
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.nav
 import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.Settings
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 import java.lang.ref.WeakReference
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -97,7 +98,9 @@ class HomeMenuBuilderTest {
         verify {
             navController.nav(
                 R.id.homeFragment,
-                HomeFragmentDirections.actionGlobalAccountProblemFragment()
+                HomeFragmentDirections.actionGlobalAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.HomeMenu,
+                )
             )
         }
 
@@ -106,7 +109,9 @@ class HomeMenuBuilderTest {
         verify {
             navController.nav(
                 R.id.homeFragment,
-                HomeFragmentDirections.actionGlobalTurnOnSync()
+                HomeFragmentDirections.actionGlobalTurnOnSync(
+                    entrypoint = WaterfoxFxAEntryPoint.HomeMenu,
+                )
             )
         }
     }
@@ -170,7 +175,9 @@ class HomeMenuBuilderTest {
         verify {
             navController.nav(
                 R.id.homeFragment,
-                HomeFragmentDirections.actionGlobalAccountProblemFragment()
+                HomeFragmentDirections.actionGlobalAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.HomeMenu,
+                ),
             )
         }
     }

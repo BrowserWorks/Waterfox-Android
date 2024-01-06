@@ -14,14 +14,15 @@ import io.mockk.mockkStatic
 import io.mockk.unmockkStatic
 import io.mockk.verify
 import mozilla.components.support.test.robolectric.testContext
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.databinding.OnboardingManualSigninBinding
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.HomeFragmentDirections
+import org.junit.After
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class OnboardingManualSignInViewHolderTest {
@@ -52,6 +53,8 @@ class OnboardingManualSignInViewHolderTest {
         OnboardingManualSignInViewHolder(binding.root)
         binding.fxaSignInButton.performClick()
 
-        verify { navController.navigate(HomeFragmentDirections.actionGlobalTurnOnSync()) }
+        verify { navController.navigate(HomeFragmentDirections.actionGlobalTurnOnSync(
+            entrypoint = WaterfoxFxAEntryPoint.HomeMenu,
+        )) }
     }
 }

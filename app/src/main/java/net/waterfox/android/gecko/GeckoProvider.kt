@@ -82,6 +82,8 @@ object GeckoProvider {
             .debugLogging(Config.channel.isDebug)
             .aboutConfigEnabled(true)
             .configFilePath(runBlocking { importGeckoConfig(context).absolutePath })
+            .extensionsWebAPIEnabled(true)
+            .extensionsProcessEnabled(true)
             .build()
 
         val settings = context.components.settings

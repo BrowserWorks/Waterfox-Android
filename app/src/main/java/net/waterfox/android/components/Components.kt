@@ -7,15 +7,13 @@ package net.waterfox.android.components
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import android.content.Intent
 import android.os.StrictMode
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.net.toUri
 import com.google.android.play.core.review.ReviewManagerFactory
 import mozilla.components.feature.addons.AddonManager
-import mozilla.components.feature.addons.amo.AddonCollectionProvider
+import mozilla.components.feature.addons.amo.AMOAddonsProvider
 import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
 import mozilla.components.feature.addons.update.DefaultAddonUpdater
 import mozilla.components.feature.autofill.AutofillConfiguration
@@ -25,7 +23,6 @@ import mozilla.components.support.base.worker.Frequency
 import mozilla.components.support.locale.LocaleManager
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.Config
-import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.autofill.AutofillConfirmActivity
 import net.waterfox.android.autofill.AutofillSearchActivity
@@ -34,6 +31,7 @@ import net.waterfox.android.components.appstate.AppState
 import net.waterfox.android.ext.asRecentTabs
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.filterState
+import net.waterfox.android.ext.settings
 import net.waterfox.android.ext.sort
 import net.waterfox.android.home.blocklist.BlocklistHandler
 import net.waterfox.android.home.blocklist.BlocklistMiddleware
@@ -109,23 +107,32 @@ class Components(private val context: Context) {
         )
     }
 
-    val addonCollectionProvider by lazyMonitored {
-        // Use build config if specified
-        if (!BuildConfig.AMO_COLLECTION_USER.isNullOrEmpty() &&
+    val addonsProvider by lazyMonitored {
+        // Check if we have a customized (overridden) AMO collection (supported in Nightly & Beta)
+        if (context.settings().amoCollectionOverrideConfigured()) {
+            AMOAddonsProvider(
+                context,
+                core.client,
+                collectionUser = context.settings().overrideAmoUser,
+                collectionName = context.settings().overrideAmoCollection,
+            )
+        }
+        // Use build config otherwise
+        else if (!BuildConfig.AMO_COLLECTION_USER.isNullOrEmpty() &&
             !BuildConfig.AMO_COLLECTION_NAME.isNullOrEmpty()
         ) {
-            AddonCollectionProvider(
+            AMOAddonsProvider(
                 context,
                 core.client,
                 serverURL = BuildConfig.AMO_SERVER_URL,
                 collectionUser = BuildConfig.AMO_COLLECTION_USER,
                 collectionName = BuildConfig.AMO_COLLECTION_NAME,
-                maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE
+                maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE,
             )
         }
-        // Fall back to defaults otherwise
+        // Fall back to defaults
         else {
-            AddonCollectionProvider(context, core.client, maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE)
+            AMOAddonsProvider(context, core.client, maxCacheAgeInMinutes = AMO_COLLECTION_MAX_CACHE_AGE)
         }
     }
 
@@ -143,7 +150,7 @@ class Components(private val context: Context) {
     }
 
     val addonManager by lazyMonitored {
-        AddonManager(core.store, core.engine, addonCollectionProvider, addonUpdater)
+        AddonManager(core.store, core.engine, addonsProvider, addonUpdater)
     }
 
     val analytics by lazyMonitored { Analytics(context) }

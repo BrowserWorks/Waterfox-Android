@@ -24,18 +24,19 @@ import mozilla.components.browser.storage.sync.TabEntry
 import mozilla.components.service.fxa.manager.FxaAccountManager
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.collections.CollectionsDialog
 import net.waterfox.android.collections.show
 import net.waterfox.android.components.TabCollectionStorage
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.components.bookmarks.BookmarksUseCase
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 import mozilla.components.browser.state.state.createTab as createStateTab
 import mozilla.components.browser.storage.sync.Tab as SyncTab
 
@@ -90,7 +91,9 @@ class NavigationInteractorTest {
 
         createInteractor().onAccountSettingsClicked()
 
-        verify(exactly = 1) { navController.navigate(TabsTrayFragmentDirections.actionGlobalTurnOnSync()) }
+        verify(exactly = 1) { navController.navigate(TabsTrayFragmentDirections.actionGlobalTurnOnSync(
+            entrypoint = WaterfoxFxAEntryPoint.NavigationInteraction,
+        )) }
     }
 
     @Test
