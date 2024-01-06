@@ -14,12 +14,14 @@ import androidx.annotation.CallSuper
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.getSystemService
+import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.work.Configuration.Builder
 import androidx.work.Configuration.Provider
 import kotlinx.coroutines.*
 import mozilla.appservices.Megazord
 import mozilla.components.browser.state.action.SystemAction
 import mozilla.components.browser.state.selector.selectedTab
+import mozilla.components.browser.storage.sync.GlobalPlacesDependencyProvider
 import mozilla.components.concept.base.crash.Breadcrumb
 import mozilla.components.concept.engine.webextension.WebExtension
 import mozilla.components.concept.engine.webextension.isUnsupported
@@ -33,6 +35,7 @@ import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.support.base.facts.register
 import mozilla.components.support.base.log.Log
 import mozilla.components.support.base.log.logger.Logger
+import mozilla.components.support.ktx.android.arch.lifecycle.addObservers
 import mozilla.components.support.ktx.android.content.isMainProcess
 import mozilla.components.support.ktx.android.content.runOnlyInMainProcess
 import mozilla.components.support.locale.LocaleAwareApplication
@@ -45,6 +48,7 @@ import net.waterfox.android.components.Components
 import net.waterfox.android.components.Core
 import net.waterfox.android.ext.containsQueryParameters
 import net.waterfox.android.ext.settings
+import net.waterfox.android.lifecycle.StoreLifecycleObserver
 import net.waterfox.android.perf.MarkersActivityLifecycleCallbacks
 import net.waterfox.android.perf.ProfilerMarkerFactProcessor
 import net.waterfox.android.perf.StartupTimeline
@@ -76,7 +80,10 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
 
     override fun onCreate() {
         super.onCreate()
+        initialize()
+    }
 
+    fun initialize() {
         setupInAllProcesses()
 
         if (!isMainProcess()) {
@@ -87,9 +94,9 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             return
         }
 
+        // DO NOT ADD ANYTHING ABOVE HERE.
         setupInMainProcessOnly()
-        // WATERFOX
-        // downloadWallpapers()
+        // DO NOT ADD ANYTHING UNDER HERE.
     }
 
     @CallSuper
@@ -102,21 +109,36 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
 
     @CallSuper
     open fun setupInMainProcessOnly() {
+        beginSetupMegazord()
         ProfilerMarkerFactProcessor.create { components.core.engine.profiler }.register()
 
         run {
+            // Make sure the engine is initialized and ready to use.
+            components.strictMode.resetAfter(StrictMode.allowThreadDiskReads()) {
+                components.core.engine.warmUp()
+            }
+
+            // WATERFOX: initialize the store before enabling the strict mode
+            // the fenix does so by calling initializeGlean but we don't have metrics
+            @Suppress("UNUSED_VARIABLE")
+            val store = components.core.store
+
             // Attention: Do not invoke any code from a-s in this scope.
-            val megazordSetup = setupMegazord()
+            val megazordSetup = finishSetupMegazord()
 
             setDayNightTheme()
             components.strictMode.enableStrictMode(true)
             warmBrowsersCache()
 
-            // Make sure the engine is initialized and ready to use.
-            components.strictMode.resetAfter(StrictMode.allowThreadDiskReads()) {
-                components.core.engine.warmUp()
-            }
             initializeWebExtensionSupport()
+
+            // Make sure to call this function before registering a storage worker
+            // (e.g. components.core.historyStorage.registerStorageMaintenanceWorker())
+            // as the storage maintenance worker needs a places storage globally when
+            // it is needed while the app is not running and WorkManager wakes up the app
+            // for the periodic task.
+            GlobalPlacesDependencyProvider.initialize(components.core.historyStorage)
+
             restoreBrowserState()
             restoreDownloads()
 
@@ -135,15 +157,16 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         registerActivityLifecycleCallbacks(visibilityLifecycleCallback)
         registerActivityLifecycleCallbacks(MarkersActivityLifecycleCallbacks(components.core.engine))
 
-        // Storage maintenance disabled, for now, as it was interfering with background migrations.
-        // See https://github.com/mozilla-mobile/fenix/issues/7227 for context.
-        // if ((System.currentTimeMillis() - settings().lastPlacesStorageMaintenance) > ONE_DAY_MILLIS) {
-        //    runStorageMaintenance()
-        // }
-
         components.appStartReasonProvider.registerInAppOnCreate(this)
         components.startupActivityLog.registerInAppOnCreate(this)
         initVisualCompletenessQueueAndQueueTasks()
+
+        ProcessLifecycleOwner.get().lifecycle.addObservers(
+            StoreLifecycleObserver(
+                appStore = components.appStore,
+                browserStore = components.core.store,
+            ),
+        )
     }
 
     @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
@@ -295,21 +318,36 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
      * Initiate Megazord sequence! Megazord Battle Mode!
      *
      * The application-services combined libraries are known as the "megazord". We use the default `full`
-     * megazord - it contains everything that Waterfox needs, and (currently) nothing more.
+     * megazord - it contains everything that fenix needs, and (currently) nothing more.
      *
      * Documentation on what megazords are, and why they're needed:
      * - https://github.com/mozilla/application-services/blob/master/docs/design/megazords.md
      * - https://mozilla.github.io/application-services/docs/applications/consuming-megazord-libraries.html
+     *
+     * This is the initialization of the megazord without setting up networking, i.e. needing the
+     * engine for networking. This should do the minimum work necessary as it is done on the main
+     * thread, early in the app startup sequence.
      */
-    @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
-    private fun setupMegazord(): Deferred<Unit> {
+    private fun beginSetupMegazord() {
         // Note: Megazord.init() must be called as soon as possible ...
         Megazord.init()
+
+        initializeRustErrors(components.analytics.crashReporter)
+        // ... but RustHttpConfig.setClient() and RustLog.enable() can be called later.
+
+        RustLog.enable()
+    }
+
+    @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
+    private fun finishSetupMegazord(): Deferred<Unit> {
         return GlobalScope.async(Dispatchers.IO) {
-            initializeRustErrors(components.analytics.crashReporter)
-            // ... but RustHttpConfig.setClient() and RustLog.enable() can be called later.
+            if (Config.channel.isDebug) {
+                RustHttpConfig.allowEmulatorLoopback()
+            }
             RustHttpConfig.setClient(lazy { components.core.client })
-            RustLog.enable()
+
+            // Now viaduct (the RustHttp client) is initialized we can ask Nimbus to fetch
+            // experiments recipes from the server.
         }
     }
 
@@ -397,13 +435,12 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
                 components.addonUpdater,
                 onCrash = { exception ->
                     components.analytics.crashReporter.submitCaughtException(exception)
-                }
+                },
             )
             WebExtensionSupport.initialize(
                 components.core.engine,
                 components.core.store,
-                onNewTabOverride = {
-                    _, engineSession, url ->
+                onNewTabOverride = { _, engineSession, url ->
                     val shouldCreatePrivateSession =
                         components.core.store.state.selectedTab?.content?.private
                             ?: components.settings.openLinksInAPrivateTab
@@ -412,25 +449,23 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
                         url = url,
                         selectTab = true,
                         engineSession = engineSession,
-                        private = shouldCreatePrivateSession
+                        private = shouldCreatePrivateSession,
                     )
                 },
-                onCloseTabOverride = {
-                    _, sessionId ->
+                onCloseTabOverride = { _, sessionId ->
                     components.useCases.tabsUseCases.removeTab(sessionId)
                 },
-                onSelectTabOverride = {
-                    _, sessionId ->
+                onSelectTabOverride = { _, sessionId ->
                     components.useCases.tabsUseCases.selectTab(sessionId)
                 },
                 onExtensionsLoaded = { extensions ->
                     components.addonUpdater.registerForFutureUpdates(extensions)
                     subscribeForNewAddonsIfNeeded(components.supportedAddonsChecker, extensions)
                 },
-                onUpdatePermissionRequest = components.addonUpdater::onUpdatePermissionRequest
+                onUpdatePermissionRequest = components.addonUpdater::onUpdatePermissionRequest,
             )
         } catch (e: UnsupportedOperationException) {
-            Logger.error("Failed to initialize web extension support", e)
+            logger.error("Failed to initialize web extension support", e)
         }
     }
 
