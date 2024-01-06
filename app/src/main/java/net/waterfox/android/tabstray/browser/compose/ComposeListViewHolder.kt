@@ -15,6 +15,7 @@ import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.tabstray.TabsTray
 import mozilla.components.browser.tabstray.TabsTrayStyling
 import mozilla.components.lib.state.ext.observeAsComposableState
+import net.waterfox.android.components.components
 import net.waterfox.android.compose.tabstray.TabListItem
 import net.waterfox.android.selection.SelectionHolder
 import net.waterfox.android.tabstray.TabsTrayState
@@ -94,6 +95,8 @@ class ComposeListViewHolder(
 
         TabListItem(
             tab = tab,
+            thumbnailSize = 108,
+            storage = components.core.thumbnailStorage,
             isSelected = isSelectedTabState,
             multiSelectionEnabled = multiSelectionEnabled,
             multiSelectionSelected = multiSelectionSelected,
