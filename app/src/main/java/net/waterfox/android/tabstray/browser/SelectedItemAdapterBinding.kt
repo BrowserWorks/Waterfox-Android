@@ -7,11 +7,11 @@ package net.waterfox.android.tabstray.browser
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import mozilla.components.browser.tabstray.TabsAdapter.Companion.PAYLOAD_DONT_HIGHLIGHT_SELECTED_ITEM
 import mozilla.components.browser.tabstray.TabsAdapter.Companion.PAYLOAD_HIGHLIGHT_SELECTED_ITEM
 import mozilla.components.lib.state.helpers.AbstractBinding
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayState.Mode
 import net.waterfox.android.tabstray.TabsTrayStore
@@ -27,7 +27,7 @@ class SelectedItemAdapterBinding(
 
     override suspend fun onState(flow: Flow<TabsTrayState>) {
         flow.map { it.mode }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { mode ->
                 notifyAdapter(mode)
             }

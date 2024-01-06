@@ -16,7 +16,7 @@ import mozilla.components.browser.state.state.EngineState
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.lib.state.helpers.AbstractBinding
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.components.Components
 import net.waterfox.android.utils.Settings
@@ -50,7 +50,7 @@ class CrashContentIntegration(
 ) : AbstractBinding<BrowserState>(browserStore) {
     override suspend fun onState(flow: Flow<BrowserState>) {
         flow.mapNotNull { state -> state.findTabOrCustomTabOrSelectedTab(sessionId) }
-            .ifChanged { tab -> tab.engineState.crashed }
+            .distinctUntilChangedBy { tab -> tab.engineState.crashed }
             .collect { tab ->
                 if (tab.engineState.crashed) {
                     toolbar.expand()

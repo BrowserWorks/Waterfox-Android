@@ -122,7 +122,7 @@ class AutofillSettingFragment : BiometricPromptPreferenceFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         loadAutofillState()
         return super.onCreateView(inflater, container, savedInstanceState)
     }

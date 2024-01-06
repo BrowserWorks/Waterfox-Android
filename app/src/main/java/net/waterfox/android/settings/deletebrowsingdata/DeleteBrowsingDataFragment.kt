@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import mozilla.components.lib.state.ext.flowScoped
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.databinding.FragmentDeleteBrowsingDataBinding
@@ -97,7 +97,7 @@ class DeleteBrowsingDataFragment : Fragment(R.layout.fragment_delete_browsing_da
 
         scope = requireComponents.core.store.flowScoped(viewLifecycleOwner) { flow ->
             flow.map { state -> state.tabs.size }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { openTabs -> updateTabCount(openTabs) }
         }
     }

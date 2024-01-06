@@ -126,8 +126,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         requireView().findViewById<RecyclerView>(R.id.recycler_view)
             ?.hideInitialScrollBar(viewLifecycleOwner.lifecycleScope)
 
-        if (args.preferenceToScrollTo != null) {
-            scrollToPreference(args.preferenceToScrollTo)
+        args.preferenceToScrollTo?.let {
+            scrollToPreference(it)
         }
         // Consider finish of `onResume` to be the point at which we consider this fragment as 'created'.
         creatingFragment = false

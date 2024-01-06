@@ -36,7 +36,7 @@ import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.ktx.android.view.hideKeyboard
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
@@ -184,7 +184,7 @@ class BookmarkSearchDialogFragment : AppCompatDialogFragment(), UserInteractionH
 
     private fun observeAwesomeBarState() = consumeFlow(store) { flow ->
         flow.map { state -> state.query.isNotBlank() }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { shouldShowAwesomebar ->
                 binding.awesomeBar.visibility = if (shouldShowAwesomebar) {
                     View.VISIBLE

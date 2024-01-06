@@ -65,7 +65,8 @@ import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flow
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator.Companion.getToolbarNavOptions
@@ -514,7 +515,7 @@ class HomeFragment : Fragment() {
     private fun observeSearchEngineChanges() {
         consumeFlow(store) { flow ->
             flow.map { state -> state.search.selectedOrDefaultSearchEngine }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { searchEngine ->
                     if (searchEngine != null) {
                         val iconSize =
@@ -542,7 +543,7 @@ class HomeFragment : Fragment() {
                     else -> null
                 }
             }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect {
                     topSitesFeature.withFeature {
                         it.storage.notifyObservers { onStorageUpdated() }
@@ -874,7 +875,7 @@ class HomeFragment : Fragment() {
     private fun displayWallpaperIfEnabled() {
         if (shouldEnableWallpaper()) {
             requireComponents.appStore.flow()
-                .ifChanged { state -> state.wallpaperState.currentWallpaper }
+                .distinctUntilChangedBy { state -> state.wallpaperState.currentWallpaper }
                 .onEach { state ->
                     // We only want to update the wallpaper when it's different from the default one
                     // as the default is applied already on xml by default.

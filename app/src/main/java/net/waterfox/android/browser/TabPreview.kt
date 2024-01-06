@@ -57,13 +57,13 @@ class TabPreview @JvmOverloads constructor(
         }
     }
 
-    fun loadPreviewThumbnail(thumbnailId: String) {
+    fun loadPreviewThumbnail(thumbnailId: String, isPrivate: Boolean) {
         doOnNextLayout {
             val previewThumbnail = binding.previewThumbnail
             val thumbnailSize = max(previewThumbnail.height, previewThumbnail.width)
             thumbnailLoader.loadIntoView(
                 previewThumbnail,
-                ImageLoadRequest(thumbnailId, thumbnailSize)
+                ImageLoadRequest(thumbnailId, thumbnailSize, isPrivate),
             )
         }
     }

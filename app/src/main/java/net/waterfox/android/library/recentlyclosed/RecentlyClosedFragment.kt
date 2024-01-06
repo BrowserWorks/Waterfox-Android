@@ -9,12 +9,12 @@ import android.text.SpannableString
 import android.view.*
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import mozilla.components.browser.state.state.recover.RecoverableTab
 import mozilla.components.lib.state.ext.consumeFrom
 import mozilla.components.lib.state.ext.flowScoped
 import mozilla.components.support.base.feature.UserInteractionHandler
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
@@ -148,7 +148,7 @@ class RecentlyClosedFragment : LibraryPageFragment<RecoverableTab>(), UserIntera
 
         requireComponents.core.store.flowScoped(viewLifecycleOwner) { flow ->
             flow.map { state -> state.closedTabs }
-                .ifChanged()
+                .distinctUntilChanged()
                 .collect { tabs ->
                     recentlyClosedFragmentStore.dispatch(
                         RecentlyClosedFragmentAction.Change(tabs)

@@ -12,9 +12,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.updateLayoutParams
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import mozilla.components.lib.state.helpers.AbstractBinding
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.R
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayState.Mode
@@ -41,7 +41,7 @@ class SelectionHandleBinding(
 
     override suspend fun onState(flow: Flow<TabsTrayState>) {
         flow.map { it.mode }
-            .ifChanged()
+            .distinctUntilChanged()
             .collect { mode ->
                 val isSelectMode = mode is Mode.Select
 

@@ -18,7 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import mozilla.components.support.ktx.android.content.getColorFromAttr
-import mozilla.components.support.ktx.android.view.getWindowInsetsController
+import mozilla.components.support.ktx.android.view.createWindowInsetsController
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
@@ -84,14 +84,14 @@ abstract class ThemeManager {
         private fun updateLightSystemBars(window: Window, context: Context) {
             if (SDK_INT >= Build.VERSION_CODES.M) {
                 window.statusBarColor = context.getColorFromAttr(android.R.attr.statusBarColor)
-                window.getWindowInsetsController().isAppearanceLightStatusBars = true
+                window.createWindowInsetsController().isAppearanceLightStatusBars = true
             } else {
                 window.statusBarColor = Color.BLACK
             }
 
             if (SDK_INT >= Build.VERSION_CODES.O) {
                 // API level can display handle light navigation bar color
-                window.getWindowInsetsController().isAppearanceLightNavigationBars = true
+                window.createWindowInsetsController().isAppearanceLightNavigationBars = true
 
                 updateNavigationBar(window, context)
             }
@@ -99,12 +99,12 @@ abstract class ThemeManager {
 
         private fun clearLightSystemBars(window: Window) {
             if (SDK_INT >= Build.VERSION_CODES.M) {
-                window.getWindowInsetsController().isAppearanceLightStatusBars = false
+                window.createWindowInsetsController().isAppearanceLightStatusBars = false
             }
 
             if (SDK_INT >= Build.VERSION_CODES.O) {
                 // API level can display handle light navigation bar color
-                window.getWindowInsetsController().isAppearanceLightNavigationBars = false
+                window.createWindowInsetsController().isAppearanceLightNavigationBars = false
             }
         }
 

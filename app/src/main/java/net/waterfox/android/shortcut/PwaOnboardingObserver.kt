@@ -9,12 +9,12 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.mapNotNull
 import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.pwa.WebAppUseCases
 import mozilla.components.lib.state.ext.flowScoped
-import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserFragmentDirections
 import net.waterfox.android.ext.nav
@@ -38,7 +38,7 @@ class PwaOnboardingObserver(
             flow.mapNotNull { state ->
                 state.selectedTab
             }
-                .ifChanged {
+                .distinctUntilChangedBy {
                     it.content.webAppManifest
                 }
                 .collect {
