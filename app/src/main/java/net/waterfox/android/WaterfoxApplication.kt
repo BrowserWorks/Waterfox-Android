@@ -318,7 +318,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
      * Initiate Megazord sequence! Megazord Battle Mode!
      *
      * The application-services combined libraries are known as the "megazord". We use the default `full`
-     * megazord - it contains everything that fenix needs, and (currently) nothing more.
+     * megazord - it contains everything that Waterfox needs, and (currently) nothing more.
      *
      * Documentation on what megazords are, and why they're needed:
      * - https://github.com/mozilla/application-services/blob/master/docs/design/megazords.md
