@@ -10,18 +10,18 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Test
-import org.junit.runner.RunWith
 import mozilla.components.browser.toolbar.BrowserToolbar
 import mozilla.components.browser.toolbar.behavior.BrowserToolbarBehavior
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Before
+import mozilla.components.support.test.robolectric.testContext
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.utils.Settings
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 import mozilla.components.browser.toolbar.behavior.ToolbarPosition as MozacToolbarPosition
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -41,7 +41,6 @@ class BrowserToolbarViewTest {
         every { testContext.components.useCases } returns mockk(relaxed = true)
         every { testContext.components.core } returns mockk(relaxed = true)
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
-        every { testContext.settings().showUnifiedSearchFeature } returns false
 
         toolbarView = BrowserToolbarView(
             context = testContext,

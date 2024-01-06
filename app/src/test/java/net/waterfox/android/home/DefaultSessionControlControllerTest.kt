@@ -31,13 +31,6 @@ import mozilla.components.feature.tabs.TabsUseCases
 import mozilla.components.feature.top.sites.TopSite
 import mozilla.components.support.test.ext.joinBlocking
 import mozilla.components.support.test.rule.MainCoroutineRule
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Ignore
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
@@ -54,6 +47,13 @@ import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.sessioncontrol.DefaultSessionControlController
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.Settings
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Ignore
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 import java.io.File
 import mozilla.components.feature.tab.collections.Tab as ComponentTab
 
@@ -151,7 +151,7 @@ class DefaultSessionControlControllerTest {
     fun `handleCollectionOpenTabClicked onFailure`() {
         val tab = mockk<ComponentTab> {
             every { url } returns "https://mozilla.org"
-            every { restore(filesDir, activity, engine, restoreSessionId = false) } returns null
+            every { restore(filesDir, engine, restoreSessionId = false) } returns null
         }
         createController().handleCollectionOpenTabClicked(tab)
 
@@ -181,7 +181,7 @@ class DefaultSessionControlControllerTest {
         )
 
         val tab = mockk<ComponentTab> {
-            every { restore(filesDir, activity, engine, restoreSessionId = false) } returns recoverableTab
+            every { restore(filesDir, engine, restoreSessionId = false) } returns recoverableTab
         }
 
         val restoredTab = createTab(id = recoverableTab.state.id, url = recoverableTab.state.url)
@@ -214,7 +214,7 @@ class DefaultSessionControlControllerTest {
         )
 
         val tab = mockk<ComponentTab> {
-            every { restore(filesDir, activity, engine, restoreSessionId = false) } returns recoverableTab
+            every { restore(filesDir, engine, restoreSessionId = false) } returns recoverableTab
         }
 
         val restoredTab = createTab(id = recoverableTab.state.id, url = recoverableTab.state.url)

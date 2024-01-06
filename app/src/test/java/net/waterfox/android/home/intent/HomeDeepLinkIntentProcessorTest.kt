@@ -15,18 +15,19 @@ import io.mockk.mockk
 import io.mockk.verify
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.concept.engine.EngineSession
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
 import net.waterfox.android.BuildConfig.DEEP_LINK_SCHEME
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.browser.browsingmode.BrowsingMode
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.SupportUtils
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -118,7 +119,9 @@ class HomeDeepLinkIntentProcessorTest {
         assertTrue(processorHome.process(testIntent("turn_on_sync"), navController, out))
 
         verify { activity wasNot Called }
-        verify { navController.navigate(NavGraphDirections.actionGlobalTurnOnSync()) }
+        verify { navController.navigate(NavGraphDirections.actionGlobalTurnOnSync(
+            entrypoint = WaterfoxFxAEntryPoint.DeepLink,
+        )) }
         verify { out wasNot Called }
     }
 

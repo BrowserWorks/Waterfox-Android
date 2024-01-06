@@ -10,8 +10,8 @@ import android.view.View
 import android.view.ViewManager
 import android.view.WindowManager
 import android.view.WindowManager.LayoutParams
-import androidx.lifecycle.ViewTreeLifecycleOwner
 import androidx.lifecycle.findViewTreeLifecycleOwner
+import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.savedstate.findViewTreeSavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import io.mockk.every
@@ -19,21 +19,22 @@ import io.mockk.mockk
 import io.mockk.slot
 import io.mockk.spyk
 import io.mockk.verify
+import mozilla.components.support.test.mock
 import mozilla.components.support.test.robolectric.testContext
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class CFRPopupFullscreenLayoutTest {
     @Test
     fun `WHEN the popup is constructed THEN setup lifecycle owners`() {
         val anchor = View(testContext).apply {
-            ViewTreeLifecycleOwner.set(this, mockk())
-            this.setViewTreeSavedStateRegistryOwner(mockk())
+            setViewTreeLifecycleOwner(mock())
+            this.setViewTreeSavedStateRegistryOwner(mock())
         }
 
         val popupView = spyk(CFRPopupFullscreenLayout("", anchor, mockk(), mockk()) {})
@@ -53,9 +54,9 @@ class CFRPopupFullscreenLayoutTest {
     @Test
     fun `WHEN the popup is dismissed THEN cleanup lifecycle owners and detach from window`() {
         val context = spyk(testContext)
-        val anchor = View(context).apply {
-            ViewTreeLifecycleOwner.set(this, mockk())
-            this.setViewTreeSavedStateRegistryOwner(mockk())
+        val anchor = View(testContext).apply {
+            setViewTreeLifecycleOwner(mock())
+            this.setViewTreeSavedStateRegistryOwner(mock())
         }
         val windowManager = spyk(context.getSystemService(Context.WINDOW_SERVICE) as WindowManager)
         every { context.getSystemService(Context.WINDOW_SERVICE) } returns windowManager

@@ -9,7 +9,6 @@ import android.content.Intent
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
-import mozilla.components.support.ktx.android.content.appVersionName
 import mozilla.components.support.ktx.android.content.getColorFromAttr
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.IntentReceiverActivity
@@ -42,6 +41,7 @@ object SupportUtils {
         SMARTBLOCK("smartblock-enhanced-tracking-protection"),
         SPONSOR_PRIVACY("sponsor-privacy"),
         HTTPS_ONLY_MODE("https-only-mode-waterfox-android"),
+        UNSIGNED_ADDONS("unsigned-addons"),
     }
 
     enum class MozillaPage(internal val path: String) {

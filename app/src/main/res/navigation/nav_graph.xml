@@ -1059,11 +1059,6 @@
             <action
                 android:id="@+id/action_addonsManagementFragment_to_notYetSupportedAddonFragment"
                 app:destination="@id/notYetSupportedAddonFragment" />
-            <argument
-                android:name="installAddonId"
-                android:defaultValue="@null"
-                app:argType="string"
-                app:nullable="true" />
         </fragment>
         <fragment
             android:id="@+id/installedAddonDetailsFragment"

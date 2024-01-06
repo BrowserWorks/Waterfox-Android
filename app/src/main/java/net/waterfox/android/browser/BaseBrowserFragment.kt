@@ -11,6 +11,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
+import android.os.StrictMode
 import android.provider.Settings
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -33,6 +34,8 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
@@ -40,7 +43,13 @@ import kotlinx.coroutines.withContext
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.appservices.places.uniffi.PlacesApiException
 import mozilla.components.browser.state.action.ContentAction
-import mozilla.components.browser.state.selector.*
+import mozilla.components.browser.state.selector.findCustomTab
+import mozilla.components.browser.state.selector.findCustomTabOrSelectedTab
+import mozilla.components.browser.state.selector.findTab
+import mozilla.components.browser.state.selector.findTabOrCustomTab
+import mozilla.components.browser.state.selector.findTabOrCustomTabOrSelectedTab
+import mozilla.components.browser.state.selector.getNormalOrPrivateTabs
+import mozilla.components.browser.state.selector.selectedTab
 import mozilla.components.browser.state.state.CustomTabSessionState
 import mozilla.components.browser.state.state.SessionState
 import mozilla.components.browser.state.state.TabSessionState
@@ -51,7 +60,6 @@ import mozilla.components.concept.engine.permission.SitePermissions
 import mozilla.components.concept.engine.prompt.ShareData
 import mozilla.components.feature.accounts.FxaCapability
 import mozilla.components.feature.accounts.FxaWebChannelFeature
-import mozilla.components.feature.addons.update.DefaultAddonUpdater
 import mozilla.components.feature.app.links.AppLinksFeature
 import mozilla.components.feature.contextmenu.ContextMenuCandidate
 import mozilla.components.feature.contextmenu.ContextMenuFeature
@@ -69,7 +77,11 @@ import mozilla.components.feature.prompts.login.LoginDelegate
 import mozilla.components.feature.prompts.share.ShareDelegate
 import mozilla.components.feature.readerview.ReaderViewFeature
 import mozilla.components.feature.search.SearchFeature
-import mozilla.components.feature.session.*
+import mozilla.components.feature.session.FullScreenFeature
+import mozilla.components.feature.session.PictureInPictureFeature
+import mozilla.components.feature.session.ScreenOrientationFeature
+import mozilla.components.feature.session.SessionFeature
+import mozilla.components.feature.session.SwipeRefreshFeature
 import mozilla.components.feature.session.behavior.EngineViewBrowserToolbarBehavior
 import mozilla.components.feature.sitepermissions.SitePermissionsFeature
 import mozilla.components.feature.webauthn.WebAuthnFeature
@@ -81,29 +93,44 @@ import mozilla.components.support.base.feature.ActivityResultHandler
 import mozilla.components.support.base.feature.PermissionsFeature
 import mozilla.components.support.base.feature.UserInteractionHandler
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
-import mozilla.components.support.ktx.android.view.enterImmersiveMode
 import mozilla.components.support.ktx.android.view.exitImmersiveMode
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.kotlin.getOrigin
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.distinctUntilChangedBy
-import net.waterfox.android.*
 import net.waterfox.android.BuildConfig
+import net.waterfox.android.HomeActivity
+import net.waterfox.android.IntentReceiverActivity
+import net.waterfox.android.NavGraphDirections
+import net.waterfox.android.OnBackLongPressedListener
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.readermode.DefaultReaderModeController
 import net.waterfox.android.components.FindInPageIntegration
 import net.waterfox.android.components.StoreProvider
 import net.waterfox.android.components.WaterfoxSnackbar
-import net.waterfox.android.components.toolbar.*
+import net.waterfox.android.components.toolbar.BrowserFragmentState
+import net.waterfox.android.components.toolbar.BrowserFragmentStore
+import net.waterfox.android.components.toolbar.BrowserToolbarView
+import net.waterfox.android.components.toolbar.DefaultBrowserToolbarController
+import net.waterfox.android.components.toolbar.DefaultBrowserToolbarMenuController
+import net.waterfox.android.components.toolbar.ToolbarIntegration
 import net.waterfox.android.components.toolbar.interactor.BrowserToolbarInteractor
 import net.waterfox.android.components.toolbar.interactor.DefaultBrowserToolbarInteractor
 import net.waterfox.android.crashes.CrashContentIntegration
 import net.waterfox.android.databinding.FragmentBrowserBinding
 import net.waterfox.android.downloads.DownloadService
 import net.waterfox.android.downloads.DynamicDownloadDialog
-import net.waterfox.android.ext.*
+import net.waterfox.android.ext.accessibilityManager
+import net.waterfox.android.ext.breadcrumb
+import net.waterfox.android.ext.components
+import net.waterfox.android.ext.enterToImmersiveMode
+import net.waterfox.android.ext.getPreferenceKey
+import net.waterfox.android.ext.hideToolbar
+import net.waterfox.android.ext.nav
+import net.waterfox.android.ext.requireComponents
+import net.waterfox.android.ext.runIfFragmentIsAttached
+import net.waterfox.android.ext.secure
+import net.waterfox.android.ext.settings
 import net.waterfox.android.home.HomeScreenViewModel
 import net.waterfox.android.home.SharedViewModel
 import net.waterfox.android.onboarding.WaterfoxOnboarding
@@ -1230,7 +1257,9 @@ abstract class BaseBrowserFragment :
     @VisibleForTesting
     internal fun updateThemeForSession(session: SessionState) {
         val sessionMode = BrowsingMode.fromBoolean(session.content.private)
-        (activity as HomeActivity).browsingModeManager.mode = sessionMode
+        requireComponents.strictMode.resetAfter(StrictMode.allowThreadDiskReads()) {
+            (activity as HomeActivity).browsingModeManager.mode = sessionMode
+        }
     }
 
     @VisibleForTesting

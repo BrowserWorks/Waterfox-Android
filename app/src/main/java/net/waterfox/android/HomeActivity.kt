@@ -59,15 +59,18 @@ import mozilla.components.support.ktx.kotlin.toNormalizedUrl
 import mozilla.components.support.locale.LocaleAwareAppCompatActivity
 import mozilla.components.support.utils.SafeIntent
 import mozilla.components.support.utils.toSafeIntent
-import mozilla.components.support.webextensions.WebExtensionPopupFeature
+import mozilla.components.support.webextensions.WebExtensionPopupObserver
 import net.waterfox.android.addons.AddonDetailsFragmentDirections
 import net.waterfox.android.addons.AddonPermissionsDetailsFragmentDirections
+import net.waterfox.android.addons.AddonsManagementFragmentDirections
+import net.waterfox.android.addons.ExtensionsProcessDisabledController
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.browser.browsingmode.DefaultBrowsingModeManager
 import net.waterfox.android.databinding.ActivityHomeBinding
 import net.waterfox.android.exceptions.trackingprotection.TrackingProtectionExceptionsFragmentDirections
 import net.waterfox.android.ext.*
+import net.waterfox.android.extension.WebExtensionPromptFeature
 import net.waterfox.android.home.HomeFragmentDirections
 import net.waterfox.android.home.intent.*
 import net.waterfox.android.library.bookmarks.BookmarkFragmentDirections
@@ -118,8 +121,18 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
     private var isToolbarInflated = false
 
-    private val webExtensionPopupFeature by lazy {
-        WebExtensionPopupFeature(components.core.store, ::openPopup)
+    private val webExtensionPopupObserver by lazy {
+        WebExtensionPopupObserver(components.core.store, ::openPopup)
+    }
+    val webExtensionPromptFeature by lazy {
+        WebExtensionPromptFeature(
+            store = components.core.store,
+            context = this@HomeActivity,
+            fragmentManager = supportFragmentManager,
+        )
+    }
+    private val extensionsProcessDisabledPromptObserver by lazy {
+        ExtensionsProcessDisabledController(this@HomeActivity)
     }
 
     private val serviceWorkerSupport by lazy {
@@ -220,7 +233,12 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
         supportActionBar?.hide()
 
-        lifecycle.addObservers(webExtensionPopupFeature, serviceWorkerSupport)
+        lifecycle.addObservers(
+            webExtensionPopupObserver,
+            extensionsProcessDisabledPromptObserver,
+            webExtensionPromptFeature,
+            serviceWorkerSupport,
+        )
 
         if (shouldAddToRecentsScreen(intent)) {
             intent.removeExtra(START_IN_RECENTS_SCREEN)
@@ -762,6 +780,8 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             TabsTrayFragmentDirections.actionGlobalBrowser(customTabSessionId)
         BrowserDirection.FromRecentlyClosed ->
             RecentlyClosedFragmentDirections.actionGlobalBrowser(customTabSessionId)
+        BrowserDirection.FromAddonsManagementFragment ->
+            AddonsManagementFragmentDirections.actionGlobalBrowser(customTabSessionId)
     }
 
     /**

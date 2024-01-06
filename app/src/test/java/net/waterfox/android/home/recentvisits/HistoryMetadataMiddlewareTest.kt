@@ -25,14 +25,14 @@ import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.engine.history.HistoryItem
 import mozilla.components.concept.storage.HistoryMetadataKey
 import mozilla.components.support.test.ext.joinBlocking
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.historymetadata.HistoryMetadataMiddleware
+import net.waterfox.android.historymetadata.HistoryMetadataService
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import net.waterfox.android.historymetadata.HistoryMetadataMiddleware
-import net.waterfox.android.historymetadata.HistoryMetadataService
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class HistoryMetadataMiddlewareTest {
@@ -769,6 +769,7 @@ class HistoryMetadataMiddlewareTest {
                 regionDefaultSearchEngineId = "google",
                 customSearchEngines = emptyList(),
                 hiddenSearchEngines = emptyList(),
+                disabledSearchEngineIds = emptyList(),
                 additionalAvailableSearchEngines = emptyList(),
                 additionalSearchEngines = emptyList(),
                 regionSearchEnginesOrder = listOf("google")

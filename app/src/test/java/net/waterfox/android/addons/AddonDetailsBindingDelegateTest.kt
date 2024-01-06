@@ -8,17 +8,21 @@ import android.net.Uri
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.view.isVisible
 import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.feature.addons.Addon
+import mozilla.components.support.ktx.android.content.getColorFromAttr
 import mozilla.components.support.test.robolectric.testContext
+import net.waterfox.android.R
+import net.waterfox.android.databinding.FragmentAddOnDetailsBinding
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import org.junit.Assert
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.databinding.FragmentAddOnDetailsBinding
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class AddonDetailsBindingDelegateTest {
@@ -30,9 +34,9 @@ class AddonDetailsBindingDelegateTest {
     private val baseAddon = Addon(
         id = "",
         translatableDescription = mapOf(
-            Addon.DEFAULT_LOCALE to "Some blank addon\nwith a blank line"
+            Addon.DEFAULT_LOCALE to "Some blank addon\nwith a blank line",
         ),
-        updatedAt = "2020-11-23T08:00:00Z"
+        updatedAt = "2020-11-23T08:00:00Z",
     )
 
     @Before
@@ -48,8 +52,8 @@ class AddonDetailsBindingDelegateTest {
     fun `bind addons rating`() {
         detailsBindingDelegate.bind(
             baseAddon.copy(
-                rating = null
-            )
+                rating = null,
+            ),
         )
         assertEquals(0f, binding.ratingView.rating)
 
@@ -57,21 +61,36 @@ class AddonDetailsBindingDelegateTest {
             baseAddon.copy(
                 rating = Addon.Rating(
                     average = 4.3f,
-                    reviews = 100
-                )
-            )
+                    reviews = 100,
+                ),
+            ),
         )
         assertEquals("4.30/5", binding.ratingView.contentDescription)
         assertEquals(4.5f, binding.ratingView.rating)
-        assertEquals("100", binding.usersCount.text)
+        assertEquals("100", binding.reviewCount.text)
     }
 
     @Test
-    fun `bind addons website`() {
+    fun `bind addons rating with review url`() {
         detailsBindingDelegate.bind(
             baseAddon.copy(
-                siteUrl = "https://mozilla.org"
-            )
+                rating = Addon.Rating(average = 4.3f, reviews = 100),
+                ratingUrl = "https://example.org/",
+            ),
+        )
+        assertEquals("100", binding.reviewCount.text)
+
+        binding.reviewCount.performClick()
+
+        verify { interactor.openWebsite(Uri.parse("https://example.org/")) }
+    }
+
+    @Test
+    fun `bind addons homepage`() {
+        detailsBindingDelegate.bind(
+            baseAddon.copy(
+                homepageUrl = "https://mozilla.org",
+            ),
         )
 
         binding.homePageLabel.performClick()
@@ -90,7 +109,7 @@ class AddonDetailsBindingDelegateTest {
     fun `bind addons version`() {
         val addon1 = baseAddon.copy(
             version = "1.0.0",
-            installedState = null
+            installedState = null,
         )
 
         detailsBindingDelegate.bind(addon1)
@@ -103,8 +122,8 @@ class AddonDetailsBindingDelegateTest {
             installedState = Addon.InstalledState(
                 id = "",
                 version = "2.0.0",
-                optionsPageUrl = null
-            )
+                optionsPageUrl = null,
+            ),
         )
         detailsBindingDelegate.bind(addon2)
         assertEquals("2.0.0", binding.versionText.text)
@@ -113,18 +132,30 @@ class AddonDetailsBindingDelegateTest {
     }
 
     @Test
-    fun `bind addons authors`() {
-        val baseAuthor = Addon.Author("", "", "", "")
+    fun `bind addons author`() {
         detailsBindingDelegate.bind(
-            baseAddon.copy(
-                authors = listOf(
-                    baseAuthor.copy(name = " Sarah Jane"),
-                    baseAuthor.copy(name = "John Smith ")
-                )
-            )
+            baseAddon.copy(author = Addon.Author(name = "Sarah Jane", url = "")),
         )
 
-        assertEquals("Sarah Jane, John Smith", binding.authorText.text)
+        assertEquals("Sarah Jane", binding.authorText.text)
+        Assert.assertNotEquals(
+            testContext.getColorFromAttr(R.attr.textAccent),
+            binding.authorText.currentTextColor
+        )
+    }
+
+    @Test
+    fun `bind addons author with url`() {
+        detailsBindingDelegate.bind(
+            baseAddon.copy(author = Addon.Author(name = "Sarah Jane", url = "https://example.org/")),
+        )
+
+        assertEquals("Sarah Jane", binding.authorText.text)
+        assertEquals(testContext.getColorFromAttr(R.attr.textAccent), binding.authorText.currentTextColor)
+
+        binding.authorText.performClick()
+
+        verify { interactor.openWebsite(Uri.parse("https://example.org/")) }
     }
 
     @Test
@@ -133,8 +164,54 @@ class AddonDetailsBindingDelegateTest {
 
         assertEquals(
             "Some blank addon\nwith a blank line",
-            binding.details.text.toString()
+            binding.details.text.toString(),
         )
         assertTrue(binding.details.movementMethod is LinkMovementMethod)
+    }
+
+    @Test
+    fun `bind without last updated date`() {
+        detailsBindingDelegate.bind(baseAddon.copy(updatedAt = ""))
+
+        Assert.assertFalse(binding.lastUpdatedLabel.isVisible)
+        Assert.assertFalse(binding.lastUpdatedText.isVisible)
+        Assert.assertFalse(binding.lastUpdatedDivider.isVisible)
+    }
+
+    @Test
+    fun `bind without author`() {
+        detailsBindingDelegate.bind(baseAddon.copy(author = null))
+
+        Assert.assertFalse(binding.authorLabel.isVisible)
+        Assert.assertFalse(binding.authorText.isVisible)
+        Assert.assertFalse(binding.authorDivider.isVisible)
+    }
+
+    @Test
+    fun `bind without a home page`() {
+        detailsBindingDelegate.bind(baseAddon.copy(homepageUrl = ""))
+
+        Assert.assertFalse(binding.homePageLabel.isVisible)
+        Assert.assertFalse(binding.homePageDivider.isVisible)
+    }
+
+    @Test
+    fun `bind add-on detail url`() {
+        detailsBindingDelegate.bind(baseAddon.copy(detailUrl = "https://example.org"))
+
+        assertTrue(binding.detailUrl.isVisible)
+        assertTrue(binding.detailUrlDivider.isVisible)
+
+        binding.detailUrl.performClick()
+
+        verify { interactor.openWebsite(Uri.parse("https://example.org")) }
+    }
+
+    @Test
+    fun `bind add-on without a detail url`() {
+        detailsBindingDelegate.bind(baseAddon.copy(detailUrl = ""))
+
+        Assert.assertFalse(binding.detailUrl.isVisible)
+        Assert.assertFalse(binding.detailUrlDivider.isVisible)
     }
 }

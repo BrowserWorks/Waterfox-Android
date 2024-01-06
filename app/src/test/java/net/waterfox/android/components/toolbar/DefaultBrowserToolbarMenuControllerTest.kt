@@ -47,13 +47,6 @@ import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.test.ext.joinBlocking
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.After
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.NavGraphDirections
 import net.waterfox.android.R
@@ -61,14 +54,22 @@ import net.waterfox.android.browser.BrowserAnimator
 import net.waterfox.android.browser.BrowserFragmentDirections
 import net.waterfox.android.browser.readermode.ReaderModeController
 import net.waterfox.android.collections.SaveCollectionStep
-import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.TabCollectionStorage
+import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.components.accounts.AccountState
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.directionsEq
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.utils.Settings
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -605,7 +606,9 @@ class DefaultBrowserToolbarMenuControllerTest {
     @Test
     fun `GIVEN account exists and the user is not signed in WHEN sign in to sync menu item is pressed THEN navigate to account problem fragment`() = runTest {
         val item = ToolbarMenu.Item.SyncAccount(AccountState.NEEDS_REAUTHENTICATION)
-        val accountProblemDirections = BrowserFragmentDirections.actionGlobalAccountProblemFragment()
+        val accountProblemDirections = BrowserFragmentDirections.actionGlobalAccountProblemFragment(
+            entrypoint = WaterfoxFxAEntryPoint.BrowserToolbar,
+        )
         val controller = createController(scope = this, store = browserStore)
 
         controller.handleToolbarItemInteraction(item)
@@ -616,7 +619,9 @@ class DefaultBrowserToolbarMenuControllerTest {
     @Test
     fun `GIVEN account doesn't exist WHEN sign in to sync menu item is pressed THEN navigate to sign in`() = runTest {
         val item = ToolbarMenu.Item.SyncAccount(AccountState.NO_ACCOUNT)
-        val turnOnSyncDirections = BrowserFragmentDirections.actionGlobalTurnOnSync()
+        val turnOnSyncDirections = BrowserFragmentDirections.actionGlobalTurnOnSync(
+            entrypoint = WaterfoxFxAEntryPoint.BrowserToolbar,
+        )
         val controller = createController(scope = this, store = browserStore)
 
         controller.handleToolbarItemInteraction(item)

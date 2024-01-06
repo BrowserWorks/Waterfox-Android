@@ -109,6 +109,12 @@ internal object AppStoreReducer {
             state.copy(
                 wallpaperState = state.wallpaperState.copy(availableWallpapers = action.wallpapers)
             )
+        is AppAction.AppLifecycleAction.ResumeAction -> {
+            state.copy(isForeground = true)
+        }
+        is AppAction.AppLifecycleAction.PauseAction -> {
+            state.copy(isForeground = false)
+        }
     }
 }
 

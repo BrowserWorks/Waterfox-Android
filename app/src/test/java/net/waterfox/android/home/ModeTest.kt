@@ -10,13 +10,13 @@ import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
 import mozilla.components.service.fxa.manager.FxaAccountManager
-import org.junit.Assert.assertEquals
-import org.junit.Before
-import org.junit.Test
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.ext.components
 import net.waterfox.android.onboarding.WaterfoxOnboarding
+import org.junit.Assert.assertEquals
+import org.junit.Before
+import org.junit.Test
 
 class ModeTest {
 
@@ -78,7 +78,6 @@ class ModeTest {
     fun `get current onboarding mode when signed out`() {
         every { onboarding.userHasBeenOnboarded() } returns false
         every { accountManager.authenticatedAccount() } returns null
-        every { accountManager.shareableAccounts(context) } returns emptyList()
 
         assertEquals(Mode.Onboarding(OnboardingState.SignedOutNoAutoSignIn), currentMode.getCurrentMode())
     }

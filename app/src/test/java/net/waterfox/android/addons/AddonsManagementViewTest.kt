@@ -13,15 +13,15 @@ import io.mockk.mockk
 import io.mockk.verify
 import mozilla.components.feature.addons.Addon
 import mozilla.components.feature.addons.ui.AddonsManagerAdapterDelegate
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
 import net.waterfox.android.R
 import net.waterfox.android.addons.AddonsManagementFragmentDirections.Companion.actionAddonsManagementFragmentToAddonDetailsFragment
 import net.waterfox.android.addons.AddonsManagementFragmentDirections.Companion.actionAddonsManagementFragmentToInstalledAddonDetails
 import net.waterfox.android.ext.directionsEq
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class AddonsManagementViewTest {
@@ -31,10 +31,24 @@ class AddonsManagementViewTest {
     private var showPermissionDialog: (Addon) -> Unit = { permissionDialogDisplayed = true }
     private var permissionDialogDisplayed = false
 
+    private var onMoreAddonsButtonClicked: () -> Unit = { moreAddonsButtonClicked = true }
+    private var moreAddonsButtonClicked = false
+
+    private var onLearnMoreLinkClicked: (AddonsManagerAdapterDelegate.LearnMoreLinks, Addon) -> Unit = {
+            _: AddonsManagerAdapterDelegate.LearnMoreLinks, _: Addon ->
+        learnMoreLinkClicked = true
+    }
+    private var learnMoreLinkClicked = false
+
     @Before
     fun setup() {
         MockKAnnotations.init(this)
-        managementView = AddonsManagementView(navController, showPermissionDialog)
+        managementView = AddonsManagementView(
+            navController,
+            showPermissionDialog,
+            onMoreAddonsButtonClicked,
+            onLearnMoreLinkClicked,
+        )
     }
 
     @Test
@@ -122,10 +136,23 @@ class AddonsManagementViewTest {
         managementView.onNotYetSupportedSectionClicked(addons)
 
         val expected = AddonsManagementFragmentDirections.actionAddonsManagementFragmentToNotYetSupportedAddonFragment(
-            addons.toTypedArray()
+            addons.toTypedArray(),
         )
         verify {
             navController.navigate(directionsEq(expected))
         }
+    }
+
+    @Test
+    fun `onFindMoreAddonsButtonClicked calls onMoreAddonsButtonClicked`() {
+        managementView.onFindMoreAddonsButtonClicked()
+        assertTrue(moreAddonsButtonClicked)
+    }
+
+    @Test
+    fun `onLearnMoreLinkClicked calls onLearnMore`() {
+        val addon: Addon = mockk()
+        managementView.onLearnMoreLinkClicked(AddonsManagerAdapterDelegate.LearnMoreLinks.BLOCKLISTED_ADDON, addon)
+        assertTrue(learnMoreLinkClicked)
     }
 }

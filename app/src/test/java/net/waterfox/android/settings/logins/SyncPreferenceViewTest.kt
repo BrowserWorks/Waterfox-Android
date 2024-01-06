@@ -24,15 +24,16 @@ import mozilla.components.service.fxa.SyncEngine
 import mozilla.components.service.fxa.manager.FxaAccountManager
 import mozilla.components.service.fxa.manager.SyncEnginesStorage
 import mozilla.components.support.test.any
+import net.waterfox.android.R
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
+import net.waterfox.android.settings.SyncPreference
+import net.waterfox.android.settings.SyncPreferenceView
+import net.waterfox.android.settings.logins.fragment.SavedLoginsAuthFragmentDirections
 import org.junit.After
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
-import net.waterfox.android.R
-import net.waterfox.android.settings.SyncPreference
-import net.waterfox.android.settings.SyncPreferenceView
-import net.waterfox.android.settings.logins.fragment.SavedLoginsAuthFragmentDirections
 
 class SyncPreferenceViewTest {
 
@@ -94,7 +95,9 @@ class SyncPreferenceViewTest {
         assertFalse(preferenceChangeListener.captured.onPreferenceChange(syncPreference, any()))
         verify {
             navController.navigate(
-                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment()
+                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                )
             )
         }
     }
@@ -111,7 +114,9 @@ class SyncPreferenceViewTest {
         assertFalse(preferenceChangeListener.captured.onPreferenceChange(syncPreference, any()))
         verify {
             navController.navigate(
-                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment()
+                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                )
             )
         }
     }
@@ -128,7 +133,9 @@ class SyncPreferenceViewTest {
         assertFalse(preferenceChangeListener.captured.onPreferenceChange(syncPreference, any()))
         verify {
             navController.navigate(
-                SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment()
+                SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                )
             )
         }
     }
@@ -180,12 +187,16 @@ class SyncPreferenceViewTest {
         loggedInTitle = loggedInTitle,
         onSignInToSyncClicked = {
             val directions =
-                SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment()
+                SavedLoginsAuthFragmentDirections.actionSavedLoginsAuthFragmentToTurnOnSyncFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                )
             navController.navigate(directions)
         },
         onReconnectClicked = {
             val directions =
-                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment()
+                SavedLoginsAuthFragmentDirections.actionGlobalAccountProblemFragment(
+                    entrypoint = WaterfoxFxAEntryPoint.SavedLogins,
+                )
             navController.navigate(directions)
         }
     )

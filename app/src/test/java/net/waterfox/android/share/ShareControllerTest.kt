@@ -28,17 +28,18 @@ import mozilla.components.feature.share.RecentAppsStorage
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
+import net.waterfox.android.R
+import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
+import net.waterfox.android.ext.nav
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.share.listadapters.AppShareOption
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
-import net.waterfox.android.ext.nav
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import net.waterfox.android.share.listadapters.AppShareOption
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class ShareControllerTest {
@@ -68,7 +69,7 @@ class ShareControllerTest {
     private val testCoroutineScope = coroutinesTestRule.scope
     private val controller = DefaultShareController(
         context, shareSubject, shareData, sendTabUseCases, snackbar, navController,
-        recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+        recentAppStorage, testCoroutineScope, testDispatcher, WaterfoxFxAEntryPoint.ShareMenu, dismiss
     )
 
     @Test
@@ -90,7 +91,8 @@ class ShareControllerTest {
         val activityContext: Context = mockk<Activity>()
         val testController = DefaultShareController(
             activityContext, shareSubject, shareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
         every { activityContext.startActivity(capture(shareIntent)) } just Runs
         every { recentAppStorage.updateRecentApp(appShareOption.activityName) } just Runs
@@ -127,7 +129,8 @@ class ShareControllerTest {
         val activityContext: Context = mockk<Activity>()
         val testController = DefaultShareController(
             activityContext, shareSubject, shareData, mockk(),
-            snackbar, mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            snackbar, mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
         every { recentAppStorage.updateRecentApp(appShareOption.activityName) } just Runs
         every { activityContext.startActivity(capture(shareIntent)) } throws SecurityException()
@@ -155,7 +158,8 @@ class ShareControllerTest {
         val activityContext: Context = mockk<Activity>()
         val testController = DefaultShareController(
             activityContext, shareSubject, shareData, mockk(),
-            snackbar, mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            snackbar, mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
         every { recentAppStorage.updateRecentApp(appShareOption.activityName) } just Runs
         every { activityContext.startActivity(capture(shareIntent)) } throws ActivityNotFoundException()
@@ -176,7 +180,8 @@ class ShareControllerTest {
         val activityContext: Context = mockk<Activity>()
         val testController = DefaultShareController(
             activityContext, shareSubject, shareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals(shareSubject, testController.getShareSubject())
@@ -187,7 +192,8 @@ class ShareControllerTest {
         val activityContext: Context = mockk<Activity>()
         val testController = DefaultShareController(
             activityContext, null, shareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals("title0, title1", testController.getShareSubject())
@@ -202,7 +208,8 @@ class ShareControllerTest {
         )
         val testController = DefaultShareController(
             activityContext, null, partialTitlesShareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals("title1", testController.getShareSubject())
@@ -217,7 +224,8 @@ class ShareControllerTest {
         )
         val testController = DefaultShareController(
             activityContext, null, noTitleShareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals("", testController.getShareSubject())
@@ -232,7 +240,8 @@ class ShareControllerTest {
         )
         val testController = DefaultShareController(
             activityContext, null, noTitleShareData, mockk(),
-            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            mockk(), mockk(), recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals("", testController.getShareSubject())
@@ -307,7 +316,9 @@ class ShareControllerTest {
         verifyOrder {
             navController.nav(
                 R.id.shareFragment,
-                ShareFragmentDirections.actionGlobalTurnOnSync()
+                ShareFragmentDirections.actionGlobalTurnOnSync(
+                    WaterfoxFxAEntryPoint.ShareMenu,
+                )
             )
             dismiss(ShareController.Result.DISMISSED)
         }
@@ -320,7 +331,9 @@ class ShareControllerTest {
         verifyOrder {
             navController.nav(
                 R.id.shareFragment,
-                ShareFragmentDirections.actionGlobalAccountProblemFragment()
+                ShareFragmentDirections.actionGlobalAccountProblemFragment(
+                    WaterfoxFxAEntryPoint.ShareMenu,
+                )
             )
             dismiss(ShareController.Result.DISMISSED)
         }
@@ -362,16 +375,16 @@ class ShareControllerTest {
     @Test
     fun `getSuccessMessage should return different strings depending on the number of shared tabs`() {
         val controllerWithOneSharedTab = DefaultShareController(
-            context,
-            shareSubject,
-            listOf(ShareData(url = "url0", title = "title0")),
-            mockk(),
-            mockk(),
-            mockk(),
-            mockk(),
-            mockk(),
-            mockk(),
-            mockk()
+            context = context,
+            shareSubject = shareSubject,
+            shareData = listOf(ShareData(url = "url0", title = "title0")),
+            sendTabUseCases = mockk(),
+            snackbar = mockk(),
+            navController = mockk(),
+            recentAppsStorage = mockk(),
+            viewLifecycleScope = mockk(),
+            dispatcher = mockk(),
+            dismiss = mockk(),
         )
         val controllerWithMoreSharedTabs = controller
         val expectedTabSharedMessage = context.getString(R.string.sync_sent_tab_snackbar)
@@ -399,7 +412,8 @@ class ShareControllerTest {
         )
         val controller = DefaultShareController(
             context, shareSubject, shareData, sendTabUseCases, snackbar, navController,
-            recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         val expectedShareText = "${shareData[0].url}\n\nurl0\n\n${shareData[2].url}"
@@ -415,7 +429,8 @@ class ShareControllerTest {
     fun `getShareSubject will return a concatenation of tab titles if 'shareSubject' is null`() {
         val controller = DefaultShareController(
             context, null, shareData, sendTabUseCases, snackbar, navController,
-            recentAppStorage, testCoroutineScope, testDispatcher, dismiss
+            recentAppStorage, testCoroutineScope, testDispatcher,
+            WaterfoxFxAEntryPoint.ShareMenu, dismiss
         )
 
         assertEquals("title0, title1", controller.getShareSubject())
