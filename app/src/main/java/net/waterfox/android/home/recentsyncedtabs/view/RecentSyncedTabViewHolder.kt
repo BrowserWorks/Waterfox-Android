@@ -52,9 +52,10 @@ class RecentSyncedTabViewHolder(
             }
             RecentSyncedTab(
                 tab = syncedTab,
+                storage = components.core.thumbnailStorage,
                 onRecentSyncedTabClick = recentSyncedTabInteractor::onRecentSyncedTabClicked,
                 onSeeAllSyncedTabsButtonClick = recentSyncedTabInteractor::onSyncedTabShowAllClicked,
-                onRemoveSyncedTab = recentSyncedTabInteractor::onRemovedRecentSyncedTab
+                onRemoveSyncedTab = recentSyncedTabInteractor::onRemovedRecentSyncedTab,
             )
         }
     }

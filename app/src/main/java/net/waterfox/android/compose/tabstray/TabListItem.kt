@@ -22,6 +22,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -30,11 +31,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.state.state.createTab
+import mozilla.components.browser.thumbnails.storage.ThumbnailStorage
 import net.waterfox.android.R
 import net.waterfox.android.compose.TabThumbnail
 import net.waterfox.android.ext.toShortUrl
-import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
+import net.waterfox.android.theme.WaterfoxTheme
 
 /**
  * List item used to display a tab that supports clicks,
@@ -56,6 +58,8 @@ import net.waterfox.android.theme.Theme
 @Suppress("MagicNumber")
 fun TabListItem(
     tab: TabSessionState,
+    storage: ThumbnailStorage,
+    thumbnailSize: Int,
     isSelected: Boolean = false,
     multiSelectionEnabled: Boolean = false,
     multiSelectionSelected: Boolean = false,
@@ -83,6 +87,8 @@ fun TabListItem(
     ) {
         Thumbnail(
             tab = tab,
+            size = thumbnailSize,
+            storage = storage,
             multiSelectionEnabled = multiSelectionEnabled,
             isSelected = multiSelectionSelected,
             onMediaIconClicked = { onMediaClick(it) }
@@ -113,7 +119,7 @@ fun TabListItem(
                 modifier = Modifier.size(size = 24.dp),
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.mozac_ic_close),
+                    painter = painterResource(id = R.drawable.mozac_ic_cross_20),
                     contentDescription = stringResource(
                         id = R.string.close_tab_title,
                         tab.content.title
@@ -128,6 +134,8 @@ fun TabListItem(
 @Composable
 private fun Thumbnail(
     tab: TabSessionState,
+    size: Int,
+    storage: ThumbnailStorage,
     multiSelectionEnabled: Boolean,
     isSelected: Boolean,
     onMediaIconClicked: ((TabSessionState) -> Unit)
@@ -135,6 +143,8 @@ private fun Thumbnail(
     Box {
         TabThumbnail(
             tab = tab,
+            size = size,
+            storage = storage,
             modifier = Modifier.size(width = 92.dp, height = 72.dp),
             contentDescription = stringResource(id = R.string.mozac_browser_tabstray_open_tab),
         )
@@ -148,7 +158,7 @@ private fun Thumbnail(
                 backgroundColor = WaterfoxTheme.colors.layerAccent,
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.mozac_ic_check),
+                    painter = painterResource(id = R.drawable.mozac_ic_checkmark_24),
                     modifier = Modifier
                         .matchParentSize()
                         .padding(all = 8.dp),
@@ -175,6 +185,8 @@ private fun TabListItemPreview() {
     WaterfoxTheme(theme = Theme.getTheme()) {
         TabListItem(
             tab = createTab(url = "www.mozilla.com", title = "Mozilla"),
+            thumbnailSize = 108,
+            storage = ThumbnailStorage(LocalContext.current),
             onCloseClick = {},
             onMediaClick = {},
             onClick = {},
@@ -190,6 +202,8 @@ private fun SelectedTabListItemPreview() {
     WaterfoxTheme(theme = Theme.getTheme()) {
         TabListItem(
             tab = createTab(url = "www.mozilla.com", title = "Mozilla"),
+            thumbnailSize = 108,
+            storage = ThumbnailStorage(LocalContext.current),
             onCloseClick = {},
             onMediaClick = {},
             onClick = {},
