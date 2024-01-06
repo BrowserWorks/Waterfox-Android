@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 object Versions {
-    const val kotlin = "1.7.20"
-    const val coroutines = "1.6.4"
+    const val kotlin = "1.8.22"
+    const val coroutines = "1.7.2"
 
     // These versions are linked: lint should be X+23.Y.Z of gradle_plugin version, according to:
     // https://github.com/alexjlockwood/android-lint-checks-demo/blob/0245fc027463137b1b4afb97c5295d60dce998b6/dependencies.gradle#L3
@@ -17,9 +17,9 @@ object Versions {
     const val detekt = "1.19.0"
     const val jna = "5.12.1"
 
-    const val androidx_compose = "1.2.1"
+    const val androidx_compose = "1.5.4"
     const val androidx_compose_paging = "1.0.0-alpha17"
-    const val androidx_compose_compiler = "1.3.2"
+    const val androidx_compose_compiler = "1.4.8"
     const val androidx_appcompat = "1.3.0"
     const val androidx_benchmark = "1.0.0"
     const val androidx_biometric = "1.1.0"
@@ -33,7 +33,7 @@ object Versions {
     const val androidx_navigation = "2.5.1"
     const val androidx_recyclerview = "1.2.1"
     const val androidx_core = "1.9.0"
-    const val androidx_paging = "3.1.1"
+    const val androidx_paging = "3.2.1"
     const val androidx_transition = "1.4.0"
     const val androidx_work = "2.7.1"
     const val androidx_datastore = "1.0.0"
@@ -43,11 +43,11 @@ object Versions {
     const val mozilla_android_components = AndroidComponents.VERSION
 
     const val junit = "5.5.2"
-    const val mockk = "1.12.0"
+    const val mockk = "1.13.8"
 
     const val mockwebserver = "4.10.0"
     const val uiautomator = "2.2.0"
-    const val robolectric = "4.9"
+    const val robolectric = "4.11.1"
 
     const val google_play_review_version = "2.0.0"
 
