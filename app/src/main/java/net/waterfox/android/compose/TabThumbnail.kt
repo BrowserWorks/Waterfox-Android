@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import mozilla.components.browser.state.state.TabSessionState
@@ -60,7 +61,7 @@ fun TabThumbnail(
         ThumbnailImage(
             request = ImageLoadRequest(
                 id = tab.id,
-                size = size,
+                size = LocalDensity.current.run { size.dp.toPx().toInt() },
                 isPrivate = tab.content.private,
             ),
             storage = storage,
