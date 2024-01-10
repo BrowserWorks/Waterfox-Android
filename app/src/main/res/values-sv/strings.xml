@@ -1146,7 +1146,7 @@
     
     <string name="sync_scan_code">Skanna koden</string>
     
-    <string name="sign_in_instructions">Waterfox är beroende av ett Mozilla-konto för att synkronisera data mellan mobil och dator.&lt;br&gt; Öppna Waterfox på din dator och gå till &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla är inte på något sätt associerade med Waterfox.&lt;/i&gt;</string>
+    <string name="sign_in_instructions">Waterfox är beroende av ett Mozilla-konto för att synkronisera data mellan mobil och dator.&lt;br&gt; Öppna Waterfox på din dator och gå till &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;BrowserWorks är inte på något sätt associerade med Waterfox.&lt;/i&gt;</string>
     
     <string name="sign_in_ready_for_scan">Klar för skanning</string>
     

@@ -1,1723 +1,1884 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- This Source Code Form is subject to the terms of the Mozilla-Public
-   - License, v. 2.0. If a copy of the MPL was not distributed with this
-   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
-    
-    <string name="app_name_private_5">プライベート %s</string>
-    
-    <string name="app_name_private_4">s（プライベート）</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://mozac.org/tools">
 
-    
-    
-    <string name="content_description_menu">その他のオプション</string>
-    
-    <string name="content_description_private_browsing_button">プライベートブラウジングを有効にする</string>
-    
-    <string name="content_description_disable_private_browsing_button">プライベートブラウジングを無効にする</string>
-    
-    <string name="search_hint">住所を検索または入力</string>
-    
-    <string name="application_search_hint">検索条件を入力</string>
-    
-    <string name="no_open_tabs_description">開いているタブはここに表示されます。</string>
-    
-    <string name="no_private_tabs_description">プライベートタブはここに表示されます。</string>
-    
-    <string name="tab_tray_multi_select_title">選択された %1$d</string>
-    
-    <string name="tab_tray_add_new_collection">新しいコレクションを追加する</string>
-    
-    <string name="tab_tray_add_new_collection_name">名称</string>
-    
+
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_5">%s プライベートモード</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_4">%s (プライベート)</string>
+
+    <!-- Home Fragment -->
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
+    <string name="content_description_menu">他のオプション</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_private_browsing_button">プライベートブラウジングを有効にします</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_disable_private_browsing_button">プライベートブラウジングを無効にします</string>
+    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <string name="search_hint">検索語またはアドレスを入力</string>
+
+    <!-- Placeholder text shown in the search bar when using application search engines -->
+    <string name="application_search_hint">検索語を入力</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_open_tabs_description">開いているタブがここに表示されます。</string>
+
+    <!-- No Private Tabs Message Description -->
+    <string name="no_private_tabs_description">プライベートタブがここに表示されます。</string>
+
+    <!-- Tab tray multi select title in app bar. The first parameter is the number of tabs selected -->
+    <string name="tab_tray_multi_select_title">%1$d 個選択</string>
+    <!-- Label of button in create collection dialog for creating a new collection  -->
+    <string name="tab_tray_add_new_collection">新しいコレクションを追加</string>
+    <!-- Label of editable text in create collection dialog for naming a new collection  -->
+    <string name="tab_tray_add_new_collection_name">コレクション名</string>
+    <!-- Label of button in save to collection dialog for selecting a current collection  -->
     <string name="tab_tray_select_collection">コレクションを選択</string>
-    
-    <string name="tab_tray_close_multiselect_content_description">マルチセレクトモードを終了する</string>
-    
+    <!-- Content description for close button while in multiselect mode in tab tray -->
+    <string name="tab_tray_close_multiselect_content_description">複数選択モードを終了</string>
+    <!-- Content description for save to collection button while in multiselect mode in tab tray -->
     <string name="tab_tray_collection_button_multiselect_content_description">選択したタブをコレクションに保存</string>
-    
-    <string name="tab_tray_multiselect_selected_content_description">厳選された</string>
 
-    
-    
-    <string name="recently_saved_title">最近保存したもの</string>
-    
-    <string name="recently_saved_show_all_content_description_2">保存したブックマークをすべて表示する</string>
-    
+    <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
+    <string name="tab_tray_multiselect_selected_content_description">選択</string>
+
+    <!-- Home - Recently saved bookmarks -->
+    <!-- Title for the home screen section with recently saved bookmarks. -->
+    <string name="recent_bookmarks_title">最近追加したブックマーク</string>
+
+    <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
+    <string name="recently_saved_show_all_content_description_2">保存したブックマークをすべて表示します</string>
+
+    <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
     <string name="recently_saved_menu_item_remove">削除</string>
 
-    
-    <string name="about_content">1$sはBrowserWorks製です。</string>
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s は Waterfox Projectの製品です。</string>
 
-    
-    
-    <string name="private_browsing_placeholder_description_2">1$sは、プライベートタブを閉じたりアプリを終了すると、プライベートタブの検索履歴や閲覧履歴を消去します。これにより、ウェブサイトやインターネットサービスプロバイダに対して匿名になるわけではありませんが、このデバイスを使用する他の誰からもオンラインで行うことを簡単に非公開にすることができます。</string>
-    <string name="private_browsing_common_myths">プライベート・ブラウジングに関する俗説</string>
+    <!-- Private Browsing -->
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description_2">%1$s のプライベートタブを閉じるかアプリを終了すると、その検索履歴と閲覧履歴が消去されます。これは、ウェブサイトやインターネットサービスプロバイダーに対して匿名でアクセスしているわけではありません。この機能は、この端末を使用する他者に対してオンライン上のプライベートな行動を隠すものです。</string>
+    <string name="private_browsing_common_myths">
+       プライベートブラウジングについての誤解
+    </string>
 
-    
-    
-    <string name="cfr_message">ホーム画面からプライベートタブを開くショートカットを追加。</string>
-    
-    <string name="cfr_pos_button_text">ショートカットの追加</string>
-    
-    <string name="cfr_neg_button_text">遠慮する</string>
+    <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
+    <!-- Text for the main message -->
+    <string name="cfr_message">プライベートタブを開くショートカットをホーム画面に追加します。</string>
+    <!-- Text for the positive button -->
+    <string name="cfr_pos_button_text">ショートカットを追加</string>
+    <!-- Text for the negative button -->
+    <string name="cfr_neg_button_text">追加しない</string>
 
-    
-    
-    <string name="open_in_app_cfr_info_message_2">アプリのリンクを自動的に開くように、%1$sを設定できます。</string>
-    
-    <string name="open_in_app_cfr_positive_button_text">設定に進む</string>
-    
-    <string name="open_in_app_cfr_negative_button_text">解散</string>
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. The first parameter is the name of the application.-->
+    <string name="open_in_app_cfr_info_message_2">アプリ内のリンクを %1$sで自動的に開くように設定できます。</string>
+    <!-- Text for the positive action button -->
+    <string name="open_in_app_cfr_positive_button_text">設定を開く</string>
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">閉じる</string>
 
-    
-    <string name="cfr_dismiss_button_default_content_description">解散</string>
+    <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
+    <string name="camera_permissions_needed_message">カメラへのアクセスが必要です。Android の設定から、権限をタップし、許可をタップしてください。</string>
+    <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
+    <string name="camera_permissions_needed_positive_button_text">設定を開く</string>
+    <!-- Text for the negative action button to dismiss the dialog. -->
+    <string name="camera_permissions_needed_negative_button_text">閉じる</string>
 
-    
-    
-    <string name="tcp_cfr_message">私たちの最も強力なプライバシー機能は、クロスサイト・トラッカーを隔離します。</string>
-    
-    <string name="tcp_cfr_learn_more">クッキープロテクションについて</string>
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">開いたタブのうち、過去の一定期間表示されていないものを自動的に閉じるように設定します。</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">オプションを表示</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">閉じる</string>
 
-    
-    <string name="camera_permissions_needed_message">カメラへのアクセスが必要です。Androidの設定を開き、アクセス許可をタップし、許可するをタップします。</string>
-    
-    <string name="camera_permissions_needed_positive_button_text">設定に進む</string>
-    
-    <string name="camera_permissions_needed_negative_button_text">解散</string>
-
-    
-    <string name="tab_tray_close_tabs_banner_message">過去1日、1週間、1ヶ月に一度も表示されていない開いているタブを自動的に閉じるように設定します。</string>
-    
-    <string name="tab_tray_close_tabs_banner_positive_button_text">オプションを見る</string>
-    
-    <string name="tab_tray_close_tabs_banner_negative_button_text">解散</string>
-    
-    <string name="tab_tray_inactive_onboarding_message">2週間見ていないタブはここに移動する。</string>
-    
+    <!-- Text for the banner message to tell users about our inactive tabs feature. -->
+    <string name="tab_tray_inactive_onboarding_message">2 週間以上表示していないタブをここに移動します。</string>
+    <!-- Text for the action link to go to Settings for inactive tabs. -->
     <string name="tab_tray_inactive_onboarding_button_text">設定でオフにする</string>
-    
-    <string name="tab_tray_inactive_auto_close_title">1ヶ月後に自動閉鎖？</string>
-    
-    <string name="tab_tray_inactive_auto_close_body_2">1$sは、過去1ヶ月閲覧していないタブを閉じることができます。</string>
-    
+
+    <!-- Text for title for the auto-close dialog of the inactive tabs. -->
+    <string name="tab_tray_inactive_auto_close_title">1 か月後に自動的に閉じますか？</string>
+    <!-- Text for the body for the auto-close dialog of the inactive tabs.
+        The first parameter is the name of the application.-->
+    <string name="tab_tray_inactive_auto_close_body_2">%1$s は 1 か月以上表示していないタブを閉じることができます。</string>
+    <!-- Content description for close button in the auto-close dialog of the inactive tabs. -->
     <string name="tab_tray_inactive_auto_close_button_content_description">閉じる</string>
 
-    
-    <string name="tab_tray_inactive_turn_on_auto_close_button_2">オートクローズをオンにする</string>
+
+    <!-- Text for turn on auto close tabs button in the auto-close dialog of the inactive tabs. -->
+    <string name="tab_tray_inactive_turn_on_auto_close_button_2">タブを自動的に閉じる</string>
 
 
-    
-    
+    <!-- Home screen icons - Long press shortcuts -->
+    <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">新しいタブ</string>
-    
+    <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">新しいプライベートタブ</string>
 
-    
-    
-    <string name="recent_tabs_header">戻る</string>
-    
+    <!-- Recent Tabs -->
+    <!-- Header text for jumping back into the recent tab in the home screen -->
+    <string name="recent_tabs_header">以前表示したタブ</string>
+    <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">すべて表示</string>
-    
-    <string name="recent_tabs_show_all_content_description_2">最近のタブをすべて表示するボタン</string>
-    
-    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Your search for \"%1$s"</string>
-    
-    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">dサイト</string>
-    
-    <string name="recent_tabs_see_all_synced_tabs_button_text">すべての同期タブを見る</string>
-    
-    <string name="recent_tabs_synced_device_icon_content_description">同期デバイス</string>
-    
-    <string name="recent_synced_tab_menu_item_remove">削除</string>
-    
+
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description_2">最近のタブをすべて表示するボタンです</string>
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">\&quot;%1$s\&quot; についての検索</string>
+
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        %d is a placeholder for the number of sites in the group. This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count_2">%d サイト</string>
+
+    <!-- Text for button in synced tab card that opens synced tabs tray -->
+    <string name="recent_tabs_see_all_synced_tabs_button_text">同期したタブをすべて見る</string>
+    <!-- Accessibility description for device icon used for recent synced tab -->
+    <string name="recent_tabs_synced_device_icon_content_description">同期された端末</string>
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
     <string name="recent_tab_menu_item_remove">削除</string>
 
-    
-    
-    <string name="history_metadata_header_2">最近訪問</string>
-    
+    <!-- History Metadata -->
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header_2">最近訪れたサイト</string>
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
     <string name="recently_visited_menu_item_remove">削除</string>
-    
-    <string name="past_explorations_show_all_content_description_2">過去の探検をすべて表示する</string>
 
-    
-    
-    <string name="browser_menu_back">バック</string>
-    
-    <string name="browser_menu_forward">フォワード</string>
-    
-    <string name="browser_menu_refresh">リフレッシュ</string>
-    
-    <string name="browser_menu_stop">ストップ</string>
-    
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description_2">過去の検索をすべて表示します</string>
+
+    <!-- Browser Fragment -->
+    <!-- Content description (not visible, for screen readers etc.): Navigate backward (browsing history) -->
+    <string name="browser_menu_back">戻る</string>
+    <!-- Content description (not visible, for screen readers etc.): Navigate forward (browsing history) -->
+    <string name="browser_menu_forward">進む</string>
+    <!-- Content description (not visible, for screen readers etc.): Refresh current website -->
+    <string name="browser_menu_refresh">更新</string>
+    <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
+    <string name="browser_menu_stop">中止</string>
+    <!-- Browser menu button that opens the addon manager -->
     <string name="browser_menu_add_ons">アドオン</string>
-    
-    <string name="no_add_ons">アドオンなし</string>
-    
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">アドオンがありません</string>
+    <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">ヘルプ</string>
-    
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">新着情報</string>
+    <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">設定</string>
-    
-    <string name="browser_menu_library">図書館</string>
-    
+    <!-- Browser menu button that opens a user's library -->
+    <string name="browser_menu_library">ライブラリー</string>
+    <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">デスクトップサイト</string>
-    
+    <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">ホーム画面に追加</string>
-    
+    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
     <string name="browser_menu_install_on_homescreen">インストール</string>
-    
+    <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
     <string name="resync_button_content_description">再同期</string>
-    
-    <string name="browser_menu_find_in_page">ページ内で検索</string>
-    
+    <!-- Browser menu button that opens the find in page menu -->
+    <string name="browser_menu_find_in_page">ページ内検索</string>
+    <!-- Browser menu button that saves the current tab to a collection -->
     <string name="browser_menu_save_to_collection_2">コレクションに保存</string>
-    
-    <string name="browser_menu_share">シェア</string>
-    
-    <string name="browser_menu_open_in_waterfox">1$sで開く</string>
-    
+    <!-- Browser menu button that open a share menu to share the current site -->
+    <string name="browser_menu_share">共有</string>
+    <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_open_in_fenix">%1$s で開く</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by">POWERED BY %1$s</string>
-    
+
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by2">Powered by %1$s</string>
-    
-    <string name="browser_menu_read">読者ビュー</string>
-    
-    <string name="browser_menu_read_close">読者を閉じる</string>
-    
+
+    <!-- Browser menu button to put the current page in reader mode -->
+    <string name="browser_menu_read">リーダービュー</string>
+    <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
+    <string name="browser_menu_read_close">リーダービューを閉じる</string>
+    <!-- Browser menu button to open the current page in an external app -->
     <string name="browser_menu_open_app_link">アプリで開く</string>
-    
-    <string name="browser_menu_customize_reader_view">読者ビューのカスタマイズ</string>
-    
+
+    <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
+    <string name="browser_menu_customize_reader_view">リーダービューをカスタマイズ</string>
+    <!-- Browser menu label for adding a bookmark -->
     <string name="browser_menu_add">追加</string>
-    
+    <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">編集</string>
-    
-    <string name="browser_menu_customize_home_1">ホームページのカスタマイズ</string>
-    
-    
+
+    <!-- Button shown on the home page that opens the Customize home settings -->
+    <string name="browser_menu_customize_home_1">ホームページをカスタマイズ</string>
+    <!-- Browser Toolbar -->
+    <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">ホーム画面</string>
 
-    
-    
-    <string name="a11y_selected_locale_content_description">選択された言語</string>
-    
-    <string name="default_locale_text">デバイスの言語に従う</string>
-    
-    <string name="locale_search_hint">検索言語</string>
+    <!-- Locale Settings Fragment -->
+    <!-- Content description for tick mark on selected language -->
+    <string name="a11y_selected_locale_content_description">選択した言語</string>
+    <!-- Text for default locale item -->
+    <string name="default_locale_text">端末の言語設定に従う</string>
+    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <string name="locale_search_hint">言語を検索</string>
 
-    
-    
+    <!-- Search Fragment -->
+    <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">スキャン</string>
-    
+    <!-- Button in the search view that lets a user change their search engine -->
     <string name="search_engine_button">検索エンジン</string>
-    
+    <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">検索エンジンの設定</string>
-    
-    <string name="awesomebar_clipboard_title">クリップボードからリンクを埋める</string>
-    
+    <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
+    <string name="awesomebar_clipboard_title">クリップボードからリンクを入力</string>
+
+    <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
     <string name="search_suggestions_onboarding_allow_button">許可する</string>
-    
-    <string name="search_suggestions_onboarding_do_not_allow_button">を許してはならない。</string>
-    
-    <string name="search_suggestions_onboarding_title">プライベート・セッションで検索候補を許可するか？</string>
-    
-    <string name="search_suggestions_onboarding_text">sは、アドレスバーに入力したすべてをデフォルトの検索エンジンと共有します。</string>
-    
-    <string name="search_engine_suggestions_title">検索 %s</string>
-    
-    <string name="search_engine_suggestions_description">アドレスバーから直接検索</string>
-    
+    <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_do_not_allow_button">許可しない</string>
+    <!-- Search suggestion onboarding hint title text -->
+    <string name="search_suggestions_onboarding_title">プライベートセッションで検索候補を表示しますか？</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">%s のアドレスバーに入力したすべての語句が既定の検索エンジンと共有されます。</string>
+
+    <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
+    <string name="search_engine_suggestions_title">%s で検索</string>
+    <!-- Search engine suggestion description text -->
+    <string name="search_engine_suggestions_description">アドレスバーから直接検索します</string>
+
+    <!-- Menu option in the search selector menu to open the search settings -->
     <string name="search_settings_menu_item">検索設定</string>
 
-    
-    
-    <string name="onboarding_home_screen_description_2">中断したところから再開するのが簡単になった。</string>
-    
-    <string name="onboarding_home_screen_section_home_description_2">開いているタブ、ブックマーク、閲覧履歴にジャンプ。</string>
-    
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">すっきりと整理されたタブ</string>
-    
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">改善されたレイアウトと自動クローズタブで、タブの乱雑さを一掃。</string>
-    
+    <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
+    <string name="onboarding_home_screen_title_3">%1$s の新機能</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">前回のページから再開するのが簡単になりました。</string>
+    <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
+    <string name="onboarding_home_screen_section_home_title_3">個人に合わせた %1$s ホームページ</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">開いているタブ、ブックマーク、閲覧履歴にジャンプします。</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">きれいに整理されたタブ</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">改善されたレイアウトとタブを自動的に閉じる機能で散らかったタブを片付けます。</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">最近の検索</string>
-    
-    <string name="onboarding_home_screen_section_useful_history_description_2">ホームページやタブで最新の検索を再確認。</string>
-    
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2">パーソナライズされたホームページをご紹介します。最近のタブ、ブックマーク、検索結果がここに表示されます。</string>
-    
-    <string name="onboarding_home_welcome_title_2">よりパーソナルなインターネットへようこそ</string>
-    
-    <string name="onboarding_home_welcome_description">より多くの色。より良いプライバシー。利益よりも人々への同じコミットメント。</string>
-    
-    <string name="onboarding_home_sync_title_3">携帯電話からノートパソコンへの往復</string>
-    
-    <string name="onboarding_home_sync_description">他のデバイスのタブがあなたのホームページに表示されるようになりました。</string>
-    
-    <string name="onboarding_home_get_started_button">スタート</string>
-    
-    <string name="onboarding_home_sign_in_button">ログイン</string>
-    
-    <string name="onboarding_home_skip_button">スキップ</string>
-    
-    <string name="onboarding_home_content_description_close_button">閉じる</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">ホームページとタブから最近の検索を確認できます。</string>
 
-    
-    
-    <string name="search_widget_content_description_2">新しいタブ %1$s を開く</string>
-    
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">個人に合わせた Waterfox ホームページにより、前回のページから簡単に再開できるようになりました。最近のタブ、ブックマーク、検索結果を見つけられます。</string>
+
+    <!-- Search Widget -->
+    <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
+    <string name="search_widget_content_description_2">%1$s の新しいタブで開く</string>
+    <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">検索</string>
-    
+    <!-- Text preview for larger sized widgets -->
     <string name="search_widget_text_long">ウェブ検索</string>
-    
+
+    <!-- Content description (not visible, for screen readers etc.): Voice search -->
     <string name="search_widget_voice">音声検索</string>
 
-    
-    
+    <!-- Preferences -->
+    <!-- Title for the settings page-->
     <string name="settings">設定</string>
-    
+
+    <!-- Preference category for general settings -->
     <string name="preferences_category_general">一般</string>
-    
-    <string name="preferences_category_about">について</string>
-    
-    <string name="preferences_default_search_engine">デフォルトの検索エンジン</string>
-    
+    <!-- Preference category for all links about Fenix -->
+    <string name="preferences_category_about">製品情報</string>
+    <!-- Preference for settings related to changing the default search engine -->
+    <string name="preferences_default_search_engine">既定の検索エンジン</string>
+    <!-- Preference for settings related to Search -->
     <string name="preferences_search">検索</string>
-    
+    <!-- Preference for settings related to Search address bar -->
     <string name="preferences_search_address_bar">アドレスバー</string>
-    
-    <string name="preferences_rate">Google Playで評価</string>
-    
-    <string name="preferences_about">1$sについて</string>
-    
-    <string name="preferences_set_as_default_browser">デフォルトブラウザに設定</string>
-    
-    <string name="preferences_category_advanced">上級</string>
-    
+    <!-- Preference link to rating Fenix on the Play Store -->
+    <string name="preferences_rate">Google Play で評価する</string>
+    <!-- Preference linking to about page for Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="preferences_about">%1$s について</string>
+    <!-- Preference for settings related to changing the default browser -->
+    <string name="preferences_set_as_default_browser">既定のブラウザーに設定</string>
+    <!-- Preference category for advanced settings -->
+    <string name="preferences_category_advanced">詳細設定</string>
+    <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">プライバシーとセキュリティ</string>
-    
-    <string name="preferences_site_permissions">サイトの許可</string>
-    
-    <string name="preferences_private_browsing_options">プライベート・ブラウジング</string>
-    
+    <!-- Preference for advanced site permissions -->
+    <string name="preferences_site_permissions">サイトの許可設定</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">プライベートブラウジング</string>
+    <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">リンクをプライベートタブで開く</string>
-    
-    <string name="preferences_allow_screenshots_in_private_mode">プライベートブラウジングでスクリーンショットを許可する</string>
-    
-    <string name="preferences_screenshots_in_private_mode_disclaimer">許可されている場合、複数のアプリを開いているときにもプライベートタブが表示されます。</string>
-    
-    <string name="preferences_add_private_browsing_shortcut">プライベートブラウジングのショートカットを追加</string>
-    
-    <string name="preferences_https_only_title">HTTPS専用モード</string>
-    
-    <string name="preferences_https_only_summary">セキュリティ強化のため、HTTPS暗号化プロトコルを使用するサイトへの接続を自動的に試みます。</string>
-    
+    <!-- Preference for allowing screenshots to be taken while in a private tab-->
+    <string name="preferences_allow_screenshots_in_private_mode">プライベートブラウジングモードでスクリーンショットの撮影を許可する</string>
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">許可すると、複数のアプリを開いているときにプライベートタブも表示されます</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">プライベートブラウジングショートカットを追加する</string>
+    <!-- Preference for enabling "HTTPS-Only" mode -->
+    <string name="preferences_https_only_title">HTTPS-Only モード</string>
+    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
+    <string name="preferences_https_only_summary">セキュリティ強化のため、自動的に HTTPS 暗号化プロトコルを使用してサイトへの接続を試行します。</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
     <string name="preferences_https_only_on">オン</string>
-    
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="preferences_https_only_off">オフ</string>
-    
-    <string name="preferences_http_only_learn_more">さらに詳しく</string>
-    
+    <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
+    <string name="preferences_http_only_learn_more">詳細情報</string>
+    <!-- Option for the https only setting -->
     <string name="preferences_https_only_in_all_tabs">すべてのタブで有効にする</string>
-    
-    <string name="preferences_https_only_in_private_tabs">プライベートタブでのみ有効</string>
-    
-    <string name="errorpage_httpsonly_title">セキュアサイトは利用できません</string>
-    
-    <string name="errorpage_httpsonly_message_title">ほとんどの場合、ウェブサイトがHTTPSをサポートしていないだけです。</string>
-    
-    <string name="errorpage_httpsonly_message_summary">しかし、攻撃者が関与している可能性もある。ウェブサイトに進む場合は、機密情報を入力しないようにしてください。続行すると、サイトのHTTPS-Onlyモードが一時的にオフになります。</string>
-    
+    <!-- Option for the https only setting -->
+    <string name="preferences_https_only_in_private_tabs">プライベートタブのみ有効にする</string>
+    <!-- Title shown in the error page for when trying to access a http website while https only mode is enabled. -->
+    <string name="errorpage_httpsonly_title">安全なサイトが利用できません</string>
+    <!-- Message shown in the error page for when trying to access a http website while https only mode is enabled. The message has two paragraphs. This is the first. -->
+    <string name="errorpage_httpsonly_message_title">おそらく、ウェブサイトが HTTPS をサポートしていないだけでしょう。</string>
+    <!-- Message shown in the error page for when trying to access a http website while https only mode is enabled. The message has two paragraphs. This is the second. -->
+    <string name="errorpage_httpsonly_message_summary">ただし、攻撃者が関与している可能性もあります。ウェブサイトにアクセスする場合は機密情報を入力しないでください。続行すると、サイトの HTTPS-Only モードが一時的にオフになります。</string>
+    <!-- Preference for accessibility -->
     <string name="preferences_accessibility">アクセシビリティ</string>
-    
-    <string name="preferences_override_fxa_server">カスタムWaterfoxアカウントサーバー</string>
-    
-    <string name="preferences_override_sync_tokenserver">カスタム・シンク・サーバー</string>
-    
-    <string name="toast_override_fxa_sync_server_done">Waterfox アカウント/同期サーバを変更しました。アプリケーションを終了して変更を適用...</string>
-    
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">カスタム Waterfox アカウントサーバー</string>
+    <!-- Preference to override the Sync token server -->
+    <string name="preferences_override_sync_tokenserver">カスタム Sync サーバー</string>
+    <!-- Toast shown after updating the FxA/Sync server override preferences -->
+    <string name="toast_override_fxa_sync_server_done">Waterfox アカウント/Sync サーバーが変更されました。変更を適用するためにアプリケーションを終了しています…</string>
+    <!-- Preference category for account information -->
     <string name="preferences_category_account">アカウント</string>
-    
+    <!-- Preference for changing where the toolbar is positioned -->
     <string name="preferences_toolbar">ツールバー</string>
-    
+    <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">テーマ</string>
-    
+    <!-- Preference for customizing the home screen -->
     <string name="preferences_home_2">ホームページ</string>
-    
+    <!-- Preference for gestures based actions -->
     <string name="preferences_gestures">ジェスチャー</string>
-    
+    <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">カスタマイズ</string>
-    
-    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">ブックマーク、履歴などをWaterfoxアカウントと同期</string>
-    
-    <string name="preferences_sign_in_description_2">サインインしてタブ、ブックマーク、パスワードなどを同期。</string>
-    
-    <string name="preferences_account_default_name">ウォーターフォックスアカウント</string>
-    
-    <string name="preferences_account_sync_error">再接続して同期を再開する</string>
-    
+    <!-- Preference description for banner about signing in -->
+    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">ブックマーク、履歴などを Waterfox アカウントと同期します</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description_2">ログインしてタブやブックマーク、パスワードなどを同期しましょう。</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name">Waterfox アカウント</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">再接続して同期を再開</string>
+    <!-- Preference for language -->
     <string name="preferences_language">言語</string>
-    
-    <string name="preferences_remote_debugging">USB経由のリモートデバッグ</string>
-    
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">データの選択</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">データ収集</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">USB 経由でリモートデバッグする</string>
+    <!-- Preference title for switch preference to show search engines -->
     <string name="preferences_show_search_engines">検索エンジンを表示する</string>
-    
-    <string name="preferences_show_search_suggestions">検索候補の表示</string>
-    
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">検索語句の候補を表示する</string>
+    <!-- Preference title for switch preference to show voice search button -->
     <string name="preferences_show_voice_search">音声検索を表示する</string>
-    
-    <string name="preferences_show_search_suggestions_in_private">プライベート・セッション</string>
-    
-    <string name="preferences_show_clipboard_suggestions">クリップボード候補の表示</string>
-    
-    <string name="preferences_search_browsing_history">検索閲覧履歴</string>
-    
-    <string name="preferences_search_bookmarks">ブックマーク検索</string>
-    
-    <string name="preferences_search_synced_tabs">同期タブの検索</string>
-    
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">プライベートセッションで表示する</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">クリップボードから検索候補を表示する</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">閲覧履歴を検索する</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">ブックマークを検索する</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">同期したタブを検索</string>
+    <!-- Preference for account settings -->
     <string name="preferences_account_settings">アカウント設定</string>
-    
-    <string name="preferences_enable_autocomplete_urls">オートコンプリートURL</string>
-    
-    <string name="preferences_open_links_in_apps">アプリでリンクを開く</string>
-    
-    <string name="preferences_external_download_manager">外部ダウンロードマネージャー</string>
-    
+
+    <!-- Preference for enabling url autocomplete-->
+    <string name="preferences_enable_autocomplete_urls">自動補完 URL</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">リンクをアプリで開く</string>
+
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">外部のダウンロードマネージャー</string>
+    <!-- Preference for add_ons -->
     <string name="preferences_addons">アドオン</string>
-    
-    <string name="preferences_notifications">お知らせ</string>
 
-    
-    
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">通知</string>
+
+    <!-- Add-on Preferences -->
+    <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
     <string name="preferences_customize_amo_collection">カスタムアドオンコレクション</string>
-    
+    <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">OK</string>
-    
+    <!-- Button caption to abort the add-on collection configuration -->
     <string name="customize_addon_collection_cancel">キャンセル</string>
-    
+    <!-- Hint displayed on input field for custom collection name -->
     <string name="customize_addon_collection_hint">コレクション名</string>
-    
-    <string name="customize_addon_collection_user_hint">コレクション所有者（ユーザーID）</string>
-    
-    <string name="toast_customize_addon_collection_done">アドオンコレクションが変更されました。アプリケーションを終了して変更を適用...</string>
+    <!-- Hint displayed on input field for custom collection user ID-->
+    <string name="customize_addon_collection_user_hint">コレクションの所有者 (ユーザーID)</string>
+    <!-- Toast shown after confirming the custom add-on collection configuration -->
+    <string name="toast_customize_addon_collection_done">アドオンコレクションが変更されました。変更を適用するためにアプリケーションを終了しています…</string>
 
-    
-    
-    <string name="customize_toggle_jump_back_in">戻る</string>
-    
-    <string name="customize_toggle_recent_bookmarks">最近のブックマーク</string>
-    
-    <string name="customize_toggle_recently_visited">最近訪問</string>
-    
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">以前表示したタブ</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">最近追加したブックマーク</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">最近訪れたサイト</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
+
+    <!-- Title for the customize home screen section with sponsored Pocket stories. -->
+    <string name="customize_toggle_pocket_sponsored">広告ストーリー</string>
+    <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">壁紙</string>
-    
-    <string name="customize_toggle_contile">スポンサー付きショートカット</string>
+    <!-- Title for the customize home screen section with sponsored shortcuts. -->
+    <string name="customize_toggle_contile">広告ショートカット</string>
 
-    
-    
+    <!-- Wallpapers -->
+    <!-- Content description for various wallpapers. The first parameter is the name of the wallpaper -->
     <string name="wallpapers_item_name_content_description">壁紙アイテム: %1$s</string>
-    
-    <string name="wallpaper_updated_snackbar_message">壁紙を更新しました！</string>
-    
+    <!-- Snackbar message for when wallpaper is selected -->
+    <string name="wallpaper_updated_snackbar_message">壁紙を更新しました。</string>
+    <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">表示</string>
-    
-    <string name="wallpaper_tap_to_change_switch_label_1">Waterfoxのホームページロゴをタップして壁紙を変更する</string>
-    
-    <string name="wallpaper_logo_content_description">Waterfoxロゴ - 壁紙の変更、ボタン</string>
+    <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
+    <string name="wallpaper_tap_to_change_switch_label_1">Waterfox ホームページのロゴをタップして壁紙を変更する</string>
 
-    
-    
-    <string name="addon_not_supported_error">アドオンはサポートされていません</string>
-    
-    <string name="addon_already_installed">アドオンはすでにインストールされている</string>
+    <!-- This is the accessibility content description for the wallpapers functionality. Users are
+    able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
+    <string name="wallpaper_logo_content_description">Waterfox ロゴ - 壁紙変更ボタンです</string>
 
-    
-    
+    <!-- Add-on Installation from AMO-->
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
+    <string name="addon_not_supported_error">サポートされていないアドオンです</string>
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
+    <string name="addon_already_installed">アドオンはすでにインストールされています。</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">今すぐ同期</string>
-    
-    <string name="preferences_sync_category">同期するものを選ぶ</string>
-    
-    <string name="preferences_sync_history">歴史</string>
-    
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">同期するデータの選択</string>
+    <!-- Preference for syncing history -->
+    <string name="preferences_sync_history">表示履歴</string>
+    <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">ブックマーク</string>
-    
-    <string name="preferences_sync_logins">ログイン</string>
-    
-    <string name="preferences_sync_tabs_2">タブを開く</string>
-    
-    <string name="preferences_sign_out">サインアウト</string>
-    
-    <string name="preferences_sync_device_name">デバイス名</string>
-    
-    <string name="empty_device_name_error">デバイス名を空にすることはできません。</string>
-    
-    <string name="sync_syncing_in_progress">同期...</string>
-    
-    <string name="sync_failed_summary">同期に失敗しました。最後の成功: %s</string>
-    
-    <string name="sync_failed_never_synced_summary">同期に失敗しました。最後に同期されたのは: never</string>
-    
-    <string name="sync_last_synced_summary">最後の同期: %s</string>
-    
-    <string name="sync_never_synced_summary">最終同期：一度もない</string>
-    
-    <string name="default_device_name_2">1$s on %2$s %3$s</string>
-    
-    <string name="preferences_sync_credit_cards">クレジットカード</string>
-    
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">ログイン情報</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">開いているタブ</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">ログアウト</string>
+    <!-- Preference displays and allows changing current FxA device name -->
+    <string name="preferences_sync_device_name">端末名</string>
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">端末名を空欄にすることはできません。</string>
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">同期中…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">同期に失敗しました。最終同期日時: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">同期に失敗しました。最終同期日時: なし</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">最終同期日時: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">最終同期日時: なし</string>
+
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%2$s %3$s 上の %1$s</string>
+
+    <!-- Preference for syncing credit cards -->
+    <string name="preferences_sync_credit_cards">クレジットカード情報</string>
+    <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">住所</string>
 
-    
-    
-    <string name="fxa_received_tab_channel_name">受信タブ</string>
-    
-    <string name="fxa_received_tab_channel_description">他のWaterfoxデバイスから受信したタブの通知。</string>
-    
-    <string name="fxa_tab_received_notification_name">タブ受信</string>
-    
-    <string name="fxa_tab_received_from_notification_name">sからのタブ</string>
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">受信したタブ</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">他の Waterfox 端末から受信したタブの通知。</string>
 
-    
-    
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">受信したタブ</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">%s からのタブ</string>
+
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">例外</string>
-    
-    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">すべてのサイトでオンにする</string>
-    
-    <string name="exceptions_empty_message_description">例外として、選択したサイトのトラッキング保護を無効にすることができます。</string>
-    
-    <string name="exceptions_empty_message_learn_more_link">さらに詳しく</string>
 
-    
-    
-    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">同期をオンにする</string>
-    
-    <string name="preferences_sync_2">データの同期と保存</string>
-    
-    <string name="preferences_sync_sign_in_to_reconnect">サインインして再接続する</string>
-    
-    <string name="preferences_sync_remove_account">アカウント削除</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">すべてのサイトで有効化</string>
 
-    
-    
-    <string name="pair_instructions_2">&lt;b&gt;firefox.com/pair&lt;/b&gt;に表示されているQRコードを読み取ってください。</string>
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">例外に追加したサイトはトラッキング防止が無効になります。</string>
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">詳細情報</string>
 
-    
-    
-    <string name="preference_top_toolbar">トップ</string>
-    
-    <string name="preference_bottom_toolbar">ボトム</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">使用状況と技術データ</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">パフォーマンス情報、使用状況、ハードウェア情報、設定を Waterfox Projectに送信して %1$s の改善に役立てます</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">マーケティングデータ</string>
+    <!-- Preference description for marketing data collection -->
+    <string name="preferences_marketing_data_description2">基本的な使用状況データをモバイルマーケティングベンダーの Adjust と共有します</string>
+    <!-- Title for studies preferences -->
+    <string name="preference_experiments_2">調査</string>
+    <!-- Summary for studies preferences -->
+    <string name="preference_experiments_summary_2">調査機能のインストールと実行を Waterfox Projectに許可する</string>
 
-    
-    
-    <string name="preference_light_theme">ライト</string>
-    
-    <string name="preference_dark_theme">暗い</string>
-    
-    <string name="preference_auto_battery_theme">バッテリーセーバー</string>
-    
-    <string name="preference_follow_device_theme">デバイスのテーマに従う</string>
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string moz:RemovedIn="104" name="preferences_sync" tools:ignore="UnusedResources">Sync を有効化</string>
 
-    
-    
-    <string name="preference_gestures_website_pull_to_refresh">引っ張ってリフレッシュ</string>
-    
-    <string name="preference_gestures_dynamic_toolbar">スクロールしてツールバーを隠す</string>
-    
-    <string name="preference_gestures_swipe_toolbar_switch_tabs">ツールバーを横にスワイプしてタブを切り替える</string>
-    
-    <string name="preference_gestures_swipe_toolbar_show_tabs">ツールバーを上にスワイプしてタブを開く</string>
+    <!-- Header of the Sync and save your data preference view -->
+    <string name="preferences_sync_2">同期してデータを保存</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">ログインして再接続</string>
+    <!-- Preference for removing FxA account -->
+    <string name="preferences_sync_remove_account">アカウントを削除</string>
 
-    
-    
-    <string name="library_downloads">ダウンロード</string>
-    
+    <!-- Pairing Feature strings -->
+    <!-- Instructions on how to access pairing -->
+    <string name="pair_instructions_2"><![CDATA[<b>firefox.com/pair</b> で表示された QR コードをスキャンしてください]]></string>
+
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">画面上部</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">画面下部</string>
+
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Light</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Dark</string>
+    <!-- Preference for using using dark or light theme automatically set by battery -->
+    <string name="preference_auto_battery_theme">バッテリーセーバーで設定</string>
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">端末のテーマに従う</string>
+
+    <!-- Gestures Preferences-->
+    <!-- Preferences for using pull to refresh in a webpage -->
+    <string name="preference_gestures_website_pull_to_refresh">プルダウンで更新</string>
+    <!-- Preference for using the dynamic toolbar -->
+    <string name="preference_gestures_dynamic_toolbar">スクロール時にツールバーを隠す</string>
+    <!-- Preference for switching tabs by swiping horizontally on the toolbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">ツールバーの横スワイプでタブ切り替え</string>
+    <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
+    <string name="preference_gestures_swipe_toolbar_show_tabs">ツールバーの上スワイプでタブ表示</string>
+
+    <!-- Library -->
+    <!-- Option in Library to open Downloads page -->
+    <string name="library_downloads">ダウンロード一覧</string>
+    <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">ブックマーク</string>
-    
+    <!-- Option in library to open Desktop Bookmarks root page -->
     <string name="library_desktop_bookmarks_root">デスクトップブックマーク</string>
-    
+    <!-- Option in library to open Desktop Bookmarks "menu" page -->
     <string name="library_desktop_bookmarks_menu">ブックマークメニュー</string>
-    
+    <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
     <string name="library_desktop_bookmarks_toolbar">ブックマークツールバー</string>
-    
-    <string name="library_desktop_bookmarks_unfiled">その他のブックマーク</string>
-    
-    <string name="library_history">歴史</string>
-    
+    <!-- Option in library to open Desktop Bookmarks "unfiled" page -->
+    <string name="library_desktop_bookmarks_unfiled">他のブックマーク</string>
+    <!-- Option in Library to open History page -->
+    <string name="library_history">履歴</string>
+    <!-- Option in Library to open a new tab -->
     <string name="library_new_tab">新しいタブ</string>
-    
+    <!-- Settings Page Title -->
     <string name="settings_title">設定</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">閉じる</string>
 
-    
-    <string name="history_search_group_site">dサイト</string>
-    
-    <string name="history_search_group_sites">dサイト</string>
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">%d サイト</string>
+    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_sites">%d サイト</string>
 
-    
+    <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">最近閉じたタブ</string>
-    
-    <string name="recently_closed_show_full_history">全履歴を表示</string>
-    
-    <string name="recently_closed_tabs">タブ</string>
-    
-    <string name="recently_closed_tab">dタブ</string>
-    
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">すべての履歴を表示</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tabs">%d 個のタブ</string>
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">%d 個のタブ</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
     <string name="recently_closed_empty_message">最近閉じたタブはありません</string>
 
-    
-    
+    <!-- Tab Management -->
+    <!-- Title of preference for tabs management -->
     <string name="preferences_tabs">タブ</string>
-    
-    <string name="preferences_tab_view">タブビュー</string>
-    
+    <!-- Title of preference that allows a user to specify the tab view -->
+    <string name="preferences_tab_view">タブ表示</string>
+    <!-- Option for a list tab view -->
     <string name="tab_view_list">リスト</string>
-    
+    <!-- Option for a grid tab view -->
     <string name="tab_view_grid">グリッド</string>
-    
-    <string name="preferences_close_tabs">タブを閉じる</string>
-    
-    <string name="close_tabs_manually">決して</string>
-    
-    <string name="close_tabs_after_one_day">1日後</string>
-    
-    <string name="close_tabs_after_one_week">1週間後</string>
-    
-    <string name="close_tabs_after_one_month">1ヶ月後</string>
-    
-    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">開いているタブを自動で閉じる</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">タブグループを検索</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">関連サイトをグループ化します</string>
+    <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+    <string name="preferences_close_tabs">タブを閉じる期間</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">手動</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
+    <string name="close_tabs_after_one_day">1 日後</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
+    <string name="close_tabs_after_one_week">1 週間後</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
+    <string name="close_tabs_after_one_month">1 か月後</string>
 
-    
-    
-    <string name="preferences_opening_screen">オープニング画面</string>
-    
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">開いたタブを自動的に閉じる</string>
+
+    <!-- Opening screen -->
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">最初の画面</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
     <string name="opening_screen_homepage">ホームページ</string>
-    
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
     <string name="opening_screen_last_tab">最後のタブ</string>
-    
-    <string name="opening_screen_after_four_hours_of_inactivity">4時間放置後のホームページ</string>
-    
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">ホームページ (操作せずに 4 時間経過後)</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">手動で閉じる</string>
-    
-    <string name="close_tabs_after_one_day_summary">1日で終了</string>
-    
-    <string name="close_tabs_after_one_week_summary">1週間後に閉じる</string>
-    
-    <string name="close_tabs_after_one_month_summary">1ヶ月後にクローズ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
+    <string name="close_tabs_after_one_day_summary">1 日後に閉じる</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one week-->
+    <string name="close_tabs_after_one_week_summary">1 週間後に閉じる</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
+    <string name="close_tabs_after_one_month_summary">1 か月後に閉じる</string>
 
-    
-    
-    <string name="preferences_inactive_tabs">古いタブを非アクティブに移動する</string>
-    
-    <string name="preferences_inactive_tabs_title">2週間閲覧していないタブは非アクティブセクションに移動する。</string>
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">古いタブを休止中に移動する</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">2 週間以上表示していないタブを休止中セクションに移動します。</string>
 
-    
-    
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">削除</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">有効</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
+    <string name="studies_description_2">%1$s が調査をインストールして実行することがあります。</string>
+    <!-- Learn more link for studies, links to an article for more information about studies. -->
+    <string name="studies_learn_more">詳細情報</string>
+    <!-- Dialog message shown after removing a study -->
+    <string name="studies_restart_app">変更を適用するためアプリケーションを終了します</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">OK</string>
+    <!-- Dialog button text for canceling removing a study. -->
+    <string name="studies_restart_dialog_cancel">キャンセル</string>
+
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">変更を適用するためアプリケーションを終了します...</string>
+
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
     <string name="tab_header_label">タブを開く</string>
-    
-    <string name="tabs_header_private_tabs_title">プライベート・タブ</string>
-    
-    <string name="tabs_header_synced_tabs_title">同期タブ</string>
-    
-    <string name="add_tab">タブを追加する</string>
-    
-    <string name="add_private_tab">プライベートタブの追加</string>
-    
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">プライベートタブ</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">同期したタブ</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_tab">タブを追加</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">プライベートタブを追加</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">プライベート</string>
-    
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
     <string name="tab_drawer_fab_sync">同期</string>
-    
-    <string name="tab_tray_menu_item_share">すべてのタブを共有する</string>
-    
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">すべてのタブを共有</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">最近閉じたタブ</string>
-    
-    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">最近閉店</string>
-    
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">最近閉じたタブ</string>
+    <!-- Text shown in the menu to view account settings -->
     <string name="tab_tray_menu_account_settings">アカウント設定</string>
-    
+    <!-- Text shown in the menu to view tab settings -->
     <string name="tab_tray_menu_tab_settings">タブ設定</string>
-    
+    <!-- Text shown in the menu for closing all tabs -->
     <string name="tab_tray_menu_item_close">すべてのタブを閉じる</string>
-    
+    <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_bookmark">ブックマーク</string>
-    
+    <!-- Text shown in the multiselect menu for closing selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_close">閉じる</string>
-    
-    <string name="tab_tray_multiselect_share_content_description">選択したタブを共有する</string>
-    
-    <string name="tab_tray_multiselect_menu_content_description">選択したタブメニュー</string>
-    
-    <string name="remove_tab_from_collection">コレクションからタブを削除する</string>
-    
+    <!-- Content description for tabs tray multiselect share button -->
+    <string name="tab_tray_multiselect_share_content_description">選択したタブを共有</string>
+    <!-- Content description for tabs tray multiselect menu -->
+    <string name="tab_tray_multiselect_menu_content_description">選択したタブのメニュー</string>
+    <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
+    <string name="remove_tab_from_collection">タブをコレクションから削除</string>
+    <!-- Text for button to enter multiselect mode in tabs tray -->
     <string name="tabs_tray_select_tabs">タブを選択</string>
-    
-    <string name="close_tab">閉じるタブ</string>
-    
-    <string name="close_tab_title">タブ %s を閉じる</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">タブを閉じる</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">%s のタブを閉じる</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
     <string name="open_tabs_menu">タブメニューを開く</string>
-    
+    <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection1">タブをコレクションに保存</string>
-    
-    <string name="collection_delete">コレクションの削除</string>
-    
-    <string name="collection_rename">コレクション名の変更</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string moz:RemovedIn="103" name="tab_menu" tools:ignore="UnusedResources">タブメニュー</string>
+
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">コレクションを削除</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">コレクションの名前を変更</string>
+    <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">タブを開く</string>
-    
+
+
+    <!-- Hint for adding name of a collection -->
     <string name="collection_name_hint">コレクション名</string>
-	
-	<string name="rename_top_site">名前変更</string>
-	
+    <!-- Text for the menu button to rename a top site -->
+	<string name="rename_top_site">タイトル変更</string>
+	<!-- Text for the menu button to remove a top site -->
 	<string name="remove_top_site">削除</string>
-    
+
+    <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">履歴から削除</string>
-    
-    <string name="pwa_site_controls_title_private">1$s（プライベートモード）</string>
-    
-    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">その他のタブ</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (プライベートモード)</string>
 
-    
-    
-    <string name="history_search_1">検索条件を入力</string>
-    
-    <string name="history_delete_all">履歴の削除</string>
-    
-    <string name="history_delete_multiple_items_snackbar">歴史 削除</string>
-    
-    <string name="history_delete_single_item_snackbar">削除された %1$s</string>
-    
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string moz:removedIn="104" name="tab_tray_header_title_1" tools:ignore="UnusedResources">他のタブ</string>
+
+    <!-- History -->
+    <!-- Text for the button to search all history -->
+    <string name="history_search_1">検索語を入力</string>
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">履歴を削除</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">履歴が削除されました</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s を履歴から削除しました</string>
+    <!-- Context description text for the button to delete a single history item -->
     <string name="history_delete_item">削除</string>
-    
-    <string name="history_multi_select_title">選択された %1$d</string>
-    
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d 件選択</string>
+    <!-- Text for the header that groups the history for today -->
     <string name="history_today">今日</string>
-    
+    <!-- Text for the header that groups the history for yesterday -->
     <string name="history_yesterday">昨日</string>
-    
-    <string name="history_7_days">直近7日間</string>
-    
-    <string name="history_30_days">過去30日間</string>
-    
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">7 日以内</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">30 日以内</string>
+    <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">古い</string>
-    
-    <string name="history_empty_message">ここに歴史はない</string>
 
-    
-    
-    <string name="download_delete_multiple_items_snackbar_1">ダウンロード削除</string>
-    
-    <string name="download_delete_single_item_snackbar">削除された %1$s</string>
-    
-    <string name="download_empty_message_1">ダウンロードしたファイルがない</string>
-    
-    <string name="download_multi_select_title">選択された %1$d</string>
-    
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">履歴はありません</string>
+
+    <!-- Text for the button inside History screen that opens Synced History screen. History that is coming from other devices -->
+    <string name="history_synced_from_other_devices">他の端末から同期</string>
+    <!-- The page title for browsing history coming from other devices. -->
+    <string name="history_from_other_devices">他の端末から</string>
+
+    <!-- The synced history sign in dialog message -->
+    <string name="history_sign_in_message">他の端末と同期した履歴を表示するにはログインしてください。</string>
+    <!-- The synced history sign in dialog button text -->
+    <string name="history_sign_in_button">ログイン</string>
+    <!-- The synced history sign in dialog create a new account link -->
+    <string name="history_sign_in_create_account"><![CDATA[<u>または Waterfox アカウントを作成して同期を開始します</u>]]></string>
+
+    <!-- Downloads -->
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">ダウンロード履歴を削除しました</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">%1$s を削除しました</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">ダウンロード済みのファイルはありません</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">%1$d 件選択</string>
+
+
+    <!-- Text for the button to remove a single download item -->
     <string name="download_delete_item_1">削除</string>
 
 
-    
-    
-    <string name="tab_crash_title_2">申し訳ありません。1$sはそのページをロードできません。</string>
-    
-    <string name="tab_crash_send_report">クラッシュレポートをBrowserWorksに送信</string>
-    
-    <string name="tab_crash_close">閉じるタブ</string>
-    
-    <string name="tab_crash_restore">復元タブ</string>
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">申し訳ありません。%1$s はそのページを読み込めません。</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">クラッシュレポートを Waterfox Projectに送信する</string>
+    <!-- Close tab button text on the tab crash page -->
+    <string name="tab_crash_close">タブを閉じる</string>
+    <!-- Restore tab button text on the tab crash page -->
+    <string name="tab_crash_restore">タブを復元</string>
 
-    
-    
-    <string name="bookmark_delete_folder_confirmation_dialog">本当にこのフォルダを削除しますか？</string>
-    
-    <string name="bookmark_delete_multiple_folders_confirmation_dialog">sは選択された項目を削除します。</string>
-    
+    <!-- Bookmarks -->
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">このフォルダーを削除してもよろしいですか？</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">選択したアイテムを %s から削除します</string>
+    <!-- Text for the cancel button on delete bookmark dialog -->
     <string name="bookmark_delete_negative">キャンセル</string>
-    
-    <string name="bookmark_add_folder">フォルダを追加</string>
-    
-    <string name="bookmark_saved_snackbar">ブックマークを保存した！</string>
-    
+    <!-- Screen title for adding a bookmarks folder -->
+    <string name="bookmark_add_folder">フォルダー追加</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">ブックマークを保存しました!</string>
+    <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">編集</string>
-    
+
+    <!-- Bookmark overflow menu edit button -->
     <string name="bookmark_menu_edit_button">編集</string>
-    
+    <!-- Bookmark overflow menu copy button -->
     <string name="bookmark_menu_copy_button">コピー</string>
-    
-    <string name="bookmark_menu_share_button">シェア</string>
-    
+    <!-- Bookmark overflow menu share button -->
+    <string name="bookmark_menu_share_button">共有</string>
+    <!-- Bookmark overflow menu open in new tab button -->
     <string name="bookmark_menu_open_in_new_tab_button">新しいタブで開く</string>
-    
+    <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">プライベートタブで開く</string>
-    
+    <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">削除</string>
-    
-    <string name="bookmark_menu_save_button">セーブ</string>
-    
-    <string name="bookmarks_multi_select_title">選択された %1$d</string>
-    
-    <string name="edit_bookmark_fragment_title">ブックマークを編集する</string>
-    
-    <string name="edit_bookmark_folder_fragment_title">編集フォルダ</string>
-    
-    <string name="bookmark_sign_in_button">サインインして同期されたブックマークを見る</string>
-    
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">保存</string>
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
+    <string name="bookmarks_multi_select_title">%1$d 件選択</string>
+    <!-- Bookmark editing screen title -->
+    <string name="edit_bookmark_fragment_title">ブックマークを編集</string>
+    <!-- Bookmark folder editing screen title -->
+    <string name="edit_bookmark_folder_fragment_title">フォルダー編集</string>
+    <!-- Bookmark sign in button message -->
+    <string name="bookmark_sign_in_button">同期したブックマークを見るにはログインしてください</string>
+    <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
-    
-    <string name="bookmark_folder_label">フォルダ</string>
-    
+    <!-- Bookmark FOLDER editing field label -->
+    <string name="bookmark_folder_label">フォルダー</string>
+    <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">名前</string>
-    
-    <string name="bookmark_add_folder_fragment_label">フォルダを追加</string>
-    
-    <string name="bookmark_select_folder_fragment_label">フォルダを選択</string>
-    
-    <string name="bookmark_empty_title_error">タイトルが必要</string>
-    
-    <string name="bookmark_invalid_url_error">無効なURL</string>
-    
-    <string name="bookmarks_empty_message">ブックマークはありません</string>
-    
-    <string name="bookmark_deletion_snackbar_message">削除された %1$s</string>
-    
-    <string name="bookmark_deletion_multiple_snackbar_message_2">ブックマーク削除</string>
-    
-    <string name="bookmark_deletion_multiple_snackbar_message_3">選択したフォルダの削除</string>
-    
-    <string name="bookmark_undo_deletion">UNDO</string>
-    
-    <string name="bookmark_search">検索条件を入力</string>
+    <!-- Bookmark add folder screen title -->
+    <string name="bookmark_add_folder_fragment_label">フォルダー追加</string>
+    <!-- Bookmark select folder screen title -->
+    <string name="bookmark_select_folder_fragment_label">フォルダー選択</string>
+    <!-- Bookmark editing error missing title -->
+    <string name="bookmark_empty_title_error">タイトルが必要です</string>
+    <!-- Bookmark editing error missing or improper URL -->
+    <string name="bookmark_invalid_url_error">不正な URL</string>
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">ブックマークがありません</string>
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message"> %1$s を削除しました</string>
 
-    
-    
-    <string name="phone_feature_go_to_settings">設定</string>
-    
+
+    <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">ブックマークを削除しました</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_3">選択したフォルダーを削除します</string>
+    <!-- Bookmark undo button for deletion snackbar action -->
+    <string name="bookmark_undo_deletion">元に戻す</string>
+
+    <!-- Text for the button to search all bookmarks -->
+    <string name="bookmark_search">検索語を入力</string>
+
+    <!-- Site Permissions -->
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">設定に移動</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
     <string name="quick_settings_sheet">クイック設定シート</string>
-    
+    <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">おすすめ</string>
-    
-    <string name="clear_permissions">アクセス許可をクリアする</string>
-    
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">許可設定を消去</string>
+    <!-- Text for the OK button on Clear permissions dialog -->
     <string name="clear_permissions_positive">OK</string>
-    
+    <!-- Text for the cancel button on Clear permissions dialog -->
     <string name="clear_permissions_negative">キャンセル</string>
-    
-    <string name="clear_permission">明確な許可</string>
-    
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">許可設定を消去</string>
+    <!-- Text for the OK button on Clear permission dialog -->
     <string name="clear_permission_positive">OK</string>
-    
+    <!-- Text for the cancel button on Clear permission dialog -->
     <string name="clear_permission_negative">キャンセル</string>
-    
-    <string name="clear_permissions_on_all_sites">すべてのサイトのアクセス許可をクリアにする</string>
-    
-    <string name="preference_browser_feature_autoplay">オートプレイ</string>
-    
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">全サイトの許可設定を消去</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">自動再生</string>
+    <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">カメラ</string>
-    
+    <!-- Preference for altering the microphone access for all websites -->
     <string name="preference_phone_feature_microphone">マイク</string>
-    
-    <string name="preference_phone_feature_location">所在地</string>
-    
-    <string name="preference_phone_feature_notification">お知らせ</string>
-    
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">位置情報</string>
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">通知</string>
+    <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">永続ストレージ</string>
-    
-    <string name="preference_phone_feature_cross_origin_storage_access">クロスサイトクッキー</string>
-    
-    <string name="preference_phone_feature_media_key_system_access">DRM管理されたコンテンツ</string>
-    
+    <!-- Preference for altering the storage access setting for all websites -->
+    <string name="preference_phone_feature_cross_origin_storage_access">クロスサイト Cookie</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM 制御されたコンテンツ</string>
+    <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">許可を求める</string>
-    
+    <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">ブロック</string>
-    
-    <string name="preference_option_phone_feature_allowed">可</string>
-    
-    <string name="phone_feature_blocked_by_android">アンドロイドでブロック</string>
-    
-    <string name="preference_exceptions">例外</string>
-    
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">許可</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Android によってブロック</string>
+    <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
+    <string name="preference_exceptions">例外設定</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
     <string name="tracking_protection_on">オン</string>
-    
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">オフ</string>
-    
-    <string name="preference_option_autoplay_allowed2">オーディオとビデオを許可する</string>
-    
-    <string name="quick_setting_option_autoplay_allowed">オーディオとビデオを許可する</string>
-    
-    <string name="preference_option_autoplay_allowed_wifi_only2">セルラーデータのみでオーディオとビデオをブロック</string>
-    
-    <string name="preference_option_autoplay_allowed_wifi_subtext">オーディオとビデオはWi-Fiで再生</string>
-    
-    <string name="preference_option_autoplay_block_audio2">オーディオのみブロック</string>
-    
-    <string name="quick_setting_option_autoplay_block_audio">オーディオのみブロック</string>
-    
-    <string name="preference_option_autoplay_blocked3">オーディオとビデオをブロック</string>
-    
-    <string name="quick_setting_option_autoplay_blocked">オーディオとビデオをブロック</string>
-    
-    <string name="delete_browsing_data_quit_on">オン</string>
-    
-    <string name="delete_browsing_data_quit_off">オフ</string>
-    
-    <string name="https_only_on">オン</string>
-    
-    <string name="https_only_off">オフ</string>
 
-    
-    
+    <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed2">音声と動画の再生を許可</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">音声と動画の再生を許可</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
+    <string name="preference_option_autoplay_allowed_wifi_only2">データ通信時のみ音声と動画をブロック</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Wi-Fi 接続時は音声と動画を再生します</string>
+    <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="preference_option_autoplay_block_audio2">音声のみブロック</string>
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">音声のみブロック</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked3">音声と動画をブロック</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_blocked">音声と動画をブロック</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to on -->
+    <string name="delete_browsing_data_quit_on">オン</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to off -->
+    <string name="delete_browsing_data_quit_off">オフ</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">オン</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">オフ</string>
+
+    <!-- Collections -->
+    <!-- Collections header on home fragment -->
     <string name="collections_header">コレクション</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">コレクションメニュー</string>
-    
-    <string name="no_collections_description2">似たような検索、サイト、タブをグループ化して、後ですばやくアクセスできます。</string>
-    
-    <string name="create_collection_select_tabs">タブを選択</string>
-    
-    <string name="create_collection_select_collection">コレクションを選択</string>
-    
-    <string name="create_collection_name_collection">名前コレクション</string>
-    
-    <string name="create_collection_add_new_collection">新しいコレクションを追加する</string>
-    
+
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description2">ページを集めてグループ化しましょう。\n類似の検索、ウェブサイト、タブに後ですばやくアクセスできます。</string>
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">タブの選択</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">コレクションの選択</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">コレクションの名前</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">新しいコレクションを追加</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">すべて選択</string>
-    
-    <string name="create_collection_deselect_all">すべて選択解除</string>
-    
-    <string name="create_collection_save_to_collection_empty">保存するタブを選択する</string>
-    
-    <string name="create_collection_save_to_collection_tabs_selected">選択された %d タブ</string>
-    
-    <string name="create_collection_save_to_collection_tab_selected">選択された %d タブ</string>
-    
-    <string name="create_collection_tabs_saved">タブの保存！</string>
-    
-    <string name="create_collection_tabs_saved_new_collection">コレクションは保存された！</string>
-    
-    <string name="create_collection_tab_saved">タブが保存された！</string>
-    
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">全選択を解除</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">保存するタブを選択してください</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d 個のタブを選択しました</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d 個のタブを選択しました</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">タブが保存されました！</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">コレクションを保存しました</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">タブが保存されました！</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">閉じる</string>
-    
-    <string name="create_collection_save">セーブ</string>
-    
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">保存</string>
+
+    <!-- Snackbar action to view the collection the user just created or updated -->
     <string name="create_collection_view">表示</string>
-    
+
+    <!-- Text for the OK button from collection dialogs -->
     <string name="create_collection_positive">OK</string>
-    
+    <!-- Text for the cancel button from collection dialogs -->
     <string name="create_collection_negative">キャンセル</string>
 
-    
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
     <string name="create_collection_default_name">コレクション %d</string>
 
-    
-    
-    <string name="share_header_2">シェア</string>
-    
-    <string name="share_button_content_description">シェア</string>
-    
-    <string name="share_device_subheader">デバイスに送信</string>
-    
-    <string name="share_link_all_apps_subheader">すべての行動</string>
-    
-    <string name="share_link_recent_apps_subheader">最近使用されたもの</string>
-    
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header_2">共有</string>
+    <!-- Content description (not visible, for screen readers etc.):
+        "Share" button. Opens the share menu when pressed. -->
+    <string name="share_button_content_description">共有</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">端末へ送信</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">すべての操作</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">最近使用</string>
+    <!-- Text for the copy link action in the share screen. -->
     <string name="share_copy_link_to_clipboard">クリップボードにコピー</string>
-    
-    <string name="toast_copy_link_to_clipboard">クリップボードにコピー</string>
-    
-    <string name="sync_menu_sign_in">サインインして同期する</string>
-    
-    <string name="sync_sign_in">シンクにサインイン</string>
-    
-    <string name="sync_send_to_all">すべてのデバイスに送信</string>
-    
-    <string name="sync_reconnect">同期への再接続</string>
-    
+    <!-- Toast shown after copying link to clipboard -->
+    <string name="toast_copy_link_to_clipboard">クリップボードにコピーしました</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">ログインして同期</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Sync にログイン</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">すべての端末へ送信</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Sync へ再接続</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">オフライン</string>
-    
-    <string name="sync_connect_device">別のデバイスを接続する</string>
-    
-    <string name="sync_connect_device_dialog">タブを送信するには、少なくとも1台の他のデバイスでWaterfoxにサインインしてください。</string>
-    
-    <string name="sync_confirmation_button">了解</string>
-    
-    <string name="share_error_snackbar">このアプリに共有できない</string>
-    
-    <string name="sync_add_new_device_title">デバイスに送信</string>
-    
-    <string name="sync_add_new_device_message">接続機器なし</string>
-    
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">別の端末を接続</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">タブを送信するには、少なくとも 1 台の他の端末で Waterfox にログインしてください。</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">OK</string>
+
+    <!-- Share error message -->
+    <string name="share_error_snackbar">このアプリとは共有できません</string>
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">端末へ送信</string>
+
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">接続された端末がありません</string>
+    <!-- Text for the button to learn about sending tabs -->
     <string name="sync_add_new_device_learn_button">タブの送信について...</string>
-    
-    <string name="sync_add_new_device_connect_button">別のデバイスを接続...</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">別の端末を接続...</string>
 
-    
-    
+    <!-- Notifications -->
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">プライベートタブを閉じる</string>
-    
+    <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">マーケティング</string>
-    
-    <string name="notification_default_browser_title">1$sは速くてプライベート</string>
-    
-    <string name="notification_default_browser_text">1$s をデフォルトのブラウザにする</string>
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
+    <string name="notification_default_browser_title">%1$s は動作が軽く個人使用に最適です</string>
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
+    <string name="notification_default_browser_text">%1$s を既定のブラウザーに設定しましょう</string>
 
-    
-    
-    <string name="snackbar_collection_deleted">コレクション削除</string>
-    
-    <string name="snackbar_collection_renamed">コレクション名変更</string>
-    
-    <string name="snackbar_tab_closed">タブを閉じる</string>
-    
-    <string name="snackbar_tabs_closed">タブを閉じる</string>
-    
-    <string name="snackbar_message_bookmarks_saved">ブックマークの保存</string>
-    
-    <string name="snackbar_added_to_shortcuts">ショートカットに追加！</string>
-    
-    <string name="snackbar_private_tab_closed">プライベートタブを閉じる</string>
-    
-    <string name="snackbar_private_tabs_closed">プライベートタブを閉じる</string>
-    
-    <string name="snackbar_deleted_undo">UNDO</string>
-    
-    <string name="snackbar_top_site_removed">サイト削除</string>
-    
-    <string name="qr_scanner_confirmation_dialog_message">1$s が %2$s を開くことを許可する。</string>
-    
-    <string name="qr_scanner_dialog_positive">許可する</string>
-    
+    <!-- Snackbar -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">コレクションを削除しました</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">コレクションの名前を変更しました</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">タブを閉じました</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">すべてのタブを閉じました</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">ブックマークを保存しました</string>
+    <!-- Text shown in snackbar when user adds a site to shortcuts -->
+    <string name="snackbar_added_to_shortcuts">ショートカットに追加しました</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">プライベートタブを閉じました</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">すべてのプライベートタブを閉じました</string>
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
+    <string name="snackbar_deleted_undo">元に戻す</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">サイトを削除しました</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">%2$s を開くことを %1$s に許可する</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">許可</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">拒否</string>
-    
-    <string name="qr_scanner_dialog_invalid">ウェブアドレスが無効です。</string>
-    
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">ウェブアドレスが正しくありません。</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
     <string name="qr_scanner_dialog_invalid_ok">OK</string>
-    
-    <string name="tab_collection_dialog_message">本当に%1$sを削除しますか？</string>
-    
-    <string name="delete_tab_and_collection_dialog_message">このタブを削除すると、コレクション全体が削除されます。新しいコレクションはいつでも作成できます。</string>
-    
-    <string name="delete_tab_and_collection_dialog_title">1$sを削除しますか？</string>
-    
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">本当に %1$s を削除してもよろしいですか？</string>
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">このタブを削除するとコレクション全体が削除されます。新しいコレクションはいつでも作成できます。</string>
+    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_title">%1$s のコレクションを削除しますか？</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">削除</string>
-    
-    <string name="full_screen_notification">フルスクリーンモードに入る</string>
-    
-    <string name="url_copied">URLをコピー</string>
-    
-    <string name="accessibility_text_size_sample_text_1">これはサンプルテキストです。この設定でサイズを大きくしたり小さくしたりしたときに、テキストがどのように表示されるかを示すためのものです。</string>
-    
-    <string name="preference_accessibility_text_size_summary">ウェブサイトの文字を大きくしたり小さくしたりする</string>
-    
-    <string name="preference_accessibility_font_size_title">文字サイズ</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">全画面表示モードです</string>
 
-    
-    <string name="preference_accessibility_auto_size_2">自動フォントサイジング</string>
-    
-    <string name="preference_accessibility_auto_size_summary">フォントサイズはAndroidの設定に合わせます。ここでフォントサイズの管理を無効にします。</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
+    <string name="url_copied">URL をコピーしました</string>
 
-    
-    <string name="preferences_delete_browsing_data">閲覧データの削除</string>
-    
-    <string name="preferences_delete_browsing_data_tabs_title_2">タブを開く</string>
-    
-    <string name="preferences_delete_browsing_data_tabs_subtitle">タブ</string>
-    
+
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">これはサンプルテキストです。この設定でテキストサイズを変更したときに、テキストがどのように表示されるかを示します。</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">ウェブサイト上のテキストを拡大または縮小します</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">フォントサイズ</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_2">フォントサイズを自動調整</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">フォントサイズは Android の設定に従います。ここでフォントサイズを管理するには無効化してください。</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">閲覧データを削除</string>
+    <!-- Title for the tabs item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_tabs_title_2">開いているタブ</string>
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d 個のタブ</string>
+    <!-- Title for the data and history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_data_title">閲覧履歴とサイトデータ</string>
-    
-    <string name="preferences_delete_browsing_data_browsing_data_subtitle">アドレス</string>
-    
-    <string name="preferences_delete_browsing_data_cookies">クッキー</string>
-    
-    <string name="preferences_delete_browsing_data_cookies_subtitle">ほとんどのサイトからログアウトされます。</string>
-    
-    <string name="preferences_delete_browsing_data_cached_files">キャッシュされた画像とファイル</string>
-    
-    <string name="preferences_delete_browsing_data_cached_files_subtitle">収納スペースを確保</string>
-    
-    <string name="preferences_delete_browsing_data_site_permissions">サイトの許可</string>
-    
-    <string name="preferences_delete_browsing_data_downloads">ダウンロード</string>
-    
-    <string name="preferences_delete_browsing_data_button">閲覧データの削除</string>
-    
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d 件のアドレス</string>
+    <!-- Title for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies">Cookie</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">ログイン状態がリセットされます</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">画像とファイルのキャッシュ</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">ストレージ領域を空けます</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">サイトの許可設定</string>
+    <!-- Title for the downloads item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_downloads">ダウンロード一覧</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">閲覧データを削除</string>
+
+    <!-- Title for the Delete browsing data on quit preference -->
     <string name="preferences_delete_browsing_data_on_quit">終了時に閲覧データを削除</string>
-    
-    <string name="preference_summary_delete_browsing_data_on_quit_2">メインメニューから「終了」を選ぶと、自動的に閲覧データを削除します。</string>
-    
-    <string name="delete_browsing_data_on_quit_action">やめる</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">メインメニューから [終了] を選択すると、閲覧データが自動的に削除されます</string>
+    <!-- Action item in menu for the Delete browsing data on quit feature -->
+    <string name="delete_browsing_data_on_quit_action">終了</string>
 
-    
-    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">これにより、閲覧データがすべて削除されます。</string>
-    
-    <string name="delete_history_prompt_title">削除する時間範囲</string>
-    
-    <string name="delete_history_prompt_body">履歴（他のデバイスから同期された履歴を含む）、クッキー、およびその他の閲覧データを削除します。</string>
-    
-    <string name="delete_history_prompt_button_last_hour">最後の1時間</string>
-    
-    <string name="delete_history_prompt_button_today_and_yesterday">今日と昨日</string>
-    
-    <string name="delete_history_prompt_button_everything">すべて</string>
-
-    
-    <string name="delete_browsing_data_prompt_message_3">sは選択された閲覧データを削除します。</string>
-    
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">この操作はすべての閲覧データを削除します。</string>
+    <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
+    <string name="delete_browsing_data_prompt_message_3">選択した閲覧データを %s から削除します。</string>
+    <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">キャンセル</string>
-    
+    <!-- Text for the allow button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_allow">削除</string>
-    
-    <string name="preferences_delete_browsing_data_snackbar">閲覧データの削除</string>
-    
-    <string name="deleting_browsing_data_in_progress">閲覧データの削除...</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">閲覧データを削除しました</string>
 
-    
-    <string name="delete_all_history_group_prompt_message">s "のすべてのサイトを削除する</string>
-    
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">閲覧データを削除しています...</string>
+
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. -->
+    <string name="delete_history_group_prompt_message">この操作はすべての項目を削除します。</string>
+    <!-- Text for the cancel button for the history group deletion dialog -->
     <string name="delete_history_group_prompt_cancel">キャンセル</string>
-    
+    <!-- Text for the allow button for the history group dialog -->
     <string name="delete_history_group_prompt_allow">削除</string>
-    
-    <string name="delete_history_group_snackbar">グループ削除</string>
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">グループを削除しました</string>
 
-    
-    
-    <string name="onboarding_header_2">よりプライベートなウェブへようこそ</string>
-    
-    <string name="onboarding_message">草の根の独立系ブラウザ。</string>
-    
-    <string name="onboarding_account_sign_in_header">中断した場所を取り戻す</string>
-    
-    <string name="onboarding_manual_sign_in_description">デバイス間でタブとパスワードを同期し、シームレスな画面切り替えを実現。</string>
-    
-    <string name="onboarding_waterfox_account_sign_in">ログイン</string>
-    
-    <string name="onboarding_waterfox_account_sync_is_on">同期がオン</string>
-    
-    <string name="onboarding_tracking_protection_header">デフォルトのプライバシー保護</string>
-    
-    <string name="onboarding_tracking_protection_description">トラッカーがクッキーを使ってサイト間であなたをつけ回すのを阻止するTotal Cookie Protectionを搭載。</string>
-    
-    <string name="onboarding_tracking_protection_standard_button_2">標準（デフォルト）</string>
-    
-    <string name="onboarding_tracking_protection_standard_button_description_3">プライバシーとパフォーマンスのバランスページは正常に読み込まれます。</string>
-    
-    <string name="onboarding_tracking_protection_strict_option">厳しい</string>
-    
-    <string name="onboarding_tracking_protection_strict_button_description_3">より多くのトラッカーをブロックするため、ページの読み込みが速くなりますが、一部のページ上の機能が壊れる可能性があります。</string>
-    
-    <string name="onboarding_toolbar_placement_header_1">ツールバーの配置を選ぶ</string>
-    
-    <string name="onboarding_toolbar_placement_description">このまま下に置くか、上に移動させるか。</string>
-    
-    <string name="onboarding_privacy_notice_header_1">データを管理する</string>
-    
-    <string name="onboarding_privacy_notice_description">Waterfoxは遠隔測定を収集せず、データをコントロールできます。</string>
-    
-    <string name="onboarding_privacy_notice_read_button">プライバシーポリシーを読む</string>
-    
-    <string name="onboarding_conclusion_header">素晴らしいインターネットを開く準備はできているか？</string>
-    
-    <string name="onboarding_finish">閲覧開始</string>
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
+    <string name="onboarding_header">%s へようこそ！</string>
+    <!-- text for the Waterfox account onboarding sign in card header. The word "Waterfox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">端末間で Waterfox を同期</string>
+    <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
+    <string name="onboarding_manual_sign_in_description_2">この端末の %1$s とブックマーク、履歴、パスワードを同期します。</string>
+    <!-- text for the button to manually sign into Waterfox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">アカウント登録</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">Sync が有効です</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header_3">プライバシー重視</string>
+    <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
+    <string name="onboarding_tracking_protection_description_4">%1$s はウェブ上であなたを密かに追跡する組織を自動的に遮断します。</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button_2">標準 (既定)</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description_3">プライバシーと性能をバランスよく。ページが正しく読み込まれます。</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_option">厳格</string>
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description_3">より多くのトラッカーをブロックするとページの読み込みが速くなりますが、一部のページは正しく機能しなくなる可能性があります。</string>
+    <!-- text for the toolbar position card header  -->
+    <string name="onboarding_toolbar_placement_header_1">ツールバーの配置を選べます</string>
+    <!-- text for the toolbar position card description -->
+    <string name="onboarding_toolbar_placement_description_1">ツールバーを簡単に手の届く位置に置きましょう。画面下または上に移動できます。</string>
+    <!-- text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header">あなたのプライバシー</string>
+    <!-- text for the privacy notice onboarding card description
+    The first parameter is the name of the app (e.g. Waterfox Preview) Substitute %s for long browser name. -->
+    <string name="onboarding_privacy_notice_description2">%s は、あなたがオンラインで共有するものと、私たちと共有するものをコントロールできるように設計されています。</string>
+    <!-- Text for the button to read the privacy notice -->
+    <string name="onboarding_privacy_notice_read_button">個人情報保護方針を読む</string>
 
-    
-    
-    <string name="onboarding_theme_picker_header">テーマを選ぶ</string>
-    
-    <string name="onboarding_theme_picker_description_2">ダークモードでバッテリーと視力を節約。</string>
-    
-    <string name="onboarding_theme_automatic_title">自動</string>
-    
-    <string name="onboarding_theme_automatic_summary">デバイスの設定に適応</string>
-    
+    <!-- text for the button to finish onboarding -->
+    <string name="onboarding_finish">ブラウジングを始める</string>
+
+    <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">テーマを選んでください</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description_2">ダークモードでバッテリーを節約し、目に優しい配色にします。</string>
+    <!-- Automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_title">自動設定</string>
+    <!-- Summary of automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_summary">端末の設定に従います</string>
+    <!-- Theme setting for dark mode -->
     <string name="onboarding_theme_dark_title">ダークテーマ</string>
-    
+    <!-- Theme setting for light mode -->
     <string name="onboarding_theme_light_title">ライトテーマ</string>
 
-    
-    <string name="sync_sent_tabs_snackbar">タブが送られた！</string>
-    
-    <string name="sync_sent_tab_snackbar">タブが送られた！</string>
-    
-    <string name="sync_sent_tab_error_snackbar">送信できない</string>
-    
-    <string name="sync_sent_tab_error_snackbar_action">リトライ</string>
-    
-    <string name="sync_scan_code">コードをスキャンする</string>
-    
-    <string name="sign_in_instructions">&lt;br&gt;お使いのコンピュータでWaterfoxを起動し、&lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;MozillaはWaterfoxとは一切関係ありません&lt;/i&gt;。</string>
-    
-    <string name="sign_in_ready_for_scan">スキャン準備完了</string>
-    
-    <string name="sign_in_with_camera">カメラでサインイン</string>
-    
-    <string name="sign_in_with_email">代わりにEメールを使う</string>
-    
-    <string name="sign_in_create_account_text">アカウントをお持ちではないですか？&lt;u&gt;アカウントを作成&lt;/u&gt;すると、デバイス間で Waterfox を同期できます。</string>
-    
-    <string name="sign_out_confirmation_message_2">sはアカウントとの同期を停止しますが、このデバイス上の閲覧データは削除されません。</string>
-    
-    <string name="sign_out_disconnect">切断</string>
-    
+    <!-- Text shown in snackbar when multiple tabs have been sent to device -->
+    <string name="sync_sent_tabs_snackbar">複数のタブを送信しました！</string>
+    <!-- Text shown in snackbar when one tab has been sent to device  -->
+    <string name="sync_sent_tab_snackbar">タブを送信しました！</string>
+    <!-- Text shown in snackbar when sharing tabs failed  -->
+    <string name="sync_sent_tab_error_snackbar">送信できません</string>
+    <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
+    <string name="sync_sent_tab_error_snackbar_action">再試行</string>
+    <!-- Title of QR Pairing Fragment -->
+    <string name="sync_scan_code">QR コードのスキャン</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[コンピューターの Waterfox で <b>https://firefox.com/pair</b> を開いてください]]></string>
+    <!-- Text shown for sign in pairing when ready -->
+    <string name="sign_in_ready_for_scan">スキャンの準備ができました</string>
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">カメラを使ってログイン</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">代わりにメールアドレスを使う</string>
+    <!-- Text shown for settings option for create new account text.'Waterfox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[アカウントをお持ちでない方は、<u>アカウントを作成</u>して Waterfox を端末間で同期しましょう。]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
+    <string name="sign_out_confirmation_message_2">%s はあなたのアカウントとの同期を中止しますが、この端末上の閲覧履歴は削除されません。</string>
+    <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_disconnect">接続を解除</string>
+    <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">キャンセル</string>
-    
-    <string name="bookmark_cannot_edit_root">デフォルトのフォルダを編集できない</string>
+    <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
+    <string name="bookmark_cannot_edit_root">既定のフォルダーは編集できません</string>
 
-    
-    
-    <string name="etp_settings">プロテクション設定</string>
-    
-    <string name="preference_enhanced_tracking_protection">トラッキング保護の強化</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation_title">尾行されずにブラウズする</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation">自分のデータは自分で管理しましょう。sは、あなたがオンラインで行うことを追跡する最も一般的なトラッカーの多くからあなたを保護します。</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation_learn_more">さらに詳しく</string>
-    
-    <string name="preference_enhanced_tracking_protection_standard_default_1">標準（デフォルト）</string>
-    
-    <string name="preference_enhanced_tracking_protection_standard_description_4">プライバシーとパフォーマンスのバランスページは正常に読み込まれます。</string>
-    
-    <string name="preference_enhanced_tracking_protection_standard_info_button">標準的なトラッキング防止機能でブロックされるもの</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict">厳しい</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict_description_3">より多くのトラッカーをブロックするため、ページの読み込みが速くなりますが、一部のページ上の機能が壊れる可能性があります。</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict_info_button">厳重なトラッキング保護でブロックされるもの</string>
-    
+    <!-- Enhanced Tracking Protection -->
+    <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
+    <string name="etp_settings">追跡防止の設定</string>
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="preference_enhanced_tracking_protection">強化型トラッキング防止</string>
+    <!-- Title for the description of enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_title">閲覧中のプライバシーを保護します</string>
+    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation">個人データの収集を防止します。%s はオンラインでのあなたの行動を追跡するよく知られた数多くのトラッカーからあなたを守ります。</string>
+    <!-- Text displayed that links to website about enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">詳細情報</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_default_1">標準 (既定)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_4">プライバシーと性能をバランスよく。ページが正しく読み込まれます。</string>
+    <!--  Accessibility text for the Standard protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_standard_info_button">標準のトラッキング防止でブロックされるもの</string>
+    <!-- Preference for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict">厳格</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_3">より多くのトラッカーをブロックするとページの読み込みが速くなりますが、一部のページは正しく機能しなくなる可能性があります。</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_strict_info_button">厳格なトラッキング防止でブロックされるもの</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">カスタム</string>
-    
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_description_2">ブロックするトラッカーとスクリプトを選択します。</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_info_button">カスタム・トラッキング・プロテクションでブロックされるもの</string>
-    
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies">クッキー</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_1">クロスサイト・トラッカーとソーシャルメディア・トラッカー</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_2">未訪問サイトからのクッキー</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_3">すべてのサードパーティクッキー（ウェブサイトが壊れる可能性があります）</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_4">すべてのクッキー（ウェブサイトが壊れる原因になります）</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_5">クロスサイトクッキーを分離する</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_tracking_content">トラッキング・コンテンツ</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">すべてのタブで</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">プライベートタブのみ</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cryptominers">クリプトミナーズ</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">フィンガープリンター</string>
-    
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_custom_info_button">カスタム設定のトラッキング防止でブロックされるもの</string>
+    <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
+    <!-- Preference for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookie</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">クロスサイトトラッカーとソーシャルメディアトラッカー</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">未訪問のサイトの Cookie</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">すべてのサードパーティ Cookie (ウェブサイトが動作しない可能性があります)</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">すべての Cookie (ウェブサイトが動作しない原因になります)</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">トラッキングコンテンツ</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">すべてのタブに適用</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">プライベートタブのみ適用</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">暗号通貨マイニング</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">フィンガープリント採取</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
     <string name="enhanced_tracking_protection_details">詳細</string>
-    
-    <string name="enhanced_tracking_protection_blocked">ブロック</string>
-    
-    <string name="enhanced_tracking_protection_allowed">可</string>
-    
-    <string name="etp_social_media_trackers_title">ソーシャルメディア・トラッカー</string>
-    
-    <string name="etp_social_media_trackers_description">ソーシャルネットワークがウェブ上でのあなたの閲覧行動を追跡する能力を制限する。</string>
-    
-    <string name="etp_cookies_title">クロスサイトトラッキングクッキー</string>
-    
-    <string name="etp_cookies_title_2">クロスサイトクッキー</string>
-    
-    <string name="etp_cookies_description">広告ネットワークやアナリティクス会社が、多くのサイトであなたの閲覧データを集計するために使用するクッキーをブロックします。</string>
-    
-    <string name="etp_cookies_description_2">トータル・クッキー・プロテクションは、クッキーを利用中のサイトに隔離するため、広告ネットワークなどのトラッカーは、クッキーを使ってサイト間であなたを追跡することができません。</string>
-    
-    <string name="etp_cryptominers_title">クリプトミナーズ</string>
-    
-    <string name="etp_cryptominers_description">悪意のあるスクリプトがあなたのデバイスにアクセスしてデジタル通貨を採掘するのを防ぎます。</string>
-    
-    <string name="etp_fingerprinters_title">フィンガープリンター</string>
-    
-    <string name="etp_fingerprinters_description">追跡目的に使用される可能性のある、お客様のデバイスに関する一意に識別可能なデータの収集を停止します。</string>
-    
-    <string name="etp_tracking_content_title">コンテンツの追跡</string>
-    
-    <string name="etp_tracking_content_description">トラッキングコードを含む外部の広告、ビデオ、その他のコンテンツの読み込みを停止します。一部のウェブサイトの機能に影響を与える可能性があります。</string>
-    
-    <string name="etp_panel_on">このサイトは保護されている</string>
-    
-    <string name="etp_panel_off">このサイトのプロテクションはオフ</string>
-    
-    <string name="enhanced_tracking_protection_exceptions">以下のウェブサイトでは、トラッキング保護機能がオフになっています。</string>
-    
-    <string name="etp_back_button_content_description">戻る</string>
-    
-    <string name="open_source_licenses_title">s｜OSSライブラリ</string>
-    
-    <string name="etp_redirect_trackers_title">リダイレクト・トラッカー</string>
-    
-    <string name="etp_redirect_trackers_description">既知のトラッキングウェブサイトへのリダイレクトによって設定されたクッキーを消去します。</string>
-    
-    <string name="preference_etp_smartblock_description">下記のトラッカーは、このページで部分的にブロックが解除されています。</string>
-    
-    <string name="preference_etp_smartblock_learn_more">さらに詳しく</string>
+    <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_blocked">ブロック済み</string>
+    <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_allowed">許可済み</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">SNS メディアトラッカー</string>
+    <!-- Description of social media trackers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_description">ソーシャルネットワークによるウェブ上の行動追跡を制限します。</string>
+    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_title">クロスサイトトラッキング Cookie</string>
+    <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_description">広告ネットワークやアクセス解析サービスが様々なサイトからブラウジングデータを収集するために使用する Cookie をブロックします。</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">暗号通貨マイニング</string>
+    <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_description">悪意のあるスクリプトによる暗号通貨マイニングを防止します。</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">フィンガープリント採取</string>
+    <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_description">端末を一意に識別できるデータがユーザーを追跡する目的で収集されるのを防止します。</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">トラッキングコンテンツ</string>
+    <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_description">追跡コードを含む外部の広告、動画、その他のコンテンツの読み込みを停止します。一部のウェブサイトの機能に影響する場合があります。</string>
+    <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
+    <string name="etp_panel_on">このサイトでは保護が有効になっています</string>
+    <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
+    <string name="etp_panel_off">このサイトでは保護が無効になっています</string>
+    <!-- Header for exceptions list for which sites enhanced tracking protection is always off -->
+    <string name="enhanced_tracking_protection_exceptions">これらのウェブサイトでは強化型トラッキング防止が無効になります</string>
+    <!-- Content description (not visible, for screen readers etc.): Navigate
+    back from ETP details (Ex: Tracking content) -->
+    <string name="etp_back_button_content_description">前のページへ戻る</string>
+    <!-- About page link text to open what's new link -->
+    <string name="about_whats_new">%s の新機能</string>
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | OSS ライブラリー</string>
 
-    
+    <!-- Category of trackers (redirect trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_title">リダイレクトトラッカー</string>
+    <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_description">既知のトラッキングウェブサイトへのリダイレクトにより設定された Cookie を消去します。</string>
+
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">ユーザーの操作により、以下のマークされたトラッカー*のブロックがこのページ上で部分的に解除されています。</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">詳細情報</string>
+
+    <!-- About page link text to open support link -->
     <string name="about_support">サポート</string>
-    
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
     <string name="about_crashes">クラッシュ</string>
-    
-    <string name="about_privacy_notice">プライバシーポリシー</string>
-    
-    <string name="about_know_your_rights">自分の権利を知る</string>
-    
+    <!-- About page link text to open privacy notice link -->
+    <string name="about_privacy_notice">個人情報保護方針</string>
+    <!-- About page link text to open know your rights link -->
+    <string name="about_know_your_rights">あなたの権利について</string>
+    <!-- About page link text to open licensing information link -->
     <string name="about_licensing_information">ライセンス情報</string>
-    
-    <string name="about_other_open_source_libraries">使用ライブラリ</string>
-    
-    <string name="about_debug_menu_toast_progress">デバッグ・メニュー：左にクリックすると有効になります。</string>
-    <string name="about_debug_menu_toast_done">デバッグメニューを有効にする</string>
+    <!-- About page link text to open a screen with libraries that are used -->
+    <string name="about_other_open_source_libraries">利用しているライブラリー</string>
 
-    
-    
+    <!-- Toast shown to the user when they are activating the secret dev menu
+        The first parameter is number of long clicks left to enable the menu -->
+    <string name="about_debug_menu_toast_progress">デバッグメニュー: 有効にするには %1$d 回クリックしてください</string>
+    <string name="about_debug_menu_toast_done">デバッグメニューが有効です</string>
+  
+    <!-- Browser long press popup menu -->
+    <!-- Copy the current url -->
     <string name="browser_toolbar_long_press_popup_copy">コピー</string>
-    
-    <string name="browser_toolbar_long_press_popup_paste_and_go">ペースト＆ゴー</string>
-    
-    <string name="browser_toolbar_long_press_popup_paste">ペースト</string>
-    
-    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">クリップボードにコピーされたURL</string>
-
-    
+    <!-- Paste & go the text in the clipboard. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="browser_toolbar_long_press_popup_paste_and_go">貼り付けて移動</string>
+    <!-- Paste the text in the clipboard -->
+    <string name="browser_toolbar_long_press_popup_paste">貼り付け</string>
+  
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL をクリップボードにコピーしました</string>
+  
+    <!-- Title text for the Add To Homescreen dialog -->
     <string name="add_to_homescreen_title">ホーム画面に追加</string>
-    
+
+    <!-- Cancel button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_cancel">キャンセル</string>
-    
+    <!-- Add button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_add">追加</string>
-    
-    <string name="add_to_homescreen_continue">ウェブサイトへ</string>
-    
+    <!-- Continue to website button text for the first-time Add to Homescreen dialog -->
+    <string name="add_to_homescreen_continue">ウェブサイトを開く</string>
+    <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">ショートカット名</string>
-    
-    <string name="add_to_homescreen_description_2">このウェブサイトをデバイスのホーム画面に追加すれば、すぐにアクセスでき、アプリのような体験でより速くブラウズできる。</string>
 
-    
-    <string name="preferences_passwords_logins_and_passwords">ログインとパスワード</string>
-    
-    <string name="preferences_passwords_save_logins">ログインとパスワードの保存</string>
-    
-    <string name="preferences_passwords_save_logins_ask_to_save">保存を依頼する</string>
-    
+    <!-- Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description_2">このウェブサイトを端末のホーム画面に簡単な操作で追加できます。アプリのような感覚で素早くアクセスして閲覧しましょう。</string>
+
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
+    <string name="preferences_passwords_logins_and_passwords">ログイン情報とパスワード</string>
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
+    <string name="preferences_passwords_save_logins">ログイン情報を保存する</string>
+    <!-- Preference option for asking to save passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_ask_to_save">保存するか確認する</string>
+    <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">保存しない</string>
-    
-    <string name="preferences_passwords_autofill2">1$sのオートフィル</string>
-    
-    <string name="preferences_passwords_autofill_description">1$sを使用している間、ウェブサイトのユーザー名とパスワードを入力して保存します。</string>
-    
-    <string name="preferences_android_autofill">他のアプリでの自動入力</string>
-    
-    <string name="preferences_android_autofill_description">デバイス上の他のアプリにユーザー名とパスワードを入力する。</string>
-    
-    <string name="preferences_logins_add_login">ログインを追加する</string>
 
-    
-    <string name="preferences_passwords_sync_logins">ログインの同期</string>
-    
-    <string name="preferences_passwords_sync_logins_across_devices">デバイス間でログインを同期</string>
-    
-    <string name="preferences_passwords_saved_logins">保存されたログイン</string>
-    
-    <string name="preferences_passwords_saved_logins_description_empty_text">sに保存または同期したログインはここに表示されます。</string>
-    
-    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">シンクについてもっと知る。</string>
-    
+    <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">%1$s で自動入力する</string>
+    <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">%1$s の使用中、ウェブサイトにユーザー名とパスワードを入力して保存します。</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">他のアプリで自動入力する</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">端末上の他のアプリにユーザー名とパスワードを入力します。</string>
+
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">ログイン情報を追加</string>
+
+    <!-- Preference for syncing saved logins in Fenix -->
+    <string name="preferences_passwords_sync_logins">ログイン情報を同期</string>
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices">端末間でログイン情報を同期します</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins">保存されたログイン情報</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text">端末に保存または %s と同期したログイン情報がここに表示されます。</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sync についての詳細情報。</string>
+    <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">例外</string>
-    
-    <string name="preferences_passwords_exceptions_description_empty">保存されていないログインとパスワードはここに表示されます。</string>
-    
-    <string name="preferences_passwords_exceptions_description">これらのサイトのログインとパスワードは保存されません。</string>
-    
-    <string name="preferences_passwords_exceptions_remove_all">すべての例外を削除する</string>
-    
-    <string name="preferences_passwords_saved_logins_search">検索ログイン</string>
-    
+    <!-- Empty description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description_empty">ログイン情報が保存されないサイトがここに表示されます。</string>
+    <!-- Description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description">これらのサイトではログイン情報が保存されません。</string>
+    <!-- Text on button to remove all saved login exceptions -->
+    <string name="preferences_passwords_exceptions_remove_all">すべての例外を削除</string>
+    <!-- Hint for search box in logins list -->
+    <string name="preferences_passwords_saved_logins_search">ログイン情報を検索</string>
+    <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">サイト</string>
-    
+    <!-- The header for the username for a login -->
     <string name="preferences_passwords_saved_logins_username">ユーザー名</string>
-    
+    <!-- The header for the password for a login -->
     <string name="preferences_passwords_saved_logins_password">パスワード</string>
-    
-    <string name="logins_password_copied">クリップボードにコピーされたパスワード</string>
-    
-    <string name="logins_username_copied">クリップボードにコピーされたユーザー名</string>
-    
-    <string name="saved_logins_copy_password">パスワードをコピーする</string>
-    
-    <string name="saved_logins_clear_password">クリアパスワード</string>
-    
-    <string name="saved_login_copy_username">ユーザー名をコピーする</string>
-    
-    <string name="saved_login_clear_username">クリアユーザー名</string>
-    
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">パスワードをクリップボードにコピーしました</string>
+    <!-- Shown in snackbar to tell user that the username has been copied -->
+    <string name="logins_username_copied">ユーザー名をクリップボードにコピーしました</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
+    <string name="saved_logins_copy_password">パスワードをコピー</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a password while editing a login-->
+    <string name="saved_logins_clear_password">パスワードを消去</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
+    <string name="saved_login_copy_username">ユーザー名をコピー</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
+    <string name="saved_login_clear_username">ユーザー名を消去</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
     <string name="saved_login_clear_hostname">ホスト名を消去</string>
-    
-    <string name="saved_login_open_site">ブラウザでサイトを開く</string>
-    
-    <string name="saved_login_reveal_password">パスワードを表示する</string>
-    
+    <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
+    <string name="saved_login_open_site">サイトをブラウザーで開く</string>
+    <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
+    <string name="saved_login_reveal_password">パスワードを表示</string>
+    <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
     <string name="saved_login_hide_password">パスワードを隠す</string>
-    
-    <string name="logins_biometric_prompt_message">ロックを解除して保存したログインを表示する</string>
-    
-    <string name="logins_warning_dialog_title">ログインとパスワードの保護</string>
-    
-    <string name="logins_warning_dialog_message">デバイスロックのパターン、PIN、またはパスワードを設定し、保存したログイン名やパスワードにアクセスできないようにします。</string>
-    
-    <string name="logins_warning_dialog_later">後日</string>
-    
-    <string name="logins_warning_dialog_set_up_now">セットアップ</string>
-    
-    <string name="logins_biometric_prompt_message_pin">デバイスのロックを解除する</string>
-    
-    <string name="preference_accessibility_force_enable_zoom">すべてのウェブサイトにズームイン</string>
-    
-    <string name="preference_accessibility_force_enable_zoom_summary">このジェスチャーを禁止しているウェブサイトでも、ピンチとズームを許可するようにします。</string>
-    
-    <string name="saved_logins_sort_strategy_alphabetically">名前（A-Z）</string>
-    
-    <string name="saved_logins_sort_strategy_last_used">最後の使用</string>
-    
-    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">ログインメニューの並べ替え</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
+    <string name="logins_biometric_prompt_message">ロック解除して保存されたログイン情報を表示します</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title">ログイン情報とパスワードの保護</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_message">端末のロックパターンや PIN、パスワードを設定して、保存されたログイン情報とパスワードを他人の不正なアクセスから保護しましょう。</string>
+    <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_later">後で</string>
+    <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_set_up_now">今すぐ設定</string>
+    <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their logins -->
+    <string name="logins_biometric_prompt_message_pin">端末のロック解除</string>
 
-    
-    
-    <string name="preferences_autofill">オートフィル</string>
-    
-    <string name="preferences_addresses">住所</string>
-    
+    <!-- Title for Accessibility Force Enable Zoom Preference -->
+    <string name="preference_accessibility_force_enable_zoom">すべてのウェブサイトでズーム</string>
+    <!-- Summary for Accessibility Force Enable Zoom Preference -->
+    <string name="preference_accessibility_force_enable_zoom_summary">ピンチとズームを有効にします。このジェスチャーが止められているウェブサイトでも有効です。</string>
+
+    <!-- Saved logins sorting strategy menu item -by name- (if selected, it will sort saved logins alphabetically) -->
+    <string name="saved_logins_sort_strategy_alphabetically">名前 (昇順)</string>
+    <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
+    <string name="saved_logins_sort_strategy_last_used">最終使用日時</string>
+    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">ログイン情報メニューの並べ替え</string>
+
+    <!-- Autofill -->
+    <!-- Preference and title for managing the autofill settings -->
+    <string name="preferences_autofill">自動補完</string>
+    <!-- Preference and title for managing the settings for addresses -->
+    <string name="preferences_addresses">所在地フォーム</string>
+    <!-- Preference and title for managing the settings for credit cards -->
     <string name="preferences_credit_cards">クレジットカード</string>
-    
-    <string name="preferences_credit_cards_save_and_autofill_cards">カードの保存とオートフィル</string>
-    
-    <string name="preferences_credit_cards_save_and_autofill_cards_summary">データは暗号化される</string>
-    
-    <string name="preferences_credit_cards_sync_cards_across_devices">デバイス間でカードを同期</string>
-    
-    <string name="preferences_credit_cards_sync_cards">シンクカード</string>
-    
-    <string name="preferences_credit_cards_add_credit_card">クレジットカードの追加</string>
-    
-    <string name="preferences_credit_cards_manage_saved_cards">保存カードの管理</string>
-    
+
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards">カード情報を保存して自動入力する</string>
+    <!-- Preference summary for saving and autofilling credit card data -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">データは暗号化されています</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
+    <string name="preferences_credit_cards_sync_cards_across_devices">端末間でカード情報を同期する</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
+    <string name="preferences_credit_cards_sync_cards">クレジットカード情報を同期</string>
+    <!-- Preference option for adding a credit card -->
+    <string name="preferences_credit_cards_add_credit_card">クレジットカードを追加</string>
+    <!-- Preference option for managing saved credit cards -->
+    <string name="preferences_credit_cards_manage_saved_cards">保存したカードを管理</string>
+    <!-- Preference option for adding an address -->
     <string name="preferences_addresses_add_address">アドレスを追加</string>
-    
+    <!-- Preference option for managing saved addresses -->
     <string name="preferences_addresses_manage_addresses">アドレスの管理</string>
-    
-    <string name="preferences_addresses_save_and_autofill_addresses">アドレスの保存と自動入力</string>
-    
-    <string name="preferences_addresses_save_and_autofill_addresses_summary">電話番号、Eメールアドレス、配送先住所などの情報を記載する。</string>
 
-    
-    <string name="credit_cards_add_card">カードを追加する</string>
-    
-    <string name="credit_cards_edit_card">編集カード</string>
-    
+    <!-- Preference for saving and autofilling addresses -->
+    <string name="preferences_addresses_save_and_autofill_addresses">アドレスを保存して自動入力する</string>
+    <!-- Preference summary for saving and autofilling address data -->
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">カード番号、メールアドレス、配送先などの情報を含める</string>
+
+    <!-- Title of the "Add card" screen -->
+    <string name="credit_cards_add_card">カードの追加</string>
+
+    <!-- Title of the "Edit card" screen -->
+    <string name="credit_cards_edit_card">カードの編集</string>
+    <!-- The header for the card number of a credit card -->
     <string name="credit_cards_card_number">カード番号</string>
-    
+    <!-- The header for the expiration date of a credit card -->
     <string name="credit_cards_expiration_date">有効期限</string>
-    
-    <string name="credit_cards_expiration_date_month">有効期限 月</string>
-    
-    <string name="credit_cards_expiration_date_year">有効期限 年</string>
-    
+    <!-- The label for the expiration date month of a credit card to be used by a11y services-->
+    <string name="credit_cards_expiration_date_month">有効期限月</string>
+    <!-- The label for the expiration date year of a credit card to be used by a11y services-->
+    <string name="credit_cards_expiration_date_year">有効期限年</string>
+    <!-- The header for the name on the credit card -->
     <string name="credit_cards_name_on_card">カード名義</string>
-    
-    <string name="credit_cards_menu_delete_card">カードの削除</string>
-    
-    <string name="credit_cards_delete_card_button">カードの削除</string>
-    
-    <string name="credit_cards_delete_dialog_confirmation">本当にこのクレジットカードを削除しますか？</string>
-    
+    <!-- The text for the "Delete card" menu item for deleting a credit card -->
+    <string name="credit_cards_menu_delete_card">カードを削除</string>
+    <!-- The text for the "Delete card" button for deleting a credit card -->
+    <string name="credit_cards_delete_card_button">カードを削除</string>
+    <!-- The text for the confirmation message of "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_confirmation">本当にこのクレジットカード情報を削除してもよろしいですか？</string>
+    <!-- The text for the positive button on "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_button">削除</string>
-    
-    <string name="credit_cards_menu_save">セーブ</string>
-    
-    <string name="credit_cards_save_button">セーブ</string>
-    
+    <!-- The title for the "Save" menu item for saving a credit card -->
+    <string name="credit_cards_menu_save">保存</string>
+    <!-- The text for the "Save" button for saving a credit card -->
+    <string name="credit_cards_save_button">保存</string>
+    <!-- The text for the "Cancel" button for cancelling adding, updating or deleting a credit card -->
     <string name="credit_cards_cancel_button">キャンセル</string>
-    
-    <string name="credit_cards_saved_cards">保存カード</string>
-    
-    <string name="credit_cards_number_validation_error_message">有効なクレジットカード番号を入力してください。</string>
-    
-    <string name="credit_cards_name_on_card_validation_error_message">このフィールドに記入してください</string>
-    
-    <string name="credit_cards_biometric_prompt_message">ロックを解除して保存したカードを見る</string>
-    
-    <string name="credit_cards_warning_dialog_title">クレジットカードのセキュリティ</string>
-    
-    <string name="credit_cards_warning_dialog_message">デバイスロックのパターン、PIN、またはパスワードを設定し、他人があなたのデバイスを持っている場合に、保存したクレジットカードにアクセスされないように保護します。</string>
-    
-    <string name="credit_cards_warning_dialog_set_up_now">セットアップ</string>
-    
-    <string name="credit_cards_warning_dialog_later">後日</string>
-    
-    <string name="credit_cards_biometric_prompt_message_pin">デバイスのロックを解除する</string>
-    
-    <string name="credit_cards_biometric_prompt_unlock_message">保存されたクレジットカード情報の使用ロック解除</string>
-    
-    <string name="addresses_add_address">アドレスを追加</string>
-    
-    <string name="addresses_edit_address">アドレスの編集</string>
-    
-    <string name="addresses_manage_addresses">アドレスの管理</string>
-    
-    <string name="addresses_first_name">名前</string>
-    
-    <string name="addresses_middle_name">ミドルネーム</string>
-    
-    <string name="addresses_last_name">ラストネーム</string>
-    
-    <string name="addresses_street_address">住所</string>
-    
-    <string name="addresses_city">都市</string>
-    
-    <string name="addresses_state">州</string>
-    
-    <string name="addresses_province">州</string>
-    
-    <string name="addresses_zip">ジップ</string>
-    
-    <string name="addresses_country">国または地域</string>
-    
-    <string name="addresses_phone">電話</string>
-    
-    <string name="addresses_email">電子メール</string>
-    
-    <string name="addresses_save_button">セーブ</string>
-    
-    <string name="addresses_cancel_button">キャンセル</string>
-    
-    <string name="addressess_delete_address_button">アドレス削除</string>
-    
-    <string name="addressess_confirm_dialog_message">本当にこのアドレスを削除しますか？</string>
-    
-    <string name="addressess_confirm_dialog_ok_button">削除</string>
-    
-    <string name="addressess_confirm_dialog_cancel_button">キャンセル</string>
-    
-    <string name="address_menu_save_address">アドレスの保存</string>
-    
-    <string name="address_menu_delete_address">アドレス削除</string>
 
-    
+    <!-- Title of the "Saved cards" screen -->
+    <string name="credit_cards_saved_cards">保存したカード</string>
+
+    <!-- Error message for credit card number validation -->
+    <string name="credit_cards_number_validation_error_message">有効なクレジットカード番号を入力してください</string>
+
+    <!-- Error message for credit card name on card validation -->
+    <string name="credit_cards_name_on_card_validation_error_message">このフィールドは入力必須です</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
+    <string name="credit_cards_biometric_prompt_message">保存されたカード情報を表示するにはロック解除してください</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_title">クレジットカード情報の保護</string>
+
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_message">端末のロックパターンや PIN、パスワードを設定して、保存されたクレジットカード情報とパスワードを他人の不正なアクセスから保護しましょう。</string>
+    <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_set_up_now">今すぐ設定</string>
+    <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_later">後で</string>
+    <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
+    <string name="credit_cards_biometric_prompt_message_pin">端末のロック解除</string>
+
+    <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
+    <string name="credit_cards_biometric_prompt_unlock_message">ロックを解除して保存したクレジットカード情報を使用します</string>
+
+    <!-- Title of the "Add address" screen -->
+    <string name="addresses_add_address">アドレスを追加</string>
+    <!-- Title of the "Edit address" screen -->
+    <string name="addresses_edit_address">住所の編集</string>
+    <!-- Title of the "Manage addresses" screen -->
+    <string name="addresses_manage_addresses">アドレスの管理</string>
+    <!-- The header for the full name of an address -->
+    <string moz:removedIn="102" name="addresses_full_name" tools:ignore="UnusedResources">フルネーム</string>
+    <!-- The header for the first name of an address -->
+    <string name="addresses_first_name">名</string>
+    <!-- The header for the middle name of an address -->
+    <string name="addresses_middle_name">ミドルネーム</string>
+    <!-- The header for the last name of an address -->
+    <string name="addresses_last_name">姓</string>
+    <!-- The header for the street address of an address -->
+    <string name="addresses_street_address">番地</string>
+    <!-- The header for the city of an address -->
+    <string name="addresses_city">市区町村</string>
+    <!-- The header for the subregion of an address when "state" should be used -->
+    <string name="addresses_state">都道府県</string>
+    <!-- The header for the subregion of an address when "province" should be used -->
+    <string name="addresses_province">都道府県</string>
+    <!-- The header for the zip code of an address -->
+    <string name="addresses_zip">郵便番号</string>
+    <!-- The header for the country or region of an address -->
+    <string name="addresses_country">国または地域</string>
+    <!-- The header for the phone number of an address -->
+    <string name="addresses_phone">電話番号</string>
+    <!-- The header for the email of an address -->
+    <string name="addresses_email">メールアドレス</string>
+    <!-- The text for the "Save" button for saving an address -->
+    <string name="addresses_save_button">保存</string>
+    <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
+    <string name="addresses_cancel_button">キャンセル</string>
+    <!-- The text for the "Delete address" button for deleting an address -->
+    <string name="addressess_delete_address_button">アドレスを削除</string>
+
+    <!-- The title for the "Delete address" confirmation dialog -->
+    <string name="addressess_confirm_dialog_message">本当にこの住所を削除してもよろしいですか？</string>
+    <!-- The text for the positive button on "Delete address" dialog -->
+    <string name="addressess_confirm_dialog_ok_button">削除</string>
+    <!-- The text for the negative button on "Delete address" dialog -->
+    <string name="addressess_confirm_dialog_cancel_button">キャンセル</string>
+    <!-- The text for the "Save address" menu item for saving an address -->
+    <string name="address_menu_save_address">住所を保存</string>
+    <!-- The text for the "Delete address" menu item for deleting an address -->
+    <string name="address_menu_delete_address">住所を削除</string>
+
+    <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">検索エンジンの追加</string>
-    
+    <!-- Title of the Edit search engine screen -->
     <string name="search_engine_edit_custom_search_engine_title">検索エンジンの編集</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Title for the button to add a search engine in the action bar -->
     <string name="search_engine_add_button_content_description">追加</string>
-    
-    <string name="search_engine_add_custom_search_engine_edit_button_content_description">セーブ</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Title for the button to save a search engine in the action bar -->
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">保存</string>
+    <!-- Text for the menu button to edit a search engine -->
     <string name="search_engine_edit">編集</string>
-    
+    <!-- Text for the menu button to delete a search engine -->
     <string name="search_engine_delete">削除</string>
 
-    
+    <!-- Text for the button to create a custom search engine on the Add search engine screen -->
     <string name="search_add_custom_engine_label_other">その他</string>
-    
-    <string name="search_add_custom_engine_name_hint">名称</string>
-    
-    <string name="search_add_custom_engine_search_string_hint">使用する検索文字列</string>
-    
-    <string name="search_add_custom_engine_search_string_example" formatted="false">クエリを"%s "で置き換えてください。例</string>
-    
+    <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
+    <string name="search_add_custom_engine_name_hint">検索エンジン名</string>
+    <!-- Placeholder text shown in the Search String TextField before a user enters text -->
+    <string name="search_add_custom_engine_search_string_hint">検索クエリー文字列</string>
+    <!-- Description text for the Search String TextField. The %s is part of the string -->
+    <string formatted="false" name="search_add_custom_engine_search_string_example">クエリーを “%s” に置き換えます。例:\nhttps://www.google.com/search?q=%s</string>
+
+    <!-- Accessibility description for the form in which details about the custom search engine are entered -->
     <string name="search_add_custom_engine_form_description">カスタム検索エンジンの詳細</string>
 
-    
-    <string name="search_add_custom_engine_error_empty_name">検索エンジン名を入力</string>
-    
-    <string name="search_add_custom_engine_error_empty_search_string">検索文字列を入力</string>
-    
-    <string name="search_add_custom_engine_error_missing_template">検索文字列が書式例に一致するか確認する</string>
-    
-    <string name="search_add_custom_engine_error_cannot_reach">s "への接続エラー。</string>
-    
-    <string name="search_add_custom_engine_success_message">作成された %s</string>
-    
-    <string name="search_edit_custom_engine_success_message">保存された %s</string>
-    
-    <string name="search_delete_search_engine_success_message">削除された %s</string>
+    <!-- Text shown when a user leaves the name field empty -->
+    <string name="search_add_custom_engine_error_empty_name">検索エンジン名を入力してください</string>
+    <!-- Text shown when a user leaves the search string field empty -->
+    <string name="search_add_custom_engine_error_empty_search_string">検索クエリーを入力してください</string>
+    <!-- Text shown when a user leaves out the required template string -->
+    <string name="search_add_custom_engine_error_missing_template">検索クエリーが入力例の書式と一致しているか確認してください</string>
+    <!-- Text shown when we aren't able to validate the custom search query. The first parameter is the url of the custom search engine -->
+    <string name="search_add_custom_engine_error_cannot_reach">“%s” への接続でエラーが発生しました</string>
+    <!-- Text shown when a user creates a new search engine -->
+    <string name="search_add_custom_engine_success_message">%s を追加しました</string>
+    <!-- Text shown when a user successfully edits a custom search engine -->
+    <string name="search_edit_custom_engine_success_message">%s を保存しました</string>
+    <!-- Text shown when a user successfully deletes a custom search engine -->
+    <string name="search_delete_search_engine_success_message">%s を削除しました</string>
 
-    
-    <string name="phone_feature_blocked_intro">それを許すこと：</string>
-    
-    <string name="phone_feature_blocked_step_settings">1.アンドロイドの設定</string>
-    
-    <string name="phone_feature_blocked_step_permissions">2.&lt;b&gt;アクセス許可&lt;/b&gt;をタップします。</string>
-    
-    <string name="phone_feature_blocked_step_feature">3.&lt;b&gt;%1$s&lt;/b&gt;をオンに切り替える。</string>
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">許可するには:</string>
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Android の設定を開きます</string>
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. <b>権限</b> をタップします]]></string>
+    <!-- Third step for the allowing a permission (Fore example: Camera) -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. <b>%1$s</b> をオンに切り替えます]]></string>
 
-    
-    <string name="quick_settings_sheet_secure_connection_2">接続は安全</string>
-    
-    <string name="quick_settings_sheet_insecure_connection_2">接続が安全でない</string>
-    
-    <string name="clear_site_data">クッキーとサイトデータを消去する</string>
-    
-    <string name="confirm_clear_site_data">本当に&lt;b&gt;%s&lt;/b&gt;というサイトのクッキーとデータをすべて消去したいのですか？</string>
-    
-    <string name="confirm_clear_permissions_on_all_sites">本当にすべてのサイトのパーミッションをクリアしたいのですか？</string>
-    
-    <string name="confirm_clear_permissions_site">本当にこのサイトのすべてのパーミッションをクリアしたいのですか？</string>
-    
-    <string name="confirm_clear_permission_site">本当にこのサイトの許可をクリアしたいのですか？</string>
-    
-    <string name="no_site_exceptions">サイト例外なし</string>
-    
-    <string name="bookmark_deletion_confirmation">本当にこのブックマークを削除しますか？</string>
-    
-    <string name="browser_menu_add_to_shortcuts">ショートカットに追加する</string>
-    
-    <string name="browser_menu_remove_from_shortcuts">ショートカットから削除する</string>
-    
-    <string name="certificate_info_verified_by">検証者: %1$s</string>
-    
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">接続は安全です</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">接続は安全ではありません</string>
+    <!-- Label to clear site data -->
+    <string name="clear_site_data">Cookie とサイトデータを消去</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site -->
+    <string name="confirm_clear_site_data"><![CDATA[<b>%s</b> のすべての Cookie とデータを消去してもよろしいですか？]]></string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites-->
+    <string name="confirm_clear_permissions_on_all_sites">すべてのサイトの許可設定を消去してもよろしいですか？</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site-->
+    <string name="confirm_clear_permissions_site">このサイトの許可設定を消去してもよろしいですか？</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to set default value a permission for a site-->
+    <string name="confirm_clear_permission_site">このサイトのこの許可設定を削除してもよろしいですか？</string>
+    <!-- label shown when there are not site exceptions to show in the site exception settings -->
+    <string name="no_site_exceptions">例外サイトなし</string>
+    <!-- Bookmark deletion confirmation -->
+    <string name="bookmark_deletion_confirmation">本当にこのブックマークを削除してもよろしいですか？</string>
+    <!-- Browser menu button that adds a shortcut to the home fragment -->
+    <string name="browser_menu_add_to_shortcuts">ショートカットに追加</string>
+    <!-- Browser menu button that removes a shortcut from the home fragment -->
+    <string name="browser_menu_remove_from_shortcuts">ショートカットから削除</string>
+    <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
+     the certificate authority that verified the ticket-->
+    <string name="certificate_info_verified_by">認証局: %1$s</string>
+    <!-- Login overflow menu delete button -->
     <string name="login_menu_delete_button">削除</string>
-    
+    <!-- Login overflow menu edit button -->
     <string name="login_menu_edit_button">編集</string>
-    
-    <string name="login_deletion_confirmation">本当にこのログインを削除しますか？</string>
-    
+    <!-- Message in delete confirmation dialog for logins -->
+    <string name="login_deletion_confirmation">このログイン情報を削除してもよろしいですか？</string>
+    <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">削除</string>
-    
+
+    <!-- Negative action of a dialog asking to delete login -->
     <string name="dialog_delete_negative">キャンセル</string>
-    
+    <!--  The saved login options menu description. -->
     <string name="login_options_menu">ログインオプション</string>
-    
-    <string name="saved_login_hostname_description">ログインのウェブアドレスの編集可能なテキストフィールドです。</string>
-    
-    <string name="saved_login_username_description">ログイン時のユーザー名の編集可能なテキストフィールド。</string>
-    
-    <string name="saved_login_password_description">ログインパスワード用の編集可能なテキストフィールド。</string>
-    
+    <!--  The editable text field for a login's web address. -->
+    <string name="saved_login_hostname_description">ログイン情報のウェブアドレスの編集可能なテキストフィールド。</string>
+    <!--  The editable text field for a login's username. -->
+    <string name="saved_login_username_description">ログイン情報のユーザー名の編集可能なテキストフィールド。</string>
+    <!--  The editable text field for a login's password. -->
+    <string name="saved_login_password_description">ログイン情報のパスワードの編集可能なテキストフィールド。</string>
+    <!--  The button description to save changes to an edited login. -->
     <string name="save_changes_to_login">変更を保存してログインします。</string>
-    
+    <!--  The page title for editing a saved login. -->
     <string name="edit">編集</string>
-    
-    <string name="add_login">新規ログインの追加</string>
-    
-    <string name="saved_login_password_required">パスワードが必要</string>
-    
-    <string name="saved_login_username_required">ユーザー名必須</string>
-    
-    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ホスト名必須</string>
-    
+    <!--  The page title for adding new login. -->
+    <string name="add_login">新しいログイン情報の追加</string>
+    <!--  The error message in add/edit login view when password field is blank. -->
+    <string name="saved_login_password_required">パスワードが必要です</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">ユーザー名は必須です</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ホスト名は必須です</string>
+    <!-- Voice search button content description  -->
     <string name="voice_search_content_description">音声検索</string>
-    
-    <string name="voice_search_explainer">今すぐ話す</string>
-    
-    <string name="saved_login_duplicate">そのユーザー名を持つログインがすでに存在する</string>
-    
+    <!-- Voice search prompt description displayed after the user presses the voice search button -->
+    <string name="voice_search_explainer">話してください</string>
+
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">このユーザー名を持つログイン情報がすでに存在します。</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
     <string name="add_login_hostname_hint_text">https://www.example.com</string>
-    
-    <string name="add_login_hostname_invalid_text_3">ウェブアドレスは "https://"または "http://"を含むこと。</string>
-    
-    <string name="add_login_hostname_invalid_text_2">有効なホスト名が必要</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">ウェブアドレスには “https://“ または “http://“ が含まれている必要があります</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">正しいホスト名を入力してください</string>
 
-    
-    
-    <string name="synced_tabs_connect_another_device">別のデバイスを接続する。</string>
-    
+    <!-- Synced Tabs -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <string name="synced_tabs_connect_another_device">他の端末を接続してください。</string>
+    <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">再認証してください。</string>
-    
+
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">タブの同期を有効にしてください。</string>
-    
-    <string name="synced_tabs_no_tabs">他のデバイスでWaterfoxのタブを開いていない。</string>
-    
-    <string name="synced_tabs_sign_in_message">他のデバイスのタブのリストを表示します。</string>
-    
-    <string name="synced_tabs_sign_in_button">サインインして同期する</string>
-    
-    <string name="synced_tabs_no_open_tabs">開いているタブがない</string>
-    
-    <string name="synced_tabs_expand_group">同期されたタブのグループを展開する</string>
-    
-    <string name="synced_tabs_collapse_group">同期したタブのグループを折りたたむ</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">他の端末の Waterfox で開いているタブはありません。</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">他の端末のタブの一覧を表示できます。</string>
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
+    <string name="synced_tabs_sign_in_button">Sync にログイン</string>
 
-    
-    
-    <string name="shortcut_max_limit_title">ショートカットの制限に達した</string>
-    
-    <string name="shortcut_max_limit_content">新しいショートカットを追加するには、1つ削除します。サイトをタッチしたまま、削除を選択します。</string>
-    
-    <string name="top_sites_max_limit_confirmation_button">了解</string>
-    
+    <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
+    <string name="synced_tabs_no_open_tabs">開いているタブはありません</string>
+
+    <!-- Content description for expanding a group of synced tabs. -->
+    <string name="synced_tabs_expand_group">同期したタブのグループを展開します</string>
+    <!-- Content description for collapsing a group of synced tabs. -->
+    <string name="synced_tabs_collapse_group">同期したタブのグループを折りたたみます</string>
+
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
+    <string name="shortcut_max_limit_title">ショートカット数の上限に達しました</string>
+    <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
+    <string name="shortcut_max_limit_content">新しいショートカットを追加するには、いずれかを削除してください。サイトを長押しして削除を選択します。</string>
+    <!-- Confirmation dialog button text when top sites limit is reached. -->
+    <string name="top_sites_max_limit_confirmation_button">OK</string>
+
+    <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
     <string name="top_sites_toggle_top_recent_sites_4">ショートカット</string>
-	
-	<string name="top_sites_rename_dialog_title">名称</string>
-    
+	<!-- Title text displayed in the rename top site dialog. -->
+	<string name="top_sites_rename_dialog_title">タイトル</string>
+    <!-- Hint for renaming title of a shortcut -->
     <string name="shortcut_name_hint">ショートカット名</string>
-	
+	<!-- Button caption to confirm the renaming of the top site. -->
 	<string name="top_sites_rename_dialog_ok">OK</string>
-	
+	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">キャンセル</string>
-    
+
+    <!-- Text for the menu button to open the homepage settings. -->
     <string name="top_sites_menu_settings">設定</string>
-    
-    <string name="top_sites_menu_sponsor_privacy">スポンサーとプライバシー</string>
-    
-    <string name="top_sites_sponsored_label">スポンサードリンク</string>
+    <!-- Text for the menu button to navigate to sponsors and privacy support articles. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="top_sites_menu_sponsor_privacy">私たちのスポンサーとあなたのプライバシー</string>
+    <!-- Label text displayed for a sponsored top site. -->
+    <string name="top_sites_sponsored_label">広告</string>
 
-    
-    
-    <string name="inactive_tabs_title">非アクティブ・タブ</string>
-    
-    <string name="inactive_tabs_delete_all">すべての非アクティブなタブを閉じる</string>
-    
-    <string name="inactive_tabs_expand_content_description">非アクティブなタブを展開する</string>
-    
-    <string name="inactive_tabs_collapse_content_description">非アクティブなタブを折りたたむ</string>
+    <!-- Inactive tabs in the tabs tray -->
+    <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
+    <string name="inactive_tabs_title">休止中のタブ</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">休止中のタブをすべて閉じます</string>
 
-    
-    
-    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">1ヶ月後に自動閉鎖？</string>
-    
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfoxは、過去1ヶ月間閲覧していないタブを閉じることができる。</string>
-    
-    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">オートクローズをオンにする</string>
-    
-    <string name="inactive_tabs_auto_close_message_snackbar">オートクローズ有効</string>
+    <!-- Content description for expanding the inactive tabs section. -->
+    <string name="inactive_tabs_expand_content_description">休止中のタブを展開します</string>
+    <!-- Content description for collapsing the inactive tabs section. -->
+    <string name="inactive_tabs_collapse_content_description">休止中のタブを折りたたみます</string>
 
-    
-    <string name="default_browser_experiment_card_text">Webサイト、メール、メッセージからのリンクをWaterfoxで自動的に開くように設定します。</string>
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">1 か月後に自動的に閉じますか？</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox は 1 か月以上表示していないタブを閉じることができます。</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">自動的に閉じる</string>
 
-    
+    <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+    <string name="inactive_tabs_auto_close_message_snackbar">自動的に閉じる機能が有効です</string>
+
+    <!-- Default browser experiment -->
+    <string name="default_browser_experiment_card_text">ウェブサイトやメール、メッセージのリンクを自動的に Waterfox で開きます。</string>
+
+    <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">削除</string>
 
-    
+    <!-- Content description radio buttons with a link to more information -->
     <string name="radio_preference_info_content_description">詳細はこちら</string>
 
-    
-    <string name="action_bar_up_description">上へナビゲート</string>
+    <!-- Content description for the action bar "up" button -->
+    <string name="action_bar_up_description">上へ移動します</string>
 
-    
+    <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">閉じる</string>
 
-    <string name="waterfox_suggest_header">ウォーターフォックスの提案</string>
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">示唆に富むストーリー</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_categories_header">トピック別のストーリー</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">より詳しく</string>
+    <!-- Title of an app feature. Smaller than a heading.-->
+    <string name="pocket_stories_feature_title">Powered by Pocket.</string>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">Waterfox ファミリーの一員です。 %s</string>
+    <!-- Clickable text for opening an external link for more information about Pocket. -->
+    <string name="pocket_stories_feature_learn_more">詳細情報</string>
 
-    <!-- Add-on process crash dialog to user -->
-    <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
-    <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">アドオンは一時的に無効化されています</string>
+    <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
+    <string name="pocket_stories_sponsor_indication">広告</string>
 
-    <!-- The first parameter is the application name. This is a message shown to the user when too many errors have occurred with the addons process and they have been disabled. The user can decide if they would like to continue trying to start add-ons or if they'd rather continue without them. -->
-    <string name="addon_process_crash_dialog_message" tools:ignore="UnusedResources">システムを不安定にしている 1 つ以上のアドオンが動作を停止しました。 %1$s によるアドオンの再起動が失敗しました。\n\nアドオンは現在のセッション中に再起動されません。\n\nアドオンを削除または無効にすると、この問題が解決される可能性があります。</string>
-    <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
-    <string name="addon_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">アドオンを再起動してみてください</string>
-    <!-- The user will continue with all add-ons disabled -->
-    <string name="addon_process_crash_dialog_disable_addons_button_text" tools:ignore="UnusedResources">アドオンを無効にして続ける</string>
-
+    <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off.-->
+    <string name="experiments_snackbar">データを送信するにはテレメトリーを有効にしてください。</string>
+    <!-- Snackbar button text to navigate to telemetry settings.-->
+    <string name="experiments_snackbar_button">設定を開く</string>
+    <string name="firefox_suggest_header">Waterfox Suggest</string>
 </resources>

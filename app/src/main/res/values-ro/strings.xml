@@ -1,1711 +1,1192 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!-- This Source Code Form is subject to the terms of the Mozilla-Public
-   - License, v. 2.0. If a copy of the MPL was not distributed with this
-   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
-<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
-    
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://mozac.org/tools">
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_5">Privat %s</string>
-    
-    <string name="app_name_private_4">%s (privat)</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_4">%s (Privat)</string>
 
-    
-    
+    <!-- Home Fragment -->
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Mai multe opțiuni</string>
-    
-    <string name="content_description_private_browsing_button">Activați navigarea privată</string>
-    
-    <string name="content_description_disable_private_browsing_button">Dezactivați navigarea privată</string>
-    
-    <string name="search_hint">Căutați sau introduceți adresa</string>
-    
-    <string name="application_search_hint">Introduceți termenii de căutare</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_private_browsing_button">Activează navigarea privată</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_disable_private_browsing_button">Dezactivează navigarea privată</string>
+    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <string name="search_hint">Caută sau introdu adresa</string>
+    <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Filele deschise vor fi afișate aici.</string>
-    
-    <string name="no_private_tabs_description">Filele dvs. private vor fi afișate aici.</string>
-    
-    <string name="tab_tray_multi_select_title">%1$d selectat</string>
-    
-    <string name="tab_tray_add_new_collection">Adăugați o nouă colecție</string>
-    
-    <string name="tab_tray_add_new_collection_name">Nume</string>
-    
-    <string name="tab_tray_select_collection">Selectați colecția</string>
-    
-    <string name="tab_tray_close_multiselect_content_description">Ieșiți din modul multiselecție</string>
-    
-    <string name="tab_tray_collection_button_multiselect_content_description">Salvați filele selectate în colecție</string>
-    
-    <string name="tab_tray_multiselect_selected_content_description">Selectată</string>
 
-    
-    
-    <string name="recently_saved_title">Salvați recent</string>
-    
-    <string name="recently_saved_show_all_content_description_2">Afișați toate marcajele salvate</string>
-    
-    <string name="recently_saved_menu_item_remove">Eliminați</string>
+    <!-- No Private Tabs Message Description -->
+    <string name="no_private_tabs_description">Aici vor fi afișate filele tale private.</string>
 
-    
-    <string name="about_content">%1$s este realizat de BrowserWorks</string>
+    <!-- Tab tray multi select title in app bar. The first parameter is the number of tabs selected -->
+    <string name="tab_tray_multi_select_title">%1$d selectate</string>
+    <!-- Label of button in create collection dialog for creating a new collection  -->
+    <string name="tab_tray_add_new_collection">Adaugă o colecție nouă</string>
+    <!-- Label of editable text in create collection dialog for naming a new collection  -->
+    <string name="tab_tray_add_new_collection_name">Denumire</string>
+    <!-- Label of button in save to collection dialog for selecting a current collection  -->
+    <string name="tab_tray_select_collection">Selectează colecția</string>
+    <!-- Content description for close button while in multiselect mode in tab tray -->
+    <string name="tab_tray_close_multiselect_content_description">Ieși din modul de selecție multiplă</string>
+    <!-- Content description for save to collection button while in multiselect mode in tab tray -->
+    <string name="tab_tray_collection_button_multiselect_content_description">Salvează în colecție filele selectate</string>
+    <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
+    <string name="tab_tray_multiselect_selected_content_description">Selectate</string>
 
-    
-    
-    <string name="private_browsing_placeholder_description_2">%1$s șterge istoricul de căutare și de navigare din filele private atunci când le închideți sau părăsiți aplicația. Deși acest lucru nu vă face anonim în fața site-urilor web sau a furnizorului dvs. de servicii de internet, vă permite să păstrați mai ușor confidențialitatea a ceea ce faceți online față de oricine altcineva care utilizează acest dispozitiv.</string>
+    <!-- Title for the button which navigates the user to show all of their saved bookmarks. -->
+    <string moz:removedIn="101" name="recently_saved_show_all" tools:ignore="UnusedResources">Afișează toate</string>
+
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s este realizat de BrowserWorks.</string>
+
+    <!-- Private Browsing -->
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description_2">%1$s îți șterge istoricul de căutare și navigare din filele private când le închizi sau când ieși din aplicație. Deși nu te anonimizează pe site-urile web sau pentru furnizorul de servicii de internet, ușurează păstrarea confidențialității asupra a ce faci online față de oricine altcineva folosește acest dispozitiv.</string>
     <string name="private_browsing_common_myths">Mituri comune despre navigarea privată</string>
 
-    
-    
-    <string name="cfr_message">Adăugați o comandă rapidă pentru a deschide filele private de pe ecranul principal.</string>
-    
-    <string name="cfr_pos_button_text">Adăugați o comandă rapidă</string>
-    
-    <string name="cfr_neg_button_text">Nu, mulțumesc.</string>
+    <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
+    <!-- Text for the main message -->
+    <string name="cfr_message">Adaugă o comandă rapidă pentru a deschide file private din ecranul de start.</string>
+    <!-- Text for the positive button -->
+    <string name="cfr_pos_button_text">Adaugă comanda rapidă</string>
+    <!-- Text for the negative button -->
+    <string name="cfr_neg_button_text">Nu, mulțumesc</string>
 
-    
-    
-    <string name="open_in_app_cfr_info_message_2">Puteți seta %1$s pentru a deschide automat linkurile din aplicații.</string>
-    
-    <string name="open_in_app_cfr_positive_button_text">Mergeți la setări</string>
-    
-    <string name="open_in_app_cfr_negative_button_text">Respingeți</string>
+    <!-- Text for the positive action button -->
+    <string name="open_in_app_cfr_positive_button_text">Mergi la setări</string>
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">Înlătură</string>
 
-    
-    <string name="cfr_dismiss_button_default_content_description">Respingeți</string>
+    <!-- Text for the negative action button to dismiss the dialog. -->
+    <string name="camera_permissions_needed_negative_button_text">Înlătură</string>
 
-    
-    
-    <string name="tcp_cfr_message">Cea mai puternică funcție de confidențialitate de până acum izolează urmăritorii încrucișați.</string>
-    
-    <string name="tcp_cfr_learn_more">Aflați mai multe despre Total Cookie Protection</string>
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">Setează închiderea automată a filelor deschise care nu au fost văzute în ultima zi, săptămână sau lună.</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Vezi opțiunile</string>
 
-    
-    <string name="camera_permissions_needed_message">Este necesar accesul la cameră. Accesați Setări Android, atingeți permisiuni și atingeți permiteți.</string>
-    
-    <string name="camera_permissions_needed_positive_button_text">Mergeți la setări</string>
-    
-    <string name="camera_permissions_needed_negative_button_text">Respingeți</string>
-
-    
-    <string name="tab_tray_close_tabs_banner_message">Setați închiderea automată a filelor deschise care nu au fost vizualizate în ultima zi, săptămână sau lună.</string>
-    
-    <string name="tab_tray_close_tabs_banner_positive_button_text">Vezi opțiuni</string>
-    
-    <string name="tab_tray_close_tabs_banner_negative_button_text">Respingeți</string>
-    
-    <string name="tab_tray_inactive_onboarding_message">Filele pe care nu le-ai mai văzut de două săptămâni sunt mutate aici.</string>
-    
-    <string name="tab_tray_inactive_onboarding_button_text">Dezactivați în setări</string>
-    
-    <string name="tab_tray_inactive_auto_close_title">Închidere automată după o lună?</string>
-    
-    <string name="tab_tray_inactive_auto_close_body_2">%1$s poate închide filele pe care nu le-ați vizualizat în ultima lună.</string>
-    
-    <string name="tab_tray_inactive_auto_close_button_content_description">Închideți</string>
-
-    
-    <string name="tab_tray_inactive_turn_on_auto_close_button_2">Activați închiderea automată</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">Înlătură</string>
 
 
-    
-    
-    <string name="home_screen_shortcut_open_new_tab_2">fila nouă</string>
-    
-    <string name="home_screen_shortcut_open_new_private_tab_2">Noua filă privată</string>
+    <!-- Home screen icons - Long press shortcuts -->
+    <!-- Shortcut action to open new tab -->
+    <string name="home_screen_shortcut_open_new_tab_2">Filă nouă</string>
+    <!-- Shortcut action to open new private tab -->
+    <string name="home_screen_shortcut_open_new_private_tab_2">Filă privată nouă</string>
 
-    
-    
-    <string name="recent_tabs_header">Salt înapoi în</string>
-    
-    <string name="recent_tabs_show_all">Arată tot</string>
-    
-    <string name="recent_tabs_show_all_content_description_2">Butonul Afișați toate filele recente</string>
-    
-    <string name="recent_tabs_search_term" moz:RemovedIn="105" tools:ignore="UnusedResources">Căutarea ta pentru \"%1$s\"</string>
-    
-    <string name="recent_tabs_search_term_count_2" moz:RemovedIn="105" tools:ignore="UnusedResources">%d site-uri</string>
-    
-    <string name="recent_tabs_see_all_synced_tabs_button_text">Vedeți toate filele sincronizate</string>
-    
-    <string name="recent_tabs_synced_device_icon_content_description">Dispozitiv sincronizat</string>
-    
-    <string name="recent_synced_tab_menu_item_remove">Eliminați</string>
-    
-    <string name="recent_tab_menu_item_remove">Eliminați</string>
+    <!-- Recent Tabs -->
+    <!-- Header text for jumping back into the recent tab in the home screen -->
+    <string name="recent_tabs_header">Revino la această filă</string>
+    <!-- Button text for showing all the tabs in the tabs tray -->
+    <string name="recent_tabs_show_all">Afișează toate</string>
 
-    
-    
-    <string name="history_metadata_header_2">Vizitat recent</string>
-    
-    <string name="recently_visited_menu_item_remove">Eliminați</string>
-    
-    <string name="past_explorations_show_all_content_description_2">Afișează toate explorările anterioare</string>
-
-    
-    
+    <!-- Browser Fragment -->
+    <!-- Content description (not visible, for screen readers etc.): Navigate backward (browsing history) -->
     <string name="browser_menu_back">Înapoi</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Navigate forward (browsing history) -->
     <string name="browser_menu_forward">Înainte</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Refresh current website -->
     <string name="browser_menu_refresh">Reîmprospătare</string>
-    
-    <string name="browser_menu_stop">Stop</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
+    <string name="browser_menu_stop">Oprire</string>
+    <!-- Browser menu button that opens the addon manager -->
     <string name="browser_menu_add_ons">Suplimente</string>
-    
-    <string name="no_add_ons">Nu există add-on-uri aici</string>
-    
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Nu există suplimente aici</string>
+    <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Ajutor</string>
-    
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">Ce este nou</string>
+    <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Setări</string>
-    
-    <string name="browser_menu_library">Biblioteca</string>
-    
-    <string name="browser_menu_desktop_site">Site-ul desktop</string>
-    
-    <string name="browser_menu_add_to_homescreen">Adăugați la ecranul de pornire</string>
-    
-    <string name="browser_menu_install_on_homescreen">Instalați</string>
-    
-    <string name="resync_button_content_description">Resincronizare</string>
-    
-    <string name="browser_menu_find_in_page">Găsiți în pagină</string>
-    
-    <string name="browser_menu_save_to_collection_2">Salvați în colecție</string>
-    
-    <string name="browser_menu_share">Share</string>
-    
-    <string name="browser_menu_open_in_waterfox">Deschis în %1$s</string>
-    
-    <string name="browser_menu_powered_by">ALIMENTAT DE %1$s</string>
-    
-    <string name="browser_menu_powered_by2">Alimentat de %1$s</string>
-    
-    <string name="browser_menu_read">Vizualizare cititor</string>
-    
-    <string name="browser_menu_read_close">Închideți vederea cititorului</string>
-    
-    <string name="browser_menu_open_app_link">Deschideți în aplicație</string>
-    
-    <string name="browser_menu_customize_reader_view">Personalizați vizualizarea cititorului</string>
-    
-    <string name="browser_menu_add">Adăugați</string>
-    
-    <string name="browser_menu_edit">Editați</string>
-    
-    <string name="browser_menu_customize_home_1">Personalizați pagina de pornire</string>
-    
-    
-    <string name="browser_toolbar_home">Ecranul de pornire</string>
+    <!-- Browser menu button that opens a user's library -->
+    <string name="browser_menu_library">Bibliotecă</string>
+    <!-- Browser menu toggle that requests a desktop site -->
+    <string name="browser_menu_desktop_site">Versiune site de desktop</string>
+    <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
+    <string name="browser_menu_add_to_homescreen">Adaugă în ecranul de start</string>
+    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
+    <string name="browser_menu_install_on_homescreen">Instalează</string>
+    <!-- Browser menu button that opens the find in page menu -->
+    <string name="browser_menu_find_in_page">Caută în pagină</string>
+    <!-- Browser menu button that saves the current tab to a collection -->
+    <string name="browser_menu_save_to_collection_2">Salvează în colecție</string>
+    <!-- Browser menu button that open a share menu to share the current site -->
+    <string name="browser_menu_share">Partajează</string>
+    <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_open_in_fenix">Deschide în %1$s</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_powered_by">CU TEHNOLOGIE %1$s</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_powered_by2">Cu tehnologie %1$s</string>
+    <!-- Browser menu button to put the current page in reader mode -->
+    <string name="browser_menu_read">Mod de lectură</string>
+    <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
+    <string name="browser_menu_read_close">Închide modul de lectură</string>
+    <!-- Browser menu button to open the current page in an external app -->
+    <string name="browser_menu_open_app_link">Deschide în aplicație</string>
 
-    
-    
-    <string name="a11y_selected_locale_content_description">Limba selectată</string>
-    
-    <string name="default_locale_text">Urmați limba dispozitivului</string>
-    
-    <string name="locale_search_hint">Limba de căutare</string>
+    <!-- Browser menu label for adding a bookmark -->
+    <string name="browser_menu_add">Adaugă</string>
 
-    
-    
-    <string name="search_scan_button">Scanare</string>
-    
+    <!-- Browser menu label for editing a bookmark -->
+    <string name="browser_menu_edit">Editează</string>
+
+    <!-- Locale Settings Fragment -->
+    <!-- Content description for tick mark on selected language -->
+    <string name="a11y_selected_locale_content_description">Limbă selectată</string>
+    <!-- Text for default locale item -->
+    <string name="default_locale_text">Folosește limba dispozitivului</string>
+    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <string name="locale_search_hint">Caută limbi</string>
+
+    <!-- Search Fragment -->
+    <!-- Button in the search view that lets a user search by scanning a QR code -->
+    <string name="search_scan_button">Scanează</string>
+    <!-- Button in the search view that lets a user change their search engine -->
     <string name="search_engine_button">Motor de căutare</string>
-    
-    <string name="search_shortcuts_engine_settings">Setări ale motorului de căutare</string>
-    
-    <string name="awesomebar_clipboard_title">Completați linkul din clipboard</string>
-    
-    <string name="search_suggestions_onboarding_allow_button">Permiteți</string>
-    
-    <string name="search_suggestions_onboarding_do_not_allow_button">Nu permiteți</string>
-    
-    <string name="search_suggestions_onboarding_title">Permiteți sugestii de căutare în sesiunile private?</string>
-    
-    <string name="search_suggestions_onboarding_text">%s va partaja tot ceea ce introduceți în bara de adrese cu motorul de căutare implicit.</string>
-    
-    <string name="search_engine_suggestions_title">Căutare %s</string>
-    
-    <string name="search_engine_suggestions_description">Căutați direct din bara de adrese</string>
-    
-    <string name="search_settings_menu_item">Setări de căutare</string>
+    <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
+    <string name="search_shortcuts_engine_settings">Setări pentru motorul de căutare</string>
+    <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
+    <string name="awesomebar_clipboard_title">Completează linkul din clipboard</string>
+    <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_allow_button">Permite</string>
+    <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_do_not_allow_button">Nu permite</string>
+    <!-- Search suggestion onboarding hint title text -->
+    <string name="search_suggestions_onboarding_title">Permiți sugestii de căutare în sesiuni private?</string>
 
-    
-    
-    <string name="onboarding_home_screen_description_2">Acum este mai ușor să vă întoarceți de unde ați rămas.</string>
-    
-    <string name="onboarding_home_screen_section_home_description_2">Accesați filele deschise, marcajele și istoricul de navigare.</string>
-    
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">File curate și organizate</string>
-    
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Eliminați aglomerația de file cu un aspect îmbunătățit și file cu închidere automată.</string>
-    
-    <string name="onboarding_home_screen_section_useful_history_title_2">Căutări recente</string>
-    
-    <string name="onboarding_home_screen_section_useful_history_description_2">Revedeți cele mai recente căutări de pe pagina de pornire și din file.</string>
-    
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Faceți cunoștință cu pagina dvs. de pornire personalizată. Aici vor apărea filele recente, marcajele și rezultatele căutărilor.</string>
-    
-    <string name="onboarding_home_welcome_title_2">Bun venit pe un internet mai personal</string>
-    
-    <string name="onboarding_home_welcome_description">Mai multe culori. Mai multă intimitate. Același angajament față de oameni și nu față de profit.</string>
-    
-    <string name="onboarding_home_sync_title_3">Sari de la telefon la laptop și înapoi</string>
-    
-    <string name="onboarding_home_sync_description">Reluați de unde ați rămas, cu filele de pe alte dispozitive acum pe pagina dvs. de pornire.</string>
-    
-    <string name="onboarding_home_get_started_button">Începeți</string>
-    
-    <string name="onboarding_home_sign_in_button">Conectați-vă</string>
-    
-    <string name="onboarding_home_skip_button">Skip</string>
-    
-    <string name="onboarding_home_content_description_close_button">Închideți</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">%s va partaja tot ce tastezi în bara de adrese cu motorul de căutare implicit.</string>
 
-    
-    
-    <string name="search_widget_content_description_2">Deschideți o nouă filă %1$s</string>
-    
+    <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Căutare</string>
-    
-    <string name="search_widget_text_long">Căutați pe web</string>
-    
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Caută pe web</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Voice search -->
     <string name="search_widget_voice">Căutare vocală</string>
 
-    
-    
+    <!-- Preferences -->
+    <!-- Title for the settings page-->
     <string name="settings">Setări</string>
-    
-    <string name="preferences_category_general">General</string>
-    
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Generalități</string>
+    <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Despre</string>
-    
+    <!-- Preference for settings related to changing the default search engine -->
     <string name="preferences_default_search_engine">Motor de căutare implicit</string>
-    
+    <!-- Preference for settings related to Search -->
     <string name="preferences_search">Căutare</string>
-    
-    <string name="preferences_search_address_bar">Bara de adrese</string>
-    
-    <string name="preferences_rate">Evaluați pe Google Play</string>
-    
+    <!-- Preference for settings related to Search address bar -->
+    <string name="preferences_search_address_bar">Bară de adrese</string>
+    <!-- Preference link to rating Fenix on the Play Store -->
+    <string name="preferences_rate">Evaluează pe Google Play</string>
+    <!-- Preference linking to about page for Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="preferences_about">Despre %1$s</string>
-    
-    <string name="preferences_set_as_default_browser">Setați ca browser implicit</string>
-    
-    <string name="preferences_category_advanced">Avansat</string>
-    
+    <!-- Preference for settings related to changing the default browser -->
+    <string name="preferences_set_as_default_browser">Setează ca browser implicit</string>
+    <!-- Preference category for advanced settings -->
+    <string name="preferences_category_advanced">Avansate</string>
+    <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">Confidențialitate și securitate</string>
-    
-    <string name="preferences_site_permissions">Permisiuni de amplasare</string>
-    
+    <!-- Preference for advanced site permissions -->
+    <string name="preferences_site_permissions">Permisiuni pentru site-uri</string>
+    <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">Navigare privată</string>
-    
-    <string name="preferences_open_links_in_a_private_tab">Deschideți linkurile într-o filă privată</string>
-    
-    <string name="preferences_allow_screenshots_in_private_mode">Permiteți capturi de ecran în navigarea privată</string>
-    
-    <string name="preferences_screenshots_in_private_mode_disclaimer">Dacă este permis, filele private vor fi vizibile și atunci când sunt deschise mai multe aplicații</string>
-    
-    <string name="preferences_add_private_browsing_shortcut">Adăugați o comandă rapidă de navigare privată</string>
-    
-    <string name="preferences_https_only_title">Modul HTTPS-Only</string>
-    
-    <string name="preferences_https_only_summary">Încearcă în mod automat să se conecteze la site-uri care utilizează protocolul de criptare HTTPS pentru o securitate sporită.</string>
-    
-    <string name="preferences_https_only_on">Pe</string>
-    
-    <string name="preferences_https_only_off">Off</string>
-    
-    <string name="preferences_http_only_learn_more">Aflați mai multe</string>
-    
-    <string name="preferences_https_only_in_all_tabs">Activați în toate filele</string>
-    
-    <string name="preferences_https_only_in_private_tabs">Activați doar în filele private</string>
-    
-    <string name="errorpage_httpsonly_title">Site-ul securizat nu este disponibil</string>
-    
-    <string name="errorpage_httpsonly_message_title">Cel mai probabil, site-ul web pur și simplu nu acceptă HTTPS.</string>
-    
-    <string name="errorpage_httpsonly_message_summary">Cu toate acestea, este de asemenea posibil ca un atacator să fie implicat. Dacă continuați să accesați site-ul web, nu trebuie să introduceți informații sensibile. Dacă veți continua, modul HTTPS-Only va fi dezactivat temporar pentru site.</string>
-    
+    <!-- Preference for opening links in a private tab-->
+    <string name="preferences_open_links_in_a_private_tab">Deschide linkuri într-o filă privată</string>
+    <!-- Preference for allowing screenshots to be taken while in a private tab-->
+    <string name="preferences_allow_screenshots_in_private_mode">Permite capturi de ecran în navigare privată</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Adaugă o comandă rapidă pentru navigare privată</string>
+    <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accesibilitate</string>
-    
-    <string name="preferences_override_fxa_server">Server personalizat Waterfox Account</string>
-    
-    <string name="preferences_override_sync_tokenserver">Server de sincronizare personalizat</string>
-    
-    <string name="toast_override_fxa_sync_server_done">Waterfox Cont/Sync server modificat. Ieșirea din aplicație pentru a aplica modificările...</string>
-    
+    <!-- Preference to override the Waterfox Account server -->
+    <string name="preferences_override_fxa_server">Server personalizat pentru contul Waterfox</string>
+    <!-- Preference to override the Sync token server -->
+    <string name="preferences_override_sync_tokenserver">Server personalizat de sincronizare</string>
+    <!-- Toast shown after updating the FxA/Sync server override preferences -->
+    <string name="toast_override_fxa_sync_server_done">Server de cont Waterfox/sincronizare modificat. Se închide aplicația pentru implementarea modificărilor…</string>
+    <!-- Preference category for account information -->
     <string name="preferences_category_account">Cont</string>
-    
-    <string name="preferences_toolbar">Bara de instrumente</string>
-    
-    <string name="preferences_theme">Tema</string>
-    
-    <string name="preferences_home_2">Pagina de start</string>
-    
-    <string name="preferences_gestures">Gesturi</string>
-    
-    <string name="preferences_customize">Personalizați</string>
-    
-    <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sincronizați marcajele, istoricul și multe altele cu contul dumneavoastră Waterfox</string>
-    
-    <string name="preferences_sign_in_description_2">Conectați-vă pentru a sincroniza filele, marcajele, parolele și multe altele.</string>
-    
-    <string name="preferences_account_default_name">Contul Waterfox</string>
-    
-    <string name="preferences_account_sync_error">Reconectați-vă pentru a relua sincronizarea</string>
-    
-    <string name="preferences_language">Limba</string>
-    
+    <!-- Preference for changing where the toolbar is positioned -->
+    <string name="preferences_toolbar">Bară de unelte</string>
+    <!-- Preference for changing default theme to dark or light mode -->
+    <string name="preferences_theme">Temă</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Personalizare</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">Sincronizează marcajele, istoricul și multe altele cu contul Waterfox</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name">Cont Waterfox</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Reconectează-te pentru a continua sincronizarea</string>
+    <!-- Preference for language -->
+    <string name="preferences_language">Limbă</string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Selecții de date</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Colectare de date</string>
+    <!-- Preference for developers -->
     <string name="preferences_remote_debugging">Depanare de la distanță prin USB</string>
-    
-    <string name="preferences_show_search_engines">Afișați motoarele de căutare</string>
-    
-    <string name="preferences_show_search_suggestions">Afișați sugestii de căutare</string>
-    
-    <string name="preferences_show_voice_search">Afișați căutarea vocală</string>
-    
-    <string name="preferences_show_search_suggestions_in_private">Arată în sesiuni private</string>
-    
-    <string name="preferences_show_clipboard_suggestions">Afișați sugestii pentru clipboard</string>
-    
-    <string name="preferences_search_browsing_history">Căutarea istoricului de navigare</string>
-    
-    <string name="preferences_search_bookmarks">Căutați marcaje</string>
-    
-    <string name="preferences_search_synced_tabs">Căutați filele sincronizate</string>
-    
-    <string name="preferences_account_settings">Setări de cont</string>
-    
-    <string name="preferences_enable_autocomplete_urls">Completarea automată a URL-urilor</string>
-    
-    <string name="preferences_open_links_in_apps">Deschideți linkuri în aplicații</string>
-    
-    <string name="preferences_external_download_manager">Manager extern de descărcare</string>
-    
+    <!-- Preference title for switch preference to show search engines -->
+    <string name="preferences_show_search_engines">Afișează motoare de căutare</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Afișează sugestii de căutare</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Afișează căutarea vocală</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">Afișează în sesiuni private</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Afișează  sugestii din clipboard</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Caută în istoricul de navigare</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Caută în marcaje</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">Setările contului</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">Deschide linkuri în aplicații</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">Manager extern pentru descărcări</string>
+    <!-- Preference for add_ons -->
     <string name="preferences_addons">Suplimente</string>
-    
+
+    <!-- Preference for notifications -->
     <string name="preferences_notifications">Notificări</string>
 
-    
-    
-    <string name="preferences_customize_amo_collection">Colecția de add-on-uri personalizate</string>
-    
+    <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">OK</string>
-    
-    <string name="customize_addon_collection_cancel">Anulează</string>
-    
+    <!-- Hint displayed on input field for custom collection name -->
     <string name="customize_addon_collection_hint">Numele colecției</string>
-    
-    <string name="customize_addon_collection_user_hint">Proprietarul colecției (ID utilizator)</string>
-    
-    <string name="toast_customize_addon_collection_done">Colecția Add-on modificată. Ieșirea din aplicație pentru a aplica modificările...</string>
 
-    
-    
-    <string name="customize_toggle_jump_back_in">Salt înapoi în</string>
-    
-    <string name="customize_toggle_recent_bookmarks">Marcaje recente</string>
-    
-    <string name="customize_toggle_recently_visited">Vizitat recent</string>
-    
-    <string name="customize_wallpapers">Imagini de fundal</string>
-    
-    <string name="customize_toggle_contile">Scurtături sponsorizate</string>
-
-    
-    
-    <string name="wallpapers_item_name_content_description">Element de tapet: %1$s</string>
-    
-    <string name="wallpaper_updated_snackbar_message">Wallpaper actualizat!</string>
-    
-    <string name="wallpaper_updated_snackbar_action">Vezi</string>
-    
-    <string name="wallpaper_tap_to_change_switch_label_1">Schimbați imaginea de fundal atingând logo-ul paginii de pornire Waterfox</string>
-    
-    <string name="wallpaper_logo_content_description">Waterfox logo - Schimbă tapetul, buton</string>
-
-    
-    
-    <string name="addon_not_supported_error">Add-on nu este suportat</string>
-    
-    <string name="addon_already_installed">Add-on-ul este deja instalat</string>
-
-    
-    
-    <string name="preferences_sync_now">Sincronizare acum</string>
-    
-    <string name="preferences_sync_category">Alegeți ce să sincronizați</string>
-    
-    <string name="preferences_sync_history">Istorie</string>
-    
-    <string name="preferences_sync_bookmarks">Semne de carte</string>
-    
-    <string name="preferences_sync_logins">Autentificare</string>
-    
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">Sincronizează acum</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Alege ce să se sincronizeze</string>
+    <!-- Preference for syncing history -->
+    <string name="preferences_sync_history">Istoric</string>
+    <!-- Preference for syncing bookmarks -->
+    <string name="preferences_sync_bookmarks">Marcaje</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">Date de autentificare</string>
+    <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">File deschise</string>
-    
-    <string name="preferences_sign_out">Deconectați-vă</string>
-    
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">Deconectează-te</string>
+    <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">Numele dispozitivului</string>
-    
+    <!-- Text shown when user enters empty device name -->
     <string name="empty_device_name_error">Numele dispozitivului nu poate fi gol.</string>
-    
-    <string name="sync_syncing_in_progress">Sincronizarea...</string>
-    
-    <string name="sync_failed_summary">Sincronizarea a eșuat. Ultima reușită: %s</string>
-    
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">Se sincronizează…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Sincronizarea a eșuat. Ultima sincronizare reușită: %s</string>
+    <!-- Label summary showing never synced -->
     <string name="sync_failed_never_synced_summary">Sincronizarea a eșuat. Ultima sincronizare: niciodată</string>
-    
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
     <string name="sync_last_synced_summary">Ultima sincronizare: %s</string>
-    
+    <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Ultima sincronizare: niciodată</string>
-    
+
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
     <string name="default_device_name_2">%1$s pe %2$s %3$s</string>
-    
-    <string name="preferences_sync_credit_cards">Carduri de credit</string>
-    
-    <string name="preferences_sync_address">Adrese</string>
 
-    
-    
-    <string name="fxa_received_tab_channel_name">Filele primite</string>
-    
-    <string name="fxa_received_tab_channel_description">Notificări pentru filele primite de la alte dispozitive Waterfox.</string>
-    
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">File primite</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Notificări pentru file primite de la alte dispozitive Waterfox.</string>
+    <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Filă primită</string>
-    
-    <string name="fxa_tab_received_from_notification_name">Tab de la %s</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Filă de la %s</string>
 
-    
-    
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Excepții</string>
-    
-    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Activați pentru toate site-urile</string>
-    
-    <string name="exceptions_empty_message_description">Excepțiile vă permit să dezactivați protecția împotriva urmăririi pentru anumite site-uri.</string>
-    
-    <string name="exceptions_empty_message_learn_more_link">Aflați mai multe</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Activează pentru toate site-urile</string>
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">Excepțiile îți permit să dezactivezi protecția împotriva urmăririi pentru site-urile selectate.</string>
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Află mai multe</string>
 
-    
-    
-    <string name="preferences_sync" moz:RemovedIn="104" tools:ignore="UnusedResources">Porniți Sync</string>
-    
-    <string name="preferences_sync_2">Sincronizarea și salvarea datelor dvs.</string>
-    
-    <string name="preferences_sync_sign_in_to_reconnect">Conectați-vă pentru a vă reconecta</string>
-    
-    <string name="preferences_sync_remove_account">Eliminați contul</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">Date tehnice și de utilizare</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">Partajează cu Waterfox Projectdate privind performanța, utilizarea, hardware-ul și personalizările browserului tău pentru a ne ajuta să îmbunătățim %1$s</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Date de marketing</string>
 
-    
-    
-    <string name="pair_instructions_2">Scanați codul QR afișat la &lt;b&gt;firefox.com/pair&lt;/b&gt;.</string>
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">Activează Sync</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">Intră în cont pentru reconectare</string>
+    <!-- Preference for removing FxA account -->
+    <string name="preferences_sync_remove_account">Șterge contul</string>
 
-    
-    
-    <string name="preference_top_toolbar">Top</string>
-    
-    <string name="preference_bottom_toolbar">Partea de jos</string>
+    <!-- Pairing Feature strings -->
+    <!-- Instructions on how to access pairing -->
+    <string name="pair_instructions_2"><![CDATA[Scanează codul QR afișat pe <b>firefox.com/pair</b>]]></string>
 
-    
-    
-    <string name="preference_light_theme">Lumină</string>
-    
-    <string name="preference_dark_theme">Întuneric</string>
-    
-    <string name="preference_auto_battery_theme">Setat de Battery Saver</string>
-    
-    <string name="preference_follow_device_theme">Urmați tema dispozitivului</string>
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Sus</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Jos</string>
 
-    
-    
-    <string name="preference_gestures_website_pull_to_refresh">Trageți pentru a reîmprospăta</string>
-    
-    <string name="preference_gestures_dynamic_toolbar">Derulați pentru a ascunde bara de instrumente</string>
-    
-    <string name="preference_gestures_swipe_toolbar_switch_tabs">Glisați bara de instrumente în lateral pentru a schimba filele</string>
-    
-    <string name="preference_gestures_swipe_toolbar_show_tabs">Glisați bara de instrumente în sus pentru a deschide filele</string>
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Luminoasă</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Întunecată</string>
+    <!-- Preference for using using dark or light theme automatically set by battery -->
+    <string name="preference_auto_battery_theme">Setat de funcția de economizor</string>
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Folosește tema dispozitivului</string>
 
-    
-    
+    <!-- Library -->
+    <!-- Option in Library to open Downloads page -->
     <string name="library_downloads">Descărcări</string>
-    
-    <string name="library_bookmarks">Semne de carte</string>
-    
-    <string name="library_desktop_bookmarks_root">Marcaje pe desktop</string>
-    
-    <string name="library_desktop_bookmarks_menu">Meniul Marcaje</string>
-    
-    <string name="library_desktop_bookmarks_toolbar">Bara de instrumente Marcaje</string>
-    
+    <!-- Option in library to open Bookmarks page -->
+    <string name="library_bookmarks">Marcaje</string>
+    <!-- Option in library to open Desktop Bookmarks root page -->
+    <string name="library_desktop_bookmarks_root">Marcaje de pe calculator</string>
+    <!-- Option in library to open Desktop Bookmarks "menu" page -->
+    <string name="library_desktop_bookmarks_menu">Meniu de marcaje</string>
+    <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
+    <string name="library_desktop_bookmarks_toolbar">Bară de marcaje</string>
+    <!-- Option in library to open Desktop Bookmarks "unfiled" page -->
     <string name="library_desktop_bookmarks_unfiled">Alte marcaje</string>
-    
-    <string name="library_history">Istorie</string>
-    
-    <string name="library_new_tab">fila nouă</string>
-    
+    <!-- Option in Library to open History page -->
+    <string name="library_history">Istoric</string>
+
+    <!-- Option in Library to open a new tab -->
+    <string name="library_new_tab">Filă nouă</string>
+    <!-- Settings Page Title -->
     <string name="settings_title">Setări</string>
-    
-    <string name="content_description_close_button">Închideți</string>
+    <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
+    <string name="content_description_close_button">Închide</string>
 
-    
-    <string name="history_search_group_site">%d site</string>
-    
-    <string name="history_search_group_sites">%d site-uri</string>
-
-    
+    <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">File închise recent</string>
-    
-    <string name="recently_closed_show_full_history">Arată istoricul complet</string>
-    
+
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">Afișează tot istoricul</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
     <string name="recently_closed_tabs">%d file</string>
-    
-    <string name="recently_closed_tab">%d tab</string>
-    
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">%d filă</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
     <string name="recently_closed_empty_message">Nu există file închise recent aici</string>
 
-    
-    
-    <string name="preferences_tabs">File</string>
-    
-    <string name="preferences_tab_view">Vizualizarea filei</string>
-    
-    <string name="tab_view_list">Lista</string>
-    
-    <string name="tab_view_grid">Rețea</string>
-    
-    <string name="preferences_close_tabs">Închideți filele</string>
-    
-    <string name="close_tabs_manually">Niciodată</string>
-    
+    <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+    <string name="preferences_close_tabs">Închide filele</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">Manual</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
     <string name="close_tabs_after_one_day">După o zi</string>
-    
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
     <string name="close_tabs_after_one_week">După o săptămână</string>
-    
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">După o lună</string>
-    
-    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Închiderea automată a filelor deschise</string>
 
-    
-    
-    <string name="preferences_opening_screen">Ecran de deschidere</string>
-    
-    <string name="opening_screen_homepage">Pagina de start</string>
-    
-    <string name="opening_screen_last_tab">Ultima filă</string>
-    
-    <string name="opening_screen_after_four_hours_of_inactivity">Pagina principală după patru ore de inactivitate</string>
-    
-    <string name="close_tabs_manually_summary">Închideți manual</string>
-    
-    <string name="close_tabs_after_one_day_summary">Închideți după o zi</string>
-    
-    <string name="close_tabs_after_one_week_summary">Închideți după o săptămână</string>
-    
-    <string name="close_tabs_after_one_month_summary">Închideți după o lună</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
+    <string name="close_tabs_manually_summary">Închide manual</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
+    <string name="close_tabs_after_one_day_summary">Închide după o zi</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one week-->
+    <string name="close_tabs_after_one_week_summary">Închide după o săptămână</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
+    <string name="close_tabs_after_one_month_summary">Închide după o lună</string>
 
-    
-    
-    <string name="preferences_inactive_tabs">Mutați filele vechi în inactive</string>
-    
-    <string name="preferences_inactive_tabs_title">Filele pe care nu le-ați vizualizat timp de două săptămâni sunt mutate în secțiunea inactivă.</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">OK</string>
 
-    
-    
-    <string name="tab_header_label">File deschise</string>
-    
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">Deschide filele</string>
+    <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">File private</string>
-    
-    <string name="tabs_header_synced_tabs_title">File sincronizate</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Adaugă fila</string>
-    
-    <string name="add_private_tab">Adăugați fila privată</string>
-    
-    <string name="tab_drawer_fab_content">Privat</string>
-    
-    <string name="tab_drawer_fab_sync">Sincronizare</string>
-    
-    <string name="tab_tray_menu_item_share">Partajați toate filele</string>
-    
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">Adaugă filă privată</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
+    <string name="tab_drawer_fab_content">Privată</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">Partajează toate filele</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">File închise recent</string>
-    
-    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Recent închis</string>
-    
-    <string name="tab_tray_menu_account_settings">Setări de cont</string>
-    
-    <string name="tab_tray_menu_tab_settings">Setări de file</string>
-    
-    <string name="tab_tray_menu_item_close">Închideți toate filele</string>
-    
-    <string name="tab_tray_multiselect_menu_item_bookmark">Bookmark</string>
-    
-    <string name="tab_tray_multiselect_menu_item_close">Închideți</string>
-    
-    <string name="tab_tray_multiselect_share_content_description">Partajați filele selectate</string>
-    
-    <string name="tab_tray_multiselect_menu_content_description">Meniul filelor selectate</string>
-    
-    <string name="remove_tab_from_collection">Eliminarea filei din colecție</string>
-    
-    <string name="tabs_tray_select_tabs">Selectați filele</string>
-    
-    <string name="close_tab">Închideți fila</string>
-    
-    <string name="close_tab_title">Închideți fila %s</string>
-    
-    <string name="open_tabs_menu">Deschideți meniul filelor</string>
-    
-    <string name="tabs_menu_save_to_collection1">Salvați filele în colecție</string>
-    
-    <string name="collection_delete">Ștergeți colecția</string>
-    
-    <string name="collection_rename">Redenumiți colecția</string>
-    
-    <string name="collection_open_tabs">File deschise</string>
-    
-    <string name="collection_name_hint">Numele colecției</string>
-	
-	<string name="rename_top_site">Redenumiți</string>
-	
-	<string name="remove_top_site">Eliminați</string>
-    
-    <string name="delete_from_history">Ștergeți din istoric</string>
-    
-    <string name="pwa_site_controls_title_private">%1$s (Modul privat)</string>
-    
-    <string name="tab_tray_header_title_1" moz:removedIn="104" tools:ignore="UnusedResources">Alte file</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Închise recent</string>
+    <!-- Text shown in the menu for closing all tabs -->
+    <string name="tab_tray_menu_item_close">Închide toate filele</string>
+    <!-- Text shown in the multiselect menu for closing selected tabs. -->
+    <string name="tab_tray_multiselect_menu_item_close">Închide</string>
+    <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
+    <string name="remove_tab_from_collection">Elimină fila din colecție</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">Închide fila</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">Închide fila %s</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">Meniu de file deschise</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">Salvează filele în colecție</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string moz:RemovedIn="103" name="tab_menu" tools:ignore="UnusedResources">Meniu de file</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Șterge colecția</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">Redenumește colecția</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">Deschide filele</string>
+    <!-- Text for the menu button to remove a top site -->
+	<string name="remove_top_site">Șterge</string>
 
-    
-    
-    <string name="history_search_1">Introduceți termenii de căutare</string>
-    
-    <string name="history_delete_all">Ștergeți istoricul</string>
-    
-    <string name="history_delete_multiple_items_snackbar">Istoric Șters</string>
-    
-    <string name="history_delete_single_item_snackbar">Șters %1$s</string>
-    
-    <string name="history_delete_item">Ștergeți</string>
-    
-    <string name="history_multi_select_title">%1$d selectat</string>
-    
-    <string name="history_today">Astăzi</string>
-    
-    <string name="history_yesterday">Ieri</string>
-    
+    <!-- Text for the menu button to delete a top site from history -->
+    <string name="delete_from_history">Șterge din istoric</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (mod privat)</string>
+
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">Șterge istoricul</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Istoric șters</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s șters</string>
+    <!-- Context description text for the button to delete a single history item -->
+    <string name="history_delete_item">Șterge</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d selectate</string>
+    <!-- Text for the header that groups the history the past 7 days -->
     <string name="history_7_days">Ultimele 7 zile</string>
-    
+    <!-- Text for the header that groups the history the past 30 days -->
     <string name="history_30_days">Ultimele 30 de zile</string>
-    
+    <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">Mai vechi</string>
-    
-    <string name="history_empty_message">Nu există istorie aici</string>
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">Fără istoric</string>
 
-    
-    
-    <string name="download_delete_multiple_items_snackbar_1">Descărcări Eliminat</string>
-    
-    <string name="download_delete_single_item_snackbar">Eliminat %1$s</string>
-    
-    <string name="download_empty_message_1">Nu există fișiere descărcate</string>
-    
-    <string name="download_multi_select_title">%1$d selectat</string>
-    
-    <string name="download_delete_item_1">Eliminați</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">%1$d selectate</string>
 
 
-    
-    
-    <string name="tab_crash_title_2">Îmi pare rău. %1$s nu poate încărca această pagină.</string>
-    
-    <string name="tab_crash_send_report">Trimiteți raportul de accident la BrowserWorks</string>
-    
-    <string name="tab_crash_close">Închideți fila</string>
-    
-    <string name="tab_crash_restore">Fila Restaurare</string>
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Ne cerem scuze. %1$s nu poate încărca pagina.</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Trimite un raport de defecțiune către BrowserWorks</string>
+    <!-- Close tab button text on the tab crash page -->
+    <string name="tab_crash_close">Închide fila</string>
+    <!-- Restore tab button text on the tab crash page -->
+    <string name="tab_crash_restore">Restaurează fila</string>
 
-    
-    
-    <string name="bookmark_delete_folder_confirmation_dialog">Sunteți sigur că doriți să ștergeți acest dosar?</string>
-    
+    <!-- Bookmarks -->
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">Sigur vrei să ștergi acest dosar?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
     <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s va șterge elementele selectate.</string>
-    
-    <string name="bookmark_delete_negative">Anulează</string>
-    
-    <string name="bookmark_add_folder">Adăugați un dosar</string>
-    
-    <string name="bookmark_saved_snackbar">Bookmark salvat!</string>
-    
-    <string name="edit_bookmark_snackbar_action">EDITARE</string>
-    
-    <string name="bookmark_menu_edit_button">Editați</string>
-    
-    <string name="bookmark_menu_copy_button">Copiați</string>
-    
-    <string name="bookmark_menu_share_button">Share</string>
-    
-    <string name="bookmark_menu_open_in_new_tab_button">Deschideți în fila nouă</string>
-    
-    <string name="bookmark_menu_open_in_private_tab_button">Deschideți în fila privată</string>
-    
-    <string name="bookmark_menu_delete_button">Ștergeți</string>
-    
-    <string name="bookmark_menu_save_button">Salvați</string>
-    
-    <string name="bookmarks_multi_select_title">%1$d selectat</string>
-    
-    <string name="edit_bookmark_fragment_title">Editați marcajul</string>
-    
-    <string name="edit_bookmark_folder_fragment_title">Editare dosar</string>
-    
-    <string name="bookmark_sign_in_button">Autentificați-vă pentru a vedea marcajele sincronizate</string>
-    
+    <!-- Screen title for adding a bookmarks folder -->
+    <string name="bookmark_add_folder">Adaugă dosarul</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">Marcaj salvat!</string>
+    <!-- Snackbar edit button shown after a bookmark has been created. -->
+    <string name="edit_bookmark_snackbar_action">EDITEAZĂ</string>
+    <!-- Bookmark overflow menu edit button -->
+    <string name="bookmark_menu_edit_button">Editează</string>
+    <!-- Bookmark overflow menu copy button -->
+    <string name="bookmark_menu_copy_button">Copiază</string>
+    <!-- Bookmark overflow menu share button -->
+    <string name="bookmark_menu_share_button">Partajează</string>
+    <!-- Bookmark overflow menu open in new tab button -->
+    <string name="bookmark_menu_open_in_new_tab_button">Deschide într-o filă nouă</string>
+    <!-- Bookmark overflow menu open in private tab button -->
+    <string name="bookmark_menu_open_in_private_tab_button">Deschide într-o filă privată</string>
+    <!-- Bookmark overflow menu delete button -->
+    <string name="bookmark_menu_delete_button">Șterge</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">Salvează</string>
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
+    <string name="bookmarks_multi_select_title">%1$d selectate</string>
+    <!-- Bookmark editing screen title -->
+    <string name="edit_bookmark_fragment_title">Editează marcajul</string>
+    <!-- Bookmark folder editing screen title -->
+    <string name="edit_bookmark_folder_fragment_title">Editează dosarul</string>
+    <!-- Bookmark sign in button message -->
+    <string name="bookmark_sign_in_button">Intră în cont pentru a vedea marcajele sincronizate</string>
+    <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
-    
+    <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">DOSAR</string>
-    
-    <string name="bookmark_name_label">NUME</string>
-    
-    <string name="bookmark_add_folder_fragment_label">Adăugați un dosar</string>
-    
-    <string name="bookmark_select_folder_fragment_label">Selectați folderul</string>
-    
+    <!-- Bookmark NAME editing field label -->
+    <string name="bookmark_name_label">DENUMIRE</string>
+    <!-- Bookmark add folder screen title -->
+    <string name="bookmark_add_folder_fragment_label">Adaugă dosarul</string>
+    <!-- Bookmark select folder screen title -->
+    <string name="bookmark_select_folder_fragment_label">Selectează dosarul</string>
+    <!-- Bookmark editing error missing title -->
     <string name="bookmark_empty_title_error">Trebuie să aibă un titlu</string>
-    
-    <string name="bookmark_invalid_url_error">URL invalid</string>
-    
-    <string name="bookmarks_empty_message">Nu există semne de carte aici</string>
-    
-    <string name="bookmark_deletion_snackbar_message">Șters %1$s</string>
-    
-    <string name="bookmark_deletion_multiple_snackbar_message_2">Semne de carte șterse</string>
-    
-    <string name="bookmark_deletion_multiple_snackbar_message_3">Ștergerea dosarelor selectate</string>
-    
-    <string name="bookmark_undo_deletion">UNDO</string>
-    
-    <string name="bookmark_search">Introduceți termenii de căutare</string>
+    <!-- Bookmark editing error missing or improper URL -->
+    <string name="bookmark_invalid_url_error">URL nevalid</string>
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">Fără marcaje</string>
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message">%1$s șters</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Marcaje șterse</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Se șterg dosarele selectate</string>
+    <!-- Bookmark undo button for deletion snackbar action -->
+    <string name="bookmark_undo_deletion">ANULEAZĂ</string>
 
-    
-    
-    <string name="phone_feature_go_to_settings">Mergeți la Setări</string>
-    
-    <string name="quick_settings_sheet">Foaie de setări rapide</string>
-    
-    <string name="phone_feature_recommended">Recomandat</string>
-    
-    <string name="clear_permissions">Ștergeți permisiunile</string>
-    
-    <string name="clear_permissions_positive">OK</string>
-    
-    <string name="clear_permissions_negative">Anulează</string>
-    
-    <string name="clear_permission">Permisiune clară</string>
-    
-    <string name="clear_permission_positive">OK</string>
-    
-    <string name="clear_permission_negative">Anulează</string>
-    
-    <string name="clear_permissions_on_all_sites">Autorizații clare pe toate site-urile</string>
-    
-    <string name="preference_browser_feature_autoplay">Joc automat</string>
-    
-    <string name="preference_phone_feature_camera">Camera</string>
-    
+    <!-- Site Permissions -->
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Mergi la Setări</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Fișă de setări rapide</string>
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">Opțiune recomandată</string>
+
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">Șterge permisiunile</string>
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">Șterge permisiunea</string>
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">Șterge permisiunile pe toate site-urile</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">Redare automată</string>
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">Cameră</string>
+    <!-- Preference for altering the microphone access for all websites -->
     <string name="preference_phone_feature_microphone">Microfon</string>
-    
+    <!-- Preference for altering the location access for all websites -->
     <string name="preference_phone_feature_location">Locație</string>
-    
+    <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">Notificare</string>
-    
-    <string name="preference_phone_feature_persistent_storage">Stocare persistentă</string>
-    
-    <string name="preference_phone_feature_cross_origin_storage_access">Cookie-uri intersite</string>
-    
-    <string name="preference_phone_feature_media_key_system_access">Conținut controlat prin DRM</string>
-    
-    <string name="preference_option_phone_feature_ask_to_allow">Cereți să permiteți</string>
-    
-    <string name="preference_option_phone_feature_blocked">Blocat</string>
-    
-    <string name="preference_option_phone_feature_allowed">Permise</string>
-    
-    <string name="phone_feature_blocked_by_android">Blocat de Android</string>
-    
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Solicită pentru a permite</string>
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Blocat(ă)</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Permis</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Blocat(ă) de Android</string>
+    <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Excepții</string>
-    
-    <string name="tracking_protection_on">Pe</string>
-    
-    <string name="tracking_protection_off">Off</string>
-    
-    <string name="preference_option_autoplay_allowed2">Permiteți audio și video</string>
-    
-    <string name="quick_setting_option_autoplay_allowed">Permiteți audio și video</string>
-    
-    <string name="preference_option_autoplay_allowed_wifi_only2">Blocați audio și video numai pe date celulare</string>
-    
-    <string name="preference_option_autoplay_allowed_wifi_subtext">Redarea audio și video se va face pe Wi-Fi</string>
-    
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
+    <string name="tracking_protection_on">Activată</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <string name="tracking_protection_off">Dezactivată</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed2">Permite audio și video</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blochează audio și video numai pe date celulare</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Audio și video se vor reda pe Wi-Fi</string>
+    <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">Blochează numai audio</string>
-    
-    <string name="quick_setting_option_autoplay_block_audio">Blochează numai audio</string>
-    
-    <string name="preference_option_autoplay_blocked3">Blocați audio și video</string>
-    
-    <string name="quick_setting_option_autoplay_blocked">Blocați audio și video</string>
-    
-    <string name="delete_browsing_data_quit_on">Pe</string>
-    
-    <string name="delete_browsing_data_quit_off">Off</string>
-    
-    <string name="https_only_on">Pe</string>
-    
-    <string name="https_only_off">Off</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked3">Blochează audio și video</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to on -->
+    <string name="delete_browsing_data_quit_on">Activat</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to off -->
+    <string name="delete_browsing_data_quit_off">Dezactivat</string>
 
-    
-    
+    <!-- Collections -->
+    <!-- Collections header on home fragment -->
     <string name="collections_header">Colecții</string>
-    
-    <string name="collection_menu_button_content_description">Meniul Colecție</string>
-    
-    <string name="no_collections_description2">Adunați lucrurile care contează pentru dvs.\nGrupați căutări, site-uri și file similare pentru acces rapid ulterior.</string>
-    
-    <string name="create_collection_select_tabs">Selectați filele</string>
-    
-    <string name="create_collection_select_collection">Selectați colecția</string>
-    
-    <string name="create_collection_name_collection">Colecția de nume</string>
-    
-    <string name="create_collection_add_new_collection">Adăugați o nouă colecție</string>
-    
-    <string name="create_collection_select_all">Selectați toate</string>
-    
-    <string name="create_collection_deselect_all">Deselectați toate</string>
-    
-    <string name="create_collection_save_to_collection_empty">Selectați filele de salvat</string>
-    
-    <string name="create_collection_save_to_collection_tabs_selected">%d file selectate</string>
-    
-    <string name="create_collection_save_to_collection_tab_selected">%d fila selectată</string>
-    
-    <string name="create_collection_tabs_saved">Filele salvate!</string>
-    
-    <string name="create_collection_tabs_saved_new_collection">Colecție salvată!</string>
-    
-    <string name="create_collection_tab_saved">Tab salvat!</string>
-    
-    <string name="create_collection_close">Închideți</string>
-    
-    <string name="create_collection_save">Salvați</string>
-    
-    <string name="create_collection_view">Vezi</string>
-    
-    <string name="create_collection_positive">OK</string>
-    
-    <string name="create_collection_negative">Anulează</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">Meniu de colecții</string>
 
-    
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description2">Colectează ce contează pentru tine.\nGrupează laolaltă căutări, site-uri și file similare pentru acces facil ulterior.</string>
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Selectează filele</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Selectează colecția</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Denumește colecția</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">Adaugă o colecție nouă</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">Selectează tot</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Deselectează tot</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">Selectează filele de salvat</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d (de) file selectate</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d filă selectată</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">File salvate!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">Colecție salvată!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">Filă salvată!</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Închide</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Salvează</string>
+
+    <!-- Snackbar action to view the collection the user just created or updated -->
+    <string name="create_collection_view">Afișează</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
     <string name="create_collection_default_name">Colecția %d</string>
 
-    
-    
-    <string name="share_header_2">Share</string>
-    
-    <string name="share_button_content_description">Share</string>
-    
-    <string name="share_device_subheader">Trimite la dispozitiv</string>
-    
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header_2">Partajează</string>
+    <!-- Content description (not visible, for screen readers etc.):
+        "Share" button. Opens the share menu when pressed. -->
+    <string name="share_button_content_description">Partajează</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">Trimite pe dispozitiv</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
     <string name="share_link_all_apps_subheader">Toate acțiunile</string>
-    
-    <string name="share_link_recent_apps_subheader">Folosit recent</string>
-    
-    <string name="share_copy_link_to_clipboard">Copiere în clipboard</string>
-    
-    <string name="toast_copy_link_to_clipboard">Copiat în clipboard</string>
-    
-    <string name="sync_menu_sign_in">Autentificați-vă pentru a sincroniza</string>
-    
-    <string name="sync_sign_in">Conectați-vă la Sync</string>
-    
-    <string name="sync_send_to_all">Trimiteți la toate dispozitivele</string>
-    
-    <string name="sync_reconnect">Reconectați-vă la Sync</string>
-    
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Folosite recent</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Intră în contul Sync</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Trimite pe toate dispozitivele</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Reconectează-te la Sync</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">Offline</string>
-    
-    <string name="sync_connect_device">Conectați un alt dispozitiv</string>
-    
-    <string name="sync_connect_device_dialog">Pentru a trimite o filă, conectați-vă la Waterfox pe cel puțin un alt dispozitiv.</string>
-    
-    <string name="sync_confirmation_button">Am înțeles.</string>
-    
-    <string name="share_error_snackbar">Nu se poate partaja în această aplicație</string>
-    
-    <string name="sync_add_new_device_title">Trimite la dispozitiv</string>
-    
-    <string name="sync_add_new_device_message">Nu există dispozitive conectate</string>
-    
-    <string name="sync_add_new_device_learn_button">Aflați mai multe despre trimiterea de file...</string>
-    
-    <string name="sync_add_new_device_connect_button">Conectați un alt dispozitiv...</string>
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">Conectează alt dispozitiv</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Pentru a trimite o filă, intră în contul Waterfox de pe cel puțin un alt dispozitiv.</string>
 
-    
-    
-    <string name="notification_pbm_delete_text_2">Închideți filele private</string>
-    
-    <string name="notification_marketing_channel_name">Marketing</string>
-    
-    <string name="notification_default_browser_title">%1$s este rapid și privat</string>
-    
-    <string name="notification_default_browser_text">Faceți din %1$s browserul dvs. implicit</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Am înțeles</string>
+    <!-- Share error message -->
+    <string name="share_error_snackbar">Nu se poate partaja cu această aplicație</string>
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">Trimite pe dispozitiv</string>
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">Niciun dispozitiv conectat</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Află mai multe despre transmiterea filelor…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">Conectează alt dispozitiv…</string>
 
-    
-    
-    <string name="snackbar_collection_deleted">Colecție ștearsă</string>
-    
-    <string name="snackbar_collection_renamed">Colecția a fost redenumită</string>
-    
-    <string name="snackbar_tab_closed">Tab închis</string>
-    
+    <!-- Notifications -->
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">Închide filele private</string>
+
+    <!-- Snackbar -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Colecție ștersă</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Colecție redenumită</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">Filă închisă</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">File închise</string>
-    
-    <string name="snackbar_message_bookmarks_saved">Marcaje salvate!</string>
-    
-    <string name="snackbar_added_to_shortcuts">Adăugat la scurtături!</string>
-    
-    <string name="snackbar_private_tab_closed">File privat închis</string>
-    
+    <!-- Text shown in snackbar when user adds a site to top sites -->
+    <string moz:RemovedIn="101" name="snackbar_added_to_top_sites" tools:ignore="UnusedResources">Adăugat pe site-urile de top!</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">Filă privată închisă</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">File private închise</string>
-    
-    <string name="snackbar_deleted_undo">UNDO</string>
-    
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
+    <string name="snackbar_deleted_undo">ANULEAZĂ</string>
+    <!-- Text shown in snackbar when user removes a top site -->
     <string name="snackbar_top_site_removed">Site eliminat</string>
-    
-    <string name="qr_scanner_confirmation_dialog_message">Permiteți lui %1$s să deschidă %2$s</string>
-    
-    <string name="qr_scanner_dialog_positive">ALLOW</string>
-    
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Permite %1$s să deschidă %2$s</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">PERMITE</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">REFUZĂ</string>
-    
-    <string name="qr_scanner_dialog_invalid">Adresa web nu este validă.</string>
-    
-    <string name="qr_scanner_dialog_invalid_ok">OK</string>
-    
-    <string name="tab_collection_dialog_message">Sunteți sigur că doriți să ștergeți %1$s?</string>
-    
-    <string name="delete_tab_and_collection_dialog_message">Ștergerea acestei file va șterge întreaga colecție. Puteți crea noi colecții în orice moment.</string>
-    
-    <string name="delete_tab_and_collection_dialog_title">Ștergeți %1$s?</string>
-    
-    <string name="tab_collection_dialog_positive">Ștergeți</string>
-    
-    <string name="full_screen_notification">Intrarea în modul ecran complet</string>
-    
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">Sigur vrei să ștergi %1$s?</string>
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">Ștergerea acestei file va șterge toată colecția. Poți crea în orice moment colecții noi.</string>
+    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_title">Ștergi %1$s?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">Șterge</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Se intră în modul ecran complet</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL copiat</string>
-    
-    <string name="accessibility_text_size_sample_text_1">Acesta este un text de probă. Acesta este aici pentru a arăta cum va apărea textul atunci când măriți sau micșorați dimensiunea cu această setare.</string>
-    
-    <string name="preference_accessibility_text_size_summary">Faceți ca textul de pe site-urile web să fie mai mare sau mai mic</string>
-    
-    <string name="preference_accessibility_font_size_title">Mărimea fontului</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">Acesta este un exemplu de text. Se află aici pentru a arăta cum va apărea textul când mărești sau micșorezi dimensiunea cu această setare.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Mărește sau micșorează textul pe site-urile web</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">Dimensiunea fontului</string>
 
-    
-    <string name="preference_accessibility_auto_size_2">Dimensionarea automată a fontului</string>
-    
-    <string name="preference_accessibility_auto_size_summary">Mărimea fontului se va potrivi cu setările Android. Dezactivați pentru a gestiona dimensiunea fontului aici.</string>
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_2">Dimensionare automată pentru fonturi</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Dimensiunea fontului va coincide cu cea din setările Android. Dezactivează pentru a gestiona aici dimensiunea fontului.</string>
 
-    
-    <string name="preferences_delete_browsing_data">Ștergeți datele de navigare</string>
-    
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Șterge datele de navigare</string>
+    <!-- Title for the tabs item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_tabs_title_2">File deschise</string>
-    
-    <string name="preferences_delete_browsing_data_tabs_subtitle">%d file</string>
-    
-    <string name="preferences_delete_browsing_data_browsing_data_title">Istoricul de navigare și datele site-ului</string>
-    
-    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adrese</string>
-    
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d (de) file</string>
+
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Istoric de navigare și date site-uri</string>
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d (de) adrese</string>
+    <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Cookie-uri</string>
-    
-    <string name="preferences_delete_browsing_data_cookies_subtitle">Veți fi deconectat de pe majoritatea site-urilor</string>
-    
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Vei fi deconectat(ă) de pe majoritatea site-urilor</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cached_files">Imagini și fișiere în cache</string>
-    
-    <string name="preferences_delete_browsing_data_cached_files_subtitle">Eliberează spațiul de depozitare</string>
-    
-    <string name="preferences_delete_browsing_data_site_permissions">Permisiuni de amplasare</string>
-    
-    <string name="preferences_delete_browsing_data_downloads">Descărcări</string>
-    
-    <string name="preferences_delete_browsing_data_button">Ștergeți datele de navigare</string>
-    
-    <string name="preferences_delete_browsing_data_on_quit">Ștergeți datele de navigare la închidere</string>
-    
-    <string name="preference_summary_delete_browsing_data_on_quit_2">Șterge automat datele de navigare atunci când selectați \"Quit\" din meniul principal.</string>
-    
-    <string name="delete_browsing_data_on_quit_action">Renunță la</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Eliberează spațiul de stocare</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">Permisiuni pentru site-uri</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">Șterge datele de navigare</string>
+    <!-- Title for the Delete browsing data on quit preference -->
+    <string name="preferences_delete_browsing_data_on_quit">Șterge datele de navigare la ieșire</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Șterge automat datele de navigare când selectezi \„Închide\” în meniul principal</string>
+    <!-- Action item in menu for the Delete browsing data on quit feature -->
+    <string name="delete_browsing_data_on_quit_action">Închide</string>
 
-    
-    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Astfel, toate datele de navigare vor fi șterse.</string>
-    
-    <string name="delete_history_prompt_title">Intervalul de timp de șters</string>
-    
-    <string name="delete_history_prompt_body">Elimină istoricul (inclusiv istoricul sincronizat de pe alte dispozitive), modulele cookie și alte date de navigare.</string>
-    
-    <string name="delete_history_prompt_button_last_hour">Ultima oră</string>
-    
-    <string name="delete_history_prompt_button_today_and_yesterday">Astăzi și ieri</string>
-    
-    <string name="delete_history_prompt_button_everything">Totul</string>
-
-    
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Acest lucru va șterge toate datele de navigare.</string>
+    <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s va șterge datele de navigare selectate.</string>
-    
-    <string name="delete_browsing_data_prompt_cancel">Anulează</string>
-    
-    <string name="delete_browsing_data_prompt_allow">Ștergeți</string>
-    
+    <!-- Text for the cancel button for the data deletion dialog -->
+    <string name="delete_browsing_data_prompt_cancel">Renunță</string>
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="delete_browsing_data_prompt_allow">Șterge</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Date de navigare șterse</string>
-    
-    <string name="deleting_browsing_data_in_progress">Ștergerea datelor de navigare...</string>
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">Se șterg datele de navigare…</string>
 
-    
-    <string name="delete_all_history_group_prompt_message">Ștergeți toate site-urile din "%s"</string>
-    
-    <string name="delete_history_group_prompt_cancel">Anulează</string>
-    
-    <string name="delete_history_group_prompt_allow">Ștergeți</string>
-    
-    <string name="delete_history_group_snackbar">Grup șters</string>
-
-    
-    
-    <string name="onboarding_header_2">Bine ați venit pe o rețea mai privată</string>
-    
-    <string name="onboarding_message">Un browser de bază, independent.</string>
-    
-    <string name="onboarding_account_sign_in_header">Reluați de unde ați rămas</string>
-    
-    <string name="onboarding_manual_sign_in_description">Sincronizați filele și parolele pe toate dispozitivele pentru o schimbare perfectă a ecranului.</string>
-    
-    <string name="onboarding_waterfox_account_sign_in">Conectați-vă</string>
-    
-    <string name="onboarding_waterfox_account_sync_is_on">Sincronizarea este activată</string>
-    
-    <string name="onboarding_tracking_protection_header">Protecția implicită a confidențialității</string>
-    
-    <string name="onboarding_tracking_protection_description">Dispune de Total Cookie Protection pentru a împiedica urmăritorii să folosească cookie-urile pentru a vă urmări pe toate site-urile.</string>
-    
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Waterfox Preview) -->
+    <string name="onboarding_header">Bine ai venit pe %s!</string>
+    <!-- text for the button to manually sign into Waterfox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">Înscrie-te</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">Sync este activat</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Standard (implicit)</string>
-    
-    <string name="onboarding_tracking_protection_standard_button_description_3">Echilibrat pentru confidențialitate și performanță. Paginile se încarcă normal.</string>
-    
-    <string name="onboarding_tracking_protection_strict_option">Strict</string>
-    
-    <string name="onboarding_tracking_protection_strict_button_description_3">Blochează mai mulți urmăritori, astfel încât paginile se încarcă mai repede, dar este posibil ca unele funcționalități de pe pagină să nu funcționeze.</string>
-    
-    <string name="onboarding_toolbar_placement_header_1">Alegeți plasarea barei de instrumente</string>
-    
-    <string name="onboarding_toolbar_placement_description">Păstrați-l în partea de jos sau mutați-l în partea de sus.</string>
-    
-    <string name="onboarding_privacy_notice_header_1">Vă controlați datele</string>
-    
-    <string name="onboarding_privacy_notice_description">Waterfox nu colectează nicio telemetrie și vă oferă control asupra datelor dumneavoastră.</string>
-    
-    <string name="onboarding_privacy_notice_read_button">Citiți notificarea noastră privind confidențialitatea</string>
-    
-    <string name="onboarding_conclusion_header">Sunteți gata să deschideți un internet uimitor?</string>
-    
-    <string name="onboarding_finish">Începeți să navigați</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_option">Strictă</string>
 
-    
-    
-    <string name="onboarding_theme_picker_header">Alegeți-vă tema</string>
-    
-    <string name="onboarding_theme_picker_description_2">Economisiți-vă bateria și vederea cu modul întunecat.</string>
-    
+    <!-- text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header">Confidențialitatea ta</string>
+    <!-- Text for the button to read the privacy notice -->
+    <string name="onboarding_privacy_notice_read_button">Citește notificarea noastră privind confidențialitatea</string>
+
+    <!-- text for the button to finish onboarding -->
+    <string name="onboarding_finish">Începe navigarea</string>
+
+    <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Alege o temă</string>
+    <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automat</string>
-    
-    <string name="onboarding_theme_automatic_summary">Se adaptează la setările dispozitivului dvs.</string>
-    
-    <string name="onboarding_theme_dark_title">Tema întunecată</string>
-    
-    <string name="onboarding_theme_light_title">Tema luminii</string>
+    <!-- Summary of automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_summary">Se adaptează la setările dispozitivului</string>
+    <!-- Theme setting for dark mode -->
+    <string name="onboarding_theme_dark_title">Temă întunecată</string>
+    <!-- Theme setting for light mode -->
+    <string name="onboarding_theme_light_title">Temă deschisă</string>
 
-    
-    <string name="sync_sent_tabs_snackbar">Filele trimise!</string>
-    
-    <string name="sync_sent_tab_snackbar">Tab trimis!</string>
-    
-    <string name="sync_sent_tab_error_snackbar">Nu se poate trimite</string>
-    
-    <string name="sync_sent_tab_error_snackbar_action">RETRY</string>
-    
-    <string name="sync_scan_code">Scanați codul</string>
-    
-    <string name="sign_in_instructions">Waterfox se bazează pe un cont Mozilla pentru a sincroniza datele între mobil și desktop.&lt;br&gt; Pe computerul dvs. deschideți Waterfox și mergeți la &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla nu este în niciun fel afiliată cu Waterfox.&lt;/i&gt;</string>
-    
+    <!-- Text shown in snackbar when multiple tabs have been sent to device -->
+    <string name="sync_sent_tabs_snackbar">File trimise!</string>
+    <!-- Text shown in snackbar when one tab has been sent to device  -->
+    <string name="sync_sent_tab_snackbar">Filă trimisă!</string>
+    <!-- Text shown in snackbar when sharing tabs failed  -->
+    <string name="sync_sent_tab_error_snackbar">Imposibil de trimis</string>
+    <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
+    <string name="sync_sent_tab_error_snackbar_action">REÎNCEARCĂ</string>
+    <!-- Title of QR Pairing Fragment -->
+    <string name="sync_scan_code">Scananează codul</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[Deschide Waterfox pe calculator și intră pe <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Gata de scanare</string>
-    
-    <string name="sign_in_with_camera">Conectați-vă cu camera dvs.</string>
-    
-    <string name="sign_in_with_email">Utilizați în schimb e-mailul</string>
-    
-    <string name="sign_in_create_account_text">Nu aveți cont? &lt;u&gt;Creează unul&lt;/u&gt; pentru a sincroniza Waterfox între dispozitive.</string>
-    
-    <string name="sign_out_confirmation_message_2">%s va opri sincronizarea cu contul dvs., dar nu va șterge datele de navigare de pe acest dispozitiv.</string>
-    
-    <string name="sign_out_disconnect">Deconectați</string>
-    
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">Autentificare cu camera</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">Folosește e-mailul în schimb</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Waterfox Preview) -->
+    <string name="sign_out_confirmation_message_2">%s va înceta să se mai sincronizeze cu contul tău, dar nu va șterge nimic din datele de navigare de pe acest dispozitiv.</string>
+    <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_disconnect">Deconectează-te</string>
+    <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Anulează</string>
-    
-    <string name="bookmark_cannot_edit_root">Nu pot edita folderele implicite</string>
+    <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
+    <string name="bookmark_cannot_edit_root">Dosarele implicite nu pot fi editate</string>
 
-    
-    
+    <!-- Enhanced Tracking Protection -->
+    <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
     <string name="etp_settings">Setări de protecție</string>
-    
-    <string name="preference_enhanced_tracking_protection">Protecție îmbunătățită de urmărire</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation_title">Navigați fără a fi urmăriți</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation">Păstrați-vă datele pentru dumneavoastră. %s vă protejează împotriva multora dintre cele mai frecvente dispozitive de urmărire care urmăresc ceea ce faceți online.</string>
-    
-    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Aflați mai multe</string>
-    
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="preference_enhanced_tracking_protection">Protecție îmbunătățită împotriva urmăririi</string>
+    <!-- Title for the description of enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_title">Navighează fără să fii urmărit(ă)</string>
+
+    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation">Păstrează-ți datele pentru tine. %s te protejează de multe dintre cele mai frecvente elemente de urmărire care monitorizează ce faci online.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">Află mai multe</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (implicit)</string>
-    
-    <string name="preference_enhanced_tracking_protection_standard_description_4">Echilibrat pentru confidențialitate și performanță. Paginile se încarcă normal.</string>
-    
-    <string name="preference_enhanced_tracking_protection_standard_info_button">Ce este blocat de protecția standard de urmărire</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict">Strict</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict_description_3">Blochează mai mulți urmăritori, astfel încât paginile se încarcă mai repede, dar este posibil ca unele funcționalități de pe pagină să nu funcționeze.</string>
-    
-    <string name="preference_enhanced_tracking_protection_strict_info_button">Ce este blocat de protecția strictă a urmăririi</string>
-    
+    <!--  Accessibility text for the Standard protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_standard_info_button">Ce blochează protecția standard împotriva urmăririi</string>
+    <!-- Preference for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict">Strictă</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Ce blochează protecția strictă împotriva urmăririi</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">Personalizat</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_description_2">Alegeți ce urmăritori și scripturi să blocați.</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_info_button">Ce este blocat de protecția de urmărire personalizată</string>
-    
-    
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Alege ce elemente de urmărire și scripturi să blochezi.</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Ce blochează protecția personalizată împotriva urmăririi</string>
+    <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
+    <!-- Preference for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies">Cookie-uri</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Urmăritori de site-uri încrucișate și de rețele sociale</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookie-uri de la site-uri nevizitate</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Toate modulele cookie de la terți (pot provoca întreruperea site-urilor web)</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Toate modulele cookie (vor provoca întreruperea site-urilor web)</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Izolați cookie-urile cross-site</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Urmărirea conținutului</string>
-    
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Elemente de urmărire ale rețelelor sociale și inter-site-uri</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookie-uri de pe site-uri nevizitate</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Toate cookie-urile de la terți (poate împiedica funcționarea corectă a site-urilor web)</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Toate cookie-urile (va împiedica funcționarea corectă a site-urilor web)</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Conținut de urmărire</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">În toate filele</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Numai în filele Private</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomani</string>
-    
-    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Amprente digitale</string>
-    
-    <string name="enhanced_tracking_protection_details">Detalii</string>
-    
-    <string name="enhanced_tracking_protection_blocked">Blocat</string>
-    
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Numai în filele private</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomineri</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Detectoare de amprente digitale</string>
+    <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_blocked">Blocate</string>
+    <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Permise</string>
-    
-    <string name="etp_social_media_trackers_title">Urmăritori de social media</string>
-    
-    <string name="etp_social_media_trackers_description">Limitează capacitatea rețelelor sociale de a vă urmări activitatea de navigare pe internet.</string>
-    
-    <string name="etp_cookies_title">Cookie-uri de urmărire intersite</string>
-    
-    <string name="etp_cookies_title_2">Cookie-uri Cross-Site</string>
-    
-    <string name="etp_cookies_description">Blochează modulele cookie pe care rețelele publicitare și companiile de analiză le utilizează pentru a compila datele de navigare pe mai multe site-uri.</string>
-    
-    <string name="etp_cookies_description_2">Total Cookie Protection izolează modulele cookie de site-ul pe care vă aflați, astfel încât cei care vă urmăresc, cum ar fi rețelele de publicitate, nu le pot folosi pentru a vă urmări pe alte site-uri.</string>
-    
-    <string name="etp_cryptominers_title">Criptomani</string>
-    
-    <string name="etp_cryptominers_description">Împiedică scripturile malițioase să obțină acces la dispozitivul dvs. pentru a extrage monedă digitală.</string>
-    
-    <string name="etp_fingerprinters_title">Amprente digitale</string>
-    
-    <string name="etp_fingerprinters_description">Oprește colectarea de date identificabile în mod unic despre dispozitivul dvs. care pot fi utilizate în scopuri de urmărire.</string>
-    
-    <string name="etp_tracking_content_title">Urmărirea conținutului</string>
-    
-    <string name="etp_tracking_content_description">Oprește încărcarea anunțurilor externe, a videoclipurilor și a altor tipuri de conținut care conțin coduri de urmărire. Poate afecta unele funcționalități ale site-ului web.</string>
-    
-    <string name="etp_panel_on">Protecțiile sunt ON pentru acest site</string>
-    
-    <string name="etp_panel_off">Protecțiile sunt OFF pentru acest site</string>
-    
-    <string name="enhanced_tracking_protection_exceptions">Protecție îmbunătățită împotriva urmăririi este dezactivată pentru aceste site-uri web</string>
-    
-    <string name="etp_back_button_content_description">Navigați înapoi</string>
-    
-    <string name="open_source_licenses_title">%s | Librării OSS</string>
-    
-    <string name="etp_redirect_trackers_title">Redirecționarea urmăritorilor</string>
-    
-    <string name="etp_redirect_trackers_description">Șterge modulele cookie setate de redirecționările către site-uri web de urmărire cunoscute.</string>
-    
-    <string name="preference_etp_smartblock_description">Unele trackere marcate mai jos au fost deblocate parțial pe această pagină deoarece ați interacționat cu ele *.</string>
-    
-    <string name="preference_etp_smartblock_learn_more">Aflați mai multe</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">Elemente de urmărire ale rețelelor sociale</string>
+    <!-- Description of social media trackers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_description">Limitează capacitatea rețelelor de socializare de a-ți urmări activitatea de navigare pe web.</string>
+    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_title">Cookie-uri de urmărire inter-site-uri</string>
+    <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_description">Blochează cookie-urile pe care le folosesc rețelele publicitare și firmele de analitică pentru a compila datele tale de navigare pe mai multe site-uri.</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">Criptomineri</string>
+    <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_description">Împiedică accesul scripturilor rău-intenționate pe dispozitivul tău ca să mineze monede digitale.</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">Detectoare de amprente digitale</string>
+    <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_description">Inhibă colectarea datelor unice de identificare ale dispozitivului, care pot fi utilizate în scopuri de urmărire.</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">Conținut de urmărire</string>
 
-    
-    <string name="about_support">Suport</string>
-    
-    <string name="about_crashes">Accidente</string>
-    
-    <string name="about_privacy_notice">Aviz de confidențialitate</string>
-    
-    <string name="about_know_your_rights">Cunoașteți-vă drepturile</string>
-    
-    <string name="about_licensing_information">Informații privind licențierea</string>
-    
+    <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_description">Oprește încărcarea reclamelor, videoclipurilor și a altor conținuturi externe care conțin coduri de urmărire. Poate afecta anumite funcționalități ale site-ului.</string>
+    <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
+    <string name="etp_panel_on">Protecțiile sunt ACTIVE pentru acest site</string>
+    <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
+    <string name="etp_panel_off">Protecțiile sunt DEZACTIVATE pentru acest site</string>
+    <!-- Header for exceptions list for which sites enhanced tracking protection is always off -->
+    <string name="enhanced_tracking_protection_exceptions">Protecția îmbunătățită împotriva urmăririi este dezactivată pentru aceste site-uri web</string>
+    <!-- Content description (not visible, for screen readers etc.): Navigate
+    back from ETP details (Ex: Tracking content) -->
+    <string name="etp_back_button_content_description">Înapoi</string>
+    <!-- About page link text to open what's new link -->
+    <string name="about_whats_new">Ce este nou în %s</string>
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Biblioteci OSS</string>
+
+    <!-- About page link text to open support link -->
+    <string name="about_support">Asistență</string>
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">Defecțiuni</string>
+    <!-- About page link text to open privacy notice link -->
+    <string name="about_privacy_notice">Notificare privind confidențialitatea</string>
+    <!-- About page link text to open know your rights link -->
+    <string name="about_know_your_rights">Cunoaște-ți drepturile</string>
+    <!-- About page link text to open licensing information link -->
+    <string name="about_licensing_information">Informații despre licențiere</string>
+    <!-- About page link text to open a screen with libraries that are used -->
     <string name="about_other_open_source_libraries">Biblioteci pe care le folosim</string>
-    
-    <string name="about_debug_menu_toast_progress">Meniul Debug: %1$d clic(uri) în stânga pentru a activa</string>
-    <string name="about_debug_menu_toast_done">Meniul de depanare activat</string>
 
-    
-    
-    <string name="browser_toolbar_long_press_popup_copy">Copiați</string>
-    
-    <string name="browser_toolbar_long_press_popup_paste_and_go">Paste &amp; Go</string>
-    
-    <string name="browser_toolbar_long_press_popup_paste">Paste</string>
-    
+    <!-- Toast shown to the user when they are activating the secret dev menu
+        The first parameter is number of long clicks left to enable the menu -->
+    <string name="about_debug_menu_toast_progress">Meniu de depanare: %1$d clic(uri) rămase pentru activare</string>
+    <string name="about_debug_menu_toast_done">Meniu de depanare activat</string>
+
+    <!-- Browser long press popup menu -->
+    <!-- Copy the current url -->
+    <string name="browser_toolbar_long_press_popup_copy">Copiază</string>
+    <!-- Paste & go the text in the clipboard. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Lipește și mergi</string>
+    <!-- Paste the text in the clipboard -->
+    <string name="browser_toolbar_long_press_popup_paste">Lipește</string>
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
     <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL copiat în clipboard</string>
 
-    
-    <string name="add_to_homescreen_title">Adăugați la ecranul de pornire</string>
-    
-    <string name="add_to_homescreen_cancel">Anulează</string>
-    
-    <string name="add_to_homescreen_add">Adăugați</string>
-    
-    <string name="add_to_homescreen_continue">Continuați la site-ul web</string>
-    
-    <string name="add_to_homescreen_text_placeholder">Numele comenzii rapide</string>
-    
-    <string name="add_to_homescreen_description_2">Puteți adăuga cu ușurință acest site web la ecranul principal al dispozitivului pentru a avea acces instantaneu și pentru a naviga mai rapid cu o experiență asemănătoare cu cea a unei aplicații.</string>
+    <!-- Title text for the Add To Homescreen dialog -->
+    <string name="add_to_homescreen_title">Adaugă în ecranul de start</string>
+    <!-- Cancel button text for the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_cancel">Renunță</string>
+    <!-- Add button text for the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_add">Adaugă</string>
+    <!-- Continue to website button text for the first-time Add to Homescreen dialog -->
+    <string name="add_to_homescreen_continue">Mergi pe site</string>
+    <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_text_placeholder">Denumire comandă rapidă</string>
 
-    
-    <string name="preferences_passwords_logins_and_passwords">Autentificări și parole</string>
-    
-    <string name="preferences_passwords_save_logins">Salvați autentificările și parolele</string>
-    
-    <string name="preferences_passwords_save_logins_ask_to_save">Cereți să salvați</string>
-    
-    <string name="preferences_passwords_save_logins_never_save">Nu salvați niciodată</string>
-    
-    <string name="preferences_passwords_autofill2">Completare automată în %1$s</string>
-    
-    <string name="preferences_passwords_autofill_description">Completați și salvați numele de utilizator și parolele pe site-urile web în timp ce utilizați %1$s.</string>
-    
-    <string name="preferences_android_autofill">Completare automată în alte aplicații</string>
-    
-    <string name="preferences_android_autofill_description">Completați numele de utilizator și parolele în alte aplicații de pe dispozitiv.</string>
-    
-    <string name="preferences_logins_add_login">Adăugați login</string>
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
+    <string name="preferences_passwords_logins_and_passwords">Date de autentificare și parole</string>
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
+    <string name="preferences_passwords_save_logins">Salvează datele de autentificare și parolele</string>
+    <!-- Preference option for asking to save passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_ask_to_save">Întreabă pentru salvare</string>
+    <!-- Preference option for never saving passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_never_save">Nu salva niciodată</string>
 
-    
-    <string name="preferences_passwords_sync_logins">Sincronizarea logărilor</string>
-    
-    <string name="preferences_passwords_sync_logins_across_devices">Sincronizați datele de conectare între dispozitive</string>
-    
-    <string name="preferences_passwords_saved_logins">Autentificări salvate</string>
-    
-    <string name="preferences_passwords_saved_logins_description_empty_text">Aici vor apărea autentificările pe care le salvați sau le sincronizați cu %s.</string>
-    
-    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Aflați mai multe despre Sync.</string>
-    
+    <!-- Preference for syncing saved logins in Fenix -->
+    <string name="preferences_passwords_sync_logins">Sincronizează datele de autentificare</string>
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices">Sincronizează datele de autentificare între dispozitive</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins">Date de autentificare salvate</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text">Aici vor apărea datele de autentificare pe care le salvezi sau le sincronizezi în %s.</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Află mai multe despre Sync.</string>
+    <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Excepții</string>
-    
-    <string name="preferences_passwords_exceptions_description_empty">Aici vor fi afișate autentificările și parolele care nu sunt salvate.</string>
-    
-    <string name="preferences_passwords_exceptions_description">Pentru aceste site-uri, datele de conectare și parolele nu vor fi salvate.</string>
-    
-    <string name="preferences_passwords_exceptions_remove_all">Ștergeți toate excepțiile</string>
-    
-    <string name="preferences_passwords_saved_logins_search">Căutați logări</string>
-    
+    <!-- Empty description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description_empty">Aici vor apărea datele de autentificare și parolele nesalvate.</string>
+    <!-- Description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description">Datele de autentificare și parolele nu vor fi salvate pentru aceste site-uri.</string>
+    <!-- Text on button to remove all saved login exceptions -->
+    <string name="preferences_passwords_exceptions_remove_all">Șterge toate excepțiile</string>
+    <!-- Hint for search box in logins list -->
+    <string name="preferences_passwords_saved_logins_search">Caută date de autentificare</string>
+    <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Site</string>
-    
-    <string name="preferences_passwords_saved_logins_username">Nume utilizator</string>
-    
-    <string name="preferences_passwords_saved_logins_password">Parola</string>
-    
-    <string name="logins_password_copied">Parola copiată în clipboard</string>
-    
+    <!-- The header for the username for a login -->
+    <string name="preferences_passwords_saved_logins_username">Nume de utilizator</string>
+    <!-- The header for the password for a login -->
+    <string name="preferences_passwords_saved_logins_password">Parolă</string>
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">Parolă copiată în clipboard</string>
+    <!-- Shown in snackbar to tell user that the username has been copied -->
     <string name="logins_username_copied">Nume de utilizator copiat în clipboard</string>
-    
-    <string name="saved_logins_copy_password">Copiați parola</string>
-    
-    <string name="saved_logins_clear_password">Ștergeți parola</string>
-    
-    <string name="saved_login_copy_username">Copiați numele de utilizator</string>
-    
-    <string name="saved_login_clear_username">Ștergeți numele de utilizator</string>
-    
-    <string name="saved_login_clear_hostname">Ștergeți numele de gazdă</string>
-    
-    <string name="saved_login_open_site">Deschideți site-ul în browser</string>
-    
-    <string name="saved_login_reveal_password">Afișați parola</string>
-    
-    <string name="saved_login_hide_password">Ascundeți parola</string>
-    
-    <string name="logins_biometric_prompt_message">Deblocare pentru a vedea autentificările salvate</string>
-    
-    <string name="logins_warning_dialog_title">Protejați-vă autentificările și parolele</string>
-    
-    <string name="logins_warning_dialog_message">Configurați un model de blocare a dispozitivului, un cod PIN sau o parolă pentru a vă proteja datele de conectare și parolele salvate, astfel încât să nu fie accesate în cazul în care altcineva are dispozitivul dvs.</string>
-    
+    <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
+    <string name="saved_logins_copy_password">Copiază parola</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
+    <string name="saved_login_copy_username">Copiază numele de utilizator</string>
+    <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
+    <string name="saved_login_open_site">Deschide site-ul în browser</string>
+    <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
+    <string name="saved_login_reveal_password">Afișeză parola</string>
+    <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
+    <string name="saved_login_hide_password">Ascunde parola</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
+    <string name="logins_biometric_prompt_message">Deblochează pentru a vizualiza datele de autentificare salvate</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title">Securizează-ți datele de autentificare și parolele</string>
+
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_message">Configurează un șablon de blocare a dispozitivului, un PIN sau o parolă pentru a-ți proteja datele de autentificare și parolele salvate împotriva accesării de către altcineva care are dispozitivul.</string>
+    <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Mai târziu</string>
-    
-    <string name="logins_warning_dialog_set_up_now">Configurați acum</string>
-    
-    <string name="logins_biometric_prompt_message_pin">Deblocați-vă dispozitivul</string>
-    
+    <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_set_up_now">Configurează acum</string>
+    <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their logins -->
+    <string name="logins_biometric_prompt_message_pin">Deblochează dispozitivul</string>
+    <!-- Title for Accessibility Force Enable Zoom Preference -->
     <string name="preference_accessibility_force_enable_zoom">Zoom pe toate site-urile web</string>
-    
-    <string name="preference_accessibility_force_enable_zoom_summary">Activați această opțiune pentru a permite mișcarea de strângere și mărire, chiar și pe site-urile web care împiedică acest gest.</string>
-    
-    <string name="saved_logins_sort_strategy_alphabetically">Nume (A-Z)</string>
-    
-    <string name="saved_logins_sort_strategy_last_used">Ultimul utilizat</string>
-    
-    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Meniu de sortare a intrărilor</string>
+    <!-- Summary for Accessibility Force Enable Zoom Preference -->
+    <string name="preference_accessibility_force_enable_zoom_summary">Activează funcția de zoom prin gesturi tactile chiar și pe site-uri web care nu o acceptă.</string>
 
-    
-    
-    <string name="preferences_autofill">Completare automată</string>
-    
-    <string name="preferences_addresses">Adrese</string>
-    
-    <string name="preferences_credit_cards">Carduri de credit</string>
-    
-    <string name="preferences_credit_cards_save_and_autofill_cards">Salvarea și completarea automată a cardurilor</string>
-    
-    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Datele sunt criptate</string>
-    
-    <string name="preferences_credit_cards_sync_cards_across_devices">Sincronizarea cardurilor între dispozitive</string>
-    
-    <string name="preferences_credit_cards_sync_cards">Carduri de sincronizare</string>
-    
-    <string name="preferences_credit_cards_add_credit_card">Adăugați un card de credit</string>
-    
-    <string name="preferences_credit_cards_manage_saved_cards">Gestionați cardurile salvate</string>
-    
-    <string name="preferences_addresses_add_address">Adăugați adresa</string>
-    
-    <string name="preferences_addresses_manage_addresses">Gestionați adresele</string>
-    
-    <string name="preferences_addresses_save_and_autofill_addresses">Salvarea și completarea automată a adreselor</string>
-    
-    <string name="preferences_addresses_save_and_autofill_addresses_summary">Includeți informații cum ar fi numere, adrese de e-mail și de expediere</string>
+    <!-- Saved logins sorting strategy menu item -by name- (if selected, it will sort saved logins alphabetically) -->
+    <string name="saved_logins_sort_strategy_alphabetically">Denumire (A-Z)</string>
+    <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
+    <string name="saved_logins_sort_strategy_last_used">Folosite ultima dată</string>
+    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Meniu de sortare a datelor de autentificare</string>
 
-    
-    <string name="credit_cards_add_card">Adăugați cardul</string>
-    
-    <string name="credit_cards_edit_card">Editare card</string>
-    
-    <string name="credit_cards_card_number">Numărul cardului</string>
-    
-    <string name="credit_cards_expiration_date">Data expirării</string>
-    
-    <string name="credit_cards_expiration_date_month">Data expirării Luna</string>
-    
-    <string name="credit_cards_expiration_date_year">Data expirării Anul</string>
-    
-    <string name="credit_cards_name_on_card">Numele de pe card</string>
-    
-    <string name="credit_cards_menu_delete_card">Ștergeți cardul</string>
-    
-    <string name="credit_cards_delete_card_button">Ștergeți cardul</string>
-    
-    <string name="credit_cards_delete_dialog_confirmation">Sunteți sigur că doriți să ștergeți acest card de credit?</string>
-    
-    <string name="credit_cards_delete_dialog_button">Ștergeți</string>
-    
-    <string name="credit_cards_menu_save">Salvați</string>
-    
-    <string name="credit_cards_save_button">Salvați</string>
-    
-    <string name="credit_cards_cancel_button">Anulează</string>
-    
-    <string name="credit_cards_saved_cards">Carduri salvate</string>
-    
-    <string name="credit_cards_number_validation_error_message">Vă rugăm să introduceți un număr valid de card de credit</string>
-    
-    <string name="credit_cards_name_on_card_validation_error_message">Vă rugăm să completați acest câmp</string>
-    
-    <string name="credit_cards_biometric_prompt_message">Deblocare pentru a vedea cărțile salvate</string>
-    
-    <string name="credit_cards_warning_dialog_title">Asigurați-vă cărțile de credit</string>
-    
-    <string name="credit_cards_warning_dialog_message">Configurați un model de blocare a dispozitivului, un cod PIN sau o parolă pentru a vă proteja cardurile de credit salvate de acces în cazul în care altcineva are dispozitivul dvs.</string>
-    
-    <string name="credit_cards_warning_dialog_set_up_now">Configurați acum</string>
-    
-    <string name="credit_cards_warning_dialog_later">Mai târziu</string>
-    
-    <string name="credit_cards_biometric_prompt_message_pin">Deblocați-vă dispozitivul</string>
-    
-    <string name="credit_cards_biometric_prompt_unlock_message">Deblocare pentru a utiliza informațiile stocate ale cardului de credit</string>
-    
-    <string name="addresses_add_address">Adăugați adresa</string>
-    
-    <string name="addresses_edit_address">Editați adresa</string>
-    
-    <string name="addresses_manage_addresses">Gestionați adresele</string>
-    
-    <string name="addresses_first_name">Primul nume</string>
-    
-    <string name="addresses_middle_name">Nume de mijloc</string>
-    
-    <string name="addresses_last_name">Numele de familie</string>
-    
-    <string name="addresses_street_address">Adresa străzii</string>
-    
-    <string name="addresses_city">Orașul</string>
-    
-    <string name="addresses_state">Stat</string>
-    
-    <string name="addresses_province">Provincie</string>
-    
-    <string name="addresses_zip">Zip</string>
-    
-    <string name="addresses_country">Țară sau regiune</string>
-    
-    <string name="addresses_phone">Telefon</string>
-    
-    <string name="addresses_email">Email</string>
-    
-    <string name="addresses_save_button">Salvați</string>
-    
-    <string name="addresses_cancel_button">Anulează</string>
-    
-    <string name="addressess_delete_address_button">Ștergeți adresa</string>
-    
-    <string name="addressess_confirm_dialog_message">Sunteți sigur că doriți să ștergeți această adresă?</string>
-    
-    <string name="addressess_confirm_dialog_ok_button">Ștergeți</string>
-    
-    <string name="addressess_confirm_dialog_cancel_button">Anulează</string>
-    
-    <string name="address_menu_save_address">Salvează adresa</string>
-    
-    <string name="address_menu_delete_address">Ștergeți adresa</string>
+    <!-- Title of the Add search engine screen -->
+    <string name="search_engine_add_custom_search_engine_title">Adaugă un motor de căutare</string>
+    <!-- Title of the Edit search engine screen -->
+    <string name="search_engine_edit_custom_search_engine_title">Editează motorul de căutare</string>
+    <!-- Content description (not visible, for screen readers etc.): Title for the button to add a search engine in the action bar -->
+    <string name="search_engine_add_button_content_description">Adaugă</string>
+    <!-- Content description (not visible, for screen readers etc.): Title for the button to save a search engine in the action bar -->
+    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Salvează</string>
+    <!-- Text for the menu button to edit a search engine -->
+    <string name="search_engine_edit">Editează</string>
+    <!-- Text for the menu button to delete a search engine -->
+    <string name="search_engine_delete">Șterge</string>
 
-    
-    <string name="search_engine_add_custom_search_engine_title">Adăugați un motor de căutare</string>
-    
-    <string name="search_engine_edit_custom_search_engine_title">Editați motorul de căutare</string>
-    
-    <string name="search_engine_add_button_content_description">Adăugați</string>
-    
-    <string name="search_engine_add_custom_search_engine_edit_button_content_description">Salvați</string>
-    
-    <string name="search_engine_edit">Editați</string>
-    
-    <string name="search_engine_delete">Ștergeți</string>
-
-    
+    <!-- Text for the button to create a custom search engine on the Add search engine screen -->
     <string name="search_add_custom_engine_label_other">Altele</string>
-    
-    <string name="search_add_custom_engine_name_hint">Nume</string>
-    
-    <string name="search_add_custom_engine_search_string_hint">Șirul de căutare de utilizat</string>
-    
-    <string name="search_add_custom_engine_search_string_example" formatted="false">Înlocuiți interogarea cu "%s". Exemplu:\nhttps://www.google.com/search?q=%s</string>
-    
+    <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
+    <string name="search_add_custom_engine_name_hint">Denumire</string>
+    <!-- Placeholder text shown in the Search String TextField before a user enters text -->
+    <string name="search_add_custom_engine_search_string_hint">Șir de căutare de utilizat</string>
+    <!-- Description text for the Search String TextField. The %s is part of the string -->
+    <string formatted="false" name="search_add_custom_engine_search_string_example">Înlocuiește interogarea cu „%s”. Exemplu: \nhttps://www.google.com/search?q=%s</string>
+    <!-- Accessibility description for the form in which details about the custom search engine are entered -->
     <string name="search_add_custom_engine_form_description">Detalii despre motorul de căutare personalizat</string>
 
-    
-    <string name="search_add_custom_engine_error_empty_name">Introduceți numele motorului de căutare</string>
-    
-    <string name="search_add_custom_engine_error_empty_search_string">Introduceți un șir de căutare</string>
-    
-    <string name="search_add_custom_engine_error_missing_template">Verificați dacă șirul de căutare se potrivește Formatul de exemplu</string>
-    
-    <string name="search_add_custom_engine_error_cannot_reach">Eroare de conectare la "%s"</string>
-    
-    <string name="search_add_custom_engine_success_message">Creat %s</string>
-    
-    <string name="search_edit_custom_engine_success_message">Salvat %s</string>
-    
-    <string name="search_delete_search_engine_success_message">Șters %s</string>
+    <!-- Text shown when a user leaves the name field empty -->
+    <string name="search_add_custom_engine_error_empty_name">Introdu denumirea motorului de căutare</string>
+    <!-- Text shown when a user leaves the search string field empty -->
+    <string name="search_add_custom_engine_error_empty_search_string">Introdu un șir de căutare</string>
+    <!-- Text shown when a user leaves out the required template string -->
+    <string name="search_add_custom_engine_error_missing_template">Verifică dacă șirul de căutare are formatul ca în exemplu</string>
+    <!-- Text shown when we aren't able to validate the custom search query. The first parameter is the url of the custom search engine -->
+    <string name="search_add_custom_engine_error_cannot_reach">Eroare de conectare la „%s”</string>
 
-    
-    <string name="phone_feature_blocked_intro">Pentru a o permite:</string>
-    
-    <string name="phone_feature_blocked_step_settings">1. Accesați Setări Android</string>
-    
-    <string name="phone_feature_blocked_step_permissions">2. Atingeți ușor &lt;b&gt;Permisii&lt;/b&gt;.</string>
-    
-    <string name="phone_feature_blocked_step_feature">3. Comutați &lt;b&gt;%1$s&lt;/b&gt; la ON</string>
+    <!-- Text shown when a user creates a new search engine -->
+    <string name="search_add_custom_engine_success_message">%s creat</string>
+    <!-- Text shown when a user successfully edits a custom search engine -->
+    <string name="search_edit_custom_engine_success_message">%s salvat</string>
+    <!-- Text shown when a user successfully deletes a custom search engine -->
+    <string name="search_delete_search_engine_success_message">%s șters</string>
 
-    
-    <string name="quick_settings_sheet_secure_connection_2">Conexiunea este sigură</string>
-    
-    <string name="quick_settings_sheet_insecure_connection_2">Conexiunea nu este sigură</string>
-    
-    <string name="clear_site_data">Ștergeți cookie-urile și datele site-ului</string>
-    
-    <string name="confirm_clear_site_data">Sunteți sigur că doriți să ștergeți toate cookie-urile și datele pentru site-ul &lt;b&gt;%s&lt;/b&gt;?</string>
-    
-    <string name="confirm_clear_permissions_on_all_sites">Sunteți sigur că doriți să ștergeți toate permisiunile de pe toate site-urile?</string>
-    
-    <string name="confirm_clear_permissions_site">Sunteți sigur că doriți să ștergeți toate permisiunile pentru acest site?</string>
-    
-    <string name="confirm_clear_permission_site">Sunteți sigur că doriți să ștergeți această permisiune pentru acest site?</string>
-    
-    <string name="no_site_exceptions">Nu există excepții de amplasament</string>
-    
-    <string name="bookmark_deletion_confirmation">Sunteți sigur că doriți să ștergeți acest marcaj?</string>
-    
-    <string name="browser_menu_add_to_shortcuts">Adăugați la comenzi rapide</string>
-    
-    <string name="browser_menu_remove_from_shortcuts">Eliminarea din comenzi rapide</string>
-    
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Pentru a permite:</string>
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Intră în Setările Android</string>
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Atinge <b>Permisiuni</b>]]></string>
+    <!-- Third step for the allowing a permission (Fore example: Camera) -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Comută <b>%1$s</b> pe ON]]></string>
+
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites-->
+    <string name="confirm_clear_permissions_on_all_sites">Sigur vrei să ștergi toate permisiunile pe toate site-urile?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site-->
+    <string name="confirm_clear_permissions_site">Sigur vrei să ștergi toate permisiunile pentru acest site?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to set default value a permission for a site-->
+    <string name="confirm_clear_permission_site">Sigur vrei să ștergi această permisiune pentru acest site?</string>
+    <!-- label shown when there are not site exceptions to show in the site exception settings -->
+    <string name="no_site_exceptions">Fără excepții de site</string>
+    <!-- Bookmark deletion confirmation -->
+    <string name="bookmark_deletion_confirmation">Sigur vrei să ștergi acest marcaj?</string>
+    <!-- Browser menu button that adds a top site to the home fragment -->
+    <string moz:RemovedIn="101" name="browser_menu_add_to_top_sites" tools:ignore="UnusedResources">Adaugă în site-uri principale</string>
+    <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
+     the certificate authority that verified the ticket-->
     <string name="certificate_info_verified_by">Verificat de: %1$s</string>
-    
-    <string name="login_menu_delete_button">Ștergeți</string>
-    
-    <string name="login_menu_edit_button">Editați</string>
-    
-    <string name="login_deletion_confirmation">Sunteți sigur că doriți să ștergeți această autentificare?</string>
-    
-    <string name="dialog_delete_positive">Ștergeți</string>
-    
-    <string name="dialog_delete_negative">Anulează</string>
-    
-    <string name="login_options_menu">Opțiuni de conectare</string>
-    
-    <string name="saved_login_hostname_description">Câmpul de text editabil pentru adresa web de conectare.</string>
-    
-    <string name="saved_login_username_description">Câmpul de text editabil pentru numele de utilizator al persoanei conectate.</string>
-    
-    <string name="saved_login_password_description">Câmpul de text editabil pentru parola de conectare.</string>
-    
-    <string name="save_changes_to_login">Salvați modificările pentru a vă conecta.</string>
-    
-    <string name="edit">Editați</string>
-    
-    <string name="add_login">Adăugați o nouă autentificare</string>
-    
-    <string name="saved_login_password_required">Parolă necesară</string>
-    
-    <string name="saved_login_username_required">Nume de utilizator necesar</string>
-    
-    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Numele de gazdă necesar</string>
-    
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">Șterge</string>
+    <!-- Login overflow menu edit button -->
+    <string name="login_menu_edit_button">Editează</string>
+    <!-- Message in delete confirmation dialog for logins -->
+    <string name="login_deletion_confirmation">Sigur vrei să ștergi aceste date de autentificare?</string>
+    <!-- Positive action of a dialog asking to delete  -->
+    <string name="dialog_delete_positive">Șterge</string>
+
+    <!--  The saved login options menu description. -->
+    <string name="login_options_menu">Opțiuni de autentificare</string>
+    <!--  The editable text field for a login's web address. -->
+    <string name="saved_login_hostname_description">Câmpul de text editabil pentru adresa web a datelor de autentificare.</string>
+    <!--  The editable text field for a login's username. -->
+    <string name="saved_login_username_description">Câmpul de text editabil pentru numele de utilizator al datelor de autentificare.</string>
+    <!--  The editable text field for a login's password. -->
+    <string name="saved_login_password_description">Câmp de text editabil pentru parola datelor de autentificare.</string>
+    <!--  The button description to save changes to an edited login. -->
+    <string name="save_changes_to_login">Salvează modificările datelor de autentificare.</string>
+    <!--  The page title for editing a saved login. -->
+    <string name="edit">Editează</string>
+    <!--  The error message in add/edit login view when password field is blank. -->
+    <string name="saved_login_password_required">Necesită o parolă</string>
+    <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Căutare vocală</string>
-    
+    <!-- Voice search prompt description displayed after the user presses the voice search button -->
     <string name="voice_search_explainer">Vorbește acum</string>
-    
-    <string name="saved_login_duplicate">Există deja o autentificare cu acest nume de utilizator</string>
-    
-    <string name="add_login_hostname_hint_text">https://www.example.com</string>
-    
-    <string name="add_login_hostname_invalid_text_3">Adresa web trebuie să conțină "https://" sau "http://".</string>
-    
-    <string name="add_login_hostname_invalid_text_2">Este necesar un nume de gazdă valid</string>
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">Există un set de date de autentificare cu acest nume de utilizator</string>
 
-    
-    
-    <string name="synced_tabs_connect_another_device">Conectați un alt dispozitiv.</string>
-    
-    <string name="synced_tabs_reauth">Vă rugăm să vă autentificați din nou.</string>
-    
-    <string name="synced_tabs_enable_tab_syncing">Vă rugăm să activați sincronizarea filelor.</string>
-    
-    <string name="synced_tabs_no_tabs">Nu aveți nicio filă deschisă în Waterfox pe celelalte dispozitive.</string>
-    
-    <string name="synced_tabs_sign_in_message">Vizualizați o listă de file de pe alte dispozitive.</string>
-    
-    <string name="synced_tabs_sign_in_button">Autentificați-vă pentru a sincroniza</string>
-    
-    <string name="synced_tabs_no_open_tabs">Nu există file deschise</string>
-    
-    <string name="synced_tabs_expand_group">Extindeți grupul de file sincronizate</string>
-    
-    <string name="synced_tabs_collapse_group">Reducerea grupului de file sincronizate</string>
+    <!-- Synced Tabs -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <string name="synced_tabs_connect_another_device">Conectează alt dispozitiv.</string>
+    <!-- Text displayed asking user to re-authenticate -->
+    <string name="synced_tabs_reauth">Te rugăm să te autentifici din nou.</string>
+    <!-- Text displayed when user has disabled tab syncing in Waterfox Sync Account -->
+    <string name="synced_tabs_enable_tab_syncing">Te rugăm să activezi sincronizarea filelor.</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">Nu ai nicio filă deschisă în Waterfox pe celelalte dispozitive.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Waterfox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">Afișează o listă de file de pe celelalte dispozitive.</string>
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Waterfox Sync -->
+    <string name="synced_tabs_sign_in_button">Intră în contul Sync</string>
 
-    
-    
-    <string name="shortcut_max_limit_title">A fost atinsă limita scurtăturilor</string>
-    
-    <string name="shortcut_max_limit_content">Pentru a adăuga o comandă rapidă nouă, eliminați una. Țineți apăsat site-ul și selectați Remove.</string>
-    
-    <string name="top_sites_max_limit_confirmation_button">OK, am înțeles.</string>
-    
+    <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
+    <string name="synced_tabs_no_open_tabs">Nicio filă deschisă</string>
+
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when top sites limit is reached. -->
+    <string moz:RemovedIn="101" name="top_sites_max_limit_title" tools:ignore="UnusedResources">A fost atinsă limita de site-uri de top</string>
+    <!-- Confirmation dialog button text when top sites limit is reached. -->
+    <string name="top_sites_max_limit_confirmation_button">OK, am înțeles</string>
+
+    <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
     <string name="top_sites_toggle_top_recent_sites_4">Comenzi rapide</string>
-	
+	<!-- Title text displayed in the rename top site dialog. -->
 	<string name="top_sites_rename_dialog_title">Nume</string>
-    
-    <string name="shortcut_name_hint">Numele comenzii rapide</string>
-	
+
+    <!-- Button caption to confirm the renaming of the top site. -->
 	<string name="top_sites_rename_dialog_ok">OK</string>
-	
-	<string name="top_sites_rename_dialog_cancel">Anulează</string>
-    
-    <string name="top_sites_menu_settings">Setări</string>
-    
-    <string name="top_sites_menu_sponsor_privacy">Sponsorii noștri și confidențialitatea dvs.</string>
-    
-    <string name="top_sites_sponsored_label">Sponsorizat</string>
 
-    
-    
+    <!-- Inactive tabs in the tabs tray -->
+    <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">File inactive</string>
-    
-    <string name="inactive_tabs_delete_all">Închideți toate filele inactive</string>
-    
-    <string name="inactive_tabs_expand_content_description">Extindeți filele inactive</string>
-    
-    <string name="inactive_tabs_collapse_content_description">Restrângerea filelor inactive</string>
 
-    
-    
-    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Închidere automată după o lună?</string>
-    
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Waterfox poate închide filele pe care nu le-ați vizualizat în ultima lună.</string>
-    
-    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ACTIVAȚI ÎNCHIDEREA AUTOMATĂ</string>
-    
-    <string name="inactive_tabs_auto_close_message_snackbar">Închidere automată activată</string>
+    <!-- Content description for close button in collection placeholder. -->
+    <string name="remove_home_collection_placeholder_content_description">Elimină</string>
 
-    
-    <string name="default_browser_experiment_card_text">Setați linkurile de pe site-urile web, din e-mailuri și din mesaje să se deschidă automat în Waterfox.</string>
-
-    
-    <string name="remove_home_collection_placeholder_content_description">Eliminați</string>
-
-    
-    <string name="radio_preference_info_content_description">Click pentru mai multe detalii</string>
-
-    
-    <string name="action_bar_up_description">Navigați în sus</string>
-
-    
-    <string name="privacy_content_close_button_content_description">Închideți</string>
-
-    <string name="waterfox_suggest_header">Waterfox Sugerați</string>
-</resources>
+    </resources>

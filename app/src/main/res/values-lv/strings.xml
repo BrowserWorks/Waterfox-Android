@@ -1146,7 +1146,7 @@
     
     <string name="sync_scan_code">Koda skenēšana</string>
     
-    <string name="sign_in_instructions">Waterfox izmanto Mozilla kontu, lai sinhronizētu datus starp mobilo ierīci un datoru.&lt;br&gt; Datorā atveriet Waterfox un dodieties uz &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla nekādā veidā nav saistīta ar Waterfox.&lt;/i&gt;.</string>
+    <string name="sign_in_instructions">Waterfox izmanto Mozilla kontu, lai sinhronizētu datus starp mobilo ierīci un datoru.&lt;br&gt; Datorā atveriet Waterfox un dodieties uz &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;BrowserWorks nekādā veidā nav saistīta ar Waterfox.&lt;/i&gt;.</string>
     
     <string name="sign_in_ready_for_scan">Gatavs skenēšanai</string>
     

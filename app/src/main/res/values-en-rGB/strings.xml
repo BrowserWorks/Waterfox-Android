@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://mozac.org/tools">
-    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Waterfox)-->
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_5">Private %s</string>
-    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Waterfox)-->
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_4">%s (Private)</string>
 
     <!-- Home Fragment -->
@@ -39,19 +39,19 @@
 
     <!-- Home - Recently saved bookmarks -->
     <!-- Title for the home screen section with recently saved bookmarks. -->
-    <string name="recently_saved_title">Recently saved</string>
+    <string name="recent_bookmarks_title">Recent bookmarks</string>
     <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
     <string name="recently_saved_show_all_content_description_2">Show all saved bookmarks</string>
 
     <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
     <string name="recently_saved_menu_item_remove">Remove</string>
 
-    <!-- About content. The first parameter is the name of the application. (For example: Waterfox) -->
-    <string name="about_content">%1$s is developed by BrowserWorks.</string>
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s is produced by BrowserWorks.</string>
 
     <!-- Private Browsing -->
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
-        The first parameter is the name of the app defined in app_name (for example: Waterfox) -->
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="private_browsing_placeholder_description_2">%1$s clears your search and browsing history from private tabs when you close them or quit the app. While this doesn’t make you anonymous to web sites or your internet service provider, it makes it easier to keep what you do online private from anyone else who uses this device.</string>
     <string name="private_browsing_common_myths">
        Common myths about private browsing
@@ -75,12 +75,6 @@
 
     <!-- Content description for close button used in "contextual feature recommendation" (CFR) popups -->
     <string name="cfr_dismiss_button_default_content_description">Dismiss</string>
-
-    <!-- Total cookie protection "contextual feature recommendation" (CFR) -->
-    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
-    <string name="tcp_cfr_message">Our most powerful privacy feature yet isolates cross-site trackers.</string>
-    <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
-    <string name="tcp_cfr_learn_more">Learn about Total Cookie Protection</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Camera access needed. Go to Android settings, tap permissions, and tap allow.</string>
@@ -139,8 +133,6 @@
     <string name="recent_tabs_see_all_synced_tabs_button_text">See all synchronised tabs</string>
     <!-- Accessibility description for device icon used for recent synced tab -->
     <string name="recent_tabs_synced_device_icon_content_description">Synchronised device</string>
-    <!-- Text for the dropdown menu to remove a recent synced tab from the homescreen -->
-    <string name="recent_synced_tab_menu_item_remove">Remove</string>
     <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
          in the Recently visited section -->
     <string name="recent_tab_menu_item_remove">Remove</string>
@@ -171,6 +163,8 @@
     <string name="no_add_ons">No add-ons here</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Help</string>
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">What’s New</string>
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Settings</string>
     <!-- Browser menu button that opens a user's library -->
@@ -189,14 +183,14 @@
     <string name="browser_menu_save_to_collection_2">Save to collection</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">Share</string>
-    <!-- Browser menu button shown in custom tabs that opens the current tab in Waterfox
-        The first parameter is the name of the app defined in app_name (for example: Waterfox) -->
-    <string name="browser_menu_open_in_waterfox">Open in %1$s</string>
-    <!-- Browser menu text shown in custom tabs to indicate this is a Waterfox tab
-        The first parameter is the name of the app defined in app_name (for example: Waterfox) -->
+    <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_open_in_fenix">Open in %1$s</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by">POWERED BY %1$s</string>
-    <!-- Browser menu text shown in custom tabs to indicate this is a Waterfox tab
-        The first parameter is the name of the app defined in app_name (for example: Waterfox) -->
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by2">Powered by %1$s</string>
     <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">Reader view</string>
@@ -241,7 +235,7 @@
     <string name="search_suggestions_onboarding_do_not_allow_button">Don’t allow</string>
     <!-- Search suggestion onboarding hint title text -->
     <string name="search_suggestions_onboarding_title">Allow search suggestions in private sessions?</string>
-    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Waterfox)-->
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="search_suggestions_onboarding_text">%s will share everything you type in the address bar with your default search engine.</string>
 
     <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
@@ -253,8 +247,12 @@
     <string name="search_settings_menu_item">Search settings</string>
 
     <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
+    <string name="onboarding_home_screen_title_3">What’s new in %1$s</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">It’s now easier to pick back up where you left off.</string>
+    <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
+    <string name="onboarding_home_screen_section_home_title_3">Personalised %1$s homepage</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Jump to your open tabs, bookmarks and browsing history.</string>
     <!-- Onboarding home screen dialog description text for the tab tray section. -->
@@ -265,24 +263,9 @@
     <string name="onboarding_home_screen_section_useful_history_title_2">Recent searches</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Revisit your latest searches from your homepage and tabs.</string>
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Meet your personalized homepage. Recent tabs, bookmarks, and search results will appear here.</string>
-    <!-- Home onboarding dialog welcome screen title text. -->
-    <string name="onboarding_home_welcome_title_2">Welcome to a more personal internet</string>
-    <!-- Home onboarding dialog welcome screen description text. -->
-    <string name="onboarding_home_welcome_description">More colors. Better privacy. Same commitment to people over profits.</string>
-    <!-- Home onboarding dialog sign into sync screen title text. -->
-    <string name="onboarding_home_sync_title_3">Hop from phone to laptop and back</string>
-    <!-- Home onboarding dialog sign into sync screen description text. -->
-    <string name="onboarding_home_sync_description">Pick up where you left off with tabs from other devices now on your homepage.</string>
-    <!-- Text for the button to continue the onboarding on the home onboarding dialog. -->
-    <string name="onboarding_home_get_started_button">Get started</string>
-    <!-- Text for the button to navigate to the sync sign in screen on the home onboarding dialog. -->
-    <string name="onboarding_home_sign_in_button">Sign in</string>
-    <!-- Text for the button to skip the onboarding on the home onboarding dialog. -->
-    <string name="onboarding_home_skip_button">Skip</string>
-    <!-- Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog -->
-    <string name="onboarding_home_content_description_close_button">Close</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Waterfox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Your personalised Waterfox homepage now makes it easier to pick up where you left off. Find your recent tabs, bookmarks and search results.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -300,7 +283,7 @@
     <string name="settings">Settings</string>
     <!-- Preference category for general settings -->
     <string name="preferences_category_general">General</string>
-    <!-- Preference category for all links about Waterfox -->
+    <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">About</string>
     <!-- Preference for settings related to changing the default search engine -->
     <string name="preferences_default_search_engine">Default search engine</string>
@@ -308,10 +291,10 @@
     <string name="preferences_search">Search</string>
     <!-- Preference for settings related to Search address bar -->
     <string name="preferences_search_address_bar">Address bar</string>
-    <!-- Preference link to rating Waterfox on the Play Store -->
+    <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">Rate on Google Play</string>
-    <!-- Preference linking to about page for Waterfox
-        The first parameter is the name of the app defined in app_name (for example: Waterfox) -->
+    <!-- Preference linking to about page for Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="preferences_about">About %1$s</string>
     <!-- Preference for settings related to changing the default browser -->
     <string name="preferences_set_as_default_browser">Set as default browser</string>
@@ -382,6 +365,10 @@
     <string name="preferences_account_sync_error">Reconnect to resume synchronising</string>
     <!-- Preference for language -->
     <string name="preferences_language">Language</string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Data choices</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Data collection</string>
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">Remote debugging via USB</string>
     <!-- Preference title for switch preference to show search engines -->
@@ -437,7 +424,11 @@
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Recently visited</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
 
+    <!-- Title for the customize home screen section with sponsored Pocket stories. -->
+    <string name="customize_toggle_pocket_sponsored">Sponsored stories</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">Wallpapers</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -462,16 +453,6 @@
     <string name="addon_not_supported_error">Add-on is not supported</string>
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
     <string name="addon_already_installed">Add-on is already installed</string>
-
-    <!-- Add-on process crash dialog to user -->
-    <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
-    <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">Add-ons are temporarily disabled</string>
-    <!-- The first parameter is the application name. This is a message shown to the user when too many errors have occurred with the addons process and they have been disabled. The user can decide if they would like to continue trying to start add-ons or if they'd rather continue without them. -->
-    <string name="addon_process_crash_dialog_message" tools:ignore="UnusedResources">One or more add-ons stopped working, making your system unstable. %1$s unsuccessfully tried to restart the add-on(s).\n\nAdd-ons won’t be restarted during your current session.\n\nRemoving or disabling add-ons may fix this issue.</string>
-    <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
-    <string name="addon_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Try restarting add-ons</string>
-    <!-- The user will continue with all add-ons disabled -->
-    <string name="addon_process_crash_dialog_disable_addons_button_text" tools:ignore="UnusedResources">Continue with add-ons disabled</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -532,6 +513,19 @@
     <string name="exceptions_empty_message_description">Exceptions let you disable tracking protection for selected sites.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Learn more</string>
+
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">Usage and technical data</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">Shares performance, usage, hardware and customisation data about your browser with Waterfox Projectto help us make %1$s better</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Marketing data</string>
+    <!-- Preference description for marketing data collection -->
+    <string name="preferences_marketing_data_description2">Shares basic usage data with Adjust, our mobile marketing vendor</string>
+    <!-- Title for studies preferences -->
+    <string name="preference_experiments_2">Studies</string>
+    <!-- Summary for studies preferences -->
+    <string name="preference_experiments_summary_2">Allows Waterfox Projectto install and run studies</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
@@ -624,6 +618,10 @@
     <string name="tab_view_list">List</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Grid</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Search groups</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Group related sites together</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Close tabs</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -662,6 +660,26 @@
     <string name="preferences_inactive_tabs">Move old tabs to inactive</string>
     <!-- Title of inactive tabs preference -->
     <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
+
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">Remove</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">Active</string>
+    <!-- Description for studies, it indicates why Waterfox use studies. The first parameter is the name of the application. -->
+    <string name="studies_description_2">%1$s may install and run studies from time to time.</string>
+    <!-- Learn more link for studies, links to an article for more information about studies. -->
+    <string name="studies_learn_more">Learn more</string>
+
+    <!-- Dialog message shown after removing a study -->
+    <string name="studies_restart_app">The application will quit to apply changes</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">OK</string>
+    <!-- Dialog button text for canceling removing a study. -->
+    <string name="studies_restart_dialog_cancel">Cancel</string>
+
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">Quitting the application to apply changes…</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
@@ -710,6 +728,8 @@
     <string name="open_tabs_menu">Open tabs menu</string>
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection1">Save tabs to collection</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string moz:RemovedIn="103" name="tab_menu" tools:ignore="UnusedResources">Tab menu</string>
     <!-- Text for the menu button to delete a collection -->
     <string name="collection_delete">Delete collection</string>
     <!-- Text for the menu button to rename a collection -->
@@ -759,6 +779,18 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">No history here</string>
 
+    <!-- Text for the button inside History screen that opens Synced History screen. History that is coming from other devices -->
+    <string name="history_synced_from_other_devices">Synchronised from other devices</string>
+    <!-- The page title for browsing history coming from other devices. -->
+    <string name="history_from_other_devices">From other devices</string>
+
+    <!-- The synced history sign in dialog message -->
+    <string name="history_sign_in_message">Sign in to see history synchronised from your other devices.</string>
+    <!-- The synced history sign in dialog button text -->
+    <string name="history_sign_in_button">Sign in</string>
+    <!-- The synced history sign in dialog create a new account link -->
+    <string name="history_sign_in_create_account"><![CDATA[<u>Or create a Waterfox account to start synchronising</u>]]></string>
+
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
     <string name="download_delete_multiple_items_snackbar_1">Downloads Removed</string>
@@ -776,7 +808,7 @@
 
 
     <!-- Crashes -->
-    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Waterfox) -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Sorry. %1$s can’t load that page.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
     <string name="tab_crash_send_report">Send crash report to BrowserWorks</string>
@@ -924,10 +956,10 @@
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Off</string>
 
-    <!-- Summary of HTTPS only preference if it is set to on -->
-    <string name="https_only_on">On</string>
-    <!-- Summary of HTTPS only preference if it is set to off -->
-    <string name="https_only_off">Off</string>
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">On</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">Off</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1027,11 +1059,11 @@
     <string name="notification_pbm_delete_text_2">Close private tabs</string>
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
-    <!-- Title shown in the notification that pops up to remind the user to set Waterfox as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Waterfox). -->
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
     <string name="notification_default_browser_title">%1$s is fast and private</string>
-    <!-- Text shown in the notification that pops up to remind the user to set Waterfox as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Waterfox). -->
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
     <string name="notification_default_browser_text">Make %1$s your default browser</string>
 
     <!-- Snackbar -->
@@ -1164,9 +1196,9 @@
     <!-- Text for the button to learn more about signing in to your Waterfox account. The first parameter is the name of the application.-->
     <string name="onboarding_manual_sign_in_description_2">Bring bookmarks, history, and passwords to %1$s on this device.</string>
     <!-- text for the button to manually sign into Waterfox account. -->
-    <string name="onboarding_waterfox_account_sign_in_1">Sign up</string>
+    <string name="onboarding_firefox_account_sign_in_1">Sign up</string>
     <!-- text to display in the snackbar once account is signed-in -->
-    <string name="onboarding_waterfox_account_sync_is_on">Sync is on</string>
+    <string name="onboarding_firefox_account_sync_is_on">Sync is on</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Always-on privacy</string>
     <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
@@ -1219,7 +1251,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Scan the code</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Waterfox relies on a Mozilla account to sync data between mobile and desktop.<br> On your computer open Waterfox and go to <b>https://firefox.com/pair</b><br><i>Mozilla are in no way affiliated with Waterfox.</i>]]></string>
+    <string name="sign_in_instructions"><![CDATA[On your computer open Waterfox and go to <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Ready to scan</string>
     <!-- Text shown for settings option for sign with pairing -->
@@ -1244,7 +1276,7 @@
     <string name="preference_enhanced_tracking_protection">Enhanced Tracking Protection</string>
     <!-- Title for the description of enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_title">Browse without being followed</string>
-    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Waterfox) -->
+    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preference_enhanced_tracking_protection_explanation">Keep your data to yourself. %s protects you from many of the most common trackers that follow what you do online.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Learn more</string>
@@ -1277,8 +1309,6 @@
     <string name="preference_enhanced_tracking_protection_custom_cookies_3">All third-party cookies (may cause web sites to break)</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies_4">All cookies (will cause web sites to break)</string>
-    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
-    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Isolate cross-site cookies</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content">Tracking Content</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
@@ -1301,12 +1331,8 @@
     <string name="etp_social_media_trackers_description">Limits the ability of social networks to track your browsing activity around the web.</string>
     <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cookies_title">Cross-Site Tracking Cookies</string>
-    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_cookies_title_2">Cross-Site Cookies</string>
     <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cookies_description">Blocks cookies that ad networks and analytics companies use to compile your browsing data across many sites.</string>
-    <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_cookies_description_2">Total Cookie Protection isolates cookies to the site you’re on so trackers like ad networks can’t use them to follow you across sites.</string>
     <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cryptominers_title">Cryptominers</string>
     <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
@@ -1328,6 +1354,8 @@
     <!-- Content description (not visible, for screen readers etc.): Navigate
     back from ETP details (Ex: Tracking content) -->
     <string name="etp_back_button_content_description">Navigate back</string>
+    <!-- About page link text to open what's new link -->
+    <string name="about_whats_new">What’s new in %s</string>
     <!-- Open source licenses page title
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | OSS Libraries</string>
@@ -1385,30 +1413,30 @@
     <!-- Describes the add to homescreen functionality -->
     <string name="add_to_homescreen_description_2">You can easily add this web site to your device’s Home screen to have instant access and browse faster with an app-like experience.</string>
 
-    <!-- Preference for managing the settings for logins and passwords in Waterfox -->
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Logins and passwords</string>
-    <!-- Preference for managing the saving of logins and passwords in Waterfox -->
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
     <string name="preferences_passwords_save_logins">Save logins and passwords</string>
-    <!-- Preference option for asking to save passwords in Waterfox -->
+    <!-- Preference option for asking to save passwords in Fenix -->
     <string name="preferences_passwords_save_logins_ask_to_save">Ask to save</string>
 
-    <!-- Preference option for never saving passwords in Waterfox -->
+    <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Never save</string>
     <!-- Preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Autofill in %1$s</string>
     <!-- Description for the preference for autofilling saved logins in Waterfox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill_description">Fill and save usernames and passwords in web sites while using %1$s.</string>
-    <!-- Preference for autofilling logins from Waterfox in other apps (e.g. autofilling the Twitter app) -->
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Autofill in other apps</string>
-    <!-- Description for the preference for autofilling logins from Waterfox in other apps (e.g. autofilling the Twitter app) -->
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">Fill usernames and passwords in other apps on your device.</string>
 
     <!-- Preference option for adding a login -->
     <string name="preferences_logins_add_login">Add login</string>
 
-    <!-- Preference for syncing saved logins in Waterfox -->
+    <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Synchronise logins</string>
-    <!-- Preference for syncing saved logins in Waterfox, when not signed in-->
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
     <string name="preferences_passwords_sync_logins_across_devices">Synchronise logins across devices</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Saved logins</string>
@@ -1807,5 +1835,26 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Close</string>
 
-    <string name="waterfox_suggest_header">Waterfox Suggest</string>
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">Thought-provoking stories</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_categories_header">Stories by topic</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Discover more</string>
+    <!-- Title of an app feature. Smaller than a heading.-->
+    <string name="pocket_stories_feature_title">Powered by Pocket</string>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">Part of the Waterfox family. %s</string>
+    <!-- Clickable text for opening an external link for more information about Pocket. -->
+    <string name="pocket_stories_feature_learn_more">Learn more</string>
+
+    <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
+    <string name="pocket_stories_sponsor_indication">Sponsored</string>
+
+    <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off.-->
+    <string name="experiments_snackbar">Enable telemetry to send data.</string>
+    <!-- Snackbar button text to navigate to telemetry settings.-->
+    <string name="experiments_snackbar_button">Go to settings</string>
+    <string name="firefox_suggest_header">Waterfox Suggest</string>
 </resources>

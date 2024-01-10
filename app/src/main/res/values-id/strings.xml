@@ -1100,7 +1100,7 @@
 
     <string name="sync_scan_code">Memindai kode</string>
 
-    <string name="sign_in_instructions">Waterfox mengandalkan akun Mozilla untuk menyinkronkan data antara ponsel dan desktop.&lt;br&gt; Di komputer Anda, buka Waterfox dan buka &lt;b&gt;https://firefox.com/pair&lt;/b&gt; &lt;b&gt;Mozilla sama sekali tidak berafiliasi dengan Waterfox.&lt;/i&gt;</string>
+    <string name="sign_in_instructions">Waterfox mengandalkan akun Mozilla untuk menyinkronkan data antara ponsel dan desktop.&lt;br&gt; Di komputer Anda, buka Waterfox dan buka &lt;b&gt;https://firefox.com/pair&lt;/b&gt; &lt;b&gt;BrowserWorks sama sekali tidak berafiliasi dengan Waterfox.&lt;/i&gt;</string>
 
     <string name="sign_in_ready_for_scan">Siap untuk memindai</string>
 

@@ -1146,7 +1146,7 @@
     
     <string name="sync_scan_code">扫描代码</string>
     
-    <string name="sign_in_instructions">&lt;br&gt;在电脑上打开 Waterfox，然后访问 &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;Mozilla 与 Waterfox 没有任何关联。</string>
+    <string name="sign_in_instructions">&lt;br&gt;在电脑上打开 Waterfox，然后访问 &lt;b&gt;https://firefox.com/pair&lt;/b&gt;&lt;br&gt;&lt;i&gt;BrowserWorks 与 Waterfox 没有任何关联。</string>
     
     <string name="sign_in_ready_for_scan">准备扫描</string>
     
