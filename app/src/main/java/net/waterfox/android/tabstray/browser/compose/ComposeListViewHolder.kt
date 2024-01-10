@@ -9,18 +9,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.LifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.tabstray.TabsTray
 import mozilla.components.browser.tabstray.TabsTrayStyling
 import mozilla.components.lib.state.ext.observeAsComposableState
+import net.waterfox.android.R
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.tabstray.TabListItem
 import net.waterfox.android.selection.SelectionHolder
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
 import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
+import kotlin.math.max
 
 /**
  * A Compose ViewHolder implementation for "tab" items with list layout.
@@ -86,16 +89,20 @@ class ComposeListViewHolder(
 
     @Composable
     override fun Content(tab: TabSessionState) {
-        val multiSelectionEnabled = tabsTrayStore.observeAsComposableState {
-            state ->
+        val multiSelectionEnabled = tabsTrayStore.observeAsComposableState { state ->
             state.mode is TabsTrayState.Mode.Select
         }.value ?: false
         val isSelectedTabState by isSelectedTab.collectAsState()
         val multiSelectionSelected by isMultiSelectionSelected.collectAsState()
 
+        val tabThumbnailSize = max(
+            LocalContext.current.resources.getDimensionPixelSize(R.dimen.tab_tray_list_item_thumbnail_height),
+            LocalContext.current.resources.getDimensionPixelSize(R.dimen.tab_tray_list_item_thumbnail_width),
+        )
+
         TabListItem(
             tab = tab,
-            thumbnailSize = 108,
+            thumbnailSize = tabThumbnailSize,
             storage = components.core.thumbnailStorage,
             isSelected = isSelectedTabState,
             multiSelectionEnabled = multiSelectionEnabled,
