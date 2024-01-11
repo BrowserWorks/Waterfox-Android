@@ -67,7 +67,6 @@ open class DefaultToolbarMenu(
     private var isCurrentUrlBookmarked = false
     private var isBookmarkedJob: Job? = null
 
-    private val shouldDeleteDataOnQuit = context.settings().shouldDeleteBrowsingDataOnQuit
     private val shouldUseBottomToolbar = context.settings().shouldUseBottomToolbar
     private val accountManager = WaterfoxAccountManager(context)
 
@@ -398,7 +397,7 @@ open class DefaultToolbarMenu(
                 saveToCollectionItem,
                 BrowserMenuDivider(),
                 settingsItem,
-                if (shouldDeleteDataOnQuit) deleteDataOnQuit else null,
+                deleteDataOnQuit,
                 if (shouldUseBottomToolbar) BrowserMenuDivider() else null,
                 if (shouldUseBottomToolbar) menuToolbar else null
             )
