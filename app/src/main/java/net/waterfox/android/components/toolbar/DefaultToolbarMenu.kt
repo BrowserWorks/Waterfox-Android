@@ -340,7 +340,7 @@ open class DefaultToolbarMenu(
         handleBookmarkItemTapped()
     }
 
-    private val deleteDataOnQuit = BrowserMenuImageText(
+    private val quitItem = BrowserMenuImageText(
         label = context.getString(R.string.delete_browsing_data_on_quit_action),
         imageResource = R.drawable.mozac_ic_cross_circle_24,
         iconTintColorResource = primaryTextColor()
@@ -397,7 +397,7 @@ open class DefaultToolbarMenu(
                 saveToCollectionItem,
                 BrowserMenuDivider(),
                 settingsItem,
-                deleteDataOnQuit,
+                quitItem,
                 if (shouldUseBottomToolbar) BrowserMenuDivider() else null,
                 if (shouldUseBottomToolbar) menuToolbar else null
             )
