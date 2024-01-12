@@ -698,7 +698,7 @@ ext.updateExtensionVersion = { task, extDir ->
         rename { 'manifest.json' }
         into extDir
 
-        def values = ['version': AndroidComponents.VERSION + "." + new Date().format('MMddHHmmss')]
+        def values = ['version': Versions.mozilla_android_components + "." + new Date().format('MMddHHmmss')]
         inputs.properties(values)
         expand(values)
     }

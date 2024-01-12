@@ -38,7 +38,7 @@ object Config {
     fun nightlyVersionName(): String {
         // Nightly versions use the Gecko/A-C major version and append "0.a1", e.g. with A-C 90.0.20210426143115
         // the Nightly version will be 90.0a1
-        val majorVersion = AndroidComponents.VERSION.split(".")[0]
+        val majorVersion = Versions.mozilla_android_components.split(".")[0]
         return "$majorVersion.0a1"
     }
 
