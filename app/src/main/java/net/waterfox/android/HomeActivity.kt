@@ -33,6 +33,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import mozilla.appservices.places.BookmarkRoot
 import mozilla.components.browser.state.action.ContentAction
+import mozilla.components.browser.state.action.MediaSessionAction
 import mozilla.components.browser.state.search.SearchEngine
 import mozilla.components.browser.state.selector.getNormalOrPrivateTabs
 import mozilla.components.browser.state.state.SessionState
@@ -67,6 +68,7 @@ import net.waterfox.android.addons.ExtensionsProcessDisabledController
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.browser.browsingmode.DefaultBrowsingModeManager
+import net.waterfox.android.customtabs.ExternalAppBrowserActivity
 import net.waterfox.android.databinding.ActivityHomeBinding
 import net.waterfox.android.exceptions.trackingprotection.TrackingProtectionExceptionsFragmentDirections
 import net.waterfox.android.ext.*
@@ -406,6 +408,10 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         components.core.contileTopSitesUpdater.stopPeriodicWork()
         privateNotificationObserver?.stop()
         components.notificationsDelegate.unBindActivity(this)
+
+        if (this !is ExternalAppBrowserActivity) {
+            stopMediaSession()
+        }
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -664,6 +670,23 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
         themeManager = createThemeManager()
         themeManager.setActivityTheme(this)
         themeManager.applyStatusBarTheme(this)
+    }
+
+    // Stop active media when activity is destroyed.
+    private fun stopMediaSession() {
+        if (isFinishing) {
+            components.core.store.state.tabs.forEach {
+                it.mediaSessionState?.controller?.stop()
+            }
+
+            components.core.store.state.findActiveMediaTab()?.let {
+                components.core.store.dispatch(
+                    MediaSessionAction.DeactivatedMediaSessionAction(
+                        it.id,
+                    ),
+                )
+            }
+        }
     }
 
     /**
