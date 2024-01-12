@@ -72,13 +72,7 @@ class TopSiteItemViewHolder(
         }
 
         binding.topSiteTitle.text = topSite.title
-
-        if (topSite is TopSite.Pinned || topSite is TopSite.Default) {
-            val pinIndicator = getDrawable(itemView.context, R.drawable.ic_new_pin)
-            binding.topSiteTitle.setCompoundDrawablesWithIntrinsicBounds(pinIndicator, null, null, null)
-        } else {
-            binding.topSiteTitle.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
-        }
+        binding.topSitePin.isVisible = (topSite is TopSite.Pinned || topSite is TopSite.Default)
 
         if (topSite is TopSite.Provided) {
             binding.topSiteSubtitle.isVisible = true
