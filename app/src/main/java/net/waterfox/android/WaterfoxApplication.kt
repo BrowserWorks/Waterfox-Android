@@ -244,13 +244,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         }
 
         @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
-        fun queueReviewPrompt() {
-            GlobalScope.launch(Dispatchers.IO) {
-                components.reviewPromptController.trackApplicationLaunch()
-            }
-        }
-
-        @OptIn(DelicateCoroutinesApi::class) // GlobalScope usage
         fun queueRestoreLocale() {
             components.performance.visualCompletenessQueue.queue.runIfReadyOrQueue {
                 GlobalScope.launch(Dispatchers.IO) {
@@ -264,7 +257,6 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         // We init these items in the visual completeness queue to avoid them initing in the critical
         // startup path, before the UI finishes drawing (i.e. visual completeness).
         queueInitStorageAndServices()
-        queueReviewPrompt()
         queueRestoreLocale()
     }
 

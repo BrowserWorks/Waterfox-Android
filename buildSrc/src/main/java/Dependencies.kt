@@ -48,8 +48,6 @@ object Versions {
     const val mockwebserver = "4.10.0"
     const val uiautomator = "2.2.0"
     const val robolectric = "4.11.1"
-
-    const val google_play_review_version = "2.0.0"
 }
 
 @Suppress("unused")
@@ -240,10 +238,6 @@ object Deps {
     const val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Versions.mockwebserver}"
     const val uiautomator = "androidx.test.uiautomator:uiautomator:${Versions.uiautomator}"
     const val robolectric = "org.robolectric:robolectric:${Versions.robolectric}"
-
-    // Required for in-app reviews
-    const val google_play_review = "com.google.android.play:review:${Versions.google_play_review_version}"
-    const val google_play_review_ktx = "com.google.android.play:review-ktx:${Versions.google_play_review_version}"
 
     const val detektApi = "io.gitlab.arturbosch.detekt:detekt-api:${Versions.detekt}"
     const val detektTest = "io.gitlab.arturbosch.detekt:detekt-test:${Versions.detekt}"

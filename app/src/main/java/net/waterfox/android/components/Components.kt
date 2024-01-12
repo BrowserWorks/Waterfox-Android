@@ -11,7 +11,6 @@ import android.os.StrictMode
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.NotificationManagerCompat
-import com.google.android.play.core.review.ReviewManagerFactory
 import mozilla.components.feature.addons.AddonManager
 import mozilla.components.feature.addons.amo.AMOAddonsProvider
 import mozilla.components.feature.addons.migration.DefaultSupportedAddonsChecker
@@ -178,13 +177,6 @@ class Components(private val context: Context) {
     }
 
     val settings by lazyMonitored { Settings(context) }
-
-    val reviewPromptController by lazyMonitored {
-        ReviewPromptController(
-            manager = ReviewManagerFactory.create(context),
-            reviewSettings = WaterfoxReviewSettings(settings)
-        )
-    }
 
     @delegate:SuppressLint("NewApi")
     val autofillConfiguration by lazyMonitored {

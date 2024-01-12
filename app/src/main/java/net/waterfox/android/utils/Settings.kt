@@ -128,11 +128,6 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = 0
     )
 
-    var lastReviewPromptTimeInMillis by longPreference(
-        appContext.getPreferenceKey(R.string.pref_key_last_review_prompt_shown_time),
-        default = 0L
-    )
-
     var lastCfrShownTimeInMillis by longPreference(
         appContext.getPreferenceKey(R.string.pref_key_last_cfr_shown_time),
         default = 0L
