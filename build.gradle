@@ -68,9 +68,6 @@ buildscript {
         classpath Deps.tools_benchmarkgradle
         classpath Deps.androidx_safeargs
         classpath Deps.osslicenses_plugin
-
-        // TODO: [Waterfox] remove Glean
-        classpath "org.mozilla.telemetry:glean-gradle-plugin:${Versions.mozilla_glean}"
     }
 }
 

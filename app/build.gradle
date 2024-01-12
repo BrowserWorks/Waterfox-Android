@@ -289,9 +289,6 @@ android.applicationVariants.all { variant ->
 
 }
 
-// TODO: [Waterfox] remove Glean plugin
-apply plugin: "org.mozilla.telemetry.glean-gradle-plugin"
-
 configurations {
     // There's an interaction between Gradle's resolution of dependencies with different types
     // (@jar, @aar) for `implementation` and `testImplementation` and with Android Studio's built-in
@@ -309,12 +306,12 @@ configurations {
     jnaForTest
 }
 
-// TODO: [Waterfox] try to exclude all telemetry dependencies
-//configurations.all {
-//    // Telemetry is a transitive dependency of several necessary dependencies,
-//    // thus we have to exclude it globally.
-//    exclude group: 'org.mozilla.telemetry'
-//}
+// [Waterfox] try to exclude all telemetry dependencies
+configurations.all {
+    // Telemetry is a transitive dependency of several necessary dependencies,
+    // thus we have to exclude it globally.
+    exclude group: 'org.mozilla.telemetry', module: 'glean-native'
+}
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions {
@@ -323,9 +320,6 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
-    // TODO: [Waterfox] remove Glean dependency
-    implementation Deps.mozilla_service_glean
-
     jnaForTest Deps.jna
     testImplementation files(configurations.jnaForTest.copyRecursive().files)
 
