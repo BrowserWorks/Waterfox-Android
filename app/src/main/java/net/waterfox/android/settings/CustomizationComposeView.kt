@@ -91,6 +91,11 @@ class CustomizationComposeView @JvmOverloads constructor(
 
                 PreferenceCategory(title = stringResource(R.string.preferences_gestures)) {
                     SwitchPreference(
+                        title = stringResource(R.string.preference_gestures_website_pull_to_refresh),
+                        key = stringResource(R.string.pref_key_website_pull_to_refresh),
+                        defaultValue = true,
+                    )
+                    SwitchPreference(
                         title = stringResource(R.string.preference_gestures_dynamic_toolbar),
                         key = stringResource(R.string.pref_key_dynamic_toolbar),
                         defaultValue = true,
