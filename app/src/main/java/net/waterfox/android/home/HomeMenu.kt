@@ -200,7 +200,7 @@ class HomeMenu(
             helpItem,
             customizeHomeItem,
             settingsItem,
-            if (settings.shouldDeleteBrowsingDataOnQuit) quitItem else null
+            quitItem
         ).also { items ->
             items.getHighlight()?.let { onHighlightPresent(it) }
         }

@@ -141,17 +141,21 @@ class HomeMenuBuilder(
                 )
             }
             HomeMenu.Item.Quit -> {
-                // We need to show the snackbar while the browsing data is deleting (if "Delete
-                // browsing data on quit" is activated). After the deletion is over, the snackbar
-                // is dismissed.
-                deleteAndQuit(
-                    activity = homeActivity,
-                    coroutineScope = lifecycleOwner.lifecycleScope,
-                    snackbar = WaterfoxSnackbar.make(
-                        view = view,
-                        isDisplayedWithBrowserToolbar = false
+                if (context.settings().shouldDeleteBrowsingDataOnQuit) {
+                    // We need to show the snackbar while the browsing data is deleting (if "Delete
+                    // browsing data on quit" is activated). After the deletion is over, the snackbar
+                    // is dismissed.
+                    deleteAndQuit(
+                        activity = homeActivity,
+                        coroutineScope = lifecycleOwner.lifecycleScope,
+                        snackbar = WaterfoxSnackbar.make(
+                            view = view,
+                            isDisplayedWithBrowserToolbar = false,
+                        ),
                     )
-                )
+                } else {
+                    homeActivity.finishAndRemoveTask()
+                }
             }
             HomeMenu.Item.ReconnectSync -> {
                 navController.nav(
