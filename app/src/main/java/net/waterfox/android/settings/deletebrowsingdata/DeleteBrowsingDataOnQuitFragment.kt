@@ -48,7 +48,7 @@ class DeleteBrowsingDataOnQuitFragment : Fragment() {
 
         view.checkboxesEnabled = view.context.readBooleanPreference(
             getString(R.string.pref_key_delete_browsing_data_on_quit),
-            true
+            false
         )
     }
 
