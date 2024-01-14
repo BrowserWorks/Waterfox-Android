@@ -773,7 +773,19 @@
     <fragment
         android:id="@+id/customizationFragment"
         android:name="net.waterfox.android.settings.CustomizationFragment"
-        android:label="@string/preferences_customize" />
+        android:label="@string/preferences_customize">
+        <action
+            android:id="@+id/action_customizationFragment_to_themeSelectionFragment"
+            app:destination="@id/themeSelectionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/themeSelectionFragment"
+        android:name="net.waterfox.android.settings.theme.ThemeSelectionFragment"
+        android:label="@string/preferences_select_theme" />
     <fragment
         android:id="@+id/privateBrowsingFragment"
         android:name="net.waterfox.android.settings.PrivateBrowsingFragment"

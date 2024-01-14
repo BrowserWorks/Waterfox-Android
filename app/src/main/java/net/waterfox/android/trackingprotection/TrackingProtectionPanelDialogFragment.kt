@@ -52,7 +52,7 @@ class TrackingProtectionPanelDialogFragment : AppCompatDialogFragment(), UserInt
     private fun inflateRootView(container: ViewGroup? = null): View {
         val contextThemeWrapper = ContextThemeWrapper(
             activity,
-            (activity as HomeActivity).themeManager.currentThemeResource
+            (activity as HomeActivity).themeManager.getCurrentThemeResource(requireActivity())
         )
         return LayoutInflater.from(contextThemeWrapper).inflate(
             R.layout.fragment_tracking_protection,

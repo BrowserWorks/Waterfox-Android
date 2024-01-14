@@ -65,8 +65,18 @@ fun WaterfoxTheme(
     content: @Composable () -> Unit
 ) {
     val colors = when (theme) {
-        Theme.Light -> lightColorPalette
-        Theme.Dark -> darkColorPalette
+        Theme.Light -> if (!inComposePreview) {
+            getWaterfoxColorScheme(LocalContext.current).lightColors
+        } else {
+            lightColorPalette
+        }
+
+        Theme.Dark -> if (!inComposePreview) {
+            getWaterfoxColorScheme(LocalContext.current).darkColors
+        } else {
+            darkColorPalette
+        }
+
         Theme.Private -> privateColorPalette
     }
 
@@ -152,7 +162,7 @@ private val privateColorPalette = WaterfoxColors(
     borderWarning = PhotonColors.Red40
 )
 
-private val darkColorPalette = WaterfoxColors(
+val darkColorPalette = WaterfoxColors(
     layer1 = PhotonColors.DarkGrey60,
     layer2 = PhotonColors.DarkGrey30,
     layer3 = PhotonColors.DarkGrey80,
@@ -218,7 +228,7 @@ private val darkColorPalette = WaterfoxColors(
     borderWarning = PhotonColors.Red40
 )
 
-private val lightColorPalette = WaterfoxColors(
+val lightColorPalette = WaterfoxColors(
     layer1 = PhotonColors.LightGrey10,
     layer2 = PhotonColors.White,
     layer3 = PhotonColors.LightGrey20,
