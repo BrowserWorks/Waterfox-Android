@@ -23,6 +23,10 @@ import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.customtabs.ExternalAppBrowserActivity
+import net.waterfox.android.ext.settings
+
+const val THEME_LIGHT_DEFAULT = "light_default"
+const val THEME_DARK_DEFAULT = "dark_default"
 
 abstract class ThemeManager {
 
@@ -31,11 +35,15 @@ abstract class ThemeManager {
     /**
      * Returns the style resource corresponding to the [currentTheme].
      */
-    @get:StyleRes
-    val currentThemeResource get() = when (currentTheme) {
-        BrowsingMode.Normal -> R.style.NormalTheme
+    @StyleRes
+    fun getCurrentThemeResource(context: Context) = when (currentTheme) {
+        BrowsingMode.Normal -> getWaterfoxTheme(context).resourceId
         BrowsingMode.Private -> R.style.PrivateTheme
     }
+
+    fun getLightThemes() = THEMES.filter { it.isLight }
+
+    fun getDarkThemes() = THEMES.filterNot { it.isLight }
 
     /**
      * Handles status bar theme change since the window does not dynamically recreate
@@ -63,7 +71,7 @@ abstract class ThemeManager {
     }
 
     fun setActivityTheme(activity: Activity) {
-        activity.setTheme(currentThemeResource)
+        activity.setTheme(getCurrentThemeResource(activity))
     }
 
     companion object {
@@ -135,3 +143,51 @@ class DefaultThemeManager(
             }
         }
 }
+
+fun getWaterfoxTheme(context: Context): WaterfoxPredefinedTheme {
+    val themeId = if (isDarkTheme(context)) {
+        context.settings().darkTheme
+    } else {
+        context.settings().lightTheme
+    }
+    return THEMES.find { it.id == themeId }!!
+}
+
+private fun isDarkTheme(context: Context) =
+    (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) ==
+            Configuration.UI_MODE_NIGHT_YES
+
+private val THEMES = listOf(
+    WaterfoxPredefinedTheme(
+        id = THEME_LIGHT_DEFAULT,
+        name = R.string.theme_light_default,
+        colors = lightColorPalette,
+        resourceId = R.style.NormalTheme,
+        isLight = true,
+        thumbnail = R.drawable.onboarding_light_theme,
+    ),
+    WaterfoxPredefinedTheme(
+        id = "light_grey",
+        name = R.string.theme_light_grey,
+        colors = lightGreyColorPalette,
+        resourceId = R.style.WaterFoxLightThemeGrey,
+        isLight = true,
+        thumbnail = R.drawable.onboarding_light_theme,
+    ),
+    WaterfoxPredefinedTheme(
+        id = THEME_DARK_DEFAULT,
+        name = R.string.theme_dark_default,
+        colors = darkColorPalette,
+        resourceId = R.style.NormalTheme,
+        isLight = false,
+        thumbnail = R.drawable.onboarding_dark_theme,
+    ),
+    WaterfoxPredefinedTheme(
+        id = "dark_grey",
+        name = R.string.theme_dark_grey,
+        colors = darkGreyColorPalette,
+        resourceId = R.style.WaterFoxDarkThemeGrey,
+        isLight = false,
+        thumbnail = R.drawable.onboarding_dark_theme,
+    ),
+)

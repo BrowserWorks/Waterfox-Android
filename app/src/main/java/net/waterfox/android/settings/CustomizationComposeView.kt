@@ -19,6 +19,7 @@ import net.waterfox.android.compose.preference.PreferenceCategory
 import net.waterfox.android.compose.preference.RadioGroupItem
 import net.waterfox.android.compose.preference.RadioGroupPreference
 import net.waterfox.android.compose.preference.SwitchPreference
+import net.waterfox.android.compose.preference.TextOnlyPreference
 import net.waterfox.android.theme.WaterfoxTheme
 
 class CustomizationComposeView @JvmOverloads constructor(
@@ -31,6 +32,7 @@ class CustomizationComposeView @JvmOverloads constructor(
     var onDarkThemeClick by mutableStateOf({})
     var onSetByBatterySaverClick by mutableStateOf({})
     var onFollowDeviceThemeClick by mutableStateOf({})
+    var onSelectThemeClick by mutableStateOf({})
 
     @Composable
     override fun Content() {
@@ -69,6 +71,11 @@ class CustomizationComposeView @JvmOverloads constructor(
                                 onClick = onFollowDeviceThemeClick,
                             ),
                         ),
+                    )
+                    TextOnlyPreference(
+                        title = stringResource(id = R.string.preferences_select_theme),
+                        key = stringResource(id = R.string.pref_key_select_theme),
+                        onClick = onSelectThemeClick,
                     )
                 }
 

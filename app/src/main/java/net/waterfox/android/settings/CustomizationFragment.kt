@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import net.waterfox.android.R
 import net.waterfox.android.ext.requireComponents
 import net.waterfox.android.ext.showToolbar
@@ -54,6 +55,11 @@ class CustomizationFragment : Fragment() {
             view.onFollowDeviceThemeClick = {
                 setNewTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
             }
+        }
+        view.onSelectThemeClick = {
+            view.findNavController().navigate(
+                CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
+            )
         }
     }
 

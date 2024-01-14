@@ -62,17 +62,27 @@ enum class Theme {
 @Composable
 fun WaterfoxTheme(
     theme: Theme = Theme.getTheme(),
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     val colors = when (theme) {
-        Theme.Light -> lightColorPalette
-        Theme.Dark -> darkColorPalette
+        Theme.Light -> if (!inComposePreview) {
+            getWaterfoxTheme(LocalContext.current).colors
+        } else {
+            lightColorPalette
+        }
+
+        Theme.Dark -> if (!inComposePreview) {
+            getWaterfoxTheme(LocalContext.current).colors
+        } else {
+            darkColorPalette
+        }
+
         Theme.Private -> privateColorPalette
     }
 
     ProvideWaterfoxColors(colors) {
         MaterialTheme(
-            content = content
+            content = content,
         )
     }
 }
@@ -149,10 +159,10 @@ private val privateColorPalette = WaterfoxColors(
     borderFormDefault = PhotonColors.LightGrey05,
     borderAccent = PhotonColors.Violet40,
     borderDisabled = PhotonColors.LightGrey05A40,
-    borderWarning = PhotonColors.Red40
+    borderWarning = PhotonColors.Red40,
 )
 
-private val darkColorPalette = WaterfoxColors(
+val darkColorPalette = WaterfoxColors(
     layer1 = PhotonColors.DarkGrey60,
     layer2 = PhotonColors.DarkGrey30,
     layer3 = PhotonColors.DarkGrey80,
@@ -215,10 +225,10 @@ private val darkColorPalette = WaterfoxColors(
     borderFormDefault = PhotonColors.LightGrey05,
     borderAccent = PhotonColors.Violet40,
     borderDisabled = PhotonColors.LightGrey05A40,
-    borderWarning = PhotonColors.Red40
+    borderWarning = PhotonColors.Red40,
 )
 
-private val lightColorPalette = WaterfoxColors(
+val lightColorPalette = WaterfoxColors(
     layer1 = PhotonColors.LightGrey10,
     layer2 = PhotonColors.White,
     layer3 = PhotonColors.LightGrey20,
@@ -281,7 +291,7 @@ private val lightColorPalette = WaterfoxColors(
     borderFormDefault = PhotonColors.DarkGrey90,
     borderAccent = PhotonColors.Ink20,
     borderDisabled = PhotonColors.DarkGrey90A40,
-    borderWarning = PhotonColors.Red70
+    borderWarning = PhotonColors.Red70,
 )
 
 /**
@@ -352,7 +362,7 @@ class WaterfoxColors(
     borderFormDefault: Color,
     borderAccent: Color,
     borderDisabled: Color,
-    borderWarning: Color
+    borderWarning: Color,
 ) {
     // Layers
 
@@ -680,14 +690,14 @@ class WaterfoxColors(
         borderFormDefault = borderFormDefault,
         borderAccent = borderAccent,
         borderDisabled = borderDisabled,
-        borderWarning = borderWarning
+        borderWarning = borderWarning,
     )
 }
 
 @Composable
 fun ProvideWaterfoxColors(
     colors: WaterfoxColors,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     val colorPalette = remember {
         // Explicitly creating a new object here so we don't mutate the initial [colors]

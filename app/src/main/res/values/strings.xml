@@ -361,6 +361,8 @@
     <string name="preferences_gestures">Gestures</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Customize</string>
+    <!-- Preference for settings related to theme selection -->
+    <string name="preferences_select_theme">Select Theme</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sync bookmarks, history, and more with your Waterfox Account</string>
     <!-- Preference description for banner about signing in -->
@@ -1758,4 +1760,11 @@
     <string name="privacy_content_close_button_content_description">Close</string>
 
     <string name="waterfox_suggest_header">Waterfox Suggest</string>
+
+    <!-- Waterfox themes -->
+    <string name="theme_light_default">Light</string>
+    <string name="theme_light_grey">Light Grey</string>
+    <string name="theme_dark_default">Dark</string>
+    <string name="theme_dark_grey">Dark Grey</string>
+
 </resources>
