@@ -48,6 +48,11 @@ class CustomizationFragment : Fragment() {
                 CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
             )
         }
+        view.onSelectThemeClick = {
+            view.findNavController().navigate(
+                CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
+            )
+        }
     }
 
     private fun setNewTheme(mode: Int) {
