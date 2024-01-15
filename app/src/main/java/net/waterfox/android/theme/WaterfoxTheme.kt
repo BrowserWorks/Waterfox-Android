@@ -62,7 +62,7 @@ enum class Theme {
 @Composable
 fun WaterfoxTheme(
     theme: Theme = Theme.getTheme(),
-    content: @Composable () -> Unit,
+    content: @Composable () -> Unit
 ) {
     val colors = when (theme) {
         Theme.Light -> if (!inComposePreview) {
@@ -362,7 +362,7 @@ class WaterfoxColors(
     borderFormDefault: Color,
     borderAccent: Color,
     borderDisabled: Color,
-    borderWarning: Color,
+    borderWarning: Color
 ) {
     // Layers
 
