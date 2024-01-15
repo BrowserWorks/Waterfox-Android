@@ -40,7 +40,7 @@ object Versions {
     const val google_material = "1.2.1"
     const val accompanist_drawablepainter = "0.23.1"
 
-    const val mozilla_android_components = "122.0b8"
+    const val mozilla_android_components = "122.0b9"
 
     const val junit = "5.5.2"
     const val mockk = "1.13.8"
