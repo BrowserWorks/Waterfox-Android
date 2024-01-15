@@ -172,7 +172,7 @@ private val THEMES = listOf(
         colors = lightGreyColorPalette,
         resourceId = R.style.WaterFoxLightThemeGrey,
         isLight = true,
-        thumbnail = R.drawable.onboarding_light_theme,
+        thumbnail = R.drawable.theme_thumbnail_light_grey,
     ),
     WaterfoxPredefinedTheme(
         id = THEME_DARK_DEFAULT,
@@ -188,6 +188,6 @@ private val THEMES = listOf(
         colors = darkGreyColorPalette,
         resourceId = R.style.WaterFoxDarkThemeGrey,
         isLight = false,
-        thumbnail = R.drawable.onboarding_dark_theme,
+        thumbnail = R.drawable.theme_thumbnail_dark_grey,
     ),
 )
