@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -85,12 +86,13 @@ private fun ThemeSelection(
     }
     Row(
         modifier = Modifier
+            .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .padding(top = 16.dp),
     ) {
         ThemesColumn(
             modifier = Modifier.weight(1f),
-            title = "Light Themes",
+            title = stringResource(id = R.string.preferences_light_themes),
             themes = lightThemes,
             selectedThemeId = lightTheme,
             onThemeSelectedClick = {
@@ -100,7 +102,7 @@ private fun ThemeSelection(
         )
         ThemesColumn(
             modifier = Modifier.weight(1f),
-            title = "Dark Themes",
+            title = stringResource(id = R.string.preferences_dark_themes),
             themes = darkThemes,
             selectedThemeId = darkTheme,
             onThemeSelectedClick = {

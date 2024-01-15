@@ -363,6 +363,8 @@
     <string name="preferences_customize">Customize</string>
     <!-- Preference for settings related to theme selection -->
     <string name="preferences_select_theme">Select Theme</string>
+    <string name="preferences_light_themes">Light Themes</string>
+    <string name="preferences_dark_themes">Dark Themes</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description" moz:RemovedIn="104" tools:ignore="UnusedResources">Sync bookmarks, history, and more with your Waterfox Account</string>
     <!-- Preference description for banner about signing in -->
@@ -1763,8 +1765,8 @@
 
     <!-- Waterfox themes -->
     <string name="theme_light_default">Light</string>
-    <string name="theme_light_grey">Light Grey</string>
     <string name="theme_dark_default">Dark</string>
+    <string name="theme_light_grey">Light Grey</string>
     <string name="theme_dark_grey">Dark Grey</string>
 
 </resources>

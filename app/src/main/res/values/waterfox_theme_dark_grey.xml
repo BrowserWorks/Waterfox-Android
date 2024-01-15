@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="WaterFoxDarkThemeGrey" parent="NormalThemeBase">
+        <!-- Design system color attributes -->
+
+        <!-- Layers -->
+        <!-- Default Screen background, Frontlayer background, App Bar Top, App Bar Bottom, Frontlayer header -->
+        <item name="layer1">@color/wx_dark_grey_layer_color_1</item>
+        <!-- Card background, Menu background, Dialog, Banner -->
+        <item name="layer2">@color/wx_dark_grey_layer_color_2</item>
+        <!-- Search -->
+        <item name="layer3">@color/wx_dark_grey_layer_color_3</item>
+        <!-- Selected tab -->
+        <item name="layerNonOpaque">@color/wx_dark_grey_layer_color_accent_nonopaque</item>
+        <item name="scrim">@color/wx_dark_grey_layer_color_scrim</item>
+
+        <!-- Action -->
+        <!-- Primary button, Snackbar, Floating action button, Chip selected -->
+        <item name="actionPrimary">@color/wx_dark_grey_action_color_primary</item>
+
+        <!-- Text -->
+        <!-- Primary text -->
+        <item name="textPrimary">@color/wx_dark_grey_text_color_primary</item>
+        <!-- Secondary text -->
+        <item name="textSecondary">@color/wx_dark_grey_text_color_secondary</item>
+        <!-- Disabled text -->
+        <item name="textDisabled">@color/wx_dark_grey_text_color_disabled</item>
+        <!-- Warning text -->
+        <item name="textWarning">@color/wx_dark_grey_text_color_warning</item>
+        <!-- Small heading, Text link -->
+        <item name="textAccent">@color/wx_dark_grey_text_color_accent</item>
+        <!-- Text Inverted/On Color -->
+        <item name="textOnColorPrimary">@color/wx_dark_grey_text_color_oncolor_primary</item>
+        <!-- Action Primary text -->
+        <item name="textActionPrimary">@color/wx_dark_grey_text_color_action_primary</item>
+
+        <!-- Icon -->
+        <!-- Secondary icon -->
+        <item name="iconSecondary">@color/wx_dark_grey_icon_color_secondary</item>
+        <!-- Active tab -->
+        <item name="iconActive">@color/wx_dark_grey_icon_color_active</item>
+        <!-- Icon inverted (on color) -->
+        <item name="iconOnColor">@color/wx_dark_grey_icon_color_oncolor</item>
+
+        <!-- Border -->
+        <!-- Default, Divider, Dotted -->
+        <item name="borderPrimary">@color/wx_dark_grey_border_color_primary</item>
+
+        <!-- Active thumb color & Active track color (30% transparency) -->
+        <item name="colorControlActivated">@color/accent_high_contrast_normal_theme</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/toggle_off_knob_normal_theme</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">@color/toggle_off_track_normal_theme</item>
+        <!-- sets the toolbar back button color, radio buttons / unselected checkboxes -->
+        <item name="colorControlNormal">@color/wx_dark_grey_text_color_primary</item>
+
+        <!-- Updated color attributes -->
+        <item name="accent">@color/accent_normal_theme</item>
+        <item name="accentBright">@color/photonTeal70</item>
+        <item name="accentHighContrast">@color/accent_high_contrast_normal_theme</item>
+        <item name="neutral">@color/neutral_normal_theme</item>
+        <item name="neutralFaded">@color/neutral_faded_normal_theme</item>
+        <item name="accentUsedOnDarkBackground">@color/wx_dark_grey_text_color_accent</item>
+        <item name="toolbarStartGradient">@color/wx_dark_grey_layer_color_1</item>
+        <item name="toolbarCenterGradient">@color/wx_dark_grey_layer_color_1</item>
+        <item name="toolbarEndGradient">@color/wx_dark_grey_layer_color_1</item>
+        <item name="fillLinkFromClipboard">@color/fill_link_from_clipboard_normal_theme</item>
+        <item name="syncDisconnected">@color/sync_disconnected_icon_fill_normal_theme</item>
+        <item name="syncDisconnectedBackground">@color/sync_disconnected_background_normal_theme</item>
+        <item name="onboardingDarkGradientStartBackground">@color/photonTeal70</item>
+        <item name="onboardingDarkGradientEndBackground">@color/photonViolet40</item>
+        <item name="onboardingSelected">@color/onboarding_illustration_selected_normal_theme</item>
+        <item name="onboardingDeselected">@color/onboarding_illustration_deselected_normal_theme</item>
+        <item name="addOnPrivateBrowsingExteriorCircleBackground">@color/add_on_private_browsing_exterior_circle_background_normal_theme</item>
+        <item name="mozacPromptLoginEditTextCursorColor">@color/prompt_login_edit_text_cursor_color_normal_theme</item>
+        <item name="awesomeBarIndicatorColor">@color/search_suggestion_indicator_icon_color_normal_theme</item>
+        <item name="awesomeBarIndicatorBookmarkColor">@color/search_suggestion_indicator_icon_bookmark_color_normal_theme</item>
+        <item name="preferenceSectionHeader">@color/wx_dark_grey_text_color_accent</item>
+        <item name="selectPromptHeaderTextColor">@color/wx_dark_grey_text_color_accent</item>
+        <item name="menuItemButtonTintColor">@color/wx_dark_grey_text_color_accent</item>
+
+        <!-- Shared widget colors -->
+        <item name="mozac_primary_text_color">@color/wx_dark_grey_text_color_primary</item>
+        <item name="mozac_caption_text_color">@color/wx_dark_grey_text_color_secondary</item>
+        <item name="mozac_widget_favicon_background_color">@color/wx_dark_grey_layer_color_2</item>
+        <item name="mozac_widget_favicon_border_color">@color/wx_dark_grey_border_color_primary</item>
+
+        <!-- Drawables -->
+        <item name="waterfoxLogo">@drawable/ic_logo_wordmark_normal</item>
+        <item name="homeBackground">@color/wx_dark_grey_layer_color_1</item>
+        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
+        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
+        <item name="privateBrowsingButtonBackground">@android:color/transparent</item>
+        <item name="privateBrowsingButtonAccent">@color/wx_dark_grey_text_color_primary</item>
+    </style>
+
+    <!-- Design system color variables -->
+
+    <!-- Layers -->
+    <!-- Default Screen background, Frontlayer background, App Bar Top, App Bar Bottom, Frontlayer header -->
+    <color name="wx_dark_grey_layer_color_1">@color/photonDarkGrey90</color>
+    <!-- Card background, Menu background, Dialog, Banner -->
+    <color name="wx_dark_grey_layer_color_2">@color/photonDarkGrey70</color>
+    <!-- Search -->
+    <color name="wx_dark_grey_layer_color_3">@color/photonDarkGrey30</color>
+    <!-- App Bar Top (edit), Text Cursor, Selected Tab Check -->
+    <color name="wx_dark_grey_layer_color_accent">@color/photonGreen90</color>
+    <!-- Selected tab -->
+    <color name="wx_dark_grey_layer_color_accent_nonopaque">@color/photonGreen90</color>
+    <!-- Selected tab -->
+    <color name="wx_dark_grey_layer_color_accent_opaque">#EAE4F9</color>
+    <color name="wx_dark_grey_layer_color_scrim">@color/photonGreen90</color>
+    <!-- Tooltip -->
+    <color name="wx_dark_grey_layer_color_gradient_start">@color/photonTeal70</color>
+    <!-- Tooltip -->
+    <color name="wx_dark_grey_layer_color_gradient_end">@color/photonGreen90</color>
+
+    <!-- Action -->
+    <!-- Primary button, Snackbar, Floating action button, Chip selected -->
+    <color name="wx_dark_grey_action_color_primary">@color/photonInk20</color>
+    <!-- Secondary button -->
+    <color name="wx_dark_grey_action_color_secondary">@color/photonLightGrey30</color>
+    <!-- Filter -->
+    <color name="wx_dark_grey_action_color_tertiary" tools:ignore="UnusedResources">@color/photonLightGrey40</color>
+    <!-- Chip -->
+    <color name="wx_dark_grey_action_quarternary" tools:ignore="UnusedResources">@color/photonLightGrey10</color>
+    <!-- Checkbox default, Radio button default -->
+    <color name="wx_dark_grey_action_color_form_default" tools:ignore="UnusedResources">@color/photonDarkGrey90</color>
+    <!-- Checkbox selected, Radio button selected -->
+    <color name="wx_dark_grey_action_color_form_selected" tools:ignore="UnusedResources">@color/photonInk20</color>
+    <!-- Switch background OFF, Switch background ON -->
+    <color name="wx_dark_grey_action_color_form_surface" tools:ignore="UnusedResources">@color/photonLightGrey50</color>
+    <!-- Checkbox disabled, Radio disabled -->
+    <color name="wx_dark_grey_action_color_form_disabled" tools:ignore="UnusedResources">@color/photonLightGrey50</color>
+    <!-- Switch thumb ON -->
+    <color name="wx_dark_grey_action_color_form_on" tools:ignore="UnusedResources">@color/photonInk20</color>
+    <!-- Switch thumb OFF -->
+    <color name="wx_dark_grey_action_color_form_off" tools:ignore="UnusedResources">@color/photonLightGrey05</color>
+    <!-- Scroll indicator active -->
+    <color name="wx_dark_grey_action_color_indicator_active">@color/photonLightGrey50</color>
+    <!-- Scroll indicator inactive -->
+    <color name="wx_dark_grey_action_color_indicator_inactive">@color/photonLightGrey30</color>
+
+    <!-- Text -->
+    <!-- Primary text -->
+    <color name="wx_dark_grey_text_color_primary">@color/photonLightGrey05</color>
+    <!-- Secondary text -->
+    <color name="wx_dark_grey_text_color_secondary">@color/photonLightGrey20</color>
+    <!-- Disabled text -->
+    <color name="wx_dark_grey_text_color_disabled">@color/photonLightGrey50</color>
+    <!-- Warning text -->
+    <color name="wx_dark_grey_text_color_warning">@color/photonRed70</color>
+    <!-- Warning text on Secondary button -->
+    <color name="wx_dark_grey_text_color_warning_button" tools:ignore="UnusedResources">@color/photonRed70</color>
+    <!-- Small heading, Text link -->
+    <color name="wx_dark_grey_text_color_accent">@color/photonTeal70</color>
+    <!-- Small heading, Text link -->
+    <color name="wx_dark_grey_text_color_accent_disabled" tools:ignore="UnusedResources">@color/photonViolet70A80</color>
+    <!-- Text Inverted/On Color -->
+    <color name="wx_dark_grey_text_color_oncolor_primary">@color/photonLightGrey05</color>
+    <!-- Text Inverted/On Color -->
+    <color name="wx_dark_grey_text_color_oncolor_secondary">@color/photonLightGrey40</color>
+    <!-- Action Primary text -->
+    <color name="wx_dark_grey_text_color_action_primary">@color/photonLightGrey05</color>
+    <!-- Action Secondary text -->
+    <color name="wx_dark_grey_text_color_action_secondary">@color/photonDarkGrey90</color>
+    <!-- Action Tertiary text -->
+    <color name="wx_dark_grey_text_color_action_tertiary" tools:ignore="UnusedResources">@color/photonDarkGrey90</color>
+    <!-- Action Tertiary Active text -->
+    <color name="wx_dark_grey_text_color_action_tertiary_active" tools:ignore="UnusedResources">@color/photonLightGrey05</color>
+
+    <!-- Icon -->
+    <!-- Primary icon -->
+    <color name="wx_dark_grey_icon_color_primary">@color/photonDarkGrey90</color>
+    <!-- Inactive tab -->
+    <color name="wx_dark_grey_icon_color_primary_inactive">@color/photonDarkGrey90A60</color>
+    <!-- Secondary icon -->
+    <color name="wx_dark_grey_icon_color_secondary">@color/photonDarkGrey05</color>
+    <!-- Active tab -->
+    <color name="wx_dark_grey_icon_color_active">@color/photonInk20</color>
+    <!-- Disabled icon -->
+    <color name="wx_dark_grey_icon_color_disabled" tools:ignore="UnusedResources">@color/photonDarkGrey90A40</color>
+    <!-- Icon inverted (on color) -->
+    <color name="wx_dark_grey_icon_color_oncolor">@color/photonLightGrey05</color>
+    <!-- Information -->
+    <color name="wx_dark_grey_icon_color_information">@color/photonBlue30</color>
+    <!-- Icon button -->
+    <color name="wx_dark_grey_icon_color_button" tools:ignore="UnusedResources">@color/photonInk20</color>
+    <color name="wx_dark_grey_icon_color_warning" tools:ignore="UnusedResources">@color/photonRed70</color>
+    <!-- Warning icon on Secondary button -->
+    <color name="wx_dark_grey_icon_color_warning_button" tools:ignore="UnusedResources">@color/photonRed70</color>
+    <color name="wx_dark_grey_icon_color_accent_violet">@color/photonTeal60</color>
+    <color name="wx_dark_grey_icon_color_accent_blue">@color/photonBlue60</color>
+    <color name="wx_dark_grey_icon_color_accent_pink">@color/photonPink60</color>
+    <color name="wx_dark_grey_icon_color_accent_green">@color/photonGreen60</color>
+    <color name="wx_dark_grey_icon_color_accent_yellow">@color/photonYellow60</color>
+    <!-- Action Primary Icon -->
+    <color name="wx_dark_grey_icon_color_action_primary" tools:ignore="UnusedResources">@color/photonLightGrey05</color>
+    <!-- Action Secondary Icon -->
+    <color name="wx_dark_grey_icon_color_action_secondary">@color/photonDarkGrey90</color>
+    <!-- Action Tertiary Icon -->
+    <color name="wx_dark_grey_icon_color_action_tertiary" tools:ignore="UnusedResources">@color/photonDarkGrey90</color>
+    <!-- Reader, ETP Shield -->
+    <color name="wx_dark_grey_icon_color_gradient_start">@color/photonTeal50</color>
+    <!-- Reader, ETP Shield -->
+    <color name="wx_dark_grey_icon_color_gradient_end">@color/photonBlue60</color>
+
+    <!-- Border -->
+    <!-- Default, Divider, Dotted -->
+    <color name="wx_dark_grey_border_color_primary">@color/photonLightGrey30</color>
+    <!-- Onboarding -->
+    <color name="wx_dark_grey_border_color_inverted" tools:ignore="UnusedResources">@color/photonDarkGrey05</color>
+    <!-- Form parts -->
+    <color name="wx_dark_grey_border_color_form_default" tools:ignore="UnusedResources">@color/photonDarkGrey90</color>
+    <!-- Active tab (Nav), Selected tab, Active form -->
+    <color name="wx_dark_grey_border_color_accent">@color/photonInk20</color>
+    <!-- Form parts -->
+    <color name="wx_dark_grey_border_color_disabled" tools:ignore="UnusedResources">@color/photonDarkGrey90A40</color>
+    <!-- Form parts -->
+    <color name="wx_dark_grey_border_color_warning" tools:ignore="UnusedResources">@color/photonRed70</color>
+
+
+</resources>
