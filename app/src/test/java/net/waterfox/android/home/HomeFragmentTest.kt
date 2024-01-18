@@ -14,6 +14,7 @@ import mozilla.components.browser.menu.view.MenuButton
 import mozilla.components.browser.state.state.SearchState
 import mozilla.components.browser.state.state.selectedOrDefaultSearchEngine
 import mozilla.components.feature.top.sites.TopSite
+import net.waterfox.android.HomeActivity
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
@@ -102,5 +103,25 @@ class HomeFragmentTest {
         homeFragment.onConfigurationChanged(mockk(relaxed = true))
 
         verify(exactly = 1) { menuButton.dismissMenu() }
+    }
+
+    @Test
+    fun `GIVEN the user is in normal mode WHEN checking if should enable wallpaper THEN return true`() {
+        val activity: HomeActivity = mockk {
+            every { themeManager.currentTheme.isPrivate } returns false
+        }
+        every { homeFragment.activity } returns activity
+
+        assertTrue(homeFragment.shouldEnableWallpaper())
+    }
+
+    @Test
+    fun `GIVEN the user is in private mode WHEN checking if should enable wallpaper THEN return false`() {
+        val activity: HomeActivity = mockk {
+            every { themeManager.currentTheme.isPrivate } returns true
+        }
+        every { homeFragment.activity } returns activity
+
+        assertFalse(homeFragment.shouldEnableWallpaper())
     }
 }
