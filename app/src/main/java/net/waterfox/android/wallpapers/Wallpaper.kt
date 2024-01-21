@@ -24,6 +24,13 @@ sealed class Wallpaper {
     }
 
     /**
+     * The custom wallpaper set by a user.
+     */
+    object Custom : Wallpaper() {
+        override val name: String = "custom"
+    }
+
+    /**
      * If a user had previously selected a wallpaper, they are allowed to retain it even if
      * the wallpaper is otherwise expired. This type exists as a wrapper around that current
      * wallpaper.
@@ -95,5 +102,14 @@ sealed class Wallpaper {
          */
         fun getBaseLocalPath(orientation: String, theme: String, name: String): String =
             "wallpapers/$orientation/$theme/$name.png"
+
+        /**
+         * Defines the standard path at which a wallpaper resource is kept on disk.
+         *
+         * @param orientation One of landscape/portrait.
+         * @param name The name of the wallpaper.
+         */
+        fun getBaseLocalPath(orientation: String, name: String): String =
+            "wallpapers/$orientation/$name.png"
     }
 }

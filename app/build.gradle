@@ -1,3 +1,5 @@
+import com.android.build.OutputFile
+import groovy.json.JsonOutput
 import net.waterfox.android.gradle.tasks.ApkSizeTask
 
 plugins {
@@ -13,8 +15,6 @@ apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 apply plugin: 'androidx.benchmark'
 
 
-import com.android.build.OutputFile
-import groovy.json.JsonOutput
 import org.gradle.internal.logging.text.StyledTextOutput.Style
 import org.gradle.internal.logging.text.StyledTextOutputFactory
 
@@ -330,11 +330,13 @@ dependencies {
     implementation Deps.kotlin_coroutines_android
     testImplementation Deps.kotlin_coroutines_test
     implementation Deps.androidx_appcompat
+    implementation Deps.androidx_activity_compose
     implementation Deps.androidx_constraintlayout
     implementation Deps.androidx_coordinatorlayout
     implementation Deps.google_accompanist_drawablepainter
     implementation Deps.google_accompanist_insets
     implementation Deps.google_accompanist_swiperefresh
+    implementation Deps.coil
 
     implementation Deps.sentry
 

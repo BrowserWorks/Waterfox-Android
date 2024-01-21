@@ -21,6 +21,7 @@ object Versions {
     const val androidx_compose_paging = "1.0.0-alpha20"
     const val androidx_compose_compiler = "1.4.8"
     const val androidx_appcompat = "1.6.1"
+    const val androidx_activity_compose = "1.8.2"
     const val androidx_benchmark = "1.0.0"
     const val androidx_biometric = "1.1.0"
     const val androidx_coordinator_layout = "1.1.0"
@@ -39,6 +40,7 @@ object Versions {
     const val androidx_datastore = "1.0.0"
     const val google_material = "1.2.1"
     const val accompanist_drawablepainter = "0.23.1"
+    const val coil = "2.5.0"
 
     const val mozilla_android_components = "122.0b9"
 
@@ -177,6 +179,7 @@ object Deps {
     const val androidx_biometric = "androidx.biometric:biometric:${Versions.androidx_biometric}"
     const val androidx_fragment = "androidx.fragment:fragment-ktx:${Versions.androidx_fragment}"
     const val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.androidx_appcompat}"
+    const val androidx_activity_compose = "androidx.activity:activity-compose:${Versions.androidx_activity_compose}"
     const val androidx_coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:${Versions.androidx_coordinator_layout}"
     const val androidx_constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.androidx_constraint_layout}"
     const val androidx_legacy = "androidx.legacy:legacy-support-v4:${Versions.androidx_legacy}"
@@ -204,6 +207,7 @@ object Deps {
         "com.google.accompanist:accompanist-insets:${Versions.accompanist_drawablepainter}"
     const val google_accompanist_swiperefresh =
         "com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist_drawablepainter}"
+    const val coil = "io.coil-kt:coil-compose:${Versions.coil}"
 
     const val jna = "net.java.dev.jna:jna:${Versions.jna}@jar"
 
