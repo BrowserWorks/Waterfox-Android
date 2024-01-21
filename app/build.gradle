@@ -1,3 +1,5 @@
+import com.android.build.OutputFile
+import groovy.json.JsonOutput
 import net.waterfox.android.gradle.tasks.ApkSizeTask
 
 plugins {
@@ -13,8 +15,6 @@ apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 apply plugin: 'androidx.benchmark'
 
 
-import com.android.build.OutputFile
-import groovy.json.JsonOutput
 import org.gradle.internal.logging.text.StyledTextOutput.Style
 import org.gradle.internal.logging.text.StyledTextOutputFactory
 
