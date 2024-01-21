@@ -127,7 +127,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             val megazordSetup = finishSetupMegazord()
 
             setDayNightTheme()
-            components.strictMode.enableStrictMode(false)
+            components.strictMode.enableStrictMode(true)
             warmBrowsersCache()
 
             initializeWebExtensionSupport()
