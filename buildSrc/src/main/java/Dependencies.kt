@@ -40,7 +40,7 @@ object Versions {
     const val androidx_datastore = "1.0.0"
     const val google_material = "1.2.1"
     const val accompanist_drawablepainter = "0.23.1"
-    const val coil = "2.5.0"
+    const val coil = "2.4.0"
 
     const val mozilla_android_components = "122.0b9"
 
