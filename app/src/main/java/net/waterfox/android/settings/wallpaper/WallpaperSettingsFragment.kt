@@ -24,13 +24,9 @@ import net.waterfox.android.wallpapers.Wallpaper
 import net.waterfox.android.wallpapers.WallpaperManager
 
 class WallpaperSettingsFragment : Fragment() {
-    private val wallpaperManager by lazy {
-        requireComponents.wallpaperManager
-    }
 
-    private val settings by lazy {
-        requireComponents.settings
-    }
+    private val wallpaperManager by lazy { requireComponents.wallpaperManager }
+    private val settings by lazy { requireComponents.settings }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,6 +49,11 @@ class WallpaperSettingsFragment : Fragment() {
                         onSelectWallpaper = { selectedWallpaper: Wallpaper ->
                             currentWallpaper = selectedWallpaper
                             wallpaperManager.currentWallpaper = selectedWallpaper
+                        },
+                        onSetCustomWallpaper = {
+                            findNavController().navigate(
+                                WallpaperSettingsFragmentDirections.actionWallpaperSettingsFragmentToCustomWallpaperFragment(),
+                            )
                         },
                         onViewWallpaper = { findNavController().navigate(R.id.homeFragment) },
                         tapLogoSwitchChecked = wallpapersSwitchedByLogo,

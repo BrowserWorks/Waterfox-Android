@@ -40,9 +40,8 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import mozilla.components.browser.menu.view.MenuButton
 import mozilla.components.browser.state.selector.findTab
@@ -62,11 +61,8 @@ import mozilla.components.feature.top.sites.TopSitesFrecencyConfig
 import mozilla.components.feature.top.sites.TopSitesProviderConfig
 import mozilla.components.lib.state.ext.consumeFlow
 import mozilla.components.lib.state.ext.consumeFrom
-import mozilla.components.lib.state.ext.flow
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
 import mozilla.components.support.ktx.android.content.res.resolveAttribute
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.distinctUntilChangedBy
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.BrowserAnimator.Companion.getToolbarNavOptions
@@ -899,7 +895,8 @@ class HomeFragment : Fragment() {
     private fun applyWallpaper(wallpaperName: String, orientationChange: Boolean) {
         when {
             !shouldEnableWallpaper() ||
-                    (wallpaperName == lastAppliedWallpaperName && !orientationChange) -> return
+                    (wallpaperName == lastAppliedWallpaperName && !orientationChange
+                            && wallpaperName != Wallpaper.Custom.name) -> return
 
             wallpaperName == Wallpaper.Default.name -> {
                 binding.wallpaperImageView.isVisible = false
@@ -909,9 +906,7 @@ class HomeFragment : Fragment() {
             else -> {
                 runBlockingIncrement {
                     with(requireComponents.wallpaperManager) {
-                        val bitmap = currentWallpaper.load(requireContext())
-                            ?: return@runBlockingIncrement
-                        bitmap.scaleBitmapToBottomOfView(binding.wallpaperImageView)
+                        currentWallpaper.set(binding.wallpaperImageView)
                     }
                     binding.wallpaperImageView.isVisible = true
                     lastAppliedWallpaperName = wallpaperName

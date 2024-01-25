@@ -4,6 +4,8 @@
 
 package net.waterfox.android.wallpapers
 
+import android.content.Context
+import android.net.Uri
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -51,6 +53,25 @@ class WallpaperFileManager(
         for (file in dir.walkTopDown()) {
             if (file.isDirectory || file.nameWithoutExtension in wallpapersToKeep) continue
             file.delete()
+        }
+    }
+
+    fun copyWallpaperImage(
+        context: Context,
+        orientation: String,
+        uri: Uri,
+    ) {
+        scope.launch {
+            val localFile = File(
+                context.filesDir,
+                Wallpaper.getBaseLocalPath(orientation, Wallpaper.Custom.name),
+            )
+            File(localFile.absolutePath.substringBeforeLast("/")).mkdirs()
+            context.contentResolver.openInputStream(uri).use { input ->
+                localFile.outputStream().use { output ->
+                    input?.copyTo(output)
+                }
+            }
         }
     }
 }
