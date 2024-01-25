@@ -45,20 +45,23 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import kotlinx.coroutines.launch
 import net.waterfox.android.R
 import net.waterfox.android.compose.button.TextButton
 import net.waterfox.android.ext.components
-import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
+import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.wallpapers.Wallpaper
 import net.waterfox.android.wallpapers.WallpaperManager
+import net.waterfox.android.wallpapers.WallpaperManager.Companion.getCustomWallpaperFile
 
 /**
  * The screen for controlling settings around Wallpapers. When a new wallpaper is selected,
@@ -82,6 +85,7 @@ fun WallpaperSettings(
     loadWallpaperResource: (Wallpaper) -> Bitmap?,
     selectedWallpaper: Wallpaper,
     onSelectWallpaper: (Wallpaper) -> Unit,
+    onSetCustomWallpaper: () -> Unit,
     onViewWallpaper: () -> Unit,
     tapLogoSwitchChecked: Boolean,
     onTapLogoSwitchCheckedChange: (Boolean) -> Unit
@@ -113,6 +117,7 @@ fun WallpaperSettings(
                     }
                     onSelectWallpaper(updatedWallpaper)
                 },
+                onSetCustomWallpaper = onSetCustomWallpaper,
             )
             WallpaperLogoSwitch(tapLogoSwitchChecked, onCheckedChange = onTapLogoSwitchCheckedChange)
         }
@@ -170,6 +175,7 @@ private fun WallpaperThumbnails(
     selectedWallpaper: Wallpaper,
     numColumns: Int = 3,
     onSelectWallpaper: (Wallpaper) -> Unit,
+    onSetCustomWallpaper: () -> Unit,
 ) {
     Column(modifier = Modifier.padding(vertical = 30.dp, horizontal = 20.dp)) {
         val numRows = (wallpapers.size + numColumns - 1) / numColumns
@@ -179,15 +185,25 @@ private fun WallpaperThumbnails(
                     val itemIndex = rowIndex * numColumns + columnIndex
                     if (itemIndex < wallpapers.size) {
                         Box(
-                            modifier = Modifier.weight(1f, fill = true).padding(4.dp),
+                            modifier = Modifier
+                                .weight(1f, fill = true)
+                                .padding(4.dp),
                         ) {
-                            WallpaperThumbnailItem(
-                                wallpaper = wallpapers[itemIndex],
-                                defaultWallpaper = defaultWallpaper,
-                                loadWallpaperResource = loadWallpaperResource,
-                                isSelected = selectedWallpaper == wallpapers[itemIndex],
-                                onSelect = onSelectWallpaper
-                            )
+                            if (itemIndex == wallpapers.size - 1) {
+                                CustomWallpaperThumbnailItem(
+                                    wallpaper = Wallpaper.Custom,
+                                    isSelected = selectedWallpaper == Wallpaper.Custom,
+                                    onSelect = { onSetCustomWallpaper() },
+                                )
+                            } else {
+                                WallpaperThumbnailItem(
+                                    wallpaper = wallpapers[itemIndex],
+                                    defaultWallpaper = defaultWallpaper,
+                                    loadWallpaperResource = loadWallpaperResource,
+                                    isSelected = selectedWallpaper == wallpapers[itemIndex],
+                                    onSelect = onSelectWallpaper,
+                                )
+                            }
                         }
                     } else {
                         Spacer(Modifier.weight(1f))
@@ -256,6 +272,58 @@ private fun WallpaperThumbnailItem(
     }
 }
 
+/**
+ * A custom wallpaper thumbnail.
+ *
+ * @param wallpaper The wallpaper to display.
+ * @param isSelected Whether the wallpaper is currently selected.
+ * @param aspectRatio The ratio of height to width of the thumbnail.
+ * @param onSelect Action to take when this wallpaper is selected.
+ */
+@Composable
+@Suppress("LongParameterList")
+private fun CustomWallpaperThumbnailItem(
+    wallpaper: Wallpaper,
+    isSelected: Boolean,
+    aspectRatio: Float = 1.1f,
+    onSelect: (Wallpaper) -> Unit
+) {
+    val thumbnailShape = RoundedCornerShape(8.dp)
+    val border = if (isSelected) {
+        Modifier.border(
+            BorderStroke(width = 2.dp, color = WaterfoxTheme.colors.borderAccent),
+            thumbnailShape
+        )
+    } else {
+        Modifier
+    }
+
+    Surface(
+        elevation = 4.dp,
+        shape = thumbnailShape,
+        color = WaterfoxTheme.colors.layer1,
+        modifier = Modifier
+            .fillMaxWidth()
+            .aspectRatio(aspectRatio)
+            .then(border)
+            .clickable { onSelect(wallpaper) }
+    ) {
+        AsyncImage(
+            model = getCustomWallpaperFile(LocalContext.current),
+            contentDescription = stringResource(
+                R.string.wallpapers_item_name_content_description, wallpaper.name
+            ),
+            contentScale = ContentScale.Crop,
+        )
+        Image(
+            painter = painterResource(R.drawable.ic_edit),
+            contentDescription = null,
+            contentScale = ContentScale.None,
+            modifier = Modifier.fillMaxSize(),
+        )
+    }
+}
+
 @Composable
 @Suppress("MagicNumber")
 private fun WallpaperLogoSwitch(
@@ -303,6 +371,7 @@ private fun WallpaperThumbnailsPreview() {
             wallpapers = wallpaperManager.wallpapers,
             selectedWallpaper = wallpaperManager.currentWallpaper,
             onSelectWallpaper = {},
+            onSetCustomWallpaper = {},
             onViewWallpaper = {},
             tapLogoSwitchChecked = false,
             onTapLogoSwitchCheckedChange = {}

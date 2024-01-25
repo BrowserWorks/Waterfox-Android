@@ -11,10 +11,12 @@ import android.content.res.Configuration
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
+import android.net.Uri
 import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.ImageView
+import coil.load
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import mozilla.components.support.base.log.logger.Logger
@@ -25,6 +27,10 @@ import net.waterfox.android.perf.runBlockingIncrement
 import net.waterfox.android.utils.Settings
 import java.io.File
 import java.util.Date
+
+
+const val LANDSCAPE = "landscape"
+const val PORTRAIT = "portrait"
 
 /**
  * Provides access to available wallpapers and manages their states.
@@ -102,6 +108,8 @@ class WallpaperManager(
     private fun getCurrentWallpaperFromSettings(): Wallpaper {
         return if (isDefaultTheCurrentWallpaper(settings)) {
             defaultWallpaper
+        } else if (isCustomTheCurrentWallpaper(settings)) {
+            customWallpaper
         } else {
             val currentWallpaper = settings.currentWallpaper
             wallpapers.find { it.name == currentWallpaper }
@@ -121,6 +129,15 @@ class WallpaperManager(
             is Wallpaper.Remote -> loadWallpaperFromDisk(context, this)
             else -> null
         }
+
+    fun Wallpaper.set(view: ImageView) {
+        if (this is Wallpaper.Custom) {
+            view.scaleType = ImageView.ScaleType.CENTER_CROP
+            view.load(getCustomWallpaperFile(view.context))
+        } else {
+            load(view.context)?.scaleBitmapToBottomOfView(view)
+        }
+    }
 
     private fun loadWallpaperFromDrawables(context: Context, wallpaper: Wallpaper.Local): Bitmap? = Result.runCatching {
         BitmapFactory.decodeResource(context.resources, wallpaper.drawableId)
@@ -186,13 +203,9 @@ class WallpaperManager(
      * on orientation and app theme.
      */
     private fun Wallpaper.Remote.getLocalPathFromContext(context: Context): String {
-        val orientation = if (context.isLandscape()) "landscape" else "portrait"
+        val orientation = if (context.isLandscape()) LANDSCAPE else PORTRAIT
         val theme = if (context.isDark()) "dark" else "light"
         return Wallpaper.getBaseLocalPath(orientation, theme, name)
-    }
-
-    private fun Context.isLandscape(): Boolean {
-        return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
     }
 
     private fun Context.isDark(): Boolean {
@@ -233,6 +246,43 @@ class WallpaperManager(
         )
     }
 
+    private fun copyWallpaperImage(
+        context: Context,
+        orientation: String,
+        uri: Uri,
+    ) {
+        if (uri.scheme == "file") {
+            return
+        }
+        fileManager.copyWallpaperImage(context, orientation, uri)
+    }
+
+    fun applyCustomWallpaper(
+        context: Context,
+        portraitImageUri: Uri?,
+        landscapeImageUri:Uri?,
+        useSingleImage:Boolean,
+    ) {
+        if (portraitImageUri != null) {
+            copyWallpaperImage(context, PORTRAIT, portraitImageUri)
+        }
+        if (landscapeImageUri != null && !useSingleImage) {
+            copyWallpaperImage(context, LANDSCAPE, landscapeImageUri)
+        } else {
+            getWallpaperFile(context, LANDSCAPE, Wallpaper.Custom.name).delete()
+        }
+        if (portraitImageUri != null || landscapeImageUri != null) {
+            currentWallpaper = customWallpaper
+        }
+    }
+
+    fun getWallpaperFile(context: Context, orientation: String, name: String): File {
+        return File(
+            context.filesDir,
+            Wallpaper.getBaseLocalPath(orientation, name),
+        )
+    }
+
     companion object {
         /**
          *  Get whether the default wallpaper should be used.
@@ -241,21 +291,48 @@ class WallpaperManager(
             return isEmpty() || equals(defaultWallpaper.name)
         }
 
+        /**
+         * Get whether the wallpaper set by a user should be used.
+         */
+        fun isCustomTheCurrentWallpaper(settings: Settings): Boolean = with(settings.currentWallpaper) {
+            return equals(customWallpaper.name)
+        }
+
+        fun getCustomWallpaperFile(context: Context): File {
+            val orientation = if (context.isLandscape()) LANDSCAPE else PORTRAIT
+            val path = Wallpaper.getBaseLocalPath(orientation, Wallpaper.Custom.name)
+            val file = File(context.filesDir, path)
+            return if (file.exists()) {
+                file
+            } else {
+                File(
+                    context.filesDir,
+                    Wallpaper.getBaseLocalPath(PORTRAIT, Wallpaper.Custom.name),
+                )
+            }
+        }
+
+        private fun Context.isLandscape(): Boolean {
+            return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+        }
+
         val defaultWallpaper = Wallpaper.Default
+        val customWallpaper = Wallpaper.Custom
         private val localWallpapers: List<Wallpaper.Local> = listOf(
             Wallpaper.Local.Waterfox("amethyst", R.drawable.amethyst),
             Wallpaper.Local.Waterfox("cerulean", R.drawable.cerulean),
             Wallpaper.Local.Waterfox("sunrise", R.drawable.sunrise),
         )
         private val remoteWallpapers: List<Wallpaper.Remote> = listOf(
-            Wallpaper.Remote.Firefox(
-                "twilight-hills"
-            ),
-            Wallpaper.Remote.Firefox(
-                "beach-vibe"
-            ),
+//            Wallpaper.Remote.Firefox(
+//                "twilight-hills"
+//            ),
+//            Wallpaper.Remote.Firefox(
+//                "beach-vibe"
+//            ),
         )
-        private val availableWallpapers = listOf(defaultWallpaper) + localWallpapers + remoteWallpapers
+        private val availableWallpapers = listOf(defaultWallpaper) + localWallpapers + remoteWallpapers +
+            listOf(customWallpaper)
         private const val ANIMATION_DELAY_MS = 1500L
     }
 }
