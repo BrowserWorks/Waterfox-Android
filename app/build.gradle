@@ -100,6 +100,7 @@ android {
 
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 
     androidResources {
@@ -150,6 +151,9 @@ android {
     packagingOptions {
         resources {
             excludes += ['META-INF/atomicfu.kotlin_module', 'META-INF/AL2.0', 'META-INF/LGPL2.1']
+        }
+        jniLibs {
+            useLegacyPackaging true
         }
     }
 
