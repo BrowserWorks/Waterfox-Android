@@ -17,6 +17,8 @@ import androidx.core.content.getSystemService
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.work.Configuration.Builder
 import androidx.work.Configuration.Provider
+import coil.Coil
+import coil.ImageLoader
 import kotlinx.coroutines.*
 import mozilla.appservices.Megazord
 import mozilla.components.browser.state.action.SystemAction
@@ -111,6 +113,13 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
     open fun setupInMainProcessOnly() {
         beginSetupMegazord()
         ProfilerMarkerFactProcessor.create { components.core.engine.profiler }.register()
+
+        // This is a workaround for https://github.com/coil-kt/coil/issues/383
+        Coil.setImageLoader(
+            ImageLoader.Builder(this)
+                .addLastModifiedToFileCacheKey(false)
+                .build()
+        )
 
         run {
             // Make sure the engine is initialized and ready to use.
