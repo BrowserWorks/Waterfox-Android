@@ -298,19 +298,23 @@ class WallpaperManager(
             return equals(customWallpaper.name)
         }
 
-        fun getCustomWallpaperFile(context: Context): File {
+        fun getCustomWallpaperFile(context: Context): File? = Result.runCatching {
             val orientation = if (context.isLandscape()) LANDSCAPE else PORTRAIT
             val path = Wallpaper.getBaseLocalPath(orientation, Wallpaper.Custom.name)
-            val file = File(context.filesDir, path)
-            return if (file.exists()) {
-                file
-            } else {
-                File(
-                    context.filesDir,
-                    Wallpaper.getBaseLocalPath(PORTRAIT, Wallpaper.Custom.name),
-                )
+            runBlockingIncrement {
+                withContext(Dispatchers.IO) {
+                    val file = File(context.filesDir, path)
+                    if (file.exists()) {
+                        file
+                    } else {
+                        File(
+                            context.filesDir,
+                            Wallpaper.getBaseLocalPath(PORTRAIT, Wallpaper.Custom.name),
+                        )
+                    }
+                }
             }
-        }
+        }.getOrNull()
 
         private fun Context.isLandscape(): Boolean {
             return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
