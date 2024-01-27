@@ -66,13 +66,13 @@ fun WaterfoxTheme(
 ) {
     val colors = when (theme) {
         Theme.Light -> if (!inComposePreview) {
-            getWaterfoxTheme(LocalContext.current).colors
+            getWaterfoxColorScheme(LocalContext.current).lightColors
         } else {
             lightColorPalette
         }
 
         Theme.Dark -> if (!inComposePreview) {
-            getWaterfoxTheme(LocalContext.current).colors
+            getWaterfoxColorScheme(LocalContext.current).darkColors
         } else {
             darkColorPalette
         }

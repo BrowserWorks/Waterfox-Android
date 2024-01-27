@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="WaterfoxThemeRed" parent="NormalThemeBase">
+        <item name="homeBackground">@drawable/theme_red_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_red_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_red_home_bottom_bar_background_gradient_top</item>
+    </style>
+
+    <style name="WaterfoxThemeGreen" parent="NormalThemeBase">
+        <item name="homeBackground">@drawable/theme_green_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_green_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_green_home_bottom_bar_background_gradient_top</item>
+    </style>
+
+    <style name="WaterfoxThemeBlue" parent="NormalThemeBase">
+        <item name="homeBackground">@color/photonBlue30</item>
+        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
+        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
+    </style>
+
+    <style name="WaterfoxThemeYellow" parent="NormalThemeBase">
+        <item name="homeBackground">@color/photonYellow70</item>
+        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
+        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
+    </style>
+
+    <style name="WaterfoxThemeViolet" parent="NormalThemeBase">
+        <item name="homeBackground">@color/photonViolet50</item>
+        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
+        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
+    </style>
+
+</resources>

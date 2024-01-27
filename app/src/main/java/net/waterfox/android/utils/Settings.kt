@@ -37,8 +37,6 @@ import net.waterfox.android.settings.logins.SortingStrategy
 import net.waterfox.android.settings.registerOnSharedPreferenceChangeListener
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_ALL
 import net.waterfox.android.settings.sitepermissions.AUTOPLAY_BLOCK_AUDIBLE
-import net.waterfox.android.theme.THEME_DARK_DEFAULT
-import net.waterfox.android.theme.THEME_LIGHT_DEFAULT
 import net.waterfox.android.wallpapers.WallpaperManager
 import java.security.InvalidParameterException
 import java.util.*
@@ -389,14 +387,9 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
-    var darkTheme by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_selected_dark_theme),
-        default = THEME_DARK_DEFAULT,
-    )
-
-    var lightTheme by stringPreference(
-        appContext.getPreferenceKey(R.string.pref_key_selected_light_theme),
-        default = THEME_LIGHT_DEFAULT,
+    var themeColorScheme by longPreference(
+        appContext.getPreferenceKey(R.string.pref_key_theme_color_scheme),
+        default = 0,
     )
 
     var shouldUseHttpsOnly by booleanPreference(

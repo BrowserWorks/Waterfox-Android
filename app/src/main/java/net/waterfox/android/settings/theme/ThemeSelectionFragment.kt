@@ -35,20 +35,14 @@ class ThemeSelectionFragment : Fragment() {
 
     private fun setupPreferences() {
         val themeManager = (activity as HomeActivity).themeManager
-        view.lightThemes.run {
+        view.colorSchemes.run {
             clear()
-            addAll(themeManager.getLightThemes())
+            addAll(themeManager.getColorSchemes())
         }
-        view.darkThemes.run {
-            clear()
-            addAll(themeManager.getDarkThemes())
-        }
-        view.onThemeSelectedClick = { theme ->
-            if (theme.isLight) {
-                requireComponents.settings.lightTheme = theme.id
-            } else {
-                requireComponents.settings.darkTheme = theme.id
-            }
+        view.selectedColorScheme = themeManager.getColorSchemes()
+            .find { it.id == requireComponents.settings.themeColorScheme}
+        view.onColorSchemeSelected = { colorScheme ->
+            requireComponents.settings.themeColorScheme = colorScheme.id
             activity?.recreate()
         }
     }

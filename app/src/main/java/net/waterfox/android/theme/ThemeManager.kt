@@ -19,14 +19,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import mozilla.components.support.ktx.android.content.getColorFromAttr
 import mozilla.components.support.ktx.android.view.createWindowInsetsController
+import mozilla.components.ui.colors.PhotonColors
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.customtabs.ExternalAppBrowserActivity
 import net.waterfox.android.ext.settings
-
-const val THEME_LIGHT_DEFAULT = "light_default"
-const val THEME_DARK_DEFAULT = "dark_default"
 
 abstract class ThemeManager {
 
@@ -37,13 +35,11 @@ abstract class ThemeManager {
      */
     @StyleRes
     fun getCurrentThemeResource(context: Context) = when (currentTheme) {
-        BrowsingMode.Normal -> getWaterfoxTheme(context).resourceId
+        BrowsingMode.Normal -> getWaterfoxColorScheme(context).resourceId
         BrowsingMode.Private -> R.style.PrivateTheme
     }
 
-    fun getLightThemes() = THEMES.filter { it.isLight }
-
-    fun getDarkThemes() = THEMES.filterNot { it.isLight }
+    fun getColorSchemes(): List<WaterfoxThemeColorScheme> = COLOR_SCHEMES
 
     /**
      * Handles status bar theme change since the window does not dynamically recreate
@@ -144,50 +140,45 @@ class DefaultThemeManager(
         }
 }
 
-fun getWaterfoxTheme(context: Context): WaterfoxPredefinedTheme {
-    val themeId = if (isDarkTheme(context)) {
-        context.settings().darkTheme
-    } else {
-        context.settings().lightTheme
-    }
-    return THEMES.find { it.id == themeId }!!
+fun getWaterfoxColorScheme(context: Context): WaterfoxThemeColorScheme {
+    val colorScheme = context.settings().themeColorScheme
+    return COLOR_SCHEMES.find { it.id == colorScheme }!!
 }
 
-private fun isDarkTheme(context: Context) =
-    (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) ==
-            Configuration.UI_MODE_NIGHT_YES
-
-private val THEMES = listOf(
-    WaterfoxPredefinedTheme(
-        id = THEME_LIGHT_DEFAULT,
-        name = R.string.theme_light_default,
-        colors = lightColorPalette,
-        resourceId = R.style.NormalTheme,
-        isLight = true,
-        thumbnail = R.drawable.onboarding_light_theme,
+val COLOR_SCHEMES = listOf(
+    WaterfoxThemeColorScheme(
+        id = 0,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.WaterfoxThemeRed,
+        primaryColor = PhotonColors.Red50,
     ),
-    WaterfoxPredefinedTheme(
-        id = "light_grey",
-        name = R.string.theme_light_grey,
-        colors = lightGreyColorPalette,
-        resourceId = R.style.WaterFoxLightThemeGrey,
-        isLight = true,
-        thumbnail = R.drawable.theme_thumbnail_light_grey,
+    WaterfoxThemeColorScheme(
+        id = 1,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.WaterfoxThemeGreen,
+        primaryColor = PhotonColors.Green70,
     ),
-    WaterfoxPredefinedTheme(
-        id = THEME_DARK_DEFAULT,
-        name = R.string.theme_dark_default,
-        colors = darkColorPalette,
-        resourceId = R.style.NormalTheme,
-        isLight = false,
-        thumbnail = R.drawable.onboarding_dark_theme,
+    WaterfoxThemeColorScheme(
+        id = 2,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.WaterfoxThemeBlue,
+        primaryColor = PhotonColors.Blue30,
     ),
-    WaterfoxPredefinedTheme(
-        id = "dark_grey",
-        name = R.string.theme_dark_grey,
-        colors = darkGreyColorPalette,
-        resourceId = R.style.WaterFoxDarkThemeGrey,
-        isLight = false,
-        thumbnail = R.drawable.theme_thumbnail_dark_grey,
+    WaterfoxThemeColorScheme(
+        id = 3,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.WaterfoxThemeYellow,
+        primaryColor = PhotonColors.Yellow70,
+    ),
+    WaterfoxThemeColorScheme(
+        id = 4,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.WaterfoxThemeViolet,
+        primaryColor = PhotonColors.Violet50,
     ),
 )

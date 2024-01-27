@@ -4,15 +4,13 @@
 
 package net.waterfox.android.theme
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
+import androidx.compose.ui.graphics.Color
 
-data class WaterfoxPredefinedTheme(
-    val id: String,
-    @StringRes val name: Int,
-    val colors: WaterfoxColors,
+data class WaterfoxThemeColorScheme(
+    val id: Long,
+    val lightColors: WaterfoxColors,
+    val darkColors: WaterfoxColors,
     @StyleRes val resourceId: Int,
-    val isLight: Boolean,
-    @DrawableRes val thumbnail: Int,
+    val primaryColor: Color,
 )
