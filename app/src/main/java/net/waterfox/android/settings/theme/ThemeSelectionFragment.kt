@@ -4,10 +4,12 @@
 
 package net.waterfox.android.settings.theme
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
@@ -45,5 +47,33 @@ class ThemeSelectionFragment : Fragment() {
             requireComponents.settings.themeColorScheme = colorScheme.id
             activity?.recreate()
         }
+        view.selectedMode = AppCompatDelegate.getDefaultNightMode()
+        view.onLightThemeClick = {
+            setNewTheme(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+        view.onDarkThemeClick = {
+            setNewTheme(AppCompatDelegate.MODE_NIGHT_YES)
+        }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
+            view.onSetByBatterySaverClick = {
+                setNewTheme(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
+            }
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            view.onFollowDeviceThemeClick = {
+                setNewTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            }
+        }
+    }
+
+    private fun setNewTheme(mode: Int) {
+        if (AppCompatDelegate.getDefaultNightMode() == mode) return
+        view.selectedMode = mode
+        AppCompatDelegate.setDefaultNightMode(mode)
+        activity?.recreate()
+        with(requireComponents.core) {
+            engine.settings.preferredColorScheme = getPreferredColorScheme()
+        }
+        requireComponents.useCases.sessionUseCases.reload.invoke()
     }
 }

@@ -4,8 +4,6 @@
 
 package net.waterfox.android.settings
 
-import android.os.Build
-import android.os.Build.VERSION.SDK_INT
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -40,22 +38,6 @@ class CustomizationFragment : Fragment() {
     }
 
     private fun setupPreferences() {
-        view.onLightThemeClick = {
-            setNewTheme(AppCompatDelegate.MODE_NIGHT_NO)
-        }
-        view.onDarkThemeClick = {
-            setNewTheme(AppCompatDelegate.MODE_NIGHT_YES)
-        }
-        if (SDK_INT < Build.VERSION_CODES.P) {
-            view.onSetByBatterySaverClick = {
-                setNewTheme(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-            }
-        }
-        if (SDK_INT >= Build.VERSION_CODES.P) {
-            view.onFollowDeviceThemeClick = {
-                setNewTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-            }
-        }
         view.onSelectThemeClick = {
             view.findNavController().navigate(
                 CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
