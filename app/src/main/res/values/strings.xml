@@ -559,6 +559,10 @@
     <string name="preference_auto_battery_theme">Set by Battery Saver</string>
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">Follow device theme</string>
+    <!-- Preference for setting a color -->
+    <string name="preference_color">Color</string>
+    <!-- Preference for setting a theme -->
+    <string name="preference_scheme">Scheme</string>
 
     <!-- Gestures Preferences-->
     <!-- Preferences for using pull to refresh in a webpage -->

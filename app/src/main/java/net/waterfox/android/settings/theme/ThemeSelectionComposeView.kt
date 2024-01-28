@@ -120,7 +120,7 @@ fun ColorSchemeGrid(
             ),
     ) {
         Text(
-            text = "Color",
+            text = stringResource(id = R.string.preference_color),
             modifier = Modifier
                 .padding(
                     start = 24.dp,
@@ -211,7 +211,7 @@ fun SchemesList(
             ),
     ) {
         Text(
-            text = "Scheme",
+            text = stringResource(id = R.string.preference_scheme),
             modifier = Modifier
                 .padding(
                     start = 24.dp,
