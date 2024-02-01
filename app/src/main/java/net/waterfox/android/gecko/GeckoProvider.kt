@@ -74,6 +74,7 @@ object GeckoProvider {
         loginStorage: Lazy<LoginsStorage>,
         policy: TrackingProtectionPolicy
     ): GeckoRuntime {
+        val settings = context.components.settings
         val builder = GeckoRuntimeSettings.Builder()
 
         val runtimeSettings = builder
@@ -81,12 +82,17 @@ object GeckoProvider {
             .contentBlocking(policy.toContentBlockingSetting())
             .debugLogging(Config.channel.isDebug)
             .aboutConfigEnabled(true)
-            .configFilePath(runBlocking { importGeckoConfig(context).absolutePath })
+            .configFilePath(
+                if (settings.shouldUseDNSOverObliviousHTTP) {
+                    runBlocking { importGeckoConfig(context).absolutePath }
+                } else {
+                    ""
+                }
+            )
             .extensionsWebAPIEnabled(true)
             .extensionsProcessEnabled(true)
             .build()
 
-        val settings = context.components.settings
         if (!settings.shouldUseAutoSize) {
             runtimeSettings.automaticFontSizeAdjustment = false
             val fontSize = settings.fontSizeFactor
