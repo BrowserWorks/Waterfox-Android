@@ -387,6 +387,11 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
+    var shouldUseDNSOverObliviousHTTP by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_dns_over_oblivious_http),
+        default = true
+    )
+
     var shouldUseHttpsOnly by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_https_only),
         default = false

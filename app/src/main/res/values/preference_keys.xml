@@ -132,6 +132,9 @@
     <string name="pref_key_recent_tabs" translatable="false">pref_key_recent_tabs</string>
     <string name="pref_key_recent_bookmarks" translatable="false">pref_key_recent_bookmarks</string>
 
+    <!-- DNS over Oblivious HTTP -->
+    <string name="pref_key_dns_over_oblivious_http" translatable="false">pref_key_dns_over_oblivious_http</string>
+
     <!-- HTTPS Only Settings -->
     <string name="pref_key_https_only_settings" translatable="false">pref_key_https_only_settings</string>
     <string name="pref_key_https_only" translatable="false">pref_key_https_only</string>

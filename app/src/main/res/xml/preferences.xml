@@ -100,6 +100,12 @@
             app:iconSpaceReserved="false"
             android:title="@string/preferences_private_browsing_options" />
 
+        <androidx.preference.SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key_dns_over_oblivious_http"
+            app:iconSpaceReserved="false"
+            android:title="@string/preferences_dns_over_oblivious_http_title" />
+
         <androidx.preference.Preference
             android:key="@string/pref_key_https_only_settings"
             app:iconSpaceReserved="false"
