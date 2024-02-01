@@ -321,6 +321,8 @@
     <string name="preferences_screenshots_in_private_mode_disclaimer">If allowed, private tabs will also be visible when multiple apps are open</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">Add private browsing shortcut</string>
+    <!-- Preference for enabling "DNS over Oblivious HTTP" -->
+    <string name="preferences_dns_over_oblivious_http_title">DNS over Oblivious HTTP</string>
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">HTTPS-Only Mode</string>
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
