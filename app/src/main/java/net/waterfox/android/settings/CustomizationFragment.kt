@@ -43,26 +43,5 @@ class CustomizationFragment : Fragment() {
                 CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
             )
         }
-        view.onSelectThemeClick = {
-            view.findNavController().navigate(
-                CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
-            )
-        }
-        view.onSelectThemeClick = {
-            view.findNavController().navigate(
-                CustomizationFragmentDirections.actionCustomizationFragmentToThemeSelectionFragment()
-            )
-        }
     }
-
-    private fun setNewTheme(mode: Int) {
-        if (AppCompatDelegate.getDefaultNightMode() == mode) return
-        AppCompatDelegate.setDefaultNightMode(mode)
-        activity?.recreate()
-        with(requireComponents.core) {
-            engine.settings.preferredColorScheme = getPreferredColorScheme()
-        }
-        requireComponents.useCases.sessionUseCases.reload.invoke()
-    }
-
 }
