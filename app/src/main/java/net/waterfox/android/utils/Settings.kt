@@ -389,7 +389,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
     var themeColorScheme by longPreference(
         appContext.getPreferenceKey(R.string.pref_key_theme_color_scheme),
-        default = 0,
+        default = -1,
     )
 
     var shouldUseDNSOverObliviousHTTP by booleanPreference(

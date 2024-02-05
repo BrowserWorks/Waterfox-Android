@@ -147,6 +147,13 @@ fun getWaterfoxColorScheme(context: Context): WaterfoxThemeColorScheme {
 
 val COLOR_SCHEMES = listOf(
     WaterfoxThemeColorScheme(
+        id = -1,
+        lightColors = lightColorPalette,
+        darkColors = darkColorPalette,
+        resourceId = R.style.NormalTheme,
+        primaryColor = lightColorPalette.layer1,
+    ),
+    WaterfoxThemeColorScheme(
         id = 0,
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
@@ -173,12 +180,5 @@ val COLOR_SCHEMES = listOf(
         darkColors = darkColorPalette,
         resourceId = R.style.WaterfoxThemeYellow,
         primaryColor = PhotonColors.Yellow70,
-    ),
-    WaterfoxThemeColorScheme(
-        id = 4,
-        lightColors = lightColorPalette,
-        darkColors = darkColorPalette,
-        resourceId = R.style.WaterfoxThemeViolet,
-        primaryColor = PhotonColors.Violet50,
     ),
 )

@@ -25,10 +25,4 @@
         <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
     </style>
 
-    <style name="WaterfoxThemeViolet" parent="NormalThemeBase">
-        <item name="homeBackground">@color/photonViolet50</item>
-        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
-        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
-    </style>
-
 </resources>
