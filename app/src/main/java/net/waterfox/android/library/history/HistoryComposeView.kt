@@ -136,7 +136,7 @@ class HistoryComposeView @JvmOverloads constructor(
 
                         items(
                             count = historyList.itemCount,
-                            key = historyList.itemKey { it.position },
+                            key = historyList.itemKey { it.id },
                         ) { index ->
                             val history = historyList[index]
 
