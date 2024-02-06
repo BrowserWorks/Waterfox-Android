@@ -13,11 +13,15 @@ import mozilla.components.lib.state.State
 import mozilla.components.lib.state.Store
 import mozilla.components.support.ktx.kotlin.tryGetHostFromUrl
 import net.waterfox.android.selection.SelectionHolder
+import java.util.UUID
 
 /**
  * Class representing a history entry.
+ *
+ * @property id Unique id generated to use as an item key
  */
 sealed class History : Parcelable {
+    val id: String = UUID.randomUUID().toString()
     abstract val position: Int
     abstract val title: String
     abstract val visitedAt: Long
