@@ -93,6 +93,7 @@ fun FontSizePreference(
         ) {
             Slider(
                 value = sliderValue,
+                enabled = enabled,
                 onValueChange = if (enabled) onSliderValueChange else { _ -> },
                 modifier = Modifier
                     .weight(1f)
