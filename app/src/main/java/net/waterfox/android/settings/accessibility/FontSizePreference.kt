@@ -43,14 +43,14 @@ fun FontSizePreference(
     enabled: Boolean = true,
 ) {
     val context = LocalContext.current
-    val (sliderValue, setSliderValue) = remember {
-        mutableStateOf(context.readFloatPreference(key, defaultValue))
+    var sliderValue by remember {
+        mutableFloatStateOf(context.readFloatPreference(key, defaultValue))
     }
 
     return FontSizePreference(
         sliderValue = sliderValue,
         onSliderValueChange = { value ->
-            setSliderValue(5 * round(value * PERCENT_TO_DECIMAL / 5) / PERCENT_TO_DECIMAL)
+            sliderValue = (5 * round(value * PERCENT_TO_DECIMAL / 5) / PERCENT_TO_DECIMAL)
         },
         onSliderValueChangeFinished = {
             context.writeFloatPreference(key, sliderValue)
