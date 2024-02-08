@@ -1777,10 +1777,4 @@
 
     <string name="waterfox_suggest_header">Waterfox Suggest</string>
 
-    <!-- Waterfox themes -->
-    <string name="theme_light_default">Light</string>
-    <string name="theme_light_grey">Light Grey</string>
-    <string name="theme_dark_default">Dark</string>
-    <string name="theme_dark_grey">Dark Grey</string>
-
 </resources>
