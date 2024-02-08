@@ -12,6 +12,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -172,7 +173,21 @@ fun ColorSchemeItem(
                 .padding(4.dp)
                 .size(40.dp)
                 .clip(CircleShape)
-                .background(color = colorScheme.primaryColor)
+                .then(
+                    if (colorScheme.brush != null) {
+                        Modifier.background(
+                            brush = colorScheme.brush,
+                        )
+                    } else {
+                        Modifier.background(
+                            color = if (isSystemInDarkTheme()) {
+                                colorScheme.darkPrimaryColor
+                            } else {
+                                colorScheme.lightPrimaryColor
+                            },
+                        )
+                    },
+                )
                 .align(Alignment.Center)
                 .clickable { onColorSchemeSelected(colorScheme) },
         )

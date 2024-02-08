@@ -5,6 +5,7 @@
 package net.waterfox.android.theme
 
 import androidx.annotation.StyleRes
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 data class WaterfoxThemeColorScheme(
@@ -12,5 +13,7 @@ data class WaterfoxThemeColorScheme(
     val lightColors: WaterfoxColors,
     val darkColors: WaterfoxColors,
     @StyleRes val resourceId: Int,
-    val primaryColor: Color,
+    val lightPrimaryColor: Color,
+    val darkPrimaryColor: Color,
+    val brush: Brush? = null,
 )

@@ -15,6 +15,7 @@ import android.util.TypedValue
 import android.view.Window
 import androidx.annotation.StyleRes
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import mozilla.components.support.ktx.android.content.getColorFromAttr
@@ -151,34 +152,51 @@ val COLOR_SCHEMES = listOf(
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
         resourceId = R.style.NormalTheme,
-        primaryColor = lightColorPalette.layer1,
+        lightPrimaryColor = lightColorPalette.layer1,
+        darkPrimaryColor = darkColorPalette.layer1,
     ),
     WaterfoxThemeColorScheme(
         id = 0,
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
         resourceId = R.style.WaterfoxThemeRed,
-        primaryColor = PhotonColors.Red50,
+        lightPrimaryColor = PhotonColors.Red50,
+        darkPrimaryColor = PhotonColors.Red50,
+        brush = Brush.radialGradient(
+            colors = listOf(
+                PhotonColors.Red50,
+                PhotonColors.Red70,
+            )
+        ),
     ),
     WaterfoxThemeColorScheme(
         id = 1,
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
         resourceId = R.style.WaterfoxThemeGreen,
-        primaryColor = PhotonColors.Green70,
+        lightPrimaryColor = PhotonColors.Green70,
+        darkPrimaryColor = PhotonColors.Green70,
+        brush = Brush.radialGradient(
+            colors = listOf(
+                PhotonColors.Green70,
+                PhotonColors.Green80,
+            )
+        ),
     ),
     WaterfoxThemeColorScheme(
         id = 2,
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
         resourceId = R.style.WaterfoxThemeBlue,
-        primaryColor = PhotonColors.Blue30,
+        lightPrimaryColor = PhotonColors.Blue30,
+        darkPrimaryColor = PhotonColors.Blue30,
     ),
     WaterfoxThemeColorScheme(
         id = 3,
         lightColors = lightColorPalette,
         darkColors = darkColorPalette,
         resourceId = R.style.WaterfoxThemeYellow,
-        primaryColor = PhotonColors.Yellow70,
+        lightPrimaryColor = PhotonColors.Yellow70,
+        darkPrimaryColor = PhotonColors.Yellow70,
     ),
 )
