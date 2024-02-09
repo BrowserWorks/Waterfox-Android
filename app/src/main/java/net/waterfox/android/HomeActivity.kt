@@ -64,7 +64,8 @@ import mozilla.components.support.webextensions.WebExtensionPopupObserver
 import net.waterfox.android.addons.AddonDetailsFragmentDirections
 import net.waterfox.android.addons.AddonPermissionsDetailsFragmentDirections
 import net.waterfox.android.addons.AddonsManagementFragmentDirections
-import net.waterfox.android.addons.ExtensionsProcessDisabledController
+import net.waterfox.android.addons.ExtensionsProcessDisabledBackgroundController
+import net.waterfox.android.addons.ExtensionsProcessDisabledForegroundController
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.browser.browsingmode.DefaultBrowsingModeManager
@@ -133,8 +134,16 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
             fragmentManager = supportFragmentManager,
         )
     }
-    private val extensionsProcessDisabledPromptObserver by lazy {
-        ExtensionsProcessDisabledController(this@HomeActivity)
+
+    private val extensionsProcessDisabledForegroundController by lazy {
+        ExtensionsProcessDisabledForegroundController(this@HomeActivity)
+    }
+
+    private val extensionsProcessDisabledBackgroundController by lazy {
+        ExtensionsProcessDisabledBackgroundController(
+            browserStore = components.core.store,
+            appStore = components.appStore,
+        )
     }
 
     private val serviceWorkerSupport by lazy {
@@ -237,7 +246,8 @@ open class HomeActivity : LocaleAwareAppCompatActivity(), NavHostActivity {
 
         lifecycle.addObservers(
             webExtensionPopupObserver,
-            extensionsProcessDisabledPromptObserver,
+            extensionsProcessDisabledForegroundController,
+            extensionsProcessDisabledBackgroundController,
             webExtensionPromptFeature,
             serviceWorkerSupport,
         )
