@@ -21,7 +21,7 @@ class WaterfoxLogSink(private val logsDebug: Boolean = true) : LogSink {
         priority: Log.Priority,
         tag: String?,
         throwable: Throwable?,
-        message: String?
+        message: String
     ) {
         if (priority == Log.Priority.DEBUG && !logsDebug) {
             return
