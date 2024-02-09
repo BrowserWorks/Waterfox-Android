@@ -86,13 +86,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             updateFxASyncOverrideMenu = ::updateFxASyncOverrideMenu
         )
 
-        // Observe account changes to keep the UI up-to-date.
-        requireComponents.backgroundServices.accountManager.register(
-            accountObserver,
-            owner = this,
-            autoPause = true
-        )
-
         // It's important to update the account UI state in onCreate since that ensures we'll never
         // display an incorrect state in the UI. We take care to not also call it as part of onResume
         // if it was just called here (via the 'creatingFragment' flag).
@@ -131,6 +124,23 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
         // Consider finish of `onResume` to be the point at which we consider this fragment as 'created'.
         creatingFragment = false
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // Observe account changes to keep the UI up-to-date.
+        requireComponents.backgroundServices.accountManager.register(
+            accountObserver,
+            owner = this,
+            autoPause = true,
+        )
+    }
+
+    override fun onStop() {
+        super.onStop()
+        // If the screen isn't visible we don't need to show updates.
+        // Also prevent the observer registered to the FXA singleton causing memory leaks.
+        requireComponents.backgroundServices.accountManager.unregister(accountObserver)
     }
 
     override fun onDestroyView() {
