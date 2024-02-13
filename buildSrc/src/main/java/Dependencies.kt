@@ -3,13 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 object Versions {
-    const val kotlin = "1.8.22"
-    const val coroutines = "1.7.2"
+    const val kotlin = "1.9.22"
+    const val coroutines = "1.7.3"
 
     // These versions are linked: lint should be X+23.Y.Z of gradle_plugin version, according to:
     // https://github.com/alexjlockwood/android-lint-checks-demo/blob/0245fc027463137b1b4afb97c5295d60dce998b6/dependencies.gradle#L3
-    const val android_gradle_plugin = "8.0.2"
-    const val android_lint_api = "31.0.2"
+    const val android_gradle_plugin = "8.2.2"
+    const val android_lint_api = "31.2.2"
 
     const val sentry = "6.6.0"
     const val leakcanary = "2.13"
@@ -19,33 +19,33 @@ object Versions {
 
     const val androidx_compose = "1.5.4"
     const val androidx_compose_paging = "1.0.0-alpha20"
-    const val androidx_compose_compiler = "1.4.8"
+    const val androidx_compose_compiler = "1.5.8"
     const val androidx_appcompat = "1.6.1"
     const val androidx_activity_compose = "1.8.2"
-    const val androidx_benchmark = "1.0.0"
+    const val androidx_benchmark = "1.2.2"
     const val androidx_biometric = "1.1.0"
     const val androidx_coordinator_layout = "1.1.0"
     const val androidx_constraint_layout = "2.0.4"
     const val androidx_preference = "1.1.1"
     const val androidx_legacy = "1.0.0"
     const val androidx_annotation = "1.5.0"
-    const val androidx_lifecycle = "2.6.2"
+    const val androidx_lifecycle = "2.7.0"
     const val androidx_fragment = "1.6.2"
     const val androidx_navigation = "2.5.3"
     const val androidx_recyclerview = "1.3.2"
     const val androidx_core = "1.12.0"
     const val androidx_paging = "3.2.1"
-    const val androidx_transition = "1.4.0"
+    const val androidx_transition = "1.4.1"
     const val androidx_work = "2.7.1"
     const val androidx_datastore = "1.0.0"
     const val google_material = "1.2.1"
-    const val accompanist_drawablepainter = "0.23.1"
+    const val accompanist_drawablepainter = "0.30.1"
     const val coil = "2.4.0"
 
-    const val mozilla_android_components = "123.0b8"
+    const val mozilla_android_components = "123.0b9"
 
-    const val junit = "5.5.2"
-    const val mockk = "1.13.8"
+    const val junit = "5.9.3"
+    const val mockk = "1.13.9"
 
     const val mockwebserver = "4.10.0"
     const val uiautomator = "2.2.0"
