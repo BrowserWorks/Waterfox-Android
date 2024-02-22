@@ -12,10 +12,7 @@ import mozilla.components.support.test.libstate.ext.waitUntilIdle
 import mozilla.components.support.test.middleware.CaptureActionsMiddleware
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
-@RunWith(WaterfoxRobolectricTestRunner::class)
 class TabLayoutObserverTest {
     private val interactor = mockk<TabsTrayInteractor>(relaxed = true)
     private lateinit var store: TabsTrayStore

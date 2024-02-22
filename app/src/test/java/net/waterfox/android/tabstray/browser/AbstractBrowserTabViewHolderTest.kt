@@ -13,26 +13,27 @@ import io.mockk.verify
 import mozilla.components.browser.state.state.BrowserState
 import mozilla.components.browser.state.state.MediaSessionState
 import mozilla.components.browser.state.state.TabSessionState
+import mozilla.components.browser.state.state.createTab
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.base.images.ImageLoader
-import mozilla.components.support.test.robolectric.testContext
-import org.junit.Test
-import org.junit.runner.RunWith
-import net.waterfox.android.R
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import net.waterfox.android.selection.SelectionHolder
-import net.waterfox.android.tabstray.TabsTrayStore
-import mozilla.components.browser.state.state.createTab
 import mozilla.components.concept.engine.mediasession.MediaSession
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
+import mozilla.components.support.test.robolectric.testContext
+import net.waterfox.android.R
 import net.waterfox.android.ext.components
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.selection.SelectionHolder
+import net.waterfox.android.tabstray.TabsTrayInteractor
+import net.waterfox.android.tabstray.TabsTrayStore
+import org.junit.Test
+import org.junit.runner.RunWith
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class AbstractBrowserTabViewHolderTest {
 
     val store = TabsTrayStore()
     val browserStore = BrowserStore()
-    val interactor = mockk<BrowserTrayInteractor>(relaxed = true)
+    val interactor = mockk<TabsTrayInteractor>(relaxed = true)
 
     @Test
     fun `WHEN itemView is clicked THEN interactor invokes open`() {
@@ -44,14 +45,14 @@ class AbstractBrowserTabViewHolderTest {
             store,
             null,
             browserStore,
-            interactor
+            interactor,
         )
 
         holder.bind(createTab(url = "url"), false, mockk(), mockk())
 
         holder.itemView.performClick()
 
-        verify { interactor.onTabSelected(any(), null) }
+        verify { interactor.onTabSelected(any(), holder.featureName) }
     }
 
     @Test
@@ -65,7 +66,7 @@ class AbstractBrowserTabViewHolderTest {
             store,
             selectionHolder,
             browserStore,
-            interactor
+            interactor,
         )
 
         val tab = createTab(url = "url")
@@ -73,11 +74,11 @@ class AbstractBrowserTabViewHolderTest {
 
         holder.itemView.performClick()
 
-        verify { interactor.onMultiSelectClicked(tab, any(), null) }
+        verify { interactor.onTabSelected(tab, holder.featureName) }
     }
 
     @Test
-    fun `WHEN the current media state is paused AND playPause button is clicked THEN the media is played`() {
+    fun `WHEN the current media state is paused AND playPause button is clicked THEN the media is played AND the right metric is recorded`() {
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
         val view = LayoutInflater.from(testContext).inflate(R.layout.tab_tray_item, null)
         val mediaSessionController = mockk<MediaSession.Controller>(relaxed = true)
@@ -85,12 +86,12 @@ class AbstractBrowserTabViewHolderTest {
             url = "url",
             mediaSessionState = MediaSessionState(
                 mediaSessionController,
-                playbackState = MediaSession.PlaybackState.PAUSED
-            )
+                playbackState = MediaSession.PlaybackState.PAUSED,
+            ),
         )
         val mediaBrowserStore = BrowserStore(
             initialState =
-            BrowserState(listOf(mediaTab))
+            BrowserState(listOf(mediaTab)),
         )
         val holder = TestTabTrayViewHolder(
             view,
@@ -98,9 +99,8 @@ class AbstractBrowserTabViewHolderTest {
             store,
             TestSelectionHolder(emptySet()),
             mediaBrowserStore,
-            interactor
+            interactor,
         )
-
         holder.bind(mediaTab, false, mockk(), mockk())
 
         holder.itemView.findViewById<ImageButton>(R.id.play_pause_button).performClick()
@@ -109,7 +109,7 @@ class AbstractBrowserTabViewHolderTest {
     }
 
     @Test
-    fun `WHEN the current media state is playing AND playPause button is clicked THEN the media is paused`() {
+    fun `WHEN the current media state is playing AND playPause button is clicked THEN the media is paused AND the right metric is recorded`() {
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
         val view = LayoutInflater.from(testContext).inflate(R.layout.tab_tray_item, null)
         val mediaSessionController = mockk<MediaSession.Controller>(relaxed = true)
@@ -117,12 +117,12 @@ class AbstractBrowserTabViewHolderTest {
             url = "url",
             mediaSessionState = MediaSessionState(
                 mediaSessionController,
-                playbackState = MediaSession.PlaybackState.PLAYING
-            )
+                playbackState = MediaSession.PlaybackState.PLAYING,
+            ),
         )
         val mediaBrowserStore = BrowserStore(
             initialState =
-            BrowserState(listOf(mediaTab))
+            BrowserState(listOf(mediaTab)),
         )
         val holder = TestTabTrayViewHolder(
             view,
@@ -130,7 +130,7 @@ class AbstractBrowserTabViewHolderTest {
             store,
             TestSelectionHolder(emptySet()),
             mediaBrowserStore,
-            interactor
+            interactor,
         )
 
         holder.bind(mediaTab, false, mockk(), mockk())
@@ -140,15 +140,15 @@ class AbstractBrowserTabViewHolderTest {
         verify { mediaSessionController.pause() }
     }
 
-    @Suppress("LongParameterList")
     class TestTabTrayViewHolder(
         itemView: View,
         imageLoader: ImageLoader,
         trayStore: TabsTrayStore,
         selectionHolder: SelectionHolder<TabSessionState>?,
         store: BrowserStore,
-        override val browserTrayInteractor: BrowserTrayInteractor
-    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, trayStore, selectionHolder, store) {
+        override val interactor: TabsTrayInteractor,
+        featureName: String = "Test",
+    ) : AbstractBrowserTabViewHolder(itemView, imageLoader, trayStore, selectionHolder, featureName, store) {
         override val thumbnailSize: Int
             get() = 30
 
@@ -158,7 +158,7 @@ class AbstractBrowserTabViewHolderTest {
     }
 
     class TestSelectionHolder(
-        private val testItems: Set<TabSessionState>
+        private val testItems: Set<TabSessionState>,
     ) : SelectionHolder<TabSessionState> {
         override val selectedItems: Set<TabSessionState>
             get() {
