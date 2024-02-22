@@ -6,7 +6,6 @@ package net.waterfox.android.tabstray
 
 import android.app.Dialog
 import android.content.Context
-import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
 
 /**
  * Default tabs tray dialog implementation for overriding the default on back pressed.
@@ -14,10 +13,11 @@ import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
 class TabsTrayDialog(
     context: Context,
     theme: Int,
-    private val interactor: () -> BrowserTrayInteractor
+    private val interactor: () -> TabsTrayInteractor,
 ) : Dialog(context, theme) {
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
-        if (interactor.invoke().onBackPressed()) {
+        if (interactor().onBackPressed()) {
             return
         }
 

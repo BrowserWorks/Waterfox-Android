@@ -37,7 +37,7 @@ class TabsTrayInactiveTabsOnboardingBinding(
     private val store: BrowserStore,
     private val tabsTrayBinding: ComponentTabstray2Binding?,
     private val settings: Settings,
-    private val navigationInteractor: NavigationInteractor
+    private val navigationInteractor: NavigationInteractor,
 ) : AbstractBinding<BrowserState>(store) {
 
     private lateinit var inactiveTabsDialog: Dialog
@@ -50,7 +50,7 @@ class TabsTrayInactiveTabsOnboardingBinding(
             .distinctUntilChanged()
             .collect {
                 val inactiveTabsList =
-                    if (settings.inactiveTabsAreEnabled) { store.state.potentialInactiveTabs } else emptyList()
+                    if (settings.inactiveTabsAreEnabled) { store.state.potentialInactiveTabs } else { emptyList() }
                 if (inactiveTabsList.isNotEmpty() && shouldShowOnboardingForInactiveTabs()) {
                     createInactiveCFR()
                 }

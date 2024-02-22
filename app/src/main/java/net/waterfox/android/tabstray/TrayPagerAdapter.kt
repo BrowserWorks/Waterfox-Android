@@ -7,7 +7,6 @@ package net.waterfox.android.tabstray
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.VisibleForTesting
 import androidx.compose.ui.platform.ComposeView
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.ConcatAdapter
@@ -15,25 +14,19 @@ import androidx.recyclerview.widget.RecyclerView
 import mozilla.components.browser.state.store.BrowserStore
 import net.waterfox.android.components.AppStore
 import net.waterfox.android.tabstray.browser.BrowserTabsAdapter
-import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
 import net.waterfox.android.tabstray.browser.InactiveTabsAdapter
-import net.waterfox.android.tabstray.browser.InactiveTabsInteractor
 import net.waterfox.android.tabstray.viewholders.AbstractPageViewHolder
 import net.waterfox.android.tabstray.viewholders.NormalBrowserPageViewHolder
 import net.waterfox.android.tabstray.viewholders.PrivateBrowserPageViewHolder
 import net.waterfox.android.tabstray.viewholders.SyncedTabsPageViewHolder
 
-@Suppress("LongParameterList")
 class TrayPagerAdapter(
-    @get:VisibleForTesting internal val context: Context,
-    @get:VisibleForTesting internal val lifecycleOwner: LifecycleOwner,
-    @get:VisibleForTesting internal val tabsTrayStore: TabsTrayStore,
-    @get:VisibleForTesting internal val browserInteractor: BrowserTrayInteractor,
-    @get:VisibleForTesting internal val navInteractor: NavigationInteractor,
-    @get:VisibleForTesting internal val tabsTrayInteractor: TabsTrayInteractor,
-    @get:VisibleForTesting internal val browserStore: BrowserStore,
-    @get:VisibleForTesting internal val appStore: AppStore,
-    @get:VisibleForTesting internal val inactiveTabsInteractor: InactiveTabsInteractor,
+    internal val context: Context,
+    internal val lifecycleOwner: LifecycleOwner,
+    internal val tabsTrayStore: TabsTrayStore,
+    internal val interactor: TabsTrayInteractor,
+    internal val browserStore: BrowserStore,
+    internal val appStore: AppStore,
 ) : RecyclerView.Adapter<AbstractPageViewHolder>() {
 
     /**
@@ -46,18 +39,20 @@ class TrayPagerAdapter(
             InactiveTabsAdapter(
                 lifecycleOwner = lifecycleOwner,
                 tabsTrayStore = tabsTrayStore,
-                inactiveTabsInteractor = inactiveTabsInteractor
+                interactor = interactor,
+                featureName = INACTIVE_TABS_FEATURE_NAME,
             ),
-            BrowserTabsAdapter(context, browserInteractor, tabsTrayStore, lifecycleOwner)
+            BrowserTabsAdapter(context, interactor, tabsTrayStore, TABS_TRAY_FEATURE_NAME, lifecycleOwner),
         )
     }
 
     private val privateAdapter by lazy {
         BrowserTabsAdapter(
             context,
-            browserInteractor,
+            interactor,
             tabsTrayStore,
-            lifecycleOwner
+            TABS_TRAY_FEATURE_NAME,
+            lifecycleOwner,
         )
     }
 
@@ -70,7 +65,7 @@ class TrayPagerAdapter(
                     tabsTrayStore,
                     browserStore,
                     appStore,
-                    tabsTrayInteractor
+                    interactor,
                 )
             }
             PrivateBrowserPageViewHolder.LAYOUT_ID -> {
@@ -78,7 +73,7 @@ class TrayPagerAdapter(
                     LayoutInflater.from(parent.context).inflate(viewType, parent, false),
                     tabsTrayStore,
                     browserStore,
-                    tabsTrayInteractor
+                    interactor,
                 )
             }
             SyncedTabsPageViewHolder.LAYOUT_ID -> {
@@ -86,11 +81,11 @@ class TrayPagerAdapter(
                     composeView = ComposeView(parent.context).apply {
                         layoutParams = ViewGroup.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.MATCH_PARENT
+                            ViewGroup.LayoutParams.MATCH_PARENT,
                         )
                     },
                     tabsTrayStore = tabsTrayStore,
-                    navigationInteractor = navInteractor
+                    interactor = interactor,
                 )
             }
             else -> throw IllegalStateException("Unknown viewType.")
@@ -130,6 +125,10 @@ class TrayPagerAdapter(
 
     companion object {
         const val TRAY_TABS_COUNT = 3
+
+        // Keys for identifying from which app features the a was opened / closed.
+        const val TABS_TRAY_FEATURE_NAME = "Tabs tray"
+        const val INACTIVE_TABS_FEATURE_NAME = "Inactive tabs"
 
         val POSITION_NORMAL_TABS = Page.NormalTabs.ordinal
         val POSITION_PRIVATE_TABS = Page.PrivateTabs.ordinal

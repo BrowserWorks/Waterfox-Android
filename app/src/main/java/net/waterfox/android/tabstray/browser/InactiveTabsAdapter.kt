@@ -16,15 +16,16 @@ import net.waterfox.android.tabstray.TabsTrayStore
  *
  * @param lifecycleOwner [LifecycleOwner] to which the Composable will be tied to.
  * @param tabsTrayStore [TabsTrayStore] used to listen for changes to [TabsTrayState.inactiveTabs].
- * @param inactiveTabsInteractor [InactiveTabsInteractor] used to respond to interactions with the inactive tabs header
+ * @param interactor [InactiveTabsInteractor] used to respond to interactions with the inactive tabs header
  * and the auto close dialog.
+ * @property featureName [String] representing the name of the inactive tabs feature for telemetry reporting.
  */
-@Suppress("LongParameterList")
 class InactiveTabsAdapter(
     private val lifecycleOwner: LifecycleOwner,
     private val tabsTrayStore: TabsTrayStore,
-    private val inactiveTabsInteractor: InactiveTabsInteractor
-) : RecyclerView.Adapter<InactiveTabViewHolder>() {
+    private val interactor: InactiveTabsInteractor,
+    override val featureName: String,
+) : RecyclerView.Adapter<InactiveTabViewHolder>(), FeatureNameHolder {
 
     override fun getItemCount(): Int = 1
 
@@ -33,7 +34,7 @@ class InactiveTabsAdapter(
             composeView = ComposeView(parent.context),
             lifecycleOwner = lifecycleOwner,
             tabsTrayStore = tabsTrayStore,
-            inactiveTabsInteractor = inactiveTabsInteractor,
+            interactor = interactor,
         )
     }
 

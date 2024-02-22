@@ -19,7 +19,7 @@ import net.waterfox.android.tabstray.TabsTrayStore
 class PrivateTabsBinding(
     store: TabsTrayStore,
     private val browserStore: BrowserStore,
-    private val tray: TabsTray
+    private val tray: TabsTray,
 ) : AbstractBinding<TabsTrayState>(store) {
     override suspend fun onState(flow: Flow<TabsTrayState>) {
         flow.map { it.privateTabs }

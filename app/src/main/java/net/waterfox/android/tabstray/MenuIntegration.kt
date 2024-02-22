@@ -9,24 +9,23 @@ import androidx.annotation.VisibleForTesting
 import com.google.android.material.tabs.TabLayout
 import mozilla.components.browser.menu.BrowserMenuBuilder
 import mozilla.components.browser.state.store.BrowserStore
-import net.waterfox.android.utils.Do
 
 /**
  * A wrapper class that building the tabs tray menu that handles item clicks.
  */
 class MenuIntegration(
-    @VisibleForTesting internal val context: Context,
-    @VisibleForTesting internal val browserStore: BrowserStore,
-    @VisibleForTesting internal val tabsTrayStore: TabsTrayStore,
-    @VisibleForTesting internal val tabLayout: TabLayout,
-    @VisibleForTesting internal val navigationInteractor: NavigationInteractor
+    @get:VisibleForTesting internal val context: Context,
+    @get:VisibleForTesting internal val browserStore: BrowserStore,
+    @get:VisibleForTesting internal val tabsTrayStore: TabsTrayStore,
+    @get:VisibleForTesting internal val tabLayout: TabLayout,
+    @get:VisibleForTesting internal val navigationInteractor: NavigationInteractor,
 ) {
     private val tabsTrayItemMenu by lazy {
         TabsTrayMenu(
             context = context,
             browserStore = browserStore,
             tabLayout = tabLayout,
-            onItemTapped = ::handleMenuClicked
+            onItemTapped = ::handleMenuClicked,
         )
     }
 
@@ -40,7 +39,7 @@ class MenuIntegration(
 
     @VisibleForTesting
     internal fun handleMenuClicked(item: TabsTrayMenu.Item) {
-        Do exhaustive when (item) {
+        when (item) {
             is TabsTrayMenu.Item.ShareAllTabs ->
                 navigationInteractor.onShareTabsOfTypeClicked(isPrivateMode)
             is TabsTrayMenu.Item.OpenAccountSettings ->

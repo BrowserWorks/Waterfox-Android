@@ -16,7 +16,7 @@ import mozilla.components.browser.tabstray.TabsTrayStyling
 /**
  * RecyclerView adapter implementation to display a list/grid of tabs.
  *
- * The previous tabs adapter was very restrictive and required Waterfox to jump through
+ * The previous tabs adapter was very restrictive and required Fenix to jump through
  * may hoops to access and update certain methods. An abstract adapter is easier to manage
  * for Android UI APIs.
  *

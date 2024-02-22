@@ -17,7 +17,6 @@ import mozilla.components.lib.state.helpers.AbstractBinding
 import net.waterfox.android.R
 import net.waterfox.android.databinding.ComponentTabstray2Binding
 import net.waterfox.android.databinding.TabstrayMultiselectItemsBinding
-import net.waterfox.android.tabstray.NavigationInteractor
 import net.waterfox.android.tabstray.TabsTrayAction.ExitSelectMode
 import net.waterfox.android.tabstray.TabsTrayInteractor
 import net.waterfox.android.tabstray.TabsTrayState
@@ -29,13 +28,13 @@ import net.waterfox.android.tabstray.ext.showWithTheme
 /**
  * A binding that shows/hides the multi-select banner of the selected count of tabs.
  *
- * @property context An Android context.
- * @property store The TabsTrayStore instance.
- * @property navInteractor An instance of [NavigationInteractor] for navigating on menu clicks.
- * @property tabsTrayInteractor An instance of [TabsTrayInteractor] for handling deletion.
- * @property backgroundView The background view that we want to alter when changing [Mode].
- * @property showOnSelectViews A variable list of views that will be made visible when in select mode.
- * @property showOnNormalViews A variable list of views that will be made visible when in normal mode.
+ * @param context An Android context.
+ * @param binding The binding used to display the view.
+ * @param store [TabsTrayStore] used to listen for changes to [TabsTrayState] and dispatch actions.
+ * @param interactor [TabsTrayInteractor] for responding to user actions.
+ * @param backgroundView The background view that we want to alter when changing [Mode].
+ * @param showOnSelectViews A variable list of views that will be made visible when in select mode.
+ * @param showOnNormalViews A variable list of views that will be made visible when in normal mode.
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 @Suppress("LongParameterList")
@@ -43,11 +42,10 @@ class SelectionBannerBinding(
     private val context: Context,
     private val binding: ComponentTabstray2Binding,
     private val store: TabsTrayStore,
-    private val navInteractor: NavigationInteractor,
-    private val tabsTrayInteractor: TabsTrayInteractor,
+    private val interactor: TabsTrayInteractor,
     private val backgroundView: View,
     private val showOnSelectViews: VisibilityModifier,
-    private val showOnNormalViews: VisibilityModifier
+    private val showOnNormalViews: VisibilityModifier,
 ) : AbstractBinding<TabsTrayState>(store) {
 
     /**
@@ -89,11 +87,13 @@ class SelectionBannerBinding(
         val tabsTrayMultiselectItemsBinding = TabstrayMultiselectItemsBinding.bind(binding.root)
 
         tabsTrayMultiselectItemsBinding.shareMultiSelect.setOnClickListener {
-            navInteractor.onShareTabs(store.state.mode.selectedTabs)
+            interactor.onShareSelectedTabs()
         }
 
         tabsTrayMultiselectItemsBinding.collectMultiSelect.setOnClickListener {
-            navInteractor.onSaveToCollections(store.state.mode.selectedTabs)
+            if (store.state.mode.selectedTabs.isNotEmpty()) {
+                interactor.onAddSelectedTabsToCollectionClicked()
+            }
         }
 
         binding.exitMultiSelect.setOnClickListener {
@@ -102,10 +102,8 @@ class SelectionBannerBinding(
 
         tabsTrayMultiselectItemsBinding.menuMultiSelect.setOnClickListener { anchor ->
             val menu = SelectionMenuIntegration(
-                context,
-                store,
-                navInteractor,
-                tabsTrayInteractor
+                context = context,
+                interactor = interactor,
             ).build()
 
             menu.showWithTheme(anchor)
