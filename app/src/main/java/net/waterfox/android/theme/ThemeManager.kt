@@ -189,14 +189,26 @@ val COLOR_SCHEMES = listOf(
         darkColors = darkBlueColorPalette,
         resourceId = R.style.WaterfoxThemeBlue,
         lightPrimaryColor = PhotonColors.Blue30,
-        darkPrimaryColor = PhotonColors.Blue30,
+        darkPrimaryColor = PhotonColors.Blue50,
+        brush = Brush.radialGradient(
+            colors = listOf(
+                PhotonColors.Blue30,
+                PhotonColors.Blue50,
+            )
+        ),
     ),
     WaterfoxThemeColorScheme(
         id = 3,
         lightColors = lightYellowColorPalette,
         darkColors = darkYellowColorPalette,
         resourceId = R.style.WaterfoxThemeYellow,
-        lightPrimaryColor = PhotonColors.Yellow70,
-        darkPrimaryColor = PhotonColors.Yellow70,
+        lightPrimaryColor = PhotonColors.Yellow30,
+        darkPrimaryColor = PhotonColors.Yellow50,
+        brush = Brush.radialGradient(
+            colors = listOf(
+                PhotonColors.Yellow30,
+                PhotonColors.Yellow50,
+            )
+        ),
     ),
 )
