@@ -5,18 +5,18 @@
         <item name="homeBackground">@drawable/theme_red_home_background_gradient</item>
         <item name="bottomBarBackground">@drawable/theme_red_home_bottom_bar_background_gradient</item>
         <item name="bottomBarBackgroundTop">@drawable/theme_red_home_bottom_bar_background_gradient_top</item>
-        <item name="colorControlActivated">@color/photonRed50</item>
-        <item name="actionPrimary">@color/photonRed50</item>
-        <item name="accent">@color/photonRed50</item>
-        <item name="accentHighContrast">@color/photonRed50</item>
-        <item name="iconActive">@color/photonRed50</item>
-        <item name="borderPrimary">@color/photonRed50</item>
-        <item name="textAccent">@color/photonRed50</item>
-        <item name="accentUsedOnDarkBackground">@color/photonRed50</item>
-        <item name="android:textColorLink">@color/photonRed50</item>
-        <item name="selectPromptHeaderTextColor">@color/photonRed50</item>
-        <item name="preferenceSectionHeader">@color/photonRed50</item>
-        <item name="menuItemButtonTintColor">@color/photonRed50</item>
+        <item name="colorControlActivated">@color/photonRed60</item>
+        <item name="actionPrimary">@color/photonRed60</item>
+        <item name="accent">@color/photonRed60</item>
+        <item name="accentHighContrast">@color/photonRed60</item>
+        <item name="iconActive">@color/photonRed60</item>
+        <item name="borderPrimary">@color/photonRed60</item>
+        <item name="textAccent">@color/photonRed60</item>
+        <item name="accentUsedOnDarkBackground">@color/photonRed60</item>
+        <item name="android:textColorLink">@color/photonRed60</item>
+        <item name="selectPromptHeaderTextColor">@color/photonRed60</item>
+        <item name="preferenceSectionHeader">@color/photonRed60</item>
+        <item name="menuItemButtonTintColor">@color/photonRed60</item>
     </style>
 
     <style name="WaterfoxThemeGreen" parent="NormalThemeBase">
@@ -39,39 +39,39 @@
     </style>
 
     <style name="WaterfoxThemeBlue" parent="NormalThemeBase">
-        <item name="homeBackground">@color/photonBlue30</item>
-        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
-        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
-        <item name="colorControlActivated">@color/photonBlue30</item>
-        <item name="actionPrimary">@color/photonBlue30</item>
-        <item name="accent">@color/photonBlue30</item>
-        <item name="accentHighContrast">@color/photonBlue30</item>
-        <item name="iconActive">@color/photonBlue30</item>
-        <item name="borderPrimary">@color/photonBlue30</item>
-        <item name="textAccent">@color/photonBlue30</item>
-        <item name="accentUsedOnDarkBackground">@color/photonBlue30</item>
-        <item name="android:textColorLink">@color/photonBlue30</item>
-        <item name="selectPromptHeaderTextColor">@color/photonBlue30</item>
-        <item name="preferenceSectionHeader">@color/photonBlue30</item>
-        <item name="menuItemButtonTintColor">@color/photonBlue30</item>
+        <item name="homeBackground">@drawable/theme_blue_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_blue_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_blue_home_bottom_bar_background_gradient_top</item>
+        <item name="colorControlActivated">@color/photonBlue50</item>
+        <item name="actionPrimary">@color/photonBlue50</item>
+        <item name="accent">@color/photonBlue50</item>
+        <item name="accentHighContrast">@color/photonBlue50</item>
+        <item name="iconActive">@color/photonBlue50</item>
+        <item name="borderPrimary">@color/photonBlue50</item>
+        <item name="textAccent">@color/photonBlue50</item>
+        <item name="accentUsedOnDarkBackground">@color/photonBlue50</item>
+        <item name="android:textColorLink">@color/photonBlue50</item>
+        <item name="selectPromptHeaderTextColor">@color/photonBlue50</item>
+        <item name="preferenceSectionHeader">@color/photonBlue50</item>
+        <item name="menuItemButtonTintColor">@color/photonBlue50</item>
     </style>
 
     <style name="WaterfoxThemeYellow" parent="NormalThemeBase">
-        <item name="homeBackground">@color/photonYellow70</item>
-        <item name="bottomBarBackground">@drawable/home_bottom_bar_background</item>
-        <item name="bottomBarBackgroundTop">@drawable/home_bottom_bar_background_top</item>
-        <item name="colorControlActivated">@color/photonYellow70</item>
-        <item name="actionPrimary">@color/photonYellow70</item>
-        <item name="accent">@color/photonYellow70</item>
-        <item name="accentHighContrast">@color/photonYellow70</item>
-        <item name="iconActive">@color/photonYellow70</item>
-        <item name="borderPrimary">@color/photonYellow70</item>
-        <item name="textAccent">@color/photonYellow70</item>
-        <item name="accentUsedOnDarkBackground">@color/photonYellow70</item>
-        <item name="android:textColorLink">@color/photonYellow70</item>
-        <item name="selectPromptHeaderTextColor">@color/photonYellow70</item>
-        <item name="preferenceSectionHeader">@color/photonYellow70</item>
-        <item name="menuItemButtonTintColor">@color/photonYellow70</item>
+        <item name="homeBackground">@drawable/theme_yellow_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_yellow_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_yellow_home_bottom_bar_background_gradient_top</item>
+        <item name="colorControlActivated">@color/photonYellow40</item>
+        <item name="actionPrimary">@color/photonYellow40</item>
+        <item name="accent">@color/photonYellow40</item>
+        <item name="accentHighContrast">@color/photonYellow40</item>
+        <item name="iconActive">@color/photonYellow40</item>
+        <item name="borderPrimary">@color/photonYellow40</item>
+        <item name="textAccent">@color/photonYellow40</item>
+        <item name="accentUsedOnDarkBackground">@color/photonYellow40</item>
+        <item name="android:textColorLink">@color/photonYellow40</item>
+        <item name="selectPromptHeaderTextColor">@color/photonYellow40</item>
+        <item name="preferenceSectionHeader">@color/photonYellow40</item>
+        <item name="menuItemButtonTintColor">@color/photonYellow40</item>
     </style>
 
 </resources>

@@ -1,0 +1,80 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="136dp"
+    android:height="80dp"
+    android:viewportWidth="136"
+    android:viewportHeight="80">
+    <group>
+        <clip-path android:pathData="M9,20A12,12 0,0 0,9 -4h119a12,12 0,0 1,12 12v64a12,12 0,0 1,-12 12H9A12,12 0,0 1,-3 72V8A12,12 0,0 0,9 20z" />
+        <path android:pathData="M8,4L128,4A4,4 0,0 1,132 8L132,72A4,4 0,0 1,128 76L8,76A4,4 0,0 1,4 72L4,8A4,4 0,0 1,8 4z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="-7.12"
+                    android:endY="53.64"
+                    android:startX="196.4"
+                    android:startY="16.2"
+                    android:type="linear">
+                    <item
+                        android:color="#FFFF9100"
+                        android:offset="0" />
+                    <item
+                        android:color="#FFF10366"
+                        android:offset="0.41" />
+                    <item
+                        android:color="#FF6173FF"
+                        android:offset="1" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+    <group>
+        <clip-path android:pathData="M9,20A12,12 0,0 0,9 -4h119a12,12 0,0 1,12 12v64a12,12 0,0 1,-12 12H9A12,12 0,0 1,-3 72V8A12,12 0,0 0,9 20z" />
+        <path
+            android:fillColor="#1c1b22"
+            android:pathData="M14,12h54a2,2 0,0 1,2 2v62H12V14a2,2 0,0 1,2 -2z" />
+        <path
+            android:fillColor="#fbfbfe"
+            android:pathData="M68,12h54a2,2 0,0 1,2 2v62H66V14a2,2 0,0 1,2 -2z" />
+    </group>
+    <path
+        android:fillColor="#32313c"
+        android:pathData="M22,55h92a1.93,1.93 0,0 1,2 1.88v12.24a1.93,1.93 0,0 1,-2 1.88H22a1.93,1.93 0,0 1,-2 -1.88V56.88A1.93,1.93 0,0 1,22 55z" />
+    <path
+        android:fillAlpha=".2"
+        android:fillColor="#32313c"
+        android:pathData="M114,55a1.93,1.93 0,0 1,2 1.88v12.24a1.93,1.93 0,0 1,-2 1.88H22a1.93,1.93 0,0 1,-2 -1.88V56.88A1.93,1.93 0,0 1,22 55h92m0,-1H22a2.94,2.94 0,0 0,-3 2.88v12.24A2.94,2.94 0,0 0,22 72h92a2.94,2.94 0,0 0,3 -2.88V56.88a2.94,2.94 0,0 0,-3 -2.88z" />
+    <path
+        android:fillColor="#32313c"
+        android:pathData="M32.86,67.14l-3,-3a3.81,3.81 0,1 0,-0.72 0.72l3,3a0.51,0.51 0,0 0,0.72 -0.72zM26.86,64.6a2.78,2.78 0,1 1,2.78 -2.78,2.78 2.78,0 0,1 -2.82,2.78z" />
+    <path
+        android:fillAlpha=".48"
+        android:fillColor="#32313c"
+        android:pathData="M46,33h26a2,2 0,0 1,2 2,2 2,0 0,1 -2,2H46a2,2 0,0 1,-2 -2,2 2,0 0,1 2,-2z" />
+    <path
+        android:fillAlpha="0.6"
+        android:fillColor="#32313c"
+        android:pathData="M117,27a1,1 0,1 0,-1 -1,1 1,0 0,0 1,1zM117,28a1,1 0,1 0,1 1,1 1,0 0,0 -1,-1zM117,31a1,1 0,1 0,1 1,1 1,0 0,0 -1,-1zM104.75,32c-1,0 -1.75,-1.25 -2.75,-1.25S100.22,32 99.25,32C98,32 97,30.78 97,28.7c0,-1.29 0.38,-1.7 2,-1.7s2.15,0.68 3,0.68 1.29,-0.68 3,-0.68 2.05,0.41 2,1.7c0,2.08 -1,3.3 -2.25,3.3zM99.86,28.59c-1,0 -1.43,0.64 -1.43,0.79s0.67,0.57 1.32,0.57 1.43,-0.24 1.43,-0.45a1.17,1.17 0,0 0,-1.32 -0.91zM104.14,28.59a1.18,1.18 0,0 0,-1.33 0.91c0,0.21 0.78,0.45 1.43,0.45s1.33,-0.42 1.33,-0.57 -0.42,-0.75 -1.43,-0.79z"
+        android:strokeAlpha="0.6" />
+    <path
+        android:fillAlpha="0.36"
+        android:fillColor="#32313c"
+        android:pathData="M111,15a2,2 0,1 1,-2 2,2 2,0 0,1 2,-2zM120,15l-2.5,4 -2.5,-4zM106,15v4h-4v-4z"
+        android:strokeAlpha="0.36" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M21.65,5a13,13 0,0 1,-3.46 12.19A13,13 0,0 1,5 20.37V72a3,3 0,0 0,3 3h120a3,3 0,0 0,3 -3V8a3,3 0,0 0,-3 -3z"
+        android:strokeWidth="2"
+        android:strokeAlpha=".16"
+        android:strokeColor="#20123a" />
+    <group>
+        <clip-path android:pathData="M9,20A12,12 0,0 0,9 -4h119a12,12 0,0 1,12 12v64a12,12 0,0 1,-12 12H9A12,12 0,0 1,-3 72V8A12,12 0,0 0,9 20z" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M8,2L128,2A6,6 0,0 1,134 8L134,72A6,6 0,0 1,128 78L8,78A6,6 0,0 1,2 72L2,8A6,6 0,0 1,8 2z"
+            android:strokeWidth="2"
+            android:strokeColor="@color/onboarding_illustration_color" />
+    </group>
+</vector>

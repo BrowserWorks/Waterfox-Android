@@ -259,7 +259,7 @@ fun SchemesList(
         if (booleanResource(R.bool.API28)) {
             SchemeItem(
                 name = stringResource(R.string.preference_follow_device_theme),
-                thumbnail = R.drawable.onboarding_dark_theme,
+                thumbnail = R.drawable.onboarding_system_theme,
                 selected = selectedMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM,
                 onValueChange = { onFollowDeviceThemeClick() },
             )
