@@ -21,6 +21,7 @@ import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
 import net.waterfox.android.browser.browsingmode.BrowsingModeManager
 import net.waterfox.android.ext.DEFAULT_ACTIVE_DAYS
+import net.waterfox.android.ext.settings
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.tabstray.ext.isActiveDownload
 import java.util.concurrent.TimeUnit
@@ -123,9 +124,33 @@ class DefaultTabsTrayController(
     override fun handleOpeningNewTab(isPrivate: Boolean) {
         val startTime = profiler?.getProfilerTime()
         browsingModeManager.mode = BrowsingMode.fromBoolean(isPrivate)
-        navController.navigate(
-            TabsTrayFragmentDirections.actionGlobalHome(focusOnAddressBar = true)
-        )
+
+        val settings = navController.context.settings()
+        if (settings.openTabShowHome) {
+            navController.navigate(
+                TabsTrayFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
+            )
+        } else {
+            val url = if (settings.openTabShowBlank) {
+                "about:blank"
+            } else {
+                val address = settings.openTabShowWebAddressValue
+                if (address.startsWith("http")) {
+                    address
+                } else {
+                    "https://$address"
+                }
+            }
+            val tab = tabsUseCases.addTab(
+                url,
+                selectTab = false,
+                startLoading = true,
+                parentId = null,
+                contextId = null,
+            )
+            tabsUseCases.selectTab(tab)
+        }
+
         navigationInteractor.onTabTrayDismissed()
         profiler?.addMarker(
             "DefaultTabTrayController.onNewTabTapped",

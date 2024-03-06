@@ -7,10 +7,15 @@ package net.waterfox.android.settings
 import android.content.Context
 import android.util.AttributeSet
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.AbstractComposeView
 import androidx.compose.ui.res.stringResource
 import net.waterfox.android.R
@@ -35,7 +40,12 @@ class TabsSettingsComposeView @JvmOverloads constructor(
     @Composable
     override fun Content() {
         WaterfoxTheme {
-            Column {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .imePadding(),
+            ) {
                 PreferenceCategory(
                     title = stringResource(R.string.preferences_tab_view),
                     allowDividerAbove = false,
@@ -96,6 +106,34 @@ class TabsSettingsComposeView @JvmOverloads constructor(
                         key = stringResource(R.string.pref_key_inactive_tabs),
                         defaultValue = true,
                         enabled = inactiveTabsCategoryEnabled,
+                    )
+                }
+
+                PreferenceCategory(
+                    title = stringResource(id = R.string.preferences_open_new_tab),
+                ) {
+                    RadioGroupPreference(
+                        items = listOf(
+                            RadioGroupItem(
+                                title = stringResource(id = R.string.preferences_open_new_tab_show_home),
+                                key = stringResource(R.string.pref_key_new_tab_show_home),
+                                defaultValue = true,
+                                onClick = {},
+                            ),
+                            RadioGroupItem(
+                                title = stringResource(id = R.string.preferences_open_new_tab_blank_tab),
+                                key = stringResource(R.string.pref_key_new_tab_blank),
+                                defaultValue = false,
+                                onClick = {},
+                            ),
+                            RadioGroupItem(
+                                title = "",
+                                key = stringResource(R.string.pref_key_new_tab_web_address),
+                                defaultValue = false,
+                                editable = true,
+                                onClick = {},
+                            ),
+                        ),
                     )
                 }
             }
