@@ -2,9 +2,12 @@
 <resources>
 
     <style name="WaterfoxThemeRed" parent="NormalThemeBase">
-        <item name="homeBackground">@drawable/theme_red_home_background_gradient</item>
-        <item name="bottomBarBackground">@drawable/theme_red_home_bottom_bar_background_gradient</item>
-        <item name="bottomBarBackgroundTop">@drawable/theme_red_home_bottom_bar_background_gradient_top</item>
+        <item name="toolbarStartGradient">@color/photonRed50</item>
+        <item name="toolbarCenterGradient">@color/photonRed60</item>
+        <item name="toolbarEndGradient">@color/photonRed70</item>
+        <item name="homeBackground">@drawable/theme_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_home_bottom_bar_background_gradient_top</item>
         <item name="colorControlActivated">@color/photonRed60</item>
         <item name="actionPrimary">@color/photonRed60</item>
         <item name="accent">@color/photonRed60</item>
@@ -20,9 +23,12 @@
     </style>
 
     <style name="WaterfoxThemeGreen" parent="NormalThemeBase">
-        <item name="homeBackground">@drawable/theme_green_home_background_gradient</item>
-        <item name="bottomBarBackground">@drawable/theme_green_home_bottom_bar_background_gradient</item>
-        <item name="bottomBarBackgroundTop">@drawable/theme_green_home_bottom_bar_background_gradient_top</item>
+        <item name="toolbarStartGradient">@color/photonGreen60</item>
+        <item name="toolbarCenterGradient">@color/photonGreen70</item>
+        <item name="toolbarEndGradient">@color/photonGreen80</item>
+        <item name="homeBackground">@drawable/theme_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_home_bottom_bar_background_gradient_top</item>
         <item name="colorControlActivated">@color/photonGreen70</item>
         <item name="actionPrimary">@color/photonGreen70</item>
         <item name="accent">@color/photonGreen70</item>
@@ -39,9 +45,12 @@
     </style>
 
     <style name="WaterfoxThemeBlue" parent="NormalThemeBase">
-        <item name="homeBackground">@drawable/theme_blue_home_background_gradient</item>
-        <item name="bottomBarBackground">@drawable/theme_blue_home_bottom_bar_background_gradient</item>
-        <item name="bottomBarBackgroundTop">@drawable/theme_blue_home_bottom_bar_background_gradient_top</item>
+        <item name="toolbarStartGradient">@color/photonBlue30</item>
+        <item name="toolbarCenterGradient">@color/photonBlue50</item>
+        <item name="toolbarEndGradient">@color/photonBlue70</item>
+        <item name="homeBackground">@drawable/theme_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_home_bottom_bar_background_gradient_top</item>
         <item name="colorControlActivated">@color/photonBlue50</item>
         <item name="actionPrimary">@color/photonBlue50</item>
         <item name="accent">@color/photonBlue50</item>
@@ -57,9 +66,12 @@
     </style>
 
     <style name="WaterfoxThemeYellow" parent="NormalThemeBase">
-        <item name="homeBackground">@drawable/theme_yellow_home_background_gradient</item>
-        <item name="bottomBarBackground">@drawable/theme_yellow_home_bottom_bar_background_gradient</item>
-        <item name="bottomBarBackgroundTop">@drawable/theme_yellow_home_bottom_bar_background_gradient_top</item>
+        <item name="toolbarStartGradient">@color/photonYellow30</item>
+        <item name="toolbarCenterGradient">@color/photonYellow50</item>
+        <item name="toolbarEndGradient">@color/photonYellow60</item>
+        <item name="homeBackground">@drawable/theme_home_background_gradient</item>
+        <item name="bottomBarBackground">@drawable/theme_home_bottom_bar_background_gradient</item>
+        <item name="bottomBarBackgroundTop">@drawable/theme_home_bottom_bar_background_gradient_top</item>
         <item name="colorControlActivated">@color/photonYellow40</item>
         <item name="actionPrimary">@color/photonYellow40</item>
         <item name="accent">@color/photonYellow40</item>
