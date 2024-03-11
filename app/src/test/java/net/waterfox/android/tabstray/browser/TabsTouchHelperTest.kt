@@ -11,26 +11,31 @@ import androidx.recyclerview.widget.ItemTouchHelper.Callback.makeMovementFlags
 import androidx.recyclerview.widget.RecyclerView
 import io.mockk.mockk
 import mozilla.components.support.test.robolectric.testContext
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.tabstray.viewholders.SyncedTabsPageViewHolder
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import net.waterfox.android.tabstray.viewholders.SyncedTabsPageViewHolder
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class TabsTouchHelperTest {
+
+    private val featureName = object : FeatureNameHolder {
+        override val featureName: String
+            get() = "featureName"
+    }
 
     @Test
     fun `movement flags remain unchanged if onSwipeToDelete is true`() {
         val recyclerView = RecyclerView(testContext)
         val layout = ComposeView(testContext)
         val viewHolder = SyncedTabsPageViewHolder(layout, mockk(), mockk())
-        val callback = TouchCallback(mockk(), { true }, { false })
+        val callback = TouchCallback(mockk(), { true }, { false }, featureName)
 
         assertEquals(0, callback.getDragDirs(recyclerView, viewHolder))
         assertEquals(
             ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT,
-            callback.getSwipeDirs(recyclerView, viewHolder)
+            callback.getSwipeDirs(recyclerView, viewHolder),
         )
 
         val actual = callback.getMovementFlags(recyclerView, viewHolder)
@@ -44,12 +49,12 @@ class TabsTouchHelperTest {
         val recyclerView = RecyclerView(testContext)
         val layout = ComposeView(testContext)
         val viewHolder = SyncedTabsPageViewHolder(layout, mockk(), mockk())
-        val callback = TouchCallback(mockk(), { false }, { false })
+        val callback = TouchCallback(mockk(), { false }, { false }, featureName)
 
         assertEquals(0, callback.getDragDirs(recyclerView, viewHolder))
         assertEquals(
             ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT,
-            callback.getSwipeDirs(recyclerView, viewHolder)
+            callback.getSwipeDirs(recyclerView, viewHolder),
         )
 
         val actual = callback.getMovementFlags(recyclerView, viewHolder)

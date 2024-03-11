@@ -14,7 +14,7 @@ import net.waterfox.android.tabstray.ext.browserAdapter
 class NormalBrowserTrayList @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
 ) : AbstractBrowserTrayList(context, attrs, defStyleAttr) {
 
     private val concatAdapter by lazy { adapter as ConcatAdapter }
@@ -29,7 +29,8 @@ class NormalBrowserTrayList @JvmOverloads constructor(
             onViewHolderTouched = {
                 it is TabViewHolder && swipeToDelete.isSwipeable
             },
-            onViewHolderDraw = { context.components.settings.gridTabView.not() }
+            onViewHolderDraw = { context.components.settings.gridTabView.not() },
+            featureNameHolder = concatAdapter.browserAdapter,
         )
     }
 

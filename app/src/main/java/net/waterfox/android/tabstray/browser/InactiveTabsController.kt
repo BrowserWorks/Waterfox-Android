@@ -5,13 +5,6 @@
 package net.waterfox.android.tabstray.browser
 
 import mozilla.components.browser.state.state.TabSessionState
-import mozilla.components.browser.state.store.BrowserStore
-import mozilla.components.feature.tabs.TabsUseCases
-import net.waterfox.android.components.AppStore
-import net.waterfox.android.components.appstate.AppAction
-import net.waterfox.android.components.appstate.AppAction.UpdateInactiveExpanded
-import net.waterfox.android.ext.potentialInactiveTabs
-import net.waterfox.android.utils.Settings
 
 /**
  * Contract for how all user interactions with the Inactive Tabs feature are to be handled.
@@ -19,87 +12,38 @@ import net.waterfox.android.utils.Settings
 interface InactiveTabsController {
 
     /**
-     * Opens the given inactive tab.
+     * Opens the provided inactive tab.
+     *
+     * @param tab [TabSessionState] that was clicked.
      */
-    fun openInactiveTab(tab: TabSessionState)
+    fun handleInactiveTabClicked(tab: TabSessionState)
 
     /**
-     * Closes the given inactive tab.
+     * Closes the provided inactive tab.
+     *
+     * @param tab [TabSessionState] that was clicked.
      */
-    fun closeInactiveTab(tab: TabSessionState)
+    fun handleCloseInactiveTabClicked(tab: TabSessionState)
 
     /**
-     * Updates the inactive card to be expanded to display all the tabs, or collapsed with only
-     * the title showing.
+     * Expands or collapses the inactive tabs section.
+     *
+     * @param expanded true when the tap should expand the inactive section.
      */
-    fun updateCardExpansion(isExpanded: Boolean)
+    fun handleInactiveTabsHeaderClicked(expanded: Boolean)
 
     /**
-     * Dismiss the auto-close dialog.
+     * Dismisses the inactive tabs auto-close dialog.
      */
-    fun dismissAutoCloseDialog()
+    fun handleInactiveTabsAutoCloseDialogDismiss()
 
     /**
-     * Enable the auto-close feature with the "after a month" setting.
+     * Enables the inactive tabs auto-close feature with a default time period.
      */
-    fun enableInactiveTabsAutoClose()
+    fun handleEnableInactiveTabsAutoCloseClicked()
 
     /**
-     * Delete all inactive tabs.
+     * Deletes all inactive tabs.
      */
-    fun deleteAllInactiveTabs()
-}
-
-/**
- * Default behavior for handling all user interactions with the Inactive Tabs feature.
- *
- * @param appStore [AppStore] used to dispatch any [AppAction].
- * @param settings [Settings] used to update any user preferences.
- * @param browserStore [BrowserStore] used to obtain all inactive tabs.
- * @param tabsUseCases [TabsUseCases] used to perform the deletion of all inactive tabs.
- * @param showUndoSnackbar Invoked when deleting all inactive tabs.
- */
-class DefaultInactiveTabsController(
-    private val appStore: AppStore,
-    private val settings: Settings,
-    private val browserStore: BrowserStore,
-    private val tabsUseCases: TabsUseCases,
-    private val showUndoSnackbar: (Boolean) -> Unit,
-) : InactiveTabsController {
-
-    override fun openInactiveTab(tab: TabSessionState) {
-    }
-
-    override fun closeInactiveTab(tab: TabSessionState) {
-    }
-
-    override fun updateCardExpansion(isExpanded: Boolean) {
-        appStore.dispatch(UpdateInactiveExpanded(isExpanded))
-    }
-
-    override fun dismissAutoCloseDialog() {
-        markDialogAsShown()
-    }
-
-    override fun enableInactiveTabsAutoClose() {
-        markDialogAsShown()
-        settings.closeTabsAfterOneMonth = true
-        settings.closeTabsAfterOneWeek = false
-        settings.closeTabsAfterOneDay = false
-        settings.manuallyCloseTabs = false
-    }
-
-    override fun deleteAllInactiveTabs() {
-        browserStore.state.potentialInactiveTabs.map { it.id }.let {
-            tabsUseCases.removeTabs(it)
-        }
-        showUndoSnackbar(false)
-    }
-
-    /**
-     * Marks the dialog as shown and to not be displayed again.
-     */
-    private fun markDialogAsShown() {
-        settings.hasInactiveTabsAutoCloseDialogBeenDismissed = true
-    }
+    fun handleDeleteAllInactiveTabsClicked()
 }

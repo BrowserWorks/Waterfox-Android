@@ -8,6 +8,7 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import mozilla.components.lib.state.helpers.AbstractBinding
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
@@ -23,14 +24,14 @@ class SecureTabsTrayBinding(
     store: TabsTrayStore,
     private val settings: Settings,
     private val fragment: Fragment,
-    private val dialog: TabsTrayDialog
+    private val dialog: TabsTrayDialog,
 ) : AbstractBinding<TabsTrayState>(store) {
 
     override suspend fun onState(flow: Flow<TabsTrayState>) {
         flow.map { it }
             .ifAnyChanged { state ->
                 arrayOf(
-                    state.selectedPage
+                    state.selectedPage,
                 )
             }
             .collect { state ->

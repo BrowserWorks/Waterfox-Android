@@ -19,7 +19,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import net.waterfox.android.R
-import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
+import net.waterfox.android.tabstray.browser.TabsTrayFabInteractor
 
 class FloatingActionButtonBindingTest {
 
@@ -28,7 +28,7 @@ class FloatingActionButtonBindingTest {
     val coroutinesTestRule = MainCoroutineRule()
 
     private val actionButton: ExtendedFloatingActionButton = mockk(relaxed = true)
-    private val browserTrayInteractor: BrowserTrayInteractor = mockk(relaxed = true)
+    private val interactor: TabsTrayFabInteractor = mockk(relaxed = true)
 
     @Before
     fun setup() {
@@ -45,7 +45,10 @@ class FloatingActionButtonBindingTest {
     fun `WHEN tab selected page is normal tab THEN shrink and show is called`() {
         val tabsTrayStore = TabsTrayStore(TabsTrayState(selectedPage = Page.NormalTabs))
         val fabBinding = FloatingActionButtonBinding(
-            tabsTrayStore, actionButton, browserTrayInteractor
+            tabsTrayStore,
+            actionButton,
+            interactor,
+            true,
         )
 
         fabBinding.start()
@@ -60,7 +63,10 @@ class FloatingActionButtonBindingTest {
     fun `WHEN tab selected page is private tab THEN extend and show is called`() {
         val tabsTrayStore = TabsTrayStore(TabsTrayState(selectedPage = Page.PrivateTabs))
         val fabBinding = FloatingActionButtonBinding(
-            tabsTrayStore, actionButton, browserTrayInteractor
+            tabsTrayStore,
+            actionButton,
+            interactor,
+            true,
         )
 
         fabBinding.start()
@@ -75,7 +81,10 @@ class FloatingActionButtonBindingTest {
     fun `WHEN tab selected page is sync tab THEN extend and show is called`() {
         val tabsTrayStore = TabsTrayStore(TabsTrayState(selectedPage = Page.SyncedTabs))
         val fabBinding = FloatingActionButtonBinding(
-            tabsTrayStore, actionButton, browserTrayInteractor
+            tabsTrayStore,
+            actionButton,
+            interactor,
+            true,
         )
 
         fabBinding.start()
@@ -87,10 +96,31 @@ class FloatingActionButtonBindingTest {
     }
 
     @Test
+    fun `GIVEN the selected tab page is sync WHEN the user is not signed in THEN extend and show is called`() {
+        val tabsTrayStore = TabsTrayStore(TabsTrayState(selectedPage = Page.SyncedTabs))
+        val fabBinding = FloatingActionButtonBinding(
+            tabsTrayStore,
+            actionButton,
+            interactor,
+            false,
+        )
+
+        fabBinding.start()
+
+        verify(exactly = 0) { actionButton.extend() }
+        verify(exactly = 0) { actionButton.show() }
+        verify(exactly = 0) { actionButton.shrink() }
+        verify(exactly = 1) { actionButton.hide() }
+    }
+
+    @Test
     fun `WHEN selected page is updated THEN button is updated`() {
         val tabsTrayStore = TabsTrayStore(TabsTrayState(selectedPage = Page.NormalTabs))
         val fabBinding = FloatingActionButtonBinding(
-            tabsTrayStore, actionButton, browserTrayInteractor
+            tabsTrayStore,
+            actionButton,
+            interactor,
+            true,
         )
 
         fabBinding.start()

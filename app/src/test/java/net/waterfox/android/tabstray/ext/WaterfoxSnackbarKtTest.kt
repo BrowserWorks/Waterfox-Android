@@ -9,13 +9,16 @@ import android.view.View
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verifyOrder
-import org.junit.Rule
-import org.junit.Test
 import net.waterfox.android.R
 import net.waterfox.android.components.WaterfoxSnackbar
 import net.waterfox.android.helpers.MockkRetryTestRule
+import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.tabstray.TabsTrayFragment.Companion.ELEVATION
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
 
+@RunWith(WaterfoxRobolectricTestRunner::class)
 class WaterfoxSnackbarKtTest {
 
     @get:Rule

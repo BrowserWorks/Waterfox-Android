@@ -26,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,8 +40,8 @@ import net.waterfox.android.compose.button.PrimaryButton
 import net.waterfox.android.compose.ext.dashedBorder
 import net.waterfox.android.compose.list.ExpandableListHeader
 import net.waterfox.android.compose.list.FaviconListItem
+import net.waterfox.android.tabstray.TabsTrayTestTag
 import net.waterfox.android.theme.WaterfoxTheme
-import net.waterfox.android.theme.Theme
 import mozilla.components.browser.storage.sync.Tab as SyncTab
 
 private const val EXPANDED_BY_DEFAULT = true
@@ -49,7 +50,6 @@ private const val EXPANDED_BY_DEFAULT = true
  * Top-level list UI for displaying Synced Tabs in the Tabs Tray.
  *
  * @param syncedTabs The tab UI items to be displayed.
- * @param taskContinuityEnabled Indicates whether the Task Continuity enhancements should be visible for users.
  * @param onTabClick The lambda for handling clicks on synced tabs.
  */
 @SuppressWarnings("LongMethod")
@@ -57,7 +57,6 @@ private const val EXPANDED_BY_DEFAULT = true
 @Composable
 fun SyncedTabsList(
     syncedTabs: List<SyncedTabsListItem>,
-    taskContinuityEnabled: Boolean,
     onTabClick: (SyncTab) -> Unit,
 ) {
     val listState = rememberLazyListState()
@@ -65,73 +64,51 @@ fun SyncedTabsList(
         remember(syncedTabs) { syncedTabs.map { EXPANDED_BY_DEFAULT }.toMutableStateList() }
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .testTag(TabsTrayTestTag.syncedTabsList),
         state = listState,
     ) {
-        if (taskContinuityEnabled) {
-            syncedTabs.forEachIndexed { index, syncedTabItem ->
-                when (syncedTabItem) {
-                    is SyncedTabsListItem.DeviceSection -> {
-                        val sectionExpanded = expandedState[index]
+        syncedTabs.forEachIndexed { index, syncedTabItem ->
+            when (syncedTabItem) {
+                is SyncedTabsListItem.DeviceSection -> {
+                    val sectionExpanded = expandedState[index]
 
-                        stickyHeader {
-                            SyncedTabsSectionHeader(
-                                headerText = syncedTabItem.displayName,
-                                expanded = sectionExpanded,
-                            ) {
-                                expandedState[index] = !sectionExpanded
-                            }
-                        }
-
-                        if (sectionExpanded) {
-                            if (syncedTabItem.tabs.isNotEmpty()) {
-                                items(syncedTabItem.tabs) { syncedTab ->
-                                    FaviconListItem(
-                                        label = syncedTab.displayTitle,
-                                        description = syncedTab.displayURL,
-                                        url = syncedTab.displayURL,
-                                        onClick = { onTabClick(syncedTab.tab) },
-                                    )
-                                }
-                            } else {
-                                item { SyncedTabsNoTabsItem() }
-                            }
+                    stickyHeader {
+                        SyncedTabsSectionHeader(
+                            headerText = syncedTabItem.displayName,
+                            expanded = sectionExpanded,
+                        ) {
+                            expandedState[index] = !sectionExpanded
                         }
                     }
 
-                    is SyncedTabsListItem.Error -> {
-                        item {
-                            SyncedTabsErrorItem(
-                                errorText = syncedTabItem.errorText,
-                                errorButton = syncedTabItem.errorButton
-                            )
+                    if (sectionExpanded) {
+                        if (syncedTabItem.tabs.isNotEmpty()) {
+                            items(syncedTabItem.tabs) { syncedTab ->
+                                FaviconListItem(
+                                    label = syncedTab.displayTitle,
+                                    description = syncedTab.displayURL,
+                                    url = syncedTab.displayURL,
+                                    onClick = { onTabClick(syncedTab.tab) },
+                                )
+                            }
+                        } else {
+                            item { SyncedTabsNoTabsItem() }
                         }
-                    }
-                    else -> {
-                        // no-op
                     }
                 }
-            }
-        } else {
-            items(syncedTabs) { syncedTabItem ->
-                when (syncedTabItem) {
-                    is SyncedTabsListItem.Device -> SyncedTabsSectionHeader(headerText = syncedTabItem.displayName)
-                    is SyncedTabsListItem.Error -> SyncedTabsErrorItem(
-                        errorText = syncedTabItem.errorText,
-                        errorButton = syncedTabItem.errorButton
-                    )
-                    is SyncedTabsListItem.NoTabs -> SyncedTabsNoTabsItem()
-                    is SyncedTabsListItem.Tab -> {
-                        FaviconListItem(
-                            label = syncedTabItem.displayTitle,
-                            description = syncedTabItem.displayURL,
-                            url = syncedTabItem.displayURL,
-                            onClick = { onTabClick(syncedTabItem.tab) },
+
+                is SyncedTabsListItem.Error -> {
+                    item {
+                        SyncedTabsErrorItem(
+                            errorText = syncedTabItem.errorText,
+                            errorButton = syncedTabItem.errorButton,
                         )
                     }
-                    else -> {
-                        // no-op
-                    }
+                }
+                else -> {
+                    // no-op
                 }
             }
         }
@@ -160,7 +137,7 @@ fun SyncedTabsSectionHeader(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(WaterfoxTheme.colors.layer1)
+            .background(WaterfoxTheme.colors.layer1),
     ) {
         ExpandableListHeader(
             headerText = headerText,
@@ -183,7 +160,7 @@ fun SyncedTabsSectionHeader(
 @Composable
 fun SyncedTabsErrorItem(
     errorText: String,
-    errorButton: SyncedTabsListItem.ErrorButton? = null
+    errorButton: SyncedTabsListItem.ErrorButton? = null,
 ) {
     Box(
         Modifier
@@ -193,19 +170,19 @@ fun SyncedTabsErrorItem(
                 color = WaterfoxTheme.colors.borderPrimary,
                 cornerRadius = 8.dp,
                 dashHeight = 2.dp,
-                dashWidth = 4.dp
-            )
+                dashWidth = 4.dp,
+            ),
     ) {
         Column(
             Modifier
                 .padding(all = 16.dp)
-                .fillMaxWidth()
+                .fillMaxWidth(),
         ) {
             Text(
                 text = errorText,
                 color = WaterfoxTheme.colors.textPrimary,
                 modifier = Modifier.fillMaxWidth(),
-                fontSize = 14.sp
+                fontSize = 14.sp,
             )
 
             errorButton?.let {
@@ -233,14 +210,14 @@ fun SyncedTabsNoTabsItem() {
             .padding(horizontal = 16.dp, vertical = 8.dp)
             .fillMaxWidth(),
         fontSize = 16.sp,
-        maxLines = 1
+        maxLines = 1,
     )
 }
 
 @Composable
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 private fun SyncedTabsListItemsPreview() {
-    WaterfoxTheme(theme = Theme.getTheme()) {
+    WaterfoxTheme {
         Column(Modifier.background(WaterfoxTheme.colors.layer1)) {
             SyncedTabsSectionHeader(headerText = "Google Pixel Pro Max +Ultra 5000")
 
@@ -276,12 +253,12 @@ private fun SyncedTabsListItemsPreview() {
 @Composable
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 private fun SyncedTabsErrorPreview() {
-    WaterfoxTheme(theme = Theme.getTheme()) {
+    WaterfoxTheme {
         Box(Modifier.background(WaterfoxTheme.colors.layer1)) {
             SyncedTabsErrorItem(
                 errorText = stringResource(R.string.synced_tabs_no_tabs),
                 errorButton = SyncedTabsListItem.ErrorButton(
-                    buttonText = stringResource(R.string.synced_tabs_sign_in_button)
+                    buttonText = stringResource(R.string.synced_tabs_sign_in_button),
                 ) {
                     println("SyncedTabsErrorButton click")
                 },
@@ -293,11 +270,10 @@ private fun SyncedTabsErrorPreview() {
 @Composable
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 private fun SyncedTabsListPreview() {
-    WaterfoxTheme(theme = Theme.getTheme()) {
+    WaterfoxTheme {
         Box(Modifier.background(WaterfoxTheme.colors.layer1)) {
             SyncedTabsList(
                 syncedTabs = getFakeSyncedTabList(),
-                taskContinuityEnabled = true,
             ) {
                 println("Tab clicked")
             }
@@ -316,7 +292,7 @@ internal fun getFakeSyncedTabList(): List<SyncedTabsListItem> = listOf(
             generateFakeTab("Mozilla", "www.mozilla.org"),
             generateFakeTab("Google", "www.google.com"),
             generateFakeTab("", "www.google.com"),
-        )
+        ),
     ),
     SyncedTabsListItem.DeviceSection("Device 2", emptyList()),
     SyncedTabsListItem.Error("Please re-authenticate"),
@@ -333,5 +309,5 @@ private fun generateFakeTab(tabName: String, tabUrl: String): SyncedTabsListItem
             history = listOf(TabEntry(tabName, tabUrl, null)),
             active = 0,
             lastUsed = 0L,
-        )
+        ),
     )

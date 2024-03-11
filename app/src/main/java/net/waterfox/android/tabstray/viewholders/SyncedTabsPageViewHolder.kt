@@ -8,8 +8,7 @@ import android.view.View
 import androidx.compose.ui.platform.ComposeView
 import androidx.recyclerview.widget.RecyclerView
 import mozilla.components.lib.state.ext.observeAsComposableState
-import net.waterfox.android.ext.settings
-import net.waterfox.android.tabstray.NavigationInteractor
+import net.waterfox.android.tabstray.SyncedTabsInteractor
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
 import net.waterfox.android.tabstray.syncedtabs.SyncedTabsList
@@ -21,12 +20,12 @@ import net.waterfox.android.theme.Theme
  *
  * @param composeView Root ComposeView passed-in from TrayPagerAdapter.
  * @param tabsTrayStore Store used as a Composable State to listen for changes to [TabsTrayState.syncedTabs].
- * @param navigationInteractor The lambda for handling clicks on synced tabs.
+ * @param interactor [SyncedTabsInteractor] used to respond to interactions with synced tabs.
  */
 class SyncedTabsPageViewHolder(
     private val composeView: ComposeView,
     private val tabsTrayStore: TabsTrayStore,
-    private val navigationInteractor: NavigationInteractor,
+    private val interactor: SyncedTabsInteractor,
 ) : AbstractPageViewHolder(composeView) {
 
     fun bind() {
@@ -35,8 +34,7 @@ class SyncedTabsPageViewHolder(
             WaterfoxTheme(theme = Theme.getTheme(allowPrivateTheme = false)) {
                 SyncedTabsList(
                     syncedTabs = tabs ?: emptyList(),
-                    taskContinuityEnabled = composeView.context.settings().enableTaskContinuityEnhancements,
-                    onTabClick = navigationInteractor::onSyncedTabClicked,
+                    onTabClick = interactor::onSyncedTabClicked,
                 )
             }
         }

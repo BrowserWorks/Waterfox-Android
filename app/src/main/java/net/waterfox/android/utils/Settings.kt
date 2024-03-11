@@ -1187,6 +1187,8 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = setOf()
     )
 
+    val enableTabsTrayToCompose = true
+
     /**
      * Get the current mode for how https-only is enabled.
      */

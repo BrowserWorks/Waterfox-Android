@@ -27,14 +27,14 @@ private const val NORMAL_HANDLE_PERCENT_WIDTH = 0.1F
  * between [Mode].
  *
  * @param store The TabsTrayStore instance.
- * @property handle The "handle" of the Tabs Tray that is used to drag the tray open/close.
- * @property containerLayout The [ConstraintLayout] that contains the "handle".
+ * @param handle The "handle" of the Tabs Tray that is used to drag the tray open/close.
+ * @param containerLayout The [ConstraintLayout] that contains the "handle".
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 class SelectionHandleBinding(
     store: TabsTrayStore,
     private val handle: View,
-    private val containerLayout: ConstraintLayout
+    private val containerLayout: ConstraintLayout,
 ) : AbstractBinding<TabsTrayState>(store) {
 
     private var isPreviousModeSelect = false
@@ -65,14 +65,14 @@ class SelectionHandleBinding(
                     R.dimen.tab_tray_multiselect_handle_height
                 } else {
                     R.dimen.bottom_sheet_handle_height
-                }
+                },
             )
             topMargin = handle.resources.getDimensionPixelSize(
                 if (multiselect) {
                     R.dimen.tab_tray_multiselect_handle_top_margin
                 } else {
                     R.dimen.bottom_sheet_handle_top_margin
-                }
+                },
             )
         }
     }
@@ -92,7 +92,7 @@ class SelectionHandleBinding(
     private fun updateWidthPercent(
         container: ConstraintLayout,
         handle: View,
-        multiselect: Boolean
+        multiselect: Boolean,
     ) {
         val widthPercent = if (multiselect) 1F else NORMAL_HANDLE_PERCENT_WIDTH
         container.run {

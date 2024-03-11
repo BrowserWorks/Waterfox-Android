@@ -19,7 +19,7 @@ class ContextKtTest {
 
     @Test
     fun `WHEN screen density is very low THEN numberOfGridColumns will still be a minimum of 2`() {
-        mockkStatic("net.waterfox.android.tabstray.ext.ContextKt")
+        mockkStatic("org.mozilla.fenix.tabstray.ext.ContextKt")
 
         val context = mockk<Context>()
         val resources = mockk<Resources>()
@@ -34,6 +34,6 @@ class ContextKtTest {
 
         assertEquals(2, result)
 
-        unmockkStatic("net.waterfox.android.tabstray.ext.ContextKt")
+        unmockkStatic("org.mozilla.fenix.tabstray.ext.ContextKt")
     }
 }

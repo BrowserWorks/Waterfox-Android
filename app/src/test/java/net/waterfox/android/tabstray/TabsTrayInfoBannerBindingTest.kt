@@ -8,6 +8,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.coordinatorlayout.widget.CoordinatorLayout
+import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -21,6 +22,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.tabstray.TabsTrayInfoBannerBinding.Companion.TAB_COUNT_SHOW_CFR
 import net.waterfox.android.utils.Settings
@@ -43,6 +45,8 @@ class TabsTrayInfoBannerBindingTest {
         view = CoordinatorLayout(testContext)
         interactor = mockk(relaxed = true)
         settings = Settings(testContext)
+
+        every { testContext.components.settings } returns settings
     }
 
     @Test
@@ -55,7 +59,7 @@ class TabsTrayInfoBannerBindingTest {
                 store = store,
                 infoBannerView = view,
                 settings = settings,
-                navigationInteractor = interactor
+                navigationInteractor = interactor,
             )
 
         binding.start()
@@ -82,7 +86,7 @@ class TabsTrayInfoBannerBindingTest {
                 store = store,
                 infoBannerView = view,
                 settings = settings,
-                navigationInteractor = interactor
+                navigationInteractor = interactor,
             )
 
         binding.start()

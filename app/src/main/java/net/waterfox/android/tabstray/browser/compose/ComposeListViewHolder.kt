@@ -9,37 +9,32 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.LifecycleOwner
 import kotlinx.coroutines.flow.MutableStateFlow
 import mozilla.components.browser.state.state.TabSessionState
 import mozilla.components.browser.tabstray.TabsTray
 import mozilla.components.browser.tabstray.TabsTrayStyling
 import mozilla.components.lib.state.ext.observeAsComposableState
-import net.waterfox.android.R
 import net.waterfox.android.components.components
 import net.waterfox.android.compose.tabstray.TabListItem
-import net.waterfox.android.selection.SelectionHolder
+import net.waterfox.android.tabstray.TabsTrayInteractor
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
-import net.waterfox.android.tabstray.browser.BrowserTrayInteractor
-import kotlin.math.max
 
 /**
  * A Compose ViewHolder implementation for "tab" items with list layout.
  *
- * @param interactor [BrowserTrayInteractor] handling tabs interactions in a tab tray.
+ * @param interactor [TabsTrayInteractor] handling tabs interactions in a tab tray.
  * @param tabsTrayStore [TabsTrayStore] containing the complete state of tabs tray and methods to update that.
- * @param selectionHolder [SelectionHolder]<[TabSessionState]> for helping with selecting
- * any number of displayed [TabSessionState]s.
  * @param composeItemView that displays a "tab".
+ * @param featureName [String] representing the name of the feature displaying tabs. Used in telemetry reporting.
  * @param viewLifecycleOwner [LifecycleOwner] to which this Composable will be tied to.
  */
 class ComposeListViewHolder(
-    private val interactor: BrowserTrayInteractor,
+    private val interactor: TabsTrayInteractor,
     private val tabsTrayStore: TabsTrayStore,
-    private val selectionHolder: SelectionHolder<TabSessionState>? = null,
     composeItemView: ComposeView,
+    private val featureName: String,
     viewLifecycleOwner: LifecycleOwner,
 ) : ComposeAbstractTabViewHolder(composeItemView, viewLifecycleOwner) {
 
@@ -53,7 +48,7 @@ class ComposeListViewHolder(
         tab: TabSessionState,
         isSelected: Boolean,
         styling: TabsTrayStyling,
-        delegate: TabsTray.Delegate
+        delegate: TabsTray.Delegate,
     ) {
         this.tab = tab
         this.delegate = delegate
@@ -70,39 +65,25 @@ class ComposeListViewHolder(
     }
 
     private fun onCloseClicked(tab: TabSessionState) {
-        delegate?.onTabClosed(tab)
+        delegate?.onTabClosed(tab, featureName)
     }
 
     private fun onClick(tab: TabSessionState) {
-        val holder = selectionHolder
-        if (holder != null) {
-            interactor.onMultiSelectClicked(tab, holder, null)
-        } else {
-            interactor.onTabSelected(tab)
-        }
-    }
-
-    private fun onLongClick(tab: TabSessionState) {
-        val holder = selectionHolder ?: return
-        interactor.onLongClicked(tab, holder)
+        interactor.onTabSelected(tab, featureName)
     }
 
     @Composable
     override fun Content(tab: TabSessionState) {
-        val multiSelectionEnabled = tabsTrayStore.observeAsComposableState { state ->
+        val multiSelectionEnabled = tabsTrayStore.observeAsComposableState {
+                state ->
             state.mode is TabsTrayState.Mode.Select
         }.value ?: false
         val isSelectedTabState by isSelectedTab.collectAsState()
         val multiSelectionSelected by isMultiSelectionSelected.collectAsState()
 
-        val tabThumbnailSize = max(
-            LocalContext.current.resources.getDimensionPixelSize(R.dimen.tab_tray_list_item_thumbnail_height),
-            LocalContext.current.resources.getDimensionPixelSize(R.dimen.tab_tray_list_item_thumbnail_width),
-        )
-
         TabListItem(
             tab = tab,
-            thumbnailSize = tabThumbnailSize,
+            thumbnailSize = 108,
             storage = components.core.thumbnailStorage,
             isSelected = isSelectedTabState,
             multiSelectionEnabled = multiSelectionEnabled,
@@ -110,7 +91,6 @@ class ComposeListViewHolder(
             onCloseClick = ::onCloseClicked,
             onMediaClick = interactor::onMediaClicked,
             onClick = ::onClick,
-            onLongClick = ::onLongClick,
         )
     }
 
