@@ -25,7 +25,7 @@ import net.waterfox.android.theme.Theme
  */
 abstract class ComposeAbstractTabViewHolder(
     private val composeView: ComposeView,
-    private val viewLifecycleOwner: LifecycleOwner
+    private val viewLifecycleOwner: LifecycleOwner,
 ) : SelectableTabViewHolder(composeView) {
 
     /**

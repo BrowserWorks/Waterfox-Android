@@ -15,7 +15,6 @@ import mozilla.components.service.fxa.manager.FxaAccountManager
 import mozilla.components.support.base.feature.LifecycleAwareFeature
 import mozilla.components.support.base.observer.Observable
 import mozilla.components.support.base.observer.ObserverRegistry
-import net.waterfox.android.ext.settings
 import net.waterfox.android.tabstray.FloatingActionButtonBinding
 import net.waterfox.android.tabstray.TabsTrayAction
 import net.waterfox.android.tabstray.TabsTrayStore
@@ -25,7 +24,7 @@ import net.waterfox.android.tabstray.ext.toSyncedTabsListItem
 /**
  * TabsTrayFragment delegate to handle all layout updates needed to display synced tabs and any errors.
  *
- * @param store [TabsTrayStore]
+ * @param store An instance of [TabsTrayStore] used to manage the tabs tray state.
  * @param context Fragment context.
  * @param navController The controller used to handle any navigation necessary for error scenarios.
  * @param storage An instance of [SyncedTabsStorage] used for retrieving synced tabs.
@@ -53,7 +52,7 @@ class SyncedTabsIntegration(
             onTabClicked = {
                 // We can ignore this callback here because we're not connecting the Compose UI
                 // back to the feature.
-            }
+            },
         )
     }
 
@@ -92,10 +91,8 @@ class SyncedTabsIntegration(
     override fun displaySyncedTabs(syncedTabs: List<SyncedDeviceTabs>) {
         store.dispatch(
             TabsTrayAction.UpdateSyncedTabs(
-                syncedTabs.toComposeList(
-                    context.settings().enableTaskContinuityEnhancements
-                )
-            )
+                syncedTabs.toComposeList(),
+            ),
         )
     }
 }

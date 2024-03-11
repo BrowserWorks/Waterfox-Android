@@ -11,7 +11,7 @@ import net.waterfox.android.tabstray.TabsTrayFragment.Companion.ELEVATION
 
 internal fun WaterfoxSnackbar.collectionMessage(
     tabSize: Int,
-    isNewCollection: Boolean = false
+    isNewCollection: Boolean = false,
 ): WaterfoxSnackbar {
     val stringRes = when {
         isNewCollection -> {
@@ -29,7 +29,7 @@ internal fun WaterfoxSnackbar.collectionMessage(
 }
 
 internal fun WaterfoxSnackbar.bookmarkMessage(
-    tabSize: Int
+    tabSize: Int,
 ): WaterfoxSnackbar {
     val stringRes = when {
         tabSize > 1 -> {
@@ -45,7 +45,7 @@ internal fun WaterfoxSnackbar.bookmarkMessage(
 
 internal inline fun WaterfoxSnackbar.anchorWithAction(
     anchor: View?,
-    crossinline action: () -> Unit
+    crossinline action: () -> Unit,
 ): WaterfoxSnackbar {
     anchorView = anchor
     view.elevation = ELEVATION
@@ -60,5 +60,5 @@ internal inline fun WaterfoxSnackbar.anchorWithAction(
 internal fun WaterfoxSnackbar.Companion.make(view: View) = make(
     duration = LENGTH_LONG,
     isDisplayedWithBrowserToolbar = true,
-    view = view
+    view = view,
 )

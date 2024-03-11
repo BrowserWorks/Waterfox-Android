@@ -21,6 +21,7 @@ import net.waterfox.android.tabstray.syncedtabs.SyncedTabsListItem
  * @property inactiveTabs The list of tabs are considered inactive.
  * @property normalTabs The list of normal tabs that do not fall under [inactiveTabs].
  * @property privateTabs The list of tabs that are [ContentState.private].
+ * @property syncedTabs The list of synced tabs.
  * @property syncing Whether the Synced Tabs feature should fetch the latest tabs from paired devices.
  */
 data class TabsTrayState(
@@ -74,7 +75,9 @@ enum class Page {
     /**
      * The pager position that displays Synced Tabs.
      */
-    SyncedTabs;
+    SyncedTabs,
+
+    ;
 
     companion object {
         fun positionToPage(position: Int): Page {
@@ -168,7 +171,7 @@ internal object TabsTrayReducer {
                         TabsTrayState.Mode.Normal
                     } else {
                         TabsTrayState.Mode.Select(selected)
-                    }
+                    },
                 )
             }
             is TabsTrayAction.PageSelected ->
@@ -195,9 +198,9 @@ internal object TabsTrayReducer {
  */
 class TabsTrayStore(
     initialState: TabsTrayState = TabsTrayState(),
-    middlewares: List<Middleware<TabsTrayState, TabsTrayAction>> = emptyList()
+    middlewares: List<Middleware<TabsTrayState, TabsTrayAction>> = emptyList(),
 ) : Store<TabsTrayState, TabsTrayAction>(
     initialState,
     TabsTrayReducer::reduce,
-    middlewares
+    middlewares,
 )

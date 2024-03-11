@@ -45,7 +45,6 @@ import net.waterfox.android.compose.list.FaviconListItem
 import net.waterfox.android.ext.toShortUrl
 import net.waterfox.android.tabstray.ext.toDisplayTitle
 import net.waterfox.android.theme.WaterfoxTheme
-import net.waterfox.android.theme.Theme
 
 private val ROUNDED_CORNER_SHAPE = RoundedCornerShape(8.dp)
 
@@ -68,7 +67,7 @@ fun InactiveTabsList(
     inactiveTabs: List<TabSessionState>,
     expanded: Boolean,
     showAutoCloseDialog: Boolean,
-    onHeaderClick: () -> Unit,
+    onHeaderClick: (Boolean) -> Unit,
     onDeleteAllButtonClick: () -> Unit,
     onAutoCloseDismissClick: () -> Unit,
     onEnableAutoCloseClick: () -> Unit,
@@ -85,11 +84,11 @@ fun InactiveTabsList(
         ),
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
         ) {
             InactiveTabsHeader(
                 expanded = expanded,
-                onClick = onHeaderClick,
+                onClick = { onHeaderClick(!expanded) },
                 onDeleteAllClick = onDeleteAllButtonClick,
             )
 
@@ -115,7 +114,7 @@ fun InactiveTabsList(
                             faviconPainter = faviconPainter,
                             onClick = { onTabClick(tab) },
                             url = tabUrl,
-                            iconPainter = painterResource(R.drawable.mozac_ic_cross_20),
+                            iconPainter = painterResource(R.drawable.mozac_ic_cross_24),
                             iconDescription = stringResource(R.string.content_description_close_button),
                             onIconClick = { onTabCloseClick(tab) },
                         )
@@ -195,12 +194,12 @@ private fun InactiveTabsAutoClosePrompt(
                     text = stringResource(R.string.tab_tray_inactive_auto_close_title),
                     color = WaterfoxTheme.colors.textPrimary,
                     modifier = Modifier.weight(1f),
-                    style = WaterfoxTheme.typography.headline8
+                    style = WaterfoxTheme.typography.headline8,
                 )
 
                 IconButton(
                     onClick = onDismissClick,
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier.size(20.dp),
                 ) {
                     Icon(
                         painter = painterResource(R.drawable.mozac_ic_cross_20),
@@ -214,7 +213,7 @@ private fun InactiveTabsAutoClosePrompt(
             Text(
                 text = stringResource(
                     R.string.tab_tray_inactive_auto_close_body_2,
-                    stringResource(R.string.app_name)
+                    stringResource(R.string.app_name),
                 ),
                 color = WaterfoxTheme.colors.textSecondary,
                 modifier = Modifier.fillMaxWidth(),
@@ -233,7 +232,7 @@ private fun InactiveTabsAutoClosePrompt(
 @Preview(name = "Auto close dialog dark", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Preview(name = "Auto close dialog light", uiMode = Configuration.UI_MODE_NIGHT_NO)
 private fun InactiveTabsAutoClosePromptPreview() {
-    WaterfoxTheme(theme = Theme.getTheme()) {
+    WaterfoxTheme {
         Box(Modifier.background(WaterfoxTheme.colors.layer1)) {
             InactiveTabsAutoClosePrompt(
                 onDismissClick = {},
@@ -250,7 +249,7 @@ private fun InactiveTabsListPreview() {
     var expanded by remember { mutableStateOf(true) }
     var showAutoClosePrompt by remember { mutableStateOf(true) }
 
-    WaterfoxTheme(theme = Theme.getTheme()) {
+    WaterfoxTheme {
         Box(Modifier.background(WaterfoxTheme.colors.layer1)) {
             InactiveTabsList(
                 inactiveTabs = generateFakeInactiveTabsList(),
@@ -273,12 +272,12 @@ private fun generateFakeInactiveTabsList(): List<TabSessionState> =
             id = "tabId",
             content = ContentState(
                 url = "www.mozilla.com",
-            )
+            ),
         ),
         TabSessionState(
             id = "tabId",
             content = ContentState(
                 url = "www.google.com",
-            )
+            ),
         ),
     )

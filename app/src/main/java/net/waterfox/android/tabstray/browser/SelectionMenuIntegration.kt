@@ -7,17 +7,11 @@ package net.waterfox.android.tabstray.browser
 import android.content.Context
 import androidx.annotation.VisibleForTesting
 import mozilla.components.browser.menu.BrowserMenuBuilder
-import net.waterfox.android.tabstray.NavigationInteractor
-import net.waterfox.android.tabstray.TabsTrayAction
 import net.waterfox.android.tabstray.TabsTrayInteractor
-import net.waterfox.android.tabstray.TabsTrayStore
-import net.waterfox.android.utils.Do
 
 class SelectionMenuIntegration(
     private val context: Context,
-    private val store: TabsTrayStore,
-    private val navInteractor: NavigationInteractor,
-    private val trayInteractor: TabsTrayInteractor
+    private val interactor: TabsTrayInteractor,
 ) {
     private val menu by lazy {
         SelectionMenu(context, ::handleMenuClicked)
@@ -30,17 +24,16 @@ class SelectionMenuIntegration(
 
     @VisibleForTesting
     internal fun handleMenuClicked(item: SelectionMenu.Item) {
-        Do exhaustive when (item) {
+        when (item) {
             is SelectionMenu.Item.BookmarkTabs -> {
-                navInteractor.onSaveToBookmarks(store.state.mode.selectedTabs)
+                interactor.onBookmarkSelectedTabsClicked()
             }
             is SelectionMenu.Item.DeleteTabs -> {
-                trayInteractor.onDeleteTabs(store.state.mode.selectedTabs)
+                interactor.onDeleteSelectedTabsClicked()
             }
             is SelectionMenu.Item.MakeInactive -> {
-                trayInteractor.onInactiveDebugClicked(store.state.mode.selectedTabs)
+                interactor.onForceSelectedTabsAsInactiveClicked()
             }
         }
-        store.dispatch(TabsTrayAction.ExitSelectMode)
     }
 }

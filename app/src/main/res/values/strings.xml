@@ -1760,6 +1760,10 @@
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">Auto-close enabled</string>
 
+    <!-- Accessibility services actions labels. These will be appended to accessibility actions like "Double tap to.." but not by or applications but by services like Talkback. -->
+    <!-- Action label for elements that can be collapsed if interacting with them. Talkback will append this to say "Double tap to collapse". -->
+    <string name="a11y_action_label_collapse">collapse</string>
+
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Set links from websites, emails, and messages to open automatically in Waterfox.</string>
 

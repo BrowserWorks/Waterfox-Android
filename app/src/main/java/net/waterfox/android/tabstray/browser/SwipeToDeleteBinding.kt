@@ -6,9 +6,9 @@ package net.waterfox.android.tabstray.browser
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import mozilla.components.lib.state.helpers.AbstractBinding
-import kotlinx.coroutines.flow.distinctUntilChanged
 import net.waterfox.android.tabstray.TabsTrayState
 import net.waterfox.android.tabstray.TabsTrayStore
 
@@ -17,7 +17,7 @@ import net.waterfox.android.tabstray.TabsTrayStore
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 class SwipeToDeleteBinding(
-    store: TabsTrayStore
+    store: TabsTrayStore,
 ) : AbstractBinding<TabsTrayState>(store) {
     var isSwipeable = false
         private set

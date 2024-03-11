@@ -33,30 +33,40 @@ typealias OnViewHolderToDraw = (RecyclerView.ViewHolder) -> Boolean
 /**
  * An [ItemTouchHelper] for handling tab swiping to delete.
  *
+ * @param interactionDelegate [TabsTray.Delegate] for handling all user interactions.
  * @param onViewHolderTouched See [OnViewHolderTouched].
+ * @param onViewHolderDraw See [OnViewHolderToDraw].
+ * @param featureNameHolder Contains the identifying name of the feature.
+ * @param delegate The Callback which controls the behavior of this touch helper.
  */
 class TabsTouchHelper(
     interactionDelegate: TabsTray.Delegate,
     onViewHolderTouched: OnViewHolderTouched = { true },
     onViewHolderDraw: OnViewHolderToDraw = { true },
-    delegate: Callback = TouchCallback(interactionDelegate, onViewHolderTouched, onViewHolderDraw),
+    featureNameHolder: FeatureNameHolder,
+    delegate: Callback = TouchCallback(interactionDelegate, onViewHolderTouched, onViewHolderDraw, featureNameHolder),
 ) : ItemTouchHelper(delegate)
 
 /**
  * An [ItemTouchHelper.Callback] for drawing custom layouts on [RecyclerView.ViewHolder] interactions.
  *
- * @param onViewHolderTouched invoked when a tab is about to be swiped. See [OnViewHolderTouched].
+ * @param delegate [TabsTray.Delegate] for handling all user interactions.
+ * @param onViewHolderTouched Invoked when a tab is about to be swiped. See [OnViewHolderTouched].
+ * @param onViewHolderDraw Invoked when a tab is drawn. See [OnViewHolderToDraw].
+ * @param featureNameHolder Contains the identifying name of the feature.
+ * @param onRemove A callback invoked when a tab is removed.
  */
 class TouchCallback(
     delegate: TabsTray.Delegate,
     private val onViewHolderTouched: OnViewHolderTouched,
     private val onViewHolderDraw: OnViewHolderToDraw,
-    onRemove: (TabSessionState) -> Unit = { delegate.onTabClosed(it) }
+    featureNameHolder: FeatureNameHolder,
+    onRemove: (TabSessionState) -> Unit = { delegate.onTabClosed(it, featureNameHolder.featureName) },
 ) : TabTouchCallback(onRemove) {
 
     override fun getMovementFlags(
         recyclerView: RecyclerView,
-        viewHolder: RecyclerView.ViewHolder
+        viewHolder: RecyclerView.ViewHolder,
     ): Int {
         if (!onViewHolderTouched.invoke(viewHolder)) {
             return ItemTouchHelper.Callback.makeFlag(ACTION_STATE_IDLE, 0)
@@ -72,7 +82,7 @@ class TouchCallback(
         dX: Float,
         dY: Float,
         actionState: Int,
-        isCurrentlyActive: Boolean
+        isCurrentlyActive: Boolean,
     ) {
         super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
 
@@ -82,11 +92,11 @@ class TouchCallback(
 
         val icon = recyclerView.context.getDrawableWithTint(
             R.drawable.ic_delete,
-            recyclerView.context.getColorFromAttr(R.attr.textWarning)
+            recyclerView.context.getColorFromAttr(R.attr.textWarning),
         )!!
         val background = AppCompatResources.getDrawable(
             recyclerView.context,
-            R.drawable.swipe_delete_background
+            R.drawable.swipe_delete_background,
         )!!
         val itemView = viewHolder.itemView
         val iconLeft: Int
@@ -104,9 +114,10 @@ class TouchCallback(
                 iconLeft = itemView.left + margin
                 iconRight = itemView.left + margin + iconWidth
                 background.setBounds(
-                    itemView.left, itemView.top,
+                    itemView.left,
+                    itemView.top,
                     (itemView.left + dX).toInt() + BACKGROUND_CORNER_OFFSET,
-                    itemView.bottom
+                    itemView.bottom,
                 )
                 icon.setBounds(iconLeft, iconTop, iconRight, iconBottom)
                 draw(background, icon, c)
@@ -116,7 +127,9 @@ class TouchCallback(
                 iconRight = itemView.right - margin
                 background.setBounds(
                     (itemView.right + dX).toInt() - BACKGROUND_CORNER_OFFSET,
-                    itemView.top, itemView.right, itemView.bottom
+                    itemView.top,
+                    itemView.right,
+                    itemView.bottom,
                 )
                 icon.setBounds(iconLeft, iconTop, iconRight, iconBottom)
                 draw(background, icon, c)
@@ -131,7 +144,7 @@ class TouchCallback(
     private fun draw(
         background: Drawable,
         icon: Drawable,
-        c: Canvas
+        c: Canvas,
     ) {
         background.draw(c)
         icon.draw(c)
