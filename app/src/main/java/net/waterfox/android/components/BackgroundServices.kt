@@ -35,6 +35,7 @@ import mozilla.components.support.utils.RunWhenReadyQueue
 import net.waterfox.android.Config
 import net.waterfox.android.R
 import net.waterfox.android.ext.components
+import net.waterfox.android.ext.maxActiveTime
 import net.waterfox.android.perf.StrictModeManager
 import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.sync.SyncedTabsIntegration
@@ -128,7 +129,7 @@ class BackgroundServices(
     }
 
     val syncedTabsStorage by lazyMonitored {
-        SyncedTabsStorage(accountManager, context.components.core.store, remoteTabsStorage.value)
+        SyncedTabsStorage(accountManager, context.components.core.store, remoteTabsStorage.value, maxActiveTime)
     }
     val syncedTabsAutocompleteProvider by lazyMonitored {
         SyncedTabsAutocompleteProvider(syncedTabsStorage)

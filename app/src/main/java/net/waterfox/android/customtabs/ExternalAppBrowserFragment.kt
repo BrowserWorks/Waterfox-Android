@@ -69,23 +69,9 @@ class ExternalAppBrowserFragment : BaseBrowserFragment(), UserInteractionHandler
         )
 
         windowFeature.set(
-            feature = CustomTabWindowFeature(
-                activity,
-                components.core.store,
-                customTabSessionId
-            ) { uri ->
-                val intent =
-                    Intent.parseUri("${BuildConfig.DEEP_LINK_SCHEME}://open?url=$uri", 0)
-                if (intent.action == Intent.ACTION_VIEW) {
-                    intent.addCategory(Intent.CATEGORY_BROWSABLE)
-                    intent.component = null
-                    intent.selector = null
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                }
-                activity.startActivity(intent)
-            },
+            feature = CustomTabWindowFeature(activity, components.core.store, customTabSessionId),
             owner = this,
-            view = view
+            view = view,
         )
 
         hideToolbarFeature.set(

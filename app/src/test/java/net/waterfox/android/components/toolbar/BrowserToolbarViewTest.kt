@@ -11,9 +11,9 @@ import io.mockk.mockk
 import io.mockk.spyk
 import io.mockk.verify
 import mozilla.components.browser.toolbar.BrowserToolbar
-import mozilla.components.browser.toolbar.behavior.BrowserToolbarBehavior
 import mozilla.components.lib.publicsuffixlist.PublicSuffixList
 import mozilla.components.support.test.robolectric.testContext
+import mozilla.components.ui.widgets.behavior.EngineViewScrollingBehavior
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.utils.Settings
@@ -22,20 +22,20 @@ import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import mozilla.components.browser.toolbar.behavior.ToolbarPosition as MozacToolbarPosition
+import mozilla.components.ui.widgets.behavior.ViewPosition as MozacToolbarPosition
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class BrowserToolbarViewTest {
     private lateinit var toolbarView: BrowserToolbarView
     private lateinit var toolbar: BrowserToolbar
-    private lateinit var behavior: BrowserToolbarBehavior
+    private lateinit var behavior: EngineViewScrollingBehavior
     private lateinit var settings: Settings
 
     @Before
     fun setup() {
         toolbar = BrowserToolbar(testContext)
         toolbar.layoutParams = CoordinatorLayout.LayoutParams(100, 100)
-        behavior = spyk(BrowserToolbarBehavior(testContext, null, MozacToolbarPosition.BOTTOM))
+        behavior = spyk(EngineViewScrollingBehavior(testContext, null, MozacToolbarPosition.BOTTOM))
         (toolbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = behavior
         settings = mockk(relaxed = true)
         every { testContext.components.useCases } returns mockk(relaxed = true)
