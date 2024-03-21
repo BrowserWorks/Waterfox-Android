@@ -247,6 +247,7 @@ class DefaultTabsTrayController(
             navController.navigate(
                 TabsTrayFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
             )
+            navigationInteractor.onTabTrayDismissed()
         } else {
             val url = if (settings.openTabShowBlank) {
                 "about:blank"
@@ -266,9 +267,9 @@ class DefaultTabsTrayController(
                 contextId = null,
             )
             tabsUseCases.selectTab(tab)
+            handleNavigateToBrowser()
         }
 
-        navigationInteractor.onTabTrayDismissed()
         profiler?.addMarker(
             "DefaultTabTrayController.onNewTabTapped",
             startTime,
