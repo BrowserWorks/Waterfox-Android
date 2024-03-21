@@ -242,6 +242,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
                             System.currentTimeMillis() - Core.HISTORY_METADATA_MAX_AGE_IN_MS
                         )
                     }
+                    components.core.fileUploadsDirCleaner.cleanUploadsDirectory()
                 }
                 // Account manager initialization needs to happen on the main thread.
                 GlobalScope.launch(Dispatchers.Main) {

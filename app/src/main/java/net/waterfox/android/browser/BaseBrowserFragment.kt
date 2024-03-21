@@ -82,7 +82,6 @@ import mozilla.components.feature.session.PictureInPictureFeature
 import mozilla.components.feature.session.ScreenOrientationFeature
 import mozilla.components.feature.session.SessionFeature
 import mozilla.components.feature.session.SwipeRefreshFeature
-import mozilla.components.feature.session.behavior.EngineViewBrowserToolbarBehavior
 import mozilla.components.feature.sitepermissions.SitePermissionsFeature
 import mozilla.components.feature.webauthn.WebAuthnFeature
 import mozilla.components.lib.state.ext.consumeFlow
@@ -98,6 +97,7 @@ import mozilla.components.support.ktx.android.view.exitImmersiveMode
 import mozilla.components.support.ktx.android.view.hideKeyboard
 import mozilla.components.support.ktx.kotlin.getOrigin
 import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
+import mozilla.components.ui.widgets.behavior.EngineViewClippingBehavior
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.IntentReceiverActivity
@@ -124,7 +124,6 @@ import net.waterfox.android.downloads.DynamicDownloadDialog
 import net.waterfox.android.ext.accessibilityManager
 import net.waterfox.android.ext.breadcrumb
 import net.waterfox.android.ext.components
-import net.waterfox.android.ext.enterToImmersiveMode
 import net.waterfox.android.ext.getPreferenceKey
 import net.waterfox.android.ext.hideToolbar
 import net.waterfox.android.ext.nav
@@ -142,7 +141,7 @@ import net.waterfox.android.theme.ThemeManager
 import net.waterfox.android.utils.allowUndo
 import net.waterfox.android.wifi.SitePermissionsWifiIntegration
 import java.lang.ref.WeakReference
-import mozilla.components.feature.session.behavior.ToolbarPosition as MozacToolbarPosition
+import mozilla.components.ui.widgets.behavior.ToolbarPosition as MozacToolbarPosition
 
 /**
  * Base fragment extended by [BrowserFragment].
@@ -585,6 +584,7 @@ abstract class BaseBrowserFragment :
                 customTabId = customTabSessionId,
                 fragmentManager = parentFragmentManager,
                 tabsUseCases = requireComponents.useCases.tabsUseCases,
+                fileUploadsDirCleaner = requireComponents.core.fileUploadsDirCleaner,
                 creditCardValidationDelegate = DefaultCreditCardValidationDelegate(
                     context.components.core.lazyAutofillStorage
                 ),
@@ -985,7 +985,7 @@ abstract class BaseBrowserFragment :
                 MozacToolbarPosition.TOP
             }
             (getSwipeRefreshLayout().layoutParams as CoordinatorLayout.LayoutParams).behavior =
-                EngineViewBrowserToolbarBehavior(
+                EngineViewClippingBehavior(
                     context,
                     null,
                     getSwipeRefreshLayout(),
