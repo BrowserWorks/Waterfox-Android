@@ -512,7 +512,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
         }
     }
 
-    override fun getWorkManagerConfiguration() = Builder().setMinimumLoggingLevel(INFO).build()
+    override val workManagerConfiguration = Builder().setMinimumLoggingLevel(INFO).build()
 
     @OptIn(DelicateCoroutinesApi::class)
     open fun downloadWallpapers() {
