@@ -20,7 +20,6 @@ import net.waterfox.android.R
 import net.waterfox.android.compose.list.IconListItem
 import net.waterfox.android.compose.list.TextListItem
 import net.waterfox.android.settings.address.ext.getAddressLabel
-import net.waterfox.android.settings.address.ext.getFullName
 import net.waterfox.android.theme.WaterfoxTheme
 import net.waterfox.android.theme.Theme
 
@@ -40,7 +39,7 @@ fun AddressList(
     LazyColumn {
         items(addresses) { address ->
             TextListItem(
-                label = address.getFullName(),
+                label = address.name,
                 modifier = Modifier.padding(start = 56.dp),
                 description = address.getAddressLabel(),
                 maxDescriptionLines = 2,
@@ -67,9 +66,7 @@ private fun AddressListPreview() {
                 addresses = listOf(
                     Address(
                         guid = "1",
-                        givenName = "Banana",
-                        additionalName = "",
-                        familyName = "Apple",
+                        name = "Banana Apple",
                         organization = "Mozilla",
                         streetAddress = "123 Sesame Street",
                         addressLevel3 = "",
