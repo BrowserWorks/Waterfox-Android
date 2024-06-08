@@ -62,6 +62,9 @@ object Config {
         val hoursDifference = ChronoUnit.HOURS.between(originalEpoch, newEpoch)
         version += hoursDifference.toInt()
 
+        // Add the current minute to the version code
+        version += LocalDateTime.now().minute
+
         return version
     }
 

@@ -745,10 +745,12 @@ abstract class BaseBrowserFragment :
             webAuthnFeature.set(
                 feature = WebAuthnFeature(
                     engine = requireComponents.core.engine,
-                    activity = requireActivity()
+                    activity = requireActivity(),
+                    exitFullScreen = requireComponents.useCases.sessionUseCases.exitFullscreen::invoke,
+                    currentTab = { store.state.selectedTabId },
                 ),
                 owner = this,
-                view = view
+                view = view,
             )
         }
 
