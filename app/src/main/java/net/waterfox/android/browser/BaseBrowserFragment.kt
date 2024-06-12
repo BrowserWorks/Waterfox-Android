@@ -659,11 +659,12 @@ abstract class BaseBrowserFragment :
             feature = SessionFeature(
                 requireComponents.core.store,
                 requireComponents.useCases.sessionUseCases.goBack,
+                requireComponents.useCases.sessionUseCases.goForward,
                 binding.engineView,
-                customTabSessionId
+                customTabSessionId,
             ),
             owner = this,
-            view = view
+            view = view,
         )
 
         crashContentIntegration.set(
