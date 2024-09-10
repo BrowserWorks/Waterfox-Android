@@ -121,7 +121,7 @@ class WebExtensionPromptFeature(
         addon: Addon,
         promptRequest: WebExtensionPromptRequest.AfterInstallation.Permissions.Required,
     ) {
-        showPermissionDialog(addon = addon, promptRequest = promptRequest)
+        showPermissionDialog(addon = addon, promptRequest = promptRequest, permissions = promptRequest.permissions)
     }
 
     @VisibleForTesting
@@ -141,7 +141,7 @@ class WebExtensionPromptFeature(
             addon = addon,
             promptRequest = promptRequest,
             forOptionalPermissions = true,
-            optionalPermissions = promptRequest.permissions,
+            permissions = promptRequest.permissions,
         )
     }
 
@@ -171,21 +171,25 @@ class WebExtensionPromptFeature(
                 if (addonName.isNotEmpty()) {
                     context.getString(R.string.mozac_feature_addons_failed_to_install, addonName)
                 } else {
-                    context.getString(R.string.mozac_feature_addons_failed_to_install_generic)
+                    context.getString(R.string.mozac_feature_addons_extension_failed_to_install)
                 }
             }
 
+            is WebExtensionInstallException.AdminInstallOnly -> {
+                context.getString(R.string.mozac_feature_addons_admin_install_only, addonName)
+            }
+
             is WebExtensionInstallException.NetworkFailure -> {
-                context.getString(R.string.mozac_feature_addons_failed_to_install_network_error)
+                context.getString(R.string.mozac_feature_addons_extension_failed_to_install_network_error)
             }
 
             is WebExtensionInstallException.CorruptFile -> {
-                context.getString(R.string.mozac_feature_addons_failed_to_install_corrupt_error)
+                context.getString(R.string.mozac_feature_addons_extension_failed_to_install_corrupt_error)
             }
 
             is WebExtensionInstallException.NotSigned -> {
                 context.getString(
-                    R.string.mozac_feature_addons_failed_to_install_not_signed_error,
+                    R.string.mozac_feature_addons_extension_failed_to_install_not_signed_error,
                 )
             }
 
@@ -219,7 +223,7 @@ class WebExtensionPromptFeature(
         addon: Addon,
         promptRequest: WebExtensionPromptRequest.AfterInstallation.Permissions,
         forOptionalPermissions: Boolean = false,
-        optionalPermissions: List<String> = emptyList(),
+        permissions: List<String> = emptyList(),
     ) {
         if (isInstallationInProgress || hasExistingPermissionDialogFragment()) {
             return
@@ -228,7 +232,7 @@ class WebExtensionPromptFeature(
         val dialog = PermissionsDialogFragment.newInstance(
             addon = addon,
             forOptionalPermissions = forOptionalPermissions,
-            optionalPermissions = optionalPermissions,
+            permissions = permissions,
             promptsStyling = AddonDialogFragment.PromptsStyling(
                 gravity = Gravity.BOTTOM,
                 shouldWidthMatchParent = true,
@@ -313,7 +317,7 @@ class WebExtensionPromptFeature(
 
     private fun hasExistingAddonPostInstallationDialogFragment(): Boolean {
         return fragmentManager.findFragmentByTag(POST_INSTALLATION_DIALOG_FRAGMENT_TAG)
-            as? AddonInstallationDialogFragment != null
+                as? AddonInstallationDialogFragment != null
     }
 
     private fun findPreviousPermissionDialogFragment(): PermissionsDialogFragment? {

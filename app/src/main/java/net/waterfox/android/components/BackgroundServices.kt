@@ -17,6 +17,8 @@ import mozilla.components.concept.sync.*
 import mozilla.components.feature.accounts.push.FxaPushSupportFeature
 import mozilla.components.feature.accounts.push.SendTabFeature
 import mozilla.components.feature.syncedtabs.SyncedTabsAutocompleteProvider
+import mozilla.components.feature.syncedtabs.commands.SyncedTabsCommands
+import mozilla.components.feature.syncedtabs.commands.SyncedTabsCommandsFlushScheduler
 import mozilla.components.feature.syncedtabs.storage.SyncedTabsStorage
 import mozilla.components.lib.crash.CrashReporter
 import mozilla.components.service.fxa.PeriodicSyncConfig
@@ -39,6 +41,15 @@ import net.waterfox.android.ext.maxActiveTime
 import net.waterfox.android.perf.StrictModeManager
 import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.sync.SyncedTabsIntegration
+import net.waterfox.android.utils.getUndoDelay
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.seconds
+
+/**
+ * The additional time to wait after the "undo closed tab" snackbar has
+ * disappeared before triggering a [SyncedTabsCommands] flush.
+ */
+private val DEFAULT_SYNCED_TABS_COMMANDS_EXTRA_FLUSH_DELAY = 5.seconds
 
 /**
  * Component group for background services. These are the components that need to be accessed from within a
@@ -134,6 +145,17 @@ class BackgroundServices(
     val syncedTabsAutocompleteProvider by lazyMonitored {
         SyncedTabsAutocompleteProvider(syncedTabsStorage)
     }
+    val syncedTabsCommands by lazyMonitored {
+        SyncedTabsCommands(accountManager, remoteTabsStorage.value).apply {
+            register(SyncedTabsCommandsObserver(syncedTabsCommandsFlushScheduler))
+        }
+    }
+    val syncedTabsCommandsFlushScheduler by lazyMonitored {
+        SyncedTabsCommandsFlushScheduler(
+            context = context,
+            flushDelay = context.getUndoDelay().milliseconds + DEFAULT_SYNCED_TABS_COMMANDS_EXTRA_FLUSH_DELAY,
+        )
+    }
 
     @VisibleForTesting(otherwise = PRIVATE)
     fun makeAccountManager(
@@ -200,4 +222,18 @@ private class AccountManagerReadyObserver(
     override fun onReady(authenticatedAccount: OAuthAccount?) {
         accountManagerAvailableQueue.ready()
     }
+}
+
+internal class SyncedTabsCommandsObserver(
+    private val flushScheduler: SyncedTabsCommandsFlushScheduler,
+) : DeviceCommandQueue.Observer {
+    override fun onAdded() {
+        flushScheduler.requestFlush()
+    }
+
+    // We don't cancel any scheduled flushes in `onRemoved`, because we should
+    // still flush if N commands were added, but N - 1 commands were removed.
+    // If the queue is empty when the worker runs, that's OK; the worker
+    // won't do anything, and won't run again until the next call to `onAdded`.
+    override fun onRemoved() = Unit
 }

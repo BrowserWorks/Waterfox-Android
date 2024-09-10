@@ -17,7 +17,7 @@ object Versions {
     const val detekt = "1.23.6"
     const val jna = "5.12.1"
 
-    const val androidx_compose = "1.5.14"
+    const val androidx_compose = "1.5.4"
     const val androidx_compose_paging = "3.3.0"
     const val androidx_compose_compiler = "1.5.14"
     const val androidx_appcompat = "1.7.0"
@@ -42,7 +42,7 @@ object Versions {
     const val accompanist_drawablepainter = "0.30.1"
     const val coil = "2.4.0"
 
-    const val mozilla_android_components = "127.0"
+    const val mozilla_android_components = "130.0"
 
     const val junit = "5.9.3"
     const val mockk = "1.13.9"
