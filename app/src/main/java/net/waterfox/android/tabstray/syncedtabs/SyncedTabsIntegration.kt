@@ -9,6 +9,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.navigation.NavController
 import mozilla.components.browser.storage.sync.SyncedDeviceTabs
 import mozilla.components.feature.syncedtabs.SyncedTabsFeature
+import mozilla.components.feature.syncedtabs.commands.SyncedTabsCommands
 import mozilla.components.feature.syncedtabs.storage.SyncedTabsStorage
 import mozilla.components.feature.syncedtabs.view.SyncedTabsView
 import mozilla.components.service.fxa.manager.FxaAccountManager
@@ -36,6 +37,7 @@ class SyncedTabsIntegration(
     private val context: Context,
     private val navController: NavController,
     storage: SyncedTabsStorage,
+    commands: SyncedTabsCommands,
     accountManager: FxaAccountManager,
     lifecycleOwner: LifecycleOwner,
 ) : LifecycleAwareFeature,
@@ -46,6 +48,7 @@ class SyncedTabsIntegration(
         SyncedTabsFeature(
             context = context,
             storage = storage,
+            commands = commands,
             accountManager = accountManager,
             view = this,
             lifecycleOwner = lifecycleOwner,
