@@ -5,8 +5,12 @@
 import net.waterfox.android.gradle.ext.execReadStandardOutOrThrow
 import org.gradle.api.Project
 import java.text.SimpleDateFormat
+import java.time.Duration
 import java.time.LocalDateTime
-import java.time.temporal.ChronoUnit
+import java.time.LocalTime
+import java.time.OffsetDateTime
+import java.time.Year
+import java.time.ZoneOffset
 import java.util.Date
 import java.util.Locale
 
@@ -43,29 +47,17 @@ object Config {
         return LocalDateTime.now().toString()
     }
 
+    /**
+     * Return the version code that consists of the current year and minutes since
+     * the start of the year. E.g. 2024-09-13 8:49 -> 2024369049
+     */
     @JvmStatic
     fun generateFennecVersionCode(abi: String): Int {
-        // Start with a base version code of 2024
-        var version = 2024000000
-
-        // Add the ABI flags
-        if (abi == "x86_64" || abi == "x86") {
-            version += 10000 // 'x' bit is 1 for x86/x86-64 architectures
-        }
-        if (abi == "arm64-v8a" || abi == "x86_64") {
-            version += 20000 // 'p' bit is 1 for 64-bit architectures
-        }
-
-        // Add the number of hours since the start of 2024
-        val originalEpoch = LocalDateTime.of(2014, 12, 28, 0, 0)
-        val newEpoch = LocalDateTime.of(2024, 1, 1, 0, 0)
-        val hoursDifference = ChronoUnit.HOURS.between(originalEpoch, newEpoch)
-        version += hoursDifference.toInt()
-
-        // Add the current minute to the version code
-        version += LocalDateTime.now().minute
-
-        return version
+        val now = OffsetDateTime.now(ZoneOffset.UTC)
+        val year = Year.of(now.year)
+        val startOfYear = OffsetDateTime.of(year.atDay(1), LocalTime.MIN, ZoneOffset.UTC)
+        val minutes = Duration.between(startOfYear, now).toMinutes()
+        return (year.value * 1000000 + minutes).toInt()
     }
 
     /**
