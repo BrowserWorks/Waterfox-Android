@@ -19,7 +19,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
-import androidx.compose.material.ripple.rememberRipple
+import androidx.compose.material.ripple
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -86,7 +86,7 @@ fun <T> LibrarySiteItem(
                     }
                 },
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(color = WaterfoxTheme.colors.textSecondary),
+                indication = ripple(color = WaterfoxTheme.colors.textSecondary),
             )
             .then(modifier),
         verticalAlignment = Alignment.CenterVertically,
