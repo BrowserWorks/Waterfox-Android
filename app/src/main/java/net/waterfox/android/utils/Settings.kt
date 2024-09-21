@@ -278,6 +278,26 @@ class Settings(private val appContext: Context) : PreferencesHolder {
         default = false
     )
 
+    var openTabShowHome by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_new_tab_show_home),
+        default = true
+    )
+
+    var openTabShowBlank by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_new_tab_blank),
+        default = false
+    )
+
+    var openTabShowWebAddress by booleanPreference(
+        appContext.getPreferenceKey(R.string.pref_key_new_tab_web_address),
+        default = true
+    )
+
+    var openTabShowWebAddressValue by stringPreference(
+        appContext.getPreferenceKey(R.string.pref_key_new_tab_web_address_value),
+        default = ""
+    )
+
     var allowThirdPartyRootCerts by booleanPreference(
         appContext.getPreferenceKey(R.string.pref_key_allow_third_party_root_certs),
         default = false

@@ -263,6 +263,10 @@
     <string name="pref_key_camera_permissions_needed" translatable="false">pref_key_camera_permissions_needed</string>
     <string name="pref_key_inactive_tabs_category" translatable="false">pref_key_inactive_tabs_category</string>
     <string name="pref_key_inactive_tabs" translatable="false">pref_key_inactive_tabs</string>
+    <string name="pref_key_new_tab_show_home" translatable="false">pref_key_new_tab_show_home</string>
+    <string name="pref_key_new_tab_blank" translatable="false">pref_key_new_tab_blank</string>
+    <string name="pref_key_new_tab_web_address" translatable="false">pref_key_new_tab_web_address</string>
+    <string name="pref_key_new_tab_web_address_value" translatable="false">pref_key_new_tab_web_address_value</string>
 
     <string name="pref_key_return_to_browser" translatable="false">pref_key_return_to_browser</string>
 
