@@ -32,28 +32,12 @@ import mozilla.components.browser.storage.sync.Tab
 import mozilla.components.browser.storage.sync.TabEntry
 import mozilla.components.concept.base.profiler.Profiler
 import mozilla.components.feature.tabs.TabsUseCases
-import mozilla.components.service.glean.testing.GleanTestRule
 import mozilla.components.support.test.ext.joinBlocking
 import mozilla.components.support.test.libstate.ext.waitUntilIdle
 import mozilla.components.support.test.middleware.CaptureActionsMiddleware
-import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
 import mozilla.components.support.test.rule.runTestOnMain
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotEquals
-import org.junit.Assert.assertNotNull
-import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
-import org.junit.rules.RuleChain
-import org.junit.runner.RunWith
 import net.waterfox.android.BrowserDirection
-import net.waterfox.android.GleanMetrics.Collections
-import net.waterfox.android.GleanMetrics.Events
-import net.waterfox.android.GleanMetrics.TabsTray
 import net.waterfox.android.HomeActivity
 import net.waterfox.android.R
 import net.waterfox.android.browser.browsingmode.BrowsingMode
@@ -66,13 +50,19 @@ import net.waterfox.android.components.TabCollectionStorage
 import net.waterfox.android.components.bookmarks.BookmarksUseCase
 import net.waterfox.android.ext.maxActiveTime
 import net.waterfox.android.ext.potentialInactiveTabs
-import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.library.bookmarks.BookmarksSharedViewModel
 import net.waterfox.android.utils.Settings
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.rules.RuleChain
 import java.util.concurrent.TimeUnit
 
-@RunWith(WaterfoxRobolectricTestRunner::class) // for gleanTestRule
 class DefaultTabsTrayControllerTest {
     @MockK(relaxed = true)
     private lateinit var trayStore: TabsTrayStore
@@ -109,10 +99,8 @@ class DefaultTabsTrayControllerTest {
     private val coroutinesTestRule: MainCoroutineRule = MainCoroutineRule()
     private val testDispatcher = coroutinesTestRule.testDispatcher
 
-    val gleanTestRule = GleanTestRule(testContext)
-
     @get:Rule
-    val chain: RuleChain = RuleChain.outerRule(gleanTestRule).around(coroutinesTestRule)
+    val chain: RuleChain = RuleChain.outerRule(coroutinesTestRule)
 
     @Before
     fun setup() {
@@ -125,11 +113,7 @@ class DefaultTabsTrayControllerTest {
             every { getProfilerTime() } returns Double.MAX_VALUE
         }
 
-        assertNull(TabsTray.newPrivateTabTapped.testGetValue())
-
         createController().handlePrivateTabsFabClick()
-
-        assertNotNull(TabsTray.newPrivateTabTapped.testGetValue())
 
         verifyOrder {
             profiler.getProfilerTime()
@@ -166,24 +150,6 @@ class DefaultTabsTrayControllerTest {
     }
 
     @Test
-    fun `GIVEN private mode WHEN the fab is clicked THEN Event#NewPrivateTabTapped is added to telemetry`() {
-        assertNull(TabsTray.newPrivateTabTapped.testGetValue())
-
-        createController().handlePrivateTabsFabClick()
-
-        assertNotNull(TabsTray.newPrivateTabTapped.testGetValue())
-    }
-
-    @Test
-    fun `GIVEN normal mode WHEN the fab is clicked THEN Event#NewTabTapped is added to telemetry`() {
-        assertNull(TabsTray.newTabTapped.testGetValue())
-
-        createController().handleNormalTabsFabClick()
-
-        assertNotNull(TabsTray.newTabTapped.testGetValue())
-    }
-
-    @Test
     fun `GIVEN the user is on the synced tabs page WHEN the fab is clicked THEN fire off a sync action`() {
         every { trayStore.state.syncing } returns false
 
@@ -199,24 +165,6 @@ class DefaultTabsTrayControllerTest {
         createController().handleSyncedTabsFabClick()
 
         verify(exactly = 0) { trayStore.dispatch(TabsTrayAction.SyncNow) }
-    }
-
-    @Test
-    fun `WHEN handleTabDeletion is called THEN Event#ClosedExistingTab is added to telemetry`() {
-        val tab: TabSessionState = mockk { every { content.private } returns true }
-        assertNull(TabsTray.closedExistingTab.testGetValue())
-
-        every { browserStore.state } returns mockk()
-        try {
-            mockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
-            every { browserStore.state.findTab(any()) } returns tab
-            every { browserStore.state.getNormalOrPrivateTabs(any()) } returns listOf(tab)
-
-            createController().handleTabDeletion("testTabId", "unknown")
-            assertNotNull(TabsTray.closedExistingTab.testGetValue())
-        } finally {
-            unmockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
-        }
     }
 
     @Test
@@ -490,39 +438,6 @@ class DefaultTabsTrayControllerTest {
     }
 
     @Test
-    fun `GIVEN one tab is selected WHEN the delete selected tabs button is clicked THEN report the telemetry and delete the tabs`() {
-        val controller = spyk(createController())
-
-        every { trayStore.state.mode.selectedTabs } returns setOf(createTab(url = "url"))
-        every { controller.deleteMultipleTabs(any()) } just runs
-
-        controller.handleDeleteSelectedTabsClicked()
-
-        assertNotNull(TabsTray.closeSelectedTabs.testGetValue())
-        val snapshot = TabsTray.closeSelectedTabs.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("1", snapshot.single().extra?.getValue("tab_count"))
-
-        verify { trayStore.dispatch(TabsTrayAction.ExitSelectMode) }
-    }
-
-    @Test
-    fun `GIVEN private mode selected WHEN sendNewTabEvent is called THEN NewPrivateTabTapped is tracked in telemetry`() {
-        createController().sendNewTabEvent(true)
-
-        assertNotNull(TabsTray.newPrivateTabTapped.testGetValue())
-    }
-
-    @Test
-    fun `GIVEN normal mode selected WHEN sendNewTabEvent is called THEN NewTabTapped is tracked in telemetry`() {
-        assertNull(TabsTray.newTabTapped.testGetValue())
-
-        createController().sendNewTabEvent(false)
-
-        assertNotNull(TabsTray.newTabTapped.testGetValue())
-    }
-
-    @Test
     fun `WHEN dismissTabsTrayAndNavigateHome is called with a specific tab id THEN tray is dismissed and navigates home is opened to delete that tab`() {
         var dismissTrayInvoked = false
         var navigateToHomeAndDeleteSessionInvoked = false
@@ -544,7 +459,6 @@ class DefaultTabsTrayControllerTest {
     fun `WHEN a synced tab is clicked THEN the metrics are reported and the tab is opened`() {
         val tab = mockk<Tab>()
         val entry = mockk<TabEntry>()
-        assertNull(Events.syncedTabOpened.testGetValue())
 
         every { tab.active() }.answers { entry }
         every { entry.url }.answers { "https://mozilla.org" }
@@ -557,7 +471,6 @@ class DefaultTabsTrayControllerTest {
         ).handleSyncedTabClicked(tab)
 
         assertTrue(dismissTabTrayInvoked)
-        assertNotNull(Events.syncedTabOpened.testGetValue())
 
         verify {
             activity.openToBrowserAndLoad(
@@ -748,40 +661,12 @@ class DefaultTabsTrayControllerTest {
         verify { trayStore.dispatch(TabsTrayAction.ExitSelectMode) }
     }
 
-    fun `WHEN the inactive tabs section is expanded THEN the expanded telemetry event should be reported`() {
-        val controller = createController()
-
-        assertNull(TabsTray.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTray.inactiveTabsCollapsed.testGetValue())
-
-        controller.handleInactiveTabsHeaderClicked(expanded = true)
-
-        assertNotNull(TabsTray.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTray.inactiveTabsCollapsed.testGetValue())
-    }
-
-    @Test
-    fun `WHEN the inactive tabs section is collapsed THEN the collapsed telemetry event should be reported`() {
-        val controller = createController()
-
-        assertNull(TabsTray.inactiveTabsExpanded.testGetValue())
-        assertNull(TabsTray.inactiveTabsCollapsed.testGetValue())
-
-        controller.handleInactiveTabsHeaderClicked(expanded = false)
-
-        assertNull(TabsTray.inactiveTabsExpanded.testGetValue())
-        assertNotNull(TabsTray.inactiveTabsCollapsed.testGetValue())
-    }
-
     @Test
     fun `WHEN the inactive tabs auto-close feature prompt is dismissed THEN update settings and report the telemetry event`() {
         val controller = spyk(createController())
 
-        assertNull(TabsTray.autoCloseDimissed.testGetValue())
-
         controller.handleInactiveTabsAutoCloseDialogDismiss()
 
-        assertNotNull(TabsTray.autoCloseDimissed.testGetValue())
         verify { settings.hasInactiveTabsAutoCloseDialogBeenDismissed = true }
     }
 
@@ -789,11 +674,7 @@ class DefaultTabsTrayControllerTest {
     fun `WHEN the inactive tabs auto-close feature prompt is accepted THEN update settings and report the telemetry event`() {
         val controller = spyk(createController())
 
-        assertNull(TabsTray.autoCloseTurnOnClicked.testGetValue())
-
         controller.handleEnableInactiveTabsAutoCloseClicked()
-
-        assertNotNull(TabsTray.autoCloseTurnOnClicked.testGetValue())
 
         verify { settings.closeTabsAfterOneMonth = true }
         verify { settings.closeTabsAfterOneWeek = false }
@@ -814,11 +695,7 @@ class DefaultTabsTrayControllerTest {
 
         every { controller.handleTabSelected(any(), any()) } just runs
 
-        assertNull(TabsTray.openInactiveTab.testGetValue())
-
         controller.handleInactiveTabClicked(tab)
-
-        assertNotNull(TabsTray.openInactiveTab.testGetValue())
 
         verify { controller.handleTabSelected(tab, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME) }
     }
@@ -835,11 +712,7 @@ class DefaultTabsTrayControllerTest {
 
         every { controller.handleTabDeletion(any(), any()) } just runs
 
-        assertNull(TabsTray.closeInactiveTab.testGetValue())
-
         controller.handleCloseInactiveTabClicked(tab)
-
-        assertNotNull(TabsTray.closeInactiveTab.testGetValue())
 
         verify { controller.handleTabDeletion(tab.id, TrayPagerAdapter.INACTIVE_TABS_FEATURE_NAME) }
     }
@@ -862,17 +735,15 @@ class DefaultTabsTrayControllerTest {
         }
 
         try {
-            mockkStatic("org.mozilla.fenix.ext.BrowserStateKt")
+            mockkStatic("net.waterfox.android.ext.BrowserStateKt")
             every { browserStore.state.potentialInactiveTabs } returns listOf(inactiveTab)
-            assertNull(TabsTray.closeAllInactiveTabs.testGetValue())
 
             controller.handleDeleteAllInactiveTabsClicked()
 
             verify { tabsUseCases.removeTabs(listOf("24")) }
-            assertNotNull(TabsTray.closeAllInactiveTabs.testGetValue())
             assertTrue(showSnackbarInvoked)
         } finally {
-            unmockkStatic("org.mozilla.fenix.ext.BrowserStateKt")
+            unmockkStatic("net.waterfox.android.ext.BrowserStateKt")
         }
     }
 
@@ -888,14 +759,7 @@ class DefaultTabsTrayControllerTest {
 
         every { controller.handleNavigateToBrowser() } just runs
 
-        assertNull(TabsTray.openedExistingTab.testGetValue())
-
         controller.handleTabSelected(tab, source)
-
-        assertNotNull(TabsTray.openedExistingTab.testGetValue())
-        val snapshot = TabsTray.openedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals(source, snapshot.single().extra?.getValue("opened_existing_tab"))
 
         verify { tabsUseCases.selectTab(tab.id) }
         verify { controller.handleNavigateToBrowser() }
@@ -913,14 +777,7 @@ class DefaultTabsTrayControllerTest {
 
         every { controller.handleNavigateToBrowser() } just runs
 
-        assertNull(TabsTray.openedExistingTab.testGetValue())
-
         controller.handleTabSelected(tab, null)
-
-        assertNotNull(TabsTray.openedExistingTab.testGetValue())
-        val snapshot = TabsTray.openedExistingTab.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals(sourceText, snapshot.single().extra?.getValue("opened_existing_tab"))
 
         verify { tabsUseCases.selectTab(tab.id) }
         verify { controller.handleNavigateToBrowser() }
@@ -1009,11 +866,8 @@ class DefaultTabsTrayControllerTest {
         )
         every { trayStore.state.mode.selectedTabs } returns emptySet()
 
-        assertNull(Collections.longPress.testGetValue())
-
         createController().handleTabLongClick(normalTab)
 
-        assertNotNull(Collections.longPress.testGetValue())
         verify { trayStore.dispatch(TabsTrayAction.AddSelectTab(normalTab)) }
     }
 
@@ -1031,7 +885,6 @@ class DefaultTabsTrayControllerTest {
 
         createController().handleTabLongClick(normalTabClicked)
 
-        assertNull(Collections.longPress.testGetValue())
         verify(exactly = 0) { trayStore.dispatch(any()) }
     }
 
@@ -1044,7 +897,6 @@ class DefaultTabsTrayControllerTest {
 
         createController().handleTabLongClick(privateTab)
 
-        assertNull(Collections.longPress.testGetValue())
         verify(exactly = 0) { trayStore.dispatch(any()) }
     }
 
@@ -1055,29 +907,21 @@ class DefaultTabsTrayControllerTest {
         createController().handleShareSelectedTabsClicked()
 
         verify(exactly = 1) { navController.navigate(any<NavDirections>()) }
-
-        assertNotNull(TabsTray.shareSelectedTabs.testGetValue())
-        val snapshot = TabsTray.shareSelectedTabs.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("1", snapshot.single().extra?.getValue("tab_count"))
     }
 
     @Test
     fun `GIVEN one tab is selected WHEN the add selected tabs to collection button is clicked THEN report the telemetry and show the collections dialog`() {
-        mockkStatic("org.mozilla.fenix.collections.CollectionsDialogKt")
+        mockkStatic("net.waterfox.android.collections.CollectionsDialogKt")
 
         val controller = spyk(createController())
         every { controller.showCollectionsDialog(any()) } just runs
 
         every { trayStore.state.mode.selectedTabs } returns setOf(createTab(url = "https://mozilla.org"))
         every { any<CollectionsDialog>().show(any()) } answers { }
-        assertNull(TabsTray.saveToCollection.testGetValue())
 
         controller.handleAddSelectedTabsToCollectionClicked()
 
-        assertNotNull(TabsTray.saveToCollection.testGetValue())
-
-        unmockkStatic("org.mozilla.fenix.collections.CollectionsDialogKt")
+        unmockkStatic("net.waterfox.android.collections.CollectionsDialogKt")
     }
 
     @Test
@@ -1094,38 +938,6 @@ class DefaultTabsTrayControllerTest {
 
         coVerify(exactly = 1) { bookmarksUseCase.addBookmark(any(), any(), any(), any()) }
         assertTrue(showBookmarkSnackbarInvoked)
-
-        assertNotNull(TabsTray.bookmarkSelectedTabs.testGetValue())
-        val snapshot = TabsTray.bookmarkSelectedTabs.testGetValue()!!
-        assertEquals(1, snapshot.size)
-        assertEquals("1", snapshot.single().extra?.getValue("tab_count"))
-    }
-
-    @Test
-    fun `WHEN the normal tabs page button is clicked THEN report the metric`() {
-        assertNull(TabsTray.normalModeTapped.testGetValue())
-
-        createController().handleTrayScrollingToPosition(Page.NormalTabs.ordinal, false)
-
-        assertNotNull(TabsTray.normalModeTapped.testGetValue())
-    }
-
-    @Test
-    fun `WHEN the private tabs page button is clicked THEN report the metric`() {
-        assertNull(TabsTray.privateModeTapped.testGetValue())
-
-        createController().handleTrayScrollingToPosition(Page.PrivateTabs.ordinal, false)
-
-        assertNotNull(TabsTray.privateModeTapped.testGetValue())
-    }
-
-    @Test
-    fun `WHEN the synced tabs page button is clicked THEN report the metric`() {
-        assertNull(TabsTray.syncedModeTapped.testGetValue())
-
-        createController().handleTrayScrollingToPosition(Page.SyncedTabs.ordinal, false)
-
-        assertNotNull(TabsTray.syncedModeTapped.testGetValue())
     }
 
     private fun createController(
