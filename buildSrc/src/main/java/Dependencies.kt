@@ -8,14 +8,13 @@ object Versions {
 
     // These versions are linked: lint should be X+23.Y.Z of gradle_plugin version, according to:
     // https://github.com/alexjlockwood/android-lint-checks-demo/blob/0245fc027463137b1b4afb97c5295d60dce998b6/dependencies.gradle#L3
-    const val android_gradle_plugin = "8.4.0"
+    const val android_gradle_plugin = "8.7.2"
     const val android_lint_api = "31.4.0"
 
     const val sentry = "7.9.0"
     const val leakcanary = "2.14"
     const val osslicenses_plugin = "0.10.6"
     const val detekt = "1.23.6"
-    const val jna = "5.12.1"
 
     const val androidx_compose = "1.7.1"
     const val androidx_compose_paging = "3.3.0"
@@ -49,7 +48,7 @@ object Versions {
 
     const val mockwebserver = "4.10.0"
     const val uiautomator = "2.2.0"
-    const val robolectric = "4.11.1"
+    const val robolectric = "4.14"
 }
 
 @Suppress("unused")
@@ -208,8 +207,6 @@ object Deps {
     const val google_accompanist_swiperefresh =
         "com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist_drawablepainter}"
     const val coil = "io.coil-kt:coil-compose:${Versions.coil}"
-
-    const val jna = "net.java.dev.jna:jna:${Versions.jna}@jar"
 
     const val junit = "junit:junit:${Versions.junit}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"

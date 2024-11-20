@@ -60,9 +60,7 @@ class AddressEditorViewTest {
         addressEditorView.saveAddress()
 
         val expected = UpdatableAddressFields(
-            givenName = address.givenName,
-            additionalName = address.additionalName,
-            familyName = address.familyName,
+            name = address.name,
             organization = "",
             streetAddress = address.streetAddress,
             addressLevel3 = "",
@@ -87,9 +85,7 @@ class AddressEditorViewTest {
         addressEditorView.saveAddress()
 
         val expected = UpdatableAddressFields(
-            givenName = "",
-            additionalName = "",
-            familyName = "",
+            name = address.name,
             organization = "",
             streetAddress = "",
             addressLevel3 = "",
@@ -129,9 +125,7 @@ class AddressEditorViewTest {
         assertEquals(address.addressLevel1, binding.subregionDropDown.selectedItem.toString())
         assertEquals("City", binding.cityInput.text.toString())
         assertEquals("Street", binding.streetAddressInput.text.toString())
-        assertEquals("Family", binding.lastNameInput.text.toString())
-        assertEquals("Given", binding.firstNameInput.text.toString())
-        assertEquals("Additional", binding.middleNameInput.text.toString())
+        assertEquals("Name", binding.nameInput.text.toString())
         assertEquals("email@mozilla.com", binding.emailInput.text.toString())
         assertEquals("Telephone", binding.phoneInput.text.toString())
     }
@@ -302,9 +296,7 @@ class AddressEditorViewTest {
 
     private fun generateAddress(country: String = "US", addressLevel1: String = "Oregon") = Address(
         guid = "123",
-        givenName = "Given",
-        additionalName = "Additional",
-        familyName = "Family",
+        name = "Name",
         organization = "Organization",
         streetAddress = "Street",
         addressLevel3 = "Suburb",
