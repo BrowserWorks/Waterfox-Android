@@ -656,7 +656,6 @@ class DefaultSessionControlControllerTest {
     }
 
     @Test
-    @Ignore("Can't instantiate proxy for class kotlin.Function0")
     fun handleMenuOpenedWhileSearchShowing() {
         every { navController.currentDestination } returns mockk {
             every { id } returns R.id.searchDialogFragment

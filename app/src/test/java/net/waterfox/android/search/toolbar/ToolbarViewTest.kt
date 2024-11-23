@@ -68,6 +68,7 @@ class ToolbarViewTest {
         MockKAnnotations.init(this)
         context = ContextThemeWrapper(testContext, R.style.NormalTheme)
         toolbar = spyk(BrowserToolbar(context))
+        every { context.settings() } returns mockk(relaxed = true)
     }
 
     @Test

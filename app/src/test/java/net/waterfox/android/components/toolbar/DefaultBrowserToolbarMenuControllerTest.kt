@@ -60,6 +60,7 @@ import net.waterfox.android.components.accounts.AccountState
 import net.waterfox.android.components.accounts.WaterfoxFxAEntryPoint
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.directionsEq
+import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.settings.deletebrowsingdata.deleteAndQuit
 import net.waterfox.android.utils.Settings
@@ -71,7 +72,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class DefaultBrowserToolbarMenuControllerTest {
 
@@ -232,6 +232,8 @@ class DefaultBrowserToolbarMenuControllerTest {
     fun `WHEN quit menu item is pressed THEN menu item is handled correctly`() = runTest {
         val item = ToolbarMenu.Item.Quit
         val testScope = this
+
+        every { activity.settings().shouldDeleteBrowsingDataOnQuit } returns true
 
         val controller = createController(scope = this, store = browserStore)
 

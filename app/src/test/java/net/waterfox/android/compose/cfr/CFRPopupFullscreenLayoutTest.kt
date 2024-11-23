@@ -27,6 +27,7 @@ import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.Mockito.*
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class CFRPopupFullscreenLayoutTest {
@@ -52,24 +53,25 @@ class CFRPopupFullscreenLayoutTest {
     }
 
     @Test
-    fun `WHEN the popup is dismissed THEN cleanup lifecycle owners and detach from window`() {
-        val context = spyk(testContext)
-        val anchor = View(testContext).apply {
+    fun `GIVEN is attached to window WHEN the popup is dismissed THEN cleanup lifecycle owners and detach from window`() {
+        val context = spy(testContext)
+        val anchor = View(context).apply {
             setViewTreeLifecycleOwner(mock())
             this.setViewTreeSavedStateRegistryOwner(mock())
         }
-        val windowManager = spyk(context.getSystemService(Context.WINDOW_SERVICE) as WindowManager)
-        every { context.getSystemService(Context.WINDOW_SERVICE) } returns windowManager
-        val popupView = CFRPopupFullscreenLayout("", anchor, mockk(), mockk()) {}
+        val windowManager = spy(context.getSystemService(Context.WINDOW_SERVICE) as WindowManager)
+        doReturn(windowManager).`when`(context).getSystemService(Context.WINDOW_SERVICE)
+        val popupView = spy(CFRPopupFullscreenLayout("test", anchor, mock(), { }, { }))
+        `when`(popupView.isAttachedToWindow).thenReturn(false)
         popupView.show()
         assertNotNull(popupView.findViewTreeLifecycleOwner())
         assertNotNull(popupView.findViewTreeSavedStateRegistryOwner())
-
+        `when`(popupView.isAttachedToWindow).thenReturn(true)
         popupView.dismiss()
 
         assertNull(popupView.findViewTreeLifecycleOwner())
         assertNull(popupView.findViewTreeSavedStateRegistryOwner())
-        verify { windowManager.removeViewImmediate(popupView) }
+        verify(windowManager).removeViewImmediate(popupView)
     }
 
     @Test
