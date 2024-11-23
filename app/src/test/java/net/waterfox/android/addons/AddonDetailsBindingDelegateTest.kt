@@ -8,6 +8,7 @@ import android.net.Uri
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.IMPORTANT_FOR_ACCESSIBILITY_NO
 import androidx.core.view.isVisible
 import io.mockk.mockk
 import io.mockk.verify
@@ -17,8 +18,9 @@ import mozilla.components.support.test.robolectric.testContext
 import net.waterfox.android.R
 import net.waterfox.android.databinding.FragmentAddOnDetailsBinding
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
-import org.junit.Assert
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -65,9 +67,17 @@ class AddonDetailsBindingDelegateTest {
                 ),
             ),
         )
-        assertEquals("4.30/5", binding.ratingView.contentDescription)
         assertEquals(4.5f, binding.ratingView.rating)
         assertEquals("100", binding.reviewCount.text)
+
+        val ratingContentDescription = testContext.getString(R.string.mozac_feature_addons_rating_content_description_2)
+        var formattedRatting = String.format(ratingContentDescription, 4.3f)
+        assertEquals(formattedRatting, binding.ratingLabel.contentDescription)
+        assertEquals(IMPORTANT_FOR_ACCESSIBILITY_NO, binding.ratingView.importantForAccessibility)
+
+        val reviewContentDescription = testContext.getString(R.string.mozac_feature_addons_user_rating_count_2)
+        formattedRatting = String.format(reviewContentDescription, 100)
+        assertEquals(formattedRatting, binding.reviewCount.contentDescription)
     }
 
     @Test
@@ -78,7 +88,7 @@ class AddonDetailsBindingDelegateTest {
                 ratingUrl = "https://example.org/",
             ),
         )
-        assertEquals("100", binding.reviewCount.text)
+        assertEquals("100", binding.reviewCount.text.toString())
 
         binding.reviewCount.performClick()
 
@@ -103,6 +113,9 @@ class AddonDetailsBindingDelegateTest {
         detailsBindingDelegate.bind(baseAddon)
 
         assertEquals("Nov 23, 2020", binding.lastUpdatedText.text)
+        val expectedContentDescription = binding.lastUpdatedLabel.text.toString() + " " + "Nov 23, 2020"
+        assertEquals(expectedContentDescription, binding.lastUpdatedLabel.contentDescription)
+        assertEquals(IMPORTANT_FOR_ACCESSIBILITY_NO, binding.lastUpdatedText.importantForAccessibility)
     }
 
     @Test
@@ -129,6 +142,9 @@ class AddonDetailsBindingDelegateTest {
         assertEquals("2.0.0", binding.versionText.text)
         binding.versionText.performLongClick()
         verify { interactor.showUpdaterDialog(addon2) }
+        val expectedContentDescription = binding.versionLabel.text.toString() + " 2.0.0"
+        assertEquals(expectedContentDescription, binding.versionLabel.contentDescription)
+        assertEquals(IMPORTANT_FOR_ACCESSIBILITY_NO, binding.versionText.importantForAccessibility)
     }
 
     @Test
@@ -138,10 +154,10 @@ class AddonDetailsBindingDelegateTest {
         )
 
         assertEquals("Sarah Jane", binding.authorText.text)
-        Assert.assertNotEquals(
-            testContext.getColorFromAttr(R.attr.textAccent),
-            binding.authorText.currentTextColor
-        )
+        assertNotEquals(testContext.getColorFromAttr(R.attr.textAccent), binding.authorText.currentTextColor)
+        val expectedContentDescription = binding.authorLabel.text.toString() + " Sarah Jane"
+        assertEquals(expectedContentDescription, binding.authorLabel.contentDescription)
+        assertEquals(IMPORTANT_FOR_ACCESSIBILITY_NO, binding.authorText.importantForAccessibility)
     }
 
     @Test
@@ -150,7 +166,7 @@ class AddonDetailsBindingDelegateTest {
             baseAddon.copy(author = Addon.Author(name = "Sarah Jane", url = "https://example.org/")),
         )
 
-        assertEquals("Sarah Jane", binding.authorText.text)
+        assertEquals("Sarah Jane", binding.authorText.text.toString())
         assertEquals(testContext.getColorFromAttr(R.attr.textAccent), binding.authorText.currentTextColor)
 
         binding.authorText.performClick()
@@ -173,26 +189,26 @@ class AddonDetailsBindingDelegateTest {
     fun `bind without last updated date`() {
         detailsBindingDelegate.bind(baseAddon.copy(updatedAt = ""))
 
-        Assert.assertFalse(binding.lastUpdatedLabel.isVisible)
-        Assert.assertFalse(binding.lastUpdatedText.isVisible)
-        Assert.assertFalse(binding.lastUpdatedDivider.isVisible)
+        assertFalse(binding.lastUpdatedLabel.isVisible)
+        assertFalse(binding.lastUpdatedText.isVisible)
+        assertFalse(binding.lastUpdatedDivider.isVisible)
     }
 
     @Test
     fun `bind without author`() {
         detailsBindingDelegate.bind(baseAddon.copy(author = null))
 
-        Assert.assertFalse(binding.authorLabel.isVisible)
-        Assert.assertFalse(binding.authorText.isVisible)
-        Assert.assertFalse(binding.authorDivider.isVisible)
+        assertFalse(binding.authorLabel.isVisible)
+        assertFalse(binding.authorText.isVisible)
+        assertFalse(binding.authorDivider.isVisible)
     }
 
     @Test
     fun `bind without a home page`() {
         detailsBindingDelegate.bind(baseAddon.copy(homepageUrl = ""))
 
-        Assert.assertFalse(binding.homePageLabel.isVisible)
-        Assert.assertFalse(binding.homePageDivider.isVisible)
+        assertFalse(binding.homePageLabel.isVisible)
+        assertFalse(binding.homePageDivider.isVisible)
     }
 
     @Test
@@ -211,7 +227,7 @@ class AddonDetailsBindingDelegateTest {
     fun `bind add-on without a detail url`() {
         detailsBindingDelegate.bind(baseAddon.copy(detailUrl = ""))
 
-        Assert.assertFalse(binding.detailUrl.isVisible)
-        Assert.assertFalse(binding.detailUrlDivider.isVisible)
+        assertFalse(binding.detailUrl.isVisible)
+        assertFalse(binding.detailUrlDivider.isVisible)
     }
 }

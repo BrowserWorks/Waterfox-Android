@@ -5,6 +5,7 @@
 package net.waterfox.android.browser
 
 import android.view.View
+import com.google.android.material.snackbar.Snackbar.LENGTH_LONG
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
@@ -12,19 +13,21 @@ import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.unmockkObject
 import io.mockk.verify
+import net.waterfox.android.R
+import net.waterfox.android.components.WaterfoxSnackbar
+import net.waterfox.android.helpers.MockkRetryTestRule
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import net.waterfox.android.R
-import net.waterfox.android.components.WaterfoxSnackbar
-import net.waterfox.android.components.WaterfoxSnackbar.Companion.LENGTH_SHORT
-import net.waterfox.android.helpers.MockkRetryTestRule
 
 class WaterfoxSnackbarDelegateTest {
 
-    @MockK private lateinit var view: View
-    @MockK(relaxed = true) private lateinit var snackbar: WaterfoxSnackbar
+    @MockK(relaxed = true)
+    private lateinit var view: View
+
+    @MockK(relaxed = true)
+    private lateinit var snackbar: WaterfoxSnackbar
     private lateinit var delegate: WaterfoxSnackbarDelegate
 
     @get:Rule
@@ -37,7 +40,7 @@ class WaterfoxSnackbarDelegateTest {
 
         delegate = WaterfoxSnackbarDelegate(view)
         every {
-            WaterfoxSnackbar.make(view, LENGTH_SHORT, isDisplayedWithBrowserToolbar = true)
+            WaterfoxSnackbar.make(view, LENGTH_LONG, isDisplayedWithBrowserToolbar = true)
         } returns snackbar
         every { snackbar.setText(any()) } returns snackbar
         every { snackbar.setAction(any(), any()) } returns snackbar
@@ -53,9 +56,9 @@ class WaterfoxSnackbarDelegateTest {
     @Test
     fun `show with no listener nor action`() {
         delegate.show(
-            snackBarParentView = mockk(),
+            snackBarParentView = view,
             text = R.string.app_name,
-            duration = 0,
+            duration = LENGTH_LONG,
             action = 0,
             listener = null
         )
@@ -68,9 +71,9 @@ class WaterfoxSnackbarDelegateTest {
     @Test
     fun `show with listener but no action`() {
         delegate.show(
-            snackBarParentView = mockk(),
+            snackBarParentView = view,
             text = R.string.app_name,
-            duration = 0,
+            duration = LENGTH_LONG,
             action = 0,
             listener = {}
         )
@@ -83,9 +86,9 @@ class WaterfoxSnackbarDelegateTest {
     @Test
     fun `show with action but no listener`() {
         delegate.show(
-            snackBarParentView = mockk(),
+            snackBarParentView = view,
             text = R.string.app_name,
-            duration = 0,
+            duration = LENGTH_LONG,
             action = R.string.edit,
             listener = null
         )
@@ -99,9 +102,9 @@ class WaterfoxSnackbarDelegateTest {
     fun `show with listener and action`() {
         val listener = mockk<(View) -> Unit>(relaxed = true)
         delegate.show(
-            snackBarParentView = mockk(),
+            snackBarParentView = view,
             text = R.string.app_name,
-            duration = 0,
+            duration = LENGTH_LONG,
             action = R.string.edit,
             listener = listener
         )
