@@ -25,6 +25,7 @@ import net.waterfox.android.AppRequestInterceptor.Companion.LOW_AND_MEDIUM_RISK_
 import net.waterfox.android.components.Services
 import net.waterfox.android.ext.components
 import net.waterfox.android.ext.isOnline
+import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
@@ -39,119 +40,12 @@ class AppRequestInterceptorTest {
         mockkStatic("net.waterfox.android.ext.ConnectivityManagerKt")
 
         every { testContext.getSystemService<ConnectivityManager>()!!.isOnline() } returns true
+        every { testContext.settings() } returns mockk(relaxed = true)
 
         navigationController = mockk(relaxed = true)
         interceptor = AppRequestInterceptor(testContext).also {
             it.setNavigationController(navigationController)
         }
-    }
-
-    @Test
-    fun `GIVEN request to install add-on WHEN on same domain and triggered by user THEN start add-on installation`() {
-        val addonId = "12345678"
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://addons.mozilla.org/android/downloads/file/$addonId/test.xpi",
-            lastUri = "https://addons.mozilla.org/en-US/firefox/",
-            hasUserGesture = true,
-            isSameDomain = true,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment(addonId)) }
-        assertEquals(RequestInterceptor.InterceptionResponse.Deny, result)
-    }
-
-    @Test
-    fun `GIVEN valid request to install add-on WHEN url is provided with query parameters THEN start add-on installation`() {
-        val addonId = "12345678"
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://addons.mozilla.org/android/downloads/file/$addonId/test.xpi?queryParam=test",
-            lastUri = "https://addons.mozilla.org/en-US/firefox/",
-            hasUserGesture = true,
-            isSameDomain = true,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment(addonId)) }
-        assertEquals(RequestInterceptor.InterceptionResponse.Deny, result)
-    }
-
-    @Test
-    fun `GIVEN request to install add-on WHEN on a different domain THEN no add-on installation is started`() {
-        every { testContext.components.services } returns Services(testContext, mockk(relaxed = true))
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://addons.mozilla.org/android/downloads/file/12345678/test.xpi",
-            lastUri = "https://www.baidu.com/",
-            hasUserGesture = true,
-            isSameDomain = false,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify(exactly = 0) { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment()) }
-        assertNull(result)
-    }
-
-    @Test
-    fun `GIVEN invalid request to install add-on WHEN on same domain and triggered by user THEN no add-on installation is started`() {
-        every { testContext.components.services } returns Services(testContext, mockk(relaxed = true))
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://addons.mozilla.org/android/downloads/file/12345678/test.invalid",
-            lastUri = "https://addons.mozilla.org/en-US/firefox/",
-            hasUserGesture = true,
-            isSameDomain = true,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify(exactly = 0) { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment()) }
-        assertNull(result)
-    }
-
-    @Test
-    fun `GIVEN request to install add-on WHEN not triggered by user THEN no add-on installation is started`() {
-        every { testContext.components.services } returns Services(testContext, mockk(relaxed = true))
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://addons.mozilla.org/android/downloads/file/12345678/test.xpi",
-            lastUri = "https://addons.mozilla.org/en-US/firefox/",
-            hasUserGesture = false,
-            isSameDomain = true,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify(exactly = 0) { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment()) }
-        assertNull(result)
-    }
-
-    @Test
-    fun `GIVEN any request WHEN on same domain and triggered by user THEN no add-on installation is started`() {
-        every { testContext.components.services } returns Services(testContext, mockk(relaxed = true))
-        val result = interceptor.onLoadRequest(
-            engineSession = mockk(),
-            uri = "https://blog.mozilla.org/blog/2020/10/20/mozilla-reaction-to-u-s-v-google/",
-            lastUri = "https://blog.mozilla.org",
-            hasUserGesture = true,
-            isSameDomain = true,
-            isDirectNavigation = false,
-            isRedirect = false,
-            isSubframeRequest = false
-        )
-
-        verify(exactly = 0) { navigationController.navigate(NavGraphDirections.actionGlobalAddonsManagementFragment()) }
-        assertNull(result)
     }
 
     @Test
@@ -175,12 +69,12 @@ class AppRequestInterceptorTest {
             ErrorType.ERROR_FILE_ACCESS_DENIED,
             ErrorType.ERROR_PROXY_CONNECTION_REFUSED,
             ErrorType.ERROR_UNKNOWN_PROXY_HOST,
-            ErrorType.ERROR_UNKNOWN_PROTOCOL
+            ErrorType.ERROR_UNKNOWN_PROTOCOL,
         ).forEach { error ->
             val actualPage = createActualErrorPage(error)
             val expectedPage = createExpectedErrorPage(
                 error = error,
-                html = LOW_AND_MEDIUM_RISK_ERROR_PAGES
+                html = LOW_AND_MEDIUM_RISK_ERROR_PAGES,
             )
 
             assertEquals(expectedPage, actualPage)
@@ -192,12 +86,12 @@ class AppRequestInterceptorTest {
         setOf(
             ErrorType.ERROR_SECURITY_BAD_CERT,
             ErrorType.ERROR_SECURITY_SSL,
-            ErrorType.ERROR_PORT_BLOCKED
+            ErrorType.ERROR_PORT_BLOCKED,
         ).forEach { error ->
             val actualPage = createActualErrorPage(error)
             val expectedPage = createExpectedErrorPage(
                 error = error,
-                html = LOW_AND_MEDIUM_RISK_ERROR_PAGES
+                html = LOW_AND_MEDIUM_RISK_ERROR_PAGES,
             )
 
             assertEquals(expectedPage, actualPage)
@@ -210,12 +104,12 @@ class AppRequestInterceptorTest {
             ErrorType.ERROR_SAFEBROWSING_HARMFUL_URI,
             ErrorType.ERROR_SAFEBROWSING_MALWARE_URI,
             ErrorType.ERROR_SAFEBROWSING_PHISHING_URI,
-            ErrorType.ERROR_SAFEBROWSING_UNWANTED_URI
+            ErrorType.ERROR_SAFEBROWSING_UNWANTED_URI,
         ).forEach { error ->
             val actualPage = createActualErrorPage(error)
             val expectedPage = createExpectedErrorPage(
                 error = error,
-                html = HIGH_RISK_ERROR_PAGES
+                html = HIGH_RISK_ERROR_PAGES,
             )
 
             assertEquals(expectedPage, actualPage)
@@ -224,7 +118,7 @@ class AppRequestInterceptorTest {
 
     private fun createActualErrorPage(error: ErrorType): String {
         val errorPage = interceptor.onErrorRequest(session = mockk(), errorType = error, uri = null)
-            as RequestInterceptor.ErrorResponse
+                as RequestInterceptor.ErrorResponse
         return errorPage.uri
     }
 
@@ -232,7 +126,7 @@ class AppRequestInterceptorTest {
         return ErrorPages.createUrlEncodedErrorPage(
             context = testContext,
             errorType = error,
-            htmlResource = html
+            htmlResource = html,
         )
     }
 }

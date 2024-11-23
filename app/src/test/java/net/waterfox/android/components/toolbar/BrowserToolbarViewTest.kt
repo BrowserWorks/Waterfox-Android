@@ -15,6 +15,7 @@ import mozilla.components.lib.publicsuffixlist.PublicSuffixList
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.ui.widgets.behavior.EngineViewScrollingBehavior
 import net.waterfox.android.ext.components
+import net.waterfox.android.ext.settings
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.utils.Settings
 import org.junit.Assert.assertNotNull
@@ -35,12 +36,12 @@ class BrowserToolbarViewTest {
     fun setup() {
         toolbar = BrowserToolbar(testContext)
         toolbar.layoutParams = CoordinatorLayout.LayoutParams(100, 100)
-        behavior = spyk(EngineViewScrollingBehavior(testContext, null, MozacToolbarPosition.BOTTOM))
-        (toolbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = behavior
+
         settings = mockk(relaxed = true)
         every { testContext.components.useCases } returns mockk(relaxed = true)
         every { testContext.components.core } returns mockk(relaxed = true)
         every { testContext.components.publicSuffixList } returns PublicSuffixList(testContext)
+        every { testContext.settings() } returns settings
 
         toolbarView = BrowserToolbarView(
             context = testContext,
@@ -52,6 +53,8 @@ class BrowserToolbarViewTest {
         )
 
         toolbarView.view = toolbar
+        behavior = spyk(EngineViewScrollingBehavior(testContext, null, MozacToolbarPosition.BOTTOM))
+        (toolbar.layoutParams as CoordinatorLayout.LayoutParams).behavior = behavior
     }
 
     @Test

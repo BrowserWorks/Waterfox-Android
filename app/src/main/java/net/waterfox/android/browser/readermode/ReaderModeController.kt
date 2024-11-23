@@ -7,6 +7,7 @@ package net.waterfox.android.browser.readermode
 import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
+import androidx.annotation.VisibleForTesting
 import androidx.appcompat.content.res.AppCompatResources
 import mozilla.components.feature.readerview.ReaderViewFeature
 import mozilla.components.support.base.feature.ViewBoundFeatureWrapper
@@ -25,8 +26,23 @@ class DefaultReaderModeController(
     private val readerViewFeature: ViewBoundFeatureWrapper<ReaderViewFeature>,
     private val readerViewControlsBar: View,
     private val isPrivate: Boolean = false,
-    private val onReaderModeChanged: () -> Unit = {}
+    private val onReaderModeChanged: () -> Unit = {},
 ) : ReaderModeController {
+
+    @VisibleForTesting
+    internal val privateButtonColor
+        get() = AppCompatResources.getColorStateList(
+            readerViewControlsBar.context,
+            R.color.readerview_private_button_color,
+        )
+
+    @VisibleForTesting
+    internal val privateRadioButtonColor
+        get() = AppCompatResources.getColorStateList(
+            readerViewControlsBar.context,
+            R.color.readerview_private_radio_color,
+        )
+
     override fun hideReaderView() {
         onReaderModeChanged()
         readerViewFeature.withFeature {
@@ -52,30 +68,20 @@ class DefaultReaderModeController(
     private fun themeReaderViewControlsForPrivateMode(view: View) = with(view) {
         listOf(
             R.id.mozac_feature_readerview_font_size_decrease,
-            R.id.mozac_feature_readerview_font_size_increase
+            R.id.mozac_feature_readerview_font_size_increase,
         ).map {
             findViewById<Button>(it)
         }.forEach {
-            it.setTextColor(
-                AppCompatResources.getColorStateList(
-                    context,
-                    R.color.readerview_private_button_color
-                )
-            )
+            it.setTextColor(privateButtonColor)
         }
 
         listOf(
             R.id.mozac_feature_readerview_font_serif,
-            R.id.mozac_feature_readerview_font_sans_serif
+            R.id.mozac_feature_readerview_font_sans_serif,
         ).map {
             findViewById<RadioButton>(it)
         }.forEach {
-            it.setTextColor(
-                AppCompatResources.getColorStateList(
-                    context,
-                    R.color.readerview_private_radio_color
-                )
-            )
+            it.setTextColor(privateRadioButtonColor)
         }
     }
 }
