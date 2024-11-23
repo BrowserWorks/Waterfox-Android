@@ -54,7 +54,7 @@ class OnboardingManualSignInViewHolderTest {
         binding.fxaSignInButton.performClick()
 
         verify { navController.navigate(HomeFragmentDirections.actionGlobalTurnOnSync(
-            entrypoint = WaterfoxFxAEntryPoint.HomeMenu,
+            entrypoint = WaterfoxFxAEntryPoint.OnboardingManualSignIn,
         )) }
     }
 }

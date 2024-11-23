@@ -184,6 +184,7 @@ class DefaultTabsTrayControllerTest {
                 "https://mozilla.org/download",
                 private = true,
                 destinationDirectory = "Download",
+                directoryPath = "Download",
                 status = DownloadState.Status.DOWNLOADING,
             ),
         )
