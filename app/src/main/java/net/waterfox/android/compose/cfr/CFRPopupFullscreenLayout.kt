@@ -33,15 +33,23 @@ import androidx.lifecycle.findViewTreeLifecycleOwner
 import androidx.lifecycle.setViewTreeLifecycleOwner
 import androidx.savedstate.findViewTreeSavedStateRegistryOwner
 import androidx.savedstate.setViewTreeSavedStateRegistryOwner
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import mozilla.components.support.ktx.android.util.dpToPx
+import mozilla.components.support.ktx.android.view.toScope
 import net.waterfox.android.compose.cfr.CFRPopup.IndicatorDirection.DOWN
 import net.waterfox.android.compose.cfr.CFRPopup.IndicatorDirection.UP
 import net.waterfox.android.compose.cfr.CFRPopup.PopupAlignment.BODY_TO_ANCHOR_CENTER
 import net.waterfox.android.compose.cfr.CFRPopup.PopupAlignment.BODY_TO_ANCHOR_START
 import net.waterfox.android.compose.cfr.CFRPopup.PopupAlignment.INDICATOR_CENTERED_IN_ANCHOR
+import net.waterfox.android.compose.cfr.helper.DisplayOrientationListener
+import net.waterfox.android.compose.cfr.helper.ViewDetachedListener
 import net.waterfox.android.theme.WaterfoxTheme
 import org.mozilla.gecko.GeckoScreenOrientation
 import kotlin.math.roundToInt
+
+@VisibleForTesting
+internal const val SHOW_AFTER_SCREEN_ORIENTATION_CHANGE_DELAY = 500L
 
 /**
  * Value class allowing to easily reason about what an `Int` represents.
@@ -88,7 +96,7 @@ internal class CFRPopupFullscreenLayout(
      *
      * Will not inform client about this since the user did not expressly dismissed this popup.
      */
-    private val anchorDetachedListener = OnViewDetachedListener {
+    private val anchorDetachedListener = ViewDetachedListener {
         dismiss()
     }
 
@@ -98,20 +106,18 @@ internal class CFRPopupFullscreenLayout(
      * To avoid any improper anchorage the popups are automatically dismissed.
      *
      * Will not inform client about this since the user did not expressly dismissed this popup.
+     *
+     * Since a UX decision has been made here:
+     * [link](https://github.com/mozilla-mobile/fenix/issues/27033#issuecomment-1302363014)
+     * to redisplay any **implicitly** dismissed CFRs, a short delay will be added,
+     * after which the CFR will be shown again.
+     *
      */
-    private val orientationChangeListener = GeckoScreenOrientation.OrientationChangeListener {
-        dismiss()
-    }
+    @VisibleForTesting
+    internal lateinit var orientationChangeListener: DisplayOrientationListener
 
     override var shouldCreateCompositionOnAttachedToWindow: Boolean = false
         private set
-
-    init {
-        setViewTreeLifecycleOwner(anchor.findViewTreeLifecycleOwner())
-        this.setViewTreeSavedStateRegistryOwner(anchor.findViewTreeSavedStateRegistryOwner())
-        GeckoScreenOrientation.getInstance().addListener(orientationChangeListener)
-        anchor.addOnAttachStateChangeListener(anchorDetachedListener)
-    }
 
     /**
      * Add a new CFR popup to the current window overlaying everything already displayed.
@@ -119,7 +125,20 @@ internal class CFRPopupFullscreenLayout(
      * with such behavior set in [CFRPopupProperties].
      */
     fun show() {
-        windowManager.addView(this, createLayoutParams())
+        if (!isAttachedToWindow) {
+            val anchorViewTreeLifecycleOwner = anchor.findViewTreeLifecycleOwner()
+            val anchorViewTreeSavedStateRegistryOwner = anchor.findViewTreeSavedStateRegistryOwner()
+
+            if (anchorViewTreeLifecycleOwner != null && anchorViewTreeSavedStateRegistryOwner != null) {
+                setViewTreeLifecycleOwner(anchorViewTreeLifecycleOwner)
+                this.setViewTreeSavedStateRegistryOwner(anchorViewTreeSavedStateRegistryOwner)
+                anchor.addOnAttachStateChangeListener(anchorDetachedListener)
+                orientationChangeListener = getDisplayOrientationListener(anchor.context).also {
+                    it.start()
+                }
+                windowManager.addView(this, createLayoutParams())
+            }
+        }
     }
 
     @Composable
@@ -333,12 +352,14 @@ internal class CFRPopupFullscreenLayout(
      * Clients are not automatically informed about this. Use a separate call to [onDismiss] if needed.
      */
     internal fun dismiss() {
-        anchor.removeOnAttachStateChangeListener(anchorDetachedListener)
-        GeckoScreenOrientation.getInstance().removeListener(orientationChangeListener)
-        disposeComposition()
-        setViewTreeLifecycleOwner(null)
-        this.setViewTreeSavedStateRegistryOwner(null)
-        windowManager.removeViewImmediate(this)
+        if (isAttachedToWindow) {
+            anchor.removeOnAttachStateChangeListener(anchorDetachedListener)
+            orientationChangeListener.stop()
+            disposeComposition()
+            setViewTreeLifecycleOwner(null)
+            this.setViewTreeSavedStateRegistryOwner(null)
+            windowManager.removeViewImmediate(this)
+        }
     }
 
     /**
@@ -357,6 +378,14 @@ internal class CFRPopupFullscreenLayout(
                 WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED
         }
 
+    private fun getDisplayOrientationListener(context: Context) = DisplayOrientationListener(context) {
+        dismiss()
+        anchor.toScope().launch {
+            delay(SHOW_AFTER_SCREEN_ORIENTATION_CHANGE_DELAY)
+            show()
+        }
+    }
+
     /**
      * Intended to allow querying the insets of the navigation bar.
      * Value will be `0` except for when the screen is rotated by 90 degrees.
@@ -370,19 +399,5 @@ internal class CFRPopupFullscreenLayout(
         return this.value
             .dpToPx(anchor.resources.displayMetrics)
             .roundToInt()
-    }
-}
-
-/**
- * Simpler [View.OnAttachStateChangeListener] only informing about
- * [View.OnAttachStateChangeListener.onViewDetachedFromWindow].
- */
-private class OnViewDetachedListener(val onDismiss: () -> Unit) : View.OnAttachStateChangeListener {
-    override fun onViewAttachedToWindow(v: View) {
-        // no-op
-    }
-
-    override fun onViewDetachedFromWindow(v: View) {
-        onDismiss()
     }
 }
