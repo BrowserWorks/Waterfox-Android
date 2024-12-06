@@ -5,6 +5,7 @@
 package net.waterfox.android.home.topsites
 
 import android.view.LayoutInflater
+import androidx.core.view.isVisible
 import androidx.lifecycle.LifecycleOwner
 import io.mockk.every
 import io.mockk.mockk
@@ -21,6 +22,7 @@ import net.waterfox.android.databinding.TopSiteItemBinding
 import net.waterfox.android.ext.components
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
 import net.waterfox.android.home.sessioncontrol.TopSiteInteractor
+import org.junit.Assert.assertTrue
 
 @RunWith(WaterfoxRobolectricTestRunner::class)
 class TopSiteItemViewHolderTest {
@@ -63,7 +65,7 @@ class TopSiteItemViewHolderTest {
     }
 
     @Test
-    fun `GIVEN a default top site WHEN bind is called THEN the title has a pin indicator`() {
+    fun `GIVEN a default top site WHEN bind is called THEN the pin indicator is visible`() {
         val defaultTopSite = TopSite.Default(
             id = 1L,
             title = "Baidu",
@@ -72,13 +74,12 @@ class TopSiteItemViewHolderTest {
         )
 
         TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(defaultTopSite, position = 0)
-        val pinIndicator = binding.topSiteTitle.compoundDrawables[0]
 
-        assertNotNull(pinIndicator)
+        assertTrue(binding.topSitePin.isVisible)
     }
 
     @Test
-    fun `GIVEN a pinned top site WHEN bind is called THEN the title has a pin indicator`() {
+    fun `GIVEN a pinned top site WHEN bind is called THEN the pin indicator is visible`() {
         val pinnedTopSite = TopSite.Pinned(
             id = 1L,
             title = "Mozilla",
@@ -87,9 +88,8 @@ class TopSiteItemViewHolderTest {
         )
 
         TopSiteItemViewHolder(binding.root, lifecycleOwner, interactor).bind(pinnedTopSite, position = 0)
-        val pinIndicator = binding.topSiteTitle.compoundDrawables[0]
 
-        assertNotNull(pinIndicator)
+        assertTrue(binding.topSitePin.isVisible)
     }
 
     @Test

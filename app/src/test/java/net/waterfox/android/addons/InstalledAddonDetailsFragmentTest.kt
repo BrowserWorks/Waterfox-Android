@@ -231,12 +231,16 @@ class InstalledAddonDetailsFragmentTest {
     private fun mockAddon(): Addon {
         val addon: Addon = mockk()
         every { addon.id } returns "some-addon-id"
+        every { addon.version } returns "1.2.3"
+        every { addon.incognito } returns Addon.Incognito.SPANNING
         every { addon.isEnabled() } returns true
         every { addon.isDisabledAsBlocklisted() } returns false
         every { addon.isDisabledAsNotCorrectlySigned() } returns false
         every { addon.isDisabledAsIncompatible() } returns false
         every { addon.installedState } returns null
         every { addon.isAllowedInPrivateBrowsing() } returns false
+        every { addon.translatableName } returns mapOf("en-US" to "some-name")
+        every { addon.defaultLocale } returns "en-US"
         return addon
     }
 }

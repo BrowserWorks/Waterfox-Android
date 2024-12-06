@@ -5,8 +5,10 @@
 package net.waterfox.android.components
 
 import android.content.res.Resources
+import androidx.annotation.VisibleForTesting
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy
 import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicy.CookiePolicy
+import mozilla.components.concept.engine.EngineSession.TrackingProtectionPolicyForSessionTypes
 import net.waterfox.android.R
 import net.waterfox.android.utils.Settings
 
@@ -40,9 +42,9 @@ class TrackingProtectionPolicyFactory(
             }
 
         return when {
-            normalMode && privateMode -> trackingProtectionPolicy
-            normalMode && !privateMode -> trackingProtectionPolicy.forRegularSessionsOnly()
-            !normalMode && privateMode -> trackingProtectionPolicy.forPrivateSessionsOnly()
+            normalMode && privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings)
+            normalMode && !privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings).forRegularSessionsOnly()
+            !normalMode && privateMode -> trackingProtectionPolicy.applyTCPIfNeeded(settings).forPrivateSessionsOnly()
             else -> TrackingProtectionPolicy.none()
         }
     }
@@ -52,6 +54,7 @@ class TrackingProtectionPolicyFactory(
             cookiePolicy = getCustomCookiePolicy(),
             trackingCategories = getCustomTrackingCategories(),
             cookiePurging = getCustomCookiePurgingPolicy(),
+            strictSocialTrackingProtection = settings.blockTrackingContentInCustomTrackingProtection,
         ).let {
             if (settings.blockTrackingContentSelectionInCustomTrackingProtection == "private") {
                 it.forPrivateSessionsOnly()
@@ -102,4 +105,22 @@ class TrackingProtectionPolicyFactory(
     private fun getCustomCookiePurgingPolicy(): Boolean {
         return settings.blockRedirectTrackersInCustomTrackingProtection
     }
+}
+
+@VisibleForTesting
+internal fun TrackingProtectionPolicyForSessionTypes.applyTCPIfNeeded(
+    settings: Settings,
+): TrackingProtectionPolicyForSessionTypes {
+    val updatedCookiePolicy = if (settings.enabledTotalCookieProtection) {
+        CookiePolicy.ACCEPT_FIRST_PARTY_AND_ISOLATE_OTHERS
+    } else {
+        cookiePolicy
+    }
+
+    return TrackingProtectionPolicy.select(
+        trackingCategories = trackingCategories,
+        cookiePolicy = updatedCookiePolicy,
+        strictSocialTrackingProtection = strictSocialTrackingProtection,
+        cookiePurging = cookiePurging,
+    )
 }

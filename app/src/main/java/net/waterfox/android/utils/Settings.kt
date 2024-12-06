@@ -1169,6 +1169,8 @@ class Settings(private val appContext: Context) : PreferencesHolder {
 
     val enableTabsTrayToCompose = true
 
+    val enabledTotalCookieProtection: Boolean = false
+
     /**
      * Get the current mode for how https-only is enabled.
      */
