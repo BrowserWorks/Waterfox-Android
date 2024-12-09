@@ -128,7 +128,7 @@ class NavigationInteractorTest {
         )
         try {
             mockkStatic("mozilla.components.browser.state.selector.SelectorsKt")
-            every { mockedStore.state.findTab(any()) } returns tab
+            every { mockedStore.state.findTab("testTabId") } returns tab
             every { mockedStore.state.getNormalOrPrivateTabs(any()) } returns listOf(tab)
 
             controller.onCloseAllTabsClicked(true)
