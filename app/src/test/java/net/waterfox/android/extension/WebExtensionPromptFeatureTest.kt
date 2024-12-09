@@ -4,6 +4,7 @@
 
 package net.waterfox.android.extension
 
+import androidx.core.view.isVisible
 import io.mockk.every
 import io.mockk.just
 import io.mockk.mockk
@@ -15,12 +16,18 @@ import mozilla.components.browser.state.state.extension.WebExtensionPromptReques
 import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.concept.engine.webextension.WebExtensionInstallException
 import mozilla.components.feature.addons.Addon
+import mozilla.components.feature.addons.ui.PermissionsDialogFragment
 import mozilla.components.support.ktx.android.content.appVersionName
 import mozilla.components.support.test.ext.joinBlocking
 import mozilla.components.support.test.robolectric.testContext
 import mozilla.components.support.test.rule.MainCoroutineRule
+import net.waterfox.android.BuildConfig
 import net.waterfox.android.R
 import net.waterfox.android.helpers.WaterfoxRobolectricTestRunner
+import net.waterfox.android.settings.SupportUtils
+import net.waterfox.android.utils.LinkTextView
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -31,6 +38,8 @@ class WebExtensionPromptFeatureTest {
 
     private lateinit var webExtensionPromptFeature: WebExtensionPromptFeature
     private lateinit var store: BrowserStore
+
+    private val onLinkClicked: (String, Boolean) -> Unit = spyk()
 
     @get:Rule
     val coroutinesTestRule = MainCoroutineRule()
@@ -43,6 +52,7 @@ class WebExtensionPromptFeatureTest {
                 store = store,
                 context = testContext,
                 fragmentManager = mockk(relaxed = true),
+                onLinkClicked = onLinkClicked,
                 addonManager = mockk(relaxed = true),
             ),
         )
@@ -52,7 +62,7 @@ class WebExtensionPromptFeatureTest {
     fun `WHEN InstallationFailed is dispatched THEN handleInstallationFailedRequest is called`() {
         webExtensionPromptFeature.start()
 
-        every { webExtensionPromptFeature.handleInstallationFailedRequest(any()) } just runs
+        every { webExtensionPromptFeature.handleInstallationFailedRequest(any()) } returns null
 
         store.dispatch(
             UpdatePromptRequestWebExtensionAction(
@@ -68,8 +78,7 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with network error THEN showDialog with the correct message`() {
-        val expectedTitle =
-            testContext.getString(R.string.mozac_feature_addons_failed_to_install, "")
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.NetworkFailure(
             extensionName = "name",
             throwable = Exception(),
@@ -80,30 +89,42 @@ class WebExtensionPromptFeatureTest {
                 "name",
             )
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with Blocklisted error THEN showDialog with the correct message`() {
-        val expectedTitle =
-            testContext.getString(R.string.mozac_feature_addons_failed_to_install, "")
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val extensionId = "extensionId"
         val extensionName = "extensionName"
+        val extensionVersion = "extensionVersion"
         val exception = WebExtensionInstallException.Blocklisted(
+            extensionId = extensionId,
             extensionName = extensionName,
+            extensionVersion = extensionVersion,
             throwable = Exception(),
         )
+        val appName = testContext.getString(R.string.app_name)
         val expectedMessage =
-            testContext.getString(R.string.mozac_feature_addons_blocklisted_1, extensionName)
+            testContext.getString(R.string.mozac_feature_addons_blocklisted_2, extensionName, appName)
+        val expectedUrl = "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
-        verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage, expectedUrl) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertTrue(linkView!!.isVisible)
+
+        // Click the link, then verify.
+        linkView.performClick()
+        verify {
+            onLinkClicked(expectedUrl, true)
+            dialog.dismiss()
+        }
     }
 
     @Test
@@ -135,11 +156,11 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_failed_to_install, extensionName)
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
@@ -152,51 +173,48 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install)
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with CorruptFile error THEN showDialog with the correct message`() {
-        val expectedTitle =
-            testContext.getString(R.string.mozac_feature_addons_failed_to_install, "")
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.CorruptFile(
             throwable = Exception(),
         )
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install_corrupt_error)
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with NotSigned error THEN showDialog with the correct message`() {
-        val expectedTitle =
-            testContext.getString(R.string.mozac_feature_addons_failed_to_install, "")
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.NotSigned(
             throwable = Exception(),
         )
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install_not_signed_error)
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with Incompatible error THEN showDialog with the correct message`() {
-        val expectedTitle =
-            testContext.getString(R.string.mozac_feature_addons_failed_to_install, "")
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val extensionName = "extensionName"
         val exception = WebExtensionInstallException.Incompatible(
             extensionName = extensionName,
@@ -212,11 +230,11 @@ class WebExtensionPromptFeatureTest {
                 version,
             )
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
     }
 
     @Test
@@ -319,10 +337,82 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_failed_to_install, extensionName)
 
-        webExtensionPromptFeature.handleInstallationFailedRequest(
-            exception = exception,
-        )
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
+    }
+
+    @Test
+    fun `WHEN calling handleInstallationFailedRequest with AdminInstallOnly error THEN showDialog with the correct message`() {
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val extensionName = "extensionName"
+        val exception = WebExtensionInstallException.AdminInstallOnly(
+            extensionName = extensionName,
+            throwable = Exception(),
+        )
+        val expectedMessage =
+            testContext.getString(R.string.mozac_feature_addons_admin_install_only, extensionName)
+
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+
+        verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertFalse(linkView!!.isVisible)
+    }
+
+    @Test
+    fun `WHEN calling handleInstallationFailedRequest with SoftBlocked error THEN showDialog with the correct message`() {
+        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val extensionId = "extensionId"
+        val extensionName = "extensionName"
+        val extensionVersion = "extensionVersion"
+        val exception = WebExtensionInstallException.SoftBlocked(
+            extensionId = extensionId,
+            extensionName = extensionName,
+            extensionVersion = extensionVersion,
+            throwable = Exception(),
+        )
+        val appName = testContext.getString(R.string.app_name)
+        val expectedMessage =
+            testContext.getString(R.string.mozac_feature_addons_soft_blocked_1, extensionName, appName)
+        val expectedUrl = "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
+
+        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+
+        verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage, expectedUrl) }
+        val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
+        assertTrue(linkView!!.isVisible)
+
+        // Click the link, then verify.
+        linkView.performClick()
+        verify {
+            onLinkClicked(expectedUrl, true)
+            dialog.dismiss()
+        }
+    }
+
+    @Test
+    fun `WHEN clicking Learn More on the Permissions Dialog THEN open the correct SUMO page in a custom tab`() {
+        val addon: Addon = mockk(relaxed = true)
+
+        val expectedUrl = SupportUtils.getSumoURLForTopic(
+            testContext,
+            SupportUtils.SumoTopic.EXTENSION_PERMISSIONS,
+        )
+
+        val dialog = PermissionsDialogFragment.newInstance(
+            addon = addon,
+            forOptionalPermissions = false,
+            permissions = listOf("tabs"),
+            onLearnMoreClicked = {
+                onLinkClicked(expectedUrl, false)
+            },
+        )
+
+        dialog.onLearnMoreClicked?.invoke()
+
+        verify { onLinkClicked(expectedUrl, false) }
     }
 }

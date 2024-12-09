@@ -42,6 +42,7 @@ object SupportUtils {
         SPONSOR_PRIVACY("sponsor-privacy"),
         HTTPS_ONLY_MODE("https-only-mode-waterfox-android"),
         UNSIGNED_ADDONS("unsigned-addons"),
+        EXTENSION_PERMISSIONS("extension-permissions"),
     }
 
     enum class MozillaPage(internal val path: String) {
