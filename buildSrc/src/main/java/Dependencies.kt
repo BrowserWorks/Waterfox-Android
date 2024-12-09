@@ -41,7 +41,7 @@ object Versions {
     const val accompanist_drawablepainter = "0.30.1"
     const val coil = "2.4.0"
 
-    const val mozilla_android_components = "132.0.2"
+    const val mozilla_android_components = "133.0"
 
     const val junit = "5.9.3"
     const val mockk = "1.13.9"
