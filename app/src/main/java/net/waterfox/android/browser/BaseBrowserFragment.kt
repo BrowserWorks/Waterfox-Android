@@ -591,6 +591,11 @@ abstract class BaseBrowserFragment :
                 loginValidationDelegate = DefaultLoginValidationDelegate(
                     context.components.core.lazyPasswordsStorage
                 ),
+                isLoginAutofillEnabled = {
+                    context.settings().shouldAutofillLogins
+                },
+                // there is no generate password feature, add this to show the save dialog
+                hideUpdateFragmentAfterSavingGeneratedPassword = { _, _ -> false },
                 isSaveLoginEnabled = {
                     context.settings().shouldPromptToSaveLogins
                 },
