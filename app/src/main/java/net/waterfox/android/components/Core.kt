@@ -62,8 +62,8 @@ import mozilla.components.feature.webcompat.WebCompatFeature
 import mozilla.components.feature.webcompat.reporter.WebCompatReporterFeature
 import mozilla.components.feature.webnotifications.WebNotificationFeature
 import mozilla.components.lib.dataprotect.SecureAbove22Preferences
-import mozilla.components.service.contile.ContileTopSitesProvider
-import mozilla.components.service.contile.ContileTopSitesUpdater
+import mozilla.components.service.mars.contile.ContileTopSitesProvider
+import mozilla.components.service.mars.contile.ContileTopSitesUpdater
 import mozilla.components.service.digitalassetlinks.RelationChecker
 import mozilla.components.service.digitalassetlinks.local.StatementApi
 import mozilla.components.service.digitalassetlinks.local.StatementRelationChecker

@@ -41,7 +41,7 @@ object Versions {
     const val accompanist_drawablepainter = "0.30.1"
     const val coil = "2.4.0"
 
-    const val mozilla_android_components = "134.0.2"
+    const val mozilla_android_components = "135.0"
 
     const val junit = "5.9.3"
     const val mockk = "1.13.9"
@@ -127,8 +127,8 @@ object Deps {
     const val mozilla_feature_webnotifications = "org.mozilla.components:feature-webnotifications:${Versions.mozilla_android_components}"
     const val mozilla_feature_webcompat_reporter = "org.mozilla.components:feature-webcompat-reporter:${Versions.mozilla_android_components}"
 
-    const val mozilla_service_contile =
-        "org.mozilla.components:service-contile:${Versions.mozilla_android_components}"
+    const val mozilla_service_mars =
+        "org.mozilla.components:service-mars:${Versions.mozilla_android_components}"
     const val mozilla_service_digitalassetlinks =
         "org.mozilla.components:service-digitalassetlinks:${Versions.mozilla_android_components}"
     const val mozilla_service_sync_autofill =

@@ -26,7 +26,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import mozilla.components.feature.prompts.identitycredential.previews.LightDarkPreview
+import net.waterfox.android.compose.annotation.LightDarkPreview
 import net.waterfox.android.compose.button.PrimaryButton
 import net.waterfox.android.theme.WaterfoxTheme
 

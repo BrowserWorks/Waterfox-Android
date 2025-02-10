@@ -19,7 +19,7 @@ import mozilla.components.concept.engine.Engine.HttpsOnlyMode
 import mozilla.components.feature.sitepermissions.SitePermissionsRules
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.Action
 import mozilla.components.feature.sitepermissions.SitePermissionsRules.AutoplayAction
-import mozilla.components.service.contile.ContileTopSitesProvider
+import mozilla.components.service.mars.contile.ContileTopSitesProvider
 import mozilla.components.support.ktx.android.content.*
 import net.waterfox.android.BuildConfig
 import net.waterfox.android.Config
