@@ -105,9 +105,12 @@ object GeckoProvider {
             GeckoCreditCardsAddressesStorageDelegate(
                 storage = autofillStorage,
                 isCreditCardAutofillEnabled = { context.settings().shouldAutofillCreditCardDetails },
-                isAddressAutofillEnabled = { context.settings().shouldAutofillAddressDetails }
+                isAddressAutofillEnabled = { context.settings().shouldAutofillAddressDetails },
             ),
-            GeckoLoginStorageDelegate(loginStorage)
+            GeckoLoginStorageDelegate(
+                loginStorage = loginStorage,
+                isLoginAutofillEnabled = { context.settings().shouldAutofillLogins },
+            ),
         )
 
         return geckoRuntime

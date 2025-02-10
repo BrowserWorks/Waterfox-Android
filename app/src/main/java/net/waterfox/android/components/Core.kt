@@ -87,7 +87,6 @@ import net.waterfox.android.perf.lazyMonitored
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.utils.getUndoDelay
 import org.mozilla.geckoview.GeckoRuntime
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**
@@ -341,7 +340,7 @@ class Core(
     /**
      * The storage component to sync and persist tabs in a Waterfox Sync account.
      */
-    val lazyRemoteTabsStorage = lazyMonitored { RemoteTabsStorage(context) }
+    val lazyRemoteTabsStorage = lazyMonitored { RemoteTabsStorage(context, crashReporter) }
 
     val recentlyClosedTabsStorage =
         lazyMonitored { RecentlyClosedTabsStorage(context, engine, crashReporter) }

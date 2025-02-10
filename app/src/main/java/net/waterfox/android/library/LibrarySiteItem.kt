@@ -261,6 +261,7 @@ private fun LibrarySiteItemSitePreview() {
                 url = null,
                 dateAdded = 0L,
                 children = null,
+                lastModified = 0L,
             ),
         )
     }
@@ -283,6 +284,7 @@ private fun LibrarySiteItemFolderPreview() {
                 url = null,
                 dateAdded = 0L,
                 children = null,
+                lastModified = 0L,
             ),
         )
     }
