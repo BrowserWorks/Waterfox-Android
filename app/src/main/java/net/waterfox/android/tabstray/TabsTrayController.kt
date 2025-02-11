@@ -36,6 +36,7 @@ import net.waterfox.android.components.appstate.AppAction
 import net.waterfox.android.components.bookmarks.BookmarksUseCase
 import net.waterfox.android.ext.DEFAULT_ACTIVE_DAYS
 import net.waterfox.android.ext.potentialInactiveTabs
+import net.waterfox.android.ext.settings
 import net.waterfox.android.home.HomeFragment
 import net.waterfox.android.library.bookmarks.BookmarksSharedViewModel
 import net.waterfox.android.tabstray.browser.InactiveTabsController
@@ -240,10 +241,35 @@ class DefaultTabsTrayController(
     private fun openNewTab(isPrivate: Boolean) {
         val startTime = profiler?.getProfilerTime()
         browsingModeManager.mode = BrowsingMode.fromBoolean(isPrivate)
-        navController.navigate(
-            TabsTrayFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
-        )
-        navigationInteractor.onTabTrayDismissed()
+
+        val settings = navController.context.settings()
+        if (settings.openTabShowHome) {
+            navController.navigate(
+                TabsTrayFragmentDirections.actionGlobalHome(focusOnAddressBar = true),
+            )
+            navigationInteractor.onTabTrayDismissed()
+        } else {
+            val url = if (settings.openTabShowBlank) {
+                "about:blank"
+            } else {
+                val address = settings.openTabShowWebAddressValue
+                if (address.startsWith("http")) {
+                    address
+                } else {
+                    "https://$address"
+                }
+            }
+            val tab = tabsUseCases.addTab(
+                url,
+                selectTab = false,
+                startLoading = true,
+                parentId = null,
+                contextId = null,
+            )
+            tabsUseCases.selectTab(tab)
+            handleNavigateToBrowser()
+        }
+
         profiler?.addMarker(
             "DefaultTabTrayController.onNewTabTapped",
             startTime,
