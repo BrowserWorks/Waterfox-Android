@@ -25,10 +25,11 @@ class AwesomeBarView(
     private val bookmarksStorageSuggestionProvider: BookmarksStorageSuggestionProvider
 
     private val loadUrlUseCase = object : SessionUseCases.LoadUrlUseCase {
-        override fun invoke(
+        override operator fun invoke(
             url: String,
             flags: EngineSession.LoadUrlFlags,
-            additionalHeaders: Map<String, String>?
+            additionalHeaders: Map<String, String>?,
+            originalInput: String?,
         ) {
             interactor.onUrlTapped(url, flags)
         }

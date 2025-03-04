@@ -57,10 +57,11 @@ class AwesomeBarView(
     private val searchSuggestionProviderMap: MutableMap<SearchEngine, List<AwesomeBar.SuggestionProvider>>
 
     private val loadUrlUseCase = object : SessionUseCases.LoadUrlUseCase {
-        override fun invoke(
+        override operator fun invoke(
             url: String,
             flags: EngineSession.LoadUrlFlags,
-            additionalHeaders: Map<String, String>?
+            additionalHeaders: Map<String, String>?,
+            originalInput: String?,
         ) {
             interactor.onUrlTapped(url, flags)
         }
