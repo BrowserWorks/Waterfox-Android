@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,7 +36,9 @@ import androidx.compose.ui.window.Dialog
 import net.waterfox.android.compose.LinkifyText
 import net.waterfox.android.theme.WaterfoxTheme
 
-class AboutLibrariesComposeView @JvmOverloads constructor(
+class AboutLibrariesComposeView
+@JvmOverloads
+constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
@@ -46,21 +50,28 @@ class AboutLibrariesComposeView @JvmOverloads constructor(
     @Composable
     override fun Content() {
         WaterfoxTheme {
+            // Use a completely different key generator approach
             LazyColumn(
-                modifier = Modifier.semantics {
-                    testTagsAsResourceId = true
-                    testTag = "about.library.list"
-                },
+                modifier =
+                    Modifier.semantics {
+                        testTagsAsResourceId = true
+                        testTag = "about.library.list"
+                    },
+                contentPadding = PaddingValues(0.dp),
             ) {
+                // Use stable key generation that avoids the Android default key
                 itemsIndexed(
                     items = libraries,
-                    key = { _, library -> library.name },
+                    // Use index combined with name for maximum uniqueness
+                    key = { index, library -> "library_${index}_${library.name.hashCode()}" },
                 ) { index, library ->
-                    var showLicenseDialog by rememberSaveable { mutableStateOf(false) }
+                    // Create a stable dialog state
+                    val dialogStateKey = "dialog_state_${library.name.hashCode()}"
+                    var showLicenseDialog by
+                    rememberSaveable(key = dialogStateKey) { mutableStateOf(false) }
+
                     if (showLicenseDialog) {
-                        Dialog(
-                            onDismissRequest = { showLicenseDialog = false },
-                        ) {
+                        Dialog(onDismissRequest = { showLicenseDialog = false }) {
                             Surface(
                                 shape = MaterialTheme.shapes.medium,
                                 color = MaterialTheme.colors.surface,
@@ -74,21 +85,23 @@ class AboutLibrariesComposeView @JvmOverloads constructor(
                                         style = MaterialTheme.typography.subtitle1,
                                     )
 
-                                    LazyColumn(
-                                        contentPadding = PaddingValues(
-                                            start = 16.dp,
-                                            end = 16.dp,
-                                            bottom = 16.dp,
-                                        ),
+                                    // Use verticalScroll instead of LazyColumn for single content
+                                    Column(
+                                        modifier =
+                                            Modifier
+                                                .padding(
+                                                    start = 16.dp,
+                                                    end = 16.dp,
+                                                    bottom = 16.dp,
+                                                )
+                                                .verticalScroll(rememberScrollState()),
                                     ) {
-                                        item {
-                                            LinkifyText(
-                                                text = library.license,
-                                                fontSize = 10.sp,
-                                                fontFamily = FontFamily(Typeface.MONOSPACE),
-                                                style = MaterialTheme.typography.body2,
-                                            )
-                                        }
+                                        LinkifyText(
+                                            text = library.license,
+                                            fontSize = 10.sp,
+                                            fontFamily = FontFamily(Typeface.MONOSPACE),
+                                            style = MaterialTheme.typography.body2,
+                                        )
                                     }
                                 }
                             }
@@ -97,17 +110,18 @@ class AboutLibrariesComposeView @JvmOverloads constructor(
 
                     Text(
                         text = library.name,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp)
-                            .clickable { showLicenseDialog = true },
+                        modifier =
+                            Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp)
+                                .clickable {
+                                    showLicenseDialog = true
+                                },
                     )
 
-                    if (index < libraries.lastIndex)
-                        Divider()
+                    if (index < libraries.lastIndex) Divider()
                 }
             }
         }
     }
-
 }
