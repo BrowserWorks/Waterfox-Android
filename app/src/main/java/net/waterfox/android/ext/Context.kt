@@ -51,6 +51,12 @@ fun Context.readFloatPreference(key: String, defaultValue: Float) =
 fun Context.writeFloatPreference(key: String, value: Float) =
     settings().preferences.edit().putFloat(key, value).apply()
 
+fun Context.readStringPreference(key: String, defaultValue: String) =
+    settings().preferences.getString(key, defaultValue)
+
+fun Context.writeStringPreference(key: String, value: String) =
+    settings().preferences.edit().putString(key, value).apply()
+
 /**
  * Gets the Root View with an activity context
  *
