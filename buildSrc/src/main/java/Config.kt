@@ -52,7 +52,7 @@ object Config {
      * the start of the year. E.g. 2024-09-13 8:49 -> 2024369049
      */
     @JvmStatic
-    fun generateFennecVersionCode(abi: String): Int {
+    fun generateFennecVersionCode(): Int {
         val now = OffsetDateTime.now(ZoneOffset.UTC)
         val year = Year.of(now.year)
         val startOfYear = OffsetDateTime.of(year.atDay(1), LocalTime.MIN, ZoneOffset.UTC)

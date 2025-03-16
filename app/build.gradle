@@ -208,7 +208,7 @@ android.applicationVariants.all { variant ->
             def abi = output.getFilter(OutputFile.ABI)
             // We use the same version code generator, that we inherited from Fennec, across all channels - even on
             // channels that never shipped a Fennec build.
-            def versionCodeOverride = Config.generateFennecVersionCode(abi)
+            def versionCodeOverride = Config.generateFennecVersionCode()
 
             println("versionCode for $abi = $versionCodeOverride")
 
