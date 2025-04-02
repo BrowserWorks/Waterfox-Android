@@ -36,7 +36,6 @@ import net.waterfox.android.R
 import net.waterfox.android.ext.components
 import net.waterfox.android.settings.SupportUtils
 import net.waterfox.android.theme.ThemeManager
-import java.lang.ref.WeakReference
 
 /**
  * Feature implementation for handling [WebExtensionPromptRequest] and showing the respective UI.
@@ -129,7 +128,12 @@ class WebExtensionPromptFeature(
         addon: Addon,
         promptRequest: WebExtensionPromptRequest.AfterInstallation.Permissions.Required,
     ) {
-        showPermissionDialog(addon = addon, promptRequest = promptRequest, permissions = promptRequest.permissions)
+        showPermissionDialog(
+            addon = addon,
+            promptRequest = promptRequest,
+            permissions = promptRequest.permissions,
+            origins = promptRequest.origins,
+        )
     }
 
     @VisibleForTesting
@@ -137,7 +141,10 @@ class WebExtensionPromptFeature(
         addon: Addon,
         promptRequest: WebExtensionPromptRequest.AfterInstallation.Permissions.Optional,
     ) {
-        val shouldGrantWithoutPrompt = Addon.localizePermissions(promptRequest.permissions, context).isEmpty()
+        val shouldGrantWithoutPrompt = Addon.localizePermissions(
+            promptRequest.permissions,
+            context,
+            ).isEmpty()
 
         // If we don't have any promptable permissions, just proceed.
         if (shouldGrantWithoutPrompt) {
@@ -252,6 +259,7 @@ class WebExtensionPromptFeature(
         promptRequest: WebExtensionPromptRequest.AfterInstallation.Permissions,
         forOptionalPermissions: Boolean = false,
         permissions: List<String> = emptyList(),
+        origins: List<String> = emptyList(),
     ) {
         if (isInstallationInProgress || hasExistingPermissionDialogFragment()) {
             return
@@ -261,6 +269,7 @@ class WebExtensionPromptFeature(
             addon = addon,
             forOptionalPermissions = forOptionalPermissions,
             permissions = permissions,
+            origins = origins,
             promptsStyling = AddonDialogFragment.PromptsStyling(
                 gravity = Gravity.BOTTOM,
                 shouldWidthMatchParent = true,
@@ -323,7 +332,11 @@ class WebExtensionPromptFeature(
             dialog.onNegativeButtonClicked = {
                 store.state.webExtensionPromptRequest?.let { promptRequest ->
                     if (promptRequest is WebExtensionPromptRequest.AfterInstallation.Permissions) {
-                        handlePermissions(promptRequest, granted = false, privateBrowsingAllowed = false)
+                        handlePermissions(
+                            promptRequest,
+                            granted = false,
+                            privateBrowsingAllowed = false,
+                        )
                     }
                 }
             }
@@ -464,6 +477,7 @@ class WebExtensionPromptFeature(
         private const val PERMISSIONS_DIALOG_FRAGMENT_TAG = "ADDONS_PERMISSIONS_DIALOG_FRAGMENT"
         private const val POST_INSTALLATION_DIALOG_FRAGMENT_TAG =
             "ADDONS_INSTALLATION_DIALOG_FRAGMENT"
-        private const val AMO_BLOCKED_PAGE_URL = "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/%s/"
+        private const val AMO_BLOCKED_PAGE_URL =
+            "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/%s/"
     }
 }
