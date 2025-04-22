@@ -662,6 +662,13 @@
     <!-- Title of inactive tabs preference -->
     <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
 
+    <!--Open new tab -->
+    <!-- Category header of a preference that allows a user to set behavior when open a new tab -->
+    <string name="preferences_open_new_tab">Open new tab</string>
+    <string name="preferences_open_new_tab_show_home">Show home</string>
+    <string name="preferences_open_new_tab_blank_tab">Blank tab</string>
+    <string name="preferences_open_new_tab_web_address">Enter web address</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Open tabs</string>
