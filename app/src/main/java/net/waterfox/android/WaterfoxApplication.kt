@@ -62,6 +62,8 @@ import net.waterfox.android.session.VisibilityLifecycleCallback
 import net.waterfox.android.utils.BrowsersCache
 import net.waterfox.android.utils.Settings.Companion.TOP_SITES_PROVIDER_MAX_THRESHOLD
 import java.util.concurrent.TimeUnit
+import mozilla.appservices.init_rust_components.initialize as InitializeRustComponents
+
 
 /**
  *The main application class for Waterfox. Records data to measure initialization performance.
@@ -136,7 +138,7 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
             val megazordSetup = finishSetupMegazord()
 
             setDayNightTheme()
-            components.strictMode.enableStrictMode(true)
+            //components.strictMode.enableStrictMode(true)
             warmBrowsersCache()
 
             initializeWebExtensionSupport()
@@ -331,6 +333,9 @@ open class WaterfoxApplication : LocaleAwareApplication(), Provider {
      * thread, early in the app startup sequence.
      */
     private fun beginSetupMegazord() {
+        // Rust components must be initialized at the very beginning, before any other Rust call, ...
+        InitializeRustComponents()
+
         // Note: Megazord.init() must be called as soon as possible ...
         Megazord.init()
 

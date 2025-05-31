@@ -985,7 +985,7 @@ private fun assertNavURLBar() = assertTrue(navURLBar().waitForExists(waitingTime
 private fun assertNavURLBarHidden() = assertTrue(navURLBar().waitUntilGone(waitingTime))
 
 private fun assertSecureConnectionLockIcon() {
-    onView(withId(R.id.mozac_browser_toolbar_security_indicator))
+    onView(withId(R.id.mozac_browser_toolbar_site_info_indicator))
         .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 }
 

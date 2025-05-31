@@ -92,7 +92,7 @@ class BrowserToolbarCFRPresenter(
         CFRPopup(
             text = context.getString(R.string.tcp_cfr_message),
             anchor = toolbar.findViewById(
-                R.id.mozac_browser_toolbar_security_indicator
+                R.id.mozac_browser_toolbar_site_info_indicator
             ),
             properties = CFRPopupProperties(
                 popupAlignment = INDICATOR_CENTERED_IN_ANCHOR,

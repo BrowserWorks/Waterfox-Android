@@ -29,7 +29,7 @@ import kotlin.math.min
 private const val SNAP_ANIMATION_DURATION = 150L
 
 class DynamicDownloadDialogBehavior<V : View>(
-    context: Context?,
+    context: Context,
     attrs: AttributeSet?,
     private val bottomToolbarHeight: Float = 0f
 ) : CoordinatorLayout.Behavior<V>(context, attrs) {
