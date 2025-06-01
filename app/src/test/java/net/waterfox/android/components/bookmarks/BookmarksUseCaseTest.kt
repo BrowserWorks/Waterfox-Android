@@ -79,6 +79,7 @@ class BookmarksUseCaseTest {
             "Waterfox",
             "https://www.waterfox.net",
             0,
+            0,
             null
         )
 

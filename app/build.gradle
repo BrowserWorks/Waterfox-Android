@@ -2,16 +2,18 @@ import com.android.build.OutputFile
 import groovy.json.JsonOutput
 import net.waterfox.android.gradle.tasks.ApkSizeTask
 
+
 plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.androidx.safeargs
+    alias libs.plugins.kotlin.parcelize
+    alias libs.plugins.compose.compiler
     id "com.jetbrains.python.envs" version "0.0.26"
+    id 'jacoco'
+    id 'com.google.android.gms.oss-licenses-plugin'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-parcelize'
-apply plugin: 'jacoco'
-apply plugin: 'androidx.navigation.safeargs.kotlin'
-apply plugin: 'com.google.android.gms.oss-licenses-plugin'
 
 import org.gradle.internal.logging.text.StyledTextOutput.Style
 import org.gradle.internal.logging.text.StyledTextOutputFactory
@@ -140,6 +142,7 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
     }
 
     lint {
@@ -304,146 +307,146 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
-    implementation  Deps.mozilla_browser_engine_gecko
+    implementation libs.mozilla.browser.engine.gecko
 
-    implementation Deps.kotlin_stdlib
-    implementation Deps.kotlin_coroutines
-    implementation Deps.kotlin_coroutines_android
-    testImplementation Deps.kotlin_coroutines_test
-    implementation Deps.androidx_appcompat
-    implementation Deps.androidx_activity_compose
-    implementation Deps.androidx_constraintlayout
-    implementation Deps.androidx_coordinatorlayout
-    implementation Deps.google_accompanist_drawablepainter
-    implementation Deps.google_accompanist_insets
-    implementation Deps.google_accompanist_swiperefresh
-    implementation Deps.coil
+    implementation libs.kotlin.stdlib
+    implementation libs.kotlin.coroutines
+    implementation libs.kotlin.coroutines.android
+    testImplementation libs.kotlin.coroutines.test
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activity.compose
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.coordinatorlayout
+    implementation libs.google.accompanist.drawablepainter
+    implementation libs.google.accompanist.insets
+    implementation libs.google.accompanist.swiperefresh
+    implementation libs.coil
 
-    implementation Deps.sentry
+    implementation libs.sentry
 
-    implementation Deps.mozilla_compose_awesomebar
+    implementation libs.mozilla.compose.awesomebar
 
-    implementation Deps.mozilla_concept_awesomebar
-    implementation Deps.mozilla_concept_base
-    implementation Deps.mozilla_concept_engine
-    implementation Deps.mozilla_concept_menu
-    implementation Deps.mozilla_concept_push
-    implementation Deps.mozilla_concept_storage
-    implementation Deps.mozilla_concept_sync
-    implementation Deps.mozilla_concept_toolbar
-    implementation Deps.mozilla_concept_tabstray
+    implementation libs.mozilla.concept.awesomebar
+    implementation libs.mozilla.concept.base
+    implementation libs.mozilla.concept.engine
+    implementation libs.mozilla.concept.menu
+    implementation libs.mozilla.concept.push
+    implementation libs.mozilla.concept.storage
+    implementation libs.mozilla.concept.sync
+    implementation libs.mozilla.concept.toolbar
+    implementation libs.mozilla.concept.tabstray
 
-    implementation Deps.mozilla_browser_domains
-    implementation Deps.mozilla_browser_icons
-    implementation Deps.mozilla_browser_menu
-    implementation Deps.mozilla_browser_menu2
-    implementation Deps.mozilla_browser_session_storage
-    implementation Deps.mozilla_browser_state
-    implementation Deps.mozilla_browser_storage_sync
-    implementation Deps.mozilla_browser_tabstray
-    implementation Deps.mozilla_browser_thumbnails
-    implementation Deps.mozilla_browser_toolbar
+    implementation libs.mozilla.browser.domains
+    implementation libs.mozilla.browser.icons
+    implementation libs.mozilla.browser.menu
+    implementation libs.mozilla.browser.menu2
+    implementation libs.mozilla.browser.session.storage
+    implementation libs.mozilla.browser.state
+    implementation libs.mozilla.browser.storage.sync
+    implementation libs.mozilla.browser.tabstray
+    implementation libs.mozilla.browser.thumbnails
+    implementation libs.mozilla.browser.toolbar
 
-    implementation Deps.mozilla_feature_addons
-    implementation Deps.mozilla_feature_accounts
-    implementation Deps.mozilla_feature_app_links
-    implementation Deps.mozilla_feature_autofill
-    implementation Deps.mozilla_feature_awesomebar
-    implementation Deps.mozilla_feature_contextmenu
-    implementation Deps.mozilla_feature_customtabs
-    implementation Deps.mozilla_feature_downloads
-    implementation Deps.mozilla_feature_intent
-    implementation Deps.mozilla_feature_media
-    implementation Deps.mozilla_feature_prompts
-    implementation Deps.mozilla_feature_push
-    implementation Deps.mozilla_feature_privatemode
-    implementation Deps.mozilla_feature_pwa
-    implementation Deps.mozilla_feature_qr
-    implementation Deps.mozilla_feature_search
-    implementation Deps.mozilla_feature_session
-    implementation Deps.mozilla_feature_syncedtabs
-    implementation Deps.mozilla_feature_toolbar
-    implementation Deps.mozilla_feature_tabs
-    implementation Deps.mozilla_feature_findinpage
-    implementation Deps.mozilla_feature_logins
-    implementation Deps.mozilla_feature_site_permissions
-    implementation Deps.mozilla_feature_readerview
-    implementation Deps.mozilla_feature_tab_collections
-    implementation Deps.mozilla_feature_recentlyclosed
-    implementation Deps.mozilla_feature_top_sites
-    implementation Deps.mozilla_feature_share
-    implementation Deps.mozilla_feature_accounts_push
-    implementation Deps.mozilla_feature_webauthn
-    implementation Deps.mozilla_feature_webcompat
-    implementation Deps.mozilla_feature_webnotifications
-    implementation Deps.mozilla_feature_webcompat_reporter
+    implementation libs.mozilla.feature.addons
+    implementation libs.mozilla.feature.accounts
+    implementation libs.mozilla.feature.app.links
+    implementation libs.mozilla.feature.autofill
+    implementation libs.mozilla.feature.awesomebar
+    implementation libs.mozilla.feature.contextmenu
+    implementation libs.mozilla.feature.customtabs
+    implementation libs.mozilla.feature.downloads
+    implementation libs.mozilla.feature.intent
+    implementation libs.mozilla.feature.media
+    implementation libs.mozilla.feature.prompts
+    implementation libs.mozilla.feature.push
+    implementation libs.mozilla.feature.privatemode
+    implementation libs.mozilla.feature.pwa
+    implementation libs.mozilla.feature.qr
+    implementation libs.mozilla.feature.search
+    implementation libs.mozilla.feature.session
+    implementation libs.mozilla.feature.syncedtabs
+    implementation libs.mozilla.feature.toolbar
+    implementation libs.mozilla.feature.tabs
+    implementation libs.mozilla.feature.findinpage
+    implementation libs.mozilla.feature.logins
+    implementation libs.mozilla.feature.site.permissions
+    implementation libs.mozilla.feature.readerview
+    implementation libs.mozilla.feature.tab.collections
+    implementation libs.mozilla.feature.recentlyclosed
+    implementation libs.mozilla.feature.top.sites
+    implementation libs.mozilla.feature.share
+    implementation libs.mozilla.feature.accounts.push
+    implementation libs.mozilla.feature.webauthn
+    implementation libs.mozilla.feature.webcompat
+    implementation libs.mozilla.feature.webnotifications
+    implementation libs.mozilla.feature.webcompat.reporter
 
-    implementation Deps.mozilla_service_mars
-    implementation Deps.mozilla_service_digitalassetlinks
-    implementation Deps.mozilla_service_sync_autofill
-    implementation Deps.mozilla_service_sync_logins
-    implementation Deps.mozilla_service_firefox_accounts
-    implementation Deps.mozilla_service_location
+    implementation libs.mozilla.service.mars
+    implementation libs.mozilla.service.digitalassetlinks
+    implementation libs.mozilla.service.sync.autofill
+    implementation libs.mozilla.service.sync.logins
+    implementation libs.mozilla.service.firefox.accounts
+    implementation libs.mozilla.service.location
 
-    implementation Deps.mozilla_support_extensions
-    implementation Deps.mozilla_support_base
-    implementation Deps.mozilla_support_rusterrors
-    implementation Deps.mozilla_support_images
-    implementation Deps.mozilla_support_ktx
-    implementation Deps.mozilla_support_rustlog
-    implementation Deps.mozilla_support_utils
-    implementation Deps.mozilla_support_locale
+    implementation libs.mozilla.support.extensions
+    implementation libs.mozilla.support.base
+    implementation libs.mozilla.support.rusterrors
+    implementation libs.mozilla.support.images
+    implementation libs.mozilla.support.ktx
+    implementation libs.mozilla.support.rustlog
+    implementation libs.mozilla.support.utils
+    implementation libs.mozilla.support.locale
 
-    implementation Deps.mozilla_ui_colors
-    implementation Deps.mozilla_ui_icons
-    implementation Deps.mozilla_lib_publicsuffixlist
-    implementation Deps.mozilla_ui_widgets
-    implementation Deps.mozilla_ui_tabcounter
+    implementation libs.mozilla.ui.colors
+    implementation libs.mozilla.ui.icons
+    implementation libs.mozilla.lib.publicsuffixlist
+    implementation libs.mozilla.ui.widgets
+    implementation libs.mozilla.ui.tabcounter
 
-    implementation Deps.mozilla_lib_crash
-    implementation Deps.lib_crash_sentry
-    implementation Deps.mozilla_lib_push_firebase
-    implementation Deps.mozilla_lib_state
-    implementation Deps.mozilla_lib_dataprotect
-    debugImplementation Deps.leakcanary
+    implementation libs.mozilla.lib.crash
+    implementation libs.lib.crash.sentry
+    implementation libs.mozilla.lib.push.firebase
+    implementation libs.mozilla.lib.state
+    implementation libs.mozilla.lib.dataprotect
+    debugImplementation libs.leakcanary
 
-    implementation Deps.androidx_compose_ui
-    implementation Deps.androidx_compose_ui_tooling
-    implementation Deps.androidx_compose_foundation
-    implementation Deps.androidx_compose_material
-    implementation Deps.androidx_compose_paging
-    implementation Deps.androidx_legacy
-    implementation Deps.androidx_biometric
-    implementation Deps.androidx_paging
-    implementation Deps.androidx_preference
-    implementation Deps.androidx_fragment
-    implementation Deps.androidx_navigation_fragment
-    implementation Deps.androidx_navigation_ui
-    implementation Deps.androidx_recyclerview
-    implementation Deps.androidx_lifecycle_common
-    implementation Deps.androidx_lifecycle_livedata
-    implementation Deps.androidx_lifecycle_process
-    implementation Deps.androidx_lifecycle_runtime
-    implementation Deps.androidx_lifecycle_viewmodel
-    implementation Deps.androidx_core
-    implementation Deps.androidx_core_ktx
-    implementation Deps.androidx_transition
-    implementation Deps.androidx_work_ktx
-    implementation Deps.androidx_datastore
-    implementation Deps.google_material
+    implementation libs.androidx.compose.ui
+    implementation libs.androidx.compose.ui.tooling
+    implementation libs.androidx.compose.foundation
+    implementation libs.androidx.compose.material
+    implementation libs.androidx.compose.paging
+    implementation libs.androidx.legacy
+    implementation libs.androidx.biometric
+    implementation libs.androidx.paging
+    implementation libs.androidx.preference
+    implementation libs.androidx.fragment
+    implementation libs.androidx.navigation.fragment
+    implementation libs.androidx.navigation.ui
+    implementation libs.androidx.recyclerview
+    implementation libs.androidx.lifecycle.common
+    implementation libs.androidx.lifecycle.livedata
+    implementation libs.androidx.lifecycle.process
+    implementation libs.androidx.lifecycle.runtime
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.core
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.transition
+    implementation libs.androidx.work.ktx
+    implementation libs.androidx.datastore
+    implementation libs.google.material
 
-    androidTestImplementation Deps.uiautomator
+    androidTestImplementation libs.uiautomator
     androidTestImplementation "tools.fastlane:screengrab:2.0.0"
     // This Falcon version is added to maven central now required for Screengrab
     implementation 'com.jraska:falcon:2.2.0'
 
-    androidTestImplementation Deps.androidx_compose_ui_test
+    androidTestImplementation libs.androidx.compose.ui.test.manifest
 
-    androidTestImplementation Deps.espresso_core, {
+    androidTestImplementation libs.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
 
-    androidTestImplementation(Deps.espresso_contrib) {
+    androidTestImplementation libs.espresso.contrib, {
         exclude module: 'appcompat-v7'
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
@@ -453,37 +456,40 @@ dependencies {
         exclude module: 'protobuf-lite'
     }
 
-    androidTestImplementation Deps.androidx_test_core
-    androidTestImplementation Deps.espresso_idling_resources
-    androidTestImplementation Deps.espresso_intents
+    androidTestImplementation libs.androidx.test.core
+    androidTestImplementation libs.espresso.idling.resources
+    androidTestImplementation libs.espresso.intents
 
-    androidTestImplementation Deps.tools_test_runner
-    androidTestImplementation Deps.tools_test_rules
-    androidTestUtil Deps.orchestrator
-    androidTestImplementation Deps.espresso_core, {
+    androidTestImplementation libs.tools.test.runner
+    androidTestImplementation libs.tools.test.rules
+    androidTestUtil libs.orchestrator
+    androidTestImplementation libs.espresso.core, {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
 
-    androidTestImplementation Deps.androidx_junit
-    androidTestImplementation Deps.androidx_test_extensions
-    androidTestImplementation Deps.androidx_work_testing
-    androidTestImplementation Deps.androidx_benchmark_junit4
-    androidTestImplementation Deps.mockwebserver
-    testImplementation Deps.mozilla_support_test
-    testImplementation Deps.mozilla_support_test_libstate
-    testImplementation Deps.androidx_junit
-    testImplementation Deps.androidx_test_extensions
-    testImplementation Deps.androidx_work_testing
-    testImplementation (Deps.robolectric) {
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.test.extensions
+    androidTestImplementation libs.androidx.work.testing
+    androidTestImplementation libs.androidx.benchmark.junit4
+    androidTestImplementation libs.mockwebserver
+    androidTestImplementation libs.androidx.compose.ui.test
+    testImplementation libs.mozilla.support.test
+    testImplementation libs.mozilla.support.test.libstate
+    testImplementation libs.androidx.junit
+    testImplementation libs.androidx.test.extensions
+    testImplementation libs.androidx.work.testing
+    testImplementation (libs.robolectric) {
         exclude group: 'org.apache.maven'
     }
 
     testImplementation 'org.apache.maven:maven-ant-tasks:2.1.3'
-    implementation Deps.mozilla_support_rusthttp
+    implementation libs.mozilla.support.rusthttp
 
-    testImplementation Deps.mockk
+    testImplementation libs.mockk
 
     lintChecks project(":mozilla-lint-rules")
+
+    coreLibraryDesugaring libs.desugar
 }
 
 if (project.hasProperty("coverage")) {

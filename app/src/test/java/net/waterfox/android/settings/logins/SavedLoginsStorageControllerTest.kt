@@ -122,8 +122,8 @@ class SavedLoginsStorageControllerTest {
         )
 
         coEvery { passwordsStorage.get(any()) } returns oldLogin
-        coEvery { passwordsStorage.update(any(), any()) } returns oldLoginEncrypted
-        coEvery { passwordsStorage.decryptLogin(any()) } returns newLogin
+        coEvery { passwordsStorage.update(any(), any()) } returns newLogin
+      //  coEvery { passwordsStorage.decryptLogin(any()) } returns newLogin
 
         controller.save(oldLogin.guid, "newUsername", "newPassword")
 

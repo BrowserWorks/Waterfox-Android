@@ -90,6 +90,7 @@ internal fun testBookmarkItem(parentGuid: String, url: String, title: String = "
     title,
     url,
     0,
+    0,
     null
 )
 
@@ -101,9 +102,10 @@ internal fun testFolder(guid: String, parentGuid: String?, children: List<Bookma
     title,
     null,
     0,
+    0,
     children
 )
 
 internal fun testSeparator(parentGuid: String) = BookmarkNode(
-    BookmarkNodeType.SEPARATOR, "guid#${Math.random() * 1000}", parentGuid, null, null, null, 0, null
+    BookmarkNodeType.SEPARATOR, "guid#${Math.random() * 1000}", parentGuid, null, null, null, 0, 0, null
 )

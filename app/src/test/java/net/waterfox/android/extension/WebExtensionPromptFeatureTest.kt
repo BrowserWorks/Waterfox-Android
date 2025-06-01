@@ -78,7 +78,8 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with network error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.NetworkFailure(
             extensionName = "name",
             throwable = Exception(),
@@ -89,7 +90,8 @@ class WebExtensionPromptFeatureTest {
                 "name",
             )
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -98,7 +100,8 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with Blocklisted error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val extensionId = "extensionId"
         val extensionName = "extensionName"
         val extensionVersion = "extensionVersion"
@@ -110,10 +113,16 @@ class WebExtensionPromptFeatureTest {
         )
         val appName = testContext.getString(R.string.app_name)
         val expectedMessage =
-            testContext.getString(R.string.mozac_feature_addons_blocklisted_2, extensionName, appName)
-        val expectedUrl = "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
+            testContext.getString(
+                R.string.mozac_feature_addons_blocklisted_2,
+                extensionName,
+                appName,
+            )
+        val expectedUrl =
+            "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage, expectedUrl) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -156,7 +165,8 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_failed_to_install, extensionName)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -173,7 +183,8 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -182,14 +193,16 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with CorruptFile error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.CorruptFile(
             throwable = Exception(),
         )
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install_corrupt_error)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -198,14 +211,16 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with NotSigned error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val exception = WebExtensionInstallException.NotSigned(
             throwable = Exception(),
         )
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_extension_failed_to_install_not_signed_error)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -214,7 +229,8 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with Incompatible error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val extensionName = "extensionName"
         val exception = WebExtensionInstallException.Incompatible(
             extensionName = extensionName,
@@ -230,7 +246,8 @@ class WebExtensionPromptFeatureTest {
                 version,
             )
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -249,6 +266,7 @@ class WebExtensionPromptFeatureTest {
                     mockk(relaxed = true),
                     mockk(),
                     mockk(),
+                    mockk(),
                 ),
             ),
         ).joinBlocking()
@@ -259,7 +277,8 @@ class WebExtensionPromptFeatureTest {
     @Test
     fun `GIVEN Optional Permissions WHEN handleAfterInstallationRequest is called THEN handleOptionalPermissionsRequest is called`() {
         webExtensionPromptFeature.start()
-        val request = mockk<WebExtensionPromptRequest.AfterInstallation.Permissions.Optional>(relaxed = true)
+        val request =
+            mockk<WebExtensionPromptRequest.AfterInstallation.Permissions.Optional>(relaxed = true)
 
         webExtensionPromptFeature.handleAfterInstallationRequest(request)
 
@@ -273,9 +292,13 @@ class WebExtensionPromptFeatureTest {
             extension = mockk(),
             permissions = listOf("tabs"),
             onConfirm = mockk(),
+            origins = listOf(),
         )
 
-        webExtensionPromptFeature.handleOptionalPermissionsRequest(addon = addon, promptRequest = promptRequest)
+        webExtensionPromptFeature.handleOptionalPermissionsRequest(
+            addon = addon,
+            promptRequest = promptRequest,
+        )
 
         verify {
             webExtensionPromptFeature.showPermissionDialog(
@@ -297,9 +320,13 @@ class WebExtensionPromptFeatureTest {
             // The "scripting" API permission doesn't have a description so we should not show a dialog for it.
             permissions = listOf("scripting"),
             onConfirm = onConfirm,
+            origins = listOf(),
         )
 
-        webExtensionPromptFeature.handleOptionalPermissionsRequest(addon = addon, promptRequest = promptRequest)
+        webExtensionPromptFeature.handleOptionalPermissionsRequest(
+            addon = addon,
+            promptRequest = promptRequest,
+        )
 
         verify(exactly = 0) {
             webExtensionPromptFeature.showPermissionDialog(any(), any(), any(), any())
@@ -316,9 +343,13 @@ class WebExtensionPromptFeatureTest {
             extension = mockk(),
             permissions = emptyList(),
             onConfirm = onConfirm,
+            origins = listOf(),
         )
 
-        webExtensionPromptFeature.handleOptionalPermissionsRequest(addon = addon, promptRequest = promptRequest)
+        webExtensionPromptFeature.handleOptionalPermissionsRequest(
+            addon = addon,
+            promptRequest = promptRequest,
+        )
 
         verify(exactly = 0) {
             webExtensionPromptFeature.showPermissionDialog(any(), any(), any(), any())
@@ -337,7 +368,8 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_failed_to_install, extensionName)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -346,7 +378,8 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with AdminInstallOnly error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val extensionName = "extensionName"
         val exception = WebExtensionInstallException.AdminInstallOnly(
             extensionName = extensionName,
@@ -355,7 +388,8 @@ class WebExtensionPromptFeatureTest {
         val expectedMessage =
             testContext.getString(R.string.mozac_feature_addons_admin_install_only, extensionName)
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -364,7 +398,8 @@ class WebExtensionPromptFeatureTest {
 
     @Test
     fun `WHEN calling handleInstallationFailedRequest with SoftBlocked error THEN showDialog with the correct message`() {
-        val expectedTitle = testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
+        val expectedTitle =
+            testContext.getString(R.string.mozac_feature_addons_cant_install_extension)
         val extensionId = "extensionId"
         val extensionName = "extensionName"
         val extensionVersion = "extensionVersion"
@@ -376,10 +411,16 @@ class WebExtensionPromptFeatureTest {
         )
         val appName = testContext.getString(R.string.app_name)
         val expectedMessage =
-            testContext.getString(R.string.mozac_feature_addons_soft_blocked_1, extensionName, appName)
-        val expectedUrl = "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
+            testContext.getString(
+                R.string.mozac_feature_addons_soft_blocked_1,
+                extensionName,
+                appName,
+            )
+        val expectedUrl =
+            "${BuildConfig.AMO_BASE_URL}/android/blocked-addon/$extensionId/$extensionVersion/"
 
-        val dialog = webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
+        val dialog =
+            webExtensionPromptFeature.handleInstallationFailedRequest(exception = exception)
 
         verify { webExtensionPromptFeature.showDialog(expectedTitle, expectedMessage, expectedUrl) }
         val linkView = dialog?.findViewById<LinkTextView>(R.id.link)
@@ -409,6 +450,7 @@ class WebExtensionPromptFeatureTest {
             onLearnMoreClicked = {
                 onLinkClicked(expectedUrl, false)
             },
+            origins = listOf(),
         )
 
         dialog.onLearnMoreClicked?.invoke()

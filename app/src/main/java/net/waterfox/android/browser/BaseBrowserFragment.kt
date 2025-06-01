@@ -416,7 +416,7 @@ abstract class BaseBrowserFragment :
             view = view
         )
 
-        browserToolbarView.view.display.setOnSiteSecurityClickedListener {
+        browserToolbarView.view.display.setOnSiteInfoClickedListener {
             showQuickSettingsDialog()
         }
 

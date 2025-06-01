@@ -48,7 +48,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentDownloadsBinding.inflate(inflater, container, false)
 
@@ -60,15 +60,15 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
                     items = items,
                     mode = DownloadFragmentState.Mode.Normal,
                     pendingDeletionIds = emptySet(),
-                    isDeletingItems = false
-                )
+                    isDeletingItems = false,
+                ),
             )
         }
         val downloadController: DownloadController = DefaultDownloadController(
             downloadStore,
             ::openItem,
             ::invalidateOptionsMenu,
-            ::deleteDownloadItems
+            ::deleteDownloadItems,
         )
         downloadInteractor = DownloadInteractor(downloadController)
         binding.downloadContent.interactor = downloadInteractor
@@ -98,7 +98,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
                     filePath = it.filePath,
                     size = it.contentLength?.toString() ?: "0",
                     contentType = it.contentType,
-                    status = it.status
+                    status = it.status,
                 )
             }.filter {
                 it.status == DownloadState.Status.COMPLETED
@@ -130,7 +130,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
             onCancel = {
                 undoPendingDeletion(items)
             },
-            operation = getDeleteDownloadItemsOperation(items)
+            operation = getDeleteDownloadItemsOperation(items),
         )
     }
 
@@ -141,13 +141,14 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
             binding.downloadContent.updateState(state)
             when (state.mode) {
                 is DownloadFragmentState.Mode.Normal -> setUiForNormalMode(
-                    context?.getString(R.string.library_downloads)
+                    context?.getString(R.string.library_downloads),
                 )
+
                 is DownloadFragmentState.Mode.Editing -> setUiForSelectingMode(
                     context?.getString(
                         R.string.download_multi_select_title,
                         state.mode.selectedItems.size,
-                    )
+                    ),
                 )
             }
         }
@@ -189,6 +190,7 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
             }
             true
         }
+
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -201,9 +203,9 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
         } else {
             String.format(
                 requireContext().getString(
-                    R.string.download_delete_single_item_snackbar
+                    R.string.download_delete_single_item_snackbar,
                 ),
-                downloadItems.first().fileName
+                downloadItems.first().fileName,
             )
         }
     }
@@ -223,20 +225,15 @@ class DownloadFragment : LibraryPageFragment<DownloadItem>(), UserInteractionHan
             }
             AbstractFetchDownloadService.openFile(
                 applicationContext = it.applicationContext,
-                download = DownloadState(
-                    id = item.id,
-                    url = item.url,
-                    fileName = item.fileName,
-                    contentType = item.contentType,
-                    status = item.status,
-                    contentLength = contentLength
-                )
+                downloadFileName = item.fileName,
+                downloadFilePath = item.filePath,
+                downloadContentType = item.contentType,
             )
         }
     }
 
     private fun getDeleteDownloadItemsOperation(
-        items: Set<DownloadItem>
+        items: Set<DownloadItem>,
     ): (suspend (context: Context) -> Unit) {
         return { context ->
             CoroutineScope(IO).launch {

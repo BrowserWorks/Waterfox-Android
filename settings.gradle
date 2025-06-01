@@ -1,7 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
 include ':app'
 
 include ':mozilla-detekt-rules'
 include ':mozilla-lint-rules'
+
+
+
 def log(message) {
     logger.lifecycle("[settings] ${message}")
 }
@@ -72,3 +83,4 @@ if (localProperties != null) {
         log("Disabled auto-publication of android-components. Enable it by settings '$settingAndroidComponentsPath' in local.properties")
     }
 }
+
