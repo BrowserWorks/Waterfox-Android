@@ -7,7 +7,6 @@ package net.waterfox.android.tabstray.browser.compose
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.gestures.scrollBy
@@ -235,7 +234,7 @@ fun LazyItemScope.DragItemContainer(
         else -> {
             Modifier
                 .zIndex(0f)
-                .animateItemPlacement(tween())
+                .animateItem()
         }
     }
     Box(modifier = modifier, propagateMinConstraints = true) {

@@ -9,7 +9,6 @@ import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.VisibilityThreshold
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
@@ -241,7 +240,7 @@ fun LazyGridItemScope.DragItemContainer(
         else -> {
             Modifier
                 .zIndex(0f)
-                .animateItemPlacement(tween())
+                .animateItem()
         }
     }
 
