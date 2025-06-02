@@ -523,7 +523,7 @@ private fun assertHomeComponent() =
     onView(ViewMatchers.withResourceName("sessionControlRecyclerView"))
         .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 
-private fun assertNoTabsOpened() = onView(withId(R.id.counter_text)).check(matches(withText("0")))
+private fun assertNoTabsOpened() = onView(withId(mozilla.components.ui.tabcounter.R.id.counter_text)).check(matches(withText("0")))
 
 private fun threeDotButton() = onView(allOf(withId(R.id.menuButton)))
 
@@ -778,7 +778,7 @@ private fun startBrowsingButton(): UiObject {
 val deleteFromHistory =
     onView(
         allOf(
-            withId(R.id.simple_text),
+            withId(mozilla.components.browser.menu2.R.id.simple_text),
             withText(R.string.delete_from_history)
         )
     ).inRoot(RootMatchers.isPlatformPopup())

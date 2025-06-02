@@ -230,7 +230,7 @@ fun TabGridItem(
                                 },
                             ) {
                                 Icon(
-                                    painter = painterResource(id = R.drawable.mozac_ic_cross_20),
+                                    painter = painterResource(id = mozilla.components.ui.icons.R.drawable.mozac_ic_cross_20),
                                     contentDescription = stringResource(id = R.string.close_tab),
                                     tint = WaterfoxTheme.colors.iconPrimary,
                                 )
@@ -313,12 +313,12 @@ private fun Thumbnail(
                 backgroundColor = WaterfoxTheme.colors.layerAccent,
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.mozac_ic_checkmark_24),
+                    painter = painterResource(id = mozilla.components.ui.icons.R.drawable.mozac_ic_checkmark_24),
                     modifier = Modifier
                         .matchParentSize()
                         .padding(all = 8.dp),
                     contentDescription = null,
-                    tint = colorResource(id = R.color.mozac_ui_icons_fill),
+                    tint = colorResource(id = mozilla.components.ui.icons.R.color.mozac_ui_icons_fill),
                 )
             }
         }

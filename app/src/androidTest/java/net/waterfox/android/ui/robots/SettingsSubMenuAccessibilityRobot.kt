@@ -107,15 +107,15 @@ private fun assertSliderBar() {
 //    onView(withId(net.waterfox.android.R.id.sampleText))
 //        .check(matches(withText("This is sample text. It is here to show how text will appear when you increase or decrease the size with this setting.")))
 
-    onView(withId(net.waterfox.android.R.id.seekbar_value))
+    onView(withId(androidx.preference.R.id.seekbar_value))
         .check(matches(withText("100%")))
 
-    onView(withId(net.waterfox.android.R.id.seekbar))
+    onView(withId(androidx.preference.R.id.seekbar))
         .check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 }
 
 private fun adjustTextSizeSlider(seekBarPercentage: Int) {
-    onView(withId(net.waterfox.android.R.id.seekbar))
+    onView(withId(androidx.preference.R.id.seekbar))
         .perform(SeekBarChangeProgressViewAction(seekBarPercentage))
 }
 
@@ -134,9 +134,9 @@ private fun assertMenuItemsAreDisabled() {
 
 //    onView(withId(net.waterfox.android.R.id.sampleText)).assertIsEnabled(false)
 
-    onView(withId(net.waterfox.android.R.id.seekbar_value)).assertIsEnabled(false)
+    onView(withId(androidx.preference.R.id.seekbar_value)).assertIsEnabled(false)
 
-    onView(withId(net.waterfox.android.R.id.seekbar)).assertIsEnabled(false)
+    onView(withId(androidx.preference.R.id.seekbar)).assertIsEnabled(false)
 }
 
 private fun goBackButton() =

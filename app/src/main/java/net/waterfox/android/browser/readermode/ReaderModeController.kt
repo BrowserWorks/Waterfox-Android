@@ -67,8 +67,8 @@ class DefaultReaderModeController(
 
     private fun themeReaderViewControlsForPrivateMode(view: View) = with(view) {
         listOf(
-            R.id.mozac_feature_readerview_font_size_decrease,
-            R.id.mozac_feature_readerview_font_size_increase,
+            mozilla.components.feature.readerview.R.id.mozac_feature_readerview_font_size_decrease,
+            mozilla.components.feature.readerview.R.id.mozac_feature_readerview_font_size_increase,
         ).map {
             findViewById<Button>(it)
         }.forEach {
@@ -76,8 +76,8 @@ class DefaultReaderModeController(
         }
 
         listOf(
-            R.id.mozac_feature_readerview_font_serif,
-            R.id.mozac_feature_readerview_font_sans_serif,
+            mozilla.components.feature.readerview.R.id.mozac_feature_readerview_font_serif,
+            mozilla.components.feature.readerview.R.id.mozac_feature_readerview_font_sans_serif,
         ).map {
             findViewById<RadioButton>(it)
         }.forEach {

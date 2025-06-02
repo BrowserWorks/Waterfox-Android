@@ -613,12 +613,12 @@ private fun tabItem(title: String) =
 
 private fun tabsCounter() = onView(withId(R.id.tab_button))
 
-private fun tabsTrayCounterBox() = onView(withId(R.id.counter_box))
+private fun tabsTrayCounterBox() = onView(withId(mozilla.components.ui.tabcounter.R.id.counter_box))
 
 private fun tabsSettingsButton() =
     onView(
         allOf(
-            withId(R.id.simple_text),
+            withId(mozilla.components.browser.menu2.R.id.simple_text),
             withText(R.string.tab_tray_menu_tab_settings)
         )
     )
@@ -626,7 +626,7 @@ private fun tabsSettingsButton() =
 private fun recentlyClosedTabsButton() =
     onView(
         allOf(
-            withId(R.id.simple_text),
+            withId(mozilla.components.browser.menu2.R.id.simple_text),
             withText(R.string.tab_tray_menu_recently_closed)
         )
     )

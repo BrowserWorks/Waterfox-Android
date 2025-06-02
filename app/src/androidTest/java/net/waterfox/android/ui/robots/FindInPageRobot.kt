@@ -67,11 +67,11 @@ class FindInPageRobot {
     }
 }
 
-private fun findInPageQuery() = onView(withId(R.id.find_in_page_query_text))
-private fun findInPageResult() = onView(withId(R.id.find_in_page_result_text))
-private fun findInPageNextButton() = onView(withId(R.id.find_in_page_next_btn))
-private fun findInPagePrevButton() = onView(withId(R.id.find_in_page_prev_btn))
-private fun findInPageCloseButton() = onView(withId(R.id.find_in_page_close_btn))
+private fun findInPageQuery() = onView(withId(mozilla.components.feature.findinpage.R.id.find_in_page_query_text))
+private fun findInPageResult() = onView(withId(mozilla.components.feature.findinpage.R.id.find_in_page_result_text))
+private fun findInPageNextButton() = onView(withId(mozilla.components.feature.findinpage.R.id.find_in_page_next_btn))
+private fun findInPagePrevButton() = onView(withId(mozilla.components.feature.findinpage.R.id.find_in_page_prev_btn))
+private fun findInPageCloseButton() = onView(withId(mozilla.components.feature.findinpage.R.id.find_in_page_close_btn))
 
 private fun assertFindInPageQuery() = findInPageQuery()
     .check(matches(ViewMatchers.withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))

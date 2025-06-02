@@ -65,11 +65,11 @@ class AddonDetailsBindingDelegate(
         addon.rating?.let { rating ->
             val resources = binding.root.resources
             val ratingContentDescription =
-                resources.getString(R.string.mozac_feature_addons_rating_content_description_2)
+                resources.getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_rating_content_description_2)
             binding.ratingLabel.contentDescription = String.format(ratingContentDescription, rating.average)
             binding.ratingView.rating = rating.average
 
-            val reviewCount = resources.getString(R.string.mozac_feature_addons_user_rating_count_2)
+            val reviewCount = resources.getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_user_rating_count_2)
             binding.reviewCount.contentDescription = String.format(reviewCount, numberFormatter.format(rating.reviews))
             binding.reviewCount.text = numberFormatter.format(rating.reviews)
 

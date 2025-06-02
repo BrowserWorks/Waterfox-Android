@@ -113,7 +113,7 @@ class NoNetworkAccessStartupTests {
             verifyUrl(
                 "waterfox.net",
                 "$packageName:id/mozac_browser_toolbar_url_view",
-                R.id.mozac_browser_toolbar_url_view
+                mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view
             )
         }
     }

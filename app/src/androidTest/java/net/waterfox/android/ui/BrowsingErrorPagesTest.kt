@@ -21,11 +21,11 @@ import net.waterfox.android.ui.robots.navigationToolbar
  * Tests that verify errors encountered while browsing websites: unsafe pages, connection errors, etc
  */
 class BrowsingErrorPagesTest {
-    private val malwareWarning = getStringResource(R.string.mozac_browser_errorpages_safe_browsing_malware_uri_title)
-    private val phishingWarning = getStringResource(R.string.mozac_browser_errorpages_safe_phishing_uri_title)
+    private val malwareWarning = getStringResource(mozilla.components.browser.errorpages.R.string.mozac_browser_errorpages_safe_browsing_malware_uri_title)
+    private val phishingWarning = getStringResource(mozilla.components.browser.errorpages.R.string.mozac_browser_errorpages_safe_phishing_uri_title)
     private val unwantedSoftwareWarning =
-        getStringResource(R.string.mozac_browser_errorpages_safe_browsing_unwanted_uri_title)
-    private val harmfulSiteWarning = getStringResource(R.string.mozac_browser_errorpages_safe_harmful_uri_title)
+        getStringResource(mozilla.components.browser.errorpages.R.string.mozac_browser_errorpages_safe_browsing_unwanted_uri_title)
+    private val harmfulSiteWarning = getStringResource(mozilla.components.browser.errorpages.R.string.mozac_browser_errorpages_safe_harmful_uri_title)
     private val featureSettingsHelper = FeatureSettingsHelper()
 
     @get: Rule

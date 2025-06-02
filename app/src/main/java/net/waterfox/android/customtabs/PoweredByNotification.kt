@@ -81,7 +81,7 @@ class PoweredByNotification(
 
             val channel = NotificationChannel(
                 NOTIFICATION_CHANNEL_ID,
-                applicationContext.getString(R.string.mozac_feature_pwa_site_controls_notification_channel),
+                applicationContext.getString(mozilla.components.feature.pwa.R.string.mozac_feature_pwa_site_controls_notification_channel),
                 NotificationManager.IMPORTANCE_MIN
             )
 

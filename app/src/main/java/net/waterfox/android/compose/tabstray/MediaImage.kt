@@ -40,10 +40,10 @@ fun MediaImage(
 ) {
     val (icon, contentDescription) = when (tab.mediaSessionState?.playbackState) {
         PlaybackState.PAUSED -> {
-            R.drawable.media_state_play to R.string.mozac_feature_media_notification_action_play
+            R.drawable.media_state_play to mozilla.components.feature.media.R.string.mozac_feature_media_notification_action_play
         }
         PlaybackState.PLAYING -> {
-            R.drawable.media_state_pause to R.string.mozac_feature_media_notification_action_pause
+            R.drawable.media_state_pause to mozilla.components.feature.media.R.string.mozac_feature_media_notification_action_pause
         }
         else -> return
     }

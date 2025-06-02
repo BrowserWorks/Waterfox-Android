@@ -218,7 +218,7 @@ class BrowserToolbarCFRPresenterTest {
         browserStore: BrowserStore = mockk(),
         settings: Settings = mockk(relaxed = true) { every { shouldShowTotalCookieProtectionCFR } returns true },
         toolbar: BrowserToolbar = mockk {
-            every { findViewById<View>(R.id.mozac_browser_toolbar_site_info_indicator) } returns anchor
+            every { findViewById<View>(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_site_info_indicator) } returns anchor
         },
         sessionId: String? = null
     ) = BrowserToolbarCFRPresenter(

@@ -392,7 +392,7 @@ private fun assertKeyboardVisibility(isExpectedToBeVisible: Boolean): () -> Unit
 }
 
 private fun ComposeTestRule.assertSearchEngineList() {
-    onView(withId(R.id.mozac_browser_toolbar_edit_icon)).click()
+    onView(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_edit_icon)).click()
 
     onNodeWithText("Google")
         .assertExists()
@@ -445,7 +445,7 @@ private fun assertEngineListShortcutContains(rule: ComposeTestRule, searchEngine
 }
 
 private fun ComposeTestRule.selectDefaultSearchEngine(searchEngine: String) {
-    onView(withId(R.id.mozac_browser_toolbar_edit_icon)).click()
+    onView(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_edit_icon)).click()
 
     onNodeWithText(searchEngine)
         .assertExists()
@@ -470,7 +470,7 @@ private fun assertPastedToolbarText(expectedText: String) {
     onView(
         allOf(
             withSubstring(expectedText),
-            withId(R.id.mozac_browser_toolbar_edit_url_view)
+            withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_edit_url_view)
         )
     ).check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 }

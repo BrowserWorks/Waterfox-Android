@@ -49,7 +49,7 @@ class SavedLoginsSortingStrategyMenuTest {
     fun `effect is set on alphabetical sort candidate`() {
         val (name, lastUsed) = menu.menuItems(Item.AlphabeticallySort)
         assertEquals(
-            HighPriorityHighlightEffect(context.getColorFromAttr(R.attr.colorControlHighlight)),
+            HighPriorityHighlightEffect(context.getColorFromAttr(androidx.appcompat.R.attr.colorControlHighlight)),
             name.effect
         )
         assertNull(lastUsed.effect)
@@ -60,7 +60,7 @@ class SavedLoginsSortingStrategyMenuTest {
         val (name, lastUsed) = menu.menuItems(Item.LastUsedSort)
         assertNull(name.effect)
         assertEquals(
-            HighPriorityHighlightEffect(context.getColorFromAttr(R.attr.colorControlHighlight)),
+            HighPriorityHighlightEffect(context.getColorFromAttr(androidx.appcompat.R.attr.colorControlHighlight)),
             lastUsed.effect
         )
     }

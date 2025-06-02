@@ -762,7 +762,7 @@ class SmokeTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 

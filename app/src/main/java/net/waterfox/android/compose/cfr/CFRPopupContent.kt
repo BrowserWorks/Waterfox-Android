@@ -28,7 +28,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import net.waterfox.android.R
-import net.waterfox.android.R.drawable
 import net.waterfox.android.theme.WaterfoxTheme
 
 /**
@@ -124,7 +123,7 @@ fun CFRPopupContent(
                 .size(48.dp)
         ) {
             Icon(
-                painter = painterResource(drawable.mozac_ic_cross_20),
+                painter = painterResource(mozilla.components.ui.icons.R.drawable.mozac_ic_cross_20),
                 contentDescription = stringResource(R.string.cfr_dismiss_button_default_content_description),
                 modifier = Modifier
                     // Following alignment and padding are necessary to visually align the middle

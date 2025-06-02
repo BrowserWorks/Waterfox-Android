@@ -61,7 +61,7 @@ class ThreeDotMenuMainRobot {
     fun verifyReaderViewAppearance(visible: Boolean) = assertReaderViewAppearanceButton(visible)
 
     fun expandMenu() {
-        onView(withId(R.id.mozac_browser_menu_menuView)).perform(swipeUp())
+        onView(withId(mozilla.components.browser.menu.R.id.mozac_browser_menu_menuView)).perform(swipeUp())
     }
 
     fun verifyShareTabButton() = assertShareTabButton()
@@ -399,7 +399,7 @@ class ThreeDotMenuMainRobot {
     }
 }
 private fun threeDotMenuRecyclerView() =
-    onView(withId(R.id.mozac_browser_menu_recyclerView))
+    onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
 
 private fun threeDotMenuRecyclerViewExists() {
     threeDotMenuRecyclerView().check(matches(isDisplayed()))
@@ -421,7 +421,7 @@ private fun assertCustomizeHomeButton() =
 
 private fun addOnsButton() = onView(allOf(withText("Add-ons")))
 private fun assertAddOnsButton() {
-    onView(withId(R.id.mozac_browser_menu_menuView)).perform(swipeDown())
+    onView(withId(mozilla.components.browser.menu.R.id.mozac_browser_menu_menuView)).perform(swipeDown())
     addOnsButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 }
 
@@ -447,7 +447,7 @@ private fun backButton() = mDevice.findObject(UiSelector().description("Back"))
 
 private fun addBookmarkButton() = onView(allOf(withId(R.id.checkbox), withText("Add")))
 private fun assertAddBookmarkButton() {
-    onView(withId(R.id.mozac_browser_menu_menuView)).perform(swipeUp())
+    onView(withId(mozilla.components.browser.menu.R.id.mozac_browser_menu_menuView)).perform(swipeUp())
     addBookmarkButton().check(matches(withEffectiveVisibility(Visibility.VISIBLE)))
 }
 
@@ -525,7 +525,7 @@ private fun removeFromShortcutsButton() =
     onView(allOf(withText(R.string.browser_menu_remove_from_shortcuts)))
 
 private fun assertAddToTopSitesButton() {
-    onView(withId(R.id.mozac_browser_menu_recyclerView))
+    onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
         .perform(
             RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
                 hasDescendant(withText(R.string.browser_menu_add_to_shortcuts))
@@ -535,7 +535,7 @@ private fun assertAddToTopSitesButton() {
 
 private fun assertRemoveFromShortcutsButton() {
 
-    onView(withId(R.id.mozac_browser_menu_recyclerView))
+    onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
         .perform(
             RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
                 hasDescendant(withText(R.string.browser_menu_settings))
@@ -547,7 +547,7 @@ private fun addToMobileHomeButton() =
     onView(allOf(withText(R.string.browser_menu_add_to_homescreen)))
 
 private fun assertAddToMobileHome() {
-    onView(withId(R.id.mozac_browser_menu_recyclerView))
+    onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
         .perform(
             RecyclerViewActions.scrollTo<RecyclerView.ViewHolder>(
                 hasDescendant(withText(R.string.browser_menu_add_to_homescreen))
@@ -573,12 +573,12 @@ private fun openInAppButton() =
 
 private fun downloadsButton() = onView(withText(R.string.library_downloads))
 private fun assertDownloadsButton() {
-    onView(withId(R.id.mozac_browser_menu_menuView)).perform(swipeDown())
+    onView(withId(mozilla.components.browser.menu.R.id.mozac_browser_menu_menuView)).perform(swipeDown())
     downloadsButton().check(matches(isDisplayed()))
 }
 
 private fun clickAddonsManagerButton() {
-    onView(withId(R.id.mozac_browser_menu_menuView)).perform(swipeDown())
+    onView(withId(mozilla.components.browser.menu.R.id.mozac_browser_menu_menuView)).perform(swipeDown())
     addOnsButton().check(matches(isCompletelyDisplayed())).click()
 }
 

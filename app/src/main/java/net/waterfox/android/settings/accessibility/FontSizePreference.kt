@@ -125,7 +125,7 @@ fun FontSizePreference(
         Text(
             text = stringResource(R.string.accessibility_text_size_sample_text_1),
             modifier = Modifier
-                .background(colorResource(R.color.photonViolet05))
+                .background(colorResource(mozilla.components.ui.colors.R.color.photonViolet05))
                 .padding(16.dp),
             color = colorResource(R.color.text_scale_example_text_color).copy(
                 alpha = if (enabled) 1f else 0.5f,

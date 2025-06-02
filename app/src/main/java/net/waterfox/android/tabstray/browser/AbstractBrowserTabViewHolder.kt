@@ -160,7 +160,7 @@ abstract class AbstractBrowserTabViewHolder(
                 MediaSession.PlaybackState.PAUSED -> {
                     showAndEnable()
                     contentDescription =
-                        context.getString(R.string.mozac_feature_media_notification_action_play)
+                        context.getString(mozilla.components.feature.media.R.string.mozac_feature_media_notification_action_play)
                     setImageDrawable(
                         AppCompatResources.getDrawable(context, R.drawable.media_state_play),
                     )
@@ -169,7 +169,7 @@ abstract class AbstractBrowserTabViewHolder(
                 MediaSession.PlaybackState.PLAYING -> {
                     showAndEnable()
                     contentDescription =
-                        context.getString(R.string.mozac_feature_media_notification_action_pause)
+                        context.getString(mozilla.components.feature.media.R.string.mozac_feature_media_notification_action_pause)
                     setImageDrawable(
                         AppCompatResources.getDrawable(context, R.drawable.media_state_pause),
                     )

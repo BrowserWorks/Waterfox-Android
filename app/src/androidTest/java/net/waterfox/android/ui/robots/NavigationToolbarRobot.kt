@@ -185,7 +185,7 @@ class NavigationToolbarRobot {
         fun closeTabFromShortcutsMenu(interact: NavigationToolbarRobot.() -> Unit): NavigationToolbarRobot.Transition {
             mDevice.waitForIdle(waitingTime)
 
-            onView(withId(R.id.mozac_browser_menu_recyclerView))
+            onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
                 .perform(
                     RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
                         hasDescendant(
@@ -202,7 +202,7 @@ class NavigationToolbarRobot {
         fun openTabFromShortcutsMenu(interact: HomeScreenRobot.() -> Unit): HomeScreenRobot.Transition {
             mDevice.waitForIdle(waitingTime)
 
-            onView(withId(R.id.mozac_browser_menu_recyclerView))
+            onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
                 .perform(
                     RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
                         hasDescendant(
@@ -219,7 +219,7 @@ class NavigationToolbarRobot {
         fun openNewPrivateTabFromShortcutsMenu(interact: HomeScreenRobot.() -> Unit): HomeScreenRobot.Transition {
             mDevice.waitForIdle(waitingTime)
 
-            onView(withId(R.id.mozac_browser_menu_recyclerView))
+            onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
                 .perform(
                     RecyclerViewActions.actionOnItem<RecyclerView.ViewHolder>(
                         hasDescendant(
@@ -271,7 +271,7 @@ private fun assertNoHistoryBookmarks() {
 }
 
 private fun assertTabButtonShortcutMenuItems() {
-    onView(withId(R.id.mozac_browser_menu_recyclerView))
+    onView(withId(mozilla.components.browser.menu2.R.id.mozac_browser_menu_recyclerView))
         .check(matches(hasDescendant(withText("Close tab"))))
         .check(matches(hasDescendant(withText("New private tab"))))
         .check(matches(hasDescendant(withText("New tab"))))
@@ -280,14 +280,14 @@ private fun assertTabButtonShortcutMenuItems() {
 private fun urlBar() = mDevice.findObject(UiSelector().resourceId("$packageName:id/toolbar"))
 private fun awesomeBar() =
     mDevice.findObject(UiSelector().resourceId("$packageName:id/mozac_browser_toolbar_edit_url_view"))
-private fun threeDotButton() = onView(withId(R.id.mozac_browser_toolbar_menu))
+private fun threeDotButton() = onView(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_menu))
 private fun tabTrayButton() = onView(withId(R.id.tab_button))
 private fun fillLinkButton() = onView(withId(R.id.fill_link_from_clipboard))
 private fun clearAddressBar() =
     mDevice.findObject(UiSelector().resourceId("$packageName:id/mozac_browser_toolbar_clear_view"))
 private fun goBackButton() = mDevice.pressBack()
 private fun readerViewToggle() =
-    onView(withParent(withId(R.id.mozac_browser_toolbar_page_actions)))
+    onView(withParent(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions)))
 
 private fun assertReaderViewDetected(visible: Boolean) {
     mDevice.findObject(
@@ -298,7 +298,7 @@ private fun assertReaderViewDetected(visible: Boolean) {
 
     onView(
         allOf(
-            withParent(withId(R.id.mozac_browser_toolbar_page_actions)),
+            withParent(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions)),
             withContentDescription("Reader view")
         )
     ).check(
@@ -316,7 +316,7 @@ private fun assertCloseReaderViewDetected(visible: Boolean) {
 
     onView(
         allOf(
-            withParent(withId(R.id.mozac_browser_toolbar_page_actions)),
+            withParent(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions)),
             withContentDescription("Close reader view")
         )
     ).check(

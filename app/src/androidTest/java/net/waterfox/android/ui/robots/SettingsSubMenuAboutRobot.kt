@@ -131,7 +131,7 @@ private fun assertSupport(rule: ComposeTestRule) {
     TestHelper.verifyUrl(
         "waterfox.net/docs/support",
         "$packageName:id/mozac_browser_toolbar_url_view",
-        R.id.mozac_browser_toolbar_url_view
+        mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view
     )
 }
 
@@ -165,7 +165,7 @@ private fun assertPrivacyNotice(rule: ComposeTestRule) {
     TestHelper.verifyUrl(
         "waterfox.net/docs/policies/privacy",
         "$packageName:id/mozac_browser_toolbar_url_view",
-        R.id.mozac_browser_toolbar_url_view
+        mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view
     )
 }
 
@@ -180,7 +180,7 @@ private fun assertKnowYourRights(rule: ComposeTestRule) {
     TestHelper.verifyUrl(
         SupportUtils.SumoTopic.YOUR_RIGHTS.topicStr,
         "$packageName:id/mozac_browser_toolbar_url_view",
-        R.id.mozac_browser_toolbar_url_view
+        mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view
     )
 }
 
@@ -195,7 +195,7 @@ private fun assertLicensingInformation(rule: ComposeTestRule) {
     TestHelper.verifyUrl(
         "about:license",
         "$packageName:id/mozac_browser_toolbar_url_view",
-        R.id.mozac_browser_toolbar_url_view
+        mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view
     )
 }
 

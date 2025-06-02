@@ -200,7 +200,7 @@ fun editBookmarkFolder() = onView(withText(R.string.bookmark_menu_edit_button)).
 
 fun deleteBookmarkFolder() = onView(withText(R.string.bookmark_menu_delete_button)).click()
 
-fun tapOnTabCounter() = onView(withId(R.id.counter_text)).click()
+fun tapOnTabCounter() = onView(withId(mozilla.components.ui.tabcounter.R.id.counter_text)).click()
 
 fun settingsAccountPreferences() = onView(withText(R.string.preferences_sync_2)).click()
 

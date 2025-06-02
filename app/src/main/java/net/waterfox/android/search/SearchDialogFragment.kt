@@ -201,7 +201,7 @@ class SearchDialogFragment : AppCompatDialogFragment(), UserInteractionHandler {
             binding.toolbar,
             fromHomeFragment
         ).also {
-            inlineAutocompleteEditText = it.view.findViewById(R.id.mozac_browser_toolbar_edit_url_view)
+            inlineAutocompleteEditText = it.view.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_edit_url_view)
         }
 
         val awesomeBar = binding.awesomeBar

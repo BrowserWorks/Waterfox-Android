@@ -130,7 +130,7 @@ class InstalledAddonDetailsFragment : Fragment() {
         runIfFragmentIsAttached {
             showSnackBar(
                 binding.root,
-                getString(R.string.mozac_feature_addons_failed_to_query_extensions),
+                getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_failed_to_query_extensions),
             )
             findNavController().popBackStack()
         }
@@ -189,7 +189,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                                 showSnackBar(
                                     binding.root,
                                     getString(
-                                        R.string.mozac_feature_addons_successfully_enabled,
+                                        mozilla.components.feature.addons.R.string.mozac_feature_addons_successfully_enabled,
                                         addon.translateName(it),
                                     ),
                                 )
@@ -205,7 +205,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                                 showSnackBar(
                                     binding.root,
                                     getString(
-                                        R.string.mozac_feature_addons_failed_to_enable,
+                                        mozilla.components.feature.addons.R.string.mozac_feature_addons_failed_to_enable,
                                         addon.translateName(it),
                                     ),
                                 )
@@ -227,7 +227,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                                 showSnackBar(
                                     binding.root,
                                     getString(
-                                        R.string.mozac_feature_addons_successfully_disabled,
+                                        mozilla.components.feature.addons.R.string.mozac_feature_addons_successfully_disabled,
                                         addon.translateName(it),
                                     ),
                                 )
@@ -243,7 +243,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                                 showSnackBar(
                                     binding.root,
                                     getString(
-                                        R.string.mozac_feature_addons_failed_to_disable,
+                                        mozilla.components.feature.addons.R.string.mozac_feature_addons_failed_to_disable,
                                         addon.translateName(it),
                                     ),
                                 )
@@ -285,7 +285,7 @@ class InstalledAddonDetailsFragment : Fragment() {
         if (addon.incognito == Addon.Incognito.NOT_ALLOWED) {
             switch.isChecked = false
             switch.isEnabled = false
-            switch.text = requireContext().getString(R.string.mozac_feature_addons_not_allowed_in_private_browsing)
+            switch.text = requireContext().getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_not_allowed_in_private_browsing)
             return
         }
 
@@ -392,7 +392,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                             showSnackBar(
                                 binding.root,
                                 getString(
-                                    R.string.mozac_feature_addons_successfully_uninstalled,
+                                    mozilla.components.feature.addons.R.string.mozac_feature_addons_successfully_uninstalled,
                                     addon.translateName(it),
                                 ),
                             )
@@ -407,7 +407,7 @@ class InstalledAddonDetailsFragment : Fragment() {
                             showSnackBar(
                                 binding.root,
                                 getString(
-                                    R.string.mozac_feature_addons_failed_to_uninstall,
+                                    mozilla.components.feature.addons.R.string.mozac_feature_addons_failed_to_uninstall,
                                     addon.translateName(it),
                                 ),
                             )

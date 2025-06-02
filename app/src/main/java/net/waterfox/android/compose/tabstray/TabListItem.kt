@@ -187,7 +187,7 @@ fun TabListItem(
                         .testTag(TabsTrayTestTag.tabItemClose),
                 ) {
                     Icon(
-                        painter = painterResource(id = R.drawable.mozac_ic_cross_24),
+                        painter = painterResource(id = mozilla.components.ui.icons.R.drawable.mozac_ic_cross_24),
                         contentDescription = stringResource(
                             id = R.string.close_tab_title,
                             tab.content.title,
@@ -228,7 +228,7 @@ private fun Thumbnail(
                 .semantics(mergeDescendants = true) {
                     testTag = TabsTrayTestTag.tabItemThumbnail
                 },
-            contentDescription = stringResource(id = R.string.mozac_browser_tabstray_open_tab),
+            contentDescription = stringResource(id = mozilla.components.browser.tabstray.R.string.mozac_browser_tabstray_open_tab),
         )
 
         if (isSelected) {
@@ -247,12 +247,12 @@ private fun Thumbnail(
                 backgroundColor = WaterfoxTheme.colors.layerAccent,
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.mozac_ic_checkmark_24),
+                    painter = painterResource(id = mozilla.components.ui.icons.R.drawable.mozac_ic_checkmark_24),
                     modifier = Modifier
                         .matchParentSize()
                         .padding(all = 8.dp),
                     contentDescription = null,
-                    tint = colorResource(id = R.color.mozac_ui_icons_fill),
+                    tint = colorResource(id = mozilla.components.ui.icons.R.color.mozac_ui_icons_fill),
                 )
             }
         }

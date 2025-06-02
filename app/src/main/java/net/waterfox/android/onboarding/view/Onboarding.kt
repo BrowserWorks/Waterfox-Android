@@ -86,7 +86,7 @@ fun Onboarding(
                 onClick = { onDismiss() },
             ) {
                 Icon(
-                    painter = painterResource(id = R.drawable.mozac_ic_cross_20),
+                    painter = painterResource(id = mozilla.components.ui.icons.R.drawable.mozac_ic_cross_20),
                     contentDescription = stringResource(R.string.onboarding_home_content_description_close_button),
                     tint = WaterfoxTheme.colors.iconPrimary,
                 )

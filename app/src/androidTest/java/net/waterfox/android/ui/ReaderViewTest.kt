@@ -76,7 +76,7 @@ class ReaderViewTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityIntentTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityIntentTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 
@@ -119,7 +119,7 @@ class ReaderViewTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityIntentTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityIntentTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 
@@ -157,7 +157,7 @@ class ReaderViewTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityIntentTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityIntentTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 
@@ -197,7 +197,7 @@ class ReaderViewTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityIntentTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityIntentTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 
@@ -243,7 +243,7 @@ class ReaderViewTest {
         }
 
         readerViewNotification = ViewVisibilityIdlingResource(
-            activityIntentTestRule.activity.findViewById(R.id.mozac_browser_toolbar_page_actions),
+            activityIntentTestRule.activity.findViewById(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_page_actions),
             View.VISIBLE
         )
 

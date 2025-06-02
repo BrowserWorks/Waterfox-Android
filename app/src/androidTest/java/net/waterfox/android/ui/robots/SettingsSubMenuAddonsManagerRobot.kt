@@ -124,7 +124,7 @@ class SettingsSubMenuAddonsManagerRobot {
             mDevice.findObject(UiSelector().text("Allow in private browsing"))
                 .waitForExists(waitingTimeLong)
         )
-        onView(withId(R.id.allow_in_private_browsing)).click()
+        onView(withId(mozilla.components.feature.addons.R.id.allow_in_private_browsing)).click()
     }
 
     fun installAddon(addonName: String) {
@@ -154,10 +154,10 @@ class SettingsSubMenuAddonsManagerRobot {
 
             onView(
                 allOf(
-                    withId(R.id.add_on_item),
+                    withId(mozilla.components.feature.addons.R.id.add_on_item),
                     hasDescendant(
                         allOf(
-                            withId(R.id.add_on_name),
+                            withId(mozilla.components.feature.addons.R.id.add_on_name),
                             withText(addonName)
                         )
                     )
@@ -173,8 +173,8 @@ class SettingsSubMenuAddonsManagerRobot {
     private fun installButtonForAddon(addonName: String) =
         onView(
             allOf(
-                withContentDescription(R.string.mozac_feature_addons_install_addon_content_description_2),
-                isDescendantOfA(withId(R.id.add_on_item)),
+                withContentDescription(mozilla.components.feature.addons.R.string.mozac_feature_addons_install_addon_content_description_2),
+                isDescendantOfA(withId(mozilla.components.feature.addons.R.id.add_on_item)),
                 hasSibling(hasDescendant(withText(addonName)))
             )
         )
@@ -196,10 +196,10 @@ class SettingsSubMenuAddonsManagerRobot {
         )
             .check(matches(isCompletelyDisplayed()))
 
-        onView(allOf(withId(R.id.allow_button), withText("Add")))
+        onView(allOf(withId(mozilla.components.feature.sitepermissions.R.id.allow_button), withText("Add")))
             .check(matches(isCompletelyDisplayed()))
 
-        onView(allOf(withId(R.id.deny_button), withText("Cancel")))
+        onView(allOf(withId(mozilla.components.feature.downloads.R.id.deny_button), withText("Cancel")))
             .check(matches(isCompletelyDisplayed()))
     }
 
@@ -207,20 +207,20 @@ class SettingsSubMenuAddonsManagerRobot {
         onView(
             allOf(
                 withId(R.id.add_button),
-                isDescendantOfA(withId(R.id.add_on_item)),
+                isDescendantOfA(withId(mozilla.components.feature.addons.R.id.add_on_item)),
                 hasSibling(hasDescendant(withText(addonName)))
             )
         ).check(matches(withEffectiveVisibility(Visibility.GONE)))
     }
 
     private fun cancelInstall() {
-        onView(allOf(withId(R.id.deny_button), withText("Cancel")))
+        onView(allOf(withId(mozilla.components.feature.downloads.R.id.deny_button), withText("Cancel")))
             .check(matches(isCompletelyDisplayed()))
             .perform(click())
     }
 
     private fun allowPermissionToInstall() {
-        onView(allOf(withId(R.id.allow_button), withText("Add")))
+        onView(allOf(withId(mozilla.components.feature.sitepermissions.R.id.allow_button), withText("Add")))
             .check(matches(isCompletelyDisplayed()))
             .perform(click())
     }
@@ -243,11 +243,11 @@ class SettingsSubMenuAddonsManagerRobot {
         onView(
             allOf(
                 isAssignableFrom(RelativeLayout::class.java),
-                withId(R.id.add_on_item),
-                hasDescendant(allOf(withId(R.id.add_on_icon), isCompletelyDisplayed())),
+                withId(mozilla.components.feature.addons.R.id.add_on_item),
+                hasDescendant(allOf(withId(mozilla.components.feature.addons.R.id.add_on_icon), isCompletelyDisplayed())),
                 hasDescendant(
                     allOf(
-                        withId(R.id.details_container),
+                        withId(mozilla.components.feature.addons.R.id.details_container),
                         hasDescendant(withText("uBlock Origin")),
                         hasDescendant(withText("Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.")),
                         hasDescendant(withId(R.id.rating)),
@@ -269,7 +269,7 @@ class SettingsSubMenuAddonsManagerRobot {
                 hasSibling(
                     hasDescendant(
                         allOf(
-                            withId(R.id.add_on_name),
+                            withId(mozilla.components.feature.addons.R.id.add_on_name),
                             withText(addonName)
                         )
                     )

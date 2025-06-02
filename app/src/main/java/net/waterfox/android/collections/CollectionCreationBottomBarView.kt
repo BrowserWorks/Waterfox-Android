@@ -40,7 +40,7 @@ class CollectionCreationBottomBarView(
         iconButton.apply {
             val drawable = context.getDrawableWithTint(
                 R.drawable.ic_close,
-                ContextCompat.getColor(context, R.color.photonWhite)
+                ContextCompat.getColor(context, mozilla.components.ui.colors.R.color.photonWhite)
             )
             setImageDrawable(drawable)
             contentDescription = context.getString(R.string.create_collection_close)
@@ -87,7 +87,7 @@ class CollectionCreationBottomBarView(
         iconButton.apply {
             val drawable = context.getDrawableWithTint(
                 R.drawable.ic_new,
-                ContextCompat.getColor(context, R.color.photonWhite)
+                ContextCompat.getColor(context, mozilla.components.ui.colors.R.color.photonWhite)
             )
             setImageDrawable(drawable)
             contentDescription = null

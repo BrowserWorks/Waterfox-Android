@@ -177,7 +177,7 @@ open class DefaultToolbarMenu(
 
     private val installToHomescreen = BrowserMenuHighlightableItem(
         label = context.getString(R.string.browser_menu_install_on_homescreen),
-        startImageResource = R.drawable.mozac_ic_add_to_homescreen_24,
+        startImageResource = mozilla.components.ui.icons.R.drawable.mozac_ic_add_to_homescreen_24,
         iconTintColorResource = primaryTextColor(),
         highlight = BrowserMenuHighlight.LowPriority(
             label = context.getString(R.string.browser_menu_install_on_homescreen),
@@ -222,7 +222,7 @@ open class DefaultToolbarMenu(
 
     private val findInPageItem = BrowserMenuImageText(
         label = context.getString(R.string.browser_menu_find_in_page),
-        imageResource = R.drawable.mozac_ic_search_24,
+        imageResource = mozilla.components.ui.icons.R.drawable.mozac_ic_search_24,
         iconTintColorResource = primaryTextColor()
     ) {
         onItemTapped.invoke(ToolbarMenu.Item.FindInPage)
@@ -266,7 +266,7 @@ open class DefaultToolbarMenu(
 
     private val addToHomeScreenItem = BrowserMenuImageText(
         label = context.getString(R.string.browser_menu_add_to_homescreen),
-        imageResource = R.drawable.mozac_ic_add_to_homescreen_24,
+        imageResource = mozilla.components.ui.icons.R.drawable.mozac_ic_add_to_homescreen_24,
         iconTintColorResource = primaryTextColor(),
         isCollapsingMenuLimit = true
     ) {
@@ -302,7 +302,7 @@ open class DefaultToolbarMenu(
     @VisibleForTesting
     internal val settingsItem = BrowserMenuHighlightableItem(
         label = context.getString(R.string.browser_menu_settings),
-        startImageResource = R.drawable.mozac_ic_settings_24,
+        startImageResource = mozilla.components.ui.icons.R.drawable.mozac_ic_settings_24,
         iconTintColorResource = if (hasAccountProblem) {
             ThemeManager.resolveAttribute(R.attr.syncDisconnected, context)
         } else {
@@ -342,7 +342,7 @@ open class DefaultToolbarMenu(
 
     private val quitItem = BrowserMenuImageText(
         label = context.getString(R.string.delete_browsing_data_on_quit_action),
-        imageResource = R.drawable.mozac_ic_cross_circle_24,
+        imageResource = mozilla.components.ui.icons.R.drawable.mozac_ic_cross_circle_24,
         iconTintColorResource = primaryTextColor()
     ) {
         onItemTapped.invoke(ToolbarMenu.Item.Quit)

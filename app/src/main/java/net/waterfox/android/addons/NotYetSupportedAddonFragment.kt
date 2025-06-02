@@ -55,12 +55,12 @@ class NotYetSupportedAddonFragment :
 
     override fun onResume() {
         super.onResume()
-        showToolbar(getString(R.string.mozac_feature_addons_unavailable_section))
+        showToolbar(getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_unavailable_section))
     }
 
     override fun onUninstallError(addonId: String, throwable: Throwable) {
         this@NotYetSupportedAddonFragment.view?.let { view ->
-            showSnackBar(view, getString(R.string.mozac_feature_addons_failed_to_remove, ""))
+            showSnackBar(view, getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_failed_to_remove, ""))
         }
 
         if (unsupportedAddonsAdapter?.itemCount == 0) {
@@ -70,7 +70,7 @@ class NotYetSupportedAddonFragment :
 
     override fun onUninstallSuccess() {
         this@NotYetSupportedAddonFragment.view?.let { view ->
-            showSnackBar(view, getString(R.string.mozac_feature_addons_successfully_removed, ""))
+            showSnackBar(view, getString(mozilla.components.feature.addons.R.string.mozac_feature_addons_successfully_removed, ""))
         }
     }
 }

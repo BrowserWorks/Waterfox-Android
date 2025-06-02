@@ -83,7 +83,7 @@ class SitePermissionsRobot {
     }
 
     fun selectRememberPermissionDecision() {
-        onView(withId(R.id.do_not_ask_again))
+        onView(withId(mozilla.components.feature.sitepermissions.R.id.do_not_ask_again))
             .check(matches(isDisplayed()))
             .click()
     }

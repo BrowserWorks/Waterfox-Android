@@ -40,7 +40,7 @@ class SavedLoginsSortingStrategyMenu(
         )
 
         val highlight = HighPriorityHighlightEffect(
-            backgroundTint = context.getColorFromAttr(R.attr.colorControlHighlight)
+            backgroundTint = context.getColorFromAttr(androidx.appcompat.R.attr.colorControlHighlight)
         )
 
         return listOf(

@@ -720,7 +720,7 @@ abstract class BaseBrowserFragment :
                     gravity = getAppropriateLayoutGravity(),
                     shouldWidthMatchParent = true,
                     positiveButtonBackgroundColor = accentHighContrastColor,
-                    positiveButtonTextColor = R.color.photonWhite
+                    positiveButtonTextColor = mozilla.components.ui.colors.R.color.photonWhite
                 ),
                 sessionId = customTabSessionId,
                 onNeedToRequestPermissions = { permissions ->

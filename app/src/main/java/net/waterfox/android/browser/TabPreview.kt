@@ -44,8 +44,8 @@ class TabPreview @JvmOverloads constructor(
         }
 
         // Change view properties to avoid confusing the UI tests
-        binding.tabButton.findViewById<View>(R.id.counter_box).id = View.NO_ID
-        binding.tabButton.findViewById<View>(R.id.counter_text).id = View.NO_ID
+        binding.tabButton.findViewById<View>(mozilla.components.ui.tabcounter.R.id.counter_box).id = View.NO_ID
+        binding.tabButton.findViewById<View>(mozilla.components.ui.tabcounter.R.id.counter_text).id = View.NO_ID
     }
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {

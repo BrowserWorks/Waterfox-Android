@@ -121,7 +121,7 @@ fun <T> LibrarySiteItem(
                         ),
                 ) {
                     Icon(
-                        painter = painterResource(R.drawable.mozac_ic_checkmark_24),
+                        painter = painterResource(mozilla.components.ui.icons.R.drawable.mozac_ic_checkmark_24),
                         contentDescription = null,
                         modifier = Modifier
                             .padding(10.dp)
@@ -129,7 +129,7 @@ fun <T> LibrarySiteItem(
                                 testTagsAsResourceId = true
                                 testTag = "library.site.item.checkmark"
                             },
-                        tint = colorResource(R.color.mozac_ui_icons_fill),
+                        tint = colorResource(mozilla.components.ui.icons.R.color.mozac_ui_icons_fill),
                     )
                 }
             }

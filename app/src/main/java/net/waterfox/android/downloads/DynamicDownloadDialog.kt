@@ -63,7 +63,7 @@ class DynamicDownloadDialog(
 
         if (didFail) {
             binding.downloadDialogTitle.text =
-                context.getString(R.string.mozac_feature_downloads_failed_notification_text2)
+                context.getString(mozilla.components.feature.downloads.R.string.mozac_feature_downloads_failed_notification_text2)
 
             binding.downloadDialogIcon.setImageResource(
                 mozilla.components.feature.downloads.R.drawable.mozac_feature_download_ic_download_failed
@@ -80,7 +80,7 @@ class DynamicDownloadDialog(
             }
         } else {
             val titleText = context.getString(
-                R.string.mozac_feature_downloads_completed_notification_text2
+                mozilla.components.feature.downloads.R.string.mozac_feature_downloads_completed_notification_text2
             ) + " (${downloadState.contentLength?.toMegabyteOrKilobyteString()})"
 
             binding.downloadDialogTitle.text = titleText
@@ -136,7 +136,7 @@ class DynamicDownloadDialog(
                 download.filePath
             )
             return context.getString(
-                R.string.mozac_feature_downloads_open_not_supported1, fileExt
+                mozilla.components.feature.downloads.R.string.mozac_feature_downloads_open_not_supported1, fileExt
             )
         }
     }

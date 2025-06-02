@@ -112,7 +112,7 @@ class LocaleSettingsComposeView @JvmOverloads constructor(
         ) {
             if (selected) {
                 Image(
-                    painterResource(R.drawable.mozac_ic_checkmark_24),
+                    painterResource(mozilla.components.ui.icons.R.drawable.mozac_ic_checkmark_24),
                     contentDescription = stringResource(R.string.a11y_selected_locale_content_description),
                     modifier = Modifier
                         .align(Alignment.CenterVertically)

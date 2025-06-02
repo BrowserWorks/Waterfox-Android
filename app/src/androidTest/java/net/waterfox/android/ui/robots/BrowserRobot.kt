@@ -971,7 +971,7 @@ fun browserScreen(interact: BrowserRobot.() -> Unit): BrowserRobot.Transition {
 
 fun navURLBar() = mDevice.findObject(UiSelector().resourceId("$packageName:id/toolbar"))
 
-fun searchBar() = onView(withId(R.id.mozac_browser_toolbar_url_view))
+fun searchBar() = onView(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_url_view))
 
 fun homeScreenButton() = onView(withContentDescription(R.string.browser_toolbar_home))
 
@@ -985,7 +985,7 @@ private fun assertNavURLBar() = assertTrue(navURLBar().waitForExists(waitingTime
 private fun assertNavURLBarHidden() = assertTrue(navURLBar().waitUntilGone(waitingTime))
 
 private fun assertSecureConnectionLockIcon() {
-    onView(withId(R.id.mozac_browser_toolbar_site_info_indicator))
+    onView(withId(mozilla.components.browser.toolbar.R.id.mozac_browser_toolbar_site_info_indicator))
         .check(matches(withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 }
 
