@@ -86,6 +86,7 @@ android {
             applicationIdSuffix ".debug"
             resValue "bool", "IS_DEBUG", "true"
             pseudoLocalesEnabled true
+            testCoverageEnabled true
         }
         release releaseTemplate >> {
             buildConfigField "boolean", "USE_RELEASE_VERSIONING", "true"
@@ -530,14 +531,6 @@ if (project.hasProperty("coverage")) {
                 "jacoco/test${variant.name.capitalize()}UnitTest.exec",
                 'outputs/code-coverage/connected/*coverage.ec'
             ]))
-        }
-    }
-
-    android {
-        buildTypes {
-            debug {
-                testCoverageEnabled true
-            }
         }
     }
 }
