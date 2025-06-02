@@ -121,7 +121,13 @@ android {
         animationsDisabled = true
     }
 
-    flavorDimensions "engine"
+    flavorDimensions.add("product")
+
+    productFlavors {
+        waterfox {
+            dimension "product"
+        }
+    }
 
     sourceSets {
         androidTest {
