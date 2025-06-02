@@ -320,7 +320,7 @@
     <color name="device_foreground">@color/photonInk80</color>
 
     <!-- Launcher Icon colors -->
-    <color name="ic_launcher_background">#FDFDFD</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 
     <!-- Private Browsing Mode Persistent Notification -->
     <color name="pbm_notification_color">@color/photonTeal70</color>
