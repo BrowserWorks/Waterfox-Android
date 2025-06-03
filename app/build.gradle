@@ -138,11 +138,7 @@ android {
 
     splits {
         abi {
-            enable true
-
-            reset()
-
-            include "x86", "armeabi-v7a", "arm64-v8a", "x86_64"
+            enable false
         }
     }
 
