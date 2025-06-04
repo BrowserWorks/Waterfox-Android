@@ -14,6 +14,9 @@
 # Java class files
 *.class
 
+# Kotlin
+.kotlin
+
 # Generated files
 bin/
 gen/
@@ -93,7 +96,7 @@ __pycache__/
 venv/
 
 
-# UI test artifacts 
+# UI test artifacts
 .firebase_token*
 results/
 test_artifacts/
