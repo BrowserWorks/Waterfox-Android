@@ -9,6 +9,7 @@ plugins {
     alias libs.plugins.androidx.safeargs
     alias libs.plugins.kotlin.parcelize
     alias libs.plugins.compose.compiler
+    alias libs.plugins.play.publisher
     id "com.jetbrains.python.envs" version "0.0.26"
     id 'jacoco'
     id 'com.google.android.gms.oss-licenses-plugin'
@@ -21,6 +22,16 @@ import org.gradle.internal.logging.text.StyledTextOutputFactory
 import static org.gradle.api.tasks.testing.TestResult.ResultType
 
 apply from: 'benchmark.gradle'
+
+play {
+    // The plugin will read the service account credentials from the
+    // ANDROID_PUBLISHER_CREDENTIALS environment variable if it's set
+    enabled.set(gradle.hasProperty("enablePlayPublisher") || System.getenv("ANDROID_PUBLISHER_CREDENTIALS") != null)
+    
+    // Only publish release builds
+    defaultToAppBundles.set(true)
+    track.set("internal") // Start with internal track for safety
+}
 
 android {
     project.maybeConfigForJetpackBenchmark(it)

@@ -1,0 +1,13 @@
+Waterfox per Android è il browser mobile incentrato sulla privacy che ti dà il controllo. Creato completamente open source, Waterfox elimina analisi, telemetria e integrazioni closed source non necessarie, offrendoti invece un'esperienza di navigazione privata pulita.
+
+A differenza di altri browser Web Android, Waterfox non dispone di analisi o telemetria che tracciano il tuo utilizzo. Inoltre, non utilizza SDK closed source né ha scorciatoie sponsorizzate abilitate per impostazione predefinita. Integrazioni come il servizio read-it-later Pocket source chiuso sono state rimosse. Inoltre, tutto il codice relativo alla censura cinese è stato eliminato. 
+
+Waterfox mette la privacy al primo posto. Blocca i tracker online, impedendo alle aziende di profilare le tue abitudini di navigazione. Viene fornito con supporto DNS crittografato utilizzando DNS su Oblivious HTTP per prevenire la censura. Con questa funzionalità unica, le tue query DNS vengono nascoste per evitare la manipolazione della rete ed è l'UNICO browser Web a offrire una funzionalità premium gratuitamente!
+
+In termini di personalizzazione, Waterfox supporterà i componenti aggiuntivi in ​​modo da poter migliorare la tua esperienza di navigazione mobile. Dispone inoltre di impostazioni personalizzabili per cronologia, cookie, livello di zoom e molto altro. Hai il pieno controllo.
+
+Sotto il cofano, Waterfox utilizza lo stesso velocissimo motore Gecko che alimenta il più grande browser web open source. Le pagine verranno caricate rapidamente e i siti Web funzioneranno senza problemi. Waterfox supporta anche standard e tecnologie web moderni per la migliore esperienza di navigazione.
+
+Waterfox è sviluppato in modo indipendente con particolare attenzione alla privacy e alla scelta dell'utente. Dietro le quinte non vengono effettuate misurazioni o raccolte di dati. Waterfox per Android porta la privacy di classe desktop sui dispositivi mobili.
+
+Prova Waterfox a prendere il controllo della tua navigazione mobile, puoi navigare sul Web in privato.

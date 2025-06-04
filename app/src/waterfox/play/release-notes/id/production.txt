@@ -1,0 +1,6 @@
+• Ikon yang ditingkatkan dengan dukungan tema monokrom modern
+• Performa pemuatan gambar lebih baik dengan Coil yang diperbarui
+• Ukuran dioptimalkan dengan kompresi WebP
+• Komponen Mozilla Android terbaru untuk browsing yang ditingkatkan
+• Sistem build yang lebih baik dengan Gradle dan Kotlin terbaru
+• Animasi yang lebih baik di seluruh aplikasi

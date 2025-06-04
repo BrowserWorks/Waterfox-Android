@@ -1,0 +1,6 @@
+• Enhanced app icons with modern monochrome theming support
+• Improved image loading performance on Homepage with updated Coil library
+• Optimized app size with better image compression (WebP format)
+• Updated to latest Mozilla Android Components for enhanced browsing features
+• Improved build system with latest Gradle and Kotlin versions
+• Enhanced animations and visual transitions throughout the app

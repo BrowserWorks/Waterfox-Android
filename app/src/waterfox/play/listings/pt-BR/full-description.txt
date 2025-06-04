@@ -1,0 +1,13 @@
+Waterfox para Android é o navegador móvel focado na privacidade que coloca você no controle. Criado com código totalmente aberto, o Waterfox elimina análises, telemetria e integrações desnecessárias de código fechado, proporcionando uma experiência de navegação limpa e privada.
+
+Ao contrário de outros navegadores Android, o Waterfox não possui nenhuma análise ou telemetria que rastreie seu uso. Ele também não usa SDKs de código fechado nem possui atalhos patrocinados habilitados por padrão. Integrações como o serviço de leitura posterior do Pocket de código fechado foram removidas. Além disso, todo o código relacionado à censura chinesa foi eliminado. 
+
+Waterfox coloca a privacidade em primeiro lugar. Ele bloqueia rastreadores on-line, impedindo que as empresas criem perfis de seus hábitos de navegação. Ele vem com suporte a DNS criptografado usando DNS sobre HTTP Oblivious para evitar censura. Com esse recurso exclusivo, suas consultas DNS ficam ocultas para evitar manipulação de rede e é o ÚNICO navegador que oferece um recurso premium gratuitamente!
+
+Em termos de personalização, Waterfox oferecerá suporte a complementos para que você possa aprimorar sua experiência de navegação móvel. Ele também possui configurações personalizáveis ​​para histórico, cookies, nível de zoom e muito mais. Você está no controle total.
+
+Nos bastidores, o Waterfox usa o mesmo mecanismo Gecko extremamente rápido que alimenta o maior navegador de código aberto. As páginas carregarão rapidamente e os sites funcionarão sem problemas. Waterfox também oferece suporte a padrões e tecnologias modernas da web para a melhor experiência de navegação.
+
+Waterfox é desenvolvido de forma independente com foco na privacidade e escolha do usuário. Não há métricas ou coleta de dados acontecendo nos bastidores. Waterfox para Android traz privacidade de classe desktop para dispositivos móveis.
+
+Experimente o Waterfox para assumir o controle de sua navegação móvel, você pode navegar na web com privacidade.

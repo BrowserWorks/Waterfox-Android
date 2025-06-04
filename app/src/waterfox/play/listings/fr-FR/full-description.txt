@@ -1,0 +1,13 @@
+Waterfox pour Android est le navigateur mobile axé sur la confidentialité qui vous donne le contrôle. Créé entièrement open source, Waterfox supprime les analyses, la télémétrie et les intégrations inutiles de sources fermées, vous offrant à la place une expérience de navigation privée propre.
+
+Contrairement aux autres navigateurs Web Android, Waterfox ne dispose d'aucune analyse ou télémétrie permettant de suivre votre utilisation. Il n’utilise pas non plus de SDK fermés et n’a pas de raccourcis sponsorisés activés par défaut. Des intégrations telles que le service Pocket read-it-later à source fermée ont été supprimées. De plus, tous les codes liés à la censure chinoise ont été supprimés. 
+
+Waterfox donne la priorité à la confidentialité. Il bloque les trackers en ligne, empêchant ainsi les entreprises de profiler vos habitudes de navigation. Il est livré avec une prise en charge DNS cryptée utilisant DNS sur HTTP Oblivious pour empêcher la censure. Avec cette fonctionnalité unique, vos requêtes DNS sont masquées pour éviter toute manipulation du réseau et c'est le SEUL navigateur Web à offrir une fonctionnalité premium gratuitement !
+
+En termes de personnalisation, Waterfox prendra en charge des modules complémentaires afin que vous puissiez améliorer votre expérience de navigation mobile. Il dispose également de paramètres personnalisables pour l'historique, les cookies, le niveau de zoom et bien plus encore. Vous avez le contrôle total.
+
+Sous le capot, Waterfox utilise le même moteur Gecko ultra-rapide qui alimente le plus grand navigateur Web open source. Les pages se chargeront rapidement et les sites Web fonctionneront correctement. Waterfox prend également en charge les normes et technologies Web modernes pour la meilleure expérience de navigation.
+
+Waterfox est développé de manière indépendante en mettant l'accent sur la confidentialité et le choix des utilisateurs. Aucune mesure ni collecte de données n’a lieu en coulisses. Waterfox pour Android apporte la confidentialité de la classe ordinateur au mobile.
+
+Essayez Waterfox pour prendre le contrôle de votre navigation mobile, vous pouvez naviguer sur le Web en privé.

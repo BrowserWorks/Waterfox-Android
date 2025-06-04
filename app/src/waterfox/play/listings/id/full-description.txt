@@ -1,0 +1,13 @@
+Waterfox untuk Android adalah browser seluler yang berfokus pada privasi yang memberi Anda kendali. Dibuat sepenuhnya open source, Waterfox menghapus analitik, telemetri, dan integrasi sumber tertutup yang tidak perlu, alih-alih memberi Anda pengalaman penjelajahan pribadi yang bersih.
+
+Tidak seperti browser web Android lainnya, Waterfox tidak memiliki analisis atau telemetri apa pun yang melacak penggunaan Anda. Itu juga tidak menggunakan SDK sumber tertutup atau pintasan bersponsor yang diaktifkan secara default. Integrasi seperti layanan Pocket read-it-later sumber tertutup telah dihapus. Selain itu, semua kode yang terkait dengan sensor Tiongkok telah dihapus. 
+
+Waterfox mengutamakan privasi. Ini memblokir pelacak online, menghentikan perusahaan membuat profil kebiasaan browsing Anda. Muncul dengan dukungan DNS terenkripsi menggunakan DNS melalui Oblivious HTTP untuk mencegah sensor. Dengan fitur unik ini, permintaan DNS Anda disembunyikan untuk menghindari manipulasi jaringan dan merupakan SATU-SATUNYA browser web yang menawarkan fitur premium gratis!
+
+Dalam hal penyesuaian, Waterfox akan mendukung add-on sehingga Anda dapat meningkatkan pengalaman penelusuran seluler Anda. Ini juga memiliki pengaturan yang dapat disesuaikan untuk riwayat, cookie, tingkat zoom, dan banyak lagi. Anda memegang kendali penuh.
+
+Di balik terpalnya, Waterfox menggunakan mesin Gecko secepat kilat yang menggerakkan browser web sumber terbuka terbesar. Halaman akan dimuat dengan cepat dan situs web akan bekerja dengan lancar. Waterfox juga mendukung standar dan teknologi web modern untuk pengalaman penelusuran terbaik.
+
+Waterfox dikembangkan secara independen dengan fokus pada privasi dan pilihan pengguna. Tidak ada metrik atau pengumpulan data yang terjadi di balik layar. Waterfox untuk Android menghadirkan privasi kelas desktop ke seluler.
+
+Cobalah Waterfox untuk mengendalikan penjelajahan seluler Anda, Anda dapat menjelajahi web secara pribadi.

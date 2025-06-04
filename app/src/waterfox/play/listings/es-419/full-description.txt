@@ -1,0 +1,13 @@
+Waterfox para Android es el navegador móvil centrado en la privacidad que te da el control. Creado completamente de código abierto, Waterfox elimina los análisis, la telemetría y las integraciones innecesarias de código cerrado, y en su lugar le brinda una experiencia de navegación privada limpia.
+
+A diferencia de otros navegadores web de Android, Waterfox no tiene ningún análisis ni telemetría que rastree su uso. Tampoco utiliza SDK de código cerrado ni tiene accesos directos patrocinados habilitados de forma predeterminada. Se han eliminado integraciones como el servicio de lectura posterior Pocket de código cerrado. Además, se ha eliminado todo el código relacionado con la censura china. 
+
+Waterfox prioriza la privacidad. Bloquea los rastreadores en línea, lo que impide que las empresas creen perfiles de sus hábitos de navegación. Viene con soporte de DNS cifrado utilizando DNS sobre HTTP Oblivious para evitar la censura. Con esta característica única, sus consultas de DNS están ocultas para evitar la manipulación de la red y es el ÚNICO navegador web que ofrece una característica premium de forma gratuita.
+
+En términos de personalización, Waterfox admitirá complementos para que puedas mejorar tu experiencia de navegación móvil. También tiene configuraciones personalizables para historial, cookies, nivel de zoom y mucho más. Tienes el control total.
+
+Debajo del capó, Waterfox utiliza el mismo motor Gecko ultrarrápido que impulsa el navegador web de código abierto más grande. Las páginas se cargarán rápidamente y los sitios web funcionarán sin problemas. Waterfox también admite tecnologías y estándares web modernos para brindar la mejor experiencia de navegación.
+
+Waterfox se desarrolla de forma independiente centrándose en la privacidad y la elección del usuario. No hay métricas ni recopilación de datos entre bastidores. Waterfox para Android lleva la privacidad de la clase de escritorio al móvil.
+
+Prueba Waterfox para tomar el control de tu navegación móvil, puedes navegar por la web de forma privada.

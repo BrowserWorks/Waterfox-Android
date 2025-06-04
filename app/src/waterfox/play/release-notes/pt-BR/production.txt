@@ -1,0 +1,6 @@
+• Ícones aprimorados com suporte a temas monocromáticos modernos
+• Performance de imagens melhorada com Coil atualizado
+• Tamanho otimizado com compressão WebP
+• Componentes Mozilla Android atualizados para navegação aprimorada
+• Sistema de build melhorado com Gradle e Kotlin recentes
+• Animações aprimoradas em todo o aplicativo

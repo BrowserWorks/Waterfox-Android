@@ -1,0 +1,13 @@
+Waterfox für Android ist der datenschutzorientierte mobile Browser, der Ihnen die Kontrolle gibt. Waterfox wurde vollständig als Open Source entwickelt und verzichtet auf Analysen, Telemetrie und unnötige Closed-Source-Integrationen und bietet Ihnen stattdessen ein sauberes privates Surferlebnis.
+
+Im Gegensatz zu anderen Android-Webbrowsern verfügt Waterfox nicht über Analyse- oder Telemetriedaten, die Ihre Nutzung verfolgen. Außerdem werden keine Closed-Source-SDKs verwendet und gesponserte Verknüpfungen sind standardmäßig nicht aktiviert. Integrationen wie der Closed-Source-Pocket-Read-It-Later-Dienst wurden entfernt. Darüber hinaus wurden alle Codes im Zusammenhang mit der chinesischen Zensur entfernt. 
+
+Bei Waterfox steht die Privatsphäre an erster Stelle. Es blockiert Online-Tracker und hindert Unternehmen daran, Ihre Surfgewohnheiten zu profilieren. Es bietet verschlüsselte DNS-Unterstützung mit DNS über Oblivious HTTP, um Zensur zu verhindern. Mit dieser einzigartigen Funktion werden Ihre DNS-Abfragen ausgeblendet, um Netzwerkmanipulationen zu vermeiden, und es ist der EINZIGE Webbrowser, der eine kostenlose Premium-Funktion anbietet!
+
+Im Hinblick auf die Anpassung unterstützt Waterfox Add-ons, damit Sie Ihr mobiles Surferlebnis verbessern können. Es verfügt außerdem über anpassbare Einstellungen für Verlauf, Cookies, Zoomstufe und vieles mehr. Sie haben die volle Kontrolle.
+
+Unter der Haube nutzt Waterfox die gleiche blitzschnelle Gecko-Engine, die auch den größten Open-Source-Webbrowser antreibt. Seiten werden schnell geladen und Websites funktionieren reibungslos. Waterfox unterstützt außerdem moderne Webstandards und -technologien für das beste Surferlebnis.
+
+Waterfox wird unabhängig entwickelt, wobei der Schwerpunkt auf der Privatsphäre und Auswahl der Benutzer liegt. Hinter den Kulissen finden keine Metriken oder Datenerfassungen statt. Waterfox für Android bringt Privatsphäre der Desktop-Klasse auf Mobilgeräte.
+
+Probieren Sie Waterfox aus und übernehmen Sie die Kontrolle über Ihr mobiles Surfen. Sie können privat im Internet surfen.

@@ -16,6 +16,7 @@ sentry = "8.13.1"
 leakcanary = "2.14"
 osslicenses_plugin = "0.10.6"
 detekt = "1.23.6"
+gradle_play_publisher = "3.12.1"
 
 androidx_compose = "1.8.2"
 androidx_compose_paging = "3.3.6"
@@ -255,6 +256,7 @@ androidx_safeargs = { id ="androidx.navigation.safeargs.kotlin", version.ref = "
 osslicenses = { id ="com.google.android.gms.oss-licenses-plugin", version.ref = "osslicenses_plugin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+play-publisher = { id = "com.github.triplet.play", version.ref = "gradle_play_publisher" }
 
 
 

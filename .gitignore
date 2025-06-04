@@ -83,6 +83,10 @@ gen-external-apklibs
 .mls_token
 .wallpaper_url
 
+# Google Play Publisher credentials
+play-service-account.json
+*.p12
+
 # Python Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
