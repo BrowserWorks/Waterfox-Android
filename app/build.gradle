@@ -13,8 +13,20 @@ plugins {
     id "com.jetbrains.python.envs" version "0.0.26"
     id 'jacoco'
     id 'com.google.android.gms.oss-licenses-plugin'
+    id("app.accrescent.tools.bundletool") version "0.2.4"
 }
 
+bundletool {
+    // Only configure signing if the KEYSTORE environment variable is set
+    if (System.getenv("KEYSTORE") != null) {
+        signingConfig {
+            storeFile = file(System.getenv("KEYSTORE"))
+            storePassword = System.getenv("KEYSTORE_PWD")
+            keyAlias = System.getenv("KEY_ALIAS")
+            keyPassword = System.getenv("KEY_ALIAS_PWD")
+        }
+    }
+}
 
 import org.gradle.internal.logging.text.StyledTextOutput.Style
 import org.gradle.internal.logging.text.StyledTextOutputFactory
@@ -27,7 +39,7 @@ play {
     // The plugin will read the service account credentials from the
     // ANDROID_PUBLISHER_CREDENTIALS environment variable if it's set
     enabled.set(gradle.hasProperty("enablePlayPublisher") || System.getenv("ANDROID_PUBLISHER_CREDENTIALS") != null)
-    
+
     // Only publish release builds
     defaultToAppBundles.set(true)
     track.set("internal") // Start with internal track for safety
